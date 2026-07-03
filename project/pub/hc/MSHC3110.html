@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>병원방문관리>방문내역</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		//tostpop();//토스트 팝업 호출 
+	})
+
+	function tostpop(){
+		var $tostCont = '<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg">업데이트를 완료했습니다.</div></div>'
+		$('.container').after($tostCont);
+		setTimeout(function(){
+			$('.tostpopupWrap').remove();
+		},4000)
+	}
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>병원방문내역</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+        <div class="boxTypeWrap">
+			<div class="emptyMain">
+				<h2 class="defTit"><strong>김농협</strong>님의 <strong>수집 내역이 없어요</strong> <!-- [2023-03-13] 문구수정 -->
+                    <div class="tooltipWrap">
+                        <button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">결제 예정 금액 툴팁 열기</span></button>
+                        <div class="tooltipCont">
+                            <p>진료받은 내용은 조회한 날을 기준으로 14개월 전 진료분부터 1년간 확인할 수 있습니다.</p>
+                            <button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+                        </div>
+                    </div>
+				</h2>
+				<p>병원방문내역을 확인하기 위해<br>국민건강보험공단 연결이 필요해요.</p> <!-- [2023-03-13] 텍스트 추가 -->
+				<!-- <div class="subLink">
+                    <a href="javascript:;" class="link">국민건강보험 공단 연결하기</a>
+                </div> --> <!-- [2023-03-13] 삭제 -->
+				<div class="imgBg01">
+					<span class="blind">이미지</span>
+				</div>
+			</div>
+			<!-- [2023-03-13] 하단 버튼 추가// -->
+			<div class="areaBtnDefault">
+                <a href="javascript:;" class="btnPressPoint" role="button">확인</a>
+			</div>
+			<!-- //[2023-03-13] 하단 버튼 추가 -->
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

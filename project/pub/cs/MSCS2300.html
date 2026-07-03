@@ -1,0 +1,501 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>머니 캘린더</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack" role="button"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">머니 캘린더</a></h1>
+			<a href="javascript:;" class="btnHeaderAdd"><span class="blind">현금내역추가</span></a>
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="wrapCalender">
+				<div class="boxTypeWrap calenderBox">
+					<div class="swiper calenderInfoWrap">
+						<a href="javascript:;" class="btn-month-prev" role="button" tabindex="0" aria-label="이전달"><span class="blind">이전달</span></a>
+						<a href="javascript:;" class="btn-month-next" role="button" tabindex="0" aria-label="다음달"><span class="blind">다음달</span></a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="filterArea mt0">
+									<div class="filterSelect">
+										<div class="monthSelectArea">
+											<strong class="">7월</strong>
+										</div>
+										<div class="thisMonthRange">(06.05~07.04)</div>
+									</div>
+									<div class="fillter_money_list">
+										<dl>
+											<dt>총 소비</dt>
+											<dd><span class="dataValue">0</span>원</dd>
+										</dl>
+										<dl>
+											<dt>총 수입</dt>
+											<dd class="pointColor"><span class="dataValue">0</span>원</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="filterArea mt0">
+									<div class="filterSelect">
+										<div class="monthSelectArea">
+											<strong class="">8월</strong>
+										</div>
+										<div class="thisMonthRange">(06.05~07.04)</div>
+									</div>
+									<div class="fillter_money_list">
+										<dl>
+											<dt>총 소비</dt>
+											<dd><span class="dataValue">0</span>원</dd>
+										</dl>
+										<dl>
+											<dt>총 수입</dt>
+											<dd class="pointColor"><span class="dataValue">0</span>원</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="cms calenderArea">
+						<div class="weekItem">
+							<span tabindex="-1">일</span>
+							<span>월</span>
+							<span>화</span>
+							<span>수</span>
+							<span>목</span>
+							<span>금</span>
+							<span>토</span>
+						</div>
+
+						<div class="swiper dateItemWrap">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="dateItem">
+										<span class="date bgNone"></span>
+										<span class="date bgNone"></span>
+										<button type="button" class="date" disabled>
+											<span class="day">5</span>
+											<div class="daySummary"><!--10.21 수정-->
+												<!-- <span>-110,000</span>
+												<span class="pointColor">+88,888,888</span> -->
+											</div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">6</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">7</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">8</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">9</span>
+											<div class="daySummary"></div>
+										</button>
+
+										<button type="button" class="date" disabled>
+											<span class="day">10</span>
+											<div class="daySummary"><!--10.21 수정-->
+												<!-- <span>-110,000</span>
+												<span class="pointColor">+88,888,888</span> -->
+											</div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">11</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">12</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">13</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">14</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">15</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">16</span>
+											<div class="daySummary"></div>
+										</button>
+
+										<button type="button" class="date" disabled>
+											<span class="day">17</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">18</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">19</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">20</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">21</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">22</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">23</span>
+											<div class="daySummary"></div>
+										</button>
+
+										<button type="button" class="date" disabled>
+											<span class="day">24</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">25</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">26</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">27</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">28</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">29</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">30</span>
+											<div class="daySummary"></div>
+										</button>
+
+										<button type="button" class="date" disabled>
+											<span class="day">31</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">1</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">2</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">3</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">4</span>
+											<div class="daySummary"><!--10.21 수정-->
+												<!-- <span>-110,000</span>
+												<span class="pointColor">+88,888,888</span> -->
+											</div>
+										</button>
+									</div>
+								</div><!-- //.swiper-slide -->
+
+								<div class="swiper-slide">
+									<div class="dateItem">
+										<span class="date bgNone"></span>
+										<span class="date bgNone"></span>
+										<button type="button" class="date" disabled>
+											<span class="day">5</span>
+											<div class="daySummary"><!--10.21 수정-->
+												<!-- <span>-110,000</span>
+												<span class="pointColor">+88,888,888</span> -->
+											</div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">6</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">7</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">8</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">9</span>
+											<div class="daySummary"></div>
+										</button>
+
+										<button type="button" class="date" disabled>
+											<span class="day">10</span>
+											<div class="daySummary"><!--10.21 수정-->
+												<!-- <span>-110,000</span>
+												<span class="pointColor">+88,888,888</span>-->
+											</div> 
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">11</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">12</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">13</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">14</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">15</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">16</span>
+											<div class="daySummary"></div>
+										</button>
+
+										<button type="button" class="date" disabled>
+											<span class="day">17</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">18</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">19</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">20</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">21</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">22</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">23</span>
+											<div class="daySummary"></div>
+										</button>
+
+										<button type="button" class="date" disabled>
+											<span class="day">24</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">25</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">26</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">27</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">28</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">29</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">30</span>
+											<div class="daySummary"></div>
+										</button>
+
+										<button type="button" class="date" disabled>
+											<span class="day">31</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">1</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">2</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">3</span>
+											<div class="daySummary"></div>
+										</button>
+										<button type="button" class="date" disabled>
+											<span class="day">4</span>
+											 <div class="daySummary"><!--10.21 수정-->
+												<!--<span>-110,000</span>
+												<span class="pointColor">+88,888,888</span> -->
+											</div>
+										</button>
+									</div>
+								</div><!-- //.swiper-slide -->
+							</div>
+						</div>
+					</div>
+	            </div>
+	            <div class="carandarFoldingArea"><button type="button" class="carandarFolding active" aria-expanded="true"><span>달력 접기</span></button></div>
+	        </div>
+            <div class="boxTypeWrap pt10">
+				<div class="filterSearchWrap">
+					<!-- 날짜 선택 및 정렬 -->
+					<div class="filterWrap pt0">
+						<button type="button" class="btnSearch2"><span class="blind">적요검색 열기</span></button>
+						<span class="sortValue">전체</span>
+						<button type="button" class="sortBtn"><span class="blind">조회조건 선택 설정하기</span></button>
+					</div>
+					<!-- // 날짜 선택 및 정렬 -->
+	
+					<div class="filterSearch" aria-label="적요검색" style="display:none">
+						<div class="inputList">
+							<input type="text" title="적요를 검색해보세요 (2자 이상)" value="" placeholder="적요를 검색해보세요 (2자 이상)">
+							<button class="btnSearch"><span class="blind">검색</span></button>
+							<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+						</div>
+						<div class="filterSearchRes" style="display:none">‘길동’ 검색결과 총 1건</div>
+					</div>
+				</div>
+				<hr class="divLine mt0">
+
+				<div class="cslayerMsgWrap">
+					<p>쉿, 이번 달 숨긴 내역이 <a href="javascript:;" class="underline" role="button"><span class="pointColor">5</span>건</a> 있어요.</p> <!-- [2022-12-22] 버튼으로 변경 -->
+					<button type="button" class="layerMsgClose"><span class="blind">닫기</span></button>
+                </div>
+                <div class="cslayerMsgWrap">
+					<p>쉿, 지난 달 숨긴 내역이 <a href="javascript:;" class="underline" role="button"><span class="pointColor">5</span>건</a> 있어요.</p> <!-- [2022-12-22] 버튼으로 변경 -->
+					<button type="button" class="layerMsgClose"><span class="blind">닫기</span></button>
+				</div>
+				<div class="nolistBox stNone"> <!--10.13 수정-->
+					<div class="noResultWrap"><p>거래내역이 없어요</p></div>
+				</div>
+			</div>
+			<!-- <div class="nolistBox">
+				<div class="noResultWrap"><p>조회할 거래내역이 없습니다.</p></div>
+			</div> -->
+		</div>
+		<!-- //container -->
+
+	</div>
+<script type="text/javascript">
+	//달력 스와이프
+	var swiper = new Swiper(".calenderInfoWrap", {
+		spaceBetween: 10,
+		slidesPerView: 1,
+		observer: true,
+		observeParents: true,
+		effect: "fade",
+		touchRatio: 0,	//touch move 비활성
+		freeMode: true,
+		watchSlidesProgress: true,
+		
+	});
+	var swiper2 = new Swiper(".dateItemWrap", {
+		initialSlide :0, //시작슬라이드 번호 0부터 시작
+		spaceBetween: 10,
+		observer: true,
+		observeParents: true,
+		autoHeight : true,
+		pagination: {
+			el: ".swiper-pagination",
+		},
+
+		//pagination:false,
+		navigation: {
+			nextEl: ".btn-month-next",
+			prevEl: ".btn-month-prev",
+		},
+		thumbs: {
+			swiper: swiper,
+		},
+	});
+
+	//달력 폴딩
+	$('.carandarFolding').click(function(){
+		var  $this = $(this);
+		var $target = $this.closest('.wrapCalender').find('.calenderArea');
+		$this.toggleClass('active');
+		if ($this.hasClass('active')) {
+			$target.slideDown();
+			$this.children('span').text('달력 접기');
+			$this.attr('aria-expanded','true');
+			$('.weekItem span:first-child').focus();
+		}else{
+			$target.slideUp();
+			$this.children('span').text('달력 열기');
+			$this.attr('aria-expanded','false');
+		}
+	});
+
+	//내역으로 이동
+	$('.date').click(function(){
+		var $this = $(this);
+		var $thisDate = $this.attr('data-day-select');
+		console.log($thisDate)
+		$('.dataDayDetail').each(function(){
+			var $thisTarget = $(this);
+			var $targetPo = $(this).offset().top;
+			if ($(this).attr('data-day-detail') == $thisDate) {
+				$('html, body').stop().animate({scrollTop:$targetPo - 50},400,function(){
+					$thisTarget.focus()
+				});
+
+			}
+
+		});
+
+		// var $targetPo = $('#posTarget').offset().top;
+		// $('html,body').animate({ scrollTop: $targetPo - 50 }, 300);
+	});
+</script>
+</body>
+</html>

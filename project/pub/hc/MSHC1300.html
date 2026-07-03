@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>비교상품상세</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">시각이상</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="boxTypeWrap">
+				<h2 class="defSubTit2 containTooltip"><strong class="bold">내 검진결과 비교</strong>
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">그래프 구간안내 설명 툴팁</span></button>
+						<div class="tooltipCont">
+							<p>최근 검사일 기준 직전년도 결과 비교 제공</p>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+				</h2>
+				<h3 class="defSubTit3 mt20">좌측</h3>
+				<div class="graphWrap" style="height:160px;background:#f6f6f6;" tabindex="0" role="img" aria-label="좌측 그래프 2013년 1.2, 2016년 1.0, 2021년 1.2">
+					<p style="text-align:center;">좌측 그래프 영역</p>
+				</div>
+				<h3 class="defSubTit3 mt20">우측</h3>
+				<div class="graphWrap" style="height:160px;background:#f6f6f6;" tabindex="0" role="img" aria-label="우측 그래프 2013년 1.5, 2016년 1.2, 2021년 1.0">
+					<p style="text-align:center;">우측 그래프 영역</p>
+				</div>
+			</div>
+
+			<!-- <div class="areaBtnDefault">
+				<a href="javascript:;" class="btnPressPoint" role="button">확인</a>
+			</div> -->
+		</div>
+		<!-- //container -->
+	</div>
+<script type="text/javascript">
+	$('.scAreaWrap a.active').each(function(){
+		var $this = $(this);
+		var $thisPos = $this.offset().left;
+		var $wrap = $this.closest('.scAreaWrap').scrollLeft();
+		$this.closest('.scAreaWrap').stop().animate({scrollLeft:$wrap + $thisPos - 16 },300);
+	});
+	$('.scAreaWrap a').on('click focus',function(e){
+		var $this = $(this);
+		var $thisPos = $this.offset().left;
+		var $wrap = $this.closest('.scAreaWrap').scrollLeft();
+		$this.closest('.scAreaWrap').stop().animate({scrollLeft:$wrap + $thisPos - 16 },300);	
+	});
+
+	$('.maybeWishList > li > a').click(function(){
+		$(this).closest('.maybeWishList').find('a').removeClass('active');
+		$(this).addClass('active');
+	});
+</script>
+</body>
+</html>

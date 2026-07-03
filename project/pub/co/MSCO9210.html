@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>메인화면</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<!-- ###################################### -->
+<!-- [팝업] 올리 플로팅 예시 -->
+<!-- [D] 접근성으로 인해 페이지 상단에 위치 하여야 합니다. -->
+<!-- ###################################### -->
+<div class="findOllyWrap nhasset">
+	<div class="findOlly" style="display:block"> <!-- [D] 위치 랜덤 : pos01~10 -->
+		<button type="button" class="findImg" aria-label="숨은 올리 획득" aria-haspopup="true"><img src="../../images/event/findally/img_view_ally01.png" alt=""></button>
+	</div>
+</div>
+
+<!-- ###################################### -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<!-- <a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a> -->
+		<h1><a href="javascript:;" role="text"><span class="mainTopLogo">NH마이데이터</span></a></h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 전체메뉴 ### -->
+	<!-- ###################################### -->
+	<div class="container hasGnb nhassetMain">
+		<span class="mainBg"></span>
+
+		<!-- -------------------------------------- -->
+		<!-- [GNB] -->
+		<!-- -------------------------------------- -->
+		<div class="gnb">
+			<ul>
+				<li><a href="javascript:;">자산</a></li>
+				<li><a href="javascript:;">소비</a></li>
+				<li class="menuStar"><a href="javascript:;"><span class="menuStarInner"><span class="blind">별별서비스</span></span></a></li> <!-- [접근성_2024] 메뉴명 변경 -->
+				<li><a href="javascript:;">전체</a></li>
+			</ul>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [공지사항] -->
+		<!-- -------------------------------------- -->
+		<div class="swiper mainNoticeSwiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><div class="mainNotice"><p>일부 금융기관 시스템 점검 안내 일부 금융기관 시스템 점검 안내(2/15~26)</p></div></div>
+				<div class="swiper-slide"><div class="mainNotice"><p>일부 금융기관 시스템 점검 안내(2/15~26)</p></div></div>
+				<div class="swiper-slide"><div class="mainNotice"><p>일부 금융기관 시스템 점검 안내(2/15~26)</p></div></div>
+			</div>
+			<div class="swiper-pagination"></div>
+			<div class="swiper-button-prev blind"></div>
+			<div class="swiper-button-next blind"></div>
+		</div>
+		<!-- <div class="mainNotice"><p>일부 금융기관 시스템 점검 안내(2/15~26)</p></div> -->
+
+		<!-- -------------------------------------- -->
+		<!-- [피드 영역] -->
+		<!-- -------------------------------------- -->
+		<!-- 배너형 CASE : tyBanner -->
+		<div class="mybannerArea">
+			<a href="javascript:;" role="button" title="관리자 등록 링크화면 이동" class="mybanner tyBanner" style="background-color:#d6f1ea;">
+				<div class="txtWrap">
+					<strong class="mainTit">잠자는 돈 깨우기</strong>	
+					<p class="subTxt">입출금 통장의 잠자는 돈 발견!<br>굴리기 딱 좋은 상품을 찾았어요!</p>
+				</div>
+				<div class="myImgWrap"><img src="../../images/banner/my_obj_pigmoney.png" alt=""></div>
+			</a>
+		</div>
+		<!-- <div class="mainTopBanner">
+			<a href="javascript:;" role="button" class="type01">
+				<div class="inner">
+					<p class="mainTopBannerPara">김농협님, 병원 다녀 오셨나요?</p>
+					<div class="mainTopBannerTitle">실손보험금 청구하기</div>
+					<p class="mainTopBannerValue">나나 약국 17,400원</p>
+				</div>
+			</a>
+		</div> -->
+
+		<!-- -------------------------------------- -->
+		<!-- [개인화영역] -->
+		<!-- -------------------------------------- -->
+		<!-- [CASE1] 조회완료 -->
+		<div class="mainAssetSum">
+			<div class="titleWrap">
+				<div class="title">김농협님 순 자산</div>
+				<div class="item">
+					<span class="tgBtn3">
+						<input type="checkbox" id="toggle2" checked="checked" title="순자산 보이기"> <!-- [접근성_2024] title 수정 -->
+						<label for="toggle2">금액</label>
+					</span>
+				</div>
+			</div>
+			<a href="javascript:;" role="button" title="순자산 바로가기" class="goAssetSubmain"><!-- 2022-12-16 링크 추가 -->
+				<div class="mainBalanceHidden">비밀이예요!</div>
+
+				<div class="mainBalance"><span class="dataValue">890,000,000</span>원</div>
+				<div class="mainBalanceDiff">
+					<span class="mainBalanceDiffTit">MM.DD 대비</span><span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span>
+					<!-- <span class="arrowDown"><em class="blind">감소</em></span> -->
+					<span class="amount"><strong>56,897</strong>원</span>
+
+					<!-- 변동 없을 경우 - arrowNone 클래스 사용 // -->
+					<!-- <span class="arrowNone"><em class="blind">없음</em></span>
+					<span class="amount"><strong>0</strong>원</span> -->
+					<!-- //변동 없을 경우 -->
+				</div>
+			</a>
+		</div>
+
+		<!-- [CASE2] 조회중 -->
+		<div class="mainAssetSum">
+			<div class="titleWrap">
+				<div class="title">김농협님 순 자산</div>
+				<div class="item">
+					<span class="tgBtn3">
+						<input type="checkbox" id="toggle2" checked="checked" title="순자산 보이기">
+						<label for="toggle2">금액</label>
+					</span>
+				</div>
+			</div>
+			<a href="javascript:;" role="button" title="순자산 바로가기" class="goAssetSubmain"><!-- 2022-12-16 링크 추가 -->
+				<div class="mainBalanceHidden">조회중 이예요</div>
+			</a>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [이번주 금융일정] -->
+		<!-- -------------------------------------- -->
+		<!-- [CASE1] 금융일정 있는 경우 -->
+		<div class="boxTypeWrap mainRadius wrap_dl_calender">
+			<h2 class="defSubTit1 mt0"><strong>이번주 금융일정</strong></h2>
+
+			<div class="weekMainWarp mt10">
+				<ul>
+					<li>
+						<!-- [2022-10-18] a로 변경 -->
+						<a href="javascript:;" class="weekMain_tit contented" role="button" title="내역있음">
+							<div>일</div>
+							<div class="num">17</div> <!-- 지난날짜일 경우 defNum에서 num으로 클래스 변경 -->
+						</a>
+						<!-- //[2022-10-18] a로 변경 -->
+						<!-- <div class="weekMain_list">
+							<div>정기적금</div>
+							<div>외<span class="pointColor">1건</span></div>
+						</div> --><!-- 정기적금 노출 삭제 -->
+					</li>
+					<li>
+						<!-- [2022-10-18] a로 변경 -->
+						<a href="javascript:;" class="weekMain_tit active contented" role="button" title="오늘 내역있음">
+							<!-- active 있을 경우 오늘--> <!-- [2023-01-20] contented 추가 시 내역마크 -->
+							<div>월</div>
+							<div class="num">18</div>
+						</a>
+						<!-- //[2022-10-18] a로 변경 -->
+					</li>
+					<li>
+						<a href="javascript:;" class="weekMain_tit" role="button">
+							<div>화</div>
+							<div class="defNum">19</div>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;" class="weekMain_tit" role="button">
+							<div>수</div>
+							<div class="defNum">20</div>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;" class="weekMain_tit" role="button">
+							<div>목</div>
+							<div class="defNum">21</div>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;" class="weekMain_tit" role="button">
+							<div>금</div>
+							<div class="defNum">22</div>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;" class="weekMain_tit" role="button">
+							<div>토</div>
+							<div class="defNum">23</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+
+
+			<!-- <div class="dlCalenderInner mt10">
+				<div class="dl_calender_week">
+					<span class="weekend">일</span>
+					<span>월</span>
+					<span>화</span>
+					<span>수</span>
+					<span>목</span>
+					<span>금</span>
+					<span class="weekend">토</span>
+				</div>
+
+				<div class="dl_calender_day">
+					<div class="dl_calender_row">
+						<div>
+							<a href="javascript:;" role="button">
+								<span class="dl_calender_date">14</span>
+								<span class="dl_calender_subject unerColor-o">정기적금정기적금</span>
+								<span class="dl_calender_subject unerColor-p">국민연금</span>
+							</a>
+						</div>
+						<div class="thisday today">
+							<a href="javascript:;">
+								<span class="dl_calender_date">15</span>
+								<span class="dl_calender_subject unerColor-o">정기적금정기적금</span>
+								<span class="dl_calender_subject unerColor-p">국민연금</span>
+							</a>
+						</div>
+						<div>
+							<a href="javascript:;">
+								<span class="dl_calender_date">16</span>
+								
+							</a>
+						</div>
+						<div>
+							<a href="javascript:;">
+								<span class="dl_calender_date">17</span>
+								<span class="dl_calender_subject unerColor-b">동창회비</span>
+								<span class="dl_calender_subject ">외 <em class="pointColor">2건</em></span>
+							</a>
+						</div>
+						<div>
+							<a href="javascript:;">
+								<span class="dl_calender_date">18</span>
+								<span class="dl_calender_subject  unerColor-g">우리은행</span>
+							</a>
+						</div>
+						<div>
+							<a href="javascript:;">
+								<span class="dl_calender_date">19</span>
+								<span class="dl_calender_subject">MYDATA</span>
+							</a>
+						</div>
+						<div>
+							<a href="javascript:;">
+								<span class="dl_calender_date">20</span>
+								<span class="dl_calender_subject unerColor-admin">우리은행</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div> --><!-- //.dlcalenderInner -->
+			<ul class="mainBankingInfo">
+				<li>
+					<a href="javascript:;" role="button">
+						<div class="subjectWrap"><span class="flagSchelule unerColor-o">만기도래</span><span class="subject">KB다이렉트 자동차</span></div>
+						<div class="dDay">D-2</div>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" role="button">
+						<div class="subjectWrap"><span class="flagSchelule unerColor-p">납부예정</span><span class="subject">적금 납부일</span></div>
+						<div class="dDay">D-2</div>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" role="button">
+						<div class="subjectWrap"><span class="flagSchelule unerColor-stock">공모주</span><span class="subject">삼성카드 카드대금결제 삼성카드 카드대금결제</span></div>
+						<div class="dDay">D-2</div>
+					</a>
+				</li>
+			</ul>
+			<div class="mt15"><a href="javascript:;" class="linkTxt2" role="button">금융일정을 확인해보세요</a></div> <!-- [접근성_2024] role="button" 추가 -->
+			<!-- <div class="mt15"><a href="javascript:;" class="linkTxt2"><em class="pointColor">8</em>건의 일정이 더 있어요!</a></div> -->
+		</div>
+
+		<!-- [CASE2] 금융일정 없는 경우 -->
+		<div class="boxTypeWrap mainRadius wrap_dl_calender  dlCalenderEmpty">
+			<h2 class="defSubTit1 mt0"><strong>이번주 금융일정</strong></h2>
+			<div class="weekMainWarp mt10">
+				<ul>
+					<li>
+						<!-- [2022-10-18] a로 변경 -->
+						<a href="javascript:;" class="weekMain_tit" role="button">
+							<div>일</div>
+							<div class="num">17</div> <!-- 지난날짜일 경우 defNum에서 num으로 클래스 변경 -->
+						</a>
+						<!-- //[2022-10-18] a로 변경 -->
+					</li>
+					<li>
+						<!-- [2022-10-18] a로 변경 -->
+						<a href="javascript:;" class="weekMain_tit active "role="button" title="내역있음"> <!-- [2023-01-19] title 내역있음으로 변경 -->
+							<div>월</div>
+							<div class="num">18</div>
+						</a>
+						<!-- //[2022-10-18] a로 변경 -->
+					</li>
+					<li>
+						<div class="weekMain_tit">
+							<div>화</div>
+							<div class="defNum">19</div>
+						</div>
+					</li>
+					<li>
+						<div class="weekMain_tit">
+							<div>수</div>
+							<div class="defNum">20</div>
+						</div>
+					</li>
+					<li>
+						<div class="weekMain_tit">
+							<div>목</div>
+							<div class="defNum">21</div>
+						</div>
+					</li>
+					<li>
+						<div class="weekMain_tit">
+							<div>금</div>
+							<div class="defNum">22</div>
+						</div>
+					</li>
+					<li>
+						<div class="weekMain_tit">
+							<div>토</div>
+							<div class="defNum">23</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="mt15"><a href="javascript:;" class="linkTxt2">금융일정을 확인해보세요</a></div><!-- 추가 -->
+
+			<!-- <div class="mainBankingEmpty">
+				<div class="listNone">
+					<p>금융일정을 확인해보세요</p>
+				</div>
+			</div> -->
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [2023 NH마이데이터 서비스 고도화] 스팟배너추가 -->
+		<!-- -------------------------------------- -->
+		<div class="areaBanner7">
+			<!-- [CASE1] 자산진단 -->
+			<dl class="img1">
+				<dt class="tit"><span>한눈에 보는 자산진단</span><strong>나는야 능숙한 투자고수 ~ 관리자에서 등록되는 문구 입니다.</strong></dt>
+				<dd class="toggleWrap">
+					<div class="toggleCont" style="display:none;">
+						<ul class="info">
+							<li>투자수익 상위 <span>00%</span>로, 투자고수 시네요!</li>
+							<li>다른 투자고수들이 가장 많이 투자하는 종목은 <span>Top1항목</span>이고 평균적으로 <strong class="dataValue">0,000</strong><span class="won">만원</span> 투자하고 있어요.</li>
+							<li>다른 투자고수들은 어떻게 다른지 비교해 볼까요?</li>
+						</ul>
+						<div class="btns"><a href="javascript:;" class="linkTxt2">투자수익률 확인</a></div>
+					</div>
+					<button type="button" class="btnMore toggleBtn toggleTxt08"><span>자세히 보기</span></button>
+				</dd>
+			</dl>
+
+			<!-- [CASE2] 연금진단 -->
+			<dl class="img2">
+				<dt class="tit"><span>한눈에 보는 연금진단</span><strong>균형있는<br>연금계획이 필요해요</strong></dt>
+				<dd class="toggleWrap">
+					<div class="toggleCont" style="display:none;">
+						<ul class="info">
+							<li>지난 3개월에 비해 내가모은연금이 <strong class="dataValue">0,000</strong><span class="won">만원</span> 늘었어요.</li>
+							<li>연금진단 결과 공적연금 비중이 75%로 가장 높았어요(MM.DD 기준).</li>
+							<li>원하는 시기에 연금소득이 발생할 수 있도록 생애 전체를 고려한 균형있는 연금계획이 필요해요. </li>
+						</ul>
+						<div class="btns"><a href="javascript:;" class="linkTxt2">연금자산 점검하기</a></div>
+					</div>
+					<button type="button" class="btnMore toggleBtn toggleTxt08"><span>자세히 보기</span></button>
+				</dd>
+			</dl>
+
+			<!-- [CASE3] 조기은퇴진단 -->
+			<dl class="img3">
+				<dt class="tit"><span>한눈에 보는 조기은퇴진단</span><strong>은퇴준비자금이<br>줄고있다..?!</strong></dt>
+				<dd class="toggleWrap">
+					<div class="toggleCont" style="display:none;">
+						<ul class="info">
+							<li>금융자산이 안전자산에 편중되어 있어요</li>
+							<li>지난 6개월보다 은퇴준비자금이 <strong class="dataValue">0,000</strong><span class="won">만원</span> 하락했어요.</li>
+							<li>은퇴자금이 하락하면 은퇴 후 자금고갈이 빨라질 수 있어요. 진단을 통해 나의 은퇴준비자금을 다시 점검해 볼까요?</li>
+						</ul>
+						<div class="btns"><a href="javascript:;" class="linkTxt2">조기은퇴진단 확인</a></div>
+					</div>
+					<button type="button" class="btnMore toggleBtn toggleTxt08"><span>자세히 보기</span></button>
+				</dd>
+			</dl>
+			<!-- // -->
+		</div>
+
+
+		<!-- -------------------------------------- -->
+		<!-- [이번 달 총 소비] -->
+		<!-- -------------------------------------- -->
+		<!-- [CASE1] 총 소비 조회 완료 -->
+		<div class="boxTypeWrap mainRadius">
+			<!-- 2022-12-19 수정 (링크영역 분리) -->
+			<a href="javascript:;" class="mainCSLink" role="button">
+				<h2 class="defSubTit1 mt0"><strong>이번 달 총 소비</strong></h2>
+				
+				<div class="mainBalance"><span class="dataValue">890,000,000</span>원</div>
+				<p class="subTxt2 mt5">지난 달 같은 기간 대비, <span class="pointColor14 dataValue">54,084원</span>절약</p>
+				<div class="mt15">
+					<p style="text-align:center;background-color:#f1f1f1;">그래프 영역</p>
+				</div>
+			</a>
+			<a href="javascript:;" class="mainCSLink2" role="button">
+				<div class="mainMonthInfoWrap">
+					<div class="mainMonthDday">D-14</div>
+					<div class="mainMonthInfo">
+						<p>5월 10일  결제 예정 금액</p>
+						<div class="mainMonthBalance"><strong class="dataValue">433,160</strong>원</div>
+					</div>
+				</div>
+			</a>
+			<!-- 2022-12-19 수정 (링크영역 분리) -->
+		</div>
+
+		<!-- [CASE2] 총 소비 조회 조회중 -->
+		<div class="boxTypeWrap mainRadius">
+			<a href="javascript:;" class="mainCSLink">
+				<h2 class="defSubTit1 mt0"><strong>이번 달 총 소비</strong></h2>
+				
+				<div class="mainBalance"><span class="dataValue">890,000,000</span>원</div>
+				<p class="subTxt2 mt5">조회 이예요</p>
+				<div class="mt15">
+					<p style="text-align:center;background-color:#f1f1f1;">그래프 영역</p>
+				</div>
+			</a>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [목표설정] -->
+		<!-- -------------------------------------- -->
+		<!-- 설정 목표 없는 경우 -->
+		<div class="boxTypeWrap mainRadius mainAimEmpty" role="button" tabindex="0" title="목표 페이지 이동"><!-- [접근성_2024] role="button" tabindex="0" title 추가 -->
+			<p class="mainAimEmptyPara ">나의 목표를 설정해 보세요!</p>
+		</div>
+
+		<!-- 설정 목표 있는 경우 -->
+		<div class="boxTypeWrap mainRadius mainAimHave">
+			<div class="purposeCateS"><img src="../../images/category/icoCate90.png" alt=""></div>
+			<div class="mainAimSubject">
+				<div class="title">목돈 마련</div>
+				<div class="info">나의 목표 달성률 <strong>80%</strong></div>
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [배너영역] 나만의 메뉴 설정 배너 -->
+		<!-- -------------------------------------- -->
+		<div class="mainBttomBannerWrap">
+			<ul>
+				<!-- [2023 NH마이데이터 서비스 고도화] 배너추가 : 신용관리 -->
+				<!-- [CASE] 미동의 -->
+				<li class="img1">
+					<a href="javascript:;" role="button">
+						<div class="title">신용관리</div>
+						<div class="subject">신용점수 올리기<br>어렵지 않아요!</div>
+					</a>
+				</li>
+				<!-- [CASE] 동의 -->
+				<li class="img1">
+					<a href="javascript:;" role="button">
+						<div class="subject">나의 신용점수</div>
+						<div class="title">
+							<span>NICE</span>
+							<strong>981점</strong>
+						</div>
+					</a>
+				</li>
+
+				<!-- [2023 NH마이데이터 서비스 고도화] 배너추가 : 카드리포트 -->
+				<li class="img2">
+					<a href="javascript:;" role="button">
+						<div class="title">카드리포트</div>
+						<div class="subject">나 vs 또래<br>어떻게 다를까?</div>
+					</a>
+				</li>
+				<!-- // [2023 NH마이데이터 서비스 고도화] 배너추가 -->
+
+				<li class="report">
+					<a href="javascript:;" role="button">
+						<div class="subject">내 자산분석을 한눈에!</div>
+						<div class="title">1월 보고서</div>
+					</a>
+				</li>
+				<li class="pension">
+					<a href="javascript:;" role="button">
+						<div class="title">내가 모은 연금</div>
+						<div class="subject">현재까지 모은 연금이<br>궁금하시죠!<br>바로 확인하세요!</div>
+					</a>
+				</li>
+				<li class="tax">
+					<a href="javascript:;" role="button">
+						<div class="title">절세팁</div>
+						<div class="subject">미리 알고 똑똑하게<br>준비하는 절세팁</div>
+					</a>
+				</li>
+				<li class="car">
+					<a href="javascript:;" role="button">
+						<div class="title">내차 시세</div>
+						<div class="subject">캡티바 2.0 디젤</div>
+						<div class="value"><strong class="dataValue">1,350</strong><span class="unit">만원</span></div>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- <a href="javascript:;" class="homeViewSeting"><span>나만의 메뉴 설정</span></a> --> <!-- [2023-02-07] 메뉴 삭제 -->
+
+		<!-- [2023-02-07] 배너 삭제 -->
+		<!-- <a href="javascript:;" class="mainBigTxtBanner" role="button" title="">
+			<strong class="mainTit">큰글모드 보기</strong>
+			<p class="mainTxt">NH마이데이터의 큰글 모드를 경험하세요!</p>
+		</a> -->
+		<!-- //[2023-02-07] 배너 삭제 -->
+
+		<!-- -------------------------------------- -->
+		<!-- [바로가기] -->
+		<!-- -------------------------------------- -->
+		<ul class="btnBoxWrap mt20">
+			<li><button type="button"><span class="iconEditMenu">나만의 메뉴 편집</span></button></li>
+			<li><button type="button"><span class="iconSetText">큰글모드 설정</span></button></li>
+		</ul>
+
+		<!-- -------------------------------------- -->
+		<!-- [배너영역] 이벤트 배너 -->
+		<!-- -------------------------------------- -->
+		<div class="swiper-container bannerSwiperImgtype ent01 mt15">
+			<div class="swiper-wrapper ">
+				<div class="swiper-slide bannerPrd1 pr0 pl0">
+					<a href="javascript:;">
+						<img src="../../images/temp/temp_main_event_banner.png" alt="대체택스트 들어갑니다." class="bannerImgType" /><!-- [접근성_2024] 등록된 배너 타이틀을 alt에 추가 부탁드립니다. -->
+					</a>
+				</div>
+				<div class="swiper-slide bannerPrd1 pr0 pl0">
+					<a href="javascript:;">
+						<img src="../../images/temp/temp_main_event_banner.png" alt="대체택스트 들어갑니다." class="bannerImgType" /><!-- [접근성_2024] 등록된 배너 타이틀을 alt에 추가 부탁드립니다. -->
+					</a>
+				</div>
+				<div class="swiper-slide bannerPrd1 pr0 pl0">
+					<a href="javascript:;">
+						<img src="../../images/temp/temp_main_event_banner.png" alt="대체택스트 들어갑니다." class="bannerImgType" /><!-- [접근성_2024] 등록된 배너 타이틀을 alt에 추가 부탁드립니다. -->
+					</a>
+				</div>
+			</div>
+			<div class="auto_page_btnps mt5">
+				<div class="swiper-pagination pageCarDriveBanner"></div>
+				<div class="btnPSWrap">
+					<button type="button" class="stop"><span class="blind">자동재생 정지</span></button>
+				</div>
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [플로팅영역] -->
+		<!-- -------------------------------------- -->
+		<div class="mainAssetConnBtn">
+			<a href="javascript:;" title="자산연결">자산</a>
+		</div>
+		<!-- -------------------------------------- -->
+	</div>
+	<!-- ###################################### -->
+
+	<!-- footer 올원 -->
+	<div class="linked-bottom-menu">
+		<a href="javascript:void(0);" class="linked-finance">NH금융</a>
+		<a href="javascript:void(0);" class="linked-mall">상품몰</a>
+		<a href="javascript:void(0);" class="linked-mydata">자산관리</a>
+		<a href="javascript:void(0);" class="linked-life">생활+</a>
+	</div>
+
+	<!-- footer 스뱅 -->
+	<div class="footer sb">
+		<ul class="footerNav"> 
+			<li><a href="javascript:;" class="home">홈</a></li>
+			<li><a href="javascript:;" class="mydata on">마이데이터</a></li>
+			<li><a href="javascript:;" class="mall">금융상품몰</a></li>
+			<li><a href="javascript:;" class="talk">상담톡</a></li>
+		</ul>
+	</div>
+
+	<!-- 큰글모드 테스트용 반영X// -->
+	<div class="pubUtileWrap">
+		<div class="pubToggleWrap">
+			<button type="button" class="btnToggle"><span class="blind">열/닫</span></button>
+		</div>
+		<ul>
+			<li><button type="button" class="btnPubFontBig" >글자크게</button></li> <!-- $('html').addClass('fontBig') -->
+			<li><button type="button" class="btnPubFontNormal" >글자작게</button></li> <!-- $('html').removeClass('fontBig') -->
+		</ul>
+	</div>
+	<!-- //큰글모드 테스트용 반영X -->
+
+</div>
+
+<script type="text/javascript">
+	//공지 사항 배너 슬라이드 2022-11-28 추가
+	mainNoticeSwiper();
+	
+	//메인 배경 색상
+	function mainBg(){
+		$(window).on('scroll',function(){
+			var $thisScHeight = $('html').scrollTop();
+			if ($thisScHeight > 54) {
+				var $thisValue = 60 - ($thisScHeight - 54);
+				//var $thisval = (($thisScHeight / $scHeight)*100).toFixed(0);
+				$('.nhassetMain .nhasset .container .mainBg').css('border-bottom-right-radius',$thisValue);	
+			}
+			
+		});
+	}
+	mainBg();
+	
+	//[2023-01-20] 메인 이벤트 배너 스와이퍼 호출
+	mainEventImgSwiper();
+
+	//[샘플] 올리 플로팅 예시
+	$(window).on('load', function(){
+		var _ollyPos = 'pos0' + uiSetRandom(1,10);
+		var _ollyImg = '../../images/event/findally/img_view_ally0' + uiSetRandom(1,7) + '.png';
+		$('.findOlly').addClass(_ollyPos); //위치 랜덤
+		$('.findOlly img').attr('src', _ollyImg);
+	});
+</script>	
+</body>
+</html>

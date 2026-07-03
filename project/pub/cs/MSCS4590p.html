@@ -1,0 +1,96 @@
+<DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>내카드선택</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(function() {
+		slidePopOption();
+	});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">내카드선택</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 --> <!-- [2020-11-16] 전체메뉴 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+		</div>
+		<!-- //container -->
+
+		
+
+		<!-- slidepop -->
+		<div class="nhasset popWrap slidePopOption">
+			<div class="dim"></div>
+			<div class="popInner">
+				<h1>내카드선택</h1>
+				<div class="popCont">
+					<div class="popInnerCont mb15">
+						<a href="javascript:;" class="linkTypeBlock">카드연결바로가기</a>
+					</div>
+					<ul class="selectList accList isBorder">
+						<li class="active">
+							<a href="javascript:;" role="button" title="카드선택"> <!-- [2023-01-15] 접근성 수정 -->
+								<!-- <span class="imgWrap D1AABG0000"><em class="blind">농협카드</em></span> -->
+								<span class="imgWrap"> <!-- [2022-11-21] 사보현 : 로고 공통 이미지로 변경 -->
+									<img src="../../images/logos/AABG0000.png" alt="농협카드 로고" class="imgLogo"> <!-- [접근성_2024] 기관명으로 변경 : 현재 카드명으로 들어가 있음 -->
+								</span>
+								<div class="accInfoWrap">
+									<p class="accTit">NH농협카드1</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" role="button" title="카드선택"> <!-- [2023-01-15] 접근성 수정 -->
+								<!-- <span class="imgWrap A1AABG0000"><em class="blind">농협카드</em></span> -->
+								<span class="imgWrap"> <!-- [2022-11-21] 사보현 : 로고 공통 이미지로 변경 -->
+									<img src="../../images/logos/AABG0000.png" alt="농협카드 로고" class="imgLogo">
+								</span>
+								<div class="accInfoWrap">
+									<p class="accTit">NH농협카드2</p>
+								</div>
+							</a>
+						</li>
+						
+					</ul>
+				</div>
+
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<a href="javascript:;" class="" onclick="popClose(this);return false;" role="button">취소</a>
+						<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">확인</a>
+					</div>
+					<!-- <a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다."><img src="../../images/common/btn_popClose.png" alt="닫기"></a> -->
+				</div>
+			</div>
+		</div>
+		<!-- //slidepop -->
+
+	</div>
+
+</body>
+</html>

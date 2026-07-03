@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>헬스케어_관심사 선택</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script>
+	$(function(){
+		fullLayerPop();
+	});
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>맞춤정보 등록</h1>
+		<a href="javascript:;" class="btnEtc">나가기</a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+	</div>
+</div>
+
+<div class="nhasset popWrap fullLayerPop" role="dialog">
+	<div class="popInner">
+		<h1>관심사 선택</h1>
+		<div class="popCont grayPop">
+			<div class="boxTypeWrap">
+				<h2 class="defTit mt0">
+					<strong>관심있는 건강 카테고리를<br>
+					3개 이상 설정해 주세요!</strong> <span class="txtt2 fwN">(<em class="pointColor">n</em>/7)</span>
+				</h2>
+				<!-- [2022-12-13] 수정 -->
+				<ul class="icohc pickList">
+					<li>	
+						<input type="checkbox" name="rdo01" id="rdo011" checked="checked" aria-label="식품 : 건강식품의 다양한 효능">
+						<label for="rdo011" class="rdoCheck" aria-hidden="true">
+							<span class="imgWrap">
+								<span class="img">
+									<img src="../../images/category/hc/ico_cate_hc01.png" alt="식품 아이콘">
+								</span>
+							</span>
+							<div>
+								<strong class="pickTit">식품</strong>
+								<p class="pickTxt">건강식품의 다양한 효능</p>
+							</div>
+						</label>
+					</li>
+					<li>	
+						<input type="checkbox" name="rdo01" id="rdo012" checked="checked" aria-label="비만 : 살이 찌면 생기는 합병증">	
+						<label for="rdo012" class="rdoCheck" aria-hidden="true">
+							<span class="imgWrap">
+								<span class="img">
+									<img src="../../images/category/hc/ico_cate_hc02.png" alt="비만 아이콘">
+								</span>
+							</span>
+							<div>
+								<strong class="pickTit">비만</strong>
+								<p class="pickTxt">살이 찌면 생기는 합병증</p>
+							</div>
+						</label>
+					</li>
+					<li>	
+						<input type="checkbox" name="rdo01" id="rdo013" checked="checked" aria-label="피부 : 꿀피부를 위한 한걸음">	
+						<label for="rdo013" class="rdoCheck" aria-hidden="true">
+							<span class="imgWrap">
+								<span class="img">
+									<img src="../../images/category/hc/ico_cate_hc03.png" alt="피부 아이콘">
+								</span>
+							</span>
+							<div>
+								<strong class="pickTit">피부</strong>
+								<p class="pickTxt">꿀피부를 위한 한걸음</p>
+							</div>
+						</label>
+					</li>
+					<li>	
+						<input type="checkbox" name="rdo01" id="rdo014" aria-label="정신건강 : 보이지 않는 병 정신건강">	
+						<label for="rdo014" class="rdoCheck" aria-hidden="true">
+							<span class="imgWrap">
+								<span class="img">
+									<img src="../../images/category/hc/ico_cate_hc04.png" alt="정신건강 아이콘">
+								</span>
+							</span>
+							<div>
+								<strong class="pickTit">정신건강</strong>
+								<p class="pickTxt">보이지 않는 병 정신건강</p>
+							</div>
+						</label>
+					</li>
+					<li>	
+						<input type="checkbox" name="rdo01" id="rdo015" aria-label="치아건강 : 건강한 치아를 위한 습관">	
+						<label for="rdo015" class="rdoCheck" aria-hidden="true">
+							<span class="imgWrap">
+								<span class="img">
+									<img src="../../images/category/hc/ico_cate_hc05.png" alt="치아건강 아이콘">
+								</span>
+							</span>
+							<div>
+								<strong class="pickTit">치아건강</strong>
+								<p class="pickTxt">건강한 치아를 위한 습관</p>
+							</div>
+						</label>
+					</li>
+					<li>	
+						<input type="checkbox" name="rdo01" id="rdo016" aria-label="수면건강 : 좋은 수면을 위한 지식">	
+						<label for="rdo016" class="rdoCheck" aria-hidden="true">
+							<span class="imgWrap">
+								<span class="img">
+									<img src="../../images/category/hc/ico_cate_hc06.png" alt="수면건강 아이콘">
+								</span>
+							</span>
+							<div>
+								<strong class="pickTit">수면건강</strong>
+								<p class="pickTxt">좋은 수면을 위한 지식</p>
+							</div>
+						</label>
+					</li>
+					<li>	
+						<input type="checkbox" name="rdo01" id="rdo017" aria-label="기타 : 다양한 의학지식">	
+						<label for="rdo017" class="rdoCheck" aria-hidden="true">
+							<span class="imgWrap">
+								<span class="img">
+									<img src="../../images/category/hc/ico_cate_hc07.png" alt="기타 아이콘">
+								</span>
+							</span>
+							<div>
+								<strong class="pickTit">기타</strong>
+								<p class="pickTxt">다양한 의학지식</p>
+							</div>
+						</label>
+					</li>
+				</ul>
+				<!-- //[2022-12-13] 수정 -->
+				<div class="cs btnSetReset mt20 mb0">
+                    <button type="button">설정 초기화</button>
+                </div>
+			</div>
+		</div>
+		<div class="popBtnWrap">
+			<div class="popBtn">
+				<a href="javascript:;" class="confirmBtn" role="button">저장</a>
+			</div>
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+		</div>
+	</div>
+</div>	
+
+</body>
+</html>

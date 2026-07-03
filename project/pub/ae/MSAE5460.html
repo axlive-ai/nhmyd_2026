@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>컨설팅 > DSR 계산기</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		//tostpop();//토스트 팝업 호출 
+	})
+
+	function tostpop(){
+		var $tostCont = '<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg">업데이트를 완료했습니다.</div></div>'
+		$('.container').after($tostCont);
+		setTimeout(function(){
+			$('.tostpopupWrap').remove();
+		},4000)
+	}
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>DSR 계산기</h1>
+		<!-- <a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a> -->
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<div class="boxTypeWrap dsrResult">
+			<h2 class="defTit"><strong>입력하신 정보</strong>로 확인한<br><strong class="highLight"><span>DSR 계산결과</span></strong> 입니다</h2>
+			<div class="greenBox2">
+				<p class="subTxt2">
+					DSR = 총 대출원리금상환액 / 연소득 * 100<br>
+					(원리금 = 원금 + 이자)
+				</p>
+			</div>
+		</div>
+
+		<div class="boxTypeWrap dsrLimit imgType03"> <!-- .imgType01:소득금액만입력/대출정보입력, .imgType02:주택담보대출, imgType03:대출가능금액없는경우 -->
+			<h2 class="defTit"><strong>고객님께서는 총 대출금액 1억원<br>이하로</strong>DSR 규제대상이 아닙니다</h2>
+			<span class="subTxt2">조회기준일: 2022.08.11</span>
+			<div class="dsrRangeWrap down"> <!-- 신청금액 포함 DSR : 초과 .up , 미만 .down -->
+				<ul>
+					<li>
+						<span class="tit">현재 DSR</span>
+						<strong class="curDsr" data-val="28.77">28.77%</strong>
+					</li>
+					<li>
+						<span class="tit">신청금액 포함 DSR</span>
+						<strong class="valDsr" data-val="31.77">31.77%</strong>
+					</li>
+				</ul>
+				<div class="graph" aria-hidden="true">
+					<div class="barWrap">
+						<span class="bg"></span>
+						<span class="bar curDsr"></span> <!-- 현재 DSR -->
+						<span class="bar valDsr"></span>
+					</div>
+					<div class="unitWrap">
+						<p class="unit1">0.00%</p>
+						<p class="unit2">40.00%</p>
+						<p class="unit3">100.00%</p>
+					</div>
+				</div>
+				<script>
+					$(document).ready(function(){
+						var curDsr = $('.dsrRangeWrap .curDsr').attr('data-val');
+						var valDsr = $('.dsrRangeWrap .valDsr').attr('data-val');
+						//console.log(curDsr);
+						$('.barWrap .curDsr').css('width',curDsr + '%')
+						$('.barWrap .valDsr').css('width',valDsr + '%')
+						if(valDsr > 100){
+							$('.unitWrap .unit3').addClass('up').text(valDsr + '%');
+						}
+					})
+				</script>
+			</div>
+			<p class="infoTxt mt0">총대출 1억 초과 시 DSR 40% 이내에서만 대출이 가능합니다.</p>
+			<div class="greenBox2 ac">
+				DSR 기준을 <strong class="pointColor">충족</strong>합니다.<br>영업점 및 NH스마트뱅킹/NH올원뱅크에서<br>자세한 상담을 받아보세요.
+			</div>
+			<ul class="listBul disc">
+				<li>정확한 대출 가능 여부 및 한도 확인은 NH농협은행 영업점과 NH스마트뱅킹/NH올원뱅크에서 실제 대출심사를 통해 확인하실 수 있습니다.</li>
+			</ul>
+		</div>
+
+		<div class="boxTypeWrap dsrCondition">
+			<h2 class="defSubTit2">계산 적용 대출조건</h2>
+			<div class="grayBox">
+				<ul class="detailList">
+					<li>
+						<span class="tit">선택 대출</span>
+						<span class="value">주택담보대출</span>
+					</li>
+					<li>
+						<span class="tit">연소득</span>
+						<span class="value">80,000,000원</span>
+					</li>
+					<li>
+						<span class="tit">신청금액</span>
+						<span class="value">100,000,000원</span>
+					</li>
+					<li>
+						<span class="tit">대출기간</span>
+						<span class="value">40년</span>
+					</li>
+					<li>
+						<span class="tit">금리</span>
+						<span class="value">4.50%</span>
+					</li>
+				</ul>
+				<a href="javascript:;" class="linkType3">다시 계산하기</a>
+			</div>
+		</div>
+
+		<!-- [2022-11-25] 1.91 베너수정 - MSHT4450과 마크업 통일  -->
+		<div class="boxTypeWrap bgType04">
+			<div class="visualSubWrap">
+				<h3 class="prodListTit img16">혹시 대출이 <br>필요하신가요?</h3>
+				<p class="subTxt4 mb0">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+			</div>
+			<ul class="prodListWrap">
+				<li>
+					<div class="mb5"><span class="tag mint02">신용</span></div>
+					<a href="javascript:;" role="button">
+						<div class="prodRecomWrap mb10">
+							<strong class="prodTit">직장인을 위한 신용대출</strong>
+							<em class="prodRecommInfo">고객님의 소중한 시간 SAVE!<br>1분이면 한도조회 OK!</em>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="areaBtnDefault">
+			<a href="javascript:;" class="btnPressDefault" role="button">취소</a>
+			<a href="javascript:;" class="btnPressPoint" role="button">확인</a>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

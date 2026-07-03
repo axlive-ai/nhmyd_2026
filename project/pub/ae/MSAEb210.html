@@ -1,0 +1,211 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>상세평가내역 | 서브메인 | 신용관리 | 컨설팅</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">상세평가내역</a></h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 상세평가내역 ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<!-- -------------------------------------- -->
+		<!-- [상단영역] 신용평가 반영비율 그래프 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap t1">
+			<h2 class="defTit"><strong class="bold">김농협</strong>님의 신용평가 반영비율(%)</h2>
+			<div class="areaChart1" style="height:240px;">
+				<!-- 신용점수 -->
+				<dl class="data1">
+					<dt>나의 신용점수는</dt>
+					<dd><strong class="dataValue">000</strong><span>점</span></dd>
+				</dl>
+
+				<!-- 
+					[샘플] 데이터 상세 : 위치값 : top:0;left:0; 으로 조정
+
+					** 색상 정의 : 범례와 동일한 클래스명 지정
+					ㄴ grade0 : 비금융/마이데이터 정보
+					ㄴ grade1 : 매우안정
+					ㄴ grade2 : 안정
+					ㄴ grade3 : 다소안정
+					ㄴ grade4 : 보통
+					ㄴ grade5 : 우려
+				 -->
+				<div class="data2 grade0" style="top:0;left:0;z-index:2;"><span>비금융/마이데이터</span><span>00%</span></div>
+
+				<!-- 차트영역 -->
+				<div class="chart"><div class="guide_empty"><!--차트가 들어갑니다.--></div></div>
+			</div>
+			<div class="graphAddEx">
+				<ul class="ty01 item1">
+					<li class="grade1">매우안정</li>
+					<li class="grade2">안정</li>
+					<li class="grade3">다소안정</li>
+					<li class="grade4">보통</li>
+					<li class="grade5">우려</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTION] 각 평가항목 아코디언 -->
+		<!-- -------------------------------------- -->
+		<!-- [샘플] 다소안정  -->
+		<div class="toggleWrap boxTypeToggle t1">
+			<div class="boxTitWrap">
+				<a href="javascript:;" class="toggleBtn">
+					<strong class="tit">상환이력</strong>
+					<!-- [D] 케이스별 태그 (class="grade0 ~ 5") 노출
+						[CASE0] 산출불가 : class="iconTxt2 grade0", [CASE1] 매우안정 : class="iconTxt2 grade1", 
+						[CASE2] 안정 : class="iconTxt2 grade2", [CASE3] 다소안정 : class="iconTxt2 grade3", 
+						[CASE4] 보통 : class="iconTxt2 grade4", [CASE5] 우려 : class="iconTxt2 grade5" -->
+					<span class="iconTxt2 grade3">다소안정</span>
+					<span class="sub"><strong class="dataValue">32</strong><span>%</span></span>
+				</a> 
+			</div>
+			<div class="toggleCont" style="display:none">
+				<!-- [D] 케이스별 이미지 (img_grade1 ~ 5.png) 노출
+					[CASE1] 매우안정 : img_grade1.png, [CASE2] 안정 : img_grade2.png, 
+					[CASE3] 다소안정 : img_grade3.png, [CASE4] 보통 : img_grade4.png, [CASE5] 우려 : img_grade5.png -->
+				<div class="areaImg1"><img src="../../images/creditscore/img_grade3.png" alt=""></div>
+				<ul class="listDot">
+					<li>신용도에 부정적 영향을 미니치는 연체기록이나 연체경험이 없습니다.</li>
+					<li>회원님의 상환이력수준은 동일성별과 비슷한 수준이며, 동일연령에 비해 높은 수준입니다.</li>
+					<li>회원님의 상환이력수준은 전체 대상자 중 상위 48% 수준입니다.</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- [샘플] 매우안정  -->
+		<div class="toggleWrap boxTypeToggle t1">
+			<div class="boxTitWrap">
+				<a href="javascript:;" class="toggleBtn">
+					<strong class="tit">신용형태</strong>
+					<span class="iconTxt2 grade1">매우안정</span>
+					<span class="sub"><strong class="dataValue">34</strong><span>%</span></span>
+				</a> 
+			</div>
+			<div class="toggleCont" style="display:none">
+				<div class="areaImg1"><img src="../../images/creditscore/img_grade1.png" alt=""></div>
+				<ul class="listDot">
+					<li>매우 안정적인 신용거래 포트폴리오를 구성하여 운영하고 있습니다.</li>
+					<li>최근 1년동안의 신용카드 거래기간이 6개월 이상입니다. 정상적인 신용카드 사용은 신용평가 우량요인입니다.</li>
+					<li>비담보신용대출을 보유하고 있습니다.</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- [샘플] 안정  -->
+		<div class="toggleWrap boxTypeToggle t1">
+			<div class="boxTitWrap">
+				<a href="javascript:;" class="toggleBtn">
+					<strong class="tit">부채수준</strong>
+					<span class="iconTxt2 grade2">안정</span>
+					<span class="sub"><strong class="dataValue">18</strong><span>%</span></span>
+				</a> 
+			</div>
+			<div class="toggleCont" style="display:none">
+				<div class="areaImg1"><img src="../../images/creditscore/img_grade2.png" alt=""></div>
+				<ul class="listDot">
+					<li>총 대출금액이 평균대비 높습니다.</li>
+					<li>비담보신용대출의 건수는 평균수준이나, 금액은 평균보다 다소 큽니다.</li>
+					<li>금융권에 등록된 채무보증 개설내역이 없습니다.</li>
+					<li>회원님의 현재부채수준은 동일성별에 비해 동일 수준이며, 동일연령에 비해 동일 수준입니다.</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- [샘플] 보통  -->
+		<div class="toggleWrap boxTypeToggle t1">
+			<div class="boxTitWrap">
+				<a href="javascript:;" class="toggleBtn">
+					<strong class="tit">거래기간</strong>
+					<span class="iconTxt2 grade4">보통</span>
+					<span class="sub"><strong class="dataValue">10</strong><span>%</span></span>
+				</a> 
+			</div>
+			<div class="toggleCont" style="display:none">
+				<div class="areaImg1"><img src="../../images/creditscore/img_grade4.png" alt=""></div>
+				<ul class="listDot">
+					<li>신용 거래기간이 다소 짧습니다. 연체없이 안정적 거래를 유지한다면 향후 신용평가 우량요인으로 반영될 수 있습니다.</li>
+					<li>회원님의 신용거래기간수준은 동일성별에 비해 낮은 수준이며, 동일연령에 비해 낮은 수준입니다.</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- [샘플] 우려  -->
+		<div class="toggleWrap boxTypeToggle t1">
+			<div class="boxTitWrap">
+				<a href="javascript:;" class="toggleBtn">
+					<strong class="tit">거래기간</strong>
+					<span class="iconTxt2 grade5">우려</span>
+					<span class="sub"><strong class="dataValue">10</strong><span>%</span></span>
+				</a> 
+			</div>
+			<div class="toggleCont" style="display:none">
+				<div class="areaImg1"><img src="../../images/creditscore/img_grade5.png" alt=""></div>
+				<ul class="listDot">
+					<li>신용 거래기간이 다소 짧습니다. 연체없이 안정적 거래를 유지한다면 향후 신용평가 우량요인으로 반영될 수 있습니다.</li>
+					<li>회원님의 신용거래기간수준은 동일성별에 비해 낮은 수준이며, 동일연령에 비해 낮은 수준입니다.</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- [샘플] 산출불가  -->
+		<div class="boxTypeWrap t2">
+			<strong class="defSubTit1">신용형태</strong>
+			<span class="iconTxt2 grade0">산출불가</span>
+		</div>
+		<!-- // -->
+
+		<!-- -------------------------------------- -->
+		<!-- [배너 영역] 비금융/마이데이터 정보 -->
+		<!-- -------------------------------------- -->
+		<div class="areaBanner3">
+			<!-- [CASE1] 반영된 비율이 있는 경우 -->
+			<a href="javascript:;" class="img1">
+				<span class="sub grade0">비금융/마이데이터 정보<i>(7%)</i></span>
+				<strong class="tit">자산정보 연결하고 점수 더 받기</strong>
+				<span class="con">연결된 자산정보와 성실납부내역을 <br> 제출하면 신용점수 상승에 도움이 됩니다.</span>
+			</a>
+			<!-- [CASE2] 반영된 비율 없을 경우 -->
+			<a href="javascript:;" class="img1">
+				<span class="sub">비금융/마이데이터 정보</span>
+				<strong class="tit">자산정보 연결하고 점수 더 받기</strong>
+				<span class="con">연결된 자산정보와 성실납부내역을 <br> 제출하면 신용점수 상승에 도움이 됩니다.</span>
+			</a>
+			<!-- // -->
+		</div>
+
+		<!-- -------------------------------------- -->
+	</div>
+	<!-- ###################################### -->
+</div>
+</body>
+</html>

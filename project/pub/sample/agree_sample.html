@@ -1,0 +1,127 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산등록</title>
+<script src="../pub-assets/js/head.js"></script>
+<style>
+	h2.guide{margin:20px 0;padding:5px 0;font-size:20px;font-weight:900;background:rgb(255, 248, 157);text-align:center}
+	.title{margin:20px 0 10px;font-size:15px;font-weight:bold;color:blue}
+	.desc{margin:30px 0 20px;font-size:13px;font-weight:bold;color:#65aee2}
+	.title + .desc{margin-top:10px;}
+</style>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<h1><a href="javascript:;" role="text">은행자산 직접등록</a></h1>
+			<a href="javascript:;" class="btnEtc">나가기</a>
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="stepArea">
+                <p class="stepTit">약관동의</p>
+                <div class="stepInfo" role="img" aria-label="총 3단계중 1단계 입니다.">
+                    <ul class="stepList">
+                        <li class="active"><span>1</span></li>
+                        <li><span>2</span></li>
+                        <li><span>3</span></li>
+                    </ul>
+                </div>
+			</div>
+
+			<div class="agreementWrap">
+				<div class="chkAll">
+					<input type="checkbox" name="" id="chk01" onclick="fullLayerPop();"><label for="chk01">필수약관 전체동의</label>
+				</div>
+				<ul>
+					<li>
+						<label onclick="fullLayerPop();"><input type="checkbox" id="chk11" name="" class="subChk"></label>
+						<a href="javascript:;" role="button" onclick="fullLayerPop();"><span class="pointColor">(필수)</span> 농협 자산관리 이용약관 동의</a>
+					</li>
+					<li>
+						<label onclick="fullLayerPop();"><input type="checkbox" id="chk12" name="" class="subChk"></label>
+						<a href="javascript:;" role="button" onclick="fullLayerPop();"><span class="pointColor">(필수)</span> 금융정보조회 및 출금이체 약관 동의</a>
+					</li>
+					<li>
+						<label onclick="fullLayerPop();"><input type="checkbox" id="chk13" name="" class="subChk"></label>
+						<a href="javascript:;" role="button" onclick="fullLayerPop();"><span class="pointColor">(필수)</span> 계좌통합관리서비스 이용약관</a>
+					</li>
+					<li>
+						<label onclick="fullLayerPop();"><input type="checkbox" id="chk14" name="" class="subChk"></label>
+						<a href="javascript:;" role="button" onclick="fullLayerPop();"><span class="pointColor">(필수)</span> 금융거래정보제공 동의</a>
+					</li>
+					<li>
+						<label onclick="fullLayerPop();"><input type="checkbox" id="chk15" name="" class="subChk"></label>
+						<a href="javascript:;" role="button" onclick="fullLayerPop();"><span class="pointColor">(필수)</span> 개인(신용)정보 수집·이용 동의</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="agreementWrap">
+				<div class="chkAll">
+					<input type="checkbox" name="" id="chk02" onclick="fullLayerPop();"><label for="chk02">선택약관 전체동의</label>
+				</div>
+				<ul>
+					<li>
+						<label onclick="fullLayerPop();"><input type="checkbox" id="chk21" name="" class="subChk"></label>
+						<a href="javascript:;" role="button" onclick="fullLayerPop();"><span class="pointColor">(선택)</span> 개인(신용)정보 수집, 이용, 제공 동의 <br>(상품서비스 안내 등)</a>
+					</li>
+					<li>
+						<label onclick="fullLayerPop();"><input type="checkbox" id="chk21" name="" class="subChk"></label>
+						<a href="javascript:;" role="button" onclick="fullLayerPop();"><span class="pointColor">(선택)</span> 개인(신용)정보 수집·이용 동의 <br>(오픈뱅킹용)</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="areaBtnDefault">
+				<a href="javascript:;" class="btnPressPoint disabled" onclick="slidePopConfirm();" role="button">다음</a> <!-- 비활성화시 disabled 추가 -->
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+
+	<!-- 팝업시작 -->
+	<div class="nhasset popWrap fullLayerPop">
+		<div class="popInner">
+			<h1>전체약관</h1>
+			<div class="popCont">
+				<div class="agreeViewWrap">
+					<div class="agreeView">
+						이미지 뷰어 영역
+					</div>
+
+					<a href="javascript:;" class="btn_agreeLeft"><span class="blind">이전약관 보기</span></a>
+					<a href="javascript:;" class="btn_agreeRight"><span class="blind">다음약관 보기</span></a>
+				</div>
+			
+			</div>
+
+			<div class="popBtnWrap">
+				<div class="popBtn">
+					<a href="javascript:;" class="confirmBtn" role="button">대출신청</a>
+				</div>
+				<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+			</div>
+		</div>
+	</div>
+	<!-- // 팝업 끝 -->
+</body>
+</html>

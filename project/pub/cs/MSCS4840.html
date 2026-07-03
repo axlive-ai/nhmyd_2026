@@ -1,0 +1,417 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>또래비교 | 카드 리포트 | 소비</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">또래비교</a></h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 또래비교 ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<!-- -------------------------------------- -->
+		<!-- [기준 년 월 영역] -->
+		<!-- -------------------------------------- -->
+		<div class="filterArea t1">
+			<div class="filterSelect"><button type="button" title="년 월 선택 팝업열기"><strong>2023년 7월</strong></button></div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [상단영역] 총 카드사용금액 비교 영역 -->
+		<!-- -------------------------------------- -->
+		<section class="infoSummary1">
+			<div class="tit">
+				<h2><span>7월</span> 총 결제 금액은?</h2>
+				<div class="tooltipWrap">
+					<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">결제금액 안내툴팁</span></button>
+					<div class="tooltipCont">
+						<div class="msaeTool">
+							<ul class="popBul">
+								<li>자산사용 관리 메뉴에서 숨김 처리한 카드는 또래비교 내역에서 제외됩니다.</li>
+								<li>가맹점명 미동의 카드는 하단 카테고리별 또래비교에서 제외됩니다.</li>
+							</ul>
+						</div>
+						<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+					</div>
+				</div>
+				<div class="side"><button type="button" class="contBtn06 c1">또래 변경</button></div>
+			</div>
+			<div class="info1">
+				<dl>
+					<dt><span>김농협</span>님</dt>
+					<dd><strong class="dataValue">9,940,885,000</strong><span class="won">원</span></dd>
+				</dl>
+				<dl>
+					<dt><span>30</span>대 또래</dt>
+					<dd><strong class="dataValue">1,223,455,500</strong><span class="won">원</span></dd>
+				</dl>
+			</div>
+		</section>
+
+		<!-- -------------------------------------- -->
+		<!-- [배너영역] 가맹점 미동의 배너 -->
+		<!-- -------------------------------------- -->
+		<div class="areaBanner2 t1">
+			<a href="javascript:;" class="img9" title="정보수집동의 내역" aria-haspopup="true">
+				<span>더 정확한 또래비교를 위해</span>
+				<span>가맹점 정보 제공 동의하기</span>
+			</a>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTION] 소비 카테고리별 또래비교 영역 -->
+		<!-- CASE 별 클래스 정의
+			 - 나 > 또래 : <li class="case1">
+			 - 나 < 또래 : <li class="case2">
+			 - 또래와 비슷 : <li> // 클래스 없음
+		-->
+		<!-- -------------------------------------- -->
+		<!-- ### [CASE1] 소비금액 : 나 > 또래 ### -->
+		<div class="areaSection1">
+			<h3 class="defTit"><strong>또래보다 많이 썼어요</strong></h3>
+			<div class="boxTypeWrap t1">
+				<div class="listData2">
+					<ul>
+						<!-- // -->
+						<li class="case1">
+							<!-- [카테고리 아이콘] /nhmyd/pub/sample_2023/cate_sample.html 참고 (/images/category/cs2/)  -->
+							<div class="img"><img src="../../images/category/cs2/ico_cate_cs06.png" alt=""></div>
+							<!-- [카테고리명] -->
+							<div class="tit"><span>생활/마트</span></div>
+							<!-- [비교 차액 금액] -->
+							<div class="con">
+								<strong class="dataValue">1,000,000</strong><em class="won">원</em>
+								<em class="value">더 소비</em>
+							</div>
+							<!-- [소비금액 비교] -->
+							<div class="info">
+								<dl>
+									<dt>내 소비</dt>
+									<dd><strong class="dataValue">9,000,000</strong><em class="won">원</em></dd>
+								</dl>
+								<dl>
+									<dt>또래 소비</dt>
+									<dd><strong class="dataValue">8,000,000</strong><em class="won">원</em></dd>
+								</dl>
+							</div>
+							<!-- // -->
+						</li>
+						<!-- // -->
+						<li class="case1">
+							<div class="img"><img src="../../images/category/cs2/ico_cate_cs04.png" alt=""></div>
+							<div class="tit"><span>쇼핑</span></div>
+							<div class="con">
+								<strong class="dataValue">100,000</strong><em class="won">원</em>
+								<em class="value">더 소비</em>
+							</div>
+							<div class="info">
+								<dl>
+									<dt>내 소비</dt>
+									<dd><strong class="dataValue">8,000,000</strong><em class="won">원</em></dd>
+								</dl>
+								<dl>
+									<dt>또래 소비</dt>
+									<dd><strong class="dataValue">7,900,000</strong><em class="won">원</em></dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+					</ul>
+					<button type="button" class="btnMore" data-txt="접기" data-btn="more">더보기</button> <!-- [더보기버튼] : 리스트 2개 이상 시 버튼 노출 되며 클릭시 5개씩 노출 : 하단 샘플 스크립트 참고(접근성) -->
+				</div>
+			</div>
+		</div>
+		
+		<!-- ### [CASE2] 소비금액 : 나 < 또래 ### -->
+		<div class="areaSection1">
+			<h3 class="defTit"><strong>또래보다 아껴 썼어요</strong></h3>
+			<div class="boxTypeWrap t1">
+				<div class="listData2">
+					<ul>
+						<li class="case2">
+							<div class="img"><img src="../../images/category/cs2/ico_cate_cs14.png" alt=""></div>
+							<div class="tit"><span>여행/숙박</span></div>
+							<div class="con">
+								<strong class="dataValue">9,000,000</strong><em class="won">원</em>
+								<em class="value">절약</em>
+							</div>
+							<div class="info">
+								<dl>
+									<dt>내 소비</dt>
+									<dd ><strong class="dataValue">1,000,000</strong><em class="won">원</em></dd>
+								</dl>
+								<dl>
+									<dt>또래 소비</dt>
+									<dd><strong class="dataValue">10,000,000</strong><em class="won">원</em></dd>
+								</dl>
+							</div>
+						</li>
+						<li class="case2">
+							<div class="img"><img src="../../images/category/cs2/ico_cate_cs17.png" alt=""></div>
+							<div class="tit"><span>반려동물</span></div>
+							<div class="con">
+								<strong class="dataValue">1,000</strong><em class="won">원</em>
+								<em class="value">절약</em>
+							</div>
+							<div class="info">
+								<dl>
+									<dt>내 소비</dt>
+									<dd><strong class="dataValue">80,000</strong><em class="won">원</em></dd>
+								</dl>
+								<dl>
+									<dt>또래 소비</dt>
+									<dd><strong class="dataValue">81,000</strong><em class="won">원</em></dd>
+								</dl>
+							</div>
+						</li>
+						<li class="case2">
+							<div class="img"><img src="../../images/category/cs2/ico_cate_cs13.png" alt=""></div>
+							<div class="tit"><span>문화/여가</span></div>
+							<div class="con">
+								<strong class="dataValue">270,000</strong><em class="won">원</em>
+								<em class="value">절약</em>
+							</div>
+							<div class="info">
+								<dl>
+									<dt>내 소비</dt>
+									<dd><strong class="dataValue">23,000</strong><em class="won">원</em></dd>
+								</dl>
+								<dl>
+									<dt>또래 소비</dt>
+									<dd><strong class="dataValue">300,000</strong><em class="won">원</em></dd>
+								</dl>
+							</div>
+						</li>
+						<li class="case2">
+							<div class="img"><img src="../../images/category/cs2/ico_cate_cs15.png" alt=""></div>
+							<div class="tit"><span>금융</span></div>
+							<div class="con">
+								<strong class="dataValue">210,000</strong><em class="won">원</em>
+								<em class="value">절약</em>
+							</div>
+							<div class="info">
+								<dl>
+									<dt>내 소비</dt>
+									<dd><strong class="dataValue">0</strong><em class="won">원</em></dd>
+								</dl>
+								<dl>
+									<dt>또래 소비</dt>
+									<dd><strong class="dataValue">210,000</strong><em class="won">원</em></dd>
+								</dl>
+							</div>
+						</li>
+						<li class="case2">
+							<div class="img"><img src="../../images/category/cs2/ico_cate_cs16.png" alt=""></div>
+							<div class="tit"><span>경조사선물</span></div>
+							<div class="con">
+								<strong class="dataValue">200,000</strong><em class="won">원</em>
+								<em class="value">절약</em>
+							</div>
+							<div class="info">
+								<dl>
+									<dt>내 소비</dt>
+									<dd><strong class="dataValue">0</strong><em class="won">원</em></dd>
+								</dl>
+								<dl>
+									<dt>또래 소비</dt>
+									<dd><strong class="dataValue">200,000</strong><em class="won">원</em></dd>
+								</dl>
+							</div>
+						</li>
+					</ul>
+					<button type="button" class="btnMore end" data-txt="접기">접기</button>
+				</div>
+			</div>
+		</div>
+		
+		<!-- ### [CASE3] 소비금액 : 또래와 비슷 ### -->
+		<div class="areaSection1">
+			<h3 class="defTit"><strong>또래와 비슷하게 썼어요</strong></h3>
+			<div class="boxTypeWrap t1">
+				<div class="listData2">
+					<ul>
+						<li>
+							<div class="img"><img src="../../images/category/cs2/ico_cate_cs05.png" alt=""></div>
+							<div class="tit"><span>온라인쇼핑</span></div>
+							<div class="con">
+								<em class="value">비슷하게 소비</em>
+							</div>
+							<div class="info">
+								<dl>
+									<dt>내 소비</dt>
+									<dd ><strong class="dataValue">8,000,000</strong><em class="won">원</em></dd>
+								</dl>
+								<dl>
+									<dt>또래 소비</dt>
+									<dd><strong class="dataValue">8,000,000</strong><em class="won">원</em></dd>
+								</dl>
+							</div>
+						</li>
+						<li>
+							<div class="img"><img src="../../images/category/cs2/ico_cate_cs11.png" alt=""></div>
+							<div class="tit"><span>자동차/주유</span></div>
+							<div class="con">
+								<em class="value">비슷하게 소비</em>
+							</div>
+							<div class="info">
+								<dl>
+									<dt>내 소비</dt>
+									<dd ><strong class="dataValue">1,200,000</strong><em class="won">원</em></dd>
+								</dl>
+								<dl>
+									<dt>또래 소비</dt>
+									<dd><strong class="dataValue">1,200,000</strong><em class="won">원</em></dd>
+								</dl>
+							</div>
+						</li>
+					</ul>
+					<button type="button" class="btnMore" data-txt="접기">더보기</button>
+				</div>
+			</div>
+			<!-- // -->
+		</div>
+		<!-- ### // ### -->
+
+		<!-- -------------------------------------- -->
+		<!-- [배너 영역] 추천카드 배너 -->
+		<!-- [D] 소비패턴 > 추천카드 영역 AS-IS와 동일 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap totalBalance">
+			<h2 class="defSubTit2 mt0"><strong>3개월 소비를 분석한 추천카드는?</strong></h2>
+			<hr class="divLine3 mt15">
+			<a href="javascript:;" title="금융상품몰 사이트로 이동" role="button" class="cardLinkBox">
+				<div class="cardImgWrap">
+					<p class="defSubTit3"><strong>NH1961카드</strong></p>
+					<img src="../../images/img_card_ver.png" alt="" class="cardImg">
+					<img src="../../images/img_card_all100.png" alt="" class="cardImg">
+					<div class="hashWrap">
+						<span class="hashTag">#교육/자녀</span>
+						<span class="hashTag">#직장인</span>
+					</div>
+				</div>
+				<p class="subTxt2">준법감시인 심의필 2022-2835(2022.06.15~2023.12.31)</p>
+			</a>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [플로팅 버튼] 최상단 -->
+		<!-- -------------------------------------- -->
+		<button type="button" class="goTopBtn"><span class="blind">최상단으로 이동</span></button>
+		<!-- -------------------------------------- -->
+	</div>
+	<!-- ###################################### -->
+</div>
+<!-- ###################################### -->
+<!-- ### [샘플] 스크립트 ### -->
+<!-- ###################################### -->
+<script>
+$(document).ready(function(){
+	var num = 0;
+	$('[data-btn="more"]').on('click',function(){
+		var _ul = $(this).parent('.listData2').find('ul');
+		num++;
+		
+		if(num < 2){
+		//더보기 클릭 이벤트
+			_ul.append(uiListHtml());
+			_ul.find('> li').removeAttr('tabindex');//포커스 이동 되어야 하는 객체를 제외하고 tabindex삭제
+			_ul.find('> li:nth-last-child(3)').attr('tabindex','0').focus(); //생성된 컨텐츠 첫번째에 포커스 이동
+			$(this).addClass('end').text($(this).data('txt')); //버튼명 및 클래스명 수정
+		}else{
+		//접기 클릭 이벤트
+			_ul.find('> li:nth-child(2) ~ li').remove();
+			$(this).removeClass('end').text('더보기');
+			num = 0;
+		};
+	});
+
+	function uiListHtml(){
+		var _list = '';
+
+		var _listHtml = '';
+			_listHtml += '<li class="case1">';
+			_listHtml += '	<div class="img"><img src="../../images/category/cs2/ico_cate_cs02.png" alt=""></div>';
+			_listHtml += '	<div class="tit"><span>카페/간식</span></div>';
+			_listHtml += '	<div class="con">';
+			_listHtml += '		<strong class="dataValue">2,000,000</strong><em class="won">원</em>';
+			_listHtml += '		<em class="value">더 소비</em>';
+			_listHtml += '	</div>';
+			_listHtml += '	<div class="info">';
+			_listHtml += '		<dl>';
+			_listHtml += '			<dt>내 소비</dt>';
+			_listHtml += '			<dd><strong class="dataValue">7,000,000</strong><em class="won">원</em></dd>';
+			_listHtml += '		</dl>';
+			_listHtml += '		<dl>';
+			_listHtml += '			<dt>또래 소비</dt>';
+			_listHtml += '			<dd><strong class="dataValue">5,000,000</strong><em class="won">원</em></dd>';
+			_listHtml += '		</dl>';
+			_listHtml += '	</div>';
+			_listHtml += '</li>';
+			_listHtml += '<li class="case1">';
+			_listHtml += '	<div class="img"><img src="../../images/category/cs2/ico_cate_cs01.png" alt=""></div>';
+			_listHtml += '	<div class="tit"><span>외식</span></div>';
+			_listHtml += '	<div class="con">';
+			_listHtml += '		<strong class="dataValue">700,000</strong><em class="won">원</em>';
+			_listHtml += '		<em class="value">더 소비</em>';
+			_listHtml += '	</div>';
+			_listHtml += '	<div class="info">';
+			_listHtml += '		<dl>';
+			_listHtml += '			<dt>내 소비</dt>';
+			_listHtml += '			<dd><strong class="dataValue">800,000</strong><em class="won">원</em></dd>';
+			_listHtml += '		</dl>';
+			_listHtml += '		<dl>';
+			_listHtml += '			<dt>또래 소비</dt>';
+			_listHtml += '			<dd><strong class="dataValue">100,000</strong><em class="won">원</em></dd>';
+			_listHtml += '		</dl>';
+			_listHtml += '	</div>';
+			_listHtml += '</li>';
+			_listHtml += '<li class="case1">';
+			_listHtml += '	<div class="img"><img src="../../images/category/cs2/ico_cate_cs07.png" alt=""></div>';
+			_listHtml += '	<div class="tit"><span>주거/통신</span></div>';
+			_listHtml += '	<div class="con">';
+			_listHtml += '		<strong class="dataValue">400,000</strong><em class="won">원</em>';
+			_listHtml += '		<em class="value">더 소비</em>';
+			_listHtml += '	</div>';
+			_listHtml += '	<div class="info">';
+			_listHtml += '		<dl>';
+			_listHtml += '			<dt>내 소비</dt>';
+			_listHtml += '			<dd><strong class="dataValue">600,000</strong><em class="won">원</em></dd>';
+			_listHtml += '		</dl>';
+			_listHtml += '		<dl>';
+			_listHtml += '			<dt>또래 소비</dt>';
+			_listHtml += '			<dd><strong class="dataValue">200,000</strong><em class="won">원</em></dd>';
+			_listHtml += '		</dl>';
+			_listHtml += '	</div>';
+			_listHtml += '</li>';
+		_list += _listHtml;
+		return _list
+	}
+});
+</script>
+</body>
+</html>

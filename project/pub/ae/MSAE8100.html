@@ -1,0 +1,893 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>컨설팅 > 세금계산기</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		//tostpop();//토스트 팝업 호출 
+	})
+
+	function tostpop(){
+		var $tostCont = '<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg">업데이트를 완료했습니다.</div></div>'
+		$('.container').after($tostCont);
+		setTimeout(function(){
+			$('.tostpopupWrap').remove();
+		},4000)
+	}
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>세금계산기</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+
+        <h2 class="defTit icoCal">
+            종합소득세 확인을 위해<br>
+            <strong>정보를 입력해주세요</strong>
+        </h2>
+
+        <div class="resetArea mt20">
+			<h3 class="defSubTit2">종합소득세 입력<strong>(중복선택 가능)</strong></h3>
+			<div class="cs btnSetReset">
+				<button type="button">입력 초기화</button>
+			</div>
+        </div>
+
+		<div class="yasimulForm mt15">
+			<div class="formWrap boxTypeWrap pt5">
+				<ul class="listToggle"> <!-- [2022-12-13] 클래스 추가 -->
+					<li class="yatoggleArea">
+						<div class="assetTotalList toggleWrap">
+							<div class="totalTitWrap">
+								<a href="javascript:;" class="toggleBtn active less"> 
+									<div class="defSubTit2"><strong>근로소득</strong></div>
+								</a>
+							</div>
+							<div class="totalAccList toggleCont" style="display:block">
+								<div class="titListBox">
+									<ul>
+										<li>
+											<div class="formTitN">
+												<strong>근로소득</strong>
+												<button type="button" class="contBtn01 green">불러오기</button>
+											</div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="근로소득" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<li>
+											<div class="formTitN"><strong>필요경비</strong></div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="필요경비" name="" id="" value="" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<li>
+											<div class="formTitN">
+												<strong>원천징수(결정)세액
+													<div class="tooltipWrap">
+														<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">원천징수(결정)세액 툴팁 열기</span></button>
+														<div class="tooltipCont">
+															<p>근로소득 원천징수 영수증에 표기된 결정세액 입력, 확인이 어려운 경우 빈칸으로 남겨도 됨.(단, 기납부세액은 표시되지 않음)</p>
+															<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+														</div>
+													</div>
+												</strong>
+											</div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="원천징수(결정)세액" name="" id="" value="" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<!-- [2022-11-23] 1.95 버전 반영 -->
+										<!-- <li>
+											<div class="formTitN"><strong>종합소득공제</strong></div>
+											<div class="inputList unitMan"> 
+												<input type="tel" title="종합소득공제" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+											<div class="areaBodyBtnFull mt20">
+												<a href="javascript:;" class="btnBodyLine" role="button">세부사항 입력</a>
+											</div>
+											<p class="infoTxt mt10">※ 종합소득공제 세부사항 입력 합산금액은 계산결과페이지에서 확인가능합니다.</p>
+										</li>
+										<li>
+											<div class="formTitN"><strong>세액공제</strong></div>
+											<div class="inputList unitMan"> 
+												<input type="tel" title="세액공제" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+											<div class="areaBodyBtnFull mt20">
+												<a href="javascript:;" class="btnBodyLine" role="button">세부사항 입력</a>
+											</div>
+											<p class="infoTxt mt10">※ 새액공제 세부사항 입력 합산금액은 계산결과페이지에서 확인가능합니다.</p>
+										</li> -->
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="yatoggleArea">
+						<div class="assetTotalList toggleWrap">
+							<div class="totalTitWrap">
+								<a href="javascript:;" class="toggleBtn"> 
+									<div class="defSubTit2"><strong>이자소득</strong></div>
+								</a>
+							</div>
+							<div class="totalAccList toggleCont" style="display:none">
+								<div class="titListBox">
+									<ul>
+										<li>
+											<div class="formTitN">
+												<strong>이자소득</strong>
+												<!-- <button type="button" class="contBtn01 green">불러오기</button> --> <!-- [2022-11-23] 1.95 버전 반영 -->
+											</div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="이자소득" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<li>
+											<div class="formTitN"><strong>원천징수세액</strong></div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="원천징수세액" name="" id="" value="200,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<!-- [2022-11-23] 1.95 버전 반영 -->
+										<!-- <li>
+											<div class="formTitN"><strong>종합소득공제</strong></div>
+											<div class="inputList unitMan"> 
+												<input type="tel" title="종합소득공제" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+											<div class="areaBodyBtnFull mt20">
+												<a href="javascript:;" class="btnBodyLine" role="button">세부사항 입력</a>
+											</div>
+											<p class="infoTxt mt10">※ 종합소득공제 세부사항 입력 합산금액은 계산결과페이지에서 확인가능합니다.</p>
+										</li>
+										<li>
+											<div class="formTitN"><strong>세액공제</strong></div>
+											<div class="inputList unitMan"> 
+												<input type="tel" title="세액공제" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+											<div class="areaBodyBtnFull mt20">
+												<a href="javascript:;" class="btnBodyLine" role="button">세부사항 입력</a>
+											</div>
+											<p class="infoTxt mt10">※ 새액공제 세부사항 입력 합산금액은 계산결과페이지에서 확인가능합니다.</p>
+										</li> -->
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="yatoggleArea">
+						<div class="assetTotalList toggleWrap">
+							<div class="totalTitWrap">
+								<a href="javascript:;" class="toggleBtn"> 
+									<div class="defSubTit2"><strong>배당소득</strong></div>
+								</a>
+							</div>
+							<div class="totalAccList toggleCont" style="display:none">
+								<div class="titListBox">
+									<ul>
+										<li>
+											<div class="formTitN">
+												<strong>펀드 등 배당소득</strong>
+												<button type="button" class="contBtn01 green">불러오기</button>
+											</div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="펀드 등 배당소득" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+											<div class="moreArea"><a href="javascript:;" class="moreLink">자세히 보기</a></div>
+										</li>
+										<li>
+											<div class="formTitN"><strong>원천징수세액</strong></div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="원천징수세액" name="" id="" value="200,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<li>
+											<div class="formTitN">
+												<strong>Gross-up 배당소득</strong>
+												<span class="supExp">(비과세, 분리과세 제외)</span>
+											</div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="Gross-up 배당소득" name="" id="" value="200,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<li>
+											<div class="formTitN"><strong>원천징수세액</strong></span>
+											</div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="원천징수세액" name="" id="" value="200,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<!-- [2022-11-23] 1.95 버전 반영 -->
+										<!-- <li>
+											<div class="formTitN"><strong>종합소득공제</strong></div>
+											<div class="inputList unitMan"> 
+												<input type="tel" title="종합소득공제" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+											<div class="areaBodyBtnFull mt20">
+												<a href="javascript:;" class="btnBodyLine" role="button">세부사항 입력</a>
+											</div>
+											<p class="infoTxt mt10">※ 종합소득공제 세부사항 입력 합산금액은 계산결과페이지에서 확인가능합니다.</p>
+										</li>
+										<li>
+											<div class="formTitN"><strong>세액공제</strong></div>
+											<div class="inputList unitMan"> 
+												<input type="tel" title="세액공제" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+											<div class="areaBodyBtnFull mt20">
+												<a href="javascript:;" class="btnBodyLine" role="button">세부사항 입력</a>
+											</div>
+											<p class="infoTxt mt10">※ 새액공제 세부사항 입력 합산금액은 계산결과페이지에서 확인가능합니다.</p>
+										</li> -->
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="yatoggleArea">
+						<div class="assetTotalList toggleWrap">
+							<div class="totalTitWrap">
+								<a href="javascript:;" class="toggleBtn"> 
+									<div class="defSubTit2"><strong>원천징수사업소득</strong></div>
+								</a>
+							</div>
+							<div class="totalAccList toggleCont" style="display:none">
+								<div class="titListBox">
+									<ul>
+										<li>
+											<div class="formTitN">
+												<strong>사업소득
+													<div class="tooltipWrap">
+														<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">사업소득 툴팁 열기</span></button>
+														<div class="tooltipCont">
+															<p>3%의 원천징수가 된 사업소득의 수입금액 입력 예) 원고료, 방문판매업자의 매출, 보험모집인의 매출</p>
+															<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+														</div>
+													</div>
+												</strong>
+											</div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="사업소득" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<li>
+											<div class="tagWrap mb10">
+												<span class="tag gray">직접입력</span>
+											</div>
+											<div class="formTitN">
+												<strong>필요경비
+													<div class="tooltipWrap">
+														<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">필요경비 툴팁 열기</span></button>
+														<div class="tooltipCont">
+															<p>수입금액에 대응하는 경비를 입력, 추계를 계산할 경우 경비율을 반영한 금액을 입력</p>
+															<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+														</div>
+													</div>
+												</strong>
+											</div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="필요경비" name="" id="" value="" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<li>
+											<div class="formTitN">
+												<strong>원천징수세액</strong>
+											</div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="원천징수세액" name="" id="" value="200,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<!-- [2022-11-23] 1.95 버전 반영 -->
+										<!-- <li>
+											<div class="formTitN"><strong>종합소득공제</strong></div>
+											<div class="inputList unitMan"> 
+												<input type="tel" title="종합소득공제" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+											<div class="areaBodyBtnFull mt20">
+												<a href="javascript:;" class="btnBodyLine" role="button">세부사항 입력</a>
+											</div>
+											<p class="infoTxt mt10">※ 종합소득공제 세부사항 입력 합산금액은 계산결과페이지에서 확인가능합니다.</p>
+										</li>
+										<li>
+											<div class="formTitN"><strong>세액공제</strong></div>
+											<div class="inputList unitMan"> 
+												<input type="tel" title="세액공제" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+											<div class="areaBodyBtnFull mt20">
+												<a href="javascript:;" class="btnBodyLine" role="button">세부사항 입력</a>
+											</div>
+											<p class="infoTxt mt10">※ 새액공제 세부사항 입력 합산금액은 계산결과페이지에서 확인가능합니다.</p>
+										</li> -->
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="yatoggleArea">
+						<div class="assetTotalList toggleWrap">
+							<div class="totalTitWrap">
+								<a href="javascript:;" class="toggleBtn"> 
+									<div class="defSubTit2"><strong>일반사업소득</strong></div>
+								</a>
+							</div>
+							<div class="totalAccList toggleCont" style="display:none">
+								<div class="titListBox">
+									<ul>
+										<li>
+											<div class="formTitN">
+												<strong>사업소득
+													<div class="tooltipWrap">
+														<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">사업소득 툴팁 열기</span></button>
+														<div class="tooltipCont">
+															<p>3%의 원천징수가 된 사업소득의 수입금액 입력 예) 원고료, 방문판매업자의 매출, 보험모집인의 매출</p>
+															<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+														</div>
+													</div>
+												</strong>
+											</div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="사업소득" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<li>
+											<div class="tagWrap mb10">
+												<span class="tag gray">직접입력</span>
+											</div>
+											<div class="formTitN">
+												<strong>필요경비
+													<div class="tooltipWrap">
+														<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">필요경비 툴팁 열기</span></button>
+														<div class="tooltipCont">
+															<p>수입금액에 대응하는 경비를 입력, 추계를 계산할 경우 경비율을 반영한 금액을 입력</p>
+															<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+														</div>
+													</div>
+												</strong>
+											</div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="필요경비" name="" id="" value="" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<li>
+											<div class="tagWrap mb10">
+												<span class="tag gray">직접입력</span>
+											</div>
+											<div class="formTitN">
+												<strong>원천징수
+													<div class="tooltipWrap">
+														<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">원천징수 툴팁 열기</span></button>
+														<div class="tooltipCont">
+															<p>11월에 중간예납한 종합소득세</p>
+															<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+														</div>
+													</div>
+												</strong>
+											</div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="원천징수" name="" id="" value="" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<!-- [2022-11-23] 1.95 버전 반영 -->
+										<!-- <li>
+											<div class="formTitN"><strong>종합소득공제</strong></div>
+											<div class="inputList unitMan"> 
+												<input type="tel" title="종합소득공제" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+											<div class="areaBodyBtnFull mt20">
+												<a href="javascript:;" class="btnBodyLine" role="button">세부사항 입력</a>
+											</div>
+											<p class="infoTxt mt10">※ 종합소득공제 세부사항 입력 합산금액은 계산결과페이지에서 확인가능합니다.</p>
+										</li>
+										<li>
+											<div class="formTitN"><strong>세액공제</strong></div>
+											<div class="inputList unitMan"> 
+												<input type="tel" title="세액공제" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+											<div class="areaBodyBtnFull mt20">
+												<a href="javascript:;" class="btnBodyLine" role="button">세부사항 입력</a>
+											</div>
+											<p class="infoTxt mt10">※ 새액공제 세부사항 입력 합산금액은 계산결과페이지에서 확인가능합니다.</p>
+										</li> -->
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+                    <li class="yatoggleArea">
+						<div class="assetTotalList toggleWrap">
+							<div class="totalTitWrap">
+								<a href="javascript:;" class="toggleBtn"> 
+									<div class="defSubTit2"><strong>주택임대사업소득</strong></div>
+								</a>
+							</div>
+							<div class="totalAccList toggleCont" style="display:none">
+								<div class="titListBox">
+									<ul>
+										<li>
+											<div class="formTitN">
+												<strong>주택임대 사업소득</strong>
+											</div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="주택임대 사업소득" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<li>
+											<hr class="divLine3 mt5" aria-hidden="true"> <!-- [2022-11-23] 디자인 수정 -->
+											<div class="formTitN">
+												<strong>종합과세 여부
+													<div class="tooltipWrap">
+														<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">종합과세 여부 툴팁 열기</span></button>
+														<div class="tooltipCont">
+															<p>주택임대소득 2천만원 이하는 분리과세 대상입니다. 하지만 선택적으로 합산하여 신고할 수 있습니다.</p>
+															<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+														</div>
+													</div>
+												</strong>
+											</div>
+											<div class="boxRadio">
+												<div class="boxRadioInn">
+													<span>
+														<input name="rdo01" id="rdo001" type="radio" aria-label="종합과세여부(네)">
+														<label for="rdo001" aria-hidden="true">네</label>
+													</span>
+												</div>
+												<div class="boxRadioInn">
+													<span>
+														<input name="rdo01" id="rdo002" type="radio" checked="checked" aria-label="종합과세여부(네)">
+														<label for="rdo002">아니오</label>
+													</span>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="formTitN"><strong>임대주택등록 여부</strong></div>
+											<div class="boxRadio">
+												<div class="boxRadioInn">
+													<span>
+														<input name="rdo02" id="rdo003" type="radio">
+														<label for="rdo003">등록</label>
+													</span>
+												</div>
+												<div class="boxRadioInn">
+													<span>
+														<input name="rdo02" id="rdo004" type="radio" checked="checked">
+														<label for="rdo004">미등록</label>
+													</span>
+												</div>
+											</div>
+										</li>
+										<li>
+											<hr class="divLine3 mt5" aria-hidden="true"> <!-- [2022-11-23] 디자인 수정 -->
+											<div class="formTitN"><strong>감면율 선택</strong></div>
+											<div class="inputList">
+												<a href="javascript:;" title="감면율 선택" aria-haspopup="true" onclick="slidePopOption();return false;">
+													<span class="selectValue">선택</span>
+													<span class="selectBtn"></span>
+												</a>
+												<select name="" title="선택해주세요">
+													<option value=""></option>
+												</select>
+											</div>
+										</li>
+										<li>
+											<div class="formTitN">
+												<strong>필요경비</strong>
+											</div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="필요경비" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<li>
+											<div class="formTitN">
+												<strong>원천징수</strong>
+											</div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="원천징수" name="" id="" value="200,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<!-- [2022-11-23] 1.95 버전 반영 -->
+										<!-- <li>
+											<div class="formTitN"><strong>종합소득공제</strong></div>
+											<div class="inputList unitMan"> 
+												<input type="tel" title="종합소득공제" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+											<div class="areaBodyBtnFull mt20">
+												<a href="javascript:;" class="btnBodyLine" role="button">세부사항 입력</a>
+											</div>
+											<p class="infoTxt mt10">※ 종합소득공제 세부사항 입력 합산금액은 계산결과페이지에서 확인가능합니다.</p>
+										</li>
+										<li>
+											<div class="formTitN"><strong>세액공제</strong></div>
+											<div class="inputList unitMan"> 
+												<input type="tel" title="세액공제" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+											<div class="areaBodyBtnFull mt20">
+												<a href="javascript:;" class="btnBodyLine" role="button">세부사항 입력</a>
+											</div>
+											<p class="infoTxt mt10">※ 새액공제 세부사항 입력 합산금액은 계산결과페이지에서 확인가능합니다.</p>
+										</li> -->
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+                    <li class="yatoggleArea">
+						<div class="assetTotalList toggleWrap">
+							<div class="totalTitWrap">
+								<a href="javascript:;" class="toggleBtn"> 
+									<div class="defSubTit2"><strong>주택외임대사업소득</strong></div>
+								</a>
+							</div>
+							<div class="totalAccList toggleCont" style="display:none">
+								<div class="titListBox">
+									<ul>
+										<li>
+											<div class="formTitN">
+												<strong>주택 외 부동산임대 사업소득</strong>
+											</div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="주택 외 부동산임대 사업소득" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<li>
+											<div class="tagWrap mb10">
+												<span class="tag gray">직접입력</span>
+											</div>
+											<div class="formTitN">
+												<strong>필요경비
+													<div class="tooltipWrap">
+														<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">필요경비 툴팁 열기</span></button>
+														<div class="tooltipCont">
+															<p>수입금액에 대응하는 경비를 입력, 추계를 계산할 경우 경비율을 반영한 금액을 입력</p>
+															<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+														</div>
+													</div>
+												</strong>
+											</div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="필요경비" name="" id="" value="" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<li>
+											<div class="tagWrap mb10">
+												<span class="tag gray">직접입력</span>
+											</div>
+											<div class="formTitN">
+												<strong>원천징수
+													<div class="tooltipWrap">
+														<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">원천징수 툴팁 열기</span></button> <!-- [접근성_2024] blind 수정 -->
+														<div class="tooltipCont">
+															<p>11월에 중간예납한 종합소득세</p>
+															<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+														</div>
+													</div>
+												</strong>
+											</div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="필요경비" name="" id="" value="" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<!-- [2022-11-23] 1.95 버전 반영 -->
+										<!-- <li>
+											<div class="formTitN"><strong>종합소득공제</strong></div>
+											<div class="inputList unitMan"> 
+												<input type="tel" title="종합소득공제" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+											<div class="areaBodyBtnFull mt20">
+												<a href="javascript:;" class="btnBodyLine" role="button">세부사항 입력</a>
+											</div>
+											<p class="infoTxt mt10">※ 종합소득공제 세부사항 입력 합산금액은 계산결과페이지에서 확인가능합니다.</p>
+										</li>
+										<li>
+											<div class="formTitN"><strong>세액공제</strong></div>
+											<div class="inputList unitMan"> 
+												<input type="tel" title="세액공제" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+											<div class="areaBodyBtnFull mt20">
+												<a href="javascript:;" class="btnBodyLine" role="button">세부사항 입력</a>
+											</div>
+											<p class="infoTxt mt10">※ 새액공제 세부사항 입력 합산금액은 계산결과페이지에서 확인가능합니다.</p>
+										</li> -->
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+                    <li class="yatoggleArea">
+						<div class="assetTotalList toggleWrap">
+							<div class="totalTitWrap">
+								<a href="javascript:;" class="toggleBtn"> 
+									<div class="defSubTit2"><strong>연금소득</strong></div>
+								</a>
+							</div>
+							<div class="totalAccList toggleCont" style="display:none">
+								<div class="titListBox">
+									<ul>
+										<li>
+											<div class="formTitN">
+												<strong>연금소득액</strong>
+											</div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="연금소득액" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<li>
+											<div class="formTitN">
+												<strong>필요경비</strong>
+											</div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="필요경비" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<li>
+											<div class="tagWrap mb10">
+												<span class="tag gray">직접입력</span>
+											</div>
+											<div class="formTitN">
+												<strong>원천징수세액
+													<div class="tooltipWrap">
+														<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">원천징수세액 툴팁 열기</span></button>
+														<div class="tooltipCont">
+															<p>연금소득원천징수 영수증상의 결정세액 사적연금 : 금융기관에서 원천징수한 금액</p>
+															<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+														</div>
+													</div>
+												</strong>
+											</div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="원천징수세액" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<!-- [2022-11-23] 1.95 버전 반영 -->
+										<!-- <li>
+											<div class="formTitN"><strong>종합소득공제</strong></div>
+											<div class="inputList unitMan"> 
+												<input type="tel" title="종합소득공제" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+											<div class="areaBodyBtnFull mt20">
+												<a href="javascript:;" class="btnBodyLine" role="button">세부사항 입력</a>
+											</div>
+											<p class="infoTxt mt10">※ 종합소득공제 세부사항 입력 합산금액은 계산결과페이지에서 확인가능합니다.</p>
+										</li>
+										<li>
+											<div class="formTitN"><strong>세액공제</strong></div>
+											<div class="inputList unitMan"> 
+												<input type="tel" title="세액공제" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+											<div class="areaBodyBtnFull mt20">
+												<a href="javascript:;" class="btnBodyLine" role="button">세부사항 입력</a>
+											</div>
+											<p class="infoTxt mt10">※ 새액공제 세부사항 입력 합산금액은 계산결과페이지에서 확인가능합니다.</p>
+										</li> -->
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+                    <li class="yatoggleArea">
+						<div class="assetTotalList toggleWrap">
+							<div class="totalTitWrap">
+								<a href="javascript:;" class="toggleBtn"> 
+									<div class="defSubTit2"><strong>기타소득</strong></div>
+								</a>
+							</div>
+							<div class="totalAccList toggleCont" style="display:none">
+								<div class="titListBox">
+									<ul>
+										<li>
+											<div class="formTitN">
+												<strong>기타소득</strong>
+											</div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="기타소득" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<li>
+											<div class="tagWrap mb10">
+												<span class="tag gray">직접입력</span>
+											</div>
+											<div class="formTitN">
+												<strong>필요경비
+													<div class="tooltipWrap">
+														<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">필요경비 툴팁 열기</span></button>
+														<div class="tooltipCont">
+															<p>수입금액에 대응하는 경비를 입력, 추계를 계산할 경우 경비율을 반영한 금액을 입력</p>
+															<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+														</div>
+													</div>
+												</strong>
+											</div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="필요경비" name="" id="" value="" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<li>
+											<div class="formTitN">
+												<strong>원천징수세액</strong>
+											</div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="필요경비" name="" id="" value="200,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<!-- [2022-11-23] 1.95 버전 반영 -->
+										<!-- <li>
+											<div class="formTitN"><strong>종합소득공제</strong></div>
+											<div class="inputList unitMan"> 
+												<input type="tel" title="종합소득공제" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+											<div class="areaBodyBtnFull mt20">
+												<a href="javascript:;" class="btnBodyLine" role="button">세부사항 입력</a>
+											</div>
+											<p class="infoTxt mt10">※ 종합소득공제 세부사항 입력 합산금액은 계산결과페이지에서 확인가능합니다.</p>
+										</li>
+										<li>
+											<div class="formTitN"><strong>세액공제</strong></div>
+											<div class="inputList unitMan"> 
+												<input type="tel" title="세액공제" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+											<div class="areaBodyBtnFull mt20">
+												<a href="javascript:;" class="btnBodyLine" role="button">세부사항 입력</a>
+											</div>
+											<p class="infoTxt mt10">※ 새액공제 세부사항 입력 합산금액은 계산결과페이지에서 확인가능합니다.</p>
+										</li> -->
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- [2022-11-23] 1.95 버전 반영 -->
+			<div class="formWrap boxTypeWrap">
+				<div class="titListBox">
+					<div class="formTitN"><strong>공제금액</strong></div>
+					<ul class="mt20">
+						<li>
+							<div class="formTitN">
+								<strong>종합소득공제</strong>
+								<button type="button" class="contBtn01 green">불러오기</button>
+							</div>
+							<div class="inputList unitMan"> 
+								<input type="tel" title="종합소득공제" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+								<span class="unit">원</span>
+								<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+							</div>
+							<div class="areaBodyBtnFull mt20">
+								<a href="javascript:;" class="btnBodyLine" role="button">세부사항 입력</a>
+							</div>
+						</li>
+						<li>
+							<div class="formTitN">
+								<strong>세액공제</strong>
+								<button type="button" class="contBtn01 green">불러오기</button>
+							</div>
+							<div class="inputList unitMan"> 
+								<input type="tel" title="세액공제" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+								<span class="unit">원</span>
+								<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+							</div>
+							<div class="areaBodyBtnFull mt20">
+								<a href="javascript:;" class="btnBodyLine" role="button">세부사항 입력</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+            <ul class="listBul disc mt30">
+				<li>세금계산기 서비스는 NH농협은행의 제휴사인 (주)아티웰스가 제공합니다.</li>
+			</ul>
+		</div>
+
+		<div class="areaBtnDefault">
+			<!-- <a href="javascript:;" class="btnPressDefault" role="button">취소</a> -->
+			<a href="javascript:;" class="btnPressPoint" role="button">계산하기</a> <!--활성화 class btnPressPoint --->
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - VIP 금융컨설팅</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">가까운 영업점 찾기</a></h1>
+			<a href="javascript:;" class="btnEtc">나가기</a>
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="boxTypeWrap pb0">
+				<h2 class="defSubTit1">현위치 영업점</h2>
+				<div class="productWrap">
+					<ul class="branchList"><!-- 20181012 버튼3개인 경우 클래스추가(has3Btn) -->
+						<li>
+							<a href="javascript:;" title="영업점 상세정보로 이동" class="fl">
+								<dl>
+									<dt>NH통합IT센터출장소(414m)</dt>
+									<dd>경기 의왕시 성고개로 59 (포일동, NH통합IT센터)</dd>
+									<dd>031-426-8468</dd>
+								</dl>
+							</a>
+							<div class="btnsArea">
+								<a href="tel:031-426-8468" class="contBtn03 ac">선택</a>
+								<a href="#" class="contBtn01" onclick="slidePopConfirm();return false;">주소복사</a>
+								<a href="tel:031-426-8468" class="contBtn01 green mt5">전화연결</a>
+							</div>
+						</li>
+						<li>
+							<a href="javascript:;" title="영업점 상세정보로 이동" class="fl">
+								<dl>
+									<dt>NH통합IT센터출장소(414m)</dt>
+									<dd>경기 의왕시 성고개로 59 (포일동, NH통합IT센터)</dd>
+									<dd>031-426-8468</dd>
+								</dl>
+							</a>
+							<div class="btnsArea">
+								<a href="tel:031-426-8468" class="contBtn03 ac">선택</a>
+								<a href="#" class="contBtn01" onclick="slidePopConfirm();return false;">주소복사</a>
+								<a href="tel:031-426-8468" class="contBtn01 green mt5">전화연결</a>
+							</div>
+						</li>
+						<li>
+							<a href="javascript:;" title="영업점 상세정보로 이동" class="fl">
+								<dl>
+									<dt>NH통합IT센터출장소(414m)</dt>
+									<dd>경기 의왕시 성고개로 59 (포일동, NH통합IT센터)</dd>
+									<dd>031-426-8468</dd>
+								</dl>
+							</a>
+							<div class="btnsArea">
+								<a href="tel:031-426-8468" class="contBtn03 ac">선택</a>
+								<a href="#" class="contBtn01" onclick="slidePopConfirm();return false;">주소복사</a>
+								<a href="tel:031-426-8468" class="contBtn01 green mt5">전화연결</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="mapQucik">
+					<a href="#" class="btnAddon btnbgGray">지도로 보기</a>
+				</div>
+			</div>
+			
+		</div>
+		<!-- //container -->
+
+		<!-- 팝업시작 : 센터 정렬 팝업인 경우 centerLayer 클래스 및 함수 사용 -->
+		<div class="popWrap slidePopConfirm nhasset">
+			<div class="dim"></div>
+			<div class="popInner">
+				<h1 class="ac"><img src="../../images/popTitle.png" alt="NH 스마트뱅킹"></h1>
+				<div class="popCont">
+					<div class="confirmMsg type03">
+						<p>주소가 복사되었습니다.</p>
+					</div>
+				</div>
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;">확인</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // 팝업 끝 -->
+
+	</div>
+
+</body>
+</html>

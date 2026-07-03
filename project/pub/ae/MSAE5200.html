@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>개인정보 수집 이용 동의</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		//tostpop();//토스트 팝업 호출 
+	})
+
+	function tostpop(){
+		var $tostCont = '<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg">업데이트를 완료했습니다.</div></div>'
+		$('.container').after($tostCont);
+		setTimeout(function(){
+			$('.tostpopupWrap').remove();
+		},4000)
+	}
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>DSR 계산기</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+        <h2 class="defTit">
+			<strong>DSR 계산 서비스</strong> 이용에<br>
+			<strong>동의</strong>해주세요
+		</h2>
+		<div class="boxTypeWrap">
+			<div class="formWrap selectAll mt0 pd0">
+                <div class="total">
+                    <div class="formHolder check">
+                        <input type="checkbox" id="type_all01" checked="" class="chekTypeOther">
+                        <label class="check" for="type_all01">전체동의</label>
+                    </div>
+                </div>
+                <div class="cont">
+                    <div class="formHolder check">
+                        <input type="checkbox" id="type01" checked="checked">
+                        <label class="check" for="type01"><em>[필수]</em> (신용)정보 수집·이용·제공·조회동의서</label>
+                        <a href="javascript:;" class="btnView" role="button" title="[필수] 개인(신용)정보 수집·이용·제공·조회동의서"><span class="blind">약관보기</span></a>
+                    </div>
+                    <div class="formHolder check">
+                        <input type="checkbox" id="type02" checked="checked">
+                        <label class="check" for="type02"><em>[필수]</em> (여신) 개인(신용)정보 수집·이용·제공 동의서</label>
+                        <a href="javascript:;" class="btnView" role="button" title="[필수] (여신) 개인(신용)정보 수집·이용·제공 동의서"><span class="blind">약관보기</span></a>
+                    </div>
+                </div>
+            </div>
+		</div>
+
+		<div class="areaBtnDefault">
+			<a href="javascript:;" class="btnPressDefault" role="button">취소</a>
+			<a href="javascript:;" class="btnPressPoint" role="button">확인</a> <!--활성화 class btnPressPoint --->
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

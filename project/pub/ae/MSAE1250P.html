@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>컨설팅 - 자산진단</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		fullLayerPop();
+	})
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text"></a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+
+		</div>
+		<!-- //container -->
+
+		<!-- 팝업시작 -->
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>금융부채비율</h1>
+				<div class="popCont grayPop">
+                    <div class="msaeAreaWrap">
+    
+                        <div class="productMenu">
+                            <a href="javascript:;" class="linkbtn le" role="button">여유자금</a>
+                            <a href="javascript:;" class="linkbtn ri" role="button">투자스타일 분석</a>
+                        </div>
+                        
+                        <div class="msaeCont">
+                            <div class="boxTypeWrap msae">
+                                <div class="msaeAseetItem">
+                                    <h2 class="title">총자산 중 금융자산은 <strong class="pointColor">60.0%</strong>에요<!--12.07 텍스트 수정-->
+                                        <div class="tooltipWrap">
+                                            <button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">금융부채비율 안내 툴팁 열기</span><!-- [접근성_2024] blind 수정 --></button>
+                                            <div class="tooltipCont">
+                                                <div class="msaeTool">
+                                                    <p class="mb10">내 총자산 중 금융자산과 부채 비중에 대한 분석이에요. </p>
+                                                    <ul class="popBul">
+                                                        <li><strong>총자산 </strong>
+                                                            <ul class="listDash">
+                                                                <li>금융자산(계좌, 투자, 선불페이)</li>
+                                                                <li>기타(실물자산, 가상자산, 연금)</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>재무건강 적정 가이드
+                                                            <ul class="listDash">
+                                                                <li>부채<br/>적정: 30%미만<br/>주의:30%이상~40%미만<br/>위험: 40%이상</li>
+                                                                <li>금융자산<br/>낮음:30%미만<br/>적정:30%이상~40%미만<br/>높음:40%이상</li>
+                                                             </ul>
+                                                        </li>
+                                                    </ul>
+                                                    <p class="reference mt10">(출처: 한국FP학회_한국가계의 재무건강 연구)</p>
+                                                </div>  
+                                                <button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+                                            </div>
+                                        </div>
+                                    </h2>
+                                    
+                                    <div class="graphEmptyCase"> <!--11.30 미연결 케이스 추가--> 
+                                        <div class="graphBlur">
+                                            <div class="msaeGraphBlurTxt">
+                                                <p>연결된 금융자산이 없어요.</p> 
+                                                <a href="javascript:;" class="link arrGreen"><span>자산연결하기</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="graphWrap mt35" role="img" aria-label=" " style="text-align: center;">
+                                            <img src="../../images/temp/assets_graph_dumy37.png" style="width: 124px;">
+                                            <div class="graphAddEx mt20"> <!--11.22 그래프 범례 추가-->
+                                                <ul class="ty01">
+                                                    <li class="bl06">총자산</li>
+                                                    <li class="bl07">금융자산</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <hr class="divLine3" aria-hidden="true">
+                                    <h2 class="title">총자산 대비 <strong>부채</strong>는 <strong class="pointColor">150.0%</strong>에요</h2>
+                                    <div class="graphEmptyCase"> <!--11.30 미연결 케이스 추가--> 
+                                        <div class="graphBlur">
+                                            <div class="msaeGraphBlurTxt">
+                                                <p>연결된 금융자산이 없어요.</p> 
+                                                <a href="javascript:;" class="link arrGreen"><span>자산연결하기</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="graphWrap mt35" role="img" aria-label="">
+                                            <!-- 그래프이미지 삭제// -->
+                                            <!-- 그래프추가 -->
+                                            
+                                            <div class="graphVerWrap graphPeer">
+                                                <div class="graphVerLine" style="bottom:70px">
+                                                </div>
+                                                <div class="graphTypeWrap graphPercent">
+                                                    <div class="graphType">
+                                                        <div class="graphTip02 purple">
+                                                            <p class="graphTipBox">
+                                                                <span>총자산 100.0%</span>
+                                                                <span class="value">9,999,999,999<em>원</em></span>
+                                                            </p>
+                                                        </div>
+                                                        <div class="baseGraph02 msBar" onclick="graphVerTipOpen($(this))"><span class="lineGraph purple" data-value="100" style="width:60px"></span></div>
+                                                    </div>
+                                                    <div class="graphType">
+                                                        <div class="graphTip02 skypink">
+                                                            <p class="graphTipBox">
+                                                                <span>부채 20.0%</span>
+                                                                <span class="value">123,999<em>원</em></span>
+                                                            </p>
+                                                        </div>
+                                                        <div class="baseGraph02 msBar" onclick="graphVerTipOpen($(this))"><span class="lineGraph skypink" data-value="20" style="width:60px"></span></div>
+                                                    </div>
+                                                    <div class="percentNum">
+                                                        <div class="top">100%</div>
+                                                        <div class="middle">50%</div>
+                                                        <div class="bottom">0%</div>
+                                                    </div>
+                                                </div>  
+                                            </div>
+                                            <ul class="legendList mt25">
+                                                <li>
+                                                    <span class="legendTit type51"><strong>총자산</strong></span>
+                                                    <span class="legendAmnt"><em class="value">9,000,000,000</em>원</span>
+                                                </li>
+                                                <li>
+                                                    <span class="legendTit type52"><strong>부채</strong></span>
+                                                    <span class="legendAmnt"><em class="value">250,234.000</em>원</span>
+                                                </li>
+                                            </ul>
+                                            <!-- //그래프추가 -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boxTypeWrap">
+                                <div class="msaeAseetItem">
+                                    <h2 class="title"> 
+                                        이번달 총자산 중 <strong>금융자산</strong> 비율은<br><!--12.07 텍스트 수정-->
+                                        <strong class="pointColor14">높은</strong>수준이고, 지난달 보다 <strong class="pointColor">20%p </strong>늘었어요<!--12.07 텍스트 수정 및 띄어쓰기-->
+                                    </h2>
+                                    <div class="graphEmptyCase"> <!--11.30 미연결 케이스 추가--> 
+                                        <div class="graphWrap mt60" role="img" aria-label="">
+                                            <!-- <img src="../../images/temp/assets_graph_dumy39.png"> -->
+                                            <!-- 그래프 퍼블 반영 -->
+                                            <div class="graphLineWrap"><!--s:graphLineWrap-->
+                                                <div class="graphType"> <!--s:graphType-->
+                                                    <span class="title">금융자산</span>
+                                                    <div class="graphAreaWrap ">
+                                                        <div class="graphitem">
+                                                            <div class="graphStatus">
+                                                                <!-- [2023-01-31] 위치 수정 -->
+                                                                <div class="baseLineCont" style="left:50%">
+                                                                    <div class="baseLine"></div>
+                                                                    <div class="baseLineText">적정</div>
+                                                                </div>
+                                                                <!-- //[2023-01-31] 위치 수정 -->
+                                                                <div class="baseGraph msBar" onclick="graphTipOpen($(this))"><span class="lineGraph purple" data-value="45"></span></div>
+                                                                <div class="graphTip">
+                                                                    <p class="graphTipBox purple">
+                                                                        <span>이번달</span><span> 85%</span>
+                                                                        <span class="value">123,000<em>원</em></span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="graphValueData"><span class="blind">이번달 차지하는 금융자산 비중</span></div>
+                                                        </div>
+                                                        <div class="graphitem">
+                                                            <div class="graphStatus">
+                                                                <div class="baseGraph msBar" onclick="graphTipOpen($(this))"><span class="lineGraph gray" data-value="80"></span></div>
+                                                                <div class="graphTip">
+                                                                    <p class="graphTipBox gray">
+                                                                        <span>지난달</span><span> 85%</span>
+                                                                        <span class="value">123,000<em>원</em></span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="graphValueData"><span class="blind">지난달 차지하는 금융자산 비중</span></div>
+                                                        </div>
+                                                        <!-- [2023-01-31] 위치 수정 -->
+                                                        <!-- <div class="baseLineCont">
+                                                            <div class="baseLine"></div>
+                                                            <div class="baseLineText">적정</div>
+                                                        </div> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- //그래프 퍼블 반영 -->
+                                            </a>
+                                            <div class="graphAddEx mt35"> <!--11.22 그래프 범례 추가-->
+                                                <ul class="ty01">
+                                                    <li class="bl03">지난달</li>
+                                                    <li class="bl06">이번달</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h2 class="title mt30"> 
+                                        이번달 총자산 대비 <strong>부채 비율</strong> 비율은<br>
+                                        <strong class="pointColor09">위험</strong>수준이고, 지난달 보다 <strong class="pointColor">20%p </strong>늘었어요<!--12.07 텍스트 수정 띄어쓰기-->
+                                    </h2>
+                                    <div class="graphEmptyCase"> <!--11.30 미연결 케이스 추가--> 
+                                        <div class="graphWrap mt60" role="img" aria-label="">
+                                            <!-- 그래프이미지 삭제 -->
+                                            <!-- <img src="../../images/temp/assets_graph_dumy40.png"> -->
+                                            <!-- 그래프 이미지 삭제 -->
+
+                                            <div class="graphLineWrap"><!--s:graphLineWrap-->
+                                                <div class="graphType"> <!--s:graphType-->
+                                                    <span class="title">부채</span>
+                                                    <div class="graphAreaWrap">
+                                                        <div class="graphitem">
+                                                            <div class="graphStatus">
+                                                                <!-- [2023-01-31] 위치 수정 -->
+                                                                <div class="baseLineCont" style="left:50%">
+                                                                    <div class="baseLine"></div>
+                                                                    <div class="baseLineText">적정</div>
+                                                                </div>
+                                                                <!-- //[2023-01-31] 위치 수정 -->
+                                                                <div class="baseGraph msBar" onclick="graphTipOpen($(this))"><span class="lineGraph skypink" data-value="65"></span></div>
+                                                                <div class="graphTip">
+                                                                    <p class="graphTipBox skypink">
+                                                                        <span>이번달</span><span> 85%</span> <!-- [2023-01-31] 띄어쓰기 적용 -->
+                                                                        <span class="value">123,000<em>원</em></span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="graphValueData"><span class="blind">이번달 차지하는 부채 비중</span></div>
+                                                        </div>
+                                                        <div class="graphitem">
+                                                            <div class="graphStatus">
+                                                                <div class="baseGraph msBar" onclick="graphTipOpen($(this))"><span class="lineGraph gray" data-value="45"></span></div>
+                                                                <div class="graphTip">
+                                                                    <p class="graphTipBox gray">
+                                                                        <span>지난달</span><span> 85%</span> <!-- [2023-01-31] 띄어쓰기 적용 -->
+                                                                        <span class="value">123,000<em>원</em></span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="graphValueData"><span class="blind">지난달 차지하는 부채 비중</span></div>
+                                                        </div>
+                                                        <!-- [2023-01-31] 위치 수정 -->
+                                                        <!-- <div class="baseLineCont">
+                                                            <div class="baseLine"></div>
+                                                            <div class="baseLineText">적정</div>
+                                                        </div> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="graphAddEx mt35"> <!--11.22 그래프 범례 추가-->
+                                                <ul class="ty01">
+                                                    <li class="bl03">지난달</li>
+                                                    <li class="bl07">이번달</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="boxTypeWrap"><!--11.30 s:미연결 케이스 추가--> 
+                                <div class="msaeAseetItem">
+                                    <h2 class="title"> 
+                                        지난달과 이번달 분석할 자산이 없어요.
+                                    </h2>
+                                    <div class="graphEmptyCase"> <!--11.30 미연결 케이스 추가--> 
+                                        <div class="graphBlur">
+                                            <div class="msaeGraphBlurTxt">
+                                                <p>지난달, 이번달 자산을<br>
+                                                    확인할 수 없어요.<br>
+                                                    자산을 연결하면 알려드릴께요</p> 
+                                                <a href="javascript:;" class="link arrGreen"><span>자산연결하기</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="graphWrap mt35" role="img" aria-label="">
+                                            <img src="../../images/temp/assets_graph_dumy39.png">
+                                            <div class="graphAddEx mt20"> <!--11.22 그래프 범례 추가-->
+                                                <ul class="ty01">
+                                                    <li class="bl03">지난달</li>
+                                                    <li class="bl06">이번달</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h2 class="title mt30"> 
+                                        지난달과 이번달 분석할 자산이 없어요.
+                                    </h2>
+                                    <div class="graphEmptyCase"> <!--11.30 미연결 케이스 추가--> 
+                                        <div class="graphBlur">
+                                            <div class="msaeGraphBlurTxt">
+                                                <p>지난달, 이번달 자산을<br>
+                                                    확인할 수 없어요.<br>
+                                                    자산을 연결하면 알려드릴께요</p> 
+                                                <a href="javascript:;" class="link arrGreen"><span>자산연결하기</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="graphWrap mt35" role="img" aria-label="">
+                                            <img src="../../images/temp/assets_graph_dumy40.png">
+                                            <div class="graphAddEx mt20"> <!--11.22 그래프 범례 추가-->
+                                                <ul class="ty01">
+                                                    <li class="bl03">지난달</li>
+                                                    <li class="bl07">이번달</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <!--11.30 e:미연결 케이스 추가--> 
+                        
+                    </div>
+                </div>
+            </div>	
+            
+            <div class="popBtnWrap">
+                <a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+            </div>
+        </div>
+    </div>
+    <!-- 팝업끝 -->
+</div>
+
+
+    <script>
+        $(".graphitem .graphStatus").each(function(i) {
+            graphValue = $(this).find(".lineGraph").attr("data-value");
+            $(this).find(".lineGraph").animate({width:graphValue + "%"}, 500);
+            iconPs = $(this).find(".graphTip");
+            iconPs.animate({left:graphValue + "%"}, 500);
+            graphData = $(this).siblings('.graphValueData');
+            graphData.text(graphValue + "%"); //[2023-02-03] .0 제거
+        });
+
+        var graphTipOpen = function(obj) {
+            var $item = $(this).find('.msBar');
+            var $tip =  $item.siblings('.graphTip');
+            $tip = obj.closest(".graphStatus").find(".graphTip");
+            $(".graphTip").hide();
+            $tip.show();
+        };
+
+        
+        // 총자산대비 부채
+        $(".graphVerWrap.graphPeer .graphType").each(function(i) {
+            graphValue = $(this).find(".lineGraph").attr("data-value");
+            graphline = $(this).find(".lineGraph.mildgreen").attr("data-value");
+            graphBg = $(".graphVerLine").position().top + 20;
+            height1 =$('.lineGraph.mildgreen').outerHeight() + 24;
+            height2 =$('.graphTip02.mildgreen').outerHeight();
+            graphBgH = height1 + height2;
+            $(this).find(".lineGraph").height(graphValue);
+            $(this).find(".graphTip02").css('bottom' , graphValue + "px");
+        });
+        var graphVerTipOpen = function(obj) {
+            var $item = $(this).find('.msBar');
+            var $tip =  $item.siblings('.graphTip02');
+            $tip = obj.closest(".graphType").find(".graphTip02");
+            $(".graphTip02").hide();
+            $tip.show();
+        };
+    </script>
+</body>
+</html>

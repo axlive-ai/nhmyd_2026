@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Septem UI/UX accessibility</title>
+	<link rel="stylesheet" href="../css/a11y_com.css">
+	<link rel="stylesheet" href="../css/prism.css">
+	<script src="../js/prism.js"></script>
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/a11y_com.js"></script>
+
+	<style>
+		*:focus {outline:2px solid red}
+		body {padding:20px}
+		.syntaxhighlighter, .syntaxhighlighter .line.alt2, .syntaxhighlighter .line.alt1 {background-color: #f7f7f7 !important}
+		.modal_bg{position:fixed !important;top:0;left:0;width:100% !important;height:100%;background:rgba(0,0,0,0.8) !important;z-index:998 !important}
+		.modal_close{overflow:hidden;position:absolute;right:5px;top:5px;width:36px;height:36px;;text-indent:-9999px;}
+		.modal_close:before,.modal_close:after{content:'';display:block;position:absolute;top:calc(50% - 8px);left:50%;width:1px;height:16px;background:#666;}
+		.modal_close:before{transform:rotate(45deg)}
+		.modal_close:after{transform:rotate(-45deg)}
+		.modal_pop,.modal_bg{display:none;position:fixed !important}
+		.modal_pop{overflow:hidden;top:50%;left:50%;padding:10px 15px 15px;box-sizing:border-box;background-color:#fff;z-index:999}
+		.modal_title,.modal_content{box-sizing:border-box}
+		.modal_title{display:block;margin-bottom:10px;height:36px;padding:6px 34px 0 0;border-bottom:1px solid #dfdfdf;line-height:100%;font-size:18px;color:#333}
+	</style>
+
+</head>
+<body>
+	
+<div id="contents" class="contents">
+	<a href="#sear_guide" onclick="showLayer(this,'.modal_pop');return false;" title="레이어 팝업">팝업열기</a>
+	
+	<div class="mt40">
+		<pre>
+			<code class="language-markup">
+				<script type="prism-html-markup"
+					<div class="modal_pop" id="sear_guide" style="display: none; margin-top: -379.5px; margin-left: -427.5px;">
+						<strong class="modal_title">홈페이지 검색 길잡이</strong>
+						<div class="modal_content">
+							<a href="#" role="text">first</a>
+							<a href="#" role="text">팝업내용2</a>
+							<a href="#" role="text">팝업내용3</a>
+							<a href="#" role="text">팝업내용4</a>
+						</div>
+						<a href="#" class="modal_close">last</a>
+					</div>
+					<div class="modal_bg" style="display: none; top: 0px; height: 100%;"></div>
+				</script>
+			</code>
+		</pre>
+
+		<strong>바닥 스크롤 막는 스크립트</strong>
+		<pre>
+			<code class="language-js">
+				<script>
+					function scrollNone(){
+						var windowHeight = $(window).height();
+						if(windowHeight > $("#wrap").height()){
+							$("body").css({"height":windowHeight +"px","overflow":"hidden"});
+						} else {
+							$("body").css({"height":windowHeight +"px","overflow":"hidden"});
+						}
+					}
+					function scrollBlock(){
+						$("body").css({"height":"auto","overflow":"auto"});
+					}
+				</script>
+			</code>
+		</pre>
+
+		<strong>팝업위치 & 키보드제어</strong>
+		<pre>
+			<code class="language-js">
+				<script>
+					function showLayer(self,obj){
+						var $self = $(self);
+						var $target = $($self.attr('href'));
+						var _pWidth = $target.width()/2;
+						var _pHeight = $target.height()/2;
+						$('.modal_bg').show();
+
+						scrollNone();
+
+						$target.attr('tabindex', '0').show().focus();
+						$(obj).css({"margin-top":"-"+ _pHeight +"px","margin-left":"-"+ _pWidth +"px"})
+						$(obj).find(".modal_close").click(function(){
+							hideLayer();
+						});
+
+						//키보드 포커스 modal popup 영역운영
+						var 
+							firstElement = $target.find("div[tabindex='0'],a,input:not([disabled='disabled']),select,button,textarea").filter(':first'),
+							lastElement = $target.find("div[tabindex='0'],a,input:not([disabled='disabled']),select,button,textarea").filter(':last');
+						firstElement.off("keydown").on("keydown",function(b){
+							if(b.keyCode == 9 && b.shiftKey){ //("keyCode==9"==Tab) -> Sthift+Tab						
+								b.preventDefault(); //preventDefault 동작취소
+								lastElement.focus();
+							}
+						});
+
+						lastElement.off("keydown").on("keydown",function(b){
+							if(b.keyCode == 9 && b.shiftKey){
+							} else if (b.keyCode == 9){
+								b.preventDefault();
+								firstElement.focus();
+							}
+						});
+
+						function hideLayer(){
+							$(obj).hide();
+							$(obj).removeAttr('tabindex');
+							$('.modal_bg').hide().css({'top':'0','height':'100%'});
+							scrollBlock();
+							$self.focus();
+							$(this).off('click');
+						}
+					}
+				</script>
+			</code>
+		</pre>
+	</div>
+	
+	<div class="modal_pop" id="sear_guide" style="display: none; margin-top: -379.5px; margin-left: -427.5px;">
+		<strong class="modal_title">홈페이지 검색 길잡이</strong>
+		<div class="modal_content">
+			<a href="#" role="text">first</a>
+			<a href="#" role="text">팝업내용2</a>
+			<a href="#" role="text">팝업내용3</a>
+			<a href="#" role="text">팝업내용4</a>
+		</div>
+		<a href="#" class="modal_close">last</a>
+	</div>
+	<div class="modal_bg" style="display: none; top: 0px; height: 100%;"></div>
+
+	<script>
+		function scrollNone(){
+			var windowHeight = $(window).height();
+			if(windowHeight > $("#wrap").height()){
+				$("body").css({"height":windowHeight +"px","overflow":"hidden"});
+			} else {
+				$("body").css({"height":windowHeight +"px","overflow":"hidden"});
+			}
+		}
+
+		function scrollBlock(){
+			$("body").css({"height":"auto","overflow":"auto"});
+		}
+
+
+		function showLayer(self,obj){
+			var $self = $(self);
+			var $target = $($self.attr('href'));
+			var _pWidth = $target.width()/2;
+			var _pHeight = $target.height()/2;
+			$('.modal_bg').show();
+
+			scrollNone();
+
+			$target.attr('tabindex', '0').show().focus();
+			$(obj).css({"margin-top":"-"+ _pHeight +"px","margin-left":"-"+ _pWidth +"px"})
+			$(obj).find(".modal_close").click(function(){
+				hideLayer();
+			});
+
+
+			//키보드 포커스 modal popup 영역운영
+			var 
+				firstElement = $target.find("div[tabindex='0'],a,input:not([disabled='disabled']),select,button,textarea").filter(':first'),
+				lastElement = $target.find("div[tabindex='0'],a,input:not([disabled='disabled']),select,button,textarea").filter(':last');
+			firstElement.css('border','1px solid chocolate');
+			lastElement.css('border','1px solid crimson');
+			firstElement.off("keydown").on("keydown",function(b){
+				if(b.keyCode == 9 && b.shiftKey){ //("keyCode==9"==Tab) -> Sthift+Tab
+					console.log("2");						
+					b.preventDefault(); //preventDefault 동작취소
+					lastElement.focus();
+				}
+			});
+
+			lastElement.off("keydown").on("keydown",function(b){
+				if(b.keyCode == 9 && b.shiftKey){
+				} else if (b.keyCode == 9){
+					b.preventDefault();
+					firstElement.focus();
+				}
+			});
+
+			function hideLayer(){
+				$(obj).hide();
+				$(obj).removeAttr('tabindex');
+				$('.modal_bg').hide().css({'top':'0','height':'100%'});
+				scrollBlock();
+				$self.focus();
+				$(this).off('click');
+			}
+		}
+
+	</script>
+
+</body>
+</html>

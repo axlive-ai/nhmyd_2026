@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Septem UI/UX accessibility</title>
+	<link rel="stylesheet" href="../css/a11y_com.css">
+	<link rel="stylesheet" href="../css/prism.css">
+	<script src="../js/prism.js"></script>
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/a11y_com.js"></script>
+</head>
+<body>
+	<!-- skip -->
+<div id="skipNav">
+	<a href="#">본문 바로가기</a>
+	<a href="#">메뉴 바로가기</a>
+</div>
+<!-- //skip -->
+<div id="wrap">
+	<!-- header -->
+	<header>
+	</header>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<nav>
+		</nav>
+		<!-- content -->
+		<main>
+			<h1>2. 운용의 용이성</h1>
+
+			<h2>2.1 입력장치 접근성</h2>
+			<h3>2.1.1 키보드 사용 보장</h3>
+			<blockquote><p>(키보드 사용 보장) 모든 기능은 키보드만으로도 사용할 수 있어야 한다.</p></blockquote>
+
+			<h3>2.1.2 초점 이동</h3>
+			<blockquote><p>(초점 이동) 키보드에 의한 초점은 논리적으로 이동해야 하며, 시각적으로 구별할 수 있어야 한 다.</p></blockquote>
+			<p>
+				<strong>초점 이동 순서 유지</strong>: 초천 이동 순서가 관례를 벗어나서는 안된다. 아이디, 비밀번호, 로그인 순서이어야 한다.<br>
+				<strong>함정 또는 오류 방지</strong>: 초점을 이동할 수 없거나 초점이 이전으로 돌아갈 수 없으면 안된다.<br>
+				<strong>초점의 시각화</strong>: 초점을 받은 부분 부분 주위에 점선이나 테두리로 표시한다.
+			</p>
+			<pre>
+				<code class="language-css">
+					*:focus {outline:1px solid blue}
+				</code>
+			</pre>
+			<h4>팝업의 초점 이동<a href="wa_popup.html" target="_blank" class="btnA">PC 팝업 예시 새창보기&#xE001;</a> <a href="ma_popup.html" target="_blank" class="btnA">모바일 팝업 예시 새창보기&#xE001;</a></h4>
+			<p>
+				<strong>팝업 초점 이동 순서</strong><br>
+				팝업을 여는 버튼 → 팝업의 제목(tabindex="0" 필수) → 팝업의 컨텐츠 → 팝업의 닫기 버튼 → 팝업을 여는(열었던) 버튼<br>
+				<ul>
+					<li>팝업이 열리는 버튼은 role="button"title="OO팝업열림"을 통해 알려준다.</li>
+					<li>팝업의 첫번째 제목은 포커스가 갈 수 있도록 tabindex="0"를 준다.</li>
+					<li>팝업이 열린 동안 팝업을 제외한 바닥페이지는 aria-hidden="true" 또는 tabindex="-1"을 주어 포커스가 가지 않도록 한다.</li>
+					<li>팝업을 닫고 난 후 포커스는 원래 위치로 돌아가야한다.</li>
+				</ul>
+			</p>
+
+			<h4>탭의 초점 이동<a href="wa_tab.html" target="_blank" class="btnA">탭 예시 새창보기&#xE001;</a></h4>
+			<p>
+				<strong>탭 초점 이동 순서1</strong><br>
+				탭 제목1 → 탭 컨텐츠1  → 탭 제목2  → 탭 제목3
+				<ul>
+					<li>tabindex를 1부터 증가하게 사용하여 포커스의 순서를 맞춰준다.</li>
+				</ul>
+			</p>
+			<p>	
+				<strong>탭 초점 이동 순서2</strong><br>
+				탭 제목1 → 탭 제목2… → 선택된 탭 컨텐츠<br>
+				탭 제목과 컨텐츠 사이에 거리가 있기 대문에 aria-aria-labelledby로 제목과 연동해준다.
+				<ul>
+					<li>탭 제목의 목록은 role="tablist"를 포함한다.</li>
+					<li>탭 제목 a는 role="tab"과 aria-selected="true/false"를 포함단다.</li>
+					<li>탭 컨텐츠는 role="tabpanel"과 tabindex="0"을 포함하며, aria-labelledby="제목"으로 제목a와 엮어준다.<br>
+						- role="tabpanel"은 ui이에 사용할 수 없다.</li>
+					<li>탭 제목과 컨텐츠간의 거리가 먼 경우 탭 제목에 aria-controls="컨텐츠아이디"를 삽입한다.</li>
+				</ul>
+			</p>
+			<pre>
+				<code class="language-markup">
+					<script type="prism-html-markup">
+						<ul class="tablist" role="tablist">
+							<li><a href="#tab1" class="active" role="tab" aria-selected="true"><span>탭 제목1</span></a></li>
+							<li><a href="#tab2" role="tab" aria-selected="false"><span>탭 제목2</span></a></li>
+							<li><a href="#tab3" role="tab" aria-selected="false"><span>탭 제목3</span></a></li>
+							<li><a href="#tab4" role="tab" aria-selected="false"><span>탭 제목4</span></a></li>
+						</ul>
+						<ul class="tabcon">
+							<li id="tab1" tabindex="0" aria-labelledby="탭 제목1" role="tabpanel" style="display:block;">탭 제목1 콘텐츠</li>
+							<li id="tab2" tabindex="0" aria-labelledby="탭 제목2" role="tabpanel" style="display:none">탭 제목22 콘텐츠</li>
+							<li id="tab3" tabindex="0" aria-labelledby="탭 제목3" role="tabpanel" style="display:none">탭 제목333 콘텐츠</li>
+							<li id="tab4" tabindex="0" aria-labelledby="탭 제목4" role="tabpanel" style="display:none">탭 제목4444 콘텐츠</li>
+						</ul>
+					</script>
+				</code>
+			</pre>
+
+			<h4>스와이프 베너의 초점 이동</h4>
+			<p>
+				<strong>모바일 swiper.js</strong>
+				<ul>
+					<li>swiper js는 접근성 요소가 기본으로 포함되어 있다.</li>
+					<li>prev버튼과 next버튼으로 슬라이드를 제어할 수 있어야 하며, 이 버튼은 tabindex="0" role="button" aria-label="Next slide/Previous slide"를 포함해야 한다.</li>
+					<li>pagination에도 tabindex="0" role="button" aria-label="Go to slide 1"을 포함한다.</li>
+					<li>커스터마이징에 따라 달라지기 때문에 상황에 따라 적용이 필요하다.</li>
+				</ul>
+			</p>
+			<p>
+				<strong>PC bxslider.js</strong>
+			</p>
+
+
+			<h3>2.1.3 조작 가능</h3>
+			<blockquote><p>(조작 가능) 사용자 입력 및 컨트롤은 조작 가능하도록 제공되어야 한다.</p></blockquote>
+			<p>
+				<strong>컨트롤의 크기</strong> : 콘텐츠에 포함된 모든 컨트롤은 대각선 방향의 길이를 6.0 mm 이상으로 제공하는 것이 바람직하다.
+			</p>
+
+			<h2>2.2 충분한 시간 제공</h2>
+			<h3>2.2.1 응답 시간 조절</h3>
+			<p>
+				<strong>시간제한 콘텐츠 사용 배제</strong> : 시간제한이 있는 콘텐츠는 제공하지 않아야 한다.<br>
+				<strong>예외 콘텐츠</strong> : 시간제한이 있더라도 온라인 경매, 실시간 게임 등과 같이 반응 시간의 조절이 원천적으로 허용되지 않는 경우에는 이 검사 항목이 적용되지 않는다. 다만 이 경우에도 사용자에게 시간제한이 있다는 것을 미리 알려주고, 종료되었을 경우에도 이를 알려주어야 한다. 세션 시간이 20 시간 이상인 콘텐츠의 경우에도 예외로 간주한다.<br>
+				<strong>반응 시간 조절이 필요한 콘텐츠</strong>: 반응 시간이 완료되기 전 시간제한 해제 또는 시간제한 연장을 할 수 있도록 해야한다. 또한 시간 조절 기능한 최소 20초 이상을 두고 사전에 알려주어야 한다.
+			</p>
+
+			<h3>2.2.2 정지 기능 제공</h3>
+			<blockquote><p>자동으로 변경되는 콘텐츠는 움직임을 제어할 수 있어야 한다.</p></blockquote>
+			<p>
+				<strong>이동하거나 스크롤 되는 콘텐츠 사용 배제</strong>
+				<strong>이동하거나 스크롤되는 콘텐츠 - 베너 등</strong>: 콘텐츠를 선택할 수 있는 컨트롤(예 : ‘앞으로 이동', ‘ 뒤로 이동’, ‘정지’ 등)을 제공해야 한다.
+			</p>
+
+			<h2>2.3 광과민성 발작</h2>
+			<h3>2.3.1 깜빡임과 번쩍임 사용 제한</h3>
+			<blockquote><p>(깜빡임과 번쩍임 사용 제한) 초당 3~50 회 주기로 깜빡이거나 번쩍이는 콘텐츠를 제공하지 않아야 한다.</p></blockquote>
+
+
+			<h2>2.4 쉬운 내비게이션</h2>
+			<h3>2.4.1 반복 영역 건너뛰기</h3>
+			<blockquote><p>(반복 영역 건너뛰기) 콘텐츠의 반복되는 영역은 건너뛸 수 있어야 한다.</p></blockquote>
+			<pre>
+				<code class="language-markup">
+					<script type="prism-html-markup">
+						<div class="skip blind"><a href="#content">본문바로가기</a></div>
+					</script>
+				</code>
+			</pre>
+			<pre>
+				<code class="language-css">
+					.blind{overflow:hidden;position:absolute !important;width:1px;height:1px;clip:rect(0 0 0 0);margin:-1px;color:transparent}
+					.skip a:focus {position:static;width:auto;height:auto}
+				</code>
+			</pre>
+			<p>
+				"건너뛰기" 링크가 페이지의 첫 번째 링크 중 하나여야 한다.<br>
+				화면에서 숨겨져 있어도 상관 없으나 포커스는 화면 안에 존재해야 하고 스크린 리더가 읽을 수 있어야 한다.
+			</p>
+
+			<h3>2.4.2 제목 제공</h3>
+			<blockquote><p>(제목 제공) 페이지, 프레임, 콘텐츠 블록에는 적절한 제목을 제공해야 한다.</p></blockquote>
+			<pre>
+				<code class="language-markup">
+					<script type="prism-html-markup">
+						<title>@컨텐츠 제목 > @하위섹션명 : @서비스명</title>
+					</script>
+				</code>
+			</pre>
+			<p>
+			<strong>웹 페이지 제목 제공</strong><br>
+			웹 사이트의 어느 페이지와도 다른 제목이어야 하며, 제목은 웹 페이지의 내용을 적절히 표현하며 간단하고 명료하게 제공<br><br>
+
+			<strong>프레임 제목 제공</strong><br>
+			모든 웹 페이지의 프레임에는 각 프레임을 설명하는 간단명료한 제목을 제공 (예: 아무런 내용이 없는 프레임이라면 "내용 없음" 등으로 제목을 제공). "빈 프레임" 경우 스크린 리더에서 "프레임"을 두번 읽어주는 이슈로 사용하지 않음<br><br>
+
+			<strong>콘텐츠 블록 제목 제공</strong><br>
+			&lt;h1&gt;, &lt;h2&gt; 요소 등을 부여하여 제목과 본문을 구분할 수 있도록 제공 (콘텐츠 블록 : 특정내용에 관해 설명하거나 기술하고 있는 정보의 묶음 혹은 영역)
+			</p>
+
+			<h3>2.4.3 적절한 링크 텍스트</h3>
+			<blockquote><p>(적절한 링크 텍스트) 링크 텍스트는 용도나 목적을 이해할 수 있도록 제공해야 한다.</p></blockquote>
+			<pre>
+				<code class="language-markup">
+					<script type="prism-html-markup">
+						<a href="#" title="메인페이지로 바로가기">
+							<img src="집아이콘" alt="집 아이콘">
+						</a>
+						<a href="#" title="공지사항 더보기 페이지 이동">
+							<img src="플러스아이콘" alt="플러스 아이콘">
+						</a>
+					</script>
+				</code>
+			</pre>
+
+			<pre>
+				<code class="language-markup">
+					<script type="prism-html-markup">
+						<!-- X -->
+						<a href="#" role="button">...</a>
+
+						<!-- O -->
+						<button type="button">...</button>
+					</script>
+				</code>
+			</pre>
+			<p>보조기기는 두 가지 예제를 모두 '버튼'으로 간주할 것입니다. 그러나 첫 번째 예제의 경우 브라우저는 문맥 메뉴를 통해 링크와 관련된 기능(새 탭에서 링크 열기, 링크 주소 복사 등)을 제공하게 되고 사용자를 혼란스럽게 합니다. 또한, 첫 번째 예제에서 '버튼'이라는 설명을 들은 보조기기 사용자는 '스페이스' 키를 눌러 버튼 기능을 사용하려고 시도할 수 있습니다. 하지만 a 요소는 '엔터' 키만으로 실행할 수 있습니다. button 요소는 '엔터' 키와 '스페이스' 키로 실행할 수 있기 때문에 a 요소로부터 '버튼'이라는 설명을 들은 보조기기 사용자를 혼란스럽게 합니다. 결국 올바른 HTML의 선택은 사용자 경험과 접근성 측면에서 모두 중요합니다.</p>
+		</main>
+		<!-- //content -->
+	</div>
+	<!-- //container -->
+	<!-- footer -->
+	<footer>푸터 영역</footer>
+	<!-- //footer -->
+	
+</body>
+</html>

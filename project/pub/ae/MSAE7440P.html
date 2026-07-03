@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>컨설팅 > NH주택청약플래너</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function() {
+		fullLayerPop();
+	});
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>NH주택청약플래너</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		
+	</div>
+
+	<div class="nhasset popWrap fullLayerPop">
+        <script> // [2022-01-04] 수정
+            $(document).ready(function() { //popup 열렸을 때 실행
+                heightChk();
+                $(".areaTabWrap .selChkBox input").on("click",function(){
+                    $(".areaWordList").append('<a href="javascript:;" role="button" class="areaTagBtn"><span class="tag">#강남구</span></a>'); //개발에서 처리
+                    heightChk();
+                });
+                $(document).on("click", ".areaWordList .areaTagBtn", function(){
+                    $(this).hide();
+                    heightChk();
+                });
+            });
+            function heightChk(){
+                var $topHeight = $(".nhasset .areaTopCont").height();
+                $(".nhasset .areaTabWrap").css('padding-top',$topHeight);
+
+                console.log($(".nhasset .areaTopCont").innerHeight())
+            };
+        </script>
+		<div class="popInner">
+			<h1>관심지역 선택</h1>
+			<div class="popCont pb0">
+                <div class="areaTopCont">
+                    <strong class="formTit mt25">현재 선택 지역
+                        <!-- tootip -->
+                        <div class="tooltipWrap">
+                            <button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">관심지역 툴팁 열기</span><!-- [접근성_2024] .blind 수정 --></button>
+                            <div class="tooltipCont lf16"> <!-- [2023-01-19] .lf16추가 -->
+                                <p>최대 10개의 관심지역을 설정가능 합니다. 관심지역에 청약 공고가 새로 등록된 경우 알림을 드립니다.</p> 
+                                <button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+                            </div>
+                        </div>
+                        <!-- //tootip -->
+                    </strong>
+                    <!-- [2023-01-04] 태그 삭제 기능 추가 -->
+                    <div class="areaWordList">
+                        <a href="javascript:;" role="button" class="areaTagBtn"><span class="tag">#강남구</span></a>
+                        <a href="javascript:;" role="button" class="areaTagBtn"><span class="tag">#강동구</span></a>
+                        <a href="javascript:;" role="button" class="areaTagBtn"><span class="tag">#강북구</span></a>
+                        <a href="javascript:;" role="button" class="areaTagBtn"><span class="tag">#광진구</span></a>
+                        <a href="javascript:;" role="button" class="areaTagBtn"><span class="tag">#구로구</span></a>
+                        <a href="javascript:;" role="button" class="areaTagBtn"><span class="tag">#부산 전체</span></a>
+                        <a href="javascript:;" role="button" class="areaTagBtn"><span class="tag">#서대문구</span></a>
+                        <a href="javascript:;" role="button" class="areaTagBtn"><span class="tag">#동대문구</span></a>
+                        <a href="javascript:;" role="button" class="areaTagBtn"><span class="tag">#마포구</span></a>
+                        <a href="javascript:;" role="button" class="areaTagBtn"><span class="tag">#인천 전체</span></a>
+                    </div>
+                    <!-- //[2023-01-04] 태그 삭제 기능 추가 -->
+                </div>
+
+                <div class="areaTabWrap">
+                    <div class="tabWrap type06">
+                        <ul role="tablist">
+                            <li role="presentation"><a href="javascript:;" role="tab" class="active on" title="" aria-selected="true">서울</a></li>
+                            <li role="presentation"><a href="javascript:;" role="tab" class="" title="" aria-selected="false">부산</a></li>
+                            <li role="presentation"><a href="javascript:;" role="tab" class="" title="" aria-selected="false">대구</a></li>
+                            <li role="presentation"><a href="javascript:;" role="tab" class="" title="" aria-selected="false">인천</a></li>
+                            <li role="presentation"><a href="javascript:;" role="tab" class="" title="" aria-selected="false">광주</a></li>
+                            <li role="presentation"><a href="javascript:;" role="tab" class="" title="" aria-selected="false">대전</a></li>
+                            <li role="presentation"><a href="javascript:;" role="tab" class="" title="" aria-selected="false">울산</a></li>
+                            <li role="presentation"><a href="javascript:;" role="tab" class="" title="" aria-selected="false">세종</a></li>
+                            <li role="presentation"><a href="javascript:;" role="tab" class="" title="" aria-selected="false">경기</a></li>
+                            <li role="presentation"><a href="javascript:;" role="tab" class="" title="" aria-selected="false">강원</a></li>
+                            <li role="presentation"><a href="javascript:;" role="tab" class="" title="" aria-selected="false">충북</a></li>
+                            <li role="presentation"><a href="javascript:;" role="tab" class="" title="" aria-selected="false">충남</a></li>
+                            <li role="presentation"><a href="javascript:;" role="tab" class="" title="" aria-selected="false">전북</a></li>
+                            <li role="presentation"><a href="javascript:;" role="tab" class="" title="" aria-selected="false">전남</a></li>
+                            <li role="presentation"><a href="javascript:;" role="tab" class="" title="" aria-selected="false">경북</a></li>
+                            <li role="presentation"><a href="javascript:;" role="tab" class="" title="" aria-selected="false">경남</a></li>
+                            <li role="presentation"><a href="javascript:;" role="tab" class="" title="" aria-selected="false">제주</a></li>
+                        </ul>
+                    </div>
+                    <div class="tabContWrap type06">
+                        <div class="tabCont01" aria-label="서울 탭" style="display:block;">
+                            <div class="selChkBox">
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel01">
+                                            <label for="sel01">서울 전체</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel02">
+                                            <label for="sel02">강남구</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel03">
+                                            <label for="sel03">강동구</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel04">
+                                            <label for="sel04">강북구</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel05">
+                                            <label for="sel05">강서구</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel06">
+                                            <label for="sel06">관악구</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel07">
+                                            <label for="sel07">광진구</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel08">
+                                            <label for="sel08">구로구</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel09">
+                                            <label for="sel09">금천구</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel10">
+                                            <label for="sel10">노원구</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel11">
+                                            <label for="sel11">도봉구</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel12">
+                                            <label for="sel12">동대문구</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel13">
+                                            <label for="sel13">동작구</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel14">
+                                            <label for="sel14">마포구</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel15">
+                                            <label for="sel15">서대문구</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel16">
+                                            <label for="sel16">서초구</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel17">
+                                            <label for="sel17">성동구</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel18">
+                                            <label for="sel18">성북구</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel19">
+                                            <label for="sel19">송파구</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel20">
+                                            <label for="sel20">양천구</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel21">
+                                            <label for="sel21">영등포구</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel22">
+                                            <label for="sel22">은평구</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel23">
+                                            <label for="sel23">종로구</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel24">
+                                            <label for="sel24">중구</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel25">
+                                            <label for="sel25">중랑구</label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tabCont02" aria-label="부산 탭" style="display:none;">
+                            <div class="selChkBox">
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel01">
+                                            <label for="sel01">서울 전체</label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tabCont03" aria-label="대구 탭" style="display:none;">
+                            <div class="selChkBox">
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel01">
+                                            <label for="sel01">대구 전체</label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tabCont04" aria-label="인천 탭" style="display:none;">
+                            <div class="selChkBox">
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel01">
+                                            <label for="sel01">인천 전체</label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tabCont05" aria-label="광주 탭" style="display:none;">
+                            <div class="selChkBox">
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel01">
+                                            <label for="sel01">광주 전체</label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tabCont06" aria-label="대전 탭" style="display:none;">
+                            <div class="selChkBox">
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel01">
+                                            <label for="sel01">대전 전체</label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tabCont07" aria-label="울산 탭" style="display:none;">
+                            <div class="selChkBox">
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel01">
+                                            <label for="sel01">울산 전체</label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tabCont08" aria-label="세종 탭" style="display:none;">
+                            <div class="selChkBox">
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel01">
+                                            <label for="sel01">세종 전체</label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tabCont09" aria-label="경기 탭" style="display:none;">
+                            <div class="selChkBox">
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel01">
+                                            <label for="sel01">경기 전체</label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tabCont010" aria-label="강원 탭" style="display:none;">
+                            <div class="selChkBox">
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel01">
+                                            <label for="sel01">강원 전체</label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tabCont011" aria-label="충북 탭" style="display:none;">
+                            <div class="selChkBox">
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel01">
+                                            <label for="sel01">충북 전체</label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tabCont012" aria-label="충남 탭" style="display:none;">
+                            <div class="selChkBox">
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel01">
+                                            <label for="sel01">충남 전체</label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tabCont013" aria-label="전북 탭" style="display:none;">
+                            <div class="selChkBox">
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel01">
+                                            <label for="sel01">전북 전체</label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tabCont014" aria-label="전남 탭" style="display:none;">
+                            <div class="selChkBox">
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel01">
+                                            <label for="sel01">전남 전체</label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tabCont015" aria-label="경북 탭" style="display:none;">
+                            <div class="selChkBox">
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel01">
+                                            <label for="sel01">경북 전체</label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tabCont016" aria-label="경남 탭" style="display:none;">
+                            <div class="selChkBox">
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel01">
+                                            <label for="sel01">경남 전체</label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tabCont017" aria-label="제주 탭" style="display:none;">
+                            <div class="selChkBox">
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <input type="checkbox" id="sel01">
+                                            <label for="sel01">제주 전체</label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+
+			<div class="popBtnWrap">
+				<div class="popBtn">
+					<a href="javascript:;" class="confirmBtn" role="button">적용하기</a>
+				</div>
+				<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

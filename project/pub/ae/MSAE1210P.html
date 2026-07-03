@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>컨설팅 - 자산진단</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		fullLayerPop();
+	})
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text"></a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+
+		</div>
+		<!-- //container -->
+
+		<!-- 팝업시작 -->
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>또래비교</h1>
+				<div class="popCont grayPop">
+
+                    <div class="productSwiperWrap">
+
+                        <div class="msaeAreaWrap">
+                            <div class="productMenu">
+                                <a href="javascript:;" class="linkbtn ri" role="button">자산편중상태</a>
+                            </div>
+                            
+                            <div class="msaeCont">
+                                <div class="boxTypeWrap ovNone"> <!--s:boxTypeWrap-->
+                                    <div class="totalBalanceNow">
+                                        <div class="msaeAseetItem">
+                                            금융자산 총액은<br>
+                                            <strong class="pointColor">1,690,804,400</strong>원 이에요
+                                            <div class="tooltipWrap">
+                                                <button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">금융자산 툴팁 열기</span><!-- [접근성_2024] blind 수정 --></button>
+                                                <div class="tooltipCont">
+                                                    <div class="msaeTool">
+                                                        <ul class="popBul">
+                                                            <!-- [2022-01-13] 김범석 툴팁 수정 -->
+                                                            <li>자산진단의 금융자산 총액은 자산 > 순자산의 금융자산  총액과 
+                                                                다를 수 있어요.</li>
+                                                            <li>선불페이 잔액은 자산>순자산에 포함되지만 자산진단 서비스에는 
+                                                                포함되지 않아요.</li>
+                                                            <li>연결하지 않은 자산이 있다면 추가 연결하여 분석 정확도를 
+                                                                높여보세요.</li>
+                                                            <li>자산진단의 금융자산총액은 연금을 포함한 금액입니다.</li>
+                                                            <!-- //[2022-01-13] 김범석 툴팁 수정 -->
+                                                        </ul>
+                                                    </div>
+                                                    <button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filterSelect mt10"><button type="button" title="비교그룹 선택 팝업열기">비교그룹 800~1000만원 &middot;30대&middot;서울</button></div><!-- [접근성_2024] title 수정 -->
+                                </div>
+
+                                <div class="boxTypeWrap"> 
+                                    <div class="msaeAseetItem">
+                                        <h2 class="title">나의 금융자산은 상위 20% 또래부자 <br><!--12.07 %수정-->
+                                            평균보다 <strong class="dataValue pointColor">1,250,234원</strong> 많아요
+                                            <div class="tooltipWrap">
+                                                <button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">금융자산 비교그룹 안내 툴팁 열기</span><!-- [접근성_2024] blind 수정 --></button>
+                                                <div class="tooltipCont">
+                                                    <div class="msaeTool">
+                                                        <!-- [2022-01-13] 김범석 툴팁 수정 -->
+                                                        <ul class="popBul">
+                                                            <li>내가 선택한 비교그룹 상위 20% 또래부자 고객의 금융자산 3개월 평균 금액과
+                                                                비교에요.</li>
+                                                        </ul>
+                                                        <!-- //[2022-01-13] 김범석 툴팁 수정 -->
+                                                    </div>  
+                                                    <button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+                                                </div>
+                                            </div>
+                                        </h2>
+                                        <div class="graphWrap" role="img" aria-label="">
+                                            <!-- 그래프 이미지 삭제 -->
+                                            <!-- <img src="../../images/temp/assets_graph_dumy30.png"> -->
+                                            <!-- 그래프 적용 -->
+                                            <!-- [2023-02-03] 바 2개일 경우 -->
+                                            <div class="graphVerWrap graphPeer type02">
+                                                <div class="graphTypeWrap">
+                                                    <div class="graphVerLine" style="bottom:100px"> <!-- 위치 0px ~ 100px -->
+                                                        <span class="title">또래부자평균</span>
+                                                        <div class="lineWrap">
+                                                            <span class="dotLine"><span class="blind">도트라인</span></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="graphType">
+                                                        <div class="graphTip02 darkgreen"> <!-- [2023-02-03] gray → darkgreen 클래스 변경 --> 
+                                                            <p class="graphTipBox">
+                                                                <span>3월</span>
+                                                                <span class="value">1,250,234<em>원</em></span>
+                                                            </p>
+                                                        </div>
+                                                        <div class="baseGraph02 msBar" onclick="graphVerTipOpen($(this))"><span class="lineGraph " data-value="30"></span></div>
+                                                        <div class="graphValueData"><span class="blind">3월 또래부자평균 자산</span></div>
+                                                    </div>
+                                                    <div class="graphType">
+                                                        <div class="graphTip02 darkgreen"> <!-- [2023-02-03] gray → darkgreen 클래스 변경 -->
+                                                            <p class="graphTipBox">
+                                                                <span>이번달</span>
+                                                                <span class="value">1,250,234<em>원</em></span>
+                                                            </p>
+                                                        </div>
+                                                        <div class="baseGraph02 msBar" onclick="graphVerTipOpen($(this))"><span class="lineGraph" data-value="100"></span></div>
+                                                        <div class="graphValueData"><span class="blind">이번달 또래부자평균 자산</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="graphBotText">
+                                                    <span>3월</span>
+                                                    <span>이번달</span>
+                                                </div>	
+                                            </div>
+                                            <!-- //[2023-02-03] 바 2개일 경우 -->
+                                            <!-- [2023-02-03] 바 3개일 경우 -->
+                                            <div class="graphVerWrap graphPeer type03">
+                                                <div class="graphTypeWrap">
+                                                    <div class="graphVerLine" style="bottom:100px"> <!-- 위치 0px ~ 100px -->
+                                                        <span class="title">또래부자평균</span>
+                                                        <div class="lineWrap">
+                                                            <span class="dotLine"><span class="blind">도트라인</span></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="graphType">
+                                                        <div class="graphTip02 darkgreen"> <!-- [2023-02-03] gray → darkgreen 클래스 변경 -->
+                                                            <p class="graphTipBox">
+                                                                <span>3월</span>
+                                                                <span class="value">1,250,234<em>원</em></span>
+                                                            </p>
+                                                        </div>
+                                                        <div class="baseGraph02 msBar" onclick="graphVerTipOpen($(this))"><span class="lineGraph " data-value="30"></span></div>
+                                                        <div class="graphValueData"><span class="blind">3월 또래부자평균 자산</span></div>
+                                                    </div>
+                                                    <div class="graphType">
+                                                        <div class="graphTip02 darkgreen"> <!-- [2023-02-03] gray → darkgreen 클래스 변경 -->
+                                                            <p class="graphTipBox">
+                                                                <span>4월</span>
+                                                                <span class="value">1,250,234<em>원</em></span>
+                                                            </p>
+                                                        </div>
+                                                        <div class="baseGraph02 msBar" onclick="graphVerTipOpen($(this))"><span class="lineGraph " data-value="50"></span></div>
+                                                        <div class="graphValueData"><span class="blind">4월 또래부자평균 자산</span></div>
+                                                    </div>
+                                                    <div class="graphType">
+                                                        <div class="graphTip02 darkgreen"> <!-- [2023-02-03] gray → darkgreen 클래스 변경 -->
+                                                            <p class="graphTipBox">
+                                                                <span>이번달</span>
+                                                                <span class="value">1,250,234<em>원</em></span>
+                                                            </p>
+                                                        </div>
+                                                        <div class="baseGraph02 msBar" onclick="graphVerTipOpen($(this))"><span class="lineGraph" data-value="100"></span></div>
+                                                        <div class="graphValueData"><span class="blind">이번달 또래부자평균 자산</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="graphBotText">
+                                                    <span>3월</span>
+                                                    <span>4월</span>
+                                                    <span>이번달</span>
+                                                </div>	
+                                            </div>
+                                            <!-- //[2023-02-03] 바 3개일 경우 -->
+                                            <!-- [2023-02-03] 바 4개일 경우 -->
+                                            <div class="graphVerWrap graphPeer type04">
+                                                <div class="graphTypeWrap">
+                                                    <div class="graphVerLine" style="bottom:100px"> <!-- 위치 0px ~ 100px -->
+                                                        <span class="title">또래부자평균</span>
+                                                        <div class="lineWrap">
+                                                            <span class="dotLine"><span class="blind">도트라인</span></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="graphType">
+                                                        <div class="graphTip02 darkgreen">
+                                                            <p class="graphTipBox">
+                                                                <span>3월</span>
+                                                                <span class="value">1,250,234<em>원</em></span>
+                                                            </p>
+                                                        </div>
+                                                        <div class="baseGraph02 msBar" onclick="graphVerTipOpen($(this))"><span class="lineGraph " data-value="30"></span></div>
+                                                        <div class="graphValueData"><span class="blind">3월 또래부자평균 자산</span></div>
+                                                    </div>
+                                                    <div class="graphType">
+                                                        <div class="graphTip02 darkgreen"> <!-- [2023-02-03] gray → darkgreen 클래스 변경 -->
+                                                            <p class="graphTipBox">
+                                                                <span>4월</span>
+                                                                <span class="value">1,250,234<em>원</em></span>
+                                                            </p>
+                                                        </div>
+                                                        <div class="baseGraph02 msBar" onclick="graphVerTipOpen($(this))"><span class="lineGraph " data-value="50"></span></div>
+                                                        <div class="graphValueData"><span class="blind">4월 또래부자평균 자산</span></div>
+                                                    </div>
+                                                    <div class="graphType">
+                                                        <div class="graphTip02 darkgreen"> <!-- [2023-02-03] gray → darkgreen 클래스 변경 -->
+                                                            <p class="graphTipBox">
+                                                                <span>5월</span>
+                                                                <span class="value">1,250,234<em>원</em></span>
+                                                            </p>
+                                                        </div>
+                                                        <div class="baseGraph02 msBar" onclick="graphVerTipOpen($(this))"><span class="lineGraph" data-value="80"></span></div> <!-- [2023-02-03] darkgreen 클래스 삭제 -->
+                                                        <div class="graphValueData"><span class="blind">5월 나의 금융자산</span></div>
+                                                    </div>
+                                                    <div class="graphType">
+                                                        <div class="graphTip02 darkgreen">
+                                                            <p class="graphTipBox">
+                                                                <span>이번달</span>
+                                                                <span class="value">1,250,234<em>원</em></span>
+                                                            </p>
+                                                        </div>
+                                                        <div class="baseGraph02 msBar" onclick="graphVerTipOpen($(this))"><span class="lineGraph" data-value="100"></span></div>
+                                                        <div class="graphValueData"><span class="blind">이번달 또래부자평균 자산</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="graphBotText">
+                                                    <span>3월</span>
+                                                    <span>4월</span>
+                                                    <span>5월</span>
+                                                    <span>이번달</span>
+                                                </div>	
+                                            </div>
+                                            <!-- //[2023-02-03] 바 4개일 경우 -->
+                                            <!-- //그래프 적용 -->
+                                            <div class="graphAddEx graphLegend" >
+                                                <!-- [2022-01-13] 김범석 툴팁 수정 -->
+                                                <ul class="ty01 betweenItem">
+                                                    <li class="bl01">또래부자평균</li>
+                                                    <li class="value">102,600,000원</li>
+                                                </ul>
+                                                <ul class="ty01 betweenItem">
+                                                    <li class="bl02">나의 금융자산</li>
+                                                    <li class="value">234,222,000원</li>
+                                                </ul>
+                                                <!-- //[2022-01-13] 김범석 툴팁 수정 -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              
+                                <div class="boxTypeWrap"> <!--11.30 미연결 케이스 추가-->
+                                    <div class="msaeAseetItem">
+                                        <h2 class="title">나의 금융자산은 상위 20% 또래부자 <br><!--12.07 %수정-->
+                                            평균보다 <strong class="dataValue pointColor">1,250,234원</strong> 많아요
+                                            <div class="tooltipWrap">
+                                                <button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">금융자산 비교그룹 안내 툴팁 열기</span><!-- [접근성_2024] blind 수정 --></button>
+                                                <div class="tooltipCont">
+                                                    <div class="msaeTool">
+                                                        <!-- [2022-01-13] 김범석 툴팁 수정 -->
+                                                        <ul class="popBul">
+                                                            <li>내가 선택한 비교그룹 상위 20% 또래부자 고객의 금융자산 3개월 평균 금액과
+                                                                비교에요.</li>
+                                                        </ul>
+                                                        <!-- //[2022-01-13] 김범석 툴팁 수정 -->
+                                                    </div>  
+                                                    <button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+                                                </div>
+                                            </div>
+                                        </h2>
+                                        <div class="graphEmptyCase">  
+                                            <div class="graphBlur">
+                                                <div class="msaeGraphBlurTxt">
+                                                    <p>연결된 금융자산이 없어요.</p> 
+                                                    <a href="javascript:;" class="link arrGreen"><span>자산연결하기</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="graphWrap mt35" role="img" aria-label="">
+                                                <img src="../../images/temp/assets_graph_dumy30.png">
+                                                <div class="graphAddEx" >
+                                                    <!-- [2022-01-13] 김범석 툴팁 수정 -->
+                                                    <ul class="ty01">
+                                                        <li class="bl01">또래부자평균</li>
+                                                        <li class="bl02">나</li>
+                                                    </ul>
+                                                    <!-- //[2022-01-13] 김범석 툴팁 수정 -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--//11.30 미연결 케이스 추가-->
+                                <!--11.21 그래프 수정-->
+                                <div class="boxTypeWrap"><!--s:boxTypeWrap-->
+                                    <div class="msaeAseetItem">
+                                        <h2 class="title">또래부자보다 <strong class="pointColor14">선호하는</strong> 자산은 <strong class="pointColor14">주식</strong>이고,<br>
+                                            <strong class="pointColor09">부족한 </strong>자산은 <strong class="pointColor09">연금</strong>이에요.
+                                            <div class="tooltipWrap">
+                                                <button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">선호자산/부족자산 안내 툴팁 열기</span><!-- [접근성_2024] blind 수정 --></button>
+                                                <div class="tooltipCont">
+                                                    <div class="msaeTool">
+                                                        <!-- [2022-01-13] 김범석 툴팁 수정 -->
+                                                        
+                                                        <ul class="popBul">
+                                                            <li>선호자산<br/>
+                                                                또래부자 보다 비중이 큰 자산 중 차이가 <!-- [2022-02-10] 작은 → 큰 텍스트 수정 -->
+                                                                가장 많이 나는 자산이에요.</li>
+                                                            <li>부족자산<br/>
+                                                                또래부자 보다 비중이 작은 자산 중 차이가 
+                                                                가장 많이 나는 자산이에요.</li>
+                                                        </ul>
+                                                        <!-- //[2022-01-13] 김범석 툴팁 수정 -->
+
+                                                    </div>  
+                                                    <button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+                                                </div>
+                                            </div>
+                                        </h2>
+                                        <div class="graphLineWrap"><!--s:graphLineWrap-->
+                                            <div class="graphType"> <!--s:graphType-->
+                                                <span class="title">입출금</span>
+                                                <div class="graphAreaWrap">
+                                                    <div class="graphitem">
+                                                        <div class="graphStatus">
+                                                            <div class="baseGraph msBar" onclick="graphTipOpen($(this))"><span class="lineGraph mildgreen" data-value="12"></span></div>
+                                                            <div class=" graphTip">
+                                                                <p class="graphTipBox mildgreen">
+                                                                    <span>입출금</span>
+                                                                    <span class="value">234,222,000<em>원</em></span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="graphValueData"><span class="blind">내가 차지하는 입출금 비중</span></div>
+                                                    </div>
+                                                    <div class="graphitem">
+                                                        <div class="graphStatus">
+                                                            <div class="baseGraph msBar" onclick="graphTipOpen($(this))"><span class="lineGraph gray" data-value="14"></span></div>
+                                                            <div class=" graphTip">
+                                                                <p class="graphTipBox gray">
+                                                                    <span>입출금</span>
+                                                                    <span class="value">234,222,000<em>원</em></span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="graphValueData"><span class="blind">또래부자가 차지하는 입출금 비중</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                             <!--e:graphType-->
+
+                                             <div class="graphType"> <!--s:graphType-->
+                                                <span class="title">예·적금</span>
+                                                <div class="graphAreaWrap">
+                                                    <div class="graphitem">
+                                                        <div class="graphStatus">
+                                                            <div class="baseGraph msBar" onclick="graphTipOpen($(this))"><span class="lineGraph mildgreen" data-value="11"></span></div>
+                                                            <div class=" graphTip">
+                                                                <p class="graphTipBox mildgreen">
+                                                                    <span>예·적금</span>
+                                                                    <span class="value">234,222,000<em>원</em></span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="graphValueData"><span class="blind">또래부자가 차지하는 예·적금 비중</span></div>
+                                                    </div>
+                                                    <div class="graphitem">
+                                                        <div class="graphStatus">
+                                                            <div class="baseGraph msBar" onclick="graphTipOpen($(this))"><span class="lineGraph gray" data-value="9"></span></div>
+                                                            <div class=" graphTip">
+                                                                <p class="graphTipBox  gray">
+                                                                    <span>예·적금</span>
+                                                                    <span class="value">234,222,000<em>원</em></span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="graphValueData"><span class="blind">내가 차지하는 예·적금 비중</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                             <!--e:graphType-->
+
+                                             <div class="graphType"> <!--s:graphType-->
+                                                <span class="title">펀드</span>
+                                                <div class="graphAreaWrap">
+                                                    <div class="graphitem">
+                                                        <div class="graphStatus">
+                                                            <div class="baseGraph msBar" onclick="graphTipOpen($(this))"><span class="lineGraph mildgreen" data-value="11"></span></div>
+                                                            <div class=" graphTip">
+                                                                <p class="graphTipBox mildgreen">
+                                                                    <span>펀드</span>
+                                                                    <span class="value">234,222,000<em>원</em></span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="graphValueData"><span class="blind">또래부자가 차지하는 펀드 비중</span></div>
+                                                    </div>
+                                                    <div class="graphitem">
+                                                        <div class="graphStatus">
+                                                            <div class="baseGraph msBar" onclick="graphTipOpen($(this))"><span class="lineGraph gray" data-value="9"></span></div>
+                                                            <div class=" graphTip">
+                                                                <p class="graphTipBox gray">
+                                                                    <span>펀드</span>
+                                                                    <span class="value">234,222,000<em>원</em></span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="graphValueData"><span class="blind">내가 차지하는 펀드 비중</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                             <!--e:graphType-->
+
+                                             <div class="graphType"> <!--s:graphType-->
+                                                <span class="title">주식<em class="icoCrown"><img src="../../images/ico_crown3.png" alt="왕관아이콘"></em></span>
+                                                <div class="graphAreaWrap">
+                                                    <div class="graphitem">
+                                                        <div class="graphStatus">
+                                                            <div class="baseGraph msBar" onclick="graphTipOpen($(this))"><span class="lineGraph blue" data-value="51"></span></div>
+                                                            <div class=" graphTip">
+                                                                <p class="graphTipBox blue">
+                                                                    <span>주식</span>
+                                                                    <span class="value">234,222,000<em>원</em></span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="graphValueData"><span class="blind">또래부자가 차지하는 주식 비중</span></div>
+                                                    </div>
+                                                    <div class="graphitem">
+                                                        <div class="graphStatus">
+                                                            <div class="baseGraph msBar" onclick="graphTipOpen($(this))"><span class="lineGraph gray" data-value="7"></span></div>
+                                                            <div class=" graphTip">
+                                                                <p class="graphTipBox gray">
+                                                                    <span>주식</span>
+                                                                    <span class="value">234,222,000<em>원</em></span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="graphValueData"><span class="blind"> 내가 차지하는 주식 비중</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                             <!--e:graphType-->
+
+                                             <div class="graphType"> <!--s:graphType-->
+                                                <span class="title">기타투자</span>
+                                                <div class="graphAreaWrap">
+                                                    <div class="graphitem">
+                                                        <div class="graphStatus">
+                                                            <div class="baseGraph msBar" onclick="graphTipOpen($(this))"><span class="lineGraph mildgreen" data-value="9"></span></div>
+                                                            <div class=" graphTip">
+                                                                <p class="graphTipBox mildgreen">
+                                                                    <span>기타투자</span>
+                                                                    <span class="value">234,222,000<em>원</em></span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="graphValueData"><span class="blind">또래부자가 차지하는 기타투자 비중</span></div>
+                                                    </div>
+                                                    <div class="graphitem">
+                                                        <div class="graphStatus">
+                                                            <div class="baseGraph msBar" onclick="graphTipOpen($(this))"><span class="lineGraph gray" data-value="10"></span></div>
+                                                            <div class=" graphTip">
+                                                                <p class="graphTipBox gray">
+                                                                    <span>기타투자</span>
+                                                                    <span class="value">234,222,000<em>원</em></span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="graphValueData"><span class="blind">내가 차지하는 기타투자 비중</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                             <!--e:graphType-->
+
+                                             <div class="graphType"> <!--s:graphType-->
+                                                <span class="title">연금</span>
+                                                <div class="graphAreaWrap">
+                                                    <div class="graphitem">
+                                                        <div class="graphStatus">
+                                                            <div class="baseGraph msBar" onclick="graphTipOpen($(this))"><span class="lineGraph red" data-value="4"></span></div>
+                                                            <div class=" graphTip">
+                                                                <p class="graphTipBox red">
+                                                                    <span>연금</span>
+                                                                    <span class="value">234,222,000<em>원</em></span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="graphValueData"><span class="blind">또래부자가 차지하는 연금 비중</span></div>
+                                                    </div>
+                                                    <div class="graphitem">
+                                                        <div class="graphStatus">
+                                                            <div class="baseGraph msBar" onclick="graphTipOpen($(this))"><span class="lineGraph gray" data-value="48"></span></div>
+                                                            <div class=" graphTip">
+                                                                <p class="graphTipBox gray">
+                                                                    <span>연금</span>
+                                                                    <span class="value">234,222,000<em>원</em></span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="graphValueData"><span class="blind">내가 차지하는 연금 비중</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                             <!--e:graphType-->
+
+                                             <div class="graphAddEx mt20" >
+                                                <ul class="ty01">
+                                                    <li class="bl03">또래부자</li>
+                                                    <li class="bl02">나</li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                        <!--e:graphLineWrap-->
+                                       
+                                    </div>
+                                </div>
+
+                                <script>
+                                    $(".graphitem .graphStatus").each(function(i) {
+                                        graphValue = $(this).find(".lineGraph").attr("data-value");
+                                        $(this).find(".lineGraph").animate({width:graphValue + "%"}, 500);
+                                        iconPs = $(this).find(".graphTip");
+                                        iconPs.animate({left:graphValue + "%"}, 500);
+                                        graphData = $(this).siblings('.graphValueData');
+                                        graphData.text(graphValue + ".0 %");
+                                    });
+
+                                    var graphTipOpen = function(obj) {
+                                        var $item = $(this).find('.msBar');
+                                        var $tip =  $item.siblings('.graphTip');
+                                        $tip = obj.closest(".graphStatus").find(".graphTip");
+                                        $(".graphTip").hide();
+                                        $tip.show();
+                                    };
+                                    // 금융자산 총액 그래프
+                                    $(".graphVerWrap.graphPeer .graphType").each(function(i) {
+                                        graphValue = $(this).find(".lineGraph").attr("data-value");
+                                        graphline = $(this).find(".lineGraph.mildgreen").attr("data-value");
+                                        graphBg = $(".graphVerLine").position().top + 20;
+                                        height1 =$('.lineGraph.mildgreen').outerHeight() + 24;
+                                        height2 =$('.graphTip02.mildgreen').outerHeight();
+                                        graphBgH = height1 + height2;
+                                        $(this).find(".lineGraph").height(graphValue);
+                                        $(this).find(".graphTip02").css('bottom' , graphValue + "px");
+                                    });
+                                    var graphVerTipOpen = function(obj) {
+                                        var $item = $(this).find('.msBar');
+                                        var $tip =  $item.siblings('.graphTip02');
+                                        $tip = obj.closest(".graphType").find(".graphTip02");
+                                        $(".graphTip02").hide();
+                                        $(".graphPeer .lineGraph").removeClass("darkgreen"); //[2023-02-03] 추가
+                                        $tip.show();
+                                        obj.find(".lineGraph").addClass("darkgreen"); //[2023-02-03] 추가
+                                    };
+
+                                    //[접근성_2024] 그래프 대체텍스트 적용
+                                    $(".graphAreaWrap").each(function(){
+                                        var _graph_item = $(this).find('.graphitem');
+                                        for(var j=0; j < _graph_item.length; j++){
+                                            var _graph_txt0 = '나';
+                                            var _graph_txt1 = $(_graph_item[j]).find('.graphTip .value').text();
+                                            var _graph_txt2 = $(_graph_item[j]).find('.graphValueData').text();
+                                            if(j == 0) _graph_txt0 = '또래부자';
+                                            $(_graph_item[j]).attr({
+                                                'role' : 'img',
+                                                'aria-label' : _graph_txt0 + ':' + _graph_txt1 + '('+ _graph_txt2 +')'
+                                            });
+                                        };
+                                    });
+
+                                    //[접근성_2024] 그래프 대체텍스트 적용
+                                    $(".graphWrap").each(function(){
+                                        var _graph_txt1 = $(this).find('.graphTipBox').text().replace(/(\s*)/g, "");
+                                        var _graph_txt2 = $(this).find('.graphLegend').text().replace(/(\s*)/g, "");
+                                       $(this).attr('aria-label',_graph_txt1 + ' ' + _graph_txt2)
+                                    });
+                                </script>
+                             <!--//11.21 그래프 수정-->
+
+                                <div class="boxTypeWrap"><!--s:boxTypeWrap-->
+                                    <div class="msaeAseetItem">
+                                        <h2 class="title">부족한 상품군을 준비해 보았어요</h2>
+                                        <ul class="bulList">
+                                            <li>또래부자 고객이 가장 많이 보유한  <strong class="pointColor">펀드 Top 3</strong> </li>
+                                            <li>김농협님의 <strong class="pointColor">적극투자형</strong>에 적합한 상품이에요.</li>
+                                        </ul>
+                                        <ul class="bulList"> <!--12.30  예적금일때 문구-->
+                                            <li>또래부자 고객이 가장 많이 보유한  <strong class="pointColor">펀드 Top 3</strong> </li>
+                                        </ul>
+                                        <ul class="bulList"><!--12.30  퇴직연금일때 문구-->
+                                            <li>또래부자 고객이 가장 많이 보유한  <strong class="pointColor">퇴직연금 Top 3</strong> </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="bannerWarpPrd swCardCompWrap"><!--s:bannerWarpPrd -->
+                                        <div class="swiper-container bannerSwiperPrd widWide">
+                                            <div class="swiper-wrapper widTy">
+                                                <div class="swiper-slide">
+                                                    <div class="msaeBoxline">
+                                                        <h3>한국투자EMP글로벌자산배분증권자투자
+                                                            신탁ClassAe </h3>
+                                                        <div class="txtBox01">
+                                                            <p>수수료선취-온라인<br>
+                                                                국외[글로벌펀드]</p>
+                                                            <em class="tag red">다소높은위험</em>
+                                                        </div>
+                                                        <ul class="txtBox02">
+                                                            <li>
+                                                                <span>3개월</span>
+                                                                <p>2.38%</p>
+                                                            </li>
+                                                            <li>
+                                                                <span>3개월</span>
+                                                                <p>2.38%</p>
+                                                            </li>
+                                                            <li>
+                                                                <span>3개월</span>
+                                                                <p>2.38%</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="msaeBoxline">
+                                                        <h3>한국투자EMP글로벌자산배분증권자투자
+                                                            신탁ClassAe </h3>
+                                                        <div class="txtBox01">
+                                                            <p>수수료선취-온라인<br>
+                                                                국외[글로벌펀드]</p>
+                                                            <em class="tag red">다소높은위험</em>
+                                                        </div>
+                                                        <ul class="txtBox02">
+                                                            <li>
+                                                                <span>3개월</span>
+                                                                <p>2.38%</p>
+                                                            </li>
+                                                            <li>
+                                                                <span>3개월</span>
+                                                                <p>2.38%</p>
+                                                            </li>
+                                                            <li>
+                                                                <span>3개월</span>
+                                                                <p>2.38%</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="msaeBoxline">
+                                                        <h3>한국투자EMP글로벌자산배분증권자투자
+                                                            신탁ClassAe </h3>
+                                                        <div class="txtBox01">
+                                                            <p>수수료선취-온라인<br>
+                                                                국외[글로벌펀드]</p>
+                                                            <em class="tag red">다소높은위험</em>
+                                                        </div>
+                                                        <ul class="txtBox02">
+                                                            <li>
+                                                                <span>3개월</span>
+                                                                <p>2.38%</p>
+                                                            </li>
+                                                            <li>
+                                                                <span>3개월</span>
+                                                                <p>2.38%</p>
+                                                            </li>
+                                                            <li>
+                                                                <span>3개월</span>
+                                                                <p>2.38%</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide"> <!--12.05 케이스 추가-->
+                                                    <div class="msaeBoxline">
+                                                        <h3>NH왈츠회전예금I</h3>
+                                                        <div class="txtBox01">
+                                                            <p>월 단위 회전주기 선택하고 회전주기마다<br>
+                                                                실세금리적용 상품</p>
+                                                            <!-- <em class="tag red">높은위험</em> -->
+                                                        </div>
+                                                        <ul class="txtBox02 ar">
+                                                            <li>
+                                                                <span>최고(연/세전)</span>
+                                                                <p>1.80%</p>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="tagWrap mt0">
+                                                            <span class="tag gray2">#노후준비</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="msaeBoxline">
+                                                        <h3>경남은행 정기예금 6개월</h3>
+                                                        <div class="txtBox01">
+                                                            <p>월 단위 회전주기 선택하고 회전주기마다<br>
+                                                                실세금리적용 상품</p>
+                                                            <!-- <em class="tag red">높은위험</em> -->
+                                                        </div>
+                                                        <ul class="txtBox02 ar">
+                                                            <li>
+                                                                <p>3.80%</p>
+                                                            </li>
+                                                        </ul>
+                                                        <!-- <div class="tagWrap mt20">
+                                                            <span class="tag gray2">#노후준비</span>
+                                                        </div> -->
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="msaeBoxline ty01">
+                                                        <div class="noResultWrap mt50"><p>고객님에게 딱 맞는 추천 상품이 없어요.</p></div>
+                                                    </div> 
+                                                </div>
+                                                <!--//12.05 케이스 추가-->
+                                            </div>
+                                            <div class="swiper-control">
+                                                <div class="swiper-pagination"></div>
+                                                <div class="swiper-autoBtn playing">
+                                                    <a href="javascript:;" class="stopBtn" title="자동재생중 두번 터치시 멈춤"></a>
+                                                    <a href="javascript:;" class="playBtn" title="자동재생 멈춤 두번 터치시 자동재생시작"></a>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-button-prev blind"></div>
+                                            <div class="swiper-button-next blind"></div>
+                                        </div>
+                                        <script>
+                                            $(function () {
+                                                var swiper = new Swiper('.bannerSwiperPrd', {
+                                                    slidesPerView: "auto",
+                                                    spaceBetween: 10,
+                                                    loop: true,
+                                                    centerSlides:true,
+                                                    observer:true,
+                                                    observeParents : true,
+                                                    autoplay: {
+                                                        delay: 2500,
+                                                        disableOnInteraction: true, //터치 후 멈춤 설정
+                                                        pauseOnMouseEnter: true,
+                                                    },
+                                                    pagination: {
+                                                        el: '.swiper-pagination',
+                                                        type: 'bullets',
+                                                        clickable: true,
+                                                    },
+                                                    on: {
+                                                        transitionEnd: function () {
+                                                            $('.swiper-slide').attr('aria-hidden', 'true')
+                                                            $('.swiper-slide-active').attr('aria-hidden', 'false')
+                                                        }
+                                                    }
+                                                });
+                                                $('.bannerSwiperPrd').find('.stopBtn').on('click', function () {
+                                                    $('.swiper-autoBtn').removeClass('playing');
+                                                    swiper.autoplay.stop();
+                                                    $('.bannerSwiperPrd').find('.playBtn').focus(); //[접근성_2024] 포커스 추가
+                                                })
+                                                $('.bannerSwiperPrd').find('.playBtn').on('click', function () {
+                                                    $('.swiper-autoBtn').addClass('playing');
+                                                    swiper.autoplay.start();
+                                                    $('.bannerSwiperPrd').find('.stopBtn').focus(); //[접근성_2024] 포커스 추가
+                                                })
+                                            })
+                                        </script>
+                                    </div>
+                                    <!--e:bannerWarpPrd -->
+
+                              <!-- <div class="msaeBoxEx f11">-12.28 텍스트 추가
+                                    <ul>
+                                        <li>이 예금은 예금자 보호법에 따라 예금보험공사가 보호하되, 보호 한도는 본 은행에 있는 귀하의 모든 예금 보호 대상 금융상품의 원금과 소정의 이자를 합하여 1인당 "최고 5천만원"이며, 5천만원을 초과하는 나머지 금액은 보호하지 않습니다.</li>
+                                        <li>퇴직연금은 예금보호 대상 금융상품으로 운용되는 적립금에 한하여 예금자보호법에 따라 예금보험공사가 보호하되, 보호 한도는 귀하의 다른 예금보호 대상 금융상품과는 별도로 1인당 "최고 5천만원"이며 5천만원을 초과하는 나머지 금액은 보호하지 않습니다. (단, 2개 이상 퇴직연금에 가입한 경우 합하여 5천만원까지 보호합니다.</li>
+                                        <li>집합투자증권(퇴직연금 실적배당형 상품 포함)은 예금자보호법에 따라 예금보험공사가 보호하지 않습니다. 또한 자산가치 변동 등에 따라 투자원금의 전부 또는 일부 손실이 발생할 수 있으며, 그 손실은 투자자에게 귀속됩니다.</li>
+                                        <li>펀드 가입을 결정하시기 전에 투자대상, 보수 또는 수수료 및 환매방법 등에 관하여 (간이)투자설명서, 집합투자규약, 수익증권저축약관을 반드시 읽어보시고 확인하시기 바랍니다.</li>
+                                        <li>해외증권에 투자하는 펀드는 환율 변동에 따라 외화자산의 투자가치가 변동되거나 투자대상 국가의 시장, 정치 및 경제상황에 따른 위험으로 자산가치 손실이 발생할 수 있습니다.</li>
+                                        <li>금융소비자보호법 제19조 제1항에 따른 설명을 받을 권리가 있습니다.</li>
+                                        <li>기타 자세한 내용은 해당 상품 약관 및 상품설명서를 참고하시거나 가까운 농협은행 영업점 또는 고객센터(1522-3000, 1661-3000)로 문의바랍니다.</li>
+                                    </ul>
+                                </div>-->
+
+                                <div class="msaeBoxEx f11"><!--12.30 문구변경-->
+                                    <ul>
+                                        <li>집합투자증권은 예금자보호법에 따라 예금보험공사가 보호하지 않습니다.</li>
+                                        <li>투자자는 집합투자증권에 대하여 당행으로부터 충분한 설명을 받을 권리가 있으며, 투자전 (간이)투자설명서 및 집합투자규약을 반드시 읽어보시기 바랍니다.</li>
+                                        <li>해외증권에 투자하는 펀드는 환율 변동에 따라 외화자산의 투자가치가 변동되거나 투자대상 국가의 시장, 정치 및 경제상황에 따른 위험으로 자산가치 손실이 발생할 수 있습니다.</li>
+                                        
+                                        <li>증권거래 비용, 기타 비용이 추가로 발생할 수 있습니다.</li><!-- 23.01.25 class폰트 컬러 txtRed삭제 -->
+                                        <li>과거의 운용실적이 미래의 수익률을 보장하는 것은 아닙니다.</li><!-- 23.01.25 class폰트 컬러 txtRed삭제 -->
+                                        <li>과세기준 및 과세방법은 향후 세법개정 등에 따라 변동될 수 있습니다.</li>
+                                        <li>해외증권에 투자하는 펀드는 환율 변동에 따라 외화자산의 투자 가치가 변동되거나 투자대상 국가의 시장, 정치 및 경제상황에 따른 위험으로 자산가치 손실이 발생할 수 있습니다.</li>
+                                        <li>레버리지형 펀드는 투자원금 손실이 크게 확대 될 수 있습니다.</li>
+                                        <li>금융소비자는 금융소비자보호법 제19조 제1항에 따라 해당상품에 대해 설명을 받을 권리가 있습니다.</li>
+                                        <li>기타 자세한 내용은 상품설명서를 참조하시거나 가까운 농협은행 영업점 또는 고객센터(1522-3000, 1661-3000)로 문의바랍니다.</li>
+                                        <li>준법감시인심의필 2023-1190(2023.01.20~2024.01.20)</li><!-- 23.01.25 문구추가 -->
+                                    </ul>
+                                </div>
+                                <div class="msaeBoxEx f11"><!--12.30 예적금 배너 노출시는 예적금 안내문구-->
+                                    <ul>
+                                        <li>이 예금은 예금자보호법에 따라 예금보험공사가 보호하되, 보호 한도는 본 은행에 있는 귀하의 모든 예금 보호 대상 금융상품의 원금과 소정의 이자를 합하여 1인당 "최고 5천만원"이며, 5천만원을 초과하는 나머지 금액은 보호하지 않습니다.</li>
+                                        <li>금융상품을 가입하기전 상품설명서 및 약관을 읽어보시기 바랍니다.</li>
+                                        <li>금융소비자는 금융소비자보호법 제19조 제1항에 따라 해당상품에 대해 설명을 받을 권리가 있습니다.</li>
+                                        <li>기타 자세한 내용은 상품설명서를 참조하시거나 가까운 농협은행 영업점 또는 고객센터(1522-3000, 1661-3000)로 문의바랍니다.</li>
+                                        <li>준법감시인심의필 2023-1190(2023.01.20~2024.01.20)</li>
+                                    </ul>
+                                </div>
+                                <div class="msaeBoxEx f11"><!--12.30 퇴직연금 배너 노출시는 관련 안내문구 -->
+                                    <ul>
+                                        <li>이 퇴직연금은 예금보호 대상 금융상품으로 운용되는 적립금에 한하 여 예금자보호법에 따라 예금보험공사가 보호하되, 보호 한도는 귀하 의 다른 예금보호 대상 금융상품과는 별도로 1인당 "최고 5천만원" 이며 5천만원을 초과하는 나머지 금액은 보호하지 않습니다.(단, 2개 이상 퇴직연금에 가입한 경우 합하여 5천만원까지 보호합니다.</li>
+                                        <li>실적배당형상품(펀드)은 예금자보호법에 따라 예금보험공사가 보호 하지 않으며, 운용결과에 따라 투자원금의 손실이 발생할 수 있고, 그 손실은 투자자에게 귀속됩니다.</li>
+                                        
+                                        <li>증권거래 비용, 기타 비용이 추가로 발생할 수 있습니다.</li><!-- 23.01.25 class폰트 컬러 txtRed삭제 -->
+                                        <li>과거의 운용실적이 미래의 수익률을 보장하는 것은 아닙니다.</li><!-- 23.01.25  class폰트 컬러 txtRed삭제 -->
+                                        <li>실적배당형상품(펀드)에 가입하시기 전에 투자대상, 보수 또는 수수료 및 환매방법 등에 관하여 (간이)투자설명서, 집합투자규약, 수익증권 저축약관을 반드시 읽어보시고 확인하시기 바랍니다.</li>
+                                        <li>해외 투자상품의 투자는 환율 변동에 따라 외화자산의 투자가치가 변동되거나 투자대상 국가의 시장, 정치 및 경제상황에 따른 위험으로 자산가치 손실이 발생할 수 있습니다.</li>
+                                        <li>계약기간 만료 전 중도해지하거나 계약기간 종료 후 연금 이외의 형태로 수령하는 경우 세액공제 받은 납입원금 및 수익에 대해 기타소득세 (16.5%) 세율이 부과될 수 있습니다.</li>
+                                        <li>금융소비자는 금융소비자보호법 제19조 제1항에 따라 해당상품에 대해 설명을 받을 권리가 있습니다.</li>
+                                        <li>기타 자세한 내용은 해당 상품 약관 및 상품설명서를 참고하시거나 가까운 농협은행 영업점 또는 퇴직연금 전용콜센터(1588-5995)로 문의바랍니다.</li>
+                                        <li>준법감시인심의필 2023-1190(2023.01.20~2024.01.20)</li><!-- 23.01.25 문구추가 -->
+                                    </ul>
+                                </div>
+  
+                                </div>
+                                    <!--e:boxTypeWrap-->            
+                                <div class="msaeBoxEx">
+                                    <h2>또래부자는?</h2>
+                                    <ul>
+                                        <li>내가 선택한 비교그룹(나이/소득/지역) 중에서 금융자산 상위 20% 고객을 말해요! </li><!--12.07 %수정--> <!-- [2023-01-04] 문구수정 -->
+                                    </ul>
+                                </div>
+
+                                <div class="boxTypeWrap"><!--s:boxTypeWrap--><!--투자성향이 없는 경우-->
+                                    <div class="img_mase_nodata">
+                                        <h2>부족한 상품군을 준비해 보았어요.</h2>
+                                        <p>고객님의 투자성향분석이 없습니다. <br>
+                                            지금 투자성향분석을 하시면 적합한 상품을 안내해드려요.
+                                            </p>
+                                            <a href="javascript:;" class="linkTxt">분석하러 가기</a>
+                                    </div>
+
+                                </div>
+                            </div>
+         
+                    </div>
+                </div>
+                
+              
+            </div>
+            <div class="popBtnWrap"> <!--12.05 버튼 위치 변경-->
+                <a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+            </div>	
+		</div>
+		<!-- 팝업끝 -->
+	</div>
+
+
+
+
+</body>
+</html>

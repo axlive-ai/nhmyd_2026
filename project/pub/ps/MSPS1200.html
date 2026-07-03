@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>간편인증 정보 입력</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>간편인증 정보 입력</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<div class="formWrap selectAll boxTypeWrap"><!-- 2022-10-06 클래스(selectAll) 추가 -->
+			<ul>
+				<li>
+					<strong class="formTit">본인인증수단</strong>
+					<ul class="selectCerti">
+						<li>
+							<input type="radio" id="selCerti01" name="selCerti00">
+							<label for="selCerti01">
+								<div class="logoArea"><img src="../../images/logo_certi_naver_big.png" alt="네이버"></div>
+								<div class="title">네이버</div>
+							</label>
+						</li>
+						<li>
+							<input type="radio" id="selCerti02" name="selCerti00">
+							<label for="selCerti02">
+								<div class="logoArea"><img src="../../images/logo_certi_kakao_big.png" alt="카카오톡"></div>
+								<div class="title">카카오톡</div>
+							</label>
+						</li>
+						<li>
+							<input type="radio" id="selCerti03" name="selCerti00">
+							<label for="selCerti03">
+								<div class="logoArea"><img src="../../images/logo_certi_payco_big.png" alt="NHN페이코"></div>
+								<div class="title">페이코</div>
+							</label>
+						</li>
+						<li>
+							<input type="radio" id="selCerti04" name="selCerti00">
+							<label for="selCerti04">
+								<div class="logoArea"><img src="../../images/logo_certi_pass_big.png" alt="통신사 Pass"></div>
+								<div class="title">통신사 PASS</div>
+							</label>
+						</li>
+						<li>
+							<input type="radio" id="selCerti05" name="selCerti00">
+							<label for="selCerti05">
+								<div class="logoArea"><img src="../../images/logo_certi_samsung_big.png" alt="삼성 Pass"></div>
+								<div class="title">삼성 PASS</div>
+							</label>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<strong class="formTit mt40">이름</strong><!-- 2022-10-06 클래스(mt20 > mt40) 변경 -->
+					<div class="inputList">
+						<input type="text" title="이름(실명)을 입력" value="김농협" placeholder="이름(실명)을 입력하세요">
+						<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+					</div>
+				</li>
+				<li>
+					<strong class="formTit">생년월일(8자리)</strong>
+					<div class="inputList error">
+						<!-- 2022-09-29 클래스 (al) 추가 -->
+						<input type="tel" class="al" title="생년월일(8자리) 입력" value="" placeholder="19800101"><!-- 2022-09-28 input type 및 title 변경 -->
+						<a href="javascript:" class="btnReset" role="button" >입력내용삭제</a>
+					</div>
+					<p class="errorTxt">생년월일을 다시 입력하세요.</p>
+				</li>
+				<li>
+					<strong class="formTit">휴대전화번호</strong>
+					<div class="inputList">
+						<a href="javascript:;" title="통신사 선택" aria-haspopup="true">
+							<span class="selectValue">통신사 선택</span>
+							<span class="selectBtn"></span>
+						</a>
+						<select name="" title="선택해주세요">
+							<option value=""></option>
+						</select>
+					</div>
+					<div class="inputList">
+						<!-- 2022-09-29 클래스 (al) 추가 -->
+						<input type="tel" class="al" title="휴대전화 번호 입력" value="" placeholder="‘-’없이 숫자만 입력하세요.">
+						<a href="javascript:" class="btnReset" role="button" >입력내용삭제</a>
+					</div>
+					<p class="errorTxt">휴대전화번호를 다시 입력하세요.</p>
+				</li>
+				<!-- 2022-10-06 수정 -->
+				<li>
+					<strong class="formTit">서비스 이용에 대한 동의</strong>
+					<!-- <div class="formHolder check">
+						<input type="checkbox" id="type_all01" class="chekTypeOther">
+						<label class="check" for="type_all01">[필수] 제3자 정보제공 동의(정부24)</label>
+						<a href="javascript:;" class="btnView"><span class="blind">[필수] 제3자 정보제공 동의(정부24) 약관보기</span></a>
+					</div> -->
+					<div class="mb15"><!-- 2022-10-07 클래스(pb10) 추가 -->
+						<div class="total">
+							<div class="formHolder check">
+								<input type="checkbox" id="type_all01" class="chekTypeOther">
+								<label class="check" for="type_all01"> 전체동의</label>
+							</div>
+						</div>
+						<div class="cont">
+							<div class="formHolder check">
+								<input type="checkbox" id="type01" checked="">
+								<label class="check" for="type01"><em>[필수]</em> NH마이데이터 서비스 이용 약관</label>
+								<a href="javascript:;" class="btnView"><span class="blind">[필수] NH마이데이터 서비스 이용 약관 약관보기</span></a>
+							</div>
+							<div class="formHolder check">
+								<input type="checkbox" id="type02">
+								<label class="check" for="type02"><em>[필수]</em> 개인(신용)정보 수집·이용 동의서(NH마이데이터 서비스)</label>
+								<a href="javascript:;" class="btnView"><span class="blind">[필수] 개인(신용)정보 수집·이용 동의서(NH마이데이터 서비스)약관보기</span></a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<!-- 2022-10-06 수정 -->
+			</ul>
+		</div>
+
+	
+		<div class="areaBtnDefault">
+			<a href="javascript:;" class="btnPressPoint" role="button">확인</a>
+		</div>
+	</div>
+</div>
+
+
+
+</body>
+</html>

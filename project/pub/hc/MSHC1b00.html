@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>비교상품상세</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">폐결핵/흉부질환</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+			<div class="boxTypeWrap healthBox"> <!-- [2023-02-23] healthBox 클래스 추가 -->
+				<h2 class="defSubTit2"><strong class="bold">만성폐쇄성 폐질환이란?</strong></h2>
+				<p class="subTxt">흡입된 공기와 혈액 사이 교유에 이상이 생겨서 호흡 자체에 에너지가 많이 소모됨. 따라서 운동할 때에 숨쉬기가 힘들어서 운동을 기피하게 되고, 그에 따라 근육이 감소하여 더욱 운동을 하기가 힘들어지는 악순환 발생</p>
+				<hr class="divLine3">
+				<h2 class="defSubTit2 containTooltip"><strong class="bold">내 검진결과 비교</strong>
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">그래프 구간안내 설명 툴팁</span></button>
+						<div class="tooltipCont">
+							<p>최근 검사일 기준 직전년도 결과 비교 제공</p>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+				</h2>
+                <h3 class="defSubTit3 mt20">폐결핵/흉부질환</h3>
+                <ul class="detailList mt20">
+                    <li>
+                        <strong class="tit">2021</strong>
+                        <strong class="value pointColor">정상</strong>
+                    </li>
+                    <li>
+                        <strong class="tit">2016</strong>
+                        <strong class="value pointColor09">비활동성</strong>
+                    </li>
+                    <li>
+                        <strong class="tit">2013</strong>
+                        <strong class="value pointColor">정상</strong>
+                    </li>
+                </ul>
+			</div>
+
+			<div class="healthBox"> <!-- [2023-02-23] healthBox 클래스 추가 -->
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn" aria-expanded="false" role="button">
+							<strong class="tit">식사요법</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="listDot">
+							<li>충분한 수분 섭취</li>
+							<li>단백질이 풍부한 식사(우유, 유제품)</li>
+							<li>신선한 채소, 과일 충분히 섭취</li>
+							<li>카페인이 든 음료나 탄산음료 제한</li>
+							<li>미네랄과 비타민을 골고루 섭취</li>
+							<li>금연은 예방과 진행을 감소시키는 효과적인 방법</li>
+						</ul>
+					</div>
+				</div>
+	
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn" aria-expanded="false" role="button">
+							<strong class="tit">운동요법</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="listDot">
+							<li>유산소 운동, 팔, 다리 근육 강화운동으로 지구력과 호흡곤란 증상 개선</li>
+							<li>적정체중 유지</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- <div class="areaBtnDefault">
+				<a href="javascript:;" class="btnPressPoint" role="button">확인</a>
+			</div> -->
+		</div>
+		<!-- //container -->
+	</div>
+	<script type="text/javascript">
+		$('.scAreaWrap a.active').each(function(){
+			var $this = $(this);
+			var $thisPos = $this.offset().left;
+			var $wrap = $this.closest('.scAreaWrap').scrollLeft();
+			$this.closest('.scAreaWrap').stop().animate({scrollLeft:$wrap + $thisPos - 16 },300);
+		});
+		$('.scAreaWrap a').on('click focus',function(e){
+			var $this = $(this);
+			var $thisPos = $this.offset().left;
+			var $wrap = $this.closest('.scAreaWrap').scrollLeft();
+			$this.closest('.scAreaWrap').stop().animate({scrollLeft:$wrap + $thisPos - 16 },300);	
+		});
+
+		$('.maybeWishList > li > a').click(function(){
+			$(this).closest('.maybeWishList').find('a').removeClass('active');
+			$(this).addClass('active');
+		});
+	</script>
+</body>
+</html>

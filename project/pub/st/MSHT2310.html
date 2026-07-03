@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>이벤트</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">당첨자 발표</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<!-- [2022-12-12] 탭으로 변경 -->
+			<div class="boxTypeWrap pt0">
+				<div class="tabWrap type01">
+					<ul role="tablist">
+						<li role="presentation"><a href="javascript:;" role="tab" class="" title="" aria-selected="false">이벤트 목록</a></li>
+						<li role="presentation"><a href="javascript:;" role="tab" class="" title="" aria-selected="false">응모한 이벤트</a></li>
+						<li role="presentation"><a href="javascript:;" role="tab" class="on" title="선택됨" aria-selected="true">당첨자 발표</a></li>
+					</ul>
+				</div>
+				<div class="tabContWrap type01">
+					<!-- 이벤트 목록 탭 -->
+					<div class="tabCont01" aria-label="이벤트 목록 탭" style="display:none">
+						<div class="btnSortWrap">
+							<button type="button" class="btn selected">전체</button>
+							<button type="button" class="btn">진행중</button>
+							<button type="button" class="btn">종료</button>
+						</div>
+						<ul class="eventListWrap">
+							<li>
+								<div class="eventSummary">
+									<a href="javascript:;" role="button">
+										<div class="eventImgArea"><img src="../../images/temp/temp_event01.png" alt="대체텍스트가 들어갑니다."></div>
+										<div class="summary">
+											<div class="titleArea"><span class="tag mint">진행중</span><strong class="title">놀면 뭐해? 경품받자! 이벤트</strong></div>
+											<div class="date">2021.4.16 - 2021.5.15</div>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="eventSummary">
+									<a href="javascript:;" role="button">
+										<div class="eventImgArea"><img src="../../images/temp/temp_event02.png" alt="AJ셀카 내차팔기 상품권 지급 이벤트 잘가 MY Car~안녕 상품권!"></div>
+										<div class="summary">
+											<div class="titleArea"><span class="tag mint">진행중</span><strong class="title">AJ셀카 내차팔기 상품권 이벤트</strong></div>
+											<div class="date">2021.4.16 - 2021.5.15</div>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="eventSummary">
+									<a href="javascript:;" role="button">
+										<div class="eventImgArea"><img src="../../images/temp/temp_event03.png" alt="대체텍스트가 들어갑니다."></div>
+										<div class="summary">
+											<div class="titleArea"><span class="tag red">결과발표</span><strong class="title">슬기로운 소비생활</strong></div>
+											<div class="date">2021.4.16 - 2021.5.15</div>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="eventSummary">
+									<a href="javascript:;" role="button">
+										<div class="eventImgArea"><img src="../../images/temp/temp_event04.png" alt="대체텍스트가 들어갑니다."></div>
+										<div class="summary">
+											<div class="titleArea"><span class="tag gray">종료</span><strong class="title">Check! Cool! Coffee! 이벤트</strong></div>
+											<div class="date">2021.4.16 - 2021.5.15</div>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="eventSummary">
+									<a href="javascript:;" role="button">
+										<div class="eventImgArea"><img src="../../images/temp/temp_event05.png" alt="대체텍스트가 들어갑니다."></div>
+										<div class="summary">
+											<div class="titleArea"><span class="tag gray">종료</span><strong class="title">사회적 커피두기 이벤트</strong></div>
+											<div class="date">2021.4.16 - 2021.5.15</div>
+										</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+						<div class="listMoreBtn mt25">
+							<a href="javascript:;" title="항목 더보기">더보기</a>
+						</div>
+					</div>
+					<!-- //이벤트 목록 탭 -->
+
+					<!-- 응모한 이벤트 탭 -->
+					<div class="tabCont02" aria-label="응모한 이벤트 탭" style="display:none">
+						<div class="grayBox mt20 mb0">
+							<p class="subTxt2"> 6개월 이내 응모한 경우에만 조회가 가능합니다.</p>
+						</div>
+						<ul class="eventListWrap">
+							<li>
+								<div class="eventSummary">
+									<a href="javascript:;" role="button">
+										<div class="summary">
+											<div class="titleArea"><span class="tag mint">진행중</span><strong class="title">오픈 기념 이벤트</strong></div>
+											<div class="date">2021.4.16 - 2021.5.15</div>
+										</div>
+									</a>
+								</div>
+								<hr class="divLine3" aria-hidden="true">
+							</li>
+							<li>
+								<div class="eventSummary">
+									<a href="javascript:;" role="button">
+										<div class="summary">
+											<div class="titleArea"><span class="tag blue">추첨중</span><strong class="title">가나다 기념 이벤트</strong></div>
+											<div class="date">2021.4.16 - 2021.5.15</div>
+										</div>
+									</a>
+								</div>
+								<hr class="divLine3" aria-hidden="true">
+							</li>
+							<li>
+								<div class="eventSummary">
+									<a href="javascript:;" role="button">
+										<div class="summary">
+											<div class="titleArea"><span class="tag red">결과발표</span><strong class="title">마바사 기념 이벤트</strong></div>
+											<div class="date">2021.4.16 - 2021.5.15</div>
+										</div>
+									</a>
+								</div>
+								<hr class="divLine3" aria-hidden="true">
+							</li>
+							<li>
+								<div class="eventSummary">
+									<a href="javascript:;" role="button">
+										<div class="summary">
+											<div class="titleArea"><span class="tag gray">종료</span><strong class="title">아자차 기념 이벤트</strong></div>
+											<div class="date">2021.4.16 - 2021.5.15</div>
+										</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+						<!-- 응모한 이벤트 없을 경우 -->
+						<div class="noResultWrap mb30">
+							<p>응모한 이벤트가 없습니다.</p>
+						</div>
+						<!-- //응모한 이벤트 없을 경우 -->
+					</div>
+					<!-- //응모한 이벤트 탭 -->
+
+					<!-- 당첨자 발표 탭 -->
+					<div class="tabCont03" aria-label="당첨자 발표 탭">
+						<div class="eventViewTitle pt20">
+							<span class="title">마바사 기념 이벤트</span>
+							<div class="date">2021.08.04 ~ 2021.12.04</div>
+						</div>
+						<div class="txtb1 mt25">
+							<strong>당첨자 조회</strong>
+						</div>
+						<div class="areaBodyBtnFull mt20">
+							<a href="javascript:;" class="btnBodyLine green" role="button">당첨 확인하기</a>
+						</div>
+						<div class="info_area">
+							<strong class="info_area_title">알아두세요</strong>
+							<ul class="listBul disc">
+								<li>당첨자에 대한 제세공과금(22%)는 농협이 부담합니다. 단 제세공과금 신고를 위해 주민등록번호와 정보제공동의서를 추가로 요구할 수 있으며 거부 시 당첨이 취소됩니다.</li>
+								<li>모바일상품권은 응모 시 입력한 휴대전화번호로 발송되며 배송이 필요한 경품은 당첨자 안내 시 주소 확인절차가 있습니다.</li>
+								<li>기타 자세한 사항은 고객행복센터 또는 영업점으로 문의하시기 바랍니다.</li>
+								<li>고객님의 정보가 정확하지 않을 경우 당첨이 취소될 수 있습니다.</li>
+							</ul>
+						</div>
+					</div>
+					<!-- //당첨자 발표 탭 -->
+				</div>
+			</div>
+			<!-- //[2022-12-12] 탭으로 변경 -->
+		</div>
+		<!-- //container -->
+
+	</div>
+</body>
+</html>

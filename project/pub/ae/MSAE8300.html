@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>컨설팅 > 세금계산기</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		//tostpop();//토스트 팝업 호출 
+	})
+
+	function tostpop(){
+		var $tostCont = '<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg">업데이트를 완료했습니다.</div></div>'
+		$('.container').after($tostCont);
+		setTimeout(function(){
+			$('.tostpopupWrap').remove();
+		},4000)
+	}
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>세금계산기</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+        <h2 class="defTit icoCalTax">
+            재산세와 종합부동산세 확인을<br>
+            위해 <strong>정보를 입력해주세요</strong>
+        </h2>
+        <div class="formWrap pt0">
+            <!-- <div class="ar"><a href="javascript:;" class="contBtn02">불러오기</a></div> -->
+            <div class="resetArea">
+                <h3 class="">재산세/종합부동산세 입력</h3>
+                <div class="cs btnSetReset">
+                    <button type="button">입력 초기화</button>
+                </div>
+            </div>
+            <div class="boxTypeWrap">
+                <div class="titListBox">
+                    <ul>
+                        <li>
+                            <div class="tagWrap mb10">
+                                <span class="tag red">주택1</span>
+                            </div>
+							<div class="formTitN">
+								<strong>보유주택 수</strong>
+							</div>
+							<div class="inputList">
+                                <a href="javascript:;" title="보유주택 구분 선택" onclick="slidePopOption();return false;">
+                                    <span class="selectValue">선택</span>
+                                    <span class="selectBtn"></span>
+                                </a>
+                                <select name="" title="선택해주세요">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+							<div class="areaBodyBtnFull mt20">
+								<a href="javascript:;" class="btnBodyLine" role="button">주소검색</a>
+							</div>
+						</li>
+                        <li>
+                            <div class="grayBox">
+                                <div class="partWrap">
+                                    <div class="name">
+                                        <p class="tit">인덕원 푸르지오엘센트로</p>
+                                        <a href="javascript:;" class="contBtn01">삭제</a>
+                                    </div>
+                                    <div class="address">
+                                        <p>서울특별시 강남구 논현동 241-7</p>
+                                        <p>인덕원 푸르지오 엘센트로 101동 1201호</p>
+                                    </div>
+                                    <div class="etc"><span>아파트</span><span>143.68㎡</span></div>
+                                </div>
+                            </div>
+                        </li>
+						<li>
+                            <div class="formTitN"><strong>보유자 나이</strong></div>
+                            <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                <input type="tel" title="보유자 나이" name="" id="" value="41" placeholder="숫자만 입력">
+                                <span class="unit">세</span>
+                                <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="formTitN"><strong>2021 공시가격</strong></div>
+                            <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                <input type="tel" title="2021 공시가격" name="" id="" value="" placeholder="숫자만 입력">
+                                <span class="unit">원</span>
+                                <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="formTitN"><strong>2022 공시가격</strong></div>
+                            <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                <input type="tel" title="2022 공시가격" name="" id="" value="" placeholder="숫자만 입력">
+                                <span class="unit">원</span>
+                                <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                            </div>
+                            <div class="moreArea al"><a href="javascript:;" class="moreLink">2022년도 공시가격 확인하기</a></div>
+                        </li>
+						<li>
+                            <div class="formTitN"><strong>2022년 공시가격 상승률</strong></div>
+                            <div class="inputList disabled"> <!-- 에러인 경우 .error 추가-->
+                                <input type="tel" title="2022년 공시가격 상승률" name="" id="" value="41" placeholder="숫자만 입력" disabled>
+                                <span class="unit">%</span>
+                                <!-- <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a> -->
+                            </div>
+                        </li>
+						<!-- <li>
+                            <div class="formTitN"><strong>2023년 공시가격 예상 상승률</strong></div>
+                            <div class="inputList"> 에러인 경우 .error 추가
+                                <input type="tel" title="2023년 공시가격 예상 상승률" name="" id="" value="10" placeholder="숫자만 입력">
+                                <span class="unit">%</span>
+                                <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                            </div>
+                        </li> --> <!-- [2023-03-06] 영역 히든 -->
+						<li>
+                            <div class="tagWrap mb10">
+                                <span class="tag gray">직접입력</span>
+                            </div>
+							<div class="formTitN">
+								<strong>보유기간</strong>
+							</div>
+							<div class="inputList"> <!-- 에러인 경우 .error 추가-->
+                                <input type="tel" title="보유기간" name="" id="" value="" placeholder="숫자만 입력">
+                                <span class="unit">년</span>
+                                <a href="javascript:" class="btnReset" role="button" style="display: inline;"></a>
+							</div>
+						</li>
+						<li>
+                            <div class="formTitN"><strong>본인 소유지분</strong></div>
+                            <div class="boxRadio">
+                                <div class="boxRadioInn">
+                                    <span>
+                                        <input name="rdo01" id="rdo011" type="radio">
+                                        <label for="rdo011">100%</label>
+                                    </span>
+                                </div>
+                                <div class="boxRadioInn">
+                                    <span>
+                                        <input name="rdo01" id="rdo012" type="radio">
+                                        <label for="rdo012">50%</label>
+                                    </span>
+                                </div>
+                                <div class="boxRadioInn">
+                                    <span>
+                                        <input name="rdo01" id="rdo013" type="radio">
+                                        <label for="rdo013">직접입력</label>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="formTitN"><strong>1세대 1주택여부</strong></div>
+                            <div class="boxRadio">
+                                <div class="boxRadioInn">
+                                    <span>
+                                        <input name="rdo02" id="rdo021" type="radio" checked>
+                                        <label for="rdo021">네</label>
+                                    </span>
+                                </div>
+                                <div class="boxRadioInn">
+                                    <span>
+                                        <input name="rdo02" id="rdo022" type="radio">
+                                        <label for="rdo022">아니오</label>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="formTitN"><strong>조정대상지역</strong></div>
+                            <div class="inputList">
+                                <a href="javascript:;" title="조정대상지역 선택" onclick="slidePopOption();return false;">
+                                    <span class="selectValue">선택</span>
+                                    <span class="selectBtn"></span>
+                                </a>
+                                <select name="" title="선택해주세요">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </li>
+						<li>
+                            <div class="formTitN">
+                                <div>
+                                    <strong>종합부동산세합산배제대상</strong>
+                                    <div class="tooltipWrap w92"> <!-- [2022-11-10] 툴팁위치 수정 -->
+                                        <button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">종합부동산세합산배제대상 툴팁 열기</span></button>
+                                        <div class="tooltipCont lf36"> <!-- [2022-11-10] 툴팁위치 수정 -->
+                                            <p>매입 임대주택으로 등록한 주택으로서 임대를 개시할 당시의 공시가격이 6억원(수도권 외 지역은 3억 원) 이하인 경우 “예＂를 선택합니다.</p>
+                                            <button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="txtb3 pointColor06">(“네”는 비과세의미)</span>
+                            <div class="boxRadio">
+                                <div class="boxRadioInn">
+                                    <span>
+                                        <input name="rdo03" id="rdo031" type="radio">
+                                        <label for="rdo031">네</label>
+                                    </span>
+                                </div>
+                                <div class="boxRadioInn">
+                                    <span>
+                                        <input name="rdo41" id="rdo032" type="radio" checked="checked">
+                                        <label for="rdo032">아니오</label>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="formTitN"><strong>보유주택 유형</strong></div>
+                            <div class="inputList">
+                                <a href="javascript:;" title="보유주택 유형 선택" onclick="slidePopOption();return false;">
+                                    <span class="selectValue">선택</span>
+                                    <span class="selectBtn"></span>
+                                </a>
+                                <select name="" title="선택해주세요">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="formTitN"><strong>주택 면적</strong></div>
+                            <div class="inputList">
+                                <a href="javascript:;" title="주택 면적 선택" onclick="slidePopOption();return false;">
+                                    <span class="selectValue">선택</span>
+                                    <span class="selectBtn"></span>
+                                </a>
+                                <select name="" title="선택해주세요">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </li>
+                        <li>
+                            <!-- <div class="listPlusBtn">
+                                <a href="javascript:;" class="" title="부동산 정보입력 추가">부동산 정보입력 추가</a>
+                            </div> -->
+                            <div class="areaBodyBtnFull mt20">
+                                <a href="javascript:;" class="btnBodyLine" role="button">부동산 정보입력 추가</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <hr class="divLine3" aria-hidden="true">
+                            <div class="formTitN">
+                                <div class="tagWrap">
+                                    <span class="tag red">주택2</span>
+                                </div>
+                                <a href="javascript:;" class="contBtn01">삭제</a>
+                            </div>
+							<div class="areaBodyBtnFull mt20">
+								<a href="javascript:;" class="btnBodyLine" role="button">주소검색</a>
+							</div>
+						</li>
+                        <li>
+                            <div class="grayBox">
+                                <div class="partWrap">
+                                    <div class="name">
+                                        <p class="tit">인덕원 푸르지오엘센트로</p>
+                                        <a href="javascript:;" class="contBtn01">삭제</a>
+                                    </div>
+                                    <div class="address">
+                                        <p>서울특별시 강남구 논현동 241-7</p>
+                                        <p>인덕원 푸르지오 엘센트로 101동 1201호</p>
+                                    </div>
+                                    <div class="etc"><span>아파트</span><span>143.68㎡</span></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="formTitN"><strong>2021 공시가격</strong></div>
+                            <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                <input type="tel" title="2021 공시가격" name="" id="" value="" placeholder="숫자만 입력">
+                                <span class="unit">원</span>
+                                <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="formTitN"><strong>2022 공시가격</strong></div>
+                            <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                <input type="tel" title="2022 공시가격" name="" id="" value="" placeholder="숫자만 입력">
+                                <span class="unit">원</span>
+                                <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                            </div>
+                            <div class="moreArea al"><a href="javascript:;" class="moreLink">2022년도 공시가격 확인하기</a></div>
+                        </li>
+						<li>
+                            <div class="formTitN"><strong>2022년 공시가격 상승률</strong></div>
+                            <div class="inputList disabled"> <!-- 에러인 경우 .error 추가-->
+                                <input type="tel" title="2022년 공시가격 상승률" name="" id="" value="41" placeholder="숫자만 입력" disabled>
+                                <span class="unit">%</span>
+                                <!-- <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a> -->
+                            </div>
+                        </li>
+						<li>
+                            <div class="formTitN"><strong>2023년 공시가격 예상 상승률</strong></div>
+                            <div class="inputList"> <!-- 에러인 경우 .error 추가-->
+                                <input type="tel" title="2023년 공시가격 예상 상승률" name="" id="" value="10" placeholder="숫자만 입력">
+                                <span class="unit">%</span>
+                                <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                            </div>
+                        </li>
+						<li>
+                            <div class="tagWrap mb10">
+                                <span class="tag gray">직접입력</span>
+                            </div>
+							<div class="formTitN">
+								<strong>보유기간</strong>
+							</div>
+							<div class="inputList"> <!-- 에러인 경우 .error 추가-->
+                                <input type="tel" title="보유기간" name="" id="" value="" placeholder="숫자만 입력">
+                                <span class="unit">년</span>
+                                <a href="javascript:" class="btnReset" role="button" style="display: inline;"></a>
+							</div>
+						</li>
+						<li>
+                            <div class="formTitN"><strong>본인 소유지분</strong></div>
+                            <div class="boxRadio">
+                                <div class="boxRadioInn">
+                                    <span>
+                                        <input name="rdo04" id="rdo041" type="radio">
+                                        <label for="rdo041">100%</label>
+                                    </span>
+                                </div>
+                                <div class="boxRadioInn">
+                                    <span>
+                                        <input name="rdo04" id="rdo042" type="radio">
+                                        <label for="rdo042">50%</label>
+                                    </span>
+                                </div>
+                                <div class="boxRadioInn">
+                                    <span>
+                                        <input name="rdo04" id="rdo043" type="radio" checked="checked">
+                                        <label for="rdo043">직접입력</label>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="formTitN"><strong>조정대상지역</strong></div>
+                            <div class="inputList">
+                                <a href="javascript:;" title="조정대상지역 선택" onclick="slidePopOption();return false;">
+                                    <span class="selectValue">선택</span>
+                                    <span class="selectBtn"></span>
+                                </a>
+                                <select name="" title="선택해주세요">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </li>
+						<li>
+                            <div class="formTitN">
+                                <div>
+                                    <strong>종합부동산세합산배제대상</strong>
+                                    <div class="tooltipWrap w92"> <!-- [2022-11-10] 툴팁위치 수정 -->
+                                        <button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">종합부동산세합산배제대상 툴팁 열기</span></button>
+                                        <div class="tooltipCont lf36"> <!-- [2022-11-10] 툴팁위치 수정 -->
+                                            <p>매입 임대주택으로 등록한 주택으로서 임대를 개시할 당시의 공시가격이 6억원(수도권 외 지역은 3억 원) 이하인 경우 “예＂를 선택합니다.</p>
+                                            <button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="txtb3 pointColor06">(“네”는 비과세의미)</span>
+                            <div class="boxRadio">
+                                <div class="boxRadioInn">
+                                    <span>
+                                        <input name="rdo05" id="rdo051" type="radio">
+                                        <label for="rdo051">네</label>
+                                    </span>
+                                </div>
+                                <div class="boxRadioInn">
+                                    <span>
+                                        <input name="rdo05" id="rdo052" type="radio" checked="checked">
+                                        <label for="rdo052">아니오</label>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="formTitN"><strong>보유주택 유형</strong></div>
+                            <div class="inputList">
+                                <a href="javascript:;" title="보유주택 유형 선택" onclick="slidePopOption();return false;">
+                                    <span class="selectValue">선택</span>
+                                    <span class="selectBtn"></span>
+                                </a>
+                                <select name="" title="선택해주세요">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="formTitN"><strong>주택 면적</strong></div>
+                            <div class="inputList">
+                                <a href="javascript:;" title="주택 면적 선택" onclick="slidePopOption();return false;">
+                                    <span class="selectValue">선택</span>
+                                    <span class="selectBtn"></span>
+                                </a>
+                                <select name="" title="선택해주세요">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </li>
+                        <li>
+                            <!-- <div class="listPlusBtn">
+                                <a href="javascript:;" class="" title="부동산 정보입력 추가">부동산 정보입력 추가</a>
+                            </div> -->
+                            <div class="areaBodyBtnFull mt20">
+                                <a href="javascript:;" class="btnBodyLine" role="button">부동산 정보입력 추가</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="info_area">
+                    <strong class="info_area_title">알아두세요</strong>
+                    <ul class="listBul disc">
+                        <!-- [2023-03-06] 문구수정// -->
+						<li>
+                            2023년부터 주택분 종합부동산세는 다음과 같은 내용으로 적용됩니다.
+                            <ul class="listDash">
+                                <li>기본공제금액 : 일반 9억원, 1세대 1주택자 12억원</li>
+                                <li>공정시장가액비율 : 재산세(1세대1주택) 45%, 종합부동산세 80%<br>(공정시장가액비율은 정부정책에 따라서 변경될 수 있습니다.)</li>
+                                <li>종합부동산세 세율<br>2주택이하 (일반세율) : 0.5% ~ 2.7%<br>3주택 이상(중과세율) : 2.0% ~ 5.0%</li>
+                                <li>세부담상한 : 전년도 주택분 세액 대비 150%</li>
+                            </ul>
+                        </li>
+                        <!-- //[2023-03-06] 문구수정 -->
+                    </ul>
+                </div>
+            </div>
+		</div>
+        <ul class="listBul disc mt30">
+            <li>세금계산기 서비스는 NH농협은행의 제휴사인 (주)아티웰스가 제공합니다.</li>
+        </ul>
+
+		<div class="areaBtnDefault">
+			<!-- <a href="javascript:;" class="btnPressDefault" role="button">취소</a> -->
+			<a href="javascript:;" class="btnPressPoint" role="button">계산하기</a> <!--활성화 class btnPressPoint --->
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

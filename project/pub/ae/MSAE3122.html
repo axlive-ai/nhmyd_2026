@@ -1,0 +1,136 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산현황</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(function() {
+		fullLayerPop();
+	});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">간접투자</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+
+		</div>
+		<!-- //container -->
+
+		<!-- 보유종목 상세 팝업 -->
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>개인(신용)정보 수집·이용 동의서(필수)</h1>
+				<div class="popCont">
+					<!-- 약관시작 html 경로 : /content/html/fm/co/FMAR1500_6.html -->
+					<div>
+						<h2 class="popTemrsBigTit">
+							② (비 여신) 개인(신용)정보 수집·이용 동의서 (상품별 필수) ( VIP금융컨설팅 비대면 상담용 )
+						</h2>
+						<h3 class="popTemrsTit">농협은행 주식회사 귀중</h3>
+						<p class="popTermsTxt">* 귀 행과의 비여신 (금융)거래와 관련하여 귀 행이 본인의 개인(신용)정보를 수집·이용하고자 하는 경우에는 「신용정보의 이용 및 보호에 관한 법률」, 「개인정보보호법」등 관계 법령에 따라 본인의 동의가 필요합니다.</p>
+
+						<div class="wrapTblDefault blue mt20">
+							<table>
+								<caption>수집이용 내용 표</caption>
+								<colgroup>
+									<col style="width:30%"/>
+									<col style="width:auto"/>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">수집&middot;이용 목적</th>
+										<td>
+											<ul class="fs14">
+												<li>￭ (금융)거래관계의 설정·유지·이행·관리</li>
+												<li>￭ 금융사고 조사, 분쟁 해결, 민원 처리</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" rowspan="2">보유 및<br>이용기간</th>
+										<td><span class="pointColor fs14"><strong>￭ (금융)거래 종료일로부터 5년까지 보유·이용</strong></span></td>
+									</tr>
+									<tr>
+										<td class="bgBlue"> <!-- [2023-01-06] 텍스트 수정 -->
+											위 보유 기간에서의 (금융)거래 종료일이란 “상담서비스 처리가 종료된 날”을 말합니다.<br>
+											※ (금융)거래 종료일 후에는 금융사고 조사, 분쟁 해결, 민원 처리, 법령상 의무이행을  위한 목적으로만 보유·이용됩니다.
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">거부 권리 및  불이익</th>
+										<td>
+											귀하는 동의를 거부하실수 있습니다. 다만, 위 개인(신용)정보 수집·이용에 관한 동의는 “VIP금융컨설팅 비대면 상담을 위한” 필수적 사항이므로, 위 사항에 동의하셔야만 (금융)거래관계의 설정 및 유지가 가능합니다.
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<h3 class="popTemrsTit">수집·이용 항목</h3>
+						<div class="wrapTblDefault blue mt10">
+							<table>
+								<caption>수집·이용 항목 표</caption>
+								<colgroup>
+									<col style="width:30%">
+									<col style="width:auto">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th colspan="2"><span class="icoBrdPeople"></span>개인(신용)정보</th>
+									</tr>
+									<tr>
+										<th scope="row"><span class="icoBrdFolder"></span><br>일반개인정보</th>
+										<td>성명, 연락처, 상담내용, 개인영상정보, 음성정보</td> <!-- [2023-01-06] 텍스트 수정 -->
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="termAgreeWrap">
+							<p>위 개인(신용)정보 <em>수집·이용</em>에 동의하십니까?</p>
+							<div class="agreeChkWrap">
+								<span class="chkBox">동의하지 않음</span><span class="chkBox">동의함</span>
+							</div>
+						</div>
+					</div>
+					<!-- //약관끝 html 경로 : /content/html/fm/co/FMAR1500_6.html -->
+				</div>				
+
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<a href="javascript:;" class="confirmBtn" role="button">확인</a> <!-- [2023-01-06] 텍스트 수정 -->
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+</body>
+</html>

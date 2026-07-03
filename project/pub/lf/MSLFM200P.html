@@ -1,0 +1,140 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>차량 정보 확인</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script type="text/javascript">
+$(function(){
+    fullLayerPop();
+	//popCenter();
+});
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>차량 정보 확인</h1>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<div class="content">
+			<div class="btnWrap page">
+				<a href="javascript:;" onclick="fullLayerPop();return false;" aria-haspopup="true" role="button" class="btn">fullLayerPop</a>
+			</div>
+		</div>
+	</div>
+</div>
+ 
+
+<div class="nhasset popWrap fullLayerPop" role="dialog">
+	<div class="popInner">
+		<h1>차량 정보 확인</h1>
+		<div class="popCont grayPop">
+			<h2 class="defTit">차량정보가<br>등록되었습니다</h2>
+			<div class="boxTypeWrap">
+				<div class="carInfoTitWrap">
+					<div class="carInfoTit">
+						<strong class="carNum">123가 5678</strong>
+						<div class="carName">그랜저</div>
+						<div class="carModel">하이브리드 프리미엄 하이브리드 프리미엄 하이브리드 프리미엄 </div>
+					</div>
+					<div class="carInfoImg"><img src="../../images/contents/img_car01.png" alt=""></div>
+					
+				</div>
+				<ul class="listTypeTable">
+					<li>
+						<dl>
+							<dt>차종</dt>
+							<dd>중형 승용</dd>
+						</dl>
+						<dl>
+							<dt>용도</dt>
+							<dd>자가용</dd>
+						</dl>
+						<dl>
+							<dt>차대번호</dt>
+							<dd>KMHSW81UBGU622OOO</dd>
+						</dl>
+
+						<dl>
+							<dt>연식(모델연도)</dt>
+							<dd>2016</dd>
+						</dl>
+						<dl>
+							<dt>색상</dt>
+							<dd>회색</dd>
+						</dl>
+						<dl>
+							<dt>배기량</dt>
+							<dd>1,995cc</dd>
+						</dl>
+						<dl>
+							<dt>연료의 종류</dt>
+							<dd>경유(연비 13.8km/l)</dd>
+						</dl>
+					</li>
+					<li class="pb0">
+						<h3 class="defSubTit2 borderNone">기본정보</h3>
+						<div class="innerBoxWrap">
+							<dl>
+								<dt>자동차등록번호</dt>
+								<dd>농01가0101</dd>
+							</dl>
+							<dl>
+								<dt>최초등록일</dt>
+								<dd>2016.01.08</dd>
+							</dl>
+							<dl>
+								<dt>최종소유자</dt>
+								<dd>김올리</dd>
+							</dl>
+							<dl>
+								<dt>주민(법인)등록번호</dt>
+								<dd>010101-1******</dd>
+							</dl>
+							<dl>
+								<dt>사용본거지(차고지)</dt>
+								<dd>서울특별시 마포구 *** **** **, ***</dd>
+							</dl>
+						</div>
+
+						<h3 class="defSubTit2 borderNone mt20">검사정보</h3>
+						<div class="innerBoxWrap">
+							<dl>
+								<dt>검사유효기간</dt>
+								<dd>2020.01.08~2022.01.07</dd>
+							</dl>
+							<dl>
+								<dt>주행거리</dt>
+								<dd>22.790km</dd>
+							</dl>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="popBtnWrap">
+			<div class="popBtn">
+				<a href="javascript:;" class="confirmBtn" role="button">확인</a>
+			</div>
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

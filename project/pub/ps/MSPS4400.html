@@ -1,0 +1,128 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>마이데이터</title>
+<script src="../pub-assets/js/head.js"></script>
+<!-- <script>
+	$(document).ready(function() {
+		fullLayerPop();
+	});
+</script> -->
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">연결자산관리</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+            <div class="infoBox3">
+				<p class="bigTit"><span>자산목록을 조회했습니다</span><br><strong>변경할 자산을 확인하세요</strong></p>
+			</div>
+			<div class="assetSelectLlistWrap">
+				<ul class="assetSelectLlist">
+					<li class="toggleWrap addShoow">
+						<div class="assetSelectGroup">
+							<div class="subject">
+								<div><!--11.29 class="A1AABG0000" 삭제-->
+									<span class="imgWrap"><img src="../../images/logos/AABG0000.png" class="imgLogo" alt="기관명">기관명</span><!--11.29 imgWrap 추가-->
+								</div>
+							</div>
+							<a href="javascript:;" class="toggleBtn active" role="button" aria-expanded="true"><span class="blind">기관명 자산목록</span></a>
+						</div>
+						<ul class="assetSelectSub toggleCont">
+							<li>
+								<span class="accountInfo">
+									<div>
+										<div class="title">상품명</div>
+										<div class="subCont">계좌번호(회차),상태</div>
+									</div>
+								</span>
+							</li>
+							<li>
+								<span class="accountInfo">
+									<div>
+										<div class="title">KB국민ONE통장-저축예금 </div>
+										<div class="subCont">123412341234(01)</div>
+									</div>
+								</span>
+							</li>
+						</ul>
+					</li>
+					<li class="toggleWrap addShoow">
+						<div class="assetSelectGroup">
+							<div class="subject">
+								<div for="listSub10"><!--11.29  class="D1AAFO0000" 삭제-->
+									<span class="imgWrap"><img src="../../images/logos/AAFO0000.png" class="imgLogo" alt="기관명">현대카드</span><!--11.29 imgWrap 추가-->
+								</div>
+							</div>
+							<a href="javascript:;" class="toggleBtn active" role="button" aria-expanded="true"><span class="blind">현대카드 자산목록</span></a>
+						</div>
+						<ul class="assetSelectSub toggleCont">
+							<li>
+								<span class="accountInfo">
+									<div>
+										<div class="title">M3 BOOST</div>
+										<div class="subCont">123456******1234</div>
+									</div>
+								</span>
+							</li>
+							<li>
+								<span class="accountInfo">
+									<input type="checkbox" checked="" id="listSub33" name="">
+									<label for="listSub33">
+										<div class="title">포인트 정보</div>
+									</label>
+								</span>
+							</li>
+							<li>
+								<span class="accountInfo">
+									<input type="checkbox" checked="" id="listSub34" name="">
+									<label for="listSub34">
+										<div class="title">청구 및 결제 정보</div>
+									</label>
+								</span>
+							</li>
+							<li>
+								<span class="accountInfo">
+									<input type="checkbox" checked="" id="listSub35" name="">
+									<label for="listSub35">
+										<div class="title">대출상품 정보</div>
+									</label>
+								</span>
+							</li>
+						</ul>
+					</li>
+
+				</ul>
+			</div>
+			<div class="areaBtnDefault">
+	            <a href="javascript:;" class="btnPressPoint" role="button">변경</a> 
+	        </div>
+		</div>
+        <!-- //container -->
+	</div>
+
+</body>
+</html>

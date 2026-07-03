@@ -1,0 +1,125 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산현황</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function() {
+		fullLayerPop();
+	});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">보험 상세</a></h1> <!-- [한은정 : 2021-05-07] 타이틀 수정-->
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+		</div>
+		<!-- //container -->
+
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>회차정보 상세</h1> <!-- [2021] 한은정 : 타이틀 변경 -->
+				<div class="popCont">
+					<!-- //2022-06-09 비주얼영역 차후 적용 -->
+					<div class="viewBoxArea"><!--10.27 수정-->
+						<!-- <h3 class="moreListTit">타이틀</h3> 대타이틀이 있을 경우 // -->
+						<div class="popIRP openType"><!--s: popIRP-->
+							<div>
+								<div class="agreeTit">10회차</div>
+								<div class="toggleCont">
+									<ul class="detailList">
+										<li>
+											<span class="tit">신규일자</span>
+											<span class="value">2027.07.21</span>
+	                                    </li>
+	                                    <li>
+											<span class="tit">만기일자</span>
+											<span class="value">2027.07.21</span>
+										</li>
+										<li>
+											<span class="tit">금리</span>
+											<span class="value"><strong class="dataValue">0.70</strong><em class="won">%</em></span>
+										</li>
+										<li>
+											<span class="tit">잔액</span>
+											<span class="value"><strong class="dataValue">10,000,000</strong><em class="won">원</em></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div>
+								<div class="agreeTit">9회차</div>
+								<div class="toggleCont">
+									<ul class="detailList">
+										<li>
+											<span class="tit">신규일자</span>
+											<span class="value">2027.07.21</span>
+	                                    </li>
+	                                    <li>
+											<span class="tit">만기일자</span>
+											<span class="value">2027.07.21</span>
+										</li>
+										<li>
+											<span class="tit">금리</span>
+											<span class="value"><strong class="dataValue">0.70</strong><em class="won">%</em></span>
+										</li>
+										<li>
+											<span class="tit">잔액(USD)</span>
+											<span class="value"><strong class="dataValue">20,000</strong></span>
+	                                    </li>
+	                                    <li>
+											<span class="tit">적용환율</span>
+											<span class="value">1USD=<strong class="dataValue">1123.12</strong><em class="won">원</em></span>
+										</li>
+									</ul>
+								</div>
+	                        </div>
+
+						</div>
+						<!--e: popIRP-->
+
+						<!-- case01 : 더보기 버튼이 있는 경우-->
+						<div class="listMoreBtn">
+							<a href="javascript:;" title="항목 더보기">더보기</a>
+						</div>
+						<!--//case01 : 더보기 버튼이 있는 경우-->
+
+
+					</div>
+
+				</div>
+	
+				<div class="popBtnWrap">
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>

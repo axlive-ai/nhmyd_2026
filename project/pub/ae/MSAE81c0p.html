@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>컨설팅 > 세금계산기</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		fullLayerPop();
+		categorySwipe()
+	})
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack" role="button"><span class="blind">이전화면으로</span></a> <!-- [2020-11-16] role="button" 추가 -->
+			<h1><a href="javascript:;" role="text">종합소득공제 세부사항</a></h1>
+			<a href="javascript:;" class="btnEtc">나가기</a>
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+		</div>
+		<!-- //container -->
+
+		<!-- 팝업시작 -->
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>종합소득공제 세부사항</h1>
+				<div class="popCont grayPop">
+                    <div class="formWrap">
+                        <div class="ar"><a href="javascript:;" class="contBtn02">불러오기</a></div>
+                        <h3 class="defSubTit2 bdNone mt5">인적공제 입력</h3>
+                        <div class="boxTypeWrap mt0">
+                            <div class="titListBox">
+                                <ul>
+                                    <li>
+                                        <div class="formTitN"><strong>배우자 공제여부</strong></div> <!-- [2022-11-08] 문구수정, 타이틀 클래스 수정 -->
+                                        <div class="boxRadio">
+                                            <div class="boxRadioInn">
+                                                <span>
+                                                    <input name="rdo01" id="rdo001" type="radio">
+                                                    <label for="rdo001">네</label>
+                                                </span>
+                                            </div>
+                                            <div class="boxRadioInn">
+                                                <span>
+                                                    <input name="rdo01" id="rdo002" type="radio" checked="checked">
+                                                    <label for="rdo002">아니오</label>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <hr class="divLine3" aria-hidden="true">
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 클래스 수정 -->
+                                            <strong>부모님 공제</strong>
+                                            <span class="supExp">(70세 이상 부양가족 수)</span>
+                                        </div>
+                                        <div class="flexRBox">
+                                            <div class="deductBtnWrap">
+                                                <button type="button" class="minusBtn"><span class="blind">부모님 공제(70세 이상 부양가족 수) 빼기</span></button>
+                                                <span class="deductNum"><em>0</em></span>
+                                                <button type="button" class="plusBtn"><span class="blind">부모님 공제(70세 이상 부양가족 수) 더하기</span></button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 클래스 수정 -->
+                                            <strong>자녀 공제</strong>
+                                        </div>
+                                        <div class="flexRBox">
+                                            <div class="deductBtnWrap">
+                                                <button type="button" class="minusBtn"><span class="blind">자녀 공제 빼기</span></button>
+                                                <span class="deductNum"><em>0</em></span>
+                                                <button type="button" class="plusBtn"><span class="blind">자녀 공제 더하기</span></button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="listPlusBtn">
+                                            <a href="javascript:;" class="" title="하단 추가 인적공제 정보 입력 열림">추가 인적공제 입력</a>
+                                        </div>
+                                    </li>
+                                    <!-- 추가 인적공제 입력 버튼 선택 시 노출 -->
+                                    <!-- <li>
+                                        <hr class="divLine3" aria-hidden="true">
+                                        <div class="formTitN">
+                                            <strong>형제자매 공제</strong>
+                                        </div>
+                                        <div class="flexRBox">
+                                            <div class="deductBtnWrap">
+                                                <button type="button" class="minusBtn"><span class="blind">형제자매 공제 빼기</span></button>
+                                                <span class="deductNum"><em>0</em></span>
+                                                <button type="button" class="plusBtn"><span class="blind">형제자매 공제 더하기</span></button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN">
+                                            <strong>기초수급자 공제</strong>
+                                        </div>
+                                        <div class="flexRBox">
+                                            <div class="deductBtnWrap">
+                                                <button type="button" class="minusBtn"><span class="blind">기초수급자 공제 빼기</span></button>
+                                                <span class="deductNum"><em>0</em></span>
+                                                <button type="button" class="plusBtn"><span class="blind">기초수급자 공제 더하기</span></button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN">
+                                            <strong>위탁아동 공제</strong>
+                                        </div>
+                                        <div class="flexRBox">
+                                            <div class="deductBtnWrap">
+                                                <button type="button" class="minusBtn"><span class="blind">위탁아동 공제 빼기</span></button>
+                                                <span class="deductNum"><em>0</em></span>
+                                                <button type="button" class="plusBtn"><span class="blind">위탁아동 공제 더하기</span></button>
+                                            </div>
+                                        </div>
+                                    </li> -->
+                                    <li>
+                                        <hr class="divLine3" aria-hidden="true">
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 클래스 수정 -->
+                                            <strong>경로우대</strong>
+                                        </div>
+                                        <div class="flexRBox">
+                                            <div class="deductBtnWrap">
+                                                <button type="button" class="minusBtn"><span class="blind">경로우대 빼기</span></button>
+                                                <span class="deductNum"><em>0</em></span>
+                                                <button type="button" class="plusBtn"><span class="blind">경로우대 더하기</span></button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 클래스 수정 -->
+                                            <strong>장애인</strong>
+                                        </div>
+                                        <div class="flexRBox">
+                                            <div class="deductBtnWrap">
+                                                <button type="button" class="minusBtn"><span class="blind">장애인 빼기</span></button>
+                                                <span class="deductNum"><em>0</em></span>
+                                                <button type="button" class="plusBtn"><span class="blind">장애인 더하기</span></button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"><strong>부녀자</strong></div> <!-- [2022-11-08] 타이틀 클래스 수정 -->
+                                        <div class="boxRadio">
+                                            <div class="boxRadioInn">
+                                                <span>
+                                                    <input name="rdo02" id="rdo002" type="radio" checked="checked">
+                                                    <label for="rdo002">네</label>
+                                                </span>
+                                            </div>
+                                            <div class="boxRadioInn">
+                                                <span>
+                                                    <input name="rdo02" id="rdo003" type="radio">
+                                                    <label for="rdo003">아니오</label>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <!-- [2022-10-17] 문구수정 -->
+                                        <div class="formTitN"><strong>한부모</strong></div> <!-- [2022-11-08] 타이틀 클래스 수정 -->
+                                        <!-- //[2022-10-17] 문구수정 -->
+                                        <div class="boxRadio">
+                                            <div class="boxRadioInn">
+                                                <span>
+                                                    <input name="rdo03" id="rdo004" type="radio" checked="checked">
+                                                    <label for="rdo004">네</label>
+                                                </span>
+                                            </div>
+                                            <div class="boxRadioInn">
+                                                <span>
+                                                    <input name="rdo03" id="rdo005" type="radio">
+                                                    <label for="rdo005">아니오</label>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- //추가 인적공제 입력 버튼 선택 시 노출 -->
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3 class="defSubTit2 bdNone">사회보험 공제 입력</h3>
+                        <div class="boxTypeWrap mt0">
+                            <div class="titListBox">
+                                <ul>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 클래스 수정 -->
+                                            <strong>연금보험료</strong>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="연금보험료" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 클래스 수정 -->
+                                            <strong>건강보험료</strong>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="건강보험료" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 클래스 수정 -->
+                                            <strong>주택담보 노후연금 이자</strong>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="주택담보 노후연금 이자" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3 class="defSubTit2 bdNone">소득공제 입력</h3>
+                        <div class="boxTypeWrap mt0">
+                            <div class="titListBox">
+                                <ul>
+                                    <li>
+                                        <div class="formTitN"><strong>주택마련 저축 선택</strong></div> <!-- [2022-11-08] 타이틀 클래스 수정 -->
+                                        <div class="inputList">
+                                            <a href="javascript:;" title="주택마련 저축 선택" aria-haspopup="true" onclick="slidePopOption();return false;">
+                                                <span class="selectValue">선택</span>
+                                                <span class="selectBtn"></span>
+                                            </a>
+                                            <select name="" title="선택해주세요">
+                                                <option value=""></option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 클래스 수정 -->
+                                            <strong>납입액</strong>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="납입액" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <hr class="divLine3" aria-hidden="true">
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 클래스 수정 -->
+                                            <strong>주택자금 이자납입액</strong>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="주택자금 이자납입액" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"><strong>대출시기</strong></div> <!-- [2022-11-08] 타이틀 클래스 수정 -->
+                                        <div class="inputList">
+                                            <a href="javascript:;" title="대출시기 선택" aria-haspopup="true" onclick="slidePopOption();return false;">
+                                                <span class="selectValue">선택</span>
+                                                <span class="selectBtn"></span>
+                                            </a>
+                                            <select name="" title="선택해주세요">
+                                                <option value=""></option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"><strong>상환기간</strong></div> <!-- [2022-11-08] 타이틀 클래스 수정 -->
+                                        <div class="inputList">
+                                            <a href="javascript:;" title="상환기간 선택" aria-haspopup="true" onclick="slidePopOption();return false;">
+                                                <span class="selectValue">선택</span>
+                                                <span class="selectBtn"></span>
+                                            </a>
+                                            <select name="" title="선택해주세요">
+                                                <option value=""></option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <hr class="divLine3" aria-hidden="true">
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 클래스 수정 -->
+                                            <strong>주택임차 원리금상환액</strong>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="주택임차 원리금상환액" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <hr class="divLine3" aria-hidden="true">
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 클래스 수정 -->
+                                            <strong>개인연금저축</strong>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="개인연금저축" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <hr class="divLine3" aria-hidden="true">
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 클래스 수정 -->
+                                            <strong>소기업ㆍ소상공인 공제부금</strong>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="소기업ㆍ소상공인 공제부금" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <hr class="divLine3" aria-hidden="true">
+                                        <div class="formTitN"><strong>우리사주조합출연금 구분 선택</strong></div> <!-- [2022-11-08] 타이틀 클래스 수정 -->
+                                        <div class="inputList">
+                                            <a href="javascript:;" title="우리사주조합출연금 구분 선택 선택" aria-haspopup="true" onclick="slidePopOption();return false;">
+                                                <span class="selectValue">선택</span>
+                                                <span class="selectBtn"></span>
+                                            </a>
+                                            <select name="" title="선택해주세요">
+                                                <option value=""></option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 클래스 수정 -->
+                                            <strong>우리사주조합 출연금</strong>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="우리사주조합 출연금" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <hr class="divLine3" aria-hidden="true">
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 클래스 수정 -->
+                                            <strong>벤처투자조합 출자금</strong>
+                                            <span class="supExp">(직접투자)</span> <!-- [2022-11-08] 수정 -->
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="벤처투자조합 출자금 (직접투자)" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 클래스 수정 -->
+                                            <strong>벤처투자조합 출자금</strong>
+                                            <span class="supExp">(간접투자)</span> <!-- [2022-11-08] 수정 -->
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="벤처투자조합 출자금 (간접투자)" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3 class="defSubTit2 bdNone">신용카드 등 사용총액 입력</h3>
+                        <div class="boxTypeWrap mt0">
+                            <div class="titListBox">
+                                <ul>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 클래스 수정 -->
+                                            <strong>신용카드</strong>
+                                            <span class="supExp">(전통시장, 대중교통 제외)</span>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="신용카드(전통시장, 대중교통 제외)" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 클래스 수정 -->
+                                            <strong>신용카드</strong>
+                                            <span class="supExp">(문화시설 이용료)</span>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="신용카드(문화시설 이용료)" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 클래스 수정 -->
+                                            <strong>현금영수증, 직불카드</strong>
+                                            <span class="supExp">(전통시장, 대중교통 제외)</span>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="현금영수증, 직불카드(전통시장, 대중교통 제외)" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 클래스 수정 -->
+                                            <strong>현금영수증, 직불카드</strong>
+                                            <span class="supExp">(문화시설 이용료)</span>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="현금영수증, 직불카드(문화시설 이용료)" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 클래스 수정 -->
+                                            <strong>전통시장 이용액</strong>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="전통시장 이용액" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 클래스 수정 -->
+                                            <strong>대중교통 이용액</strong>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="대중교통 이용액" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- [2022-11-23] 1.95 버전 반영 -->
+                        <h3 class="defSubTit2 bdNone">기타 소득공제</h3>
+                        <div class="boxTypeWrap mt0">
+                            <div class="titListBox">
+                                <ul>
+                                    <li>
+                                        <div class="formTitN">
+                                            <strong>기타 소득공제 추가입력</strong>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="기타 소득공제 추가입력" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<!-- <a href="javascript:;" onclick="popClose(this);return false;" role="button">취소</a> -->
+						<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">확인</a>
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- 팝업끝 -->
+
+	</div>
+
+</body>
+</html>

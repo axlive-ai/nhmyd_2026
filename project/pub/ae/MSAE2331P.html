@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>[P]공적연금 선택 | 연금진단 | 컨설팅</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+$(document).ready(function(){
+	slidePopOption();
+})
+</script>
+</head>
+<body>
+<div class="wrapper nhasset"><!-- 바닥페이지 --></div>
+
+<!-- ###################################### -->
+<!-- ### [레이어팝업] 공적연금 선택 ### -->
+<!-- ###################################### -->
+<div class="nhasset popWrap slidePopOption">
+	<div class="dim"></div>
+	<div class="popInner">
+		<h1>공적연금 선택</h1>
+		<div class="popCont">
+			<!-- -------------------------------------- -->
+			<!-- [2023 NH마이데이터 서비스 고도화] -->
+			<!-- -------------------------------------- -->
+			<!-- [CASE1] 만 55세 이상인 경우 -->
+			<!-- -------------------------------------- -->
+			<div class="formWrap msaeType">
+				<div class="titListBox">
+					<ul>
+						<!-- 항목하나 -->
+						<li>
+							<div class="formTit"><strong>현재 공적연금을 수령중인가요?</strong></div>
+							<div class="boxRadio">
+								<div class="boxRadioInn">
+									<span class="mb0">
+										<input type="radio" name="formRadio" id="formRadio1">
+										<label for="formRadio1">예</label>
+									</span>
+								</div>
+								<div class="boxRadioInn">
+									<span class="mb0">
+										<input type="radio" name="formRadio" id="formRadio2"  checked>
+										<label for="formRadio2">아니오 </label>
+									</span>
+								</div>
+							</div>
+						</li>
+						<!-- 항목하나 -->
+						<li>
+							<div class="formTit"><strong>공적연금을 선택하세요</strong></div>
+							<div class="boxRadio">
+								<ul class="listPsion">
+									<li>
+										<button type="button" aria-selected="false">
+											<strong class="title">국민연금</strong>
+										</button>
+									</li>
+									<li>
+										<button type="button" aria-selected="false">
+											<strong class="title">공무원연금</strong>
+										</button>
+									</li>
+									<li>
+										<button type="button" aria-selected="false">
+											<strong class="title">사학연금</strong>
+										</button>
+									</li>
+									<li class="none"> <!-- [D] 수령중일 경우 노출 -->
+										<button type="button" aria-selected="false" title="선택됨">
+											<strong class="title">기타 공적연금(군인연금, 별정우체국연금 등)</strong>
+										</button>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<!-- // -->
+					</ul>
+				</div>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [CASE2] 만 55세 미만인 경우 -->
+			<!-- -------------------------------------- -->
+			<div class="formWrap msaeType">
+				<div class="boxRadio">
+					<ul class="listPsion">
+						<li>
+							<button type="button" aria-selected="false">
+								<strong class="title">국민연금</strong>
+							</button>
+						</li>
+						<li>
+							<button type="button" aria-selected="false">
+								<strong class="title">공무원연금<span>(재직기간 10년 이상)</span></strong>
+								<span class="sub">재직기간이 10년 이상인 경우만 조회가 가능합니다.</span>
+							</button>
+						</li>
+						<li>
+							<button type="button" aria-selected="false" title="선택됨">
+								<strong class="title">사학연금</strong>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- -------------------------------------- -->
+		</div>
+
+		<div class="popBtnWrap">
+			<!-- [2023 NH마이데이터 서비스 고도화] 버튼 삭제
+			<div class="popBtn">
+				<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">확인</a>
+			</div>
+			-->
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+		</div>
+	</div>
+</div>
+
+<!-- ###################################### -->
+<!-- ### [샘플] 스크립트 ### -->
+<!-- ###################################### -->
+<script type="text/javascript">
+	$(document).ready(function(){
+		//샘플 : 선택 버튼 활성화
+		$('.listPsion li button').on( "click" ,function(){
+			$(this).addClass('active').attr({
+				'aria-selected':"true",
+				'title':'선택됨'
+			});
+			
+			$('.listPsion li button').not(this).removeClass('active').attr({
+				'aria-selected':"false",
+				'title':''
+			});
+		});
+
+		//샘플 : 공적연금 수령 여부에 따라 컨텐츠 변경
+		$('[name="formRadio"]').change(function(){
+			var cont = $(this).parents('ul').find('.listPsion');
+
+			if($(this).attr('id') == 'formRadio1'){
+				cont.find('li:eq(3)').removeClass('none');
+			}else{
+				cont.find('li:eq(3)').addClass('none');
+			}
+		});
+	});
+</script>
+<!-- ###################################### -->
+</body>
+</html>

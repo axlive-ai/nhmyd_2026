@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>기본정보</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script type="text/javascript">
+$(function(){
+		fullLayerPop()
+});
+
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>소비 자세히보기</h1>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<div class="btnWrap page">
+			<a href="javascript:;" onclick="fullLayerPop();return false;" aria-haspopup="true" role="button" class="btn">fullLayerPop</a>
+		</div>
+	</div>
+</div>
+
+<div class="nhasset popWrap fullLayerPop" role="dialog">
+	<div class="popInner">
+		<h1>소비 자세히보기</h1>
+			<div class="popCont grayPop">
+				<div class="yatexgraphArea">
+
+					<div class="yatexgraphWrap" role="img" aria-label="">
+						<img src="../../images/temp/yatex_graph_dumy01.png">
+					</div>
+
+					<div class="garphitemWrap"><!--s:garphitemWrap-->
+						<div class="item"><!--s:item-->
+							<div class="titwrap">
+								<h3 class="tit ty01">신용카드 </h3>
+								<span>사용금액의 15%</span>
+							</div>
+							
+							<ul class="detailList">
+								<li>
+									<span class="tit">공제금액</span>
+									<span class="value">2,589,055원</span>
+								</li>
+								<!-- 2022-10-18 추가 -->
+								<li>
+									<span class="tit">공제 한도액</span>
+									<span class="value">2,589,055원</span>
+								</li>
+								<!-- //2022-10-18 추가 -->
+								<li>
+									<span class="tit">현재 총 사용금액</span>
+									<span class="value">18,589,055원</span>
+								</li>
+							</ul>
+						</div>
+						<!--//e:item-->
+
+						<div class="item"><!--s:item-->
+							<div class="titwrap">
+								<h3 class="tit ty02">체크카드 </h3>
+								<span>사용금액의 30%</span>
+							</div>
+							
+							<ul class="detailList">
+								<li>
+									<span class="tit">공제금액</span>
+									<span class="value">1,000원</span>
+								</li>
+								<!-- 2022-10-18 추가 -->
+								<li>
+									<span class="tit">공제 한도액</span>
+									<span class="value">2,589,055원</span>
+								</li>
+								<!-- //2022-10-18 추가 -->
+								<li>
+									<span class="tit">현재 총 사용금액</span>
+									<span class="value">5,800원</span>
+								</li>
+							</ul>
+						</div>
+						<!--//e:item-->
+
+
+						<div class="item"><!--s:item-->
+							<div class="titwrap">
+								<h3 class="tit ty03">현금 </h3>
+								<span>사용금액의 30%</span>
+							</div>
+							
+							<ul class="detailList">
+								<li>
+									<span class="tit">공제금액</span>
+									<span class="value">1,100,000원</span>
+								</li>
+								<!-- 2022-10-18 추가 -->
+								<li>
+									<span class="tit">공제 한도액</span>
+									<span class="value">2,589,055원</span>
+								</li>
+								<!-- //2022-10-18 추가 -->
+								<li>
+									<span class="tit">현재 총 사용금액</span>
+									<span class="value">4,567,890원</span>
+								</li>
+							</ul>
+						</div>
+						<!--//e:item-->
+
+						<div class="item totalArea"><!--s:item-->
+							<ul class="detailList">
+								<li>
+									<span class="tit">총 공제금액</span>
+									<span class="value">3,690,055원</span>
+								</li>
+								<!-- 2022-10-18 추가 -->
+								<li>
+									<span class="tit">총 공제 한도액</span>
+									<span class="value">2,589,055원</span>
+								</li>
+								<!-- //2022-10-18 추가 -->
+								<li>
+									<span class="tit">총 사용금액</span>
+									<span class="value">23,162,745원</span>
+								</li>
+							</ul>
+						</div>
+						<!--//e:item-->
+
+					</div>
+					<!--//e:garphitemWrap-->
+				</div>
+			</div>
+
+		<div class="popBtnWrap">
+			<!-- <div class="popBtn">
+				<a href="javascript:;" class="confirmBtn" role="button">확인</a>
+			</div> -->
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

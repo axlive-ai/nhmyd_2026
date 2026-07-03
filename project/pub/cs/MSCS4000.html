@@ -1,0 +1,464 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>카드이용내역 | 카드 | 소비A</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">카드이용내역</a></h1> <!-- [2023 NH마이데이터 서비스 고도화] 서비스명 변경 -->
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 카드이용내역 ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<!-- 2022-10-25 업데이트바 공통수정 -->
+		<!-- <div class="pageRefreshWrap">
+			<div class="pageRefresInner">
+				<span>
+					<span class="date">08.05 10:45</span>
+					<button type="button" class="btnUpdate"><span class="blind">업데이트</span></button>
+				</span>
+				<button type="button" class="btnAlrt new" aria-expanded="false"><span class="blind">알림</span></button>
+			</div>
+			<div class="pageAlertWrap">
+				<ul>
+					<li class="alertNotice">
+						<a href="javascript:;" role="button">
+							<dl>
+								<dt>연결중인 자산 확인이 필요해요</dt>
+								<dd>OOO에서 전송 중단 또는 거절이 있었습니다.<br/>연결관리 화면에서 확인해주세요. </dd>
+							</dl>
+						</a>
+					</li>
+					<li class="alertError">
+						<a href="javascript:;" role="button">
+							<dl>
+								<dt>정보 확인이 필요해요</dt>
+								<dd><span>$연말정산$</span> 정보수집 중 오류가 있었습니다.<br/><span>$연말정산$</span> 설정 화면에서 확인해주세요. </dd>
+							</dl>
+						</a>
+					</li>
+					<li class="alertError">
+						<a href="javascript:;" role="button">
+							<dl>
+								<dt>업데이트한지 <span>N</span>일이 지났어요</dt>
+								<dd><span>$연말정산$</span> 정보 업데이트가 필요합니다.<br/>인증관리 화면에서 확인해주세요.</dd>
+							</dl>
+						</a>
+					</li>
+					<li class="alertError">
+						<a href="javascript:;" role="button">
+							<dl>
+								<dt>정보수집이 필요해요</dt>
+								<dd><span>$연말정산$</span> 서비스 이용을 위해 정보수집이 필요합니다. 인증관리 화면에서 확인해주세요.</dd>
+							</dl>
+						</a>
+					</li>
+
+				</ul>
+				<div class="pageAlertNoData">
+					<p>업데이트 알림 내역이 없습니다.</p>
+				</div>
+				<button type="button" aria-expanded="true" class="pageAlertClose"><span>닫기</span></button>
+			</div>
+		</div> -->
+		<!-- //2022-10-25 업데이트바 공통수정 -->
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTIOM1] 카드 결제예정금액 -->
+		<!-- -------------------------------------- -->
+		<div class="boxWrapShadow">
+			<div class="boxTypeWrap delShadow containTooltip">
+				<div class="totalBalance bgNCard bgNCard01 mt0 containTooltip">
+					<div>
+						<strong class="defSubTit2 mt5">카드 결제예정금액은?</strong>
+						<div class="tooltipWrap">
+							<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">결제 예정 금액 툴팁 열기</span></button>
+							<div class="tooltipCont lf0 w100p">
+								<p>다음 카드 결제 일에 납부할 신용카드와 소액 신용 한도가 부여된 체크카드의 총 결제 예정 금액입니다.<br><br>
+								
+								<span class="pointColor">확정</span> : 가족카드, 리볼빙, 현금서비스, 카드론 이용금액 포함<br><br>
+								
+								<span class="pointColor">미확정</span> : 리볼빙, 현금서비스 이용금액 포함. 가족카드, 카드론 이용금액 제외.<br><br>
+								
+								미확정 금액은 실제 청구서 발행 후 금액과 상이 할 수 있습니다.
+								결제일이 오늘인 경우 이미 납부하셨더라도 목록에 보일 수 있습니다.
+								결제일에 따라 사용기간이 다르고 선결제를 하셨으면 실제 결제될 금액과 다를 수 있습니다.</p>
+								<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+							</div>
+						</div>
+					</div>
+					<div class="bigTxt type01">
+						<strong>40,000,000</strong><em class="won">원</em>
+					</div>
+					<div class="btnRWrap">
+						<a href="javascript:;" class="contBtn03">리볼빙 내역</a><a href="javascript:;" class="contBtn03">잔여 할부 내역</a>
+					</div>
+				</div>
+				<div class="cs detailTitWrap mt20">
+					<span class="tit">결제일 8월 10일</span>
+					<span class="value fc666"><strong class="dataValue">1,500,000</strong><em class="won">원</em></span>
+				</div>
+				<ul class="cs accList isLogo">
+					<li>
+						<div class="accInfoWrap">
+							<div class="accInfo">
+								<!-- <strong class="cardName D1AABG0000"><em class="blind">비씨카드</em></strong> -->
+								<img src="../../images/logos/AABG0000.png" alt="비씨카드 로고" class="imgLogo"> <!-- [2022-11-24] 사보현 : 로고 공통 이미지로 변경 -->
+								<span class="accTit eps">비씨카드비씨카드비씨카드비씨카드비씨카드</span>
+								<em class="tag green">확정</em>
+								<span class="accValue"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="accInfoWrap">
+							<div class="accInfo">
+								<!-- <strong class="cardName D1AABG0000"><em class="blind">농협카드</em></strong> -->
+								<img src="../../images/logos/AABG0000.png" alt="농협카드 로고" class="imgLogo"> <!-- [2022-11-24] 사보현 : 로고 공통 이미지로 변경 -->
+								<span class="accTit eps">농협카드</span>
+								<em class="tag gray">미확정</em>
+								<span class="accValue"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="accInfoWrap">
+							<div class="accInfo">
+								<!-- <strong class="cardName D1AABG0000"><em class="blind">농협카드</em></strong> -->
+								<img src="../../images/logos/AABG0000.png" alt="농협카드 로고" class="imgLogo"> <!-- [2022-11-24] 사보현 : 로고 공통 이미지로 변경 -->
+								<span class="accTit eps">비씨카드</span>
+								<em class="tag gray">미확정</em>
+								<span class="accValue"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="moreInfoArea"> <!-- [2023-01-02] 위치변경 -->
+				<!-- 추가정보 열/닫 -->
+				<div class="moreInfoWrap toggleWrap bgWhite">
+					<div class="moreInfo toggleCont pb20" style="display: none;">
+						<hr class="divLine2"> <!-- [2023-01-02] 추가 -->
+						<h2 class="defSubTit2 mb15">지난 카드 청구서</h2>  <!-- [2023-01-02] .pd삭제 -->
+						<div class="cs detailTitWrap mt0">
+							<span class="tit fc666">결제일 8월 10일</span>
+							<span class="value fc666"><strong class="dataValue">1,500,000</strong><em class="won">원</em></span>
+						</div>
+						<ul class="cs accList isLogo">
+							<li>
+								<div class="accInfoWrap">
+									<div class="accInfo">
+										<!-- <strong class="cardName D1AABG0000"><em class="blind">비씨카드</em></strong> -->
+										<img src="../../images/logos/AABG0000.png" alt="농협카드 로고" class="imgLogo"> <!-- [2022-11-24] 사보현 : 로고 공통 이미지로 변경 -->
+										<span class="accTit eps">비씨카드비씨카드비씨카드비씨카드비씨카드</span>
+										<em class="tag green">확정</em>
+										<span class="accValue"><strong class="dataValue">100</strong><em class="won">원</em></span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="accInfoWrap">
+									<div class="accInfo">
+										<!-- <strong class="cardName D1AABG0000"><em class="blind">농협카드</em></strong> -->
+										<img src="../../images/logos/AABG0000.png" alt="농협카드 로고" class="imgLogo"> <!-- [2022-11-24] 사보현 : 로고 공통 이미지로 변경 -->
+										<span class="accTit eps">농협카드</span>
+										<em class="tag green">확정</em>
+										<span class="accValue"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="accInfoWrap">
+									<div class="accInfo">
+										<!-- <strong class="cardName D1AABG0000"><em class="blind">농협카드</em></strong> -->
+										<img src="../../images/logos/AABG0000.png" alt="농협카드 로고" class="imgLogo"> <!-- [2022-11-24] 사보현 : 로고 공통 이미지로 변경 -->
+										<span class="accTit eps">비씨카드</span>
+										<em class="tag green">확정</em>
+										<span class="accValue"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="listMoreBtn mt0">
+							<a title="항목 더보기" href="javascript:;">7월 청구서 더보기</a>
+						</div>
+						<div class="cs detailTitWrap">
+							<span class="tit fc666">결제일 7월 10일</span>
+							<span class="value fc666"><strong class="dataValue">1,500,000</strong><em class="won">원</em></span>
+						</div>
+						<ul class="cs accList isLogo">
+							<li>
+								<div class="accInfoWrap">
+									<div class="accInfo">
+										<!-- <strong class="cardName D1AABG0000"><em class="blind">비씨카드</em></strong> -->
+										<img src="../../images/logos/AABG0000.png" alt="농협카드 로고" class="imgLogo"> <!-- [2022-11-24] 사보현 : 로고 공통 이미지로 변경 -->
+										<span class="accTit eps">비씨카드비씨카드비씨카드비씨카드비씨카드</span>
+										<em class="tag green">확정</em>
+										<span class="accValue"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="accInfoWrap">
+									<div class="accInfo">
+										<!-- <strong class="cardName D1AABG0000"><em class="blind">농협카드</em></strong> -->
+										<img src="../../images/logos/AABG0000.png" alt="농협카드 로고" class="imgLogo"> <!-- [2022-11-24] 사보현 : 로고 공통 이미지로 변경 -->
+										<span class="accTit eps">농협카드</span>
+										<em class="tag green">확정</em>
+										<span class="accValue"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="accInfoWrap">
+									<div class="accInfo">
+										<!-- <strong class="cardName D1AABG0000"><em class="blind">농협카드</em></strong> -->
+										<img src="../../images/logos/AABG0000.png" alt="농협카드 로고" class="imgLogo"> <!-- [2022-11-24] 사보현 : 로고 공통 이미지로 변경 -->
+										<span class="accTit eps">비씨카드</span>
+										<em class="tag green">확정</em>
+										<span class="accValue"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="listMoreBtn mt0">
+							<a title="항목 더보기" href="javascript:;">6월 청구서 더보기</a>
+						</div>
+					</div>
+					<button type="button" class="moreOpenBtn toggleBtn" aria-expanded="false" role="button">
+						<span class="toggleTxt12">지난 카드 청구서 보기</span> <!-- [2022-12-27] 클래스 추가 -->
+					</button>
+				</div>
+				<!-- // 추가정보 열/닫 -->
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [2023 NH마이데이터 서비스 고도화] 카드 리포트 연결 배너 추가 -->
+		<!-- -------------------------------------- -->
+		<div class="areaBanner2 t4">
+			<a href="javascript:;" class="img12">
+				<span>카드리포트 확인하기</span>
+				<span>카드리포트가 발행되었어요. <br>확인해보세요</span>
+			</a>
+		</div>
+		
+		<!-- -------------------------------------- -->
+		<!-- [SECTIOM2] 월 사용금액 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap pt0">
+			<div class="totalBalance bgNCard bgNCard02 containTooltip">
+				<div>
+					<strong class="defSubTit2">
+						<button type="button" title="년월선택" class="btnBigSel">11월</button>
+						사용금액은?
+					</strong>
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">사용금액 툴팁 열기</span></button> <!-- [2021-10-18] 한은정 : 대체텍스트 수정 -->
+						<div class="tooltipCont lf0">
+							<p>1일부터 오늘까지 신용카드, 체크카드 이용금액 총합입니다. 가족카드, 리볼빙, 카드론 이용금액이 제외된 금액입니다.</p>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="bigTxt type01 mt10">
+					<strong>40,000,000</strong><em class="won">원</em>
+				</div>
+			</div>
+			
+			<div class="tgBtnWrap">
+				<span class="cs tgTxt">이용카드만</span>
+				<span class="cs tgBtnType2">
+					<input type="checkbox" id="toggle0" checked>
+					<label for="toggle0"><span class="blind">이용카드만</span></label>
+				</span>
+			</div>
+			
+			<ul class="accList bdbNone">
+				<li>
+					<a href="javascript:;" class="link" role="button">
+						<div class="accInfoWrap">
+							<div class="accInfo">
+								<img src="../../images/logos/AABG0000.png" alt="농협카드" class="imgLogo"> <!-- [접근성_2024] 기관명 추가 -->
+								<span class="accTit">올바른 MYPICK 카드</span>
+								<span class="accValue"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="link" role="button">
+						<div class="accInfoWrap">
+							<div class="accInfo">
+								<img src="../../images/logos/AABG0000.png" alt="농협카드" class="imgLogo">
+								<span class="accTit">올바른 FLEX 카드</span>
+								<span class="accValue"><strong class="dataValue">100,000</strong><em class="won">원</em></span>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="link" role="button">
+						<div class="accInfoWrap">
+							<div class="accInfo">
+								<img src="../../images/logos/AABG0000.png" alt="농협카드" class="imgLogo">
+								<span class="accTit">현대m boost</span>
+								<span class="accValue"><strong class="dataValue">100,000</strong><em class="won">원</em></span>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTIOM3] 카드포인트 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap pt0">
+			<div class="totalBalance bgNCard bgNCard04 containTooltip">
+				<div>
+					<strong class="defSubTit2">카드 포인트는?</strong>
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">총 보유 포인트 툴팁 열기</span></button> <!-- [2021-10-18] 한은정 : 대체텍스트 수정 -->
+						<div class="tooltipCont lf0">
+							<p>업데이트 일자에 따라 현재 시점의 포인트와 상이 할 수 있습니다.<br>OK캐시백 등의 제휴 포인트는 카드사 마다 중복 노출될 수 있습니다.</p>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="defTit mt10">
+					총<strong>11,400,000P</strong>
+				</div>
+			</div>
+
+			<div class="cardListWrap">
+				<ul class="cs cardList">
+					<li role="textbox">
+						<div class="cardInfoWrap">
+							<div>
+								<span class="imgWrap">
+									<img src="../../images/logos/AABG0000.png" alt="농협카드 로고" class="imgLogo">
+								</span>
+								<strong class="cardName"><em class="blind">농협카드</em>NH포인트</strong>
+							</div>
+							
+							<div class="cardTotal">
+								<strong class="dataValue">55,500,000</strong><em class="won">P</em>
+								<div class="subValue fwN">소멸예정 <span class="">50,000</span><em class="won">P</em></div> <!-- [2022-10-18] 수정 -->
+							</div>
+						</div>
+					</li>
+					<li role="textbox">
+						<div class="cardInfoWrap">
+							<div>
+								<span class="imgWrap">
+									<img src="../../images/logos/AABG0000.png" alt="농협카드 로고" class="imgLogo">
+								</span>
+								<strong class="cardName"><em class="blind">농협카드</em>NH포인트</strong>
+							</div>
+							
+							<div class="cardTotal">
+								<strong class="dataValue">55,500,000</strong><em class="won">P</em>
+							</div>
+						</div>
+					</li>
+					<li role="textbox">
+						<div class="cardInfoWrap">
+							<div>
+								<span class="imgWrap">
+									<img src="../../images/logos/AABG0000.png" alt="농협카드 로고" class="imgLogo">
+								</span>
+								<strong class="cardName"><em class="blind">농협카드</em>NH포인트</strong>
+							</div>
+							
+							<div class="cardTotal">
+								<strong class="dataValue">55,500,000</strong><em class="won">P</em>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="icoBanner ico01">
+					<a href="javascript:;">
+						<strong class="txt">카드포인트를 게좌로 입금하러 가기</strong>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTIOM4] 추천카드 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap">
+			<div class="accTopInfo mt0">
+				<h2 class="defSubTit2 mt0"><strong class="bold"><a href="javascript:;" class="csLink">나에게 맞는 추천카드는?</a></strong></h2>
+			</div>
+			<div class="cardChangeWrap mt10">
+				<div>
+					<!-- <span class="imgWrap A1AAHJ0000"><em class="blind">카카오뱅크</em></span> -->
+					<span class="imgWrap"> <!-- [2022-11-24] 사보현 : 로고 공통 이미지로 변경 -->
+						<img src="../../images/logos/AAHJ0000.png" alt="카카오뱅크 로고" class="imgLogo"> <!-- [접근성_2024] 기관명으로 변경 : 현재는 카드명으로 되어 있음 -->
+					</span>
+				</div>
+				<div class="cs cardComparedTitle">
+					<span class="tit inner">내가 쓰는 <button type="button" title="카드 선택"><span>카카오뱅크 *텍스트긴경우</span></button> 를<br>NH농협카드로 바꾸면?</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [바로가기링크] -->
+		<!-- -------------------------------------- -->
+		<!-- <p class="subTxt3 ac mt20"> 혹시 보이지 않는 카드가 있나요?</p> -->
+		<div class="yatexbtnWrap mt20">
+			<a href="javascript:;" title="숨긴 카드 보기" aria-haspopup="true" class="cardHide">숨긴 카드 보기</a>
+			<a href="javascript:;" title="카드 연결하기" aria-haspopup="true" class="cardAdd">카드 연결하기</a>
+		</div>
+		<!-- -------------------------------------- -->
+	</div>
+	<!-- ###################################### -->
+</div>
+
+<script>
+	$(document).ready(function(){
+		$('.cardBtn').click(function(){
+			if($(this).hasClass('active')){
+				$(this).removeClass('active')
+				$(this).html('지난 카드청구서 닫기').parents('.card_toggleWrap').addClass('active')
+				$(this).attr('aria-expanded',true);
+				$('.boxWrapShadow').stop().slideDown();
+			}
+		else{
+				$(this).addClass('active')
+				$(this).html('지난 카드청구서 보기').parents('.card_toggleWrap').removeClass('active')
+				$(this).attr('aria-expanded',false);
+				$('.boxWrapShadow').stop().slideUp();
+		}
+		})
+	})
+</script>
+</body>
+</html>

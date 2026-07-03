@@ -1,0 +1,443 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>소비력 분석 | 카드 리포트 | 소비</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">소비력 분석</a></h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 소비력 분석 ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<h2 class="defTit">나와 비슷한 신용도를 가진<br>비교 그룹으로 분석해봤어요</h2>
+		<!-- -------------------------------------- -->
+		<!-- [상단영역] 비교 그룹 영역 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap t1">
+			<h3 class="defSubTit1"><span>김농협</span>님의 비교 그룹은?
+				<div class="tooltipWrap">
+					<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">비교그룹 안내툴팁</span></button>
+					<div class="tooltipCont">
+						<div class="msaeTool">
+							<ul class="popBul">
+								<li>비교 그룹 산출이 불가한 경우 전체 고객과 비교합니다.</li>
+							</ul>
+						</div>
+						<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">비교그룹 안내툴팁 닫기</span></button>
+					</div>
+				</div>
+			</h3>
+
+			<!-- [CASE1] -->
+			<div class="areaInfo4">
+				<dl class="ic1">
+					<dt>나이</dt>
+					<dd>30대</dd>
+				</dl>
+				<dl class="ic2">
+					<dt>신용</dt>
+					<dd>매우 높음</dd>
+				</dl>
+				<dl class="ic3">
+					<dt>월 소득</dt>
+					<dd>높음</dd>
+				</dl>
+			</div>
+
+			<!-- [CASE2] -->
+			<div class="areaInfo4">
+				<dl class="ic1">
+					<dt>나이</dt>
+					<dd>전체</dd>
+				</dl>
+				<dl class="ic2">
+					<dt>신용</dt>
+					<dd>-</dd>
+				</dl>
+				<dl class="ic3">
+					<dt>월 소득</dt>
+					<dd>-</dd>
+				</dl>
+			</div>
+			<!-- // -->
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTION] 월 평균 카드 결제 금액 영역 -->
+		<!-- -------------------------------------- -->
+		<div class="infoCont2">
+			<h3 class="tit">월 평균 카드 결제 금액</h3>
+			<!-- // -->
+			<div class="tooltipWrap">
+				<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">월 평균 카드 결제 금액 이란? 툴팁 열기</span></button>
+				<div class="tooltipCont">
+					<div class="msaeTool">
+						<ul class="popBul">
+							<li>월 평균 카드 결제 금액은 측정일로부터 12개월 평균 사용치 입니다.</li>
+							<li>최근 1년 카드 평균 결제금액에는 일시불(신용),일시불(체크), 할부,현금서비스가 해당됩니다.</li>
+						</ul>
+					</div>
+					<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+				</div>
+			</div>
+
+			<!-- [CASE] (+) 일 경우 -->
+			<p class="con">
+				카드 결제금액이<br>
+				비교그룹보다 <strong><span class="dataValue">1,344</span><em class="won">만원</em></strong> 많아요
+			</p>
+			<!-- [CASE] (-) 일 경우 -->
+			<p class="con">
+				카드 결제금액이<br>
+				비교그룹보다 <strong><span class="dataValue">1,344</span><em class="won">만원</em></strong> 적어요
+			</p>
+			<!-- [CASE] (=)같을 경우 -->
+			<p class="con">
+				카드 결제금액이<br>
+				비교그룹과 같아요
+			</p>
+			<!-- // -->
+			<div class="info2">
+				<dl>
+					<dt>내 카드 결제 금액</dt>
+					<dd><span class="dataValue">1억 234</span><em class="won">만원</em></dd>
+					<!-- 차트영역 -->
+					<!-- <dd class="areaChart1" style="height:44px;"><div class="chart"></div></dd> -->
+					<!-- 차트 : 클릭 이벤트 하단 스크립트 샘플 참고 -->
+					<dd class="areaChart2 t4" data-chart="wrap">
+						<ul>
+							<!-- 일시불(신용) -->
+							<li class="item1" role="button" tabindex="0" aria-expanded="false" style="--el-value:40%">  <!-- [D] 차트 % : --el-value:차트% -->
+								<div class="chart"></div>
+								<div class="info" data-chart="cont">
+									<span>일시불(신용)</span>
+									<span>0,000,000,000원</span>
+								</div>
+							</li>
+							<!-- 일시불(체크) -->
+							<li class="item2" role="button" tabindex="0" aria-expanded="false" style="--el-value:30%">
+								<div class="chart"></div>
+								<div class="info" data-chart="cont">
+									<span>일시불(체크)</span>
+									<span>0,000,000,000원</span>
+								</div>
+							</li>
+							<!-- 할부 -->
+							<li class="item3" role="button" tabindex="0" aria-expanded="false" style="--el-value:20%">
+								<div class="chart"></div>
+								<div class="info" data-chart="cont">
+									<span>할부</span>
+									<span>0,000,000,000원</span>
+								</div>
+							</li>
+							<!-- 현금서비스 -->
+							<li class="item4" role="button" tabindex="0" aria-expanded="false" style="--el-value:10%">
+								<div class="chart"></div>
+								<div class="info" data-chart="cont">
+									<span>현금서비스</span>
+									<span>0,000,000,000원</span>
+								</div>
+							</li>
+							<!-- // -->
+						</ul>
+					</dd>
+					<!-- // -->
+				</dl>
+				<!-- [CASE] 0원일 경우 -->
+				<dl>
+					<dt>내 카드 결제 금액</dt>
+					<dd><strong class="dataValue">0</strong><em class="won">원</em></dd>
+					<dd class="areaChart2 t4" data-chart="wrap"></dd>
+				</dl>
+				<!-- // -->
+				<dl>
+					<dt>비교그룹 카드 결제 금액</dt>
+					<dd><span class="dataValue">1억 2,340</span><em class="won">만원</em></dd>
+					<!-- 차트영역 : 클릭 이벤트 하단 스크립트 샘플 참고 -->
+					<dd class="areaChart2 t4" data-chart="wrap">
+						<ul>
+							<!-- 일시불(신용) -->
+							<li class="item5" role="button" tabindex="0" aria-expanded="false" style="--el-value:40%">  <!-- [D] 차트 % : --el-value:차트% -->
+								<div class="chart"></div>
+								<div class="info" data-chart="cont">
+									<span>일시불(신용)</span>
+									<span>0,000,000,000원</span>
+								</div>
+							</li>
+							<!-- 일시불(체크) -->
+							<li class="item6" role="button" tabindex="0" aria-expanded="false" style="--el-value:30%">
+								<div class="chart"></div>
+								<div class="info" data-chart="cont">
+									<span>일시불(체크)</span>
+									<span>0,000,000,000원</span>
+								</div>
+							</li>
+							<!-- 할부 -->
+							<li class="item7" role="button" tabindex="0" aria-expanded="false" style="--el-value:20%">
+								<div class="chart"></div>
+								<div class="info" data-chart="cont">
+									<span>할부</span>
+									<span>0,000,000,000원</span>
+								</div>
+							</li>
+							<!-- 현금서비스 -->
+							<li class="item8" role="button" tabindex="0" aria-expanded="false" style="--el-value:10%">
+								<div class="chart"></div>
+								<div class="info" data-chart="cont">
+									<span>현금서비스</span>
+									<span>0,000,000,000원</span>
+								</div>
+							</li>
+							<!-- // -->
+						</ul>
+					</dd>
+					<!-- // -->
+				</dl>
+			</div>
+			<!-- // -->
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTION] 월 평균 사용 카드 수 비교 영역 -->
+		<!-- -------------------------------------- -->
+		<div class="infoCont2 img1">
+			<h3 class="tit">월 평균 사용 카드 수</h3>
+			<!-- // -->
+			<div class="tooltipWrap">
+				<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">월 평균 사용 카드 수 란? 툴팁 열기</span></button>
+				<div class="tooltipCont">
+					<div class="msaeTool">
+						<ul class="popBul">
+							<li>월 평균 사용카드 수는 측정일로부터 12개월 평균 사용치 입니다.</li>
+						</ul>
+					</div>
+					<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+				</div>
+			</div>
+
+			<!-- [CASE] (+) 일 경우 -->
+			<p class="con">
+				사용 카드 수는 <span>2개</span>,<br>
+				비교그룹보다 <strong>1.6개</strong> 많아요
+			</p>
+			<!-- [CASE] (-) 일 경우 -->
+			<p class="con">
+				사용 카드 수는 <span>2개</span>,<br>
+				비교그룹보다 <strong>1.6개</strong> 적어요
+			</p>
+			<!-- [CASE] (=)같을 경우 -->
+			<p class="con">
+				사용 카드 수는 <span>2개</span>,<br>
+				비교그룹과 같아요
+			</p>
+			<!-- // -->
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTION] 카드 값 비교 영역 -->
+		<!-- -------------------------------------- -->
+		<div class="infoCont2">
+			<h3 class="tit">나의 카드값은</h3>
+			<!-- // -->
+			<div class="tooltipWrap">
+				<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">나의 카드값 이란? 툴팁 열기</span></button>
+				<div class="tooltipCont">
+					<div class="msaeTool">
+						<ul class="popBul">
+							<li>나의 카드값은 측정일로부터 12개월 평균 사용치 입니다.</li>
+						</ul>
+					</div>
+					<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+				</div>
+			</div>
+			<!-- // -->
+
+			<!-- [CASE1] 음수(-) 만원 이상일 경우 -->
+			<p class="con">
+				<span class="sub">유사소득군의 동일 연령대인</span>
+				<span>30대</span> 평균보다 <strong class="case1"><span class="dataValue">30</span><em class="won">만원</em></strong> 적어요<span class="emoji"><img src="../../images/emoji/img_emoji_0202.png" alt=""></span>
+			</p>
+
+			<!-- [CASE2] 양수, 음수(+,-) 만원 미만일 경우 -->
+			<p class="con">
+				<span class="sub">유사소득군의 동일 연령대인</span>
+				<span>30대</span> 평균과 비슷해요<span class="emoji"><img src="../../images/emoji/img_emoji_0202.png" alt=""></span>
+			</p>
+
+			<!-- [CASE3] 양수(+) 만원 이상일 경우 -->
+			<p class="con">
+				<span class="sub">유사소득군의 동일 연령대인</span>
+				<span>30대</span> 평균보다 <strong class="case2"><span class="dataValue">120</span><em class="won">만원</em></strong> 많아요<span class="emoji"><img src="../../images/emoji/img_emoji_0205.png" alt=""></span>
+			</p>
+
+			<!-- 차트영역 -->
+			<div class="areaChart1" style="height:130px;"><div class="chart"><div class="guide_empty">차트가 들어갑니다.</div></div></div>
+			<!-- // -->
+			
+			<div class="info1">
+				<dl>
+					<dt><span>30대</span> 또래 기준으로</dt>
+					<dd>
+						월 <strong><span class="dataValue">234</span><em class="won">만원</em></strong> 소비 하는 게 적절해요!
+						<!-- 툴팁 -->
+						<div class="tooltipWrap">
+							<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">월 권장 소비액 툴팁 열기</span></button>
+							<div class="tooltipCont">
+								<div class="msaeTool">
+									<ul class="popBul">
+										<li>분기별로 소비금액을 산출 하고 있어, 3개월 후 적정금액의 변화를 확인 할 수 있습니다.</li>
+									</ul>
+								</div>
+								<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+							</div>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+			</div>
+			<!-- // -->
+		</div>
+
+		<!--  ### [CASE4] 데이터 오류 ### -->
+		<div class="infoCont2">
+			<!-- // -->
+			<div class="mes">
+				<p>NICE의 정보를 불러오는 중에<br>알 수 없는 오류가 발생했어요</p>
+				<div class="btns1"><a href="javascript:;" class="link arrGreen"><span>다시 불러오기</span></a></div>
+			</div>
+			<!-- // -->
+
+			<h3 class="tit">나의 카드값은</h3>
+			<div class="tooltipWrap">
+				<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">나의 카드값은 툴팁 열기</span></button>
+				<div class="tooltipCont">
+					<div class="msaeTool">
+						<ul class="popBul">
+							<li>나의 카드값은 측정일로부터 12개월 평균 사용치 입니다.</li>
+						</ul>
+					</div>
+					<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+				</div>
+			</div>
+			<dl class="con">
+				<dt><span>30대</span> 또래 기준으로</dt>
+				<dd>
+					월 <strong><span class="dataValue">234</span><em class="won">만원</em></strong> 소비 하는 게 적절해요!
+					<!-- 툴팁 -->
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">월 권장 소비액 툴팁 열기</span></button>
+						<div class="tooltipCont">
+							<div class="msaeTool">
+								<ul class="popBul">
+									<li>분기별로 소비금액을 산출 하고 있어, 3개월 후 적정금액의 변화를 확인 할 수 있습니다.</li>
+								</ul>
+							</div>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+					<!-- // -->
+				</dd>
+			</dl>
+			<div class="areaChart1" style="height:130px;"><div class="chart"><div class="guide_empty">차트가 들어갑니다.</div></div></div>
+			<div class="info1">
+				<p>
+					<span class="sub">유사소득군의 동일 연령대인</span>
+					<span>30대</span> 평균보다 <strong class="case1"><span class="dataValue">30</span><em class="won">만원</em></strong> 적어요<span class="emoji"><img src="../../images/emoji/img_emoji_0202.png" alt=""></span>
+				</p>
+			</div>
+		</div>
+		<!-- ### // ### -->
+		
+		<!-- -------------------------------------- -->
+		<!-- [SECTION] 최근3년 카드 결제금액 영역 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap t1">
+			<h3 class="defSubTit1">과거의 월 평균 결제금액</h3>
+			<!-- 차트영역 -->
+			<div class="areaChart1" style="height:200px;"><div class="chart"><div class="guide_empty">차트가 들어갑니다.</div></div></div>
+			<!-- 범례 -->
+			<div class="graphAddEx">
+				<ul class="ty01 item2">
+					<li class="bl02">신용</li>
+					<li class="bl09">체크</li>
+				</ul>
+			</div>
+			<!-- // -->
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [배너영역] 신용점수 연결 배너 -->
+		<!-- -------------------------------------- -->
+		<div class="areaBanner2 t1">
+			<a href="javascript:;" role="button" class="img5" title="신용점수 올리기 화면 바로가기">
+				<span>지금 나의 신용점수는?</span>
+				<span>신용점수 확인하고 점수 올리기</span>
+			</a>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [하단영역] 알아두세요 -->
+		<!-- -------------------------------------- -->
+		<div class="info_area">
+			<strong class="info_area_title">알아두세요</strong>
+			<ul class="listBul disc">
+				<li>소비력 분석 서비스의 모든 내용은 NICE평가정보(주)의 데이터로 제공하며 자세한 문의는 NICE지키미 사이트 또는 NICE고객센터(1588-2486)으로 문의해주세요.</li>
+			</ul>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [플로팅 버튼] 최상단 -->
+		<!-- -------------------------------------- -->
+		<button type="button" class="goTopBtn"><span class="blind">최상단으로 이동</span></button>
+		<!-- -------------------------------------- -->
+	</div>
+	<!-- ###################################### -->
+</div>
+<!-- ###################################### -->
+<!-- ### [샘플] 스크립트 ### -->
+<!-- ###################################### -->
+<script>
+	//차트 클릭 이벤트 샘플 : 상세정보 노출
+	$(document).off('click.chart').on('click.chart','[data-chart="wrap"] [role="button"]', function(){
+		var _chart_cont = $(this).find('[data-chart="cont"]'); //오픈되는 영역
+		
+		//접근성
+		if($(this).attr('aria-expanded') == 'true') $(this).attr('aria-expanded',false);
+		else $(this).attr('aria-expanded',true).siblings().attr('aria-expanded',false);
+
+		//초기화
+		$(this).siblings().find('[data-chart="cont"]').removeClass('active');
+
+		//오픈
+		if(_chart_cont.hasClass('active')) _chart_cont.removeClass('active');
+		else _chart_cont.addClass('active')
+	})
+</script>
+<!-- ###################################### -->
+</body>
+</html>

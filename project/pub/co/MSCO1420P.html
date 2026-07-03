@@ -1,0 +1,181 @@
+   <!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>전체 약관</title>
+<script src="../pub-assets/js/head.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		fullLayerPop()
+	});
+</script>
+
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<h1><a href="javascript:;" role="text">전체 약관</a></h1>
+			<a href="javascript:;" class="btnEtc">나가기</a>
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+		</div>
+		<!-- //container -->
+	</div>
+
+	<!-- 팝업시작 -->
+	<div class="nhasset popWrap fullLayerPop">
+		<div class="popInner">
+			<h1 area-hidden="true">
+				<!-- 약관 타이틀 영역 -->
+				<!-- <div thumbsSlider="" class="swiper termTitleArea">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="termMainTitle">첫번째 약관</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="termMainTitle">두번째 약관</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="termMainTitle">세번째 약관</div>
+						</div> 
+					</div>
+				</div> -->
+				<!-- //약관 타이틀 영역 -->
+			</h1>
+			<div class="popCont termPop p0">
+				<!-- <div style="height:50px;background: yellow;">이전 약관선택</div> -->
+				<div class="termsWrap swiper-container prevNext swiper termContentsArea">
+				<!-- <div class="termsWrap swiper mySwiper2"> -->
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="term_graph">
+								<div class="term_graph1"></div>
+							</div>
+							<div class="termLayout">
+								<div class="termInfo"> <!-- [2023-01-25] .termInfo 추가 -->
+									<div class="term_cont pt20">
+										<p class="popTermsTxt">선택 약관은 ‘요약동의서’와 ‘전체동의서’를 제공합니다.<br />동의서 하나를 선택 후 동의해주세요.</p>
+									</div>
+									<div class="term_cont">
+										<button type="button" class="accConnect">전체동의서 보기</button>
+									</div>
+								</div>
+
+								<div class="term_box_wrap">
+									<iframe frameborder="0" width="100%" height="100%" src="../../terms/3051_ms_agreement.html"></iframe> <!-- [2023-01-25] iframe height 100으로 확인 --> 
+								</div>
+
+							</div>
+						</div><!-- //.swiper-slide -->
+						<div class="swiper-slide">
+							<div class="term_graph">
+								<div class="term_graph2"></div>
+							</div>
+							<div class="termLayout">
+								<div class="termInfo"><!-- [2023-01-25] .termInfo 추가 -->
+									<div class="term_cont mt20">
+										<p class="popTermsTxt">선택 약관은 ‘요약동의서’와 ‘전체동의서’를 제공합니다.<br />동의서 하나를 선택 후 동의해주세요.</p>
+									</div>
+									<div class="term_cont">
+										<button type="button" class="accConnect">요약동의서 보기</button>
+									</div>
+								</div>
+								<div class="term_box_wrap">
+									요약동의서 영역
+								</div>
+							</div>
+						</div><!-- //.swiper-slide -->
+						<div class="swiper-slide">
+							<div class="term_graph">
+								<div class="term_graph3"></div>
+							</div>
+							<div class="termLayout">
+								<div class="term_cont mt20">
+									<p class="popTermsTxt">선택 약관은 ‘요약동의서’와 ‘전체동의서’를 제공합니다.<br />동의서 하나를 선택 후 동의해주세요.</p>
+								</div>
+								<div class="term_cont">
+									<button type="button" class="accConnect">전체동의서 보기</button>
+								</div>
+								<div class="term_box_wrap">
+									요약동의서 영역
+								</div>
+							</div>
+						</div><!-- //.swiper-slide -->
+					</div>
+					<div class="swiper-pagination"></div>
+					<a class="swiper-button-next" href="javascript:;" tabindex="0" role="button" aria-label="다음" aria-disabled="false">다음</a>
+					<a class="swiper-button-prev" href="javascript:;" tabindex="0" role="button" aria-label="이전" aria-disabled="false">이전</a>
+				</div>
+			
+			</div>
+
+			<div class="popBtnWrap">
+				<div class="popBtn">
+					<a href="javascript:;" class="confirmBtn" role="button">전체동의</a>
+				</div>
+				<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+			</div>
+		</div>
+	</div>
+	<!-- // 팝업 끝 -->
+
+
+
+
+<script>
+	// var swiper = new Swiper(".termTitleArea", {
+	// 	spaceBetween: 10,
+	// 	slidesPerView: 1,
+	// 	observer: true,
+	// 	observeParents: true,
+	// 	effect: "fade",
+	// 	touchRatio: 0,	//touch move 비활성
+	// 	freeMode: true,
+	// 	watchSlidesProgress: true,
+	// });
+	var swiper2 = new Swiper(".termContentsArea", {
+		initialSlide :0, //시작슬라이드 번호 0부터 시작
+		spaceBetween: 10,
+		observer: true,
+		observeParents: true,
+		//autoHeight : true,
+		// pagination: {
+		// 	el: ".swiper-pagination",
+		// },
+		pagination: false,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		// thumbs: {
+		// 	swiper: swiper,
+		// },
+	});
+	
+	$(function() {
+		termIframeH(); //[2023-01-25] ios iframe 스크롤 안되는 버그로 추가
+	});
+
+</script>
+
+</body>
+</html>

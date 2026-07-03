@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>[P] 거래내역 저장</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		fullLayerPop();
+	})
+</script>
+</head>
+<body>
+<div class="wrapper nhasset"><!-- 바닥페이지 --></div>
+
+<!-- ###################################### -->
+<!-- ### [팝업] 거래내역 저장 ### -->
+<!-- ###################################### -->
+<div class="nhasset popWrap fullLayerPop">
+	<div class="popInner">
+		<h1>거래내역 저장</h1>
+		<div class="popCont grayPop">
+			<p class="defTit t1">
+				<strong>거래내역 조건을 선택해주세요</strong>
+				<span>선택한 조건으로 저장됩니다.</span>
+			</p>
+
+			<div class="boxTypeWrap">
+				<!-- -------------------------------------- -->
+				<!-- [선택영역] -->
+				<!-- -------------------------------------- -->
+				<div class="formWrap t1">
+					<div class="titListBox">
+						<ul>
+							<!-- [항목하나] -->
+							<li>
+								<div class="formTitN"><strong>거래기간</strong></div>
+								<div class="formTxt">최근 1년 이내, 최대 3개월까지 조회 가능</div>
+								<div class="calendarForm">
+									<div class="cal">
+										<div class="inputList">
+											<input type="text" value="2023.06.26" title="조회 시작일" placeholder="시작일선택" readonly="readonly">
+											<a href="javascript:;" class="btnCalendar" title="시작일 날짜선택" role="button"><span class="blind">날짜선택</span></a>
+										</div>
+									</div>
+									<span class="symbol">~</span>
+									<div class="cal">
+										<div class="inputList">
+											<input type="text" value="2023.07.26" title="조회 종료일" placeholder="종료일선택" readonly="readonly">
+											<a href="javascript:;" class="btnCalendar" title="종료일 날짜선택" role="button"><span class="blind">날짜선택</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="roundChkWrap t1">
+									<ul>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="MSCS2700P1" aria-label="조회기간선택(1주일)" id="MSCS2700P11">
+												<label for="MSCS2700P11" aria-hidden="true">1주일</label>
+											</span>
+										</li>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="MSCS2700P1" aria-label="조회기간선택(1개월)" id="MSCS2700P12" checked>
+												<label for="MSCS2700P12" aria-hidden="true">1개월</label>
+											</span>
+										</li>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="MSCS2700P1" aria-label="조회기간선택(3개월)" id="MSCS2700P13" >
+												<label for="MSCS2700P13" aria-hidden="true">3개월</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<!-- [항목하나] -->
+							<li>
+								<hr class="divLine3" aria-hidden="true">
+								<div class="formTitN">
+									<strong>거래구분</strong>
+									<div class="tooltipWrap">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">거래구분 안내 툴팁 열기</span><!-- [접근성_2024] .blind --></button>
+										<div class="tooltipCont">
+											<div class="msaeTool">
+												<ul class="popBul">
+													<li>페이결제 : 네이버, 카카오 결제는 페이결제에 포함됩니다.</li>
+													<li>거래 내역은 업권별 중복 제거된 내역으로 제공됩니다. (ex.네이버-계좌간편결제인 경우 페이결제로 제공되며 해당 결제의 계좌 거래내역은 중복 제외 처리)</li>
+												</ul>
+											</div>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="boxRadio wrapType2">
+									<div class="boxRadioInn">
+										<span>
+											<input type="checkbox" name="MSCS2700P2" aria-label="거래구분(신용카드)" id="MSCS2700P21" checked>
+											<label for="MSCS2700P21" aria-hidden="true">신용카드</label>
+										</span>
+									</div>
+									<div class="boxRadioInn">
+										<span>
+											<input type="checkbox" name="MSCS2700P2" aria-label="거래구분(체크카드)" id="MSCS2700P22" checked>
+											<label for="MSCS2700P22" aria-hidden="true">체크카드</label>
+										</span>
+									</div>
+									<div class="boxRadioInn">
+										<span>
+											<input type="checkbox" name="MSCS2700P2" aria-label="거래구분(페이결제)" id="MSCS2700P23" checked>
+											<label for="MSCS2700P23" aria-hidden="true">페이결제</label>
+										</span>
+									</div>
+									<div class="boxRadioInn">
+										<span>
+											<input type="checkbox" name="MSCS2700P2" aria-label="거래구분(선불카드)" id="MSCS2700P24" checked>
+											<label for="MSCS2700P24" aria-hidden="true">선불카드</label>
+										</span>
+									</div>
+									<div class="boxRadioInn">
+										<span>
+											<input type="checkbox" name="MSCS2700P2" aria-label="거래구분(계좌)" id="MSCS2700P25" checked>
+											<label for="MSCS2700P25" aria-hidden="true">계좌</label>
+										</span>
+									</div>
+									<div class="boxRadioInn">
+										<span>
+											<input type="checkbox" name="MSCS2700P2" aria-label="거래구분(현금)" id="MSCS2700P26" checked>
+											<label for="MSCS2700P26" aria-hidden="true">현금</label>
+										</span>
+									</div>
+								</div>
+							</li>
+							<!-- [항목하나] -->
+							<li>
+								<div class="check">
+									<input type="checkbox" id="MSCS2700P3" class="chekTypeOther">
+									<label class="check" for="MSCS2700P3">숨긴내역 포함</label>
+								</div>
+							</li>
+							<!-- [//] -->
+						</ul>
+					</div>
+				</div>
+
+				<!-- -------------------------------------- -->
+				<!-- [안내문구] -->
+				<!-- -------------------------------------- -->
+				<div class="grayBox t1">
+					<ul class="listBul disc">
+						<li><strong>거래내역 저장 서비스는 고객 편의를 위해 제공되는 서비스로 다운로드한 자료를 법적 자료로 사용하실 수 없습니다.</strong></li>
+					</ul>
+				</div>
+				<!-- -------------------------------------- -->
+			</div>
+
+		</div>
+		<div class="popBtnWrap">
+			<div class="popBtn">
+				<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">저장</a>
+				<!-- <a href="javascript:;" class="confirmBtn disabled" onclick="popClose(this);return false;" role="button" aria-disabled="true">저장</a> 비활성화  -->
+			</div>
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+		</div>
+	</div>
+</div>
+<!-- ###################################### -->
+</body>
+</html>

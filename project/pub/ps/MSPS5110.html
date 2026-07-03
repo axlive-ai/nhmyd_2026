@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>요청내역조회</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>요청내역 상세</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<div class="boxTypeWrap">
+			<div class="agencyDetail">
+				<!-- <span class="imgWrap A1AABG0000"><span class="bankName">농협은행 주식회사 농협은행 주식회사</span></span> -->
+				<span class="imgWrap"> <!-- [2022-11-21] 사보현 : 로고 공통 이미지로 변경 -->
+					<img src="../../images/logos/AABG0000.png" alt="농협은행 로고" class="imgLogo">
+					<span class="bankName">농협은행 주식회사 농협은행 주식회사</span>
+				</span>
+			</div>
+		</div>
+		<div class="boxTypeWrap pt0">
+			<div class="formWrap mt20">
+				<div class="inputList">
+					<a href="javascript:;" title="관련대출 선택" aria-haspopup="true" onclick="slidePopOption();return false;">
+						<span class="selectValue placeholder">YYYY.MM.DD ~ YYYY.MM.DD</span>
+						<span class="selectBtn"></span>
+					</a>
+					<select name="" title="선택해주세요">
+						<option value=""></option>
+					</select>
+				</div>
+			</div>
+			<div class="formWrap selectAll pd0">
+				<div class="total">
+					<div class="formHolder check">
+						<input type="checkbox" id="type_all01" class="chekTypeOther">
+						<label class="check" for="type_all01"> 자산연결 철회 및 기간경과 건 제외</label>
+					</div>
+				</div>
+				<div class="cont">
+					<div class="dataDiscList mt30">
+						<dl>
+							<dt>제공요청일</dt>
+							<dd>YYYY.MM.DD</dd>
+						</dl>
+						<dl>
+							<dt>제공종료일</dt>
+							<dd>YYYY.MM.DD</dd>
+						</dl>
+						<dl>
+							<dt>제공구분</dt>
+							<dd>정기(1주)</dd>
+						</dl>
+						<dl>
+							<dt>제공목적</dt>
+							<dd>전송요구를 통한 본인신용정보 통합<br />조회, 데이터분석 서비스의 이용</dd>
+						</dl>
+						<dl>
+							<dt>전송철회일</dt>
+							<dd>-</dd>
+						</dl>
+						<dl>
+							<dt>제공대상</dt>
+							<dd>
+								<ul>
+									<li>123-1234-1234-12</li>
+									<li>123-1234-1234-12</li>
+									<li>123-1234-1234-12</li>
+									<li>123-1234-1234-12</li>
+									<li>123-1234-1234-12</li>
+								</ul>
+								<!-- [2022-02-07] 계좌 5개 초과인 경우 토글 추가 -->
+								<div class="toggleWrap linkTypeToggle">
+									<div class="toggleCont" style="display: none;">
+										<ul>
+											<li>123-1234-1234-12</li>
+											<li>123-1234-1234-12</li>
+										</ul>
+									</div>
+									<a href="javascript:;" class="linkType3 toggleBtn toggleTxt13">펼치기</a>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="cont bdt mt20">
+					<div class="dataDiscList mt20">
+						<dl>
+							<dt>제공요청일</dt>
+							<dd>YYYY.MM.DD</dd>
+						</dl>
+						<dl>
+							<dt>제공종료일</dt>
+							<dd>YYYY.MM.DD</dd>
+						</dl>
+						<dl>
+							<dt>제공구분</dt>
+							<dd>정기(1주)</dd>
+						</dl>
+						<dl>
+							<dt>제공목적</dt>
+							<dd>전송요구를 통한 본인신용정보 통합<br />조회, 데이터분석 서비스의 이용</dd>
+						</dl>
+						<dl>
+							<dt>전송철회일</dt>
+							<dd>-</dd>
+						</dl>
+						<dl>
+							<dt>제공대상</dt>
+							<dd>
+								<ul>
+									<li>123-1234-1234-12</li>
+									<li>123-1234-1234-12</li>
+									<li>123-1234-1234-12</li>
+									<li>123-1234-1234-12</li>
+									<!-- <li>123-1234-1234-12</li> -->
+								</ul>
+								<!-- <div class="toggleWrap linkTypeToggle">
+									<div class="toggleCont" style="display: none;">
+										<ul>
+											<li>123-1234-1234-12</li>
+											<li>123-1234-1234-12</li>
+										</ul>
+									</div>
+									<a href="javascript:;" class="linkType3 toggleBtn toggleTxt13">펼치기</a>
+								</div> -->
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="cont bdt mt20">
+					<div class="dataDiscList mt20">
+						<dl>
+							<dt>제공요청일</dt>
+							<dd>YYYY.MM.DD</dd>
+						</dl>
+						<dl>
+							<dt>제공종료일</dt>
+							<dd>YYYY.MM.DD(기간경과)</dd>
+						</dl>
+						<dl>
+							<dt>제공구분</dt>
+							<dd>정기(1주)</dd>
+						</dl>
+						<dl>
+							<dt>제공목적</dt>
+							<dd>전송요구를 통한 본인신용정보 통합<br />조회, 데이터분석 서비스의 이용</dd>
+						</dl>
+						<dl>
+							<dt>전송철회일</dt>
+							<dd>-</dd>
+						</dl>
+						<dl>
+							<dt>제공대상</dt>
+							<dd>
+								<ul>
+									<li>123-1234-1234-12</li>
+									<li>123-1234-1234-12</li>
+									<li>123-1234-1234-12</li>
+									<li>123-1234-1234-12</li>
+									<li>123-1234-1234-12</li>
+								</ul>
+								<div class="toggleWrap linkTypeToggle">
+									<div class="toggleCont" style="display: none;">
+										<ul>
+											<li>123-1234-1234-12</li>
+											<li>123-1234-1234-12</li>
+											<li>123-1234-1234-12</li>
+											<li>123-1234-1234-12</li>
+											<li>123-1234-1234-12</li>
+										</ul>
+									</div>
+									<a href="javascript:;" class="linkType3 toggleBtn toggleTxt13">펼치기</a>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="listMoreBtn">
+				<a href="javascript:;" title="항목 더보기">더보기</a>
+			</div>
+		</div>
+		<div class="nolistBox">
+			<div class="noResultWrap"><p>조회 내역이 없습니다.</p></div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

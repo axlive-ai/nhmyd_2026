@@ -1,0 +1,146 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 이용약관</title>
+<script src="../pub-assets/js/head.js"></script> 
+<script>
+	$(document).ready(function(){
+		fullLayerPop();
+	})
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">약관</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+		</div>
+		<!-- //container -->
+
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>서비스 이용약관</h1>
+				<div class="popCont termPop p0">
+					<div class="selectDivisionFlex">
+						<div class="inner">
+							<ul>
+								<li>
+									<div class="stList">
+										<a href="javascript:;" title="서비스이용약관 선택팝업" onclick="slidePopOption();return false;"> 
+											<span class="selectValue">2022.06.01 시행</span>
+											<span class="selectBtn">버튼</span>
+										</a>
+										<select name="" title="선택해주세요">
+											<option value=""></option>
+										</select>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="termsWrap swiper-container prevNext swiper termContentsArea">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="termLayout">
+									<div class="term_cont pt20">
+										약관 내용1
+									</div>
+								</div>
+							</div><!-- //.swiper-slide -->
+							<div class="swiper-slide">
+								<div class="termLayout">
+									<div class="term_cont pt20">
+										약관 내용1
+									</div>
+								</div>
+							</div><!-- //.swiper-slide -->
+							
+						</div>
+						<div class="swiper-pagination"></div>
+						<a class="swiper-button-next" href="javascript:;" tabindex="0" role="button" aria-label="다음" aria-disabled="false">다음</a>
+						<a class="swiper-button-prev" href="javascript:;" tabindex="0" role="button" aria-label="이전" aria-disabled="false">이전</a>
+					</div>
+
+
+				</div>
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<a href="javascript:;" class="confirmBtn" role="button">확인</a>
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+
+		<!-- 셀렉트 팝업 -->
+		<div class="nhasset popWrap slidePopOption">
+			<div class="dim"></div> <!-- 팝업 dim 처리 -->
+			<div class="popInner">
+				<h1>선택해주세요</h1>
+				<!-- 팝업컨텐츠 -->
+				<div class="popCont">
+					<ul class="selectList">
+						<li class="active"><a href="javascript:;" title="2021.06.01 시행 선택하고 해당 창을 닫습니다.">2021.06.01 시행</a></li>
+						<li class=""><a href="javascript:;" title="2020.06.01 시행 선택하고 해당 창을 닫습니다.">2021.06.01 시행</a></li>
+					</ul>
+				</div>
+				<!-- 팝업컨텐츠 -->
+
+				<!-- 팝업 버튼영역  -->
+				<div class="popBtnWrap">
+					<!-- <div class="popBtn">
+						<a href="javascript:;" onclick="popClose(this);return false;">취소</a>
+						<a href="javascript:;" class="confirmBtn">확인</a>
+					</div> -->
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다."><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+				<!-- // 팝업 버튼영역 -->
+			</div>
+		</div>
+		<!-- //셀렉트 팝업 -->
+
+	</div>
+<script>
+	var swiper2 = new Swiper(".termContentsArea", {
+		initialSlide :0, //시작슬라이드 번호 0부터 시작
+		spaceBetween: 10,
+		observer: true,
+		observeParents: true,
+		//autoHeight : true,
+		pagination: {
+			el: ".swiper-pagination",
+		},
+
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		}
+	});
+</script>
+</body>
+</html>

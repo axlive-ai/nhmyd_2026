@@ -1,0 +1,155 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산현황</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+    $(document).ready(function(){
+        slidePopOption();
+    })  
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">자산등록</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+		</div>
+		<!-- //container -->
+
+		<!-- 계좌별칭 설정 팝업 -->
+		<div class="nhasset popWrap slidePopOption">
+            <div class="dim"></div>
+            <div class="popInner">
+                <h1>맞춤상품추천</h1>
+                <div class="popCont">    
+					<div class="transfer">
+						<div class="boxTypeWrap bgType03 pt0 mt0">
+							<h2 class="prodListTit img05">
+								만 19세 ~ 만 34세인 고객님께,<br>혜택은 많이! 금리는 높게! <!-- [2023-01-27] 문구수정 -->
+							</h2>
+							<p class="subTxt4">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+							<ul class="prodListWrap">
+								<li>
+									<a href="javascript:;">
+										<div class="prodRecomWrap">
+											<!-- <span class="tagLabel">신용</span> -->
+											<strong class="prodTit">NH1934우대통장</strong>
+											<em class="prodRecommInfo">조건유지 시 나의 예상금리</em>
+											<div class="prodRecomVal dsf">
+												<span class="dataValueWrap">
+													<strong class="dataValue">1.80</strong><em class="per">%</em> <!-- [2023-01-27] 수정 -->
+												</span>
+												<div class="prodVal ty01">
+													기본<span class="dataValue">1.76</span><em class="per">%</em>(연/세전)
+												</div>
+											</div>
+										</div>
+
+										<!-- [2023-01-27] 수정 -->
+										<!-- <div class="prodInfoWrap">
+											<span class="prodValue">나의 우대금리 적용 항목</span>
+											<span class="hashWrap3">
+												<em class="hastag">급여이체,</em> <em class="hastag">마케팅동의,</em><em class="hastag">월평균 2회 비대면이체,</em> 등
+											</span>
+										</div> -->
+										<div class="prodInfoWrap">	
+											<span class="prodValue">예상우대금리(1.8%p)</span>
+											<span class="prodValue">급여이체, 마케팅동의, 월평균 2회 비대면 이체등</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+										<div class="prodRecomWrap">
+											<!-- <span class="tagLabel">담보</span> -->
+											<strong class="prodTit">NH1934월복리적금</strong>
+											<em class="prodRecommInfo">조건유지 시 나의 예상 금리</em>
+											<div class="prodRecomVal dsf">
+												<span class="dataValueWrap">
+													<strong class="dataValue">1.80</strong><em class="per">%</em> <!-- [2023-01-27] 수정 -->
+												</span>
+												<div class="prodVal ty01">
+													기본<span class="dataValue">1.76</span><em class="per">%</em>(연/세전)
+												</div>
+											</div>
+										</div>
+										<!-- [2023-01-27] 수정 -->
+										<!-- <div class="prodInfoWrap">
+											<span class="prodValue">나의 우대금리 적용 항목</span>
+											<span class="hashWrap3">
+												<em class="hastag">급여이체,</em> <em class="hastag">마케팅동의,</em><em class="hastag">월평균 2회 비대면이체,</em> 등
+											</span>
+										</div> -->
+										<div class="prodInfoWrap">	
+											<span class="prodValue">예상우대금리(1.8%p)</span>
+											<span class="prodValue">급여이체, 마케팅동의, 월평균 2회 비대면 이체등</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<!-- 선택약관(7번) 미동의한 고객의 경우 //-->
+						<div class="boxTypeWrap bgType04 addShadow"> <!--09.06 수정-->
+							<div class="visualSubWrap">
+								<!-- <h3 class="prodListTit img01">빅데이터로 분석한<br>우대금리 맞춤상품을 찾았어요.</h3>
+								<p class="subTxt4">상품가입 시 실제 금리와 다를 수 있습니다.</p> -->
+								<h2 class="prodListTit img05">
+									만 19세 ~ 만 34세인 고객님께,<br>혜택은 많이! 금리는 높게! <!-- [2023-01-27] 문구수정 -->
+								</h2>
+								<p class="subTxt4">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+							</div>
+							<ul class="prodListWrap">
+								<li>
+									<div class="disagree">
+										<a href="javascript:;" role="button">
+											<p class="disagreeP"><strong>나만 알고 싶은 추천상품</strong></p>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!--// 선택약관(7번) 미동의한 고객의 경우 -->
+						
+					</div><!-- //.transfer -->
+                </div>
+
+                <div class="popBtnWrap">
+                    <!-- <div class="popBtn">
+                        <a href="javascript:;" class="confirmBtn">조회</a>
+                    </div> -->
+                    <a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다."><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+                </div>
+            </div>
+        </div>
+		<!-- // 계좌별칭 설정 팝업 -->
+
+	</div>
+
+</body>
+</html>

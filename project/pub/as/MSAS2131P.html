@@ -1,0 +1,277 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산등록</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function() {
+		fullLayerPop();
+	});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">운용상품 현황</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+		</div>
+		<!-- //container -->
+
+		<!-- 팝업시작 -->
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>운용상품 현황</h1>
+				<div class="popCont">
+					<div class="lf_bgWrap5">
+						<h2 class="defTit mt20">총 <strong>N개</strong>의 상품이<br>운용되고 있습니다.</h2>
+					</div>
+					
+					<div class="boxRadio mt20">
+						<div class="boxRadioInn">
+							<span>
+								<input name="rdo01" id="rdo01" type="radio" checked="checked">
+								<label for="rdo01" class="ls01">전체</label>
+							</span>
+						</div>
+						<div class="boxRadioInn">
+							<span>
+								<input name="rdo01" id="rdo02" type="radio">
+								<label for="rdo02" class="ls01">원리금 보장</label>
+							</span>
+						</div>
+						<div class="boxRadioInn">
+							<span>
+								<input name="rdo01" id="rdo03" type="radio">
+								<label for="rdo03" class="ls01">원리금 비보장</label>
+							</span>
+						</div>
+					</div>
+
+					<div class="boxTypeWrap line pt0 pb0">
+						<div class="popIRP tithAuto">
+							<div class="toggleWrap">
+								<div class="agreeTit">
+									<a href="javascript:;" class="toggleBtn" role="button" aria-expanded="false">
+										<!-- [2021-10-06] 한은정 : 수정// -->
+										<p class="tit">{$ 개별운용 상품명 출력 $} </p>
+										<p class="val">평가금액 <strong class="dataValue">1,000,000</strong><em class="won">원</em></p>
+										<!-- //[2021-10-06] 한은정 : 수정 -->
+									</a>
+								</div>
+								<div class="toggleCont" style="display:none">
+									<ul class="detailList">
+										<li>
+											<span class="tit">상품유형</span>
+											<span class="value">원리금 보장</span>
+										</li>
+										<!-- <li>
+											<span class="tit">수익률</span>
+											<span class="value"><strong class="dataValue">+4.16</strong><em class="won">%</em></span>
+										</li> -->
+										<!-- [2021-10-06] 한은정 : 삭제 -->
+										<!-- <li>
+											<span class="tit">평가금액</span>
+											<span class="value"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+										</li> -->
+										<li>
+											<span class="tit">투자원금</span>
+											<span class="value"><strong class="dataValue">96,000</strong><em class="won">원</em></span>
+										</li>
+										<li>
+											<span class="tit">보유좌수</span>
+											<span class="value"><strong class="dataValue">1,000</strong><em class="won">좌</em></span>
+										</li>
+										<li>
+											<span class="tit">신규일</span>
+											<span class="value">2020.07.21</span>
+										</li>
+										<li>
+											<span class="tit">만기일</span>
+											<span class="value">2020.07.21</span>
+										</li>
+										<li>
+											<span class="tit">약정이자율</span>
+											<span class="value"><strong class="dataValue">0.70</strong><em class="won">%</em></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="toggleWrap">
+								<div class="agreeTit">
+									<a href="javascript:;" class="toggleBtn" role="button" aria-expanded="false">
+										<p class="tit">한국투자e단기채ESG증권투자신탁(채권)C-Re </p>
+										<p class="val">평가금액 <strong class="dataValue">1,000,000</strong><em class="won">원</em></p>
+									</a>
+								</div>
+								<div class="toggleCont" style="display:none">
+									<ul class="detailList">
+										<li>
+											<span class="tit">상품유형</span>
+											<span class="value">원리금 보장</span>
+										</li>
+										<!-- <li>
+											<span class="tit">수익률</span>
+											<span class="value"><strong class="dataValue">+4.16</strong><em class="won">%</em></span>
+										</li> -->
+										<!-- [2021-10-06] 한은정 : 삭제 -->
+										<!-- <li>
+											<span class="tit">평가금액</span>
+											<span class="value"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+										</li> -->
+										<li>
+											<span class="tit">투자원금</span>
+											<span class="value"><strong class="dataValue">96,000</strong><em class="won">원</em></span>
+										</li>
+										<li>
+											<span class="tit">보유좌수</span>
+											<span class="value"><strong class="dataValue">1,000</strong><em class="won">좌</em></span>
+										</li>
+										<li>
+											<span class="tit">신규일</span>
+											<span class="value">2020.07.21</span>
+										</li>
+										<li>
+											<span class="tit">만기일</span>
+											<span class="value">2020.07.21</span>
+										</li>
+										<li>
+											<span class="tit">약정이자율</span>
+											<span class="value"><strong class="dataValue">0.70</strong><em class="won">%</em></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="popIRP" style="display:none">
+						<div class="toggleWrap">
+							<div class="agreeTit">
+								<a href="javascript:;" class="toggleBtn" role="button" aria-expanded="false">
+									<p class="tit">한국투자e단기채ESG증권투자신탁(채권)C-Re한국투자e단기채ESG증권투자신탁(채권)C-Re한국투자e단기채ESG증권투자신탁(채권)C-Re</p>
+									<p class="val">평가금액 <strong class="dataValue">1,000,000</strong><em class="won">원</em></p>
+								</a>
+							</div>
+							<div class="toggleCont" style="display:none">
+								<ul class="detailList">
+									<li>
+										<span class="tit">상품유형</span>
+										<span class="value">원리금 보장</span>
+									</li>
+									<li>
+										<span class="tit">수익률</span>
+										<span class="value"><strong class="dataValue">+4.16</strong><em class="won">%</em></span>
+									</li>
+									<!-- <li>
+										<span class="tit">평가금액</span>
+										<span class="value"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+									</li> -->
+									<li>
+										<span class="tit">투자원금</span>
+										<span class="value"><strong class="dataValue">96,000</strong><em class="won">원</em></span>
+									</li>
+									<li>
+										<span class="tit">보유좌수</span>
+										<span class="value"><strong class="dataValue">1,000</strong><em class="won">좌</em></span>
+									</li>
+									<li>
+										<span class="tit">신규일</span>
+										<span class="value">2020.07.21</span>
+									</li>
+									<li>
+										<span class="tit">만기일</span>
+										<span class="value">2020.07.21</span>
+									</li>
+									<li>
+										<span class="tit">약정이자율</span>
+										<span class="value"><strong class="dataValue">0.70</strong><em class="won">%</em></span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="toggleWrap">
+							<div class="agreeTit">
+								<a href="javascript:;" class="toggleBtn" role="button" aria-expanded="false">
+									<p class="tit">한국투자e단기채ESG증권투자신탁(채권)C-Re</p>
+									<p class="val">평가금액 <strong class="dataValue">1,000,000</strong><em class="won">원</em></p>
+								</a>
+							</div>
+							<div class="toggleCont" style="display:none">
+								<ul class="detailList">
+									<li>
+										<span class="tit">상품유형</span>
+										<span class="value">원리금 보장</span>
+									</li>
+									<li>
+										<span class="tit">수익률</span>
+										<span class="value"><strong class="dataValue">+4.16</strong><em class="won">%</em></span>
+									</li>
+									<!-- <li>
+										<span class="tit">평가금액</span>
+										<span class="value"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+									</li> -->
+									<li>
+										<span class="tit">투자원금</span>
+										<span class="value"><strong class="dataValue">96,000</strong><em class="won">원</em></span>
+									</li>
+									<li>
+										<span class="tit">보유좌수</span>
+										<span class="value"><strong class="dataValue">1,000</strong><em class="won">좌</em></span>
+									</li>
+									<li>
+										<span class="tit">신규일</span>
+										<span class="value">2020.07.21</span>
+									</li>
+									<li>
+										<span class="tit">만기일</span>
+										<span class="value">2020.07.21</span>
+									</li>
+									<li>
+										<span class="tit">약정이자율</span>
+										<span class="value"><strong class="dataValue">0.70</strong><em class="won">%</em></span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- 리스트 없을 경우 -->
+					<div class="noResultWrap"> <!-- [2023-01-28] 클래스 수정 -->
+						<p>운용상품이 없습니다.</p>
+					</div>
+					<!-- // 리스트 없을 경우 -->
+				</div>
+
+				<div class="popBtnWrap">
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- // 팝업 끝 -->
+	</div>
+
+</body>
+</html>

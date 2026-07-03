@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>서비스 가입</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>서비스 가입</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<h2 class="defTit">NH마이데이터 서비스 이용을 위해 <br><strong>이용약관을 확인</strong>해주세요</h2>
+		<!-- 2023-10-20 추가 -->
+		<div class="topInfo">
+			<p class="infoTxt">서비스 가입 전 신중히 고민하고 필요한 서비스만 <br>가입해주세요. 이용하지 않는 서비스는 언제든지 <br>해지할 수 있어요.</p>
+			<a href="https://www.mydatacenter.or.kr" target="_blank" onclick="mssb1000r.openMydataCenter();" title="외부 브라우저 열림" class="linkType1">
+				마이데이터 가입현황 확인
+			</a>
+		</div>
+		<!-- // 2023-10-20 추가 -->
+		<div class="formWrap selectAll">
+			<div class="total">
+				<!-- <div class="formHolder check" id="essential_totalHolder" onclick="mssb1000r.goStipulationEssentialDetailPage(this, true, false)"> -->
+				<div class="formHolder check" id="essential_totalHolder">
+					<input type="checkbox" id="essential_total" class="chekTypeOther" onchange="mssb1000r.essentialChkFucAll()">
+					<label class="check" for="essential_total"> 전체동의</label>
+			</div>
+			</div>		
+			<div class="cont jsToggleWrap on" data-toggle-view="toggleLayer01" aria-hidden="false" id="essential_cont" style="display:block">	
+				<div name="essential" class="formHolder check agrAll" id="essential_Holder_0">
+					<input type="checkbox" 	name="essentialDetail"  id="essential_0" onclick="mssb1000r.essentialChkFuc(this)">
+					<label class="check" for="essential_0"><em>[필수] </em>NH마이데이터 서비스 이용 약관</label>
+					<a class="btnView" id="holderBtn" onclick="mssb1000r.goStipulationEssentialDetailPage('0', true, false, true)"><span class="blind">약관보기</span></a>
+				</div>
+				<div name="essential" class="formHolder check agrAll" id="essential_Holder_1">
+					<input type="checkbox" 	name="essentialDetail"  id="essential_1" onclick="mssb1000r.essentialChkFuc(this)">
+					<label class="check" for="essential_1"><em>[필수] </em>개인(신용)정보 수집·이용 동의서(NH마이데이터 서비스)</label>
+					<a class="btnView" id="holderBtn" onclick="mssb1000r.goStipulationEssentialDetailPage('1', true, false, true)"><span class="blind">약관보기</span></a>
+				</div>
+			</div>
+			<div class="mt20"><a href="javascript:;" class="linkType1" onclick="mssb1000r.openPrivateStpPopup(this)" name="private">개인정보 처리방침</a></div>                      
+		</div>
+
+		<div class="formWrap boxTypeWrap">
+			<ul>
+				<li class="addrSrch ">
+					<strong class="formTit">권유직원 (선택)</strong>
+					<div class="inputList" onclick="mssb1000r.opengetRecommendStaffSelectPopup()">
+						<input type="text" id="inputStaffNumber" class="inptText" title="이름(사번)입력" value="" maxlength="10" placeholder="이름(사번)을 입력해 주세요." disabled>
+						<button class="btnSearch"><span class="blind">찾기</span></button>
+						<!-- <a href="javascript:" class="btnReset" role="button" onclick="mssb1000r.staffSelectClear();" style="display: none;">입력내용삭제</a> -->
+					</div>
+						<!-- as is 코드 추가 css 안먹어서 위치 조정필요 -->
+						<!-- 
+						<input id="inputRecommendStaffName" type="text" title="직원이름 입력" class="inptText" style="display:none" readonly>
+						<button type="button" class="btnInptReset"><span class="blind">입력 텍스트 삭제</span></button>
+						 -->				
+ 				</li>
+			</ul>
+		</div>
+		<div class="formWrap boxTypeWrap" id="recommenderFied" style="display:none;" > <!--  -->
+			<ul>
+				<li>
+				  <strong class="formTit">추천인</strong>
+					<div class="inputList">
+						<input type="text" id="inputRecommenderName" title="이름(사번)입력" value="" readonly>
+						<!-- <a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a> -->
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- <button type="button" class="scrollBottom" onclick="scrollBottom()">아래로아래로</button> -->
+
+		<!-- 2023-10-20 삭제
+		<div class="info_area">
+			<strong class="info_area_title">알아두세요</strong>
+			<ul class="listBul disc">
+				<li>서비스 가입 전 신중히 고민후, 꼭 필요한 마이데이터 서비스만 가입해주세요</li>
+				<li>이용하지 않는 마이데이터 서비스는 해지 가능합니다.</li>
+				<li><a href="https://www.mydatacenter.or.kr" target="_blank" onclick="mssb1000r.openMydataCenter();" title="외부 브라우저 열림" class="linkType1">
+					마이데이터 서비스 가입현황 확인하러가기</a>
+				</li>
+			</ul>
+		</div> -->
+
+		<div class="areaBtnDefault">
+			<a href="javascript:;" class="btnPressPoint disabled" id="joinBtnDisabled" role="button">가입하기</a>
+			<a href="javascript:;" onclick="mssb1000r.joinService();" class="btnPressPoint" id="joinBtn" role="button"  style="display:none;">가입하기</a>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>컨설팅 > DSR 계산기</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>DSR 계산기</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+        <h2 class="defTit">
+			<strong>본인명의 휴대폰을 통해</strong><br>
+			본인확인을 진행해주세요
+		</h2>
+		<div class="formWrap boxTypeWrap">
+			<div class="titListBox">
+                <ul>
+                    <li>
+                        <div class="inputList">
+                            <a href="javascript:;" title="통신사 선택" aria-haspopup="true" onclick="slidePopOption();return false;">
+                                <span class="selectValue">통신사 선택</span>
+                                <!-- value 값이 들어오면 class placeholder 삭제 -->
+                                <span class="selectBtn"></span>
+                            </a>
+                            <select name="" title="선택해주세요">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="formWrap selectAll pd0">
+                            <div class="total">
+                                <div class="formHolder check">
+                                    <input type="checkbox" id="type_all01" checked="" class="chekTypeOther">
+                                    <label class="check" for="type_all01">전체동의</label>
+                                </div>
+                            </div>
+                            <div class="cont">
+                                <div class="formHolder check">
+                                    <input type="checkbox" id="type01" checked="checked">
+                                    <label class="check" for="type01">고유식별번호 처리 동의</label>
+                                    <a href="javascript:;" class="btnView" role="button" title="고유식별번호 처리 동의"><span class="blind">약관보기</span></a>
+                                </div>
+                                <div class="formHolder check">
+                                    <input type="checkbox" id="type02">
+                                    <label class="check" for="type02">개인정보 수집 이용 제공 동의</label>
+                                    <a href="javascript:;" class="btnView" role="button" title="개인정보 수집 이용 제공 동의"><span class="blind">약관보기</span></a>
+                                </div>
+                                <div class="formHolder check">
+                                    <input type="checkbox" id="type02">
+                                    <label class="check" for="type02">서비스 이용약관 동의</label>
+                                    <a href="javascript:;" class="btnView" role="button" title="서비스 이용약관 동의"><span class="blind">약관보기</span></a>
+                                </div>
+                                <div class="formHolder check">
+                                    <input type="checkbox" id="type02">
+                                    <label class="check" for="type02">통신사 이용약관 동의</label>
+                                    <a href="javascript:;" class="btnView" role="button" title="통신사 이용약관 동의"><span class="blind">약관보기</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grayBox mt20">
+                            <p class="subTxt2">약관 및 주요 안내사항을 읽고 충분히 이해하여 이에 동의합니다.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="defSubTit2"><strong>이름</strong></div>
+                        <div class="inputList">
+                            <input type="text" title="이름(실명)을 입력" value="김농협" placeholder="이름(실명)을 입력하세요">
+                            <a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+                        </div>
+                    </li>
+                    <li class="addrSrch">
+                        <div class="defSubTit2"><strong>주민등록번호</strong></div>
+                        <div class="inputList juminNum error"> <!-- 에러일 경우 class="error" 추가 -->
+                            <input type="tel" title="주민등록번호" value="" placeholder="생년월일 6자리 ">
+                            <span class="daesh">-</span>
+                            <input type="tel" title="주민등록 뒷 첫째자리" maxlength="1" value="" placeholder="&nbsp;">
+                        </div>
+                        <p class="errorTxt">주민등록번호를 다시 입력하세요.</p> <!-- 에러일 경우 추가 -->
+                    </li>
+                    <li>
+                        <div class="defSubTit2"><strong>휴대전화번호</strong></div>
+                        <div class="inputList"> <!-- 에러일 경우 class="error" 추가 -->
+                            <input type="tel" class="al" title="휴대전화 번호 입력" value="" placeholder="‘-’없이 숫자만 입력하세요.">
+                            <a href="javascript:" class="btnReset" role="button" >입력내용삭제</a>
+                        </div>
+                        <!-- <p class="errorTxt">휴대전화번호를 다시 입력하세요.</p> --> <!-- 에러일 경우 추가 -->
+                    </li>
+                    <li>
+                        <div class="areaBodyBtnFull mt0">
+                            <a href="javascript:;" class="btnBodyLine" role="button">인증번호 요청</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="listBul disc mt10">
+                    <li>통신사 확인 후 본인 명의가 아닌 경우에는 인증번호가 전송되지 않습니다.</li>
+                </ul>
+            </div>
+		</div>
+
+        <div class="formWrap boxTypeWrap">
+			<div class="titListBox">
+                <ul>
+                    <li>
+                        <div class="defSubTit2"><strong>인증번호</strong></div>
+                        <div class="cerNumBox">
+                            <div class="inputList"> <!-- 에러일 경우 class="error" 추가 -->
+                                <input type="text" title="인증번호 입력" value="" placeholder="인증번호 입력">
+                                <a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+                                <span class="time">05:00</span>
+                            </div>
+                            <a href="javascript:;" class="btnCerti" role="button">인증</a>
+                        </div>
+                        <!-- <p class="errorTxt">인증번호를 다시 입력하세요.</p> --> <!-- 에러일 경우 추가 -->
+                    </li>
+                </ul>
+            </div>
+		</div>
+	
+		<div class="areaBtnDefault">
+            <a href="javascript:;" class="btnPressDefault" role="button">취소</a>
+			<a href="javascript:;" class="btnPressPoint" role="button">확인</a>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

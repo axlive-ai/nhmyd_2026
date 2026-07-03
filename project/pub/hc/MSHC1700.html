@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>비교상품상세</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">당뇨병</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="boxTypeWrap healthBox"> <!-- [2023-02-23] healthBox 클래스 추가 -->
+				<h2 class="defSubTit2"><strong class="bold">당뇨병이란?</strong></h2>
+				<p class="subTxt">과식, 비만, 유전, 운동부족, 스트레스 등으로 인한 인슐린 부족 또는 저항성으로 혈당이 조절되지 않아 혈액 속의 당이 높아진 상태</p>
+				<hr class="divLine3">
+				<h2 class="defSubTit2 containTooltip"><strong class="bold">내 검진결과 비교</strong>
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">그래프 구간안내 설명 툴팁</span></button>
+						<div class="tooltipCont">
+							<p>최근 검사일 기준 직전년도 결과 비교 제공</p>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+				</h2>
+				<h3 class="defSubTit3 mt20">공복혈당</h3>
+				<div class="graphWrap" style="height:160px;background:#f6f6f6;" tabindex="0" role="img" aria-label="공복혈당 그래프 2013년 정상 81mg/dL, 2016년 74mg/dL, 2021년 83mg/dL">
+					<p style="text-align:center;">그래프 영역</p>
+				</div>
+			</div>
+
+			<div class="formWrap healthBox"> <!-- [2023-02-23] healthBox 클래스 추가 -->
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn">
+							<strong class="tit">공복혈당 기준수치</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="detailList">
+							<li>
+								<strong class="tit">정상</strong>
+								<strong class="value">100mg/dL 미만</strong>
+							</li>
+							<li>
+								<strong class="tit">질환의심</strong>
+								<strong class="value">125mg/dL 이상</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn">
+							<strong class="tit">경구당부하검사 2시간 혈당 기준수치</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="detailList">
+							<li>
+								<strong class="tit">정상</strong>
+								<strong class="value">100mg/dL 미만</strong>
+							</li>
+							<li>
+								<strong class="tit">질환의심</strong>
+								<strong class="value">200mg/dL 이상</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn">
+							<strong class="tit">요당 기준수치</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="detailList">
+							<li>
+								<strong class="tit">정상</strong>
+								<strong class="value">음성(-)</strong>
+							</li>
+							<li>
+								<strong class="tit">질환의심</strong>
+								<strong class="value">양성(+1)이상</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<p class="infoTxt">※ 2004년에 개정된 WHO 기준에 의거 대한당뇨병학회 판정기준 &lt;mg/dL : 밀리그램 퍼 데시리터&gt;</p>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn">
+							<strong class="tit">검진항목 설명</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<strong class="listTitSimple mt0">혈당</strong>
+						<ul class="listDot">
+							<li>혈액 속에 포함되어 있는 포도당(식이혈당 외에도 단백질이나 지질로부터 전환된 포도당이 혈당을 높이는 경우도 발생 가능)</li>
+							<li>고혈당 상태가 만성화될 경우 미세혈관 및 대혈관에 치명적인 합병증이 생길 수 있음</li>
+							<li>공복혈당 100~125mg/dL 이면 공복혈당장애, 경구당부하검사 2시간 혈당 140~199mg/dL이면 내당증 장애이므로 당뇨발생 확률이 매우 높음</li>
+						</ul>
+						<strong class="listTitSimple">요당</strong>
+						<ul class="listDot">
+							<li>소변에 섞여 나오는 당</li>
+							<li>혈당은 정상이고 요당만 나오면 신장에 문제가 있을 수 있음</li>
+						</ul>
+					</div>
+				</div>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn">
+							<strong class="tit">식사요법</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="listDot">
+							<li>6가지 식품군을 골고루, 적당히 먹기 : 곡식, 채소, 우유, 어육류, 지방, 과일</li>
+							<li>혈당의 급격한 변화를 예방하기 위해 규칙적으로 나눠서 먹기</li>
+							<li>하루의 영양소와 필요 칼로리를 계산하여 식단 짜기</li>
+							<li>필요칼로리 : 표준체중(kg)x30~35(칼로리)</li>
+						</ul>
+					</div>
+				</div>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn">
+							<strong class="tit">운동요법</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="listDot">
+							<li>걷기, 스트레칭 등 유산소 운동이나 수영 등 수중운동(운동중 발 보호)</li>
+							<li>1주일에 3~5회 이상, 식후 1시간에서 3시간 사이에 규칙적으로 운동</li>
+							<li>혈압이 180mmHg 이상 높아지지 않게, 최대 심장 박동수의 60~80%로 30~45분 정도</li>
+							<li>공복 시나 인슐린 주사 후 60~90분 이내에는 운동 삼가</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- <div class="areaBtnDefault">
+				<a href="javascript:;" class="btnPressPoint" role="button">확인</a>
+			</div> -->
+		</div>
+		<!-- //container -->
+	</div>
+<script type="text/javascript">
+	$('.scAreaWrap a.active').each(function(){
+		var $this = $(this);
+		var $thisPos = $this.offset().left;
+		var $wrap = $this.closest('.scAreaWrap').scrollLeft();
+		$this.closest('.scAreaWrap').stop().animate({scrollLeft:$wrap + $thisPos - 16 },300);
+	});
+	$('.scAreaWrap a').on('click focus',function(e){
+		var $this = $(this);
+		var $thisPos = $this.offset().left;
+		var $wrap = $this.closest('.scAreaWrap').scrollLeft();
+		$this.closest('.scAreaWrap').stop().animate({scrollLeft:$wrap + $thisPos - 16 },300);	
+	});
+
+	$('.maybeWishList > li > a').click(function(){
+		$(this).closest('.maybeWishList').find('a').removeClass('active');
+		$(this).addClass('active');
+	});
+</script>
+</body>
+</html>

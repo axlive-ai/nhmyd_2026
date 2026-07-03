@@ -1,0 +1,1365 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>UI Guide [기본정보]</title>
+<script src="../pub-assets/js/head.js"></script>
+<style>
+	.tag.muBlue {color:#3d9bff;border:1px solid #3d9bff;background-color:#edfafe}
+</style>
+</head>
+<body>
+<div class="nhasset guide_wrapper">
+	<header class="guide_header">
+		<h1>UI GUIDE <span>기본정보</span></h1>
+		<nav data-toggle="wrap">
+			<button type="button" class="guide_btn" data-toggle="btn" aria-expanded="false">전체메뉴</button>
+			<div data-toggle="cont">
+				<a href="txt_sample.html">타이틀/텍스트</a>
+				<a href="mes_sample.html">메세지</a>
+				<a href="button_sample.html">버튼</a>
+				<a href="form_sample.html">폼</a>
+				<a href="list_sample.html">리스트</a>
+				<a href="info_sample.html">정보</a>
+				<a href="table_sample.html">테이블</a>
+				<a href="bbs_sample.html">게시판</a>
+				<a href="banner_sample.html">배너</a>
+				<a href="chart_sample.html">차트</a>
+				<a href="etc_sample.html">기타</a>
+			</div>
+		</nav>
+	</header>
+
+	<!-- ###################################### -->
+	<!-- ### UI Guide [기본정보] ### -->
+	<!-- ###################################### -->
+	<div class="guide_container">
+		<nav class="guide_menu">
+			<a href="#GCONTENT1" class="active">퍼블리싱 기본 규칙</a>
+			<a href="#GCONTENT2">이슈사항</a>
+		</nav>
+
+		<!-- ################################# -->
+		<!-- ### 퍼블리싱 기본 규칙 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT1">
+			<h2 class="guide_title">퍼블리싱 기본 규칙</h2>
+
+			<!-- -------------------------------------- -->
+			<!-- [폴더 및 파일 규칙] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">폴더 및 파일 규칙</h3>
+				<ul class="guide_txt">
+					<li>마이데이터(2022) 작업 영역 : <span  style="background:#eee;">회색 영역</span></li>
+					<li>마이데이터 고도화(2023) 작업 영역 : <span  style="background:#e0fee4;">녹색 영역</span></li>
+				</ul>
+				<div class="guide_tbl">
+					<table>
+						<thead>
+							<tr>
+								<th colspan="3" scope="col">폴더구조</th>
+								<th scope="col">파일명</th>
+								<th scope="col">내용</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="26">./nhmyd/</td>
+								<td colspan="2">cms/</td>
+								<td>*</td>
+								<td>CMS 등록 자료</td>
+							</tr>
+							<tr>
+								<td rowspan="9" colspan="2">css/</td>
+								<td>swiper.min.css</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>nh_base.css</td>
+								<td>NH공통 (초기화)</td>
+							</tr>
+							<tr>
+								<td>nh_layout.css</td>
+								<td>NH공통 (레이아웃)</td>
+							</tr>
+							<tr>
+								<td>nh_comm.css</td>
+								<td>NH공통 (컨텐츠)</td>
+							</tr>
+							<tr>
+								<td class="bg">nhasset_logos.css</td>
+								<td class="bg">NH자산 (기관 로고)</td>
+							</tr>
+							<tr>
+								<td class="bg">nhasset_com.css</td>
+								<td class="bg">NH자산 (레이아웃 및 공통 컴포넌트)</td>
+							</tr>
+							<tr>
+								<td class="bg">nhasset_cont.css</td>
+								<td class="bg">NH자산 (컨텐츠)</td>
+							</tr>
+							<tr>
+								<td class="bg2">nhasset_myd.css</td>
+								<td class="bg2">NH자산 (2023 고도화)</td>
+							</tr>
+							<tr>
+								<td>ms_allone.css</td>
+								<td>올원뱅크 재정의</td>
+							</tr>
+							<tr>
+								<td rowspan="11" class="bg">images/</td>
+								<td rowspan="2" class="bg">category/</td>
+								<td class="bg">*</td>
+								<td class="bg">NH자산+ 카테고리 이미지</td>
+							</tr>
+							<tr>
+								<td class="bg2">cs2/</td>
+								<td class="bg2">소비 카테고리 이미지 (2023 고도화)</td>
+							</tr>
+							<tr>
+								<td class="bg">notice/</td>
+								<td class="bg">*</td>
+								<td class="bg">NH자산+ 공지사항상세 이미지</td>
+							</tr>
+							<tr>
+								<td class="bg">terms/</td>
+								<td class="bg">*</td>
+								<td class="bg">NH자산+ 약관 이미지</td>
+							</tr>
+							<tr>
+								<td class="bg" rowspan="2">event/</td>
+								<td class="bg">*</td>
+								<td class="bg">NH자산+ 이벤트 이미지</td>
+							</tr>
+							<tr>
+								<td class="bg2">findally/</td>
+								<td class="bg2">올리찾기 이미지(2023 고도화)</td>
+							</tr>
+							<tr>
+								<td class="bg2">emoji/</td>
+								<td class="bg2">*</td>
+								<td class="bg2">이모지 (2023 고도화)</td>
+							</tr>
+							<tr>
+								<td class="bg2">earlyretire/</td>
+								<td class="bg2">*</td>
+								<td class="bg2">조기은퇴 이미지 (2023 고도화)</td>
+							</tr>
+							<tr>
+								<td class="bg2">creditscore/</td>
+								<td class="bg2">*</td>
+								<td class="bg2">신용점수 이미지 (2023 고도화)</td>
+							</tr>
+							<tr>
+								<td class="bg2">cardreport/</td>
+								<td class="bg2">*</td>
+								<td class="bg2">카드리포트 이미지 (2023 고도화)</td>
+							</tr>
+							<tr>
+								<td class="bg2">trend/</td>
+								<td class="bg2">*</td>
+								<td class="bg2">트렌드+ 이미지 (2023 고도화)</td>
+							</tr>
+							<tr>
+								<td rowspan="3" class="bg">js/</td>
+								<td class="bg2">lottie/</td>
+								<td class="bg2">*</td>
+								<td class="bg2">로티애니메이션(2023 고도화)</td>
+							</tr>
+							<tr>
+								<td class="bg">nhasset-ui</td>
+								<td class="bg">*</td>
+								<td class="bg">NH자산 +js</td>
+							</tr>
+							<tr>
+								<td class="bg2">nhasset-ui-myd</td>
+								<td class="bg2">*</td>
+								<td class="bg2">NH자산 (2023 고도화)</td>
+							</tr>
+							<tr>
+								<td colspan="2" class="bg">pub/</td>
+								<td class="bg">*</td>
+								<td class="bg">NH자산+ 퍼블리싱 작업파일</td>
+							</tr>
+							<tr>
+								<td colspan="2" class="bg">terms/</td>
+								<td class="bg">*</td>
+								<td class="bg">NH자산+ 약관파일</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [HTML 규칙] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">HTML 규칙</h3>
+				<h4 class="guide_title3">마크업 기본 구조</h4>
+<div class="guide_code">
+<pre>
+&lt;!DOCTYPE html &gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;meta http-equiv="Content-Script-Type" content="text/javascript"&gt;
+&lt;meta http-equiv="Content-Style-Type" content="text/css"&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"&gt;
+&lt;meta name="apple-mobile-web-app-title" content="농협자산관리" /&gt;
+&lt;meta http-equiv="imagetoolbar" content="no"&gt;
+&lt;meta name="robots" content="no-index,follow"&gt;
+&lt;meta name="title" content=""&gt;
+&lt;meta name="author" content=""&gt;
+&lt;meta name="content" content=""&gt;
+&lt;meta name="keywords" content="농협자산관리"&gt;
+&lt;meta name="description" content="농협자산관리"&gt;
+&lt;meta http-equiv="Pragma" content="no-cache"&gt;
+&lt;meta http-equiv="Expires" content="-1"&gt;
+&lt;title&gt;타이틀&lt;/title&gt;
+&lt;link type="text/css" rel="stylesheet" href="../../css/swiper.min.css"&gt;
+&lt;link type="text/css" rel="stylesheet" href="../../css/nh_base.css"&gt;
+&lt;link rel="stylesheet" type="text/css" href="../../css/nh_layout.css"&gt;
+&lt;link rel="stylesheet" type="text/css" href="../../css/nh_comm.css"&gt;
+&lt;link rel="stylesheet" type="text/css" href="../../css/nhasset_logos.css"&gt;
+&lt;link rel="stylesheet" type="text/css" href="../../css/nhasset_com.css" id="changeCom"&gt;
+&lt;link rel="stylesheet" type="text/css" href="../../css/nhasset_cont.css" id="changeCont"&gt;
+&lt;link rel="stylesheet" type="text/css" href="../../css/nhasset_myd.css"&gt; &lt;!-- [2023 고도화] --&gt;
+&lt;link type="text/css" rel="stylesheet" href="../../css/ms_allone.css"&gt;
+&lt;script src="../../js/jquery-1.9.1.min.js"&gt;&lt;/script&gt;
+&lt;script src="../../js/jquery-ui.min.js"&gt;&lt;/script&gt;
+&lt;script src="../../js/jquery.ui.touch-punch.min.js"&gt;&lt;/script&gt;
+&lt;script src="../../js/swiper.7.4.1.min.js"&gt;&lt;/script&gt;
+&lt;script src="../../js/common_ui.js"&gt;&lt;/script&gt;
+&lt;script src="../../js/nhasset-ui.js"&gt;&lt;/script&gt;
+&lt;script src="../../js/nhasset-ui-myd.js"&gt;&lt;/script&gt; &lt;!-- [2023 고도화] --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div class="wrapper nhasset"&gt;
+		&lt;!-- header --&gt;
+		&lt;div class="header"&gt;
+			&lt;a href="javascript:;" class="btnBack" role="button"&gt;&lt;span class="blind"&gt;이전화면으로&lt;/span&gt;&lt;/a&gt;
+			&lt;h1&gt;&lt;a href="javascript:;" role="text"&gt;타이틀&lt;/a&gt;&lt;/h1&gt;
+			&lt;a href="javascript:;" class="btnGoHome" role="button"&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;
+			&lt;a href="javascript:;" class="btnNav" role="button"&gt;&lt;span&gt;전체메뉴&lt;/span&gt;&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;!-- //header --&gt;
+
+		&lt;!-- container --&gt;
+		&lt;div class="container"&gt;컨텐츠 영역&lt;/div&gt;
+		&lt;!-- //container --&gt;
+	&lt;/div&gt;
+
+	&lt;!-- 팝업시작 : 개발구조 참고 (2023) --&gt;
+	&lt;div class="nhasset popWrap"&gt;팝업 영역&lt;/div&gt;
+	&lt;!-- //팝업끝 --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [CSS 규칙] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">CSS 규칙</h3>
+				<div class="guide_area2">
+					<h4 class="guide_title3">클래스명 정의</h4>
+					<ul class="guide_txt">
+						<li><strong>카멜 케이스</strong>(시작이름은 영문 소문자로 시작하되, 두번째 단어부터 첫문자를 대문자로 처리)기법을 사용함</li>
+						<li>카멜기법을 사용할 경우 단독으로 사용할 수 있어야 함.</li>
+						<li>종속된 클래스명은 단순하여야 함. (tit, con, area, info, side, sub, data)</li>
+					</ul>
+				</div>
+
+				<div class="guide_area2">
+					<h4 class="guide_title3">폰트 정의</h4>
+<div class="guide_code">
+<pre>
+|-- nh_base.css --|
+@font-face{
+	font-family:'NotoKR';
+	font-style:normal;
+	src:url('../fonts/NotoSansKR-Regular.eot');
+	src:url('../fonts/NotoSansKR-Regular.eot?#iefix') format('embedded-opentype'),
+		local(※),
+		url('../fonts/NotoSansKR-Regular.woff') format('woff');
+}
+@font-face{
+	font-family:'NotoKR';
+	font-style:normal;
+	font-weight:bold;
+	src:url('../fonts/NotoSansKR-Medium.eot');
+	src:url('../fonts/NotoSansKR-Medium.eot?#iefix') format('embedded-opentype'),
+		local(※),
+		url('../fonts/NotoSansKR-Medium.woff') format('woff');
+}
+
+|-- nhasset_com.css --|
+@font-face{
+	font-family:'NotoKR';
+	font-style:normal;
+	font-weight:900;
+	src:url('../fonts/NotoSansKR-Bold.woff2') format('woff2'),
+		url('../fonts/NotoSansKR-Bold.woff') format('woff');
+}
+</pre>
+</div>
+
+					<div class="guide_tbl">
+						<table>
+							<caption>폰트 굵기 정의</caption>
+							<colgroup>
+								<col style="width:40%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">폰트 굵기</th>
+									<th scope="col">내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>400</td>
+									<td>
+										<div style="font-weight:400;font-size:14px">가나다라마바사</div>
+										<div style="font-weight:400;font-size:14px">123456789</div>
+									</td>
+								</tr>
+								<tr>
+									<td>bold</td>
+									<td>
+										<div style="font-weight:bold;font-size:14px;">가나다라마바사</div>
+										<div style="font-weight:bold;font-size:14px;">123456789</div>
+									</td>
+								</tr>
+								<tr>
+									<td>900</td>
+									<td>
+										<div style="font-weight:900;font-size:14px;">가나다라마바사</div>
+										<div style="font-weight:900;font-size:14px;">123456789</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<h5 class="guide_title4">폰트 사이즈 정의</h5>
+					<ul class="guide_txt">
+						<li>폰트 사이즈 clamp()를 사용</li>
+						<li><strong>clamp(최솟값, 선호값, 최댓값)</strong> 형식으로 요소의 최소, 선호, 최댓값지정</li>
+					</ul>
+					<div class="guide_tbl">
+						<table>
+							<caption>폰트 사이즈 정의</caption>
+							<colgroup>
+								<col style="width:30%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">폰트 사이즈</th>
+									<th scope="col">변수</th>
+									<th scope="col">내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>clamp(10px, 1rem, 15px)</td>
+									<td>var(--fontSize10)</td>
+									<td><div style="font-size:clamp(10px, 1rem, 15px)">가나다라마바사</div></td>
+								</tr>
+								<tr>
+									<td>clamp(11px, 1.1rem, 16.5px)</td>
+									<td>var(--fontSize11)</td>
+									<td><div style="font-size:clamp(11px, 1.1rem, 16.5px)">가나다라마바사</div></td>
+								</tr>
+								<tr>
+									<td>clamp(12px, 1.2rem, 18px)</td>
+									<td>var(--fontSize12)</td>
+									<td><div style="font-size:clamp(12px, 1.2rem, 18px)">가나다라마바사</div></td>
+								</tr>
+								<tr>
+									<td>clamp(13px, 1.3rem, 19.5px)</td>
+									<td>var(--fontSize13)</td>
+									<td><div style="font-size:clamp(13px, 1.3rem, 19.5px)">가나다라마바사</div></td>
+								</tr>
+								<tr>
+									<td>clamp(14px, 1.4rem, 21px)</td>
+									<td>var(--fontSize14)</td>
+									<td><div style="font-size:clamp(14px, 1.4rem, 21px)">가나다라마바사</div></td>
+								</tr>
+								<tr>
+									<td>clamp(15px, 1.5rem, 22.5px)</td>
+									<td>var(--fontSize15)</td>
+									<td><div style="font-size:clamp(15px, 1.5rem, 22.5px)">가나다라마바사</div></td>
+								</tr>
+								<tr>
+									<td>clamp(16px, 1.6rem, 24px)</td>
+									<td>var(--fontSize16)</td>
+									<td><div style="font-size:clamp(16px, 1.6rem, 24px)">가나다라마바사</div></td>
+								</tr>
+								<tr>
+									<td>clamp(17px, 1.7rem, 25.5px)</td>
+									<td>var(--fontSize17)</td>
+									<td><div style="font-size:clamp(17px, 1.7rem, 25.5px)">가나다라마바사</div></td>
+								</tr>
+								<tr>
+									<td>clamp(18px, 1.8rem, 27px)</td>
+									<td>var(--fontSize18)</td>
+									<td><div style="font-size:clamp(18px, 1.8rem, 27px)">가나다라마바사</div></td>
+								</tr>
+								<tr>
+									<td>clamp(19px, 1.9rem, 28.5px)</td>
+									<td>var(--fontSize19)</td>
+									<td><div style="font-size:clamp(19px, 1.9rem, 28.5px)">가나다라마바사</div></td>
+								</tr>
+								<tr>
+									<td>clamp(20px, 2rem, 30px)</td>
+									<td>var(--fontSize20)</td>
+									<td><div style="font-size:clamp(20px, 2rem, 30px)">가나다라마바사</div></td>
+								</tr>
+								<tr>
+									<td>clamp(21px, 2.1rem,31.5px)</td>
+									<td>var(--fontSize21)</td>
+									<td><div style="font-size:clamp(21px, 2.1rem,31.5px)">가나다라마바사</div></td>
+								</tr>
+								<tr>
+									<td>clamp(22px, 2.2rem, 33px)</td>
+									<td>var(--fontSize22)</td>
+									<td><div style="font-size:clamp(22px, 2.2rem, 33px)">가나다라마바사</div></td>
+								</tr>
+								<tr>
+									<td>clamp(24px, 2.4rem, 36px)</td>
+									<td>var(--fontSize24)</td>
+									<td><div style="font-size:clamp(24px, 2.4rem, 36px)">가나다라마바사</div></td>
+								</tr>
+								<tr>
+									<td>clamp(26px, 2.6rem, 39px)</td>
+									<td>var(--fontSize26)</td>
+									<td><div style="font-size:clamp(26px, 2.6rem, 39px)">가나다라마바사</div></td>
+								</tr>
+								<tr>
+									<td>clamp(34px, 3.4rem, 46px)</td>
+									<td>var(--fontSize34)</td>
+									<td><div style="font-size:clamp(34px, 3.4rem, 46px)">가나다라마바사</div></td>
+								</tr>
+								<tr>
+									<td>clamp(38px, 3.8rem, 51px)</td>
+									<td>var(--fontSize38)</td>
+									<td><div style="font-size:clamp(38px, 3.8rem, 51px)">가나다라마바사</div></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="guide_area2">
+					<h4 class="guide_title3">변수 정의</h4>
+					<ul class="guide_txt">
+						<li>공통으로 사용하는 부분에 한하여 사용함</li>
+						<li>사용방법 : <strong>var(--변수값)</strong></li>
+					</ul>
+<div class="guide_code">
+<pre>
+|-- nhasset_myd.css : 2023 고도화 --|
+:root {
+	/* 컨텐츠 여백 */
+	--container1:82px;
+	--container2:calc(var(--container1) + clamp(70px, 7.0rem, 80px));
+
+	/* 여백 */
+	--space32:32px;
+	--space28:28px;
+	--space24:24px;
+	--space20:20px;
+	--space18:18px;
+	--space16:16px;
+	--space12:12px;
+	--space10:10px;
+	--space8:8px;
+	--space6:6px;
+	--space4:4px;
+	--space28-t1:calc(var(--space28) * -1);
+	--space24-t1:calc(var(--space24) * -1);
+	--space20-t1:calc(var(--space20) * -1);
+	--space18-t1:calc(var(--space18) * -1);
+	--space16-t1:calc(var(--space16) * -1);
+	--space12-t1:calc(var(--space12) * -1);
+	--space10-t1:calc(var(--space10) * -1);
+	--space8-t1:calc(var(--space8) * -1);
+	--space6-t1:calc(var(--space6) * -1);
+	--space4-t1:calc(var(--space4) * -1);
+
+	/* BG 색상 */
+	--bg1:#f2f4f8;
+	--bg2:#f8f8f8;
+	--bg3:#d7dbe3;
+	--bg4:#F4F7FB;
+	--bg-dim:rgba(0,0,0,0.7);
+	--bg-disabled:#ebebeb;
+	--bg-disabled2:#f3f3f3;
+
+	/* 백그라운드 이미지 */
+	--bgImg1:url('../images/img_set1.png') no-repeat;
+	--bgImg2:url('../images/img_set2.png') no-repeat;
+	--bgImg3:url('../images/img_set3.png') no-repeat;
+	--bgImg4:url('../images/img_set4.png') no-repeat;
+
+	/* 백그라운드 사이즈 */
+	--bgSize1:224px auto;
+	--bgSize2:608px auto;
+	--bgSize3:740px auto;
+	--bgSize4:576px auto;
+
+	/* 박스쉐도우 */
+	--boxShadow1:0px 2px 5px 0px rgba(41, 58, 88, 0.16);
+
+	/* 박스 여백 */
+	--boxPadding1:var(--space24) var(--space20) calc(var(--space24) + 4px);
+	--boxPadding2:calc(var(--space24) + 4px) var(--space20) var(--space24);
+	--boxPadding3:calc(var(--space24) + 4px) var(--space20);
+
+	/* 라인 색상 */
+	--line1:#bbb;
+	--line2:#e1e1e1;
+	--line3:#ebebeb;
+	--line4:#f3f3f3;
+	--line5:var(--color1);
+
+	/* 포인트색상 */
+	--point1:#19a647;
+	--point2:#eb1100;
+	--point3:#0c419a;
+	--point4:#00a873;
+	--point5:#e75441;
+
+	/* 폰트색상 */
+	--color0:#000;
+	--color1:#111;
+	--color2:#333; /* #222 */
+	--color3:#555;
+	--color4:#666;
+	--color5:#888;
+	--color6:#999;
+	--color-disabled:#999;
+
+	/* 폰트사이즈 */
+	--fontSize10:clamp(10px, 1rem, 15px);
+	--fontSize11:clamp(11px, 1.1rem, 16.5px);
+	--fontSize12:clamp(12px, 1.2rem, 18px);
+	--fontSize13:clamp(13px, 1.3rem, 19.5px);
+	--fontSize14:clamp(14px, 1.4rem, 21px);
+	--fontSize15:clamp(15px, 1.5rem, 22.5px);
+	--fontSize16:clamp(16px, 1.6rem, 24px);
+	--fontSize17:clamp(17px, 1.7rem, 25.5px);
+	--fontSize18:clamp(18px, 1.8rem, 27px);
+	--fontSize19:clamp(19px, 1.9rem, 28.5px);
+	--fontSize20:clamp(20px, 2rem, 30px);
+	--fontSize21:clamp(21px, 2.1rem,31.5px);
+	--fontSize22:clamp(22px, 2.2rem, 33px);
+	--fontSize24:clamp(24px, 2.4rem, 36px);
+	--fontSize26:clamp(26px, 2.6rem, 39px);
+	--fontSize34:clamp(34px, 3.4rem, 46px);
+	--fontSize38:clamp(38px, 3.8rem, 51px);
+
+	/* 사이즈 */
+	--size1:clamp(1px, 0.1rem, 2px);
+	--size2:clamp(2px, 0.2rem, 4px);
+	--size3:clamp(3px, 0.3rem, 6px);
+	--size4:clamp(4px, 0.4rem, 8px);
+	--size5:clamp(5px, 0.5rem, 9px);
+	--size6:clamp(6px, 0.6rem, 10px);
+	--size8:clamp(8px, 0.8rem, 12px);
+	--size9:clamp(9px, 0.8rem, 18px);
+	--size10:clamp(10px, 1rem, 15px);
+	--size24:clamp(24px, 2.4rem, 36px);
+
+	/* 등급색상 */
+	--grade0:#8B959B;
+	--grade1:#577fe0;
+	--grade2:#50bb9e;
+	--grade3:#ffcf5b;
+	--grade4:#f58e65;
+	--grade5:#e95353;
+}
+
+@media screen and (min-width:641px) {
+	:root {
+		/* 사이즈 */
+		--size1:3px;
+		--size2:4px;
+		--size3:6px;
+		--size4:8px;
+		--size5:9px;
+		--size6:10px;
+		--size8:12px;
+		--size10:15px;
+		--size24:36px;
+	}
+}
+</pre>
+</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- ################################# -->
+		<!-- ### 이슈사항 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT2">
+			<h2 class="guide_title">이슈사항</h2>
+
+			<!-- -------------------------------------- -->
+			<!-- [키페드] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">키패드 대응</h3>
+
+				<!-- ### 요구사항 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">요구사항</h4>
+					<ul class="guide_txt">
+						<li>키패드 활성화 되었을 때 하단 고정 버튼이 키패드 위로 올라오는 현상 개선</li>
+						<li>키패드 활성화 되었을 때 인풋을 덮는 현상 개선</li>
+					</ul>
+
+					<h5 class="guide_title4">점검대상</h5>
+					<div class="guide_tbl">
+						<table>
+							<caption>키패드 대응 점검대상</caption>
+							<colgroup>
+								<col style="width:100px">
+								<col style="width:auto">
+								<col style="width:100px" span="5">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col" rowspan="2">카테고리</th>
+									<th scope="col" rowspan="2">화면명</th>
+									<th scope="col" rowspan="2">화면ID</th>
+									<th scope="col" colspan="2">스마트뱅킹</th>
+									<th scope="col" colspan="2">올원뱅크</th>
+								</tr>
+								<tr>
+									<th scope="col">IOS</th>
+									<th scope="col">AOS</th>
+									<th scope="col">IOS</th>
+									<th scope="col">AOS</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">자산</th>
+									<td>계좌상세 &gt; 관리</td>
+									<td>MSASC210P</td>
+									<td></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">자산</th>
+									<td>부동산 &gt; 부동산 등록</td>
+									<td>MSAS8241<br>MSAS8242<br>MSAS8243</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><span class="tag muBlue">바닥버튼</span></td>
+								</tr>
+								<tr>
+									<th scope="row">자산</th>
+									<td>아파트/오피스텔 &gt; (팝업)부동산 관리</td>
+									<td>MSAS8411P<br>MSAS8412P<br>MSAS8413P</td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">자산</th>
+									<td>기타부동산 &gt; (팝업)부동산 관리</td>
+									<td>MSAS8421P<br>MSAS8422P<br>MSAS8423P</td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">자산</th>
+									<td>실물 &gt; 기타</td>
+									<td>FMAS9210P</td>
+									<td></td>
+									<td><span class="tag muBlue">팝업버튼</span></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">자산</th>
+									<td>실물 &gt; (팝업)금 관리</td>
+									<td>FMAS9210P</td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">자산</th>
+									<td>그때 그랬다면 &gt; 가상으로 선택</td>
+									<td>MSARb410</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><span class="tag muBlue">바닥버튼</span></td>
+								</tr>
+								<tr>
+									<th scope="row">자산</th>
+									<td>목표 &gt; 목표등록</td>
+									<td>MSOB3100<br>MSOB3100_1<br>MSOB3100_2<br>MSOB4000<br>MSOB5000</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><span class="tag muBlue">바닥버튼</span></td>
+								</tr>
+								<tr>
+									<th scope="row">자산</th>
+									<td>목표 &gt; 목표수정</td>
+									<td>MSOB6110<br>MSOB6110_1<br>MSOB3100_2<br>MSOB7110<br>MSOB7110_1<br>MSOB8110</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><span class="tag muBlue">바닥버튼</span></td>
+								</tr>
+								<tr>
+									<th scope="row">자산</th>
+									<td>목표 &gt; 간편계산기</td>
+									<td>MSOB3100P</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+								</tr>
+								<tr>
+									<th scope="row">소비</th>
+									<td>머니캘린더 &gt; (팝업)금액수정 인풋박스</td>
+									<td>MSCSC562P</td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+								</tr>
+								<tr>
+									<th scope="row">소비</th>
+									<td>머니캘린더 &gt; (팝업)현금거래등록</td>
+									<td>MSCSC610P</td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td><span class="tag muGreen">인풋덮음</span></td>
+								</tr>
+								<tr>
+									<th scope="row">소비</th>
+									<td>(팝업)나의한달설정</td>
+									<td>MSCSM400P</td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td><span class="tag muGreen">인풋덮음</span></td>
+								</tr>
+								<tr>
+									<th scope="row">컨설팅</th>
+									<td>자산진단 &gt; (팝업)자산진단 맞춤정보</td>
+									<td>MSAE1100P</td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">컨설팅</th>
+									<td>연금진단 &gt; (팝업)연금진단 맞춤정보</td>
+									<td>MSAE2200P</td>
+									<td></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+								</tr>
+								<tr>
+									<th scope="row">컨설팅</th>
+									<td>연금진단 &gt; (팝업)퇴직연금 간편계산기(DB/DC)</td>
+									<td>MSAE2320P</td>
+									<td></td>
+									<td></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">컨설팅</th>
+									<td>연금진단 &gt; (팝업)희망생활비선택</td>
+									<td>MSAE2351P</td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+								</tr>
+								<tr>
+									<th scope="row">컨설팅</th>
+									<td>연금진단 &gt; (팝업)저축 금액 선택</td>
+									<td>MSAE2361P</td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+								</tr>
+								<tr>
+									<th scope="row">컨설팅</th>
+									<td>연금진단 &gt; (팝업)목돈 금액 선택</td>
+									<td>MSAE2362P</td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+								</tr>
+								<tr>
+									<th scope="row">컨설팅</th>
+									<td>연말정산 &gt; 기본정보</td>
+									<td>MSAE6C30P</td>
+									<td></td>
+									<td><span class="tag muBlue">바닥버튼</span></td>
+									<td></td>
+									<td><span class="tag muBlue">바닥버튼</span></td>
+								</tr>
+								<tr>
+									<th scope="row">컨설팅</th>
+									<td>연말정산 &gt; (팝업)장기주택 저당 차입금(2012 이전)</td>
+									<td>MSAE6C30P</td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+								</tr>
+								<tr>
+									<th scope="row">컨설팅</th>
+									<td>연말정산 &gt; (팝업)장기주택 저당 차입금(2012 이후)</td>
+									<td>MSAE6C31P</td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+								</tr>
+								<tr>
+									<th scope="row">컨설팅</th>
+									<td>연말정산 &gt; (팝업)장기주택 저당 차입금(2015 이후)</td>
+									<td>MSAE6C32P</td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+								</tr>
+								<tr>
+									<th scope="row">컨설팅</th>
+									<td>세금계산기 &gt; 종합소득세</td>
+									<td>MSAE8100</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><span class="tag muBlue">바닥버튼</span></td>
+								</tr>
+								<tr>
+									<th scope="row">컨설팅</th>
+									<td>세금계산기 &gt; (팝업)종합소득공제 세부사항 입력</td>
+									<td>MSAE81c0p<br>MSAE81d0p</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><span class="tag muGreen">인풋덮음</span></td>
+								</tr>
+								<tr>
+									<th scope="row">컨설팅</th>
+									<td>세금계산기 &gt; 양도소득세</td>
+									<td>MSAE8200</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><span class="tag muBlue">바닥버튼</span></td>
+								</tr>
+								<tr>
+									<th scope="row">컨설팅</th>
+									<td>세금계산기 &gt; 재산세/종합부동산세</td>
+									<td>MSAE8300
+									</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><span class="tag muBlue">바닥버튼</span></td>
+								</tr>
+								<tr>
+									<th scope="row">컨설팅</th>
+									<td>세금계산기 &gt; 취득세</td>
+									<td>MSAE8400</td>
+									<td><span class="tag muBlue">바닥버튼</span></td>
+									<td></td>
+									<td></td>
+									<td><span class="tag muBlue">바닥버튼</span></td>
+								</tr>
+								<tr>
+									<th scope="row">컨설팅</th>
+									<td>세금계산기 &gt; 증여세</td>
+									<td>MSAE8400</td>
+									<td><span class="tag muBlue">바닥버튼</span></td>
+									<td></td>
+									<td></td>
+									<td><span class="tag muBlue">바닥버튼</span></td>
+								</tr>
+								<tr>
+									<th scope="row">컨설팅</th>
+									<td>세금계산기 &gt; 직장건강보험계산</td>
+									<td>MSAE8810</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><span class="tag muBlue">바닥버튼</span></td>
+								</tr>
+								<tr>
+									<th scope="row">컨설팅</th>
+									<td>세금계산기 &gt; 지역건강보험계산</td>
+									<td>MSAE8830</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><span class="tag muBlue">바닥버튼</span></td>
+								</tr>
+								<tr>
+									<th scope="row">컨설팅</th>
+									<td>DSR계산기 &gt; 연소득금액 입력</td>
+									<td>MSAE5310</td>
+									<td></td>
+									<td><span class="tag muBlue">바닥버튼</span></td>
+									<td></td>
+									<td><span class="tag muBlue">바닥버튼</span></td>
+								</tr>
+								<tr>
+									<th scope="row">생활편의</th>
+									<td>내차관리 &gt; (내차시세)차량등록_차량조회</td>
+									<td>MSAE5310</td>
+									<td></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+								</tr>
+								<tr>
+									<th scope="row">생활편의</th>
+									<td>맞춤정부혜택 &gt; 정부혜택_가족정보 설정</td>
+									<td>MSLF2190</td>
+									<td></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+									<td></td>
+									<td><span class="tag muOrange">팝업버튼</span></td>
+								</tr>
+								<tr>
+									<th scope="row">설정/관리</th>
+									<td>공통 &gt; 간편인증 정보입력</td>
+									<td>MSPS1200</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><span class="tag muBlue">바닥버튼</span></td>
+								</tr>
+								<tr>
+									<th scope="row">설정/관리</th>
+									<td>가입정보관리 &gt; 서비스 해지</td>
+									<td>MSAE6C32P</td>
+									<td><span class="tag muBlue">바닥버튼</span></td>
+									<td></td>
+									<td><span class="tag muBlue">바닥버튼</span></td>
+									<td><span class="tag muBlue">바닥버튼</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- ### 대응방안 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">대응방안</h4>
+					<ul class="guide_txt">
+						<li>1차(퍼블) : 키패드 테스트하여 오류사항 파악 후 조치 구분 표시</li>
+						<li>2차(퍼블 + 개발) : 디바이스 디버깅하며, 각 페이지에 맞는 오류 조치 완료</li>
+						<li>3차(퍼블) : 공통 처리 할 수 있는 부분 퍼블 스크립트에서 제어 (통합테스트 오류 사항 포함)</li>
+						<li>디바이스 및 마이데이터 구조상 수정할 수 없는 부분 제외함.</li>
+					</ul>
+
+					<h5 class="guide_title4">오류사항</h5>
+					<ul class="guide_txt">
+						<li>바닥페이지(올뱅AOS) : 페이지 로드 시 nhasset-ui.js에서 선언한 keypad 이벤트가 적용되지 않아 하단 고정 버튼이 키패드 위에 노출됨</li>
+						<li>바닥페이지(올뱅AOS/스뱅AOS) : 스크롤이 없는 페이지 (컨텐즈가 작은 페이지)에서 바닥 페이지의 하단 고정 버튼이 키패드 위에 노출됨</li>
+						<li>팝업페이지(올뱅AOS) : 키패드가 인풋을 가리는 현상</li>
+						<li>팝업페이지(올뱅IOS) : 특정 위치에서 키패드가 활성화 될 경우 하단 고정 버튼이 키패드 위에 노출됨</li>
+					</ul>
+
+					<h5 class="guide_title4 t1">조치현황[퍼블] : nhasset-ui-myd.js</h5>
+					<p class="guide_txt">키패드 활성화 될 경우 하단 고정 버튼 숨김 처리함.</p>
+					<div class="guide_tbl">
+						<table>
+							<caption>조치현황[퍼블]</caption>
+							<colgroup>
+								<col style="width:100px" span="3">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col" colspan="3">구분</th>
+									<th scope="col">내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>바닥페이지</td>
+									<td>올뱅/스뱅</td>
+									<td>AOS</td>
+									<td>
+										1) keypad 클래스를 재 선언하여 고정 버튼을 해제 시켜 페이지 하단에 배치 (fixed &gt; relative)<br><br>
+										2) 인풋이 끝에 있는 경우 or 컨텐츠가 작아 스크롤이 없는 화면<br>
+										ㄴ 버튼의 상단 여백을 주어 화면에서 숨김 처리함 : var(--footer-pading-top) 사용<br>
+									</td>
+								</tr>
+								<tr>
+									<td>바닥페이지</td>
+									<td>올뱅/스뱅</td>
+									<td>IOS</td>
+									<td>
+										1) 인풋이 끝에 있는 경우<br>
+										ㄴ 버튼 영역 때문에 인풋의 스크롤 위치가 화면의 중앙에 배치되어 키패드와 인풋의 여백이 많이 생기는 현상을 보완하기 위해 버튼을 숨김<br>
+										ㄴ [data-keypad="on"] 추가<br><br>
+										2) 컨텐츠가 작은 화면<br>
+										ㄴ 버튼에 클래스명(pos)를 추가하여 하단에 고정 시킴
+									</td>
+								</tr>
+								<tr>
+									<td>풀팝업</td>
+									<td>올뱅/스뱅</td>
+									<td>IOS</td>
+									<td>
+										팝업 컨텐츠의 높이값을 수정하여 버튼을 숨김 : var(--html-height)<br>
+										ㄴ .popCont의 높이값 조정
+									</td>
+								</tr>
+								<tr>
+									<td>레이어팝업</td>
+									<td>올뱅/스뱅</td>
+									<td>IOS</td>
+									<td>
+										팝업 컨텐츠의 높이값을 수정하여 버튼을 숨김 : var(--html-height)<br>
+										ㄴ .popInner의 높이값 조정
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<h5 class="guide_title4 t1">조치현황[개발]</h5>
+					<div class="guide_tbl">
+						<table>
+							<caption>조치현황[개발]</caption>
+							<colgroup>
+								<col style="width:100px" span="3">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col" colspan="3">구분</th>
+									<th scope="col">내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>바닥페이지</td>
+									<td>올뱅/스뱅</td>
+									<td>AOS</td>
+									<td>
+										<strong class="pointColor5">keyBoardScroll.attachEvent()</strong><br>
+										- input이 동적으로 그려지고 있어 keypad.js에 obj(객체)가 전달되지 않아 생기는 오류<br>
+										- 동적으로 그려지고 나서 keyBoardScroll.attachEvent(); 호출함
+									</td>
+								</tr>
+								<tr>
+									<td>풀팝업</td>
+									<td>올뱅</td>
+									<td>AOS</td>
+									<td>
+										<strong class="pointColor5">올원 키패드 대응 함수 : pfm_cb_popupAOKeyPadSetup()</strong><br>
+										- 올원뱅크는 키패드 대응 함수가 따로 있으며, 팝업페이지에서는 해당 함수를 호출해야 함 (바닥페이지는 제외)<br>
+										- 일부 페이지에서 함수를 호출하지 않아 키패드가 인풋을 덮는 현상이 나타남<br>
+										- 페이지내 pfm_cb_popupAOKeyPadSetup() 함수 호출<br>
+										- 개발 구조상 /fm/과 /ms/로 구분되는데 해당 함수는 /fm/에서만 적용이 가능하여, /ms/에서 적용하려면 keypad.js의  keyBoardScroll.show()로 대체하여야함.<br>
+										- 참고페이지 : 조기은퇴진단 > 조기은퇴 맞춤정보
+									</td>
+								</tr>
+								<tr>
+									<td>레이어팝업</td>
+									<td>올뱅</td>
+									<td>AOS</td>
+									<td>
+										<strong class="pointColor5">pfm_cb_popupAOKeyPadSetup2()</strong><br>
+										- 변수 fixedAdjH의 값이 320으로 지정 되어 있어 버튼 까지 노출되는 현상<br>
+										- fixedAdjH의 값을 변경함<br>
+										- 이슈 있는 페이지만 적용 하기 위해 동일한 이벤트 함수2 생성함
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<h5 class="guide_title4">조치 제외 사항(팝업)</h5>
+					<ul class="guide_txt">
+						<li>공통 : 키패드 활성화 된 상태에서 스크롤을 해도 하단의 버튼을 볼 수 없는 구조</li>
+						<li>AOS(올뱅) : 키패드에 있는 [닫기 (v)] 버튼을 클릭해도 포커스 아웃 이벤트가 적용 되지 않는 구조</li>
+						<li>레이어팝업 : 키패드가 활성화 된 상태에서 다른 버튼을 클릭 하면 키패드만 닫히면 클릭한 버튼의 이벤트가 적용되지 않는 구조</li>
+					</ul>
+					<hr class="guide_line">
+					<h6 class="guide_title5">OS별 키보드 영역</h6>
+					<div class="guide_img"><img src="../pub-assets/img/guide_keypad_01.png" alt=""></div>
+					<ul class="guide_txt">
+						<li>IOS : 키패드 영역 만큼 document를 위로 올림</li>
+						<li>AOS : 키패드 영역을 제외한 만큼 document사이즈 달라짐</li>
+					</ul>
+					<hr class="guide_line">
+					<h6 class="guide_title5">[마이데이터] 풀팝업 구조</h6>
+					<div class="guide_img"><img src="../pub-assets/img/guide_keypad_02.png" alt=""></div>
+					<ul class="guide_txt">
+						<li>팝업 스크롤 영역이 .popCont이므로 키보드가 올라 왔을 때 버튼을 확인 할 수 없는 구조</li>
+						<li>html, body에 height가 추가되는 사항으로 인해 안드로이드 디바이스키패드에 [닫기 (v)] 버튼을 클릭해도 포커스 아웃 이벤트가 적용되지 않음<br>
+							ㄴ iOS 는 포커스 인/아웃으로 키패드 노출 유무를 알 수 있는 반면, AOS는 resize로 window.visualViewport.height를 체크하여 키패드 유무를 확인 할 수 있는데 높이값이 고정으로 들어가 있어 window의 크기가 변하지 않아 resize 체크가 불가함. (퍼블에서 제어 할 수 없는 이유)
+						</li>
+						<li>추가사항(2024-03-25) : 위 현상은 올뱅AOS에서만 나타나는 현상으로 확인됨. 스뱅에서는 정상 작동 확인 함. (올원 키패드 대응 함수에서 focus/focusout으로 체크하고 있는 부분을 수정해야 할 것으로 보임 : 스뱅 참고)</li>
+					</ul>
+					<hr class="guide_line">
+					<h6 class="guide_title5">[마이데이터] 레이어팝업 구조</h6>
+					<div class="guide_img"><img src="../pub-assets/img/guide_keypad_03.png" alt=""></div>
+					<ul class="guide_txt">
+						<li>팝업의 크기는 popCont의 높이값 기준으로 popInner의 높이값을 추가함</li>
+						<li>html, body에 height가 추가되는 사항으로 인해 안드로이드 디바이스키패드에 [닫기 (v)] 버튼을 클릭해도 포커스 아웃 이벤트가 적용되지 않음<br>
+							ㄴ iOS 는 포커스 인/아웃으로 키패드 노출 유무를 알 수 있는 반면, AOS는 resize로 window.visualViewport.height를 체크하여 키패드 유무를 확인 할 수 있는데 높이값이 고정으로 들어가 있어 window의 크기가 변하지 않아 resize 체크가 불가함. (퍼블에서 제어 할 수 없는 이유)
+						</li>
+						<li>추가사항(2024-03-25) : 위 현상은 올뱅AOS에서만 나타나는 현상으로 확인됨. 스뱅에서는 정상 작동 확인 함. (올원 키패드 대응 함수에서 focus/focusout으로 체크하고 있는 부분을 수정해야 할 것으로 보임 : 스뱅 참고)</li>
+						<li>popInner의 높이값이 키패드 유무에 따라 달라지기 때문에 키패드가 올라왔을 때의 버튼(input제외한 모든 버튼)의 위치와 키패드가 내려 갔을 때의 버튼의 위치가 달라지기 때문에 버튼의 클릭 이벤트가 아닌 input의 focus out 이벤트가 적용된 상태임</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [접근성] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">접근성 1차 심사 결과</h3>
+				<p class="guide_txt">2023 마이데이터 고도화 화면에 대한 접근성 심사 결과 내용이며, 상시 개발에서 수정되는 내용은 제외함.</p>
+
+				<div class="guide_cont">
+					<h4 class="guide_title3">경로) 홈&gt;전체&gt;자산&gt;그때 그랬다면&gt;가상으로 선택</h4>
+					<div class="guide_img"><img src="../pub-assets/img/guide_access_01.png" alt=""></div>
+					<div class="guide_tbl">
+						<table>
+							<caption>접근성</caption>
+							<thead>
+								<tr>
+									<th scope="col">항목</th>
+									<th scope="col">오류내용</th>
+									<th scope="col">조치내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>7. (초점)사용자 인터페이스는 초점이 적용되고, 논리적인 순서로 이동돼야 한다.</td>
+									<td>
+										부적절한 초점 적용<br>
+										해당 입력서식은 임의탐색(화면터치 방식) 시 탐색이 되지 않습니다.<br>
+										*임의탐색 시에도 초점이 적용되도록 구현해야 합니다.
+									</td>
+									<td>
+										nhasset-ui-myd.css<br>
+										키패드 대응으로 수정했던 pointer-events:none;으로 인한 오류로 해당 속성 삭제함.
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="guide_cont">
+					<h4 class="guide_title3">경로) 홈&gt;전체&gt;컨설팅&gt;조기은퇴진단</h4>
+					<div class="guide_img"><img src="../pub-assets/img/guide_access_02.png" alt=""></div>
+					<div class="guide_tbl">
+						<table>
+							<caption>접근성</caption>
+							<thead>
+								<tr>
+									<th scope="col">항목</th>
+									<th scope="col">오류내용</th>
+									<th scope="col">조치내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>7. (초점)사용자 인터페이스는 초점이 적용되고, 논리적인 순서로 이동돼야 한다.</td>
+									<td>
+										숨겨진 콘텐츠에 스크린리더 초점 접근<br>
+										모바일 스크린리더 순차 탐색시 화면에 표시되지 않은 '이전 슬라이드 버튼','다음 슬라이드 버튼'에 초점이 접근되며, 임의탐색시 컨트롤에 초점이 접근하지 않습니다.<br>
+										컨트롤을 화면에 표시해야 하며, 스크린리더 임의, 순차 탐색으로 모두 접근 할 수 있도록 구현 해야 합니다.
+									</td>
+									<td>
+										nhasset_ui_myd.css<br>
+										기본 스타일에 정의된 width:0;height:0;clip:rect(0 0 0 0)로 접근은 되지만 포커스 표시가 되지 않아 생긴 오류로 소비 서브메인과 동일하게 width/height 추가함
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="guide_img"><img src="../pub-assets/img/guide_access_03.png" alt=""></div>
+					<div class="guide_tbl">
+						<table>
+							<caption>접근성</caption>
+							<thead>
+								<tr>
+									<th scope="col">항목</th>
+									<th scope="col">오류내용</th>
+									<th scope="col">조치내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>18. (보조기술과의 호환성)사용자 인터페이스는 보조 기술을 이용하여 사용할 수 있어야 한다.</td>
+									<td>
+										상태 정보 미제공<br>
+										선택된 탭에 대한 초기 상태 정보를 제공하지 않았습니다. (탭 변경시 상태정보 추가됨)<br>*초기 상태에도 활성화된 탭을 알 수 있도록 부가정보를 제공해야 합니다.
+									</td>
+									<td>
+										nhasset-ui-myd.js<br>
+										탭구조에 상태정보는 common_ui.js 에서 선택자[role="tablist"]로 제어해 주는데 <br>
+										nhasset-ui.js에서 자동적으로 탭구조에 맞는 속성을 생성해 주기 때문에 role="tablist"을 하드코딩을 하지 않아 생긴 스크립트 오류<br>
+										조건문 if($('.tabWrap.type06 li a.active').attr('aria-selected') == 'false')으로 다시 재정의 하여 수정함.
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="guide_img"><img src="../pub-assets/img/guide_access_04.png" alt=""></div>
+					<div class="guide_tbl">
+						<table>
+							<caption>접근성</caption>
+							<thead>
+								<tr>
+									<th scope="col">항목</th>
+									<th scope="col">오류내용</th>
+									<th scope="col">조치내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>18. (보조기술과의 호환성)사용자 인터페이스는 보조 기술을 이용하여 사용할 수 있어야 한다.</td>
+									<td>
+										역할정보를 제공하지 않은 컨트롤<br>
+										[조기은퇴TIP1-기대수익률, 씀씀이줄이기, 저축기간 선택 레이어 등 동일 콘텐츠 공통]<br>
+										스크린리더 운용시 단순 텍스트로 인식해 기능이 있는 컨트롤임을 알기 어렵습니다.<br>
+										*버튼, 링크 등 기능이 있는 컨트롤임을 알 수 있도록 역할 정보를 제공해야 합니다.
+									</td>
+									<td>
+										nhasset-ui-myd.js<br>
+										role="option" 사용으로 인한 오류 (사용했던이유 : 선택됨/선택해제 읽어줌, 단 버튼을 읽어주지 않아 오류 생김)<br>
+										role속성 삭제 후 title="선택됨" 추가함 <br>
+										퍼블페이지는 하드코딩으로 수정하였고, 개발 페이지는 스크립트 적용으로 대체함
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="guide_img"><img src="../pub-assets/img/guide_access_05.png" alt=""></div>
+					<div class="guide_tbl">
+						<table>
+							<caption>접근성</caption>
+							<thead>
+								<tr>
+									<th scope="col">항목</th>
+									<th scope="col">오류내용</th>
+									<th scope="col">조치내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>18. (보조기술과의 호환성)사용자 인터페이스는 보조 기술을 이용하여 사용할 수 있어야 한다.</td>
+									<td>
+										스크린리더에서 운용 할 수 없는 콘텐츠<br>
+										모바일 스크린리더 운용시 슬라이드는 변경되지만 기대수익률 값은 변경되지 않습니다.<br>
+										스크리리더 환경에서 슬라이드 변경시 기대수익률 값도 함께 변경되도록 하거나,<br>값을 직접 입력 받는 등 대체 수단을 제공해야 합니다.
+									</td>
+									<td>
+										nhasset-ui-myd.js<br>
+										input 이벤트가 적용되지 않은 오류(IOS)<br>
+										change도 추가하여 수정함
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="guide_cont">
+					<h4 class="guide_title3">경로) 홈&gt;전체&gt;헬스케어&gt;주말약국찾기</h4>
+					<div class="guide_img"><img src="../pub-assets/img/guide_access_06.png" alt=""></div>
+					<div class="guide_tbl">
+						<table>
+							<caption>접근성</caption>
+							<thead>
+								<tr>
+									<th scope="col">항목</th>
+									<th scope="col">오류내용</th>
+									<th scope="col">조치내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>7. (초점)사용자 인터페이스는 초점이 적용되고, 논리적인 순서로 이동돼야 한다.</td>
+									<td>
+										모바일 스크린리더에 초점 접근 불가<br>
+										모바일 스크린리더 순차탐색시 서식과 <label>에 초점이 중복 접근하며, 모바일 스크린리더 임의탐색시 <label>텍스트에만 접근하고 서식에 접근 할 수 없습니다<br>
+										*서식의 z-index 값을 수정해 <label>텍스트 위로 위치시켜 임의탐색시 서식을 탐색 할 수 있도록 하거나, <br>서식에 aria-hidden="true" 제공 후 <label>요소에 role="radio" aria-checked="true/false"를 제공해 스크린리더 순차, 임의 탐색시 서식에 접근 할 수 있도록 해야 합니다.
+									</td>
+									<td>
+										마이데이터 radio/checkbox 공통 마크업으로, 공통 부분은 상시개발에서 수정하지만,<br>
+										지역 검색 UI는 개별이기 때문에 고도화에서 수정함<br>
+										input에 aria-label="대체텍스트" 추가하고, label 에 aria-hidden을 추가함.<br>
+										또한 input의 width/height를 100%으로 하여 임의 탐색 및 순차 탐색시에도 input에만 접근 할 수 있도록 함.<br>
+										퍼블 페이지 및 개발 페이지에도 하드코딩으로 수정됨
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<!-- -------------------------------------- -->
+		</section>
+		<!-- ################################# -->	
+	</div>
+	<!-- ###################################### -->
+</div>
+</body>
+</html>

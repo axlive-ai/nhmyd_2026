@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>[P]연금(저축)보험 수정 | 연금진단 | 컨설팅</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		fullLayerPop();
+	})
+</script>
+</head>
+<body>
+<div class="wrapper nhasset"><!-- 바닥페이지 --></div>
+<!-- ###################################### -->
+<!-- ### [팝업] 연금(저축)보험 수정 ### -->
+<!-- ###################################### -->
+<div class="nhasset popWrap fullLayerPop">
+	<div class="popInner">
+		<h1>연금(저축)보험 수정</h1>
+		<div class="popCont grayPop">
+			<h2 class="defTit mb0">
+				<strong>가입한 연금보험</strong>이 있다면 알려주세요
+			</h2>
+
+			<div class="formWrap formListBox overseaType mt20">
+				<ul>
+					<li>
+						<strong class="formTit">연금보험금액</strong>
+						<div class="inputList unitMan">
+							<input type="tel" title="지난달 소비금액" value="" placeholder="최소 30만원 이상">
+							<span class="unit">만원</span>
+							<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+						</div>
+						<div class="roundBtnWrap">
+							<a href="javascript:;" role="button" title="10만원 추가">+10만</a><!-- 활성화일 경우 class="active" 추가-->
+							<a href="javascript:;" role="button" title="50만원 추가">+50만</a>
+							<a href="javascript:;" role="button" title="100만원 추가">+100만</a>
+							<a href="javascript:;" role="button" title="300만원 추가">+300만</a>
+						</div>
+						<!-- <p class="errorTxt">에러메시 출력</p> -->
+						<div class="mes2">입력하신 연금보험은 ‘조기은퇴진단’에도 반영됩니다.</div> <!-- [2023 NH마이데이터 서비스 고도화] 문구 추가 -->
+					</li>
+				</ul>
+			</div>
+
+		</div>
+
+
+		<div class="popBtnWrap">
+			<div class="popBtn">
+				<a href="javascript:;" class="confirmBtn" role="button">확인</a>
+			</div>
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+		</div>
+	</div>
+</div>
+
+<!-- ###################################### -->
+<!-- ### [레이어팝업] 라이프사이클 ### -->
+<!-- ###################################### -->
+<div class="nhasset popWrap centerLayer">
+	<div class="dim"></div>
+	<div class="dimCloseArea" onclick="popClose(this);return false;">터치 시 해당 창을 닫습니다.</div>
+	<div class="popInner">
+		<h1>라이프사이클 주기</h1>
+		<div class="popCont">
+			<div class="sampleImg pop"><img src="../../images/sample_cycle.png" alt="라이프사이클 주기 안내 샘플이미지"></div>
+		</div>
+
+		<div class="popBtnWrap">
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button">
+				<img src="../../images/common/btn_popClose.png" alt="닫기">
+			</a>
+		</div>
+	</div>
+</div>
+<!-- ###################################### -->
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>자동차 신규 리콜 발생 알림</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script type="text/javascript">
+$(function(){
+    slidePopConfirm();
+});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">자동차 신규 리콜 발생 알림</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container"> 
+			
+		</div>
+		<!-- // container -->
+
+		<!-- 컨펌 팝업 -->
+		<div class="nhasset popWrap slidePopConfirm">
+			<div class="dim"></div>
+			<div class="popInner">
+				<h1>자동차 신규 리콜 발생 알림</h1>
+				<div class="popCont template01"><!-- 2022-12-12 클래스(template01)추가 -->
+					<div class="assetConnectInfo bgRecall">
+						<p class="subTxt ac ellipDouble">[비엠더블유]BMW 1 Series Sport 등 57차종 -배기기스재순환장치 관련 리콜[비엠더블유]BMW 1 Series Sport 등 57차종 -배기기스재순환장치 관련 리콜</p>
+						<p class="subTxt ac mt10">2022.08.30~</p>
+					</div>
+					<!-- 2022-12-12 추가 -->
+					<ul class="notiSlideBtns">
+						<li>
+							<span class="chkbtnWrap">
+								<input type="checkbox" id="todayClose" class="chekTypeOther" name="" title="하루동안 팝업 닫힘">
+								<label for="todayClose">하루동안 보지 않기</label>
+							</span>
+						</li>
+						<li><a href="javascript:;" onclick="popClose(this);return false;" class="under"  title="해당 창을 닫습니다.">자세히보기</a></li>
+					</ul>
+					<!-- //2022-12-12 추가 -->
+				</div>
+		
+				<div class="popBtnWrap">
+
+					<!-- 2022-12-12 수정 -->
+					<div class="popBtn">
+						<a href="javascript:;" class="" onclick="popClose(this);return false;" role="button">닫기</a>
+						<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">자동차 리콜센터 가기</a>
+					</div>
+					<!-- //2022-12-12 수정 -->
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- //컨펌 팝업 -->
+	</div>
+
+</body>
+</body>
+</html>

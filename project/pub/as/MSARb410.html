@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>그때 그랬다면</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">그때 그랬다면</a></h1>
+			<!-- <a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>  -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="maybeOther">
+				<span class="step">STEP 2</span>
+				<p>그때 차를<strong>바꾸지 않았다면?</strong></p>
+			</div>
+			<div class="boxTypeWrap">
+				<div class="formWrap mt0">
+					<ul class="marginLess">
+						<li>
+							<strong class="formTit">그때 그 날짜를 선택해주세요</strong>
+							<div class="calendarForm">
+								<div class="cal">
+									<div class="inputList">
+										<input type="text" value="2020.10.10" title="조회 시작일" placeholder="날자선택" readonly="readonly">
+										<a href="javascript:;" class="btnCalendar" title="시작일 날짜선택" role="button" onclick="slidePopOption();return false;"><span class="blind">날짜선택</span></a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<strong class="formTit">금액을 입력해주세요</strong>
+							<div class="inputList">
+								<input type="tel" title="금액입력" class="numin" value="" placeholder="">
+								<span class="unit">원</span>
+								<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+							</div>
+							<div class="roundBtnWrap">
+								<a href="javascript:;" role="button" title="10만 추가">+10만</a>
+								<a href="javascript:;" role="button" title="50만 추가">+50만</a>
+								<a href="javascript:;" role="button" title="100만 추가">+100만</a>
+								<a href="javascript:;" role="button" title="300만 추가">+300만</a>
+								<a href="javascript:;" role="button" title="500만 추가">+500만</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="areaBtnDefault">
+				<a href="javascript:;" class="btnPressPoint" role="button">그때 그랬다면 어땠을까?</a>
+			</div>
+
+		</div>
+		<!-- //container -->
+	</div>
+<script type="text/javascript">
+	$('.roundBtnWrap a').click(function(){
+		$('.numin').val('112')
+		resetBtnDef()
+	});
+
+	function resetBtnDef() {
+			$("input:not([readonly],[type='checkbox'],[type='radio'],[type='image'],[type='submit'],[type='button'])").each(function(i){
+			if($(this).val()!==''){
+				$(this).siblings('.btnReset').show();
+			}else{
+				$(this).siblings('.btnReset').hide();
+			}
+		});		
+	}
+
+</script>	
+</body>
+</html>

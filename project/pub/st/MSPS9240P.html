@@ -1,0 +1,79 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 이용안내</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(function() {
+		slidePopConfirm();
+	});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><span class="pfmLogo">NH자산<em>+</em></span></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+			
+		</div>
+		<!-- //container -->
+			
+		<div class="nhasset popWrap slidePopConfirm">
+			<div class="dim"></div>
+			<div class="popInner">
+				<h1>자산연결 안내</h1>
+				<div class="popCont notiSlidePop template04">
+					<div class="popNotice">
+						<div class="notiBox">
+							<img src="../../images/notice/bg_template04_02.png">
+							<p class="cont"><strong>조회할 수 있는 상품이 늘었어요.<br>새로운 자산조회를 위해<br>자산연결을 다시 해주세요.</strong></p>
+						</div>
+					</div>
+					<ul class="notiSlideBtns">
+						<li>
+							<span class="chkbtnWrap">
+								<input type="checkbox" id="todayClose" class="chekTypeOther" name="" title="하루동안 팝업 닫힘">
+								<label for="todayClose">하루동안 보지 않기</label>
+							</span>
+						</li>
+						<li><a href="javascript:;" onclick="popClose(this);return false;" class="under" title="해당 창을 닫습니다.">자세히보기</a></li>
+					</ul>
+                </div>
+                
+                <div class="popBtnWrap">
+                    <div class="popBtn">
+						<a href="javascript:;" class="" onclick="popClose(this);return false;" role="button">닫기</a>
+						<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">자산 연결하러 가기</a>
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>	
+	</div>
+
+</body>
+</html>

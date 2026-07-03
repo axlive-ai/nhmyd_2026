@@ -1,0 +1,340 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>title/text</title>
+<script src="../pub-assets/js/head.js"></script>
+<style>
+	h2.guide{margin:20px 0;padding:5px 0;font-size:20px;font-weight:900;background:rgb(255, 248, 157);text-align:center}
+	.title{margin:20px 0 10px;font-size:15px;font-weight:bold;color:blue}
+	.desc{margin:30px 0 20px;font-size:13px;font-weight:bold;color:#65aee2}
+	.title + .desc{margin-top:10px;}
+</style>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">자산등록</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<h2 class="guide">2021년</h2>
+			
+			<hr class="divLine">
+			
+			<p class="title">상단 Total 영역 : 금액 큰글씨 + 아이콘</p>
+			<p class="desc">- 금액 기본 사이즈 : <br>.totalBalance > .bigTxt > strong</p>
+			<div class="totalBalance">
+				<div class="bigTxt type01">
+					<!-- type01:맑음, type02:흐림, type03:소나기 -->
+					<strong>3,000,000</strong><em>원</em>으로<br> 한 달 사기 도전 중
+					<span class="status">
+						<a href="javascript:;" class="icoWeather" role="button" title="MY보고서 소비로 이동"></a>
+						<span>맑음</span>
+						<div class="tooltipWrap">
+							<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">금융날씨 안내툴팁</span></button>
+							<div class="tooltipCont">
+								<p>맑음 : 권장 소비 이내</p>
+								<p>흐림 : 권장 소비 초과 ~ 월 예산 이내</p>
+								<p>소나기 : 월 예산 초과</p>
+								<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+							</div>
+						</div>
+					</span>
+				</div>
+			</div>
+
+			<p class="desc">- 금액 큰 사이즈 : <br>.totalBalance.bigSize > .bigTxt > strong</p>
+			<div class="totalBalance bigSize">
+				<!--  총소비의 경우 bigSize 클래스 추가 -->
+				<p class="dt">이번 달 총 소비<span class="smTxt">(11.5~11.10)</span></p>
+				<div class="bigTxt type02">
+					<!-- type01:맑음, type02:흐림, type03:소나기 -->
+					<strong>100,000,000</strong>원
+					<span class="status">
+						<a href="javascript:;" class="icoWeather" role="button" title="MY보고서 소비로 이동"></a>
+						<span>소나기</span>
+						<div class="tooltipWrap">
+							<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">금융날씨 안내툴팁</span></button>
+							<div class="tooltipCont">
+								<p>맑음 : 권장 소비 이내</p>
+								<p>흐림 : 권장 소비 초과 ~ 월 예산 이내</p>
+								<p>소나기 : 월 예산 초과</p>
+								<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+							</div>
+						</div>
+					</span>
+				</div>
+			</div>
+
+			<p class="desc">- 금액 큰 사이즈(gif형) : <br>.totalBalance.bigSize > .bigTxt > strong</p>
+			<div class="totalBalance bigSize bgCard01">
+				<p class="dt">결제 예정 금액</p>
+				<div class="bigTxt">
+					<strong>40,000,000</strong>원
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">결제 예정 금액 툴팁 열기</span></button>
+						<div class="tooltipCont lf0">
+							<p>전일 환율을 반영하여, 당시 환율을 반영한 거래내역과 다를 수 있습니다.</p>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="totalBalance bigSize bgCard02">
+				<p class="dt">
+					<button type="button" title="년월선택" class="btnSelec">11월</button>
+					사용금액
+				</p>
+				<div class="bigTxt">
+					<strong>11,400,000</strong>원
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">결제 예정 금액 툴팁 열기</span></button>
+						<div class="tooltipCont lf0">
+							<p>1일부터 오늘까지 신용카드, 체크카드 이용 금액 총 합 입니다. 가족카드는 포함되지 않으며, 리볼빙, 카드론은 제외됩니다.</p>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="totalBalance bigSize">
+				<em class="icoCate">
+					<span class="img"><img src="../../images/category/icoCate_04.png" alt="쇼핑"></span>
+				</em>
+				<p class="dt">
+					<button type="button" title="년월선택" class="btnSelec">11월</button>
+					쇼핑에 쓴 금액
+				</p>
+				<div class="bigTxt">
+					<strong>11,400,000</strong>원
+					<span class="barTxt">25회</span>
+				</div>
+			</div>
+
+			<hr class="divLine">
+
+			<p class="title">상단 Total 영역 : 텍스트형</p>
+			<p class="desc">- 텍스트형(하이라이트) : <br>.totalBalance > .defTxt > .highlight</p>
+			<div class="totalBalance">
+				<p class="defTxt">앗!<br>
+					예산을 설정하지 않은 기간이에요.<br>
+					이기간동안 소비한 금액은<br>
+					<span class="highlight"><strong>3,400,000</strong>원</span> 이네요.
+				</p>
+			</div>
+
+			<p class="desc">- 텍스트형(링크有) : <br>.totalBalance > .defTxt > a</p>
+			<div class="totalBalance">
+				<p class="defTxt">
+					이번달은 <a href="javascript:;" class="link pointColor">자동차/주유</a> 에<br>가장 많이 소비 하고 있어요.
+				</p>
+			</div>
+			
+			<p class="desc">- 텍스트형(bg有) : <br>.totalBalance > .defTxt.isBg</p>
+			<div class="totalBalance">
+				<p class="defTxt isBg">슬기로운<br><strong class="pointColor">소비 생활을 위한 첫걸음,</strong><br>예산설정을 해 보세요</p>
+			</div>
+
+			<p class="desc">- 텍스트형(dl형) : <br>.totalBalance > dt + dd</p>
+			<dl class="totalBalance">
+				<dt><strong>김농협</strong>님의 보유자산
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">유형 툴팁 열기</span></button>
+						<div class="tooltipCont">
+							<p>금융자산 : 계좌, 투자, 선불페이<br>
+								실물자산 : 부동산, 자동차, 금, 외화, 기타
+							</p>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+				</dt>
+				<dd>
+					<div class="bigTxt mt15">
+						<p class="defTxt ">실물부자가 나타났어요!<br>
+							비중이 <em class="pointColor">42.2%</em>로 가장 높아요.</p>
+					</div>
+				</dd>
+			</dl>
+
+			<hr class="divLine">
+
+			<p class="title">상세페이지 계좌정보영역</p>
+			<p class="desc">- .accTopInfo > .accName + .totalBalance + .etcInfo/wrapTag/compare</p>
+			<div class="accTopInfo">
+				<h2 class="accName A1AAES0000">하나멤버스 주거래통장<span class="blind">KEB하나은행</span></h2>
+				<dl class="totalBalance">
+					<dt>총 잔액</dt>
+					<dd><strong>2,098,694</strong>원</dd>
+				</dl>
+				<div class="etcInfo">
+					예금금리 <strong class="dataValue">3.53</strong><em class="won">%</em>
+				</div>
+				<div class="wrapTag">
+					<span class="tag green">자가</span><span class="txt">지분율 50%</span>
+				</div>
+				<div class="etcInfo compare">
+					평가손익
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">평가손익 툴팁 열기</span></button>
+						<div class="tooltipCont">
+							<p>평가손익과 수익률은 예상 수익으로 실제와 상이할 수 있습니다.</p>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+					<span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span> <!-- 감소일 경우 arrowDown 클래스 사용 -->
+					<span class="amount inColor"><strong>56,897</strong>원 (+<strong class="dataValue">1.53</strong><em class="won">%</em>)</span>
+				</div>
+			</div>
+
+			<hr class="divLine">
+
+			<p class="title">totalTitWrap</p>
+			<p class="desc">- .totalTitWrap > .totalTit + totalAmnt</p>
+			<div class="totalTitWrap">
+				<h2 class="totalTit">계좌 <span class="cnt">4개</span></h2>
+				<span class="totalAmnt">
+					<strong class="dataValue">1,000,000,000,000</strong><em class="won">원</em>
+					<div class="mainAmount">
+						<span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span>
+						<span class="amount inColor"><strong>56,897</strong>원</span>
+					</div>
+				</span>
+			</div>
+
+			<hr class="divLine">
+			
+			<p class="title">list의 상단 구분</p>
+			<p class="desc">- .listHeader > .lgDivTxt + smDivTxt</p>
+			<div class="listHeader">
+				<h2 class="lgDivTxt">2021년 11월</h2>
+				<p class="smDivTxt">10일</p>
+			</div>
+
+			<p class="desc">- .detailListTit > .defSubTit2 + .contBtn01</p>
+			<div class="detailListTit">
+				<h2 class="defSubTit2 mt25">VIP 금융컨설팅</h2>
+				<a href="javascript:;" class="contBtn01 green posA">신청하기</a>
+			</div>
+			
+			<p class="desc">- .defSubTit2 > .contBtn01</p>
+			<strong class="defSubTit2 clearfix">총 연결기관 <em class="pointColor">10</em>개
+				<button type="button" class="contBtn01 green">연결자산 설정</button>
+			</strong>
+
+			<hr class="divLine">
+			
+			<p class="title">title 모음</p>
+			<p class="desc">- .formWrap .formTit : 15px/#111/bold</p>
+			<strong class="fomrTit">타이틀</strong>
+			<p class="desc">- .defTit : 19px/#111/normal</p>
+			<p class="defTit">타이틀</p>
+			<p class="desc">- .defSubTit : 15px/#111/normal</p>
+			<p class="defSubTit">타이틀</p>
+			<p class="desc">- .defSubTit2 : 16px/#111/normal</p>
+			<p class="defSubTit2">타이틀</p>
+			<p class="desc">- .defSubTit2.chk : 16px/#19a647/bold</p>
+			<p class="defSubTit2 chk">타이틀</p>
+			<p class="desc">- .defSubTit3 : 14px/#111/bold</p>
+			<p class="defSubTit3">타이틀</p>
+			<p class="desc">- subTxt : 14px/#7e858e/normal</p>
+			<p class="subTxt2">서브 텍스트111</p>
+			<p class="desc">.subTxt2 : 12px/#7e858e/normal</p>
+			<p class="subTxt2">서브 텍스트222</p>
+			<p class="desc">.subTxt3 : 13px/#7e858e/normal</p>
+			<p class="subTxt3">서브 텍스트333</p>
+			<p class="desc">- .topTitWrap</p>
+			<div class="topTitWrap">
+				<h2 class="defTit"><strong>8월에 주로 쓴 카테고리</strong></h2>
+				<p class="defSubTit2">김농협님,<br><strong>외식</strong>에 가장 많이 소비했어요<span class="icoCate01"><em class="blind">외식</em></span></p>
+			</div>
+			<p class="desc">텍스트형 링크</p>
+			<p class="subTxt ac"><a href="javascript:;" class="underLine">쇼핑랭킹 더보기</a></p>
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<hr class="divLine">
+
+			<h2 class="guide">2020년</h2>
+
+
+
+			
+
+
+			<hr class="divLine">
+
+			<p style="color:#666">.infoTxtMulti</p>
+			<div class="infoTxtMulti">
+				<ul>
+					<li>
+						<strong class="tit">1그램 = 1,320.33원</strong>
+						<span class="txt">2020.06.03 11:43:06 기준</span>
+					</li>
+					<li>
+						<strong class="tit">팔때 기준</strong>
+						<span class="value">
+							<strong class="dataValue">2,098,694</strong><em class="won">원</em>
+						</span>
+					</li>
+				</ul>
+			</div>
+
+			<hr class="divLine">
+
+			<p style="color:#666">ul.infoTxtMulti</p>
+			<ul class="infoTxt">
+				<li>내역을 서택하여 카테고리를 변경하세요.</li>
+				<li>내역을 서택하여 카테고리를 변경하세요.</li>
+			</ul>
+
+			<hr class="divLine">
+
+			<p style="color:#666">p.infoTxtMulti</p>
+			<p class="infoTxt">내역을 서택하여 카테고리를 변경하세요.</p>
+
+			<hr class="divLine">
+
+		</div>
+		<!-- //container -->
+
+	</div>
+
+</body>
+</html>

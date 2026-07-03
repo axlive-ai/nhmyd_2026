@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>고객정보입력 | 고객등록</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1>고객등록</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>전체메뉴</span></a>
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 고객정보입력 ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<h2 class="defTit"><strong>고객정보</strong>를 등록해주세요</h2>
+
+		<!-- -------------------------------------- -->
+		<!-- [입력영역] 고객 정보 -->
+		<!-- -------------------------------------- -->
+		<div class="formWrap boxTypeWrap pt0">
+			<div class="boxTitArea bgAssetConn"><h3 class="defSubTit2">고객 정보</h3></div>
+			<div class="titListBox mt20">
+				<ul>
+					<li>
+						<div class="formTitN"><strong>이름</strong></div>
+						<div class="inputList">
+							<input type="text" title="이름(실명)을 입력" value="김농협" placeholder="이름(실명)을 입력하세요" readonly> <!-- [2022-11-18] readonly로 수정 -->
+						</div>
+					</li>
+					<li>
+						<div class="formTitN"><strong>주민등록번호</strong></div>
+						<div class="inputList juminNumAll">
+							<input type="tel" title="생년월일" value="19800101" placeholder="생년월일 6자리 " readonly> <!-- [2022-11-18] readonly로 수정 -->
+							<span class="daesh">-</span>
+							<input type="password" title="주민등록 뒷자리" maxlength="7" value="1234567" placeholder="주민번호 뒷자리" readonly> <!-- [2022-11-18] readonly로 수정 -->
+						</div>
+					</li>
+					<li>
+						<div class="formTitN"><strong>연락처</strong></div>
+						<div class="boxRadio">
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo1" id="rdo11" type="radio" checked="checked">
+									<label for="rdo11">자택</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo1" id="rdo12" type="radio">
+									<label for="rdo12">직장</label>
+								</span>
+							</div>
+						</div>
+						<div class="inputList">
+							<input type="text" id="" name="" title="연락처" placeholder="‘-’없이 숫자만 입력하세요.">
+							<a href="javascript:" class="btnReset" role="button">입력내용삭제</a> <!-- [2023 NH마이데이터 서비스 고도화] 공통정책 적용 -->
+						</div>
+						<!-- [2023 NH마이데이터 서비스 고도화] 공통정책 적용 -->
+						<div class="inputList error">
+							<input type="text" id="" name="" title="연락처" placeholder="‘-’없이 숫자만 입력하세요.">
+							<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+						</div>
+						<!-- // [2023 NH마이데이터 서비스 고도화] 공통정책 적용 -->
+					</li>
+
+					<!-- [2023 NH마이데이터 서비스 고도화] -->
+					<li>
+						<div class="formTitN"><strong>직업분류</strong></div>
+						<div class="inputList">
+							<a href="javascript:;" title="대분류 선택" aria-haspopup="true">
+								<span class="selectValue">대분류 선택</span>
+								<span class="selectBtn"></span>
+							</a>
+							<select class="selectBtn" title="선택해주세요">
+								<option value=""></option>
+							</select>
+						</div>
+						<div class="inputList disabled"> <!-- [D] 대분류 선택 후  disabled 삭제 -->
+							<a href="javascript:;" title="중분류 선택" aria-haspopup="true" aria-disabled="true"> <!-- [D] 대분류 선택 후  aria-disabled="true" 삭제 -->
+								<span class="selectValue">중분류 선택</span>
+								<span class="selectBtn"></span>
+							</a>
+							<select class="selectBtn" title="선택해주세요">
+								<option value=""></option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<div class="formTitN"><strong>직위명</strong></div>
+						<div class="inputList disabled"> <!-- [D] 중분류 선택 후  disabled 삭제 -->
+							<a href="javascript:;" title="직위명 선택" aria-haspopup="true" aria-disabled="true"> <!-- [D] 중분류 선택 후  aria-disabled="true" 삭제 -->
+								<span class="selectValue">선택</span>
+								<span class="selectBtn"></span>
+							</a>
+							<select class="selectBtn" title="선택해주세요">
+								<option value=""></option>
+							</select>
+						</div>
+					</li>
+					<!-- // -->
+
+					<li>
+						<div class="formTitN"><strong>주소</strong></div>
+						<div class="boxRadio">
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo2" id="rdo21" type="radio" checked="checked">
+									<label for="rdo21">자택</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo2" id="rdo22" type="radio">
+									<label for="rdo22">직장</label>
+								</span>
+							</div>
+						</div>
+						<div class="inputBoth01 addWrap">
+							<div class="inputB01 inputList">
+								<input type="text" title="우편번호" value="" placeholder="" readonly>
+								<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+							</div>
+							<div class="areaInpBtn">
+								<button class="btnInpLine">주소검색</button>
+							</div>
+						</div>
+						<div class="inputList">
+							<input type="text" id="" name="" title="주소" placeholder="" readonly>
+						</div>
+						<div class="inputList">
+							<input type="text" id="" name="" title="상세 주소" placeholder="상세 주소 입력">
+							<a href="javascript:" class="btnReset" role="button">입력내용삭제</a> <!-- [2023 NH마이데이터 서비스 고도화] 공통정책 적용 -->
+						</div>
+
+						<!-- [2023 NH마이데이터 서비스 고도화] : CASE : 직장선택시 노출 -->
+						<div class="area" style="display:none;">
+							<dl class="form">
+								<dt>직장명</dt>
+								<dd class="inputList">
+									<input type="text" title="직장명" value="" placeholder="직장명을 입력하세요">
+									<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+								</dd>
+							</dl>
+							<dl class="form">
+								<dt>부서명</dt>
+								<dd class="inputList">
+									<input type="text" title="부서명" value="" placeholder="부서명을 입력하세요">
+									<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+								</dd>
+							</dl>
+						</div>
+						<!-- // -->
+					</li>
+					<li>
+						<div class="formTitN"><strong>이메일주소</strong></div>
+						<div class="emailWrap">
+							<div class="email">
+								<div class="inputB01">
+									<div class="inputList">
+										<input type="text" id="" name="" title="이메일 계정" placeholder="이메일 입력">
+									</div>
+								</div>
+								<div class="inputDash">@</div>
+								<div class="inputB01 inputList">
+									<a href="javascript:;" title="이메일 도메인 선택" aria-haspopup="true">
+										<span class="selectValue">선택하세요.</span>
+										<span class="selectBtn"></span>
+									</a>
+									<select name="" title="선택해주세요" >
+										<option value=""></option>
+									</select>
+								</div>
+							</div>
+							<!-- 직접입력 선택시 활성화 -->
+							<div class="inputList">
+								<input type="text" title="이메일 주소 직접입력" placeholder="이메일 주소 입력">
+								<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+							</div>
+							<!-- [2023 NH마이데이터 서비스 고도화] 공통정책 적용 -->
+							<div class="inputList error">
+								<input type="text" title="이메일 주소 직접입력" placeholder="이메일 주소 입력">
+								<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+							</div>
+							<!-- // [2023 NH마이데이터 서비스 고도화] 공통정책 적용 -->
+							<!--// 직접입력 선택시 활성화 -->
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [약관동의] 서비스 이용동의 -->
+		<!-- -------------------------------------- -->
+		<div class="formWrap boxTypeWrap pt0">
+			<div class="boxTitArea bgAssetConn"><h3 class="defSubTit2">서비스 이용동의</h3></div>
+			<div class="titListBox">
+				<ul>
+					<li>
+						<div class="formWrap selectAll pd0 mt10">
+							<div class="total">
+								<div class="formHolder check">
+									<input type="checkbox" id="type_all01" checked="" class="chekTypeOther">
+									<label class="check" for="type_all01">전체동의</label>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="formHolder check">
+									<input type="checkbox" id="type01" checked="checked">
+									<label class="check" for="type01">개인(신용)정보 수집 및 이용 동의 (필수)</label>
+									<a href="javascript:;" class="btnView" role="button" title="개인(신용)정보 수집 및 이용 동의 (필수)"><span class="blind">약관보기</span></a>
+								</div>
+								<div class="formHolder check">
+									<input type="checkbox" id="type02">
+									<label class="check" for="type02">마케팅 활용동의 (선택)</label>
+									<a href="javascript:;" class="btnView" role="button" title="마케팅 활용동의 (선택)"><span class="blind">약관보기</span></a>
+								</div>
+							</div>
+						</div>
+						<div class="grayBox mt20 mb0">
+							<p class="subTxt2">약관 및 주요 안내사항을 읽고 충분히 이해하여 이에 동의합니다.</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- -------------------------------------- -->
+		<div class="areaBtnDefault">
+			<a href="javascript:;" class="btnPressDefault" role="button">취소</a>
+			<a href="javascript:;" class="btnPressPoint" role="button">확인</a>
+		</div>
+		<!-- -------------------------------------- -->
+	</div>
+	<!-- ###################################### -->
+</div>
+
+<!-- ###################################### -->
+<!-- ### [샘플] 스크립트 ### -->
+<!-- ###################################### -->
+<script>
+	$(document).ready(function(){
+		//샘플 : 주소 직장 선택시 하위 컨텐츠 노출
+		$('[name="rdo2"]').on('change',function(){
+			var _cont = $(this).parents('li').find('.area');
+			if($(this).attr('id') == 'rdo22') _cont.show();
+			else _cont.hide();
+		});
+	});
+</script>
+</body>
+</html>

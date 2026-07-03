@@ -1,0 +1,85 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산현황</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function() {
+		fullLayerPop();
+	});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">자산</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container"></div>
+		<!-- //container -->
+
+		<!-- 팝업시작 -->
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>DSR 이란?</h1> 
+				<div class="popCont">
+					<div class="transBox">
+						<p class="txtb1">DSR이란 연소득 대비 연간 부담해야 할 총 부채의 원리금 비율을 뜻합니다.</p>
+						<p class="txtb1 mt10">2022년 7월부터 총 대출이 1억원을 초과하는 경우 개인별 DSR 40%이내에서 대출이 가능합니다.</p>
+					</div>
+					
+					<p class="txtt2"><strong>DSR계산식</strong></p>
+					<div class="greenBox2 dsrformula" role="img" aria-label="(신규 신성 예정 대출의 연간 원리금 상환액 + 기존 모든 대출의 연간 원리금 상환액) / 연소득 * 100"></div>
+
+					<div class="grayBox2">
+						<p class="txtb1">신규 신청 시 DSR 적용 제외 대출</p>
+						<ul class="listBul disc mt10">
+							<li>중도금대출, 이주비 대출</li>
+							<li>전세자금대출</li>
+							<li>전세보증금담보대출</li>
+							<li>주택연금대출</li>
+							<li>300만원 이하 소액신용대출</li>
+							<li>300만원 이하 소액 예적금담보대출, 유가증권 담보대출</li>
+							<li>정책적 목적에 따라 정부, 공공기관, 지방자치단체 등과 이차보전 등 협약을 체결하여 취급하는 대출</li>
+							<li>자연재해 지역에 대한 지원 등 정부정책 등에 따라 긴급하게 취급하는 대출</li>
+							<li>상속 또는 채권보전을 위한 경매참가 등을 통해 불가피한 대출 채무 인수</li>
+						</ul>
+					</div>
+				</div>
+				
+
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<!-- <a href="javascript:;" class="" role="button">이전</a> -->
+						<a href="javascript:;" class="confirmBtn" role="button">확인</a>
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- // 팝업 끝 -->
+	</div>
+
+</body>
+</html>

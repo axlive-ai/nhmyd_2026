@@ -1,0 +1,120 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산현황</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+    $(document).ready(function(){
+        slidePopConfirm();
+    })  
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">자산등록</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+		</div>
+		<!-- //container -->
+
+		<!-- 계좌별칭 설정 팝업 -->
+		<div class="nhasset popWrap slidePopConfirm"><!--10.31 slidePopConfirm 수정-->
+            <div class="dim"></div>
+            <div class="popInner">
+                <h1>맞춤상품추천</h1><!--09.29타이틀 수정-->
+                <div class="popCont">   
+					<!-- <div class="as totalPopWrap">  
+						<div class="totalTit">입출금 총 잔액</div>
+						<div class="totalAmnt"><strong class="dataValue">10,000,000,000</strong><em class="won">원</em></div>
+					</div>   -->
+					<div class="transfer">
+						<div class="boxTypeWrap bgType04 pt0 mt0">
+							<h2 class="prodListTit img14">
+                                해외 투자 자금, 유리한 환율로 <br>우대 받고 미리 준비해볼까요?
+							</h2>
+							<!-- <h2 class="prodListTit">
+								<strong>농협은행 대표 상품으로</strong>
+								<br>잠 자는 돈을 깨워 보세요!
+							</h2> -->
+							<!-- <h2 class="prodListTit">
+								빅데이터 분석을 통한<br>
+								<strong>최적의 맞춤상품</strong>을 찾았어요.
+							</h2> --> <!-- [2021-09-08] 한은정 : 타이틀 케이스 추가 -->
+							<p class="subTxt4">상품가입 시 실제 금리와 다를 수 있습니다.</p> <!-- [2021-11-30] 윤지현:문구추가 -->
+							<ul class="prodListWrap">
+								<!-- [2023-01-21] 마크업 수정 -->
+								<li>
+									<a href="javascript:;" role="button">
+										<div class="prodRecomWrap">
+											<strong class="prodTit">하나로외화자유적립예금</strong>
+											<em class="prodRecommInfo">자유롭게 수시적립 가능한 목돈마련 상품</em>
+										</div>
+										<div class="prodInfoWrap">	
+											<span class="hashWrap">
+												<em class="hastag bg01">#월단위</em>
+                                                <em class="hastag bg02">#자유적립</em>
+											</span>
+										</div>
+									</a>
+								</li>
+								<!-- //[2023-01-21] 마크업 수정 -->
+							</ul>
+						</div>
+
+						<!-- <div class="boxTypeWrap bgType02 addShadow">
+							<div class="visualSubWrap">
+								<h3 class="prodListTit img01">빅데이터로 분석한<br>우대금리 맞춤상품을 찾았어요.</h3>
+								<p class="subTxt4">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+							</div>
+							<ul class="prodListWrap">
+								<li>
+									<div class="disagree">
+										<a href="javascript:;" role="button">
+											<p class="disagreeP"><strong>나만 알고 싶은 추천상품</strong></p>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</div> -->
+
+					</div><!-- //.transfer -->
+                </div>
+
+                <div class="popBtnWrap">
+                    <!-- <div class="popBtn">
+                        <a href="javascript:;" class="confirmBtn">조회</a>
+                    </div> -->
+                    <a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다."><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+                </div>
+            </div>
+        </div>
+		<!-- // 계좌별칭 설정 팝업 -->
+
+	</div>
+
+</body>
+</html>

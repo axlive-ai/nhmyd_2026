@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>전기관 미동의</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script type="text/javascript">
+$(function(){
+    slidePopConfirm();
+});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">전기관 미동의</a></h1>
+			<!-- <a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>  -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container"> 
+			<button type="button" onclick="slidePopConfirm()">팝업</button>
+		</div>
+		<!-- // container -->
+
+		<!-- 컨펌 팝업 -->
+		<div class="nhasset popWrap slidePopConfirm">
+			<div class="dim"></div>
+			<!-- [2022-10-13] 레이아웃 수정 -->
+			<div class="popInner titMini">
+				<h1><span class="blind">전기관 미동의 팝업</span></h1>
+				<div class="popCont">
+					<div class="popEventTxtBox">
+						<span class="defTit"><strong>더 자세한 소비 내용이 필요해요!</strong></span>
+						<p class="txtb1">소비내용을 불러오면 카테고리가 자동으로 분류되어<br />다양한 소비 분석 서비스를 이용할 수 있어요.</p>
+					</div>
+					<div class="cardBenefitNone type04">
+					</div>
+				</div>
+		
+				<div class="popBtnWrap">
+					
+					<div class="popBtn">
+						<a href="javascript:;" class="" onclick="popClose(this);return false;" role="button">취소</a>
+						<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">소비내용 불러오기</a>
+					</div>
+					<!-- <a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a> -->
+				</div>
+			</div>
+		</div>
+		<!-- //컨펌 팝업 -->
+	</div>
+
+</body>
+</body>
+</html>

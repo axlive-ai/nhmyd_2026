@@ -1,0 +1,139 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - VIP 금융컨설팅</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<!-- <a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a> -->
+			<h1><a href="javascript:;" role="text">VIP 금융컨설팅</a></h1>
+			<a href="javascript:;" class="btnEtc">나가기</a>
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="infoBox vipGuide">
+				<!-- 1억이상 5억 미만 -->
+				<p class="defSubTit2">NH농협은행 <strong class="vipColor01">NH All100자문센터</strong>가<br>
+				제공하는 <strong>VIP 자산관리 서비스</strong>입니다.</p>
+				<!-- 1억이상 5억 미만 -->
+
+				<!-- 5억 이상 -->
+				<p class="defSubTit2">NH농협은행 <strong class="vipColor01">NH All100자문센터</strong>와<br>
+				NH농협금융그룹  <strong class="vipColor02">NH WM마스터즈</strong>가<br>
+				제공하는 <strong>VIP 자산관리 서비스</strong>입니다.</p>
+				<!-- 5억 이상 -->
+			</div> 
+
+			<div class="boxTypeWrap mt0">
+				<div class="titWrap mt0">
+					<h2 class="defSubTit1">신청정보입력</h2>
+				</div>
+				<ul class="detailList mt20">
+					<li>
+						<span class="tit">이름</span>
+						<span class="value">김농협</span> 
+					</li>
+					<li>
+						<span class="tit">투자성향등급</span>
+						<span class="value">위험중립형(21.08.08 까지)</span>
+					</li>
+					<li>
+						<span class="tit">상담 유형</span>
+						<span class="value">$모바일 화상상담OR영업점방문$</span>
+					</li>
+				</ul>
+			</div>
+
+			<!-- 정보 없는 고객 -->
+			<div class="boxTypeWrap wmConSulResult">
+				<div class="titWrap mt0">
+					<h2 class="defSubTit1">맞춤컨설팅을 위한 연금진단 결과
+						<!-- 툴팁 -->
+						<div class="tooltipWrap">
+							<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">맞춤컨설팅을 위한 연금진단 결과 툴팁 열기</span></button>
+							<div class="tooltipCont">
+								<p>나의 희망 은퇴 플랜은 연금진단에서 마지막으로 저장된 결과입니다.</p>
+								<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+							</div>
+						</div>
+						<!-- // 툴팁 -->
+					</h2>
+				</div>
+				<div class="vipPlan load mt20">
+					<strong class="">은퇴 희망나이 : <span class="old">정보 없음</span></strong>
+					<p class="mainTxt">맞춤정보를 입력하시면 보다<br>정확한 컨설팅을 받을 수 있어요.</p>
+					<a href="javascript:;" class="linkTxt">연금진단 하기</a>
+				</div>
+			</div>
+			<!-- //정보 없는 고객 -->
+
+			<!-- 정보 있는 고객 -->
+			<div class="boxTypeWrap wmConSulResult">
+				<div class="titWrap mt0">
+					<h2 class="defSubTit1">맞춤컨설팅을 위한 연금진단 결과
+						<!-- 툴팁 -->
+						<div class="tooltipWrap">
+							<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">맞춤컨설팅을 위한 연금진단 결과 툴팁 열기</span></button>
+							<div class="tooltipCont">
+								<p>나의 희망 은퇴 플랜은 연금진단에서 마지막으로 저장된 결과입니다.</p>
+								<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+							</div>
+						</div>
+						<!-- // 툴팁 -->
+					</h2>
+				</div>
+				<div class="vipPlan mt20">
+					<strong class="subTxt">은퇴 희망나이 : <span class="old">만 55세</span></strong>
+					<p class="mainTxt">현재 나의 은퇴 플랜은<br>
+					<strong class="pointColor">더 많은 은퇴준비가 필요해요.</strong></p>
+					<a href="javascript:;" class="linkTxt">연금진단 다시하기</a>
+				</div>
+			</div>
+			<!-- //정보 있는 고객 -->
+			
+			<div class="boxTypeWrap pb28">
+				<div class="formWrap mt0">
+					<ul>
+						<li>
+							<strong class="formTit">휴대폰번호</strong>
+							<div class="inputList">
+								<input type="tel" title="휴대폰번호" name="" id="" class="al" placeholder="'-' 없이 번호만 입력해 주세요.">
+								<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+							</div>
+							<p class="errorTxt">숫자만 입력 가능합니다.</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="areaBtnDefault">
+				<a href="javascript:;" class="btnPressDefault" role="button">이전</a>
+				<a href="javascript:;" class="btnPressPoint" role="button">다음</a> <!-- 비활성화시 disabled 추가 -->
+			</div>
+		</div>
+		<!-- //container -->
+
+	</div>
+
+</body>
+</html>

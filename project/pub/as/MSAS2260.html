@@ -1,0 +1,186 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산현황</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">계좌 상세</a></h1>
+			<!-- <a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>  -->
+			<a href="javascript:;" class="btnAcAdmin"><span class="blind">관리</span></a>
+
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="layerMsgWrap ty01">
+				<p>절세 조언 받고 똑똑하게 투자해보세요!</p>
+				<button type="button" class="layerMsgClose"><span class="blind">닫기</span></button>
+			</div>
+
+			<div class="boxWrapShadow"><!--09.02 boxWrapShadow 추가 s:boxWrapShadow-->
+				<div class="boxTypeWrap delShadow"><!--09.02 delShadow 추가 s:delShadow-->
+					<!-- 상단 계좌정보 영역 -->
+					<div class="accTopInfo">
+						<h2 class="accName">삼성전자
+							<img src="../../images/logos/ACRB0000.png" alt="삼성전자 로고" class="imgLogo"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+						</h2> <!-- [2021-10-05] 한은정 : 수정 -->
+						<dl class="totalBalance">
+							<dt>신용융자
+								<!-- 툴팁 -->
+								<div class="tooltipWrap">
+									<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">신용융자 안내 툴팁 열기</span><!-- [접근성_2024] .blind 수정 --></button>
+									<div class="tooltipCont">
+										<p>신용융자가 외화인 경우, 전일 매매기준율로 환산합니다.</p>
+										<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+									</div>
+								</div>
+								<!-- // 툴팁 -->
+							<dd><strong>6,399,000</strong>원</dd>
+						</dl>
+						
+					</div>
+					<!-- // 상단 계좌정보 영역 -->
+					
+					<hr class="divLine">
+					
+					<!-- 계좌정보 상세 -->
+					<div class="accInfoDetail">
+						<ul class="detailList">
+							<li>
+								<span class="tit">유형</span>
+								<span class="value">기타상품&gt;신용융자</span>
+							</li>
+							<li>
+								<span class="tit">상품명</span>
+								<span class="value">삼성전자 <!-- <button type="button" class="contBtn01" title="별칭 수정">수정</button> --></span>
+							</li>
+						</ul>
+					</div>
+					<!-- // 계좌정보 상세 -->
+				</div>
+				<!--e:delShadow-->
+
+				<div class="moreInfoArea"><!--09.02 div moreInfoArea 추가  및 이동 s:moreInfoArea-->
+					<!-- 추가정보 열/닫 -->
+					<div class="moreInfoWrap toggleWrap">
+							
+						<div class="moreInfo toggleCont" style="display: none;">
+							<hr class="divLine2" aria-hidden="true">
+							<ul class="detailList wideTit">
+								<li>
+									<span class="tit">계좌번호</span>
+									<span class="value">3021417655471 <button type="button" class="contBtn01" title="계좌번호 복사">복사</button></span>
+								</li>
+								<li>
+									<span class="tit">신규일자</span>
+									<span class="value">2020.04.20</span>
+								</li>
+							<!--외회세트  통화코드 단건일 경우-->
+								<li>
+									<span class="tit">계좌번호</span>
+									<span class="value">3021417655471 <button type="button" class="contBtn01" title="계좌번호 복사">복사</button></span>
+								</li>
+								<li>
+									<span class="tit">신규일자</span>
+									<span class="value">2020.04.20</span>
+								</li>
+								<li>
+									<span class="tit">신용융자(USD) </span>
+									<span class="value"><strong class="dataValue">1,540</strong></span>
+								</li>
+								<li>
+									<span class="tit">적용환율</span>
+									<span class="value">1USD=<strong class="dataValue">1234.12</strong><em class="won">원</em></span>
+								</li>
+							<!--//외회세트  통화코드 단건일 경우-->
+							<!--외회세트-->
+								<li>
+									<span class="tit">신용융자(KRW) </span>
+									<span class="value"><strong class="dataValue">-1,000,000</strong><em class="won">원</em></span>
+								</li>	
+							<!--외회세트-->	
+							<!--외회세트-->
+								<li>
+									<span class="tit">신용융자(USD) </span>
+									<span class="value"><strong class="dataValue">-1,540</strong></span>
+								</li>
+								<li>
+									<span class="tit">적용환율</span>
+									<span class="value">1USD=<strong class="dataValue">1234.12</strong><em class="won">원</em></span>
+								</li>
+								<li>
+									<span class="tit">원화 환산금액</span>
+									<span class="value"><strong class="dataValue">-100,000</strong><em class="won">원</em></span>
+								</li>
+							<!--외회세트-->	
+							<!--외회세트-->
+								<li>
+									<span class="tit">신용융자(EUR) </span>
+									<span class="value"><strong class="dataValue">-1,540</strong></span>
+								</li>
+								<li>
+									<span class="tit">적용환율</span>
+									<span class="value">1USD=<strong class="dataValue">1234.12</strong><em class="won">원</em></span>
+								</li>
+								<li>
+									<span class="tit">원화 환산금액</span>
+									<span class="value"><strong class="dataValue">-100,000</strong><em class="won">원</em></span>
+								</li>
+							<!--외회세트-->	
+											
+							</ul>
+						</div>
+						<button type="button" class="moreOpenBtn toggleBtn"><span class="toggleTxt07">상세정보 보기</span></button> <!--09.21 toggleTxt07 수정-->
+					</div>
+					<!-- // 추가정보 열/닫 -->
+				</div>
+				<!--e:moreInfoArea-->
+			</div>
+			<!--e:boxWrapShadow-->
+			
+		</div>
+		<!-- //container -->
+
+	</div>
+<script type="text/javascript">
+	$('.layerMsgClose').click(function(){
+		$(this).closest('.layerMsgWrap').hide();
+	});
+
+	var $toggleBtn = $(".toggleBtn"),
+		$toggleWrap = $(".toggleWrap"),
+		$toggleCont = $(".toggleCont"),
+		$toggleTxt = $(".toggleTxt03");
+
+		$toggleBtn.click(function(){
+		 if ($(this).closest($toggleWrap).find( $toggleCont).css("display") == "block"){
+			$(this).parents().closest($toggleWrap).find($toggleTxt).text("상세정보 보기");
+		 }else{
+			$(this).parents().closest($toggleWrap).find($toggleTxt).text("접기");
+		 }
+	});
+</script>
+</body>
+</html>

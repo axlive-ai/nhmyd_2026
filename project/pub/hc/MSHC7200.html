@@ -1,0 +1,180 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>주말약국 찾기 메인 | 주말약국찾기 | 헬스케어</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1>주말약국 찾기</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 주말약국 찾기 ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<div class="boxTypeWrap">
+			<!-- -------------------------------------- -->
+			<!-- [상단영역] -->
+			<!-- [2023 NH마이데이터 서비스 고도화] 전체내용변경 -->
+			<!-- -------------------------------------- -->
+			<div class="defTit icoPhar">
+				지역별 주말약국을<br>
+				찾아보세요
+				<div class="tooltipWrap">
+					<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">주말약국 툴팁 열기</span></button>
+					<div class="tooltipCont">
+						<p>목록을 선택하면 지도와 상세정보를 볼 수 있습니다.</p>
+						<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+					</div>
+				</div>
+			</div>
+
+			<!-- ### 선택한 지역 ### -->
+			<div class="areaInfo1">
+				<p><span>현재 선택지역 :</span><strong>서울 도봉구</strong></p>
+				<div class="side"><button type="button" class="contBtn01 green">지역 설정</button></div>
+			</div>
+
+			<!-- ### 지도 : 높이값 변경 : height:200 > 300 ### -->
+			<div class="mapWrap" aria-hidden="true"><!-- [접근성_2024] aria-hidden="true" 추가 -->
+				<div class="mapArea">
+					<div id="map" style="width:100%;height:300px;background-color:#eee" alt="지도"><!-- 지도 영역 들어가는곳 --></div>
+				</div>
+			</div>
+
+			<!-- ### 주말약국/영업중 필터 체크박스 ### -->
+			<div class="formArea1">
+				<span>
+					<input type="checkbox" id="formChk11" class="chekTypeOther">
+					<label for="formChk11">주말약국</label>
+				</span>
+				<span>
+					<input type="checkbox" id="formChk12" class="chekTypeOther">
+					<label for="formChk12">영업중</label>
+				</span>
+			</div>
+			<!-- // [2023 NH마이데이터 서비스 고도화] 전체내용변경 -->
+
+			<!-- -------------------------------------- -->
+			<!-- [검색결과목록] -->
+			<!-- -------------------------------------- -->
+			<ul class="adrContWrap">
+				<li>
+					<!-- <div class="tagWrap"><span class="tag red">영업중</span></div>  [2023 NH마이데이터 서비스 고도화] 영역 삭제 -->
+					<div class="adrList">
+						<a href="javascipt:;" class="txtBox">
+							<dl>
+								<dt><strong>농협 약국</strong></dt>
+								<!-- [2023 NH마이데이터 서비스 고도화] 영역 추가 -->
+								<dd class="data1">
+									<em class="iconTxt1 t1">영업중</em>
+									<span>영업시간</span><span>00:00 ~ 00:00</span>
+								</dd>
+								<!-- // [2023 NH마이데이터 서비스 고도화] -->
+								<dd>서울시 강서구 화곡동 999-33(곰달래로 51)</dd>
+							</dl>
+							<p class="numTxt">02-0000-0000</p>
+						</a>
+						<div class="btnBox">
+							<a href="tel:031-426-8468" class="contBtn01 green">전화연결</a>
+							<a href="javascript:;" class="contBtn01 mt8">주소복사</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="adrList">
+						<a href="javascipt:;" class="txtBox">
+							<dl>
+								<dt><strong>농협 약국</strong></dt>
+								<dd class="data1">
+									<em class="iconTxt1 t1">영업중</em>
+									<span>영업시간</span><span>00:00 ~ 00:00</span>
+								</dd>
+								<dd>서울시 강서구 화곡동 999-33(곰달래로 51)</dd>
+							</dl>
+							<p class="numTxt">02-0000-0000</p>
+						</a>
+						<div class="btnBox">
+							<a href="tel:031-426-8468" class="contBtn01 green">전화연결</a>
+							<a href="javascript:;" class="contBtn01 mt8">주소복사</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="adrList">
+						<a href="javascipt:;" class="txtBox">
+							<dl>
+								<dt><strong>농협 약국</strong></dt>
+								<dd class="data1">
+									<em class="iconTxt1 t1">영업중</em>
+									<span>영업시간</span><span>00:00 ~ 00:00</span>
+								</dd>
+								<dd>서울시 강서구 화곡동 999-33(곰달래로 51)</dd>
+							</dl>
+							<p class="numTxt">02-0000-0000</p>
+						</a>
+						<div class="btnBox">
+							<a href="tel:031-426-8468" class="contBtn01 green">전화연결</a>
+							<a href="javascript:;" class="contBtn01 mt8">주소복사</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="adrList">
+						<a href="javascipt:;" class="txtBox">
+							<dl>
+								<dt><strong>농협 약국</strong></dt>
+								<dd class="data1">
+									<em class="iconTxt1 t2">영업종료</em>
+									<span>영업시간</span><span>00:00 ~ 00:00</span>
+								</dd>
+								<dd>서울시 강서구 화곡동 999-33(곰달래로 51)</dd>
+							</dl>
+							<p class="numTxt">02-0000-0000</p>
+						</a>
+						<div class="btnBox">
+							<a href="tel:031-426-8468" class="contBtn01 green">전화연결</a>
+							<a href="javascript:;" class="contBtn01 mt8">주소복사</a>
+						</div>
+					</div>
+				</li>
+
+				<!-- [2023 NH마이데이터 서비스 고도화] 검색결과없을 경우 추가 -->
+				<li class="nodata">검색된 약국이 없습니다.</li>
+				<!-- // -->
+			</ul>
+			<!-- -------------------------------------- -->
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [플로팅버튼] -->
+		<!-- -------------------------------------- -->
+		<button type="button" class="goTopBtn"><span class="blind">최상단으로 이동</span></button>
+		<!-- -------------------------------------- -->
+	</div>
+	<!-- ###################################### -->
+</div>
+</body>
+</html>

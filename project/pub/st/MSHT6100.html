@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>이벤트</title>
+<script src="../pub-assets/js/head.js"></script>
+<script src="../../js/jqueryRotate.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">이벤트 상세</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="formWrap mt0">
+				<div class="boxTypeWrap">
+					<div class="eventViewTitle">
+						<span class="title">NH마이데이터 오픈 서비스 이벤트</span>
+						<div class="date">2021.08.04 ~ 2021.12.04</div>
+					</div>
+					<div class="eventCont">
+						<div class="roulette" style="background-image:url('../../images/notice/img_event_rrbg.png');">
+							<!-- [2022-12-08] 타이틀 수정 -->
+							<p class="eventTit">
+								<strong class="bigTit01">NH마이데이터 신규 가입하고<br>룰렛 돌리기!</strong>
+							</p>
+							<!-- [2022-12-08] 타이틀 수정 -->
+							<div class="rrWrap">
+								<ul class="rrPan">
+									<!-- li 관리자에서 받아서 4개, 6개, 8개로 생성 -->
+								</ul>
+								<button class="startBtn" onclick="rrpanStart();"><span>START</span></button>
+							</div>
+							<p class="rrNum">
+								<span class="rrNumTit">응모기회</span>
+								<strong class="rrNumBox">3</strong>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="boxTypeWrap">
+					<p class="defSubTit2"><strong class="bold">응모권 받으러 가기</strong></p>
+					<ul class="roulPosList">
+						<li>
+							<strong>신규 가입</strong>
+							<p class="comTxt">참여완료</p> <!-- 참여완료일 경우 노출 -->
+							<!-- <a href="javascript:;" class="contBtn01 green">참여가능</a> -->
+						</li>
+						<li>
+							<strong>자산연결</strong>
+							<!-- <p class="comTxt">참여완료</p> -->
+							<a href="javascript:;" class="contBtn01 green">참여가능</a>
+						</li>
+						<li>
+							<strong>마케팅 동의</strong>
+							<!-- <p class="comTxt">참여완료</p> -->
+							<a href="javascript:;" class="contBtn01 green">참여가능</a>
+						</li>
+					</ul>
+				</div>
+				<div class="boxTypeWrap">
+					<a href="javascript:;" class="roulInfoBox">
+						<strong class="mainTit">룰렛 참여 내역 안내</strong>
+						<span class="subTxt">총 11번 참여했어요.</span>
+					</a>
+				</div>
+				<div class="boxTypeWrap">
+					<p class="defSubTit2"><strong class="bold">유의사항</strong></p>
+					<div class="grayBox">
+						<img src="../../images/" alt="">
+					</div>
+					<div class="shareIcoWrap mt30">
+                        <ul>
+                            <li class="event-kakao">
+                                <a href="javascript:;" role="button">
+                                    <span class="event-kakao">카카오톡 공유하기</span>
+                                </a>
+                            </li>
+                            <li class="event-link">
+                                <a href="javascript:;" role="button">
+                                    <span class="event-link">링크 복사하기</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+			</div>
+			<!-- <div class="areaBtnDefault">
+				<a href="javascript:;" class="btnPressPoint" role="button">응모하기</a>
+			</div> -->
+
+		</div>
+		<!-- //container -->
+	</div>
+	<script>
+			// var pArr = ['바볼랏상품권<br>볼랏상품권<br>볼랏상품', '2테니스 가방', '3NH포인트', '4골프 글로브']; //상품 4개인 경우
+			// var pArr = ['1NH포인트', '2테니스<br>가방', '3NH<br>포인트', '4골프<br>글로브', '5바볼랏<br>상품권', '바볼랏상품권<br>볼랏상품권<br>볼랏상품']; //상품 6개인 경우
+			var pArr = ['1NH포인트<br>ssss', '2테니스<br>가방', '3NH<br>포인트', '4골프<br>글로브', '바볼랏상품권<br>볼랏상품권<br>볼랏상품', '6바볼랏<br>상품권', '7바볼랏<br>상품권', '8바볼랏<br>상품권']; //상품 8개인 경우
+
+			var present = 1; // 추첨해서 나온 경품번호를 넣어주세요
+			
+			var can = pArr.length;
+			//선물 칸 범위 내에서의 랜덤
+			// var $max = 360 / can - 5;
+			// var $min = 0 + 5;
+			var degC = 360 / can / 2; //한 칸 가운데정렬
+
+			var $rrPan = $('.rrPan');
+			$rrPan.addClass('s'+can); //판 이미지 변경을 위한 클래스 추가
+			for (i = 0; i < can; i += 1) { //텍스트 li에 입력
+				$rrPan.append('<li>'+pArr[i]+'</li>')
+				var degLi = 360 / can * i + degC;
+				$($rrPan).find('li:nth-child(' + ( i+1 ) + ')').css('transform','translateX(-50%) rotate('+degLi+'deg)')
+			}
+
+			function rrpanStart(){
+				$('.startBtn').attr('disabled', true);
+				//var degR = Math.floor(Math.random() * ($max - $min + 1)) + $min; //선물 칸 범위 내에서의 랜덤
+				var presentLi = 3600 + (360 / can * (can - ( present - 1)) - degC); //선물의 판 각도(degC는 센터, degR은 랜덤)
+				$rrPan.rotate({
+					angle:0,
+					animateTo:presentLi,
+					easing: $.easing.esing,
+					duration:6000,
+					callback: function() {
+						alert(pArr[present - 1] + pArr2[present - 1] + '당첨!'); //테스트용
+					}
+				});
+				setTimeout(function(){
+					$('.startBtn').attr('disabled', false);
+				}, 6000)
+			}
+			
+	</script>
+</body>
+</html>

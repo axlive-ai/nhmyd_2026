@@ -1,0 +1,223 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산등록</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function() {
+		fullLayerPop();
+	});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">은행직접 등록</a></h1>
+			<a href="javascript:;" class="btnEtc">나가기</a>
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+		</div>
+		
+		<!-- 팝업시작 -->
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a> 
+				<h1>부동산 선택</h1>
+				<div class="popCont grayPop">
+					<div class="boxTypeWrap pt0 pb0">
+						<div class="infoBox bgNone">
+						<p class="tit">인덕원 푸르지오엘센트로</p>
+						<div class="divingTxt">경기 의왕시 안양판교로 100</div> 
+						</div>
+					</div>
+					<div class="boxTypeWrap pt0">
+						<div class="formWrap">
+							<!-- <div class="formDsp"> 
+								<ul>
+									<li>
+										<strong class="formTit">부동산 명칭</strong>
+										<div class="inputList">
+											<input type="text" title="부동산 명칭" value="행복주택" placeholder="명칭을 입력해주세요.">
+											<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+										</div>
+										<p class="errorTxt">특수문자[!@#$*()-=|;:,./]만 입력 가능합니다.</p>
+									</li>
+									<li>
+										<strong class="formTit">소유구분</strong>
+										<div class="boxRadio">
+											<div class="boxRadioInn">
+												<span>
+													<input name="rdo01" id="rdo01" type="radio" checked="checked">
+													<label for="rdo01">자가</label>
+												</span>
+											</div>
+											<div class="boxRadioInn">
+												<span>
+													<input name="rdo01" id="rdo02" type="radio">
+													<label for="rdo02">전세</label>
+												</span>
+											</div>
+											<div class="boxRadioInn">
+												<span>
+													<input name="rdo01" id="rdo03" type="radio">
+													<label for="rdo03">월세</label>
+												</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div> -->
+							<ul>
+								<!-- <li>
+									<strong class="formTit">부동산 명칭</strong>
+									<div class="inputList">
+										<input type="text" title="부동산 명칭" value="행복주택" placeholder="명칭을 입력해주세요.">
+										<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+									</div>
+									<p class="errorTxt">특수문자[!@#$*()-=|;:,./]만 입력 가능합니다.</p>
+								</li>
+								<li>
+									<strong class="formTit">소유구분</strong>
+									<div class="boxRadio">
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo01" id="rdo01" type="radio" checked="checked">
+												<label for="rdo01">자가</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo01" id="rdo02" type="radio">
+												<label for="rdo02">전세</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo01" id="rdo03" type="radio">
+												<label for="rdo03">월세</label>
+											</span>
+										</div>
+									</div>
+								</li> -->
+								<li>
+									<strong class="formTit">공급면적</strong>
+									<div class="boxRadio wrapType"> <!-- [2022-12-15] 라디오 묶음 제거 클래스 추가 -->
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo03" id="rdo04" type="radio" checked="checked">
+												<label for="rdo04">61.99㎡</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo03" id="rdo05" type="radio">
+												<label for="rdo05">64.99㎡</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo03" id="rdo06" type="radio">
+												<label for="rdo06">72.99㎡</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo03" id="rdo07" type="radio">
+												<label for="rdo07">74.12㎡</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo03" id="rdo08" type="radio">
+												<label for="rdo08">76㎡</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo03" id="rdo09" type="radio">
+												<label for="rdo09">76.58㎡</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo03" id="rdo10" type="radio">
+												<label for="rdo10">82㎡</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo03" id="rdo11" type="radio">
+												<label for="rdo11">84.99㎡</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo03" id="rdo12" type="radio">
+												<label for="rdo12">107.12㎡</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo03" id="rdo13" type="radio">
+												<label for="rdo13">112.56㎡</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo03" id="rdo14" type="radio">
+												<label for="rdo14">134.68㎡</label>
+											</span>
+										</div>
+										<div class="boxRadioInn"></div>
+									</div>
+									<!-- <div class="addrSelectWrap">
+										<ul>
+											<li><a href="javascript:;" role="button">61.99㎡</a></li>
+											<li><a href="javascript:;" role="button">64.99㎡</a></li>
+											<li><a href="javascript:;" role="button">72.99㎡</a></li>
+											<li><a href="javascript:;" role="button">74.12㎡</a></li>
+											<li><a href="javascript:;" role="button">76㎡</a></li>
+											<li><a href="javascript:;" role="button">76.58㎡</a></li>
+											<li><a href="javascript:;" role="button">78.56㎡</a></li>
+											<li><a href="javascript:;" role="button">82㎡</a></li>
+											<li><a href="javascript:;" role="button">84.99㎡</a></li>
+											<li><a href="javascript:;" role="button">107.12㎡</a></li>
+											<li><a href="javascript:;" role="button">112.56㎡</a></li>
+											<li><a href="javascript:;" role="button">134.68㎡</a></li>
+										</ul>
+									</div> -->			
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="popBtnWrap">
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	
+</body>
+</html>

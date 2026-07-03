@@ -1,0 +1,220 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산현황</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">계좌 상세</a></h1>
+		<!-- <a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>  -->
+		<a href="javascript:;" class="btnAcAdmin"><span class="blind">관리</span></a>
+
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 종목 상세 ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<!-- -------------------------------------- -->
+		<!-- [레이어팝업] 메세지 -->
+		<!-- -------------------------------------- -->
+		<div class="layerMsgWrap">
+			<p>순자산 금액에 포함 안된 자산이에요.</p>
+			<button type="button" class="layerMsgClose"><span class="blind">닫기</span></button>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [상단영역] 증권정보 -->
+		<!-- -------------------------------------- -->
+		<div class="boxWrapShadow">
+			<!-- ### [계좌정보] 기본내용 ### -->
+			<div class="boxTypeWrap delShadow">
+				<div class="accTopInfo">
+					<h2 class="accName">내 자산 별명
+						<img src="../../images/logos/AAEY0000.png" alt="삼성전자 로고" class="imgLogo"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+					</h2>
+					<dl class="totalBalance">
+						<dt>예수금
+							<!-- 툴팁 -->
+							<div class="tooltipWrap">
+								<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">예수금 안내 툴팁 열기</span> <!-- [접근성_2024] .blind 수정 --></button>
+								<div class="tooltipCont">
+									<p>예수금이 외화인 경우, 전일 매매기준율로 환산합니다.</p>
+									<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+								</div>
+							</div>
+							<!-- // 툴팁 -->
+						<dd><strong>6,399,000</strong>원</dd>
+					</dl>
+					
+				</div>
+				<!-- // 상단 계좌정보 영역 -->
+				
+				<hr class="divLine">
+				
+				<!-- 계좌정보 상세 -->
+				<div class="accInfoDetail">
+					<ul class="detailList">
+						<li>
+							<span class="tit">유형</span>
+							<span class="value">기타상품&gt;예수금</span>
+						</li>
+						<li>
+							<span class="tit">상품명</span>
+							<span class="value">$예수금 계좌명$ <!-- <button type="button" class="contBtn01" title="별칭 수정">수정</button> --></span>
+						</li>
+					</ul>	
+				</div>
+				<!-- // 계좌정보 상세 -->
+				<div class="inputListArea mt20">
+					<span class="tit pointColor11">기관별 검색</span>
+					<div class="inputList">
+						<a href="javascript:;" title="기관별 검색" aria-haspopup="true">
+							<span class="selectValue">전체</span>
+							<span class="selectBtn"></span>
+						</a>
+						<select name="" title="선택해주세요">
+							<option value=""></option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<!-- ### [토글영역] 상세정보 ### -->
+			<div class="moreInfoArea">
+				<!-- 추가정보 열/닫 -->
+				<div class="moreInfoWrap toggleWrap">			
+					<div class="moreInfo toggleCont" style="display:none;">
+						<hr class="divLine2" aria-hidden="true">
+						<ul class="detailList wideTit">
+							<li>
+								<span class="tit">계좌번호</span>
+								<span class="value">3021417655471 <button type="button" class="contBtn01" title="계좌번호 복사">복사</button></span>
+							</li>
+							<li>
+								<span class="tit">신규일자</span>
+								<span class="value">2020.04.20</span>
+							</li>
+						</ul>
+						<hr class="divLine05" aria-hidden="true">
+						<ul class="detailList wideTit">
+							<li>
+								<span class="tit">예수금(KRW) </span>
+								<span class="value"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+							</li>
+						</ul>
+						<hr class="divLine05" aria-hidden="true">
+						<ul class="detailList wideTit">
+							<li>
+								<span class="tit">예수금(USD) </span>
+								<span class="value">1540<em class="won">원</em></span>
+							</li>	
+							<li>
+								<span class="tit">적용환율</span>
+								<span class="value">1USD=<strong class="dataValue">1123.12</strong><em class="won">원</em></span>
+							</li>
+							<li>
+								<span class="tit">원화 환산금액</span>
+								<span class="value"><strong class="dataValue">15,400</strong><em class="won">원</em></span>
+							</li>
+						</ul>
+						<hr class="divLine05" aria-hidden="true">
+						<ul class="detailList wideTit">
+							<li>
+								<span class="tit">예수금(EUR) </span>
+								<span class="value">1540<em class="won">원</em></span>
+							</li>	
+							<li>
+								<span class="tit">적용환율</span>
+								<span class="value">1USD=<strong class="dataValue">1123.12</strong><em class="won">원</em></span>
+							</li>
+							<li>
+								<span class="tit">원화 환산금액</span>
+								<span class="value"><strong class="dataValue">15,400</strong><em class="won">원</em></span>
+							</li>					
+						</ul>
+					</div>
+					<button type="button" class="moreOpenBtn toggleBtn"><span class="toggleTxt07">상세정보 보기</span></button> <!--09.21 toggleTxt07 수정-->
+				</div>
+				<!-- // 추가정보 열/닫 -->
+			</div>
+			<!-- ### // ### -->
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [목록영역] 거래내역 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap pt0">
+			<div class="inoutListWrap invList">
+				<div class="inoutListInn">
+					<p class="date bdtNone">2020년 7월 31일</p>
+					<ul class="inoutList">							
+						<li>
+							<div class="istLogItem"><!--10.26 수정-->
+								<!-- <span class="imgWrap ACRB0000"><em class="blind">삼성전자</em></span> -->
+								<div class="itemTxt">
+									<p class="inoutTit">
+										<span class="listTit">입금 <!--<em class="listSub">(거래수량 5)</em>--></span>
+										<!-- <span class="dataTit">거래금액</span> -->
+									</p>
+									<div class="inoutCont alc"><!--10.25  마크업 수정-->
+										<div class="timeWrap">
+											<span class="time">14:35</span>
+										</div>
+										<span class="amount outColor"><strong class="dataValue">1,054,000</strong></span>
+									</div>
+									<div class="accContArea">
+										<span class="acctNum">계좌번호 노출</span>
+										<div class="accContNum">
+											<div class="totalAmount"><span class="txt">잔액</span> <strong class="dataValue">1,054,000</strong><em class="won">원</em></div>
+										</div>
+									</div>
+									<!--//10.25  마크업 수정-->
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- <div class="listMoreBtn">
+				<a href="javascript:;" title="항목 더보기">더보기</a>
+			</div> -->
+		</div>
+		
+	</div>
+	<!-- ###################################### -->
+</div>
+
+<!-- ###################################### -->
+<!-- ### [샘플] 스크립트 ### -->
+<!-- ###################################### -->
+<script type="text/javascript">
+	$('.layerMsgClose').click(function(){
+		$(this).closest('.layerMsgWrap').hide();
+	});
+</script>
+<!-- ###################################### -->
+</body>
+</html>

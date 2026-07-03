@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>절세팁</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>절세팁</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+
+		<div class="boxTypeWrap pb0">
+			<div class="taxTipMain">
+				<h2 class="defTit mt25 mb15"><strong>미리 알고 똑똑하게<br>준비하는 절세팁</strong></h2>
+				<p>지금 내가 납부할 세금을 미리 계산하고<br>세금을 절약할 수 있는 방법을 확인하세요.</p>
+				<a href="javascript:;" class="moreLink">나의 세금 지금 계산해보기</a>
+				<div class="imgBg01">
+					<span class="blind">미리 알고 똑똑하게 준비하는 절세팁 이미지</span>
+				</div>
+			</div>
+		</div>
+		<div class="yabannerArea mt20">
+			<a href="javascript:;" title="">
+				<div class="yabanner ty15">
+					<span class="subTxt">금융자산 1억원 이상 VIP고객님을 위한</span>
+					<p>재무·세무·부동산 전문가 상담</p>
+				</div>
+			</a>
+		</div>
+
+		<div class="defSubTit2 mt35 mb20"><strong class="bold">투자전문가로 가는 지름길</strong></div>
+		<div class="texSavingBanner">
+			<!-- 관리자 영역 // -->
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="javascript:;">
+							<div class="sumnailWrap"></div>
+							<div class="contWrap">
+								<p class="tit">안정적인 투자포인트</p>
+								<p class="time">2022-09-09</p>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:;">
+							<div class="sumnailWrap"></div>
+							<div class="contWrap">
+								<p class="tit">안정적인 투자포인트</p>
+								<p class="time">2022-09-09</p>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:;">
+							<div class="contWrap">
+								<p class="tit">안정적인 투자포인트</p>
+								<p class="time">2022-09-09</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="swiper-control">
+					<div class="swiper-pagination"></div>
+					<div class="swiper-autoBtn playing">
+						<a href="javascript:;" class="stopBtn" title="자동재생중 두번 터치시 멈춤"></a>
+						<a href="javascript:;" class="playBtn" title="자동재생 멈춤 두번 터치시 자동재생시작"></a>
+					</div>
+				</div><br>
+				<!-- [2022-11-01] 버튼삭제 -->
+				<!-- <div class="swiper-button-prev blind"></div>
+				<div class="swiper-button-next blind"></div> -->
+			</div>
+			<script>
+				$(function () {
+					var swiper = new Swiper('.texSavingBanner .swiper-container', {
+						slidesPerView: 'auto',
+						spaceBetween: 16,
+						autoplay: {
+							delay: 2500,
+							disableOnInteraction: true,
+							pauseOnMouseEnter: true,
+						},
+						pagination: {
+							el: '.swiper-pagination',
+							type: 'bullets',
+							clickable: true,
+						},
+						on: {
+							init: function(){
+                                $('.texSavingBanner .swiper-slide').attr('aria-hidden','true');
+                                $('.texSavingBanner .swiper-slide-active').attr('aria-hidden','false');
+                            },
+							transitionEnd: function () {
+								$('.texSavingBanner .swiper-slide').attr('aria-hidden', 'true')
+								$('.texSavingBanner .swiper-slide-active').attr('aria-hidden', 'false')
+							}
+						}
+					});
+					$('.texSavingBanner').find('.stopBtn').on('click', function () {
+						$('.swiper-autoBtn').removeClass('playing');
+						swiper.autoplay.stop();
+						console.log('자동재생 멈춤');
+					})
+					$('.texSavingBanner').find('.playBtn').on('click', function () {
+						$('.swiper-autoBtn').addClass('playing');
+						swiper.autoplay.start();
+						console.log('자동재생 시작');
+					})
+				})
+			</script>
+			<!-- //관리자 영역  -->
+		</div>
+
+		<div class="defSubTit2 mt35 mb20"><strong class="bold">농협은행 전문가 추천 자산n절세 인사이트</strong></div>
+		<div class="insiteBanner">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="javascript:;">
+							<div class="sumnailWrap"></div>
+							<div class="contWrap">
+								<p class="tit">[30대] 은퇴자금을 모으는 </p>
+								<p class="time">2022-09-09</p>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:;">
+							<div class="sumnailWrap"></div>
+							<div class="contWrap">
+								<p class="tit">[30대] 은퇴자금을 모으는</p>
+								<p class="time">2022-09-09</p>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:;">
+							<div class="contWrap">
+								<p class="tit">[30대] 은퇴자금을 모으는</p>
+								<p class="time">2022-09-09</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="swiper-control">
+					<div class="swiper-pagination"></div>
+					<div class="swiper-autoBtn playing">
+						<a href="javascript:;" class="stopBtn" title="자동재생중 두번 터치시 멈춤"></a>
+						<a href="javascript:;" class="playBtn" title="자동재생 멈춤 두번 터치시 자동재생시작"></a>
+					</div>
+				</div>
+				<!-- [2022-11-01] 버튼삭제 -->
+				<!-- <div class="swiper-button-prev blind"></div>
+				<div class="swiper-button-next blind"></div> -->
+			</div>
+			<script>
+				$(function () {
+					var swiper = new Swiper('.insiteBanner .swiper-container', {
+						slidesPerView: 'auto',
+						spaceBetween: 16,
+						autoplay: {
+							delay: 2500,
+							disableOnInteraction: true,
+							pauseOnMouseEnter: true,
+						},
+						pagination: {
+							el: '.swiper-pagination',
+							type: 'bullets',
+							clickable: true,
+						},
+						on: {
+							init: function(){
+                                $('.insiteBanner .swiper-slide').attr('aria-hidden','true');
+								$('.insiteBanner .swiper-slide-active').attr('aria-hidden','false');
+                            },
+							transitionEnd: function () {
+								$('.insiteBanner .swiper-slide').attr('aria-hidden', 'true')
+								$('.insiteBanner .swiper-slide-active').attr('aria-hidden', 'false')
+							}
+						}
+					});
+					$('.insiteBanner').find('.stopBtn').on('click', function () {
+						$('.swiper-autoBtn').removeClass('playing');
+						swiper.autoplay.stop();
+						console.log('자동재생 멈춤');
+					})
+					$('.insiteBanner').find('.playBtn').on('click', function () {
+						$('.swiper-autoBtn').addClass('playing');
+
+						swiper.autoplay.start();
+						console.log('자동재생 시작');
+					})
+				})
+			</script>
+		</div>
+
+
+
+		<div class="yabannerArea mt30">
+			<a href="javascript:;" title="">
+				<div class="yabanner ty16">
+					<p>700만원까지 공제가능한<br>IRP상품 보러가기</p>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

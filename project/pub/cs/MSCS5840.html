@@ -1,0 +1,166 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>직접등록 | 상세내역 | 정기지출관리 | 소비C</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">상세내역</a></h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 상세내역(일반) ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<!-- -------------------------------------- -->
+		<!-- [상단영역] 결제정보 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap pt0 t1"> <!-- [2023 NH마이데이터 서비스 고도화] 클래스명 (.t1) 추가 -->
+			<div class="outgoingsSubject">
+				<div class="logoArea">
+					<img src="../../images/icon_sell.png" alt="직접등록" style="width:64px;">
+				</div>
+				<strong class="title">한솥도시락</strong>
+				<div class="summary">
+					<span>5일 예상</span><span>생활지출</span> <!-- [2023 NH마이데이터 서비스 고도화] 문구 추가 -->
+				</div>
+				<div class="mt10">
+					<p class="subTxt3 pointColor9">김농협님이 직접 추가한 내역이에요</p>
+				</div>
+			</div>
+			<div class="infoBox2">
+				<ul class="detailList">
+					<li>
+						<span class="tit">결제금액
+							<!-- [2023 NH마이데이터 서비스 고도화] 툴팁 추가 -->
+							<div class="tooltipWrap">
+								<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">결제금액 안내툴팁</span></button>
+								<div class="tooltipCont">
+									<div class="msaeTool">
+										<ul class="popBul">
+											<li>생활지출 내역은 직전 월(1일~말일)까지의 금액의 합산을 노출합니다.</li>
+											<li>직전 월이 없는 경우는 당월(현재일까지) 금액의 합산을 노출합니다.</li>
+											<li>매월 1일 직전 월 합산 금액으로 업데이트 됩니다.</li>
+										</ul>
+									</div>  
+									<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+								</div>
+							</div>
+							<!-- // [2023 NH마이데이터 서비스 고도화] -->
+						</span>
+						<span class="value"><strong>17,000원</strong></span>
+					</li>
+					<li>
+						<span class="tit">결제수단</span>
+						<span class="value pointColor9">현대카드ZERO Edition2(할인형)</span>
+					</li>
+				</ul>
+			</div>
+			<div class="areaBodyBtnFull mt20">
+				<a href="javascript:;" class="btnBodyLine" role="button">정기지출 아니라면 삭제하기</a>
+			</div>
+		</div>
+		<div class="boxTypeWrap pt0">
+			<div class="cstitBox">
+				<img src="../../images/ico_chk01.png" />최근 결제내역을 보여드려요
+			</div>
+			<hr class="divLine">
+			<div class="cardSpendList mt0">
+				<div class="inoutListWrap">
+					<div class="inoutListInn">
+						<ul class="inoutList">
+							<li class="pt0">
+								<a href="javascript:;" class="link">
+									<div class="isCategory">
+										<div class="imgWrap icoCate">
+											<img src="../../images/icon_sell.png" alt="직접등록">
+										</div>
+										<div class="textWrap">
+											<div class="inoutTit">
+												<span class="use">한솥도시락</span>
+												<span class="amount"><strong class="dataValue">7,900</strong><em class="won">원</em></span>
+											</div>
+											<div class="inoutCont">
+												<div class="timeWrap">
+													<span class="time">3월 5일 토요일</span>
+												</div>
+												<span class="totalAmount">롯데카드</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="link">
+									<div class="isCategory">
+										<div class="imgWrap icoCate">
+											<img src="../../images/icon_sell.png" alt="직접등록">
+										</div>
+										<div class="textWrap">
+											<div class="inoutTit">
+												<span class="use">한솥도시락</span>
+												<span class="amount"><strong class="dataValue">11,000</strong><em class="won">원</em></span>
+											</div>
+											<div class="inoutCont">
+												<div class="timeWrap">
+													<span class="time">2월 5일 토요일</span>
+												</div>
+												<span class="totalAmount">롯데카드</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="pb0">
+								<a href="javascript:;" class="link">
+									<div class="isCategory">
+										<div class="imgWrap icoCate">
+											<img src="../../images/icon_sell.png" alt="직접등록">
+										</div>
+										<div class="textWrap">
+											<div class="inoutTit">
+												<span class="use">한솥도시락</span>
+												<span class="amount"><strong class="dataValue">6,000</strong><em class="won">원</em></span>
+											</div>
+											<div class="inoutCont">
+												<div class="timeWrap">
+													<span class="time">2월 1일 목요일</span>
+												</div>
+												<span class="totalAmount">롯데카드</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ###################################### -->
+</div>
+</body>
+</html>

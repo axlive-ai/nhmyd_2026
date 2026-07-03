@@ -1,0 +1,104 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 부동산 공통 </title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function(){
+		slidePopOption();
+	})  
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">외화등록</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+		</div>
+		<!-- //container -->
+
+		<!-- 계좌별칭 설정 팝업 -->
+		<div class="nhasset popWrap slidePopOption">
+			<div class="dim"></div>
+			<div class="popInner">
+				<h1>월세출금계좌선택</h1><!--10.28수정-->
+				<div class="popCont">                    
+					<ul class="selectList">
+						<li class="active">
+                            <a href="javascript:;" title="선택됨" aria-selected="true">
+                                NH1934우대통장
+                                <ul class="listItem">
+                                    <li>
+                                        <span class="mr5">농협은행 </span><span class="value"> 3510620888812</span>
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+						<li><a href="javascript:;">
+                            보통예금
+                            <ul class="listItem">
+                                <li>
+                                    <span class="mr5">신한은행
+                                    </span><span class="value"> 110395121263
+                                    </span>
+                                </li>
+                            </ul>
+                            </a>
+                        </li>
+                        <li><a href="javascript:;">
+                            올원주거래통장
+                            <ul class="listItem">
+                                <li>
+                                    <span class="mr5">농협은행 </span><span class="value"> 3510620888812</span>
+                                </li>
+                            </ul>
+                            </a>
+                        </li>
+                        <li><a href="javascript:;">
+                            저축예금
+                                <ul class="listItem">
+                                    <li>
+                                        <span class="mr5">하나은행</span><span class="value"> 1661234123412
+                                        </span>
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+					</ul>
+				</div>
+
+				<div class="popBtnWrap">
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다."><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- // 계좌별칭 설정 팝업 -->
+
+	</div>
+
+</body>
+</html>

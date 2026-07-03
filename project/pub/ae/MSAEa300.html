@@ -1,0 +1,289 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>STEP2) 은퇴준비자금 | 조기은퇴진단 | 컨설팅</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">조기은퇴진단</a></h1>
+		<a href="javascript:;" class="btnEtc">나가기</a>
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 조기은퇴진단 ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<!-- -------------------------------------- -->
+		<!-- [상단영역] 스텝 영역 -->
+		<!-- -------------------------------------- -->
+		<div class="infoStep1">
+			<ol>
+				<li>
+					<i aria-hidden="true">1</i>
+					<span>기본정보</span>
+				</li>
+				<li aria-current="step"><!-- [D] 현재 스텝 li : aria-current="step" 노출 -->
+					<i aria-hidden="true">2</i>
+					<span>은퇴준비자금</span>
+				</li>
+				<li>
+					<i aria-hidden="true">3</i>
+					<span>은퇴목표</span>
+				</li>
+				<li>
+					<i aria-hidden="true">4</i>
+					<span>기대수익률</span>
+				</li>
+			</ol>
+		</div>
+		
+		<!-- -------------------------------------- -->
+		<!-- [SECTION] 진단정보 입력 STEP2 영역 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap t1">
+			<!-- ------------------ -->
+			<!-- [금융자산 합계] -->
+			<!-- ------------------ -->
+			<h2 class="defTit icoRetire"><strong>지금까지 준비한<br/>은퇴자금을 알려주세요 </strong></h2>
+			<dl class="totalBalance t2">
+				<dt>금융자산
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">금융자산 툴팁 열기</span></button>
+						<div class="tooltipCont">
+							<div class="msaeTool">
+								<ul class="popBul">
+									<li>연결된 자산에서 가져온 금융자산 정보입니다.</li>
+									<li>연금은 연금저축펀드, 개인연금신탁, 퇴직연금DC 및 개인형IRP를 포함합니다</li>
+								</ul>
+							</div>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">금융자산 툴팁 닫기</span></button>
+						</div>
+					</div>
+				</dt>
+				<dd><strong class="dataValue">72,504,320</strong><em class="won">원</em></dd>
+			</dl>
+			<!-- [CASE1] : 연결한 자산이 있는 경우 -->
+			<ul class="detailList type03">
+				<li>
+					<span class="tit">계좌</span>
+					<span class="value"><strong class="dataValue">68,504,320</strong><em class="won">원</em></span>
+				</li>
+				<li>
+					<span class="tit">투자</span>
+					<span class="value"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+				</li>
+				<li>
+					<span class="tit">선불페이·카드</span>
+					<span class="value"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+				</li>
+				<li>
+					<span class="tit">연금</span>
+					<span class="value"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+				</li>
+				<li>
+					<span class="tit">가상자산</span>
+					<span class="value"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+				</li>
+			</ul>
+			<!-- [CASE2] : 연결한 자산이 없는 경우 -->
+			<div class="noResultWrap t1">
+				<p>연결된 금융자산이 없어요.</p>
+			</div>
+			<!-- // -->
+
+			<!-- ------------------ -->
+			<!-- [진단정보 입력] -->
+			<!-- ------------------ -->
+			<div class="formWrap">
+				<div class="titListBox">
+					<ul class="lineType">
+						<!-- [CASE1 : 공적연금 적립금] 수집된 공적연금 적립금 있음 -->
+						<li>
+							<div class="formTitN"><strong>공적연금</strong></div>
+							<div class="formTxt">연결된 자산에서 가져온 공적연금 정보입니다.<br>금액이 조회되지 않거나, 차이가 있는 경우 직접 입력해주세요.</div>
+							<div class="ar"><button type="button" class="contBtn02" aria-label="공적연금 적립금 자동으로 불러오기">불러오기</button></div>
+							<div class="inputList">
+								<a href="javascript:;" title="공적연금 구분" aria-haspopup="true" onclick="slidePopOption();return false;">
+									<span class="selectValue">국민연금</span>
+									<span class="selectBtn"></span>
+								</a>
+								<select name="" title="선택해주세요">
+									<option value=""></option>
+								</select>
+							</div>
+							<div class="inputVal mt10" aria-live="assertive">(약 1억 346만원)</div>
+							<div class="inputList unitMan">
+								<input type="tel" title="공적연금 적립금" placeholder="금액을 입력하세요" value="103,456,789">
+								<span class="unit">원</span>
+								<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+							</div>
+							<!-- 샘플 : 공적연금 적립금_오류유형 클래스(.error) 추가 / 오류 메세지 노출 -->
+							<div class="inputList error">
+								<input type="tel" title="공적연금 적립금" placeholder="금액을 입력하세요" value="999,999,999">
+								<span class="unit">원</span>
+								<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+							</div>
+							<p class="errorTxt" aria-live="assertive">입력 가능한 금액을 초과하였습니다.</p>
+							<!-- // -->
+						</li>
+
+						<!-- [CASE2 : 공적연금 적립금] 수집된 공적연금 적립금 없음 -->
+						<li>
+							<div class="formTitN"><strong>공적연금</strong></div>
+							<div class="formTxt">지금까지 납입한 공적연금 적립액을 알려주세요.</div>
+							<div class="inputList">
+								<a href="javascript:;" title="공적연금 구분" aria-haspopup="true" onclick="slidePopOption();return false;">
+									<span class="selectValue">선택하세요</span>
+									<span class="selectBtn"></span>
+								</a>
+								<select name="" title="선택해주세요">
+									<option value=""></option>
+								</select>
+							</div>
+							<div class="inputVal mt10 none" aria-live="assertive">(약 10만원)</div><!-- [D] 노출 시 클래스(none) 삭제 -->
+							<div class="inputList unitMan">
+								<input type="tel" title="공적연금 적립금" placeholder="금액을 입력하세요" >
+								<span class="unit">100,000원</span>
+								<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+							</div>
+							<p class="errorTxt none" aria-live="assertive">입력 가능한 금액을 초과하였습니다.</p><!-- [D] 노출 시 클래스(none) 삭제 -->
+						</li>
+
+						<!-- [CASE3 : 공적연금 적립금] 공적연금을 선택하지 않고 금액만 입력한 경우 -->
+						<li>
+							<div class="formTitN"><strong>공적연금</strong></div>
+							<div class="formTxt">지금까지 납입한 공적연금 적립액을 알려주세요.</div>
+							<div class="inputList error"> <!-- [D] 오류시 (error) 추가 -->
+								<a href="javascript:;" title="공적연금 구분" aria-haspopup="true" onclick="slidePopOption();return false;">
+									<span class="selectValue">선택하세요</span>
+									<span class="selectBtn"></span>
+								</a>
+								<select name="" title="선택해주세요">
+									<option value=""></option>
+								</select>
+							</div>
+							<p class="errorTxt" aria-live="assertive">공적연금을 선택하세요</p> <!-- [D] 오류시 노출 -->
+
+							<div class="inputVal mt10" aria-live="assertive">(약 10만원)</div>
+							<div class="inputList unitMan">
+								<input type="tel" title="공적연금 적립금" value="100,000" placeholder="금액을 입력하세요" >
+								<span class="unit">원</span>
+								<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+							</div>
+							<p class="errorTxt none" aria-live="assertive">입력 가능한 금액을 초과하였습니다.</p>
+						</li>
+
+						<!-- [월 저축금액] -->
+						<li>
+							<div class="formTitN"><strong>월 저축금액</strong></div>
+							<div class="formTxt">저축이 없다면 입력하지 않아도 괜찮아요.</div>
+							<div class="inputVal none" aria-live="assertive">(약 1억 346만원)</div> <!-- [D] 노출 시 클래스(none) 삭제 -->
+							<div class="inputList unitMan">
+								<input type="tel" title="월 저축금액" placeholder="금액을 입력하세요" >
+								<span class="unit">원</span>
+								<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+							</div>
+							<!-- 샘플 : 월 저축금액_오류유형 클래스(.error) 추가 / 오류 메세지 노출 -->
+							<div class="inputList error">
+								<input type="tel" title="월 저축금액" placeholder="금액을 입력하세요" value="999,999,999">
+								<span class="unit">원</span>
+								<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+							</div>
+							<p class="errorTxt" aria-live="assertive">입력 가능한 금액을 초과하였습니다.</p>
+							<!-- // -->
+						</li>
+
+						<!-- [실물자산] 등록한 실물자산이 있는 경우에만 노출 -->
+						<li>
+							<div class="formTitN"><strong>실물자산</strong></div>
+							<div class="formTxt">등록한 실물자산이 있어요. <br>은퇴준비자금에 포함할까요?</div>
+							<!-- [실물자산 반영여부] : 미포함 (아니오) 디폴트 -->
+							<div class="boxRadio">
+								<div class="boxRadioInn">
+									<span>
+										<input type="radio" name="MSAEa300" aria-label="실물자산 반영여부(네, 좋아요)" id="MSAEa3001">
+										<label for="MSAEa3001" aria-hidden="true">네, 좋아요</label>
+									</span>
+								</div>
+								<div class="boxRadioInn">
+									<span>
+										<input type="radio" name="MSAEa300" aria-label="실물자산 반영여부(아니요)" id="MSAEa3002" checked>
+										<label for="MSAEa3002" aria-hidden="true">아니요</label>
+									</span>
+								</div>
+							</div>
+							<!-- [실물자산 상세 폴딩] : 닫힘 디폴트 -->
+							<div class="areaToggle2" data-toggle="wrap">
+								<dl>
+									<dt class="summary" role="button" data-toggle="btn" aria-expanded="false">
+										<span>실물자산</span>
+										<span><strong class="dataValue">173,481,000</strong><em class="won">원</em></span>
+									</dt>
+									<dd data-toggle="con">
+										<ul class="detailList">
+											<li>
+												<span class="tit">부동산</span>
+												<span class="value"><strong class="dataValue">172,500,000</strong><em class="won">원</em></span>
+											</li>
+											<li>
+												<span class="tit">금</span>
+												<span class="value"><strong class="dataValue">520,430</strong><em class="won">원</em></span>
+											</li>
+											<li>
+												<span class="tit">외화</span>
+												<span class="value"><strong class="dataValue">451,610</strong><em class="won">원</em></span>
+											</li>
+											<li>
+												<span class="tit">자동차</span>
+												<span class="value"><strong class="dataValue">0</strong><em class="won">원</em></span>
+											</li>
+											<li>
+												<span class="tit">기타</span>
+												<span class="value"><strong class="dataValue">0</strong><em class="won">원</em></span>
+											</li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+							<!-- // -->
+						</li>
+						<!-- -------------------------------------- -->
+					</ul>
+				</div>
+			</div>
+			<!-- ------------------ -->
+		</div>
+		
+		<!-- -------------------------------------- -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- -------------------------------------- -->
+		<div class="areaBtnDefault">
+			<a href="javascript:;" class="btnPressPoint disabled" role="button" aria-disabled="true">다음</a>
+			<!-- <a href="javascript:;" class="btnPressPoint" role="button">다음</a> [D] 활성화 -->
+		</div>
+		<!-- -------------------------------------- -->
+	</div>
+	<!-- ###################################### -->
+</div>
+</body>
+</html>

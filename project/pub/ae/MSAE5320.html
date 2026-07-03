@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>기본정보</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		//tostpop();//토스트 팝업 호출 
+	})
+
+	function tostpop(){
+		var $tostCont = '<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg">업데이트를 완료했습니다.</div></div>'
+		$('.container').after($tostCont);
+		setTimeout(function(){
+			$('.tostpopupWrap').remove();
+		},4000)
+	}
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>DSR 계산기</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<!-- [2022-10-21] 문구 수정 -->
+		<h2 class="defTit">
+			<strong>DSR 계산</strong>을 위해 <strong>새로 신청할</strong><br>
+			<strong>대출 정보</strong>를 입력해주세요
+		</h2>
+		<!-- //[2022-10-21] 문구 수정 -->
+		<div class="boxTypeWrap">
+			<p class="txtt2"><strong>신청 대출구분</strong></p>
+			<ul class="selectCerti flex">
+				<li class="selectCerti01">
+					<input type="radio" id="selCerti01" name="selCerti00" checked>
+					<label for="selCerti01">신용대출</label>
+				</li>
+				<li class="selectCerti02">
+					<input type="radio" id="selCerti02" name="selCerti00">
+					<label for="selCerti02">주택담보대출</label>
+				</li>
+			</ul>
+		</div>
+
+		<div class="formWrap boxTypeWrap">
+			<div class="yeartexForm mt0">
+				<strong class="formTit disInline">대출신청금액</strong>
+				<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+					<input type="tel" title="대출신청금액" name="" id="" value="" placeholder="대출신청금액 입력">
+					<span class="unit">만원</span>
+					<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+				</div>
+				<div class="roundBtnWrap">
+					<a href="javascript:;" role="button" title="100만원 추가">+100만</a>
+					<a href="javascript:;" role="button" title="500만원 추가">+500만</a>
+					<a href="javascript:;" role="button" title="1,000만원 추가">+1000만</a>
+					<a href="javascript:;" role="button" title="11억원 추가">+1억</a>
+				</div>
+				<!-- <p class="errorTxt">1원 이상 입력해주세요</p> --> <!-- 에러인 경우 -->
+			</div>
+			<hr class="divLine mr0 ml0">
+			<div class="justifyBox">
+				<span class="txtt2 mb0"><strong>상환방식</strong></span> <!-- [2022-10-21] 문구 수정 -->
+				<span class="txtb1"><strong class="pointColor">만기일시상환</strong></span>
+			</div>
+			<hr class="divLine mr0 ml0">
+			<div class="yeartexForm">
+				<strong class="formTit disInline">대출이율</strong>
+				<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+					<input type="tel" title="대출이율" name="" id="" value="" placeholder="">
+					<span class="unit">%</span>
+					<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+				</div>
+				<!-- <p class="errorTxt">1원 이상 입력해주세요</p> --> <!-- 에러인 경우 -->
+			</div>
+			<div class="info_area mt10">
+				<ul class="listBul disc">
+					<li>제시된 대출 이율은 올원직장인대출 (금융채 12개월) 기준 최저 이율 적용 예시 입니다. <br>고객님께서 직접 입력 및 수정 가능합니다.</li>
+				</ul>
+			</div>
+		</div>
+		<!-- [2022-10-21] 수정 -->
+		<div class="formWrap boxTypeWrap">
+			<div class="txtt2">
+				<strong>기존 대출상환 여부 선택</strong>
+				<div class="tooltipWrap w92"> <!-- [2022-11-10] 툴팁위치 수정 -->
+					<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">대출잔액 툴팁 열기</span></button>
+					<div class="tooltipCont lf36"> <!-- [2022-11-10] 툴팁위치 수정 -->
+						<p>기존 대출 상환 후 새로운 대출로 갈아타는 경우, 상환할 기존 대출을 제외하여 DSR을 계산합니다.</p>
+						<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+					</div>
+				</div>
+			</div>
+			<div class="boxRadio">
+				<div class="boxRadioInn">
+					<span>
+						<input name="rdo03" id="rdo06" type="radio" checked="checked">
+						<label for="rdo06">상환 예정</label>
+					</span>
+				</div>
+				<div class="boxRadioInn">
+					<span>
+						<input name="rdo03" id="rdo07" type="radio">
+						<label for="rdo07">전부 유지 예정</label>
+					</span>
+				</div>
+			</div>
+			<hr class="divLine3">
+			<!-- [2022-11-11] 체크박스로 수정// -->
+			<div class="txtt2 flexType mb12">
+				<strong>상환 예정 대출 계좌 선택</strong>
+				<div class="listChkAll">
+					<input type="checkbox" id="listAll" class="chekTypeOther" name=""><label for="listAll">전체선택</label>
+				</div>
+			</div>
+			<!-- [2022-11-11] 체크박스로 수정 -->
+			<ul>
+				<li class="yatoggleArea">
+					<div class="assetTotalList toggleWrap">
+						<div class="totalTitWrap">
+							<a href="javascript:;" class="toggleBtn"> 
+								<p class="txtb1"><strong>주택담보대출</strong> <em class="pointColor">2개</em></p>
+							</a>
+						</div>
+						<div class="totalAccList toggleCont" style="display:none">
+							<div class="listWrap">
+								<!-- [2022-11-11] 체크박스로 수정// -->
+								<div class="listChkAll">
+									<input type="checkbox" id="listAll1" class="chekTypeOther" name=""><label for="listAll1">전체선택</label>
+								</div>
+								<!-- //[2022-11-11] 체크박스로 수정 -->
+								<ul class="jsCheckType bankInfoList">
+									<li>
+										<a href="javascript:;" class="bankInfoListBox active" role="checkbox" aria-checked="true"> <!-- [접근성_2024] 선택됨 aria-checked="true" / 선택안됨 aria-checked="false"로 구분 필요 -->
+											<div class="bankInfo">
+												<div class="logoArea">
+													<img src="../../images/logos/AAES0000.png" alt="하나은행 로고"> <!-- [2022-11-10] 이미지로 변경 : [접근성_2024] 기관명 적용 -->
+												</div>
+												<div class="outgoingsCont">
+													<strong class="title">주택담보대출</strong>
+													<div class="detail">
+														<p class="summary">123-4567-89-123</p>
+														<!-- <p class="summary">상품명노출</p> --> <!-- [2022-10-21] 삭제 -->
+													</div>
+												</div>
+											</div>
+											<ul class="detailList">
+												<li>
+													<span class="tit">대출금액</span> <!-- [2022-10-21] 문구수정 -->
+													<span class="value">100,000,000원</span>
+												</li>
+												<li>
+													<span class="tit">대출일자</span> <!-- [2022-10-21] 문구수정 -->
+													<span class="value">YYYY.MM.DD</span> <!-- [2022-10-21] 문구수정 -->
+												</li>
+											</ul>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;" class="bankInfoListBox" role="checkbox" aria-checked="false">
+											<div class="bankInfo">
+												<div class="logoArea">
+													<img src="../../images/logos/AAES0000.png" alt="하나은행 로고"> <!-- [2022-11-10] 이미지로 변경 -->
+												</div>
+												<div class="outgoingsCont">
+													<strong class="title">주택담보대출</strong>
+													<div class="detail">
+														<p class="summary">123-4567-89-123</p>
+														<!-- <p class="summary">하나원큐신용대출</p> --> <!-- [2022-10-21] 삭제 -->
+													</div>
+												</div>
+											</div>
+											<ul class="detailList">
+												<li>
+													<span class="tit">대출금액</span> <!-- [2022-10-21] 문구수정 -->
+													<span class="value">100,000,000원</span>
+												</li>
+												<li>
+													<span class="tit">대출일자</span> <!-- [2022-10-21] 문구수정 -->
+													<span class="value">YYYY.MM.DD</span> <!-- [2022-10-21] 문구수정 -->
+												</li>
+											</ul>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="yatoggleArea">
+					<div class="assetTotalList toggleWrap">
+						<div class="totalTitWrap">
+							<a href="javascript:;" class="toggleBtn"> 
+								<p class="txtb1"><strong>신용대출</strong> <em class="pointColor">2개</em></p>
+							</a>
+						</div>
+						<div class="totalAccList toggleCont" style="display:none">
+							<div class="listWrap">
+								<!-- [2022-11-11] 체크박스로 수정// -->
+								<div class="listChkAll">
+									<input type="checkbox" id="listAll2" class="chekTypeOther" name=""><label for="listAll2">전체선택</label>
+								</div>
+								<!-- //[2022-11-11] 체크박스로 수정 -->
+								<ul class="jsCheckType bankInfoList">
+									<li>
+										<a href="javascript:;" class="bankInfoListBox active" role="checkbox" aria-checked="true">
+											<div class="bankInfo">
+												<div class="logoArea">
+													<img src="../../images/logos/AAES0000.png" alt="하나은행 로고"> <!-- [2022-11-10] 이미지로 변경 -->
+												</div>
+												<div class="outgoingsCont">
+													<strong class="title">신용대출</strong>
+													<div class="detail">
+														<p class="summary">123-4567-89-123</p>
+														<!-- <p class="summary">상품명노출</p> --> <!-- [2022-10-21] 삭제 -->
+													</div>
+												</div>
+											</div>
+											<ul class="detailList">
+												<li>
+													<span class="tit">대출금액</span> <!-- [2022-10-21] 문구수정 -->
+													<span class="value">100,000,000원</span>
+												</li>
+												<li>
+													<span class="tit">대출일자</span> <!-- [2022-10-21] 문구수정 -->
+													<span class="value">YYYY.MM.DD</span> <!-- [2022-10-21] 문구수정 -->
+												</li>
+											</ul>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;" class="bankInfoListBox" role="checkbox" aria-checked="false">
+											<div class="bankInfo">
+												<div class="logoArea">
+													<img src="../../images/logos/AAES0000.png" alt="하나은행 로고"> <!-- [2022-11-10] 이미지로 변경 -->
+												</div>
+												<div class="outgoingsCont">
+													<strong class="title">신용대출</strong>
+													<div class="detail">
+														<p class="summary">123-4567-89-123</p>
+														<!-- <p class="summary">하나원큐신용대출</p> --> <!-- [2022-10-21] 삭제 -->
+													</div>
+												</div>
+											</div>
+											<ul class="detailList">
+												<li>
+													<span class="tit">대출금액</span> <!-- [2022-10-21] 문구수정 -->
+													<span class="value">100,000,000원</span>
+												</li>
+												<li>
+													<span class="tit">대출일자</span> <!-- [2022-10-21] 문구수정 -->
+													<span class="value">YYYY.MM.DD</span> <!-- [2022-10-21] 문구수정 -->
+												</li>
+											</ul>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="yatoggleArea">
+					<div class="assetTotalList toggleWrap">
+						<div class="totalTitWrap">
+							<a href="javascript:;" class="toggleBtn"> 
+								<p class="txtb1"><strong>전세자금대출</strong> <em class="pointColor">2개</em></p>
+							</a>
+						</div>
+						<div class="totalAccList toggleCont" style="display:none">
+						</div>
+					</div>
+				</li>
+				<li class="yatoggleArea">
+					<div class="assetTotalList toggleWrap">
+						<div class="totalTitWrap">
+							<a href="javascript:;" class="toggleBtn"> 
+								<p class="txtb1"><strong>예적금담보대출</strong> <em class="pointColor">2개</em></p>
+							</a>
+						</div>
+						<div class="totalAccList toggleCont" style="display:none">
+						</div>
+					</div>
+				</li>
+				<li class="yatoggleArea">
+					<div class="assetTotalList toggleWrap">
+						<div class="totalTitWrap">
+							<a href="javascript:;" class="toggleBtn"> 
+								<p class="txtb1"><strong>기타담보대출</strong> <em class="pointColor">2개</em></p>
+							</a>
+						</div>
+						<div class="totalAccList toggleCont" style="display:none">
+						</div>
+					</div>
+				</li>
+				<li class="yatoggleArea">
+					<div class="assetTotalList toggleWrap">
+						<div class="totalTitWrap">
+							<a href="javascript:;" class="toggleBtn"> 
+								<p class="txtb1"><strong>카드대출</strong> <em class="pointColor">2개</em></p>
+							</a>
+						</div>
+						<div class="totalAccList toggleCont" style="display:none">
+						</div>
+					</div>
+				</li>
+				<li class="yatoggleArea">
+					<div class="assetTotalList toggleWrap">
+						<div class="totalTitWrap">
+							<a href="javascript:;" class="toggleBtn"> 
+								<p class="txtb1"><strong>기타대출</strong> <em class="pointColor">2개</em></p>
+							</a>
+						</div>
+						<div class="totalAccList toggleCont" style="display:none">
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- //[2022-10-21] 수정 -->
+
+		<div class="areaBtnDefault">
+			<a href="javascript:;" class="btnPressDefault" role="button">취소</a>
+			<a href="javascript:;" class="btnPressPoint" role="button">DSR 계산하기</a> <!--활성화 class btnPressPoint --->
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

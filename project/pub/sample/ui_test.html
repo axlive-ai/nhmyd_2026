@@ -1,0 +1,1103 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>UI TEST</title>
+<script src="../pub-assets/js/head.js"></script>
+<style type="text/css">
+	.file_list{user-select: all}
+	.re_rec{width: 32px;height: 32px;border:solid 1px silver;position: fixed;top: -64px;left: 50%;margin-left: -16px;z-index: 2000;background: url('../../images/btn_update.png')no-repeat center;border-radius: 50% ;background-color: cyan;background-size: 24px auto;}
+
+	.scWidth{width: 100%;height: 5px;background-color: yellow;position: fixed;top: 50px;}
+	.scWidth .after{content: '';position: absolute;height:5px;top: 0;left:0;background-color: orange;}
+	
+
+	/* 서브메인 배경 테스트 */
+	/*.subMain .nhasset .header{background-color: green;}
+	.subMain .header h1 a{color: #fff}
+	.subMain .nhasset .container .mainBg{width: 100%;height: 50px;position: absolute;left: 0;top: 50px;background-color: green;border-radius: 0 0 50px 0;}*/
+
+</style>
+</head>
+<body class="subMain">
+	<!-- <div class="scWidth"><span class="after"></span></div> -->
+	<!-- <script type="text/javascript">
+		function wscroll(){
+			var $scHeight = $(document).height() - $(window).height();
+			$(window).on('scroll',function(){
+				var $thisScHeight = $('html').scrollTop();
+				var $thisval = (($thisScHeight / $scHeight)*100).toFixed(0);
+				$('.scWidth .after').css('width',$thisval+'%')
+			});
+		}
+	</script> -->
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">UI Guide</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="rotate" style="width:150px;height:150px;background:yellow"></div>
+			<div class="pageRefreshWrap">
+				<div class="pageRefresInner">
+					<span>
+						<span class="date">08.05 10:45</span>
+						<button type="button" class="btnUpdate"><span class="blind">업데이트</span></button>
+					</span>
+					<button type="button" class="btnAlrt new" aria-expanded="false"><span class="blind">알림</span></button>
+				</div>
+				<div class="pageAlertWrap">
+					<ul>
+						<li class="alertNotice">
+							<a href="javascript:;" role="button">
+								<dl>
+									<dt>연결중인 자산 확인이 필요해요</dt>
+									<dd>OOO에서 전송 중단 또는 거절이 있었습니다.<br/>연결관리 화면에서 확인해주세요. </dd>
+								</dl>
+							</a>
+						</li>
+						<li class="alertError">
+							<a href="javascript:;" role="button">
+								<dl>
+									<dt>정보 확인이 필요해요</dt>
+									<dd><span>$연말정산$</span> 정보수집 중 오류가 있었습니다.<br/><span>$연말정산$</span> 설정 화면에서 확인해주세요. </dd>
+								</dl>
+							</a>
+						</li>
+						<li class="alertError">
+							<a href="javascript:;" role="button">
+								<dl>
+									<dt>업데이트한지 <span>N</span>일이 지났어요</dt>
+									<dd><span>$연말정산$</span> 정보 업데이트가 필요합니다.<br/>인증관리 화면에서 확인해주세요.</dd>
+								</dl>
+							</a>
+						</li>
+						<li class="alertError">
+							<a href="javascript:;" role="button">
+								<dl>
+									<dt>정보수집이 필요해요</dt>
+									<dd><span>$연말정산$</span> 서비스 이용을 위해 정보수집이 필요합니다. 인증관리 화면에서 확인해주세요.</dd>
+								</dl>
+							</a>
+						</li>
+
+					</ul>
+					<div class="pageAlertNoData">
+						<p>업데이트 알림 내역이 없습니다.</p>
+					</div>
+					<button type="button" aria-expanded="true" class="pageAlertClose"><span>닫기</span></button>
+				</div>
+			</div>
+			<script type="text/javascript">
+				$('.pageRefresInner .btnAlrt').click(function(){
+					var $this = $(this);
+					$this.closest('.pageRefreshWrap').addClass('alertActive')
+					$this.attr('aria-expanded','true')
+					$this.closest('.pageRefreshWrap').find('.pageAlertWrap').slideDown();
+				});
+				$('.pageAlertClose').click(function(){
+					var $this = $(this);
+					$this.closest('.pageRefreshWrap').removeClass('alertActive')
+					$this.closest('.pageRefreshWrap').find('.btnAlrt').attr('aria-expanded','false').focus();
+					$this.closest('.pageRefreshWrap').find('.pageAlertWrap').slideUp();
+				});
+			</script>
+			<div class="fullRefreshWrap">
+				<a href="javscript:;" title="업데이트 에러, 업데이트 안내 팝업열기">
+					<p>
+						2020.08.31 15:30:56
+						<span class="updateIcoErr"><span class="blind">에러아이콘</span></span>
+					</p>
+				</a>
+				<button type="button" class="updateBtn2 " title="다시 불러오기"></button> <!-- 불러오는중 .on 추가-->
+			</div>
+			<!-- <span class="mainBg"></span> -->
+			<script type="text/javascript">
+				//메인 배경 색상
+				function mainBg(){
+					$(window).on('scroll',function(){
+						var $thisScHeight = $('html').scrollTop();
+						var $thisValue = 50 - $thisScHeight;
+						//var $thisval = (($thisScHeight / $scHeight)*100).toFixed(0);
+						$('.subMain .nhasset .container .mainBg').css('border-bottom-right-radius',$thisValue);
+					});
+				}
+				mainBg()
+
+			</script>
+			<div></div>
+			<style type="text/css">
+				/*.asssetSulWrap{position: relative; margin-top: 20px; }
+				.asssetSulWrap .asssetSulList {display: flex;flex-wrap: wrap;opacity: 0;animation:assSul5 1s linear forwards;animation-delay: 0.5s}
+				.asssetSulWrap .asssetSulList > li{width: 50%;padding: 4px;text-align: center;}
+				.asssetSulWrap .asssetSulList > li > div{border:solid 2px silver;height: 50px}
+				.asssetSulWrap .asssetSulList > li.asssetSulList_01 > div{background-color: orange;}
+				.asssetSulWrap .asssetSulList > li.asssetSulList_02 > div{background-color:skyblue;}
+				.asssetSulWrap .asssetSulList > li.asssetSulList_03 > div{background-color:red;}
+				.asssetSulWrap .asssetSulList > li.asssetSulList_04 > div{background-color:purple;}
+				.wraprectWrap{position: absolute;width: 100%;height: 100%;left: 0;top: 0;display: flex;justify-content: center;align-items: center;animation:assSul4 1s linear forwards;animation-delay: 0.5s}
+				.rectWrap {height: 65px;width: 65px;border-radius: 50%;overflow: hidden;position: relative;animation:assSul 0.5s linear forwards;}
+				.rectWrap .rect{width: 30px;height: 30px;display:inline-block;position: absolute;z-index: 1;animation:assSul2 0.5s linear forwards;}
+				.rectWrap .rect.ent1{background-color: orange;left: 0;top: 0}
+				.rectWrap .rect.ent2{background-color: skyblue;right: 0;top: 0}
+				.rectWrap .rect.ent3{background-color: red;left: 0;bottom: 0}
+				.rectWrap .rect.ent4{background-color: purple;right: 0;bottom: 0}
+				.rectWrap .rect.circle{width: 100%;height: 100%;border-radius: 50%;z-index: 2;padding: 10px;display: flex;animation: assSul3 0.5s linear forwards;}
+				.rectWrap .rect.circle:after{content: '';width: 100%;height: 100%;border-radius: 50%;background-color: #f2f4f8;left: 5px;top: 5px}*/
+
+				.asssetSulWrap{position: relative; margin-top: 20px; }
+				.asssetSulWrap .asssetSulList {display: flex;flex-wrap: wrap;opacity: 0;}
+				.asssetSulWrap .asssetSulList > li{width: 50%;padding: 4px;text-align: center;}
+				.asssetSulWrap .asssetSulList > li > div{border:solid 2px silver;height: 50px}
+				.asssetSulWrap .asssetSulList > li.asssetSulList_01 > div{background-color: orange;}
+				.asssetSulWrap .asssetSulList > li.asssetSulList_02 > div{background-color:skyblue;}
+				.asssetSulWrap .asssetSulList > li.asssetSulList_03 > div{background-color:red;}
+				.asssetSulWrap .asssetSulList > li.asssetSulList_04 > div{background-color:purple;}
+				.wraprectWrap{position: absolute;width: 100%;height: 100%;left: 0;top: 0;display: none;justify-content: center;align-items: center;}
+				.rectWrap {height: 65px;width: 65px;border-radius: 50%;overflow: hidden;position: relative;}
+				.rectWrap .rect{width: 30px;height: 30px;display:inline-block;position: absolute;z-index: 1;}
+				.rectWrap .rect.ent1{background-color: orange;left: 0;top: 0}
+				.rectWrap .rect.ent2{background-color: skyblue;right: 0;top: 0}
+				.rectWrap .rect.ent3{background-color: red;left: 0;bottom: 0}
+				.rectWrap .rect.ent4{background-color: purple;right: 0;bottom: 0}
+				.rectWrap .rect.circle{width: 100%;height: 100%;border-radius: 50%;z-index: 2;padding: 10px;display: flex;}
+				.rectWrap .rect.circle:after{content: '';width: 100%;height: 100%;border-radius: 50%;background-color: #f2f4f8;left: 5px;top: 5px}
+
+				/* 자산 시뮬레이션 active */
+				.asssetSulWrap.active .asssetSulList{animation:assSul5 1s linear forwards;animation-delay: 0.5s}
+				.asssetSulWrap.active .wraprectWrap{display: flex;animation:assSul4 1s linear forwards;animation-delay: 0.5s}
+				.asssetSulWrap.active .rectWrap{animation:assSul 0.5s linear forwards;}
+				.asssetSulWrap.active .rectWrap .rect{animation:assSul2 0.5s linear forwards;}
+				.asssetSulWrap.active .rectWrap .rect.circle{animation: assSul3 0.5s linear forwards;}
+
+				@keyframes assSul{
+					0%{border-radius: 0;transform:rotate(0deg);}
+					10%{border-radius: 50%;}
+					50%{border-radius: 50%;}
+					80%{border-radius: 50%;width: 65px;height: 65px}
+					90%{border-radius: 0;}
+					100%{border-radius:0%;transform:rotate(360deg);width: 75px;height: 75px}
+				}
+				@keyframes assSul2{
+					0%{border-radius: 50%;}
+					10%{border-radius: 0%;}
+					50%{border-radius: 0%;}
+					80%{border-radius: 0%;}
+					90%{border-radius: 50%;}
+					100%{border-radius: 50%;}
+				}
+				@keyframes assSul3{
+					0%{padding: 30px}
+					10%{padding: 10px}
+					50%{padding: 10px;}
+					80%{padding: 10px;}
+					90%{padding: 30px;}
+					100%{padding: 30px;}
+				}
+				@keyframes assSul4{
+					0%{opacity: 1;}
+					99%{opacity: 0;}
+					100%{display: none;}
+				}
+				@keyframes assSul5{
+					0%{opacity: 0;}
+					100%{opacity: 1;}
+				}
+			</style>
+			<!-- <div class="asssetSulWrap">
+				<ul class="asssetSulList">
+					<li class="asssetSulList_01"><div><strong>+100,000</strong></div></li>
+					<li class="asssetSulList_02"><div><strong>+100,000</strong></div></li>
+					<li class="asssetSulList_03"><div><strong>+100,000</strong></div></li>
+					<li class="asssetSulList_04"><div><strong>+100,000</strong></div></li>
+				</ul>
+				<div class="wraprectWrap">
+					<div class="rectWrap">
+						<span class="rect ent1"></span>
+						<span class="rect ent2"></span>
+						<span class="rect ent3"></span>
+						<span class="rect ent4"></span>
+						<span class="rect circle"></span>
+					</div>
+				</div>
+			</div>
+			<script type="text/javascript">
+				//자산 시뮬레이션 로딩 모션
+				function assetSul(){
+					$('.asssetSulWrap').addClass('active');
+					setTimeout(function(){
+						$('.wraprectWrap').hide();
+					},1510);
+				}
+				assetSul()
+			</script> -->
+			
+			<!-- <div class="tostpopupWrap">
+				<p class="tostMsg">가입이 완료 되었습니다.</p>
+			</div> -->
+			<script type="text/javascript">
+				function tostpop(){
+					var $tostCont = '<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg">서비스 가입이 완료 되었습니다.</div></div>'
+					$('.container').after($tostCont);
+					setTimeout(function(){
+						$('.tostpopupWrap').remove();
+					},4000)
+				}
+			</script>
+			<div class="myCarValue">
+				<span>내차 시세</span><span><strong>100.00</strong>%</span>
+			</div>
+			<script type="text/javascript">
+				$(document).ready(function() {
+					myCarCost();
+					//wscroll();
+					//tostpop()
+				});
+				function myCarCost() {
+					var $thisCost = $('.myCarValue strong');
+					var memberCountContText = $thisCost.text()//.replace(/,/g,'');
+					$({ val : 0}).animate({ val : memberCountContText}, {
+						duration: 1500,
+						step: function(){
+							var num = numberWithCommas(Math.floor(this.val));
+							//var num = numberWithCommas(this.val.toFixed(2));
+							$thisCost.text(num);
+						},
+						complete: function(){
+							var num = numberWithCommas(Math.floor(this.val));
+							//var num = numberWithCommas(this.val.toFixed(2));
+							$thisCost.text(num);
+						}
+					});
+					function numberWithCommas(x){
+						return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+					}
+				}
+			</script>
+			<div class="boxTypeWrap active">
+				<style type="text/css">
+					.areaTest{display: flex;margin-top: 10px;}
+					.areaTest > .btn{flex: 1;background:yellow;text-align: center;}
+					.areaTest > .btn + .btn{margin-left: 8px;}
+					.areaTest > .btn.share{flex: 0 0 50px;background-color:skyblue;}
+				</style>
+
+				<div class="areaTest">
+					<a href="javascript:;" class="btn button">button</a>
+				</div>
+
+				<div class="areaTest">
+					<a href="javascript:;" class="btn">button</a>
+					<a href="javascript:;" class="btn">button</a>
+				</div>
+
+				<div class="areaTest">
+					<a href="javascript:;" class="btn share">button</a>
+					<a href="javascript:;" class="btn">button</a>
+					<button type="button" class="btn" disabled>button</button>
+				</div>
+			</div>
+			<div class="boxTypeWrap pt0">
+				<div class="boxTitArea">Tag</div>
+				<p class="mt20">Solid Type (.tag.bg~)</p>
+				<div>
+					<em class="tag bgSky">신청가능</em><em class="tag bgSky">달성</em><em class="tag bgSky">상환</em>
+				</div>
+
+				<div>
+					<em class="tag bgOrange">신청불가</em><em class="tag bgOrange">오류</em><em class="tag bgOrange">취소</em>
+				</div>
+
+				<div>					
+					<em class="tag bgGreen">신청완료</em><em class="tag bgGreen">완납</em><em class="tag bgGreen">완료</em>
+				</div>
+
+				<div>
+					<em class="tag bgBlue">진행중</em><em class="tag bgBlue">예정</em><em class="tag bgBlue">변경</em><em class="tag bgBlue">이용중</em><em class="tag bgBlue">달성중</em>
+				</div>
+
+				<div>
+
+					<em class="tag bgGray">기간만료</em><em class="tag bgGray">해지</em><em class="tag bgGray">종료</em><em class="tag bgGray">해지완료</em><em class="tag bgGray">D-29</em>
+				</div>
+
+				<p class="mt20">.wrapTag > span.type~</p>
+				<div class="wrapTag">
+					<span class="type01">본인</span>
+					<span class="type02">신용</span>
+					<span class="type04">교통</span>
+					<span class="type03">현금</span>
+					<span class="type05">MASTER</span>
+				</div>
+
+				<p class="mt20">.tag.colorSelecter</p>
+				<div>
+					<em class="tag blue">충족</em><em class="tag red">미충족</em><em class="tag gray">미충족</em><em class="tag orange">미충족</em><em class="tag skyblue">미충족</em><em class="tag purple">미충족</em>
+				</div>
+			</div>
+			<div class="formWrap mt15">
+				<ul class="chkList thin mt0 boxTypeWrap">
+					<li>
+						<span class="chkWrap">
+							<input type="radio" id="chk01" name="radio01" checked="checked" class="desgChk">	
+						</span>
+						<label for="chk01" class="chkLabel">
+							<span class="tit">절약하며</span>
+							<span class="value">
+								<strong class="dataValue">118</strong><em class="won">만원</em>
+							</span>
+						</label>
+					</li>
+					<li>
+						<span class="chkWrap">
+							<input type="radio" id="chk02" name="radio01" class="desgChk">	
+						</span>
+						<label for="chk02" class="chkLabel">
+							<span class="tit">적정하게</span>
+							<span class="value">
+								<strong class="dataValue">167</strong><em class="won">만원</em>
+							</span>
+						</label>
+					</li>
+					<li>
+						<span class="chkWrap">
+							<input type="radio" id="chk03" name="radio01" class="desgChk">	
+						</span>
+						<label for="chk03" class="chkLabel">
+							<span class="tit">여유롭게</span>
+							<span class="value">
+								<strong class="dataValue">329</strong><em class="won">만원</em>
+							</span>
+						</label>
+					</li>
+					<li class="isError directInputWrap" >
+						<input type="radio" id="chk04" name="radio01" class="desgChk" title="직접입력">
+						<label for="chk04" class="chkLabel">
+							직접입력
+						</label>
+						<div class="directInputArea">
+							<div class="inputList unitMan">
+								<input type="tel" title="매수금" value="" placeholder="1 ~ 1,000">
+								<span class="unit">만원</span>
+								<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+							</div>
+							<p class="errorTxt">최대 1,000만원까지</p>
+						</div>
+					</li>
+				</ul>
+				<style type="text/css">
+					.directInputWrap{display: flex;}
+					.directInputArea{flex: 1 1 auto}
+					.directInputArea .inputList{border: 0 !important}
+					.directInputWrap > input[type="radio"]{flex: 0 0 22px;}
+					.directInputWrap > input[type="radio"] ~ .directInputArea{display: none;}
+					.directInputWrap > input[type="radio"]:checked ~ .directInputArea{display:block;margin-left: 10px;}
+					.directInputWrap > input[type="radio"]:checked ~ .chkLabel{display: none;}
+				</style>
+			</div>
+			<form class="mt20">
+				<div>
+					<input type="file" id="directory_upload" webkitdirectory>
+				</div>
+				<div class="file_list">
+					<p></p>
+				</div>
+			</form>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					//const input = document.getElementById('directory_upload');
+					const input = document.querySelector('#directory_upload');
+					const preview = document.querySelector('.file_list');
+					input.addEventListener('change', showTextFile);
+					function showTextFile () {
+						const selectedFiles = input.files;
+						const list = document.createElement('ul');
+						preview.appendChild(list);
+						for(const file of selectedFiles){
+							const listItem = document.createElement('li');
+							const summary = document.createElement('span');
+							const size = document.createElement('em');
+							//summary.textContent = file.name + ',';
+							summary.textContent = file.webkitRelativePath ;
+							size.textContent = returnFilesSize(file.size);
+							listItem.appendChild(summary);
+							//listItem.appendChild(size);
+							list.appendChild(listItem);
+						}
+						function returnFilesSize(number){
+							return (number/1024).toFixed(2);
+						}
+					}
+				});
+			</script>
+			<div class="boxTypeWrap">
+				<!-- 상단 계좌정보 영역 -->
+				<div class="accTopInfo mt0">
+					<h2 class="accName A1AAEO0000">WISE통장-저축예금<span class="blind">국민은행</span></h2>
+					<dl class="totalBalance">
+						<dt>총 잔액</dt>
+						<dd><strong>2,098,694</strong>원</dd>
+					</dl>
+					<!-- 변동없을 경우 케이스 추가 - arrowNone 클래스 사용, amount 옆의 in, out 관련 색상 클래스 빠짐  -->
+				</div>
+				<!-- // 상단 계좌정보 영역 -->
+				<hr class="divLine">
+
+				<!-- 계좌정보 상세 -->
+				<div class="accInfoDetail">
+					<ul class="detailList">
+						<li>
+							<span class="tit">유형</span>
+							<span class="value">입출금</span>
+						</li>
+						<li>
+							<span class="tit">별칭</span>
+							<span class="value">내집마련 <button type="button" class="contBtn01" title="별칭 수정">수정</button></span>
+						</li>
+					</ul>
+
+					<!-- 추가정보 열/닫 -->
+					<div class="moreInfoWrap toggleWrap">
+						<button type="button" class="moreOpenBtn toggleBtn">상세정보 보기</button>
+						<div class="moreInfo toggleCont" style="display:none">
+							<ul class="detailList">
+								<li>
+									<span class="tit">계좌번호</span>
+									<span class="value">03580204123456  <button type="button" class="contBtn01" title="계좌번호 복사">복사</button></span>
+								</li>
+								<li>
+									<span class="tit">신규일자</span>
+									<span class="value">2020.07.21</span>
+								</li>
+								<li>
+									<span class="tit">출금가능금액</span>
+									<span class="value"><strong class="dataValue">2,098,694</strong><em class="won">원</em></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- // 추가정보 열/닫 -->
+				</div>
+				<!-- // 계좌정보 상세 -->
+			</div>
+
+			<div class="noDataBox">
+				<div class="tooltipWrap">
+					<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">총 잔액 툴팁 열기</span></button>
+					<div class="tooltipCont">
+						<p>인증토큰 만료, 전송 중단 등의 경우에는 적용되지 않습니다.</p>
+						<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+					</div>
+				</div>
+				<a href="javascript:;" class="link">적요 제공에 동의하고 거래내역 보기</a>
+			</div>
+
+			<div class="boxTypeWrap pt0">
+				<!-- 날짜 선택 및 정렬 -->
+				<div class="filterWrap">
+					<span class="sortValue">2020.09.01 ~ 2020.09.30</span>
+					<span class="sortValue">전체</span>
+					<button type="button" class="sortBtn"><span class="blind">조회조건 선택 설정하기</span></button>
+				</div>
+				<!-- // 날짜 선택 및 정렬 -->
+
+				<div class="inoutListWrap longTit">
+					<div class="inoutListInn">
+						<p class="date">2020년 8월 01일</p>
+						<ul class="inoutList">
+							<li>
+								<p class="inoutTit noAgree">출금(적요 제공에 동의하지 않은 거래)</p>
+								<div class="inoutCont">
+									<div class="timeWrap">
+										<span class="time">18:35</span>
+									</div>
+									<span class="amount outColor"><strong class="dataValue">-3,000</strong><em class="won">원</em></span>
+								</div>
+								<div class="totalAmount"><span class="txt">잔액</span> <strong class="dataValue">2,101,194</strong><em class="won">원</em></div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="inoutListInn">
+						<p class="date">2020년 7월 31일</p>
+						<ul class="inoutList">
+							<li>
+								<p class="inoutTit">홍길동</p>
+								<div class="inoutCont">
+									<div class="timeWrap">
+										<span class="time">18:35</span>
+									</div>
+									<span class="amount inColor"><strong class="dataValue">+100,000,000,000</strong><em class="won">원</em></span>
+								</div>
+								<div class="totalAmount"><span class="txt">잔액</span> <strong class="dataValue">100,000,000,000</strong><em class="won">원</em></div>
+							</li>
+							<li>
+								<p class="inoutTit">홍길동</p>
+								<div class="inoutCont">
+									<div class="timeWrap">
+										<span class="time">18:35</span>
+									</div>
+									<span class="amount outColor"><strong class="dataValue">-3,000</strong><em class="won">원</em></span>
+								</div>
+								<div class="totalAmount"><span class="txt">잔액</span> <strong class="dataValue">2,101,194</strong><em class="won">원</em></div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="inoutListInn">
+						<p class="date">2020년 7월 31일</p>
+						<ul class="inoutList">
+							<li>
+								<p class="inoutTit">홍길동</p>
+								<div class="inoutCont">
+									<div class="timeWrap">
+										<span class="time">18:35</span>
+									</div>
+									<span class="amount outColor"><strong class="dataValue">-3,000</strong><em class="won">원</em></span>
+								</div>
+								<div class="totalAmount"><span class="txt">잔액</span> <strong class="dataValue">2,101,194</strong><em class="won">원</em></div>
+							</li>
+							<li>
+								<p class="inoutTit">모어커피</p> 
+								<div class="inoutCont">
+									<div class="timeWrap">
+										<span class="time">18:35</span>
+									</div>
+									<span class="amount inColor"><strong class="dataValue">+3,000</strong><em class="won">원</em></span>
+								</div>
+								<div class="totalAmount"><span class="txt">잔액</span> <strong class="dataValue">2,101,194</strong><em class="won">원</em></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="listMoreBtn">
+					<a href="javascript:;" title="항목 더보기">더보기</a>
+				</div>
+
+				<!-- 리스트 없을 경우 -->
+				<div class="listNone">
+					<p>거래내역이 없습니다.</p>
+				</div>
+				<!-- // 리스트 없을 경우 -->
+			</div>
+
+			<style type="text/css">
+			.scAreaWrap{overflow-x: scroll;margin-top: 20px;padding: 10px 0;position: relative;}
+			.scAreaWrap ul{display: flex;}
+			.scAreaWrap ul > li{margin-right: 10px;}
+			.scAreaWrap ul > li > button{white-space: nowrap;border: solid 1px silver;border-radius: 10px;padding: 5px 7px}
+			.scAreaWrap ul > li > button.active{border-color:#19a647;background-color:#19a647;color:#fff}
+			</style>
+
+			<div class="scAreaWrap">
+				<ul>
+					<li><button type="button" class="active">예·적금</button></li>
+					<li><button type="button">외화</button></li>
+					<li><button type="button">펀드</button></li>
+					<li><button type="button">주식</button></li>
+					<li><button type="button">골드/실버</button></li>
+					<li><button type="button">가상자산</button></li>
+					<li><button type="button">예·적금</button></li>
+					<li><button type="button">외화</button></li>
+					<li><button type="button">펀드</button></li>
+					<li><button type="button">주식</button></li>
+					<li><button type="button">골드/실버</button></li>
+					<li><button type="button">가상자산</button></li>
+					<li><button type="button">예·적금</button></li>
+					<li><button type="button">외화</button></li>
+					<li><button type="button">펀드</button></li>
+					<li><button type="button">주식</button></li>
+					<li><button type="button">골드/실버</button></li>
+					<li><button type="button">가상자산</button></li>
+				</ul>
+			</div>
+			<script type="text/javascript">
+				$('.scAreaWrap button').each(function(){
+					if ($(this).hasClass('active')) {
+						$(this).attr('aria-selected','true')
+					}else{
+						$(this).attr('aria-selected','false')
+					}
+				});
+
+				$('.scAreaWrap button').click(function(){
+					var $this = $(this);
+					var $thisPos = $this.offset().left;
+					var $wrap = $this.closest('.scAreaWrap').scrollLeft();
+					$this.closest('.scAreaWrap').find('button').removeClass('active').attr('aria-selected','false');
+					$this.addClass('active').attr('aria-selected','true');
+					$this.closest('.scAreaWrap').stop().animate({scrollLeft:$wrap + $thisPos - 16 },300);
+				});
+				$('.scAreaWrap button').focus(function(){
+					var $this = $(this);
+					var $thisPos = $this.offset().left;
+					var $wrap = $this.closest('.scAreaWrap').scrollLeft();
+					$this.closest('.scAreaWrap').stop().animate({scrollLeft:$wrap + $thisPos - 16 },300);
+				});
+			</script>
+
+			<!-- <div class="footer sb">
+				<ul class="footerList">
+					<li><a href="javascript:;">홈</a></li>
+					<li><a href="javascript:;">마이데이터</a></li>
+					<li><a href="javascript:;">금융상품몰</a></li>
+					<li><a href="javascript:;">상담톡</a></li>
+				</ul>
+			</div> -->
+
+			<style type="text/css">
+				.circleWrap{width:300px;height:300px;border-radius:100%;background:rgba(0,0,0,0.1);text-align: center;position:fixed;left:0px;bottom:0px;z-index:1200;}
+				.circleWrap .circleEntWrap{display:flex;justify-content:space-between;position: absolute;width:100%;top:50%;margin-top:-25px;}
+				.circleWrap .circleEnt{width:50px;height:50px;border-radius:100%;background:cyan;line-height: 50px;}
+				.circleWrap .circleEntWrap.type01{transform: rotate(0deg);}
+				.circleWrap .circleEntWrap.type02{transform: rotate(60deg);}
+				.circleWrap .circleEntWrap.type02 .circleEnt{transform: rotate(-60deg);}
+				.circleWrap .circleEntWrap.type03{transform: rotate(120deg);}
+				.circleWrap .circleEntWrap.type03 .circleEnt{transform: rotate(-120deg);}
+				/*body{overflow:hidden}*/
+			</style>
+
+			<div class="circleWrap rotate" data-local="">
+				Wrap
+				<div class="circleEntWrap type01">
+					<span class="circleEnt type01">type01</span>
+					<span class="circleEnt type02">type02</span>
+				</div>
+				<div class="circleEntWrap type02">
+					<span class="circleEnt type03">type03</span>
+					<span class="circleEnt type04">type04</span>	
+				</div>
+				<div class="circleEntWrap type03">
+					<span class="circleEnt type05">type05</span>
+					<span class="circleEnt type06">type06</span>	
+				</div>
+			</div>
+			
+
+			<script type="text/javascript">
+				$.fn.rotationInfo = function(){
+					var el = $(this);
+					tr = el.css('transform');
+					info = {rad: 0, deg: 0}
+
+					if(tr = tr.match('matrix\\((.*)\\)')){
+						tr = tr[1].split(',');
+						if (typeof tr[0] != 'undefined' && typeof tr[1] != 'undefined') {
+							info.rad = Math.atan2(tr[1], tr[0]);
+							info.deg = parseFloat((info.rad * 180 / Math.PI).toFixed(1));
+						}
+					}
+					return info;
+					//console.log(info)
+				}
+
+				var ang = 0;
+				var angStart = 0;
+				var isStart = false;
+
+				function angXY(e){
+					const ele = document.querySelector('.circleWrap');
+					const bcr = ele.getBoundingClientRect();
+					const radius = bcr.width / 2;
+
+					var clientY = e.originalEvent.touches[0].clientY;
+					var clientX = e.originalEvent.touches[0].clientX;
+					const y = clientY - bcr.top - radius; // y from center
+					const x = clientX - bcr.left - radius; // x from center
+					return Math.atan2(y,x);
+					//console.log(Math.atan2(y,x))
+				}
+
+				$('.circleWrap').on('touchstart',function(e){
+					isStart = true;
+					angStart = angXY(e) - ang;
+				});
+
+				$('.circleWrap').on('touchmove',function(e){
+					if(!isStart) return;
+					e.preventDefault();
+					ang = angXY(e) - angStart
+					angSum =  parseFloat((ang * 180 / Math.PI).toFixed(1));
+					$('.circleWrap').css('transform','rotate(' + angSum + 'deg)');
+					$('.circleEntWrap.type01 .circleEnt').each(function(){
+						var entSum = -angSum;
+						$(this).css('transform','rotate(' + entSum + 'deg)');
+					});		
+					$('.circleEntWrap.type02 .circleEnt').each(function(){
+						var entSum = -angSum + -60;
+						$(this).css('transform','rotate(' + entSum + 'deg)');
+						console.log(entRotate)
+					});
+					$('.circleEntWrap.type03 .circleEnt').each(function(){
+						var entSum = -angSum + -120;
+						$(this).css('transform','rotate(' + entSum + 'deg)');
+					});
+				});
+
+				$('.circleWrap').on('touchend',function(){
+					isStart = false;
+				});
+			</script>
+
+			
+
+		</div>
+		<!-- //container -->
+
+		<!-- footer 올원 -->
+		<div class="linked-bottom-menu">
+			<a href="javascript:void(0);" class="linked-finance">NH금융</a>
+			<a href="javascript:void(0);" class="linked-mall">상품몰</a>
+			<a href="javascript:void(0);" class="linked-mydata">마이데이터</a>
+			<a href="javascript:void(0);" class="linked-life">생활+</a>
+		</div>
+
+		<!-- footer 스뱅 -->
+		<div class="footer sb">
+			<ul class="footerNav"> 
+				<li><a href="javascript:;" class="home" onclick="testPopupOpen('#popID',this)">홈</a></li>
+				<li><a href="javascript:;" class="mydata" onclick="testPopupOpen('#popID2')">마이데이터</a></li>
+				<li><a href="javascript:;" class="mall">금융상품몰</a></li>
+				<li><a href="javascript:;" class="talk">상담톡</a></li>
+			</ul>
+		</div>
+
+	</div>
+	<style type="text/css">
+	.boxTypeWrap .accName{opacity: 0.4;}
+	.boxTypeWrap.active .accName{transform: translate(0px,15px);transition: 1s;opacity: 1;}
+	/*button{border:solid 1px silver;border-radius: 10px}*/
+	</style>
+
+
+
+<div class="testPopupWrap" style="display: none"  id="popID">
+	<div class="testPopupContainer">
+		<div class="testPopupInner">
+			<div class="testPopupHeader" tabindex="-1">Title</div>
+			<div class="testPopupContent">contents<br>contents<br>contents<br><!-- contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br>contents<br> --></div>
+			<div class="testPopupFooter"><button type="button" onClick="testPopClose(this)">Close</button> <button type="button" onClick="testPopupOpen('#popID2')">열기</button></div>
+		</div>
+	</div>
+</div>
+
+<div class="testPopupWrap" style="display: none" id="popID2">
+	<div class="testPopupContainer testCenterP">
+		<div class="testPopupInner">
+			<div class="testPopupHeader" tabindex="-1">Title <button type="button" class="btnAppend">추가</button></div>
+			<div class="testPopupContent">
+				<div class="testAppend">추가</div>
+			</div>
+			<div class="testPopupFooter"><button type="button" onClick="testPopClose(this)">Close</button> <button type="button" onClick="testPopupOpen('#popID')">열기</button></div>
+		</div>
+	</div>
+</div>
+
+<style type="text/css">
+	.testPopupWrap{position:fixed;width:100%;height:100%;background-color:rgba(0,0,0,0.4);top:0;z-index:1100}
+	.testPopupContainer{display: flex;flex-direction:column;justify-content:flex-end;height:100%;}
+	.testPopupInner{max-height:70%;margin:0 20px;background-color:#fff;border-radius: 15px 15px 0 0;margin-bottom:-100%;}
+	.testPopupHeader{text-align: center;font-size:16px;font-weight: bold;height:50px;padding:0 10px;border-bottom:solid 1px #efefef;line-height:50px}
+	.testPopupContent{padding:15px;overflow-y:scroll;height:calc(100% - 100px);}
+	.testPopupFooter{height:50px;text-align: center;border-top:solid 1px #efefef;line-height:50px }
+
+	.testPopupContainer.testCenterP{justify-content: center;}
+	.testPopupContainer.testCenterP .testPopupInner{border-radius:15px}
+
+	/*.testPopupWrap.active .testPopupInner{margin-bottom: 0;transition:margin-bottom 0.3s} */
+	body.hasPopup{overflow:hidden;}
+</style>
+
+<script type="text/javascript">
+	/*testPopClose = function(e){
+		$(e).closest(".testPopupWrap").hide();
+	}*/
+	var emt;	
+	function testPopupOpen(id,emt){
+		emt = emt;
+		$(emt).addClass('tttt');
+		
+		$(id).show().addClass('active').find('.testPopupHeader').focus();
+		$(id).find('.testPopupInner').stop().animate( { marginBottom : 0 }, 300 )
+		$('body').addClass('hasPopup');
+		var $popupLength = $('.testPopupWrap.active').length + 1100;
+		//console.log($popupLength)
+		$(id).css('z-index',$popupLength)
+		console.log(emt)
+	}
+	function testPopClose(e){
+		//emt = emt;
+		console.log(emt)
+		$(emt).addClass('rrrr');
+		console.log(emt)
+		$(e).closest(".testPopupWrap").hide().removeClass('active').find('.testPopupInner').css('margin-bottom','-100%');
+		var $popupLength = $('.testPopupWrap.active').length;		
+		$('body').removeClass('hasPopup');
+	}
+
+	$('.btnAppend').click(function(){
+		var $this = $(this);
+		var $apppend = '<div class="testAppend">추가</div>'
+		$this.closest('.testPopupWrap').find('.testPopupContent').append($apppend)
+
+	});
+</script>
+
+<script type="text/javascript">
+	//당겨서 새로고침 테스트
+	function handleStart() {
+		$('.wrapper').append('<div class="re_rec"></div>')
+		var startY;
+		var move;
+		var moveSum;
+		var scTop;
+		
+		$('body').on("touchstart", function (e) {
+			scTop = $(document).scrollTop();
+			startY =  e.originalEvent.touches[0].screenY
+		});
+
+		$('body').on("touchmove", function (e) {
+			move =  e.originalEvent.touches[0].screenY
+			moveSum = move - startY;
+			if (scTop < 1) {
+				if (moveSum > 0) {
+					$('body').css('overflow','hidden')
+				}else{$('body').css('overflow','')}
+				if (200 > moveSum > 0) {
+					$('.re_rec').css({
+						'transform':'rotate' + '(' + moveSum*3 + 'deg' +')',
+						'top':(-64 + moveSum)/2
+					})
+				}
+			}
+		})
+
+		$('body').on("touchend", function (e) {
+			if (scTop < 1) {
+				if (moveSum > 200) {
+					alert('새로고침')
+					moveSum = 0
+					$('.re_rec').css({
+						'transform':'rotate(0deg)',
+						'top':-64
+					})
+				}else{
+					$('.re_rec').css({
+						'transform':'rotate(0deg)',
+						'top':-64
+					})
+					moveSum = 0
+				}
+			}
+		})
+	};
+
+	//자산 그때그랬다면 모션
+	function assetMaybe(){
+		$('.boxTypeWrap').each(function(){
+			var $this = $(this);
+			var $thisPos = $this.offset().top;
+			var $winHeight = $(window).height() * 0.75;
+			var $docheight = $(document).height()
+			
+			var $Sum = $thisPos-$winHeight
+			
+			$(window).on('scroll',function(){
+				var $scTop = $('html').scrollTop();
+				if ($scTop > $Sum) {
+					$this.addClass('active')
+				}else{$this.removeClass('active')}
+				//console.log($scTop,$thisPos-$winHeight)
+			});
+		});
+
+	}
+
+	function headrHendle2(){
+		var _startY;
+		var _moveY;
+		var _headerPos
+		$('body').on("touchstart", function (e) {
+			_startY =  e.originalEvent.touches[0].screenY;
+			_headerPos = $('.header').position().top;
+		});
+		$('body').on("touchmove", function (e) {
+			var $scTop = $(window).scrollTop();
+			_moveY =  e.originalEvent.touches[0].screenY;
+			var _moveSum = _startY - _moveY ;
+			if (_moveSum < 0 && !$scTop == 0) {//위로
+				console.log('위로')
+				if (_headerPos > -52) {
+					if (_moveSum < 0 && _moveSum > -51) {
+						$('.header').css({'top':_headerPos - _moveSum})
+						$('body').on("touchend", function () {
+							if (_headerPos >  -51 && !$scTop == 0) {
+								$('.header').stop().animate({'top':0})
+							}
+						});
+					}
+					console.log('위로',_headerPos,_moveSum,_headerPos - _moveSum )
+				}
+
+			} else {//아래로
+				if (_headerPos > -51) {
+					if (_moveSum > 0 && _moveSum < 52) {
+						$('.header').css({'top':0 - _moveSum})
+						$('body').on("touchend", function () {
+							if (_headerPos <  0) {
+								$('.header').css({'top':-51})
+							}
+						});
+					}
+				}
+				console.log('아래로',_headerPos)
+			}
+		});
+	}
+
+	function headerHendle(){
+		var _startY;
+		var _moveY;
+		var _headerPos;
+		var _moveSumY;
+		
+		$('body').on('touchstart',function(e){
+			//_startY =  e.originalEvent.touches[0].screenY;
+			_startY =  $(window).scrollTop();
+			_headerPos = $('.header').position().top;
+		});
+		$('body').on('touchend',function(e){
+			if (_moveSumY < 0) {
+				$('.header').stop().animate({'top':'-51px'})
+				$('.container').css('padding-top',0)
+			}else{
+				$('.header').stop().animate({'top':'0'})
+				$('.container').css('padding-top',51)
+			}
+			_headerPos = $('.header').position().top;
+		});
+
+		$(window).on('scroll',function(){
+			_moveY = $(window).scrollTop();
+			_moveSumY = _startY - _moveY;
+			//console.log(_startY,_moveY,_moveSumY)
+			if (_moveSumY < 0) {//아래로 이동
+				//console.log('아래로 이동')
+				if (_moveSumY > -51) {
+					if (_headerPos <= 0 && _headerPos > -51  ) {
+						$('.header').css('top',_moveSumY);
+						$('.container').css('padding-top',51 + _moveSumY);
+					}
+				}
+			} else {//위로 이동
+				//console.log('위로 이동')
+				if (_moveSumY < 51) {
+					if (_headerPos !== 0  ) {
+						$('.header').css('top',_headerPos + _moveSumY);
+						$('.container').css('padding-top',_moveSumY);
+					}
+				}
+			}
+		});
+	}
+
+	function headerHendleTouch(){
+		var _startY;
+		var _moveY;
+		var _headerPos;
+		var _moveSumY;
+		
+		$('body').on('touchstart',function(e){
+			//_startY =  e.originalEvent.touches[0].screenY;
+			_startY =  $(window).scrollTop();
+			_headerPos = $('.header').position().top;
+		});
+		$('body').on('touchend',function(e){
+			if (_moveSumY < 0) {
+				$('.header').stop().animate({'top':'-51px'})
+				//$('.container').css('padding-top',0)
+				$('.container').stop().animate({'padding-top':0})
+			}else{
+				$('.header').stop().animate({'top':'0'})
+				//$('.container').css('padding-top',51)
+				$('.container').stop().animate({'padding-top':51})
+			}
+			_headerPos = $('.header').position().top;
+		});
+
+		$('body').on('touchmove',function(){
+			_moveY = $(window).scrollTop();
+			_moveSumY = _startY - _moveY;
+			//console.log(_startY,_moveY,_moveSumY)
+			if (_moveSumY < 0) {//아래로 이동
+				//console.log('아래로 이동')
+				if (_moveSumY > -51) {
+					if (_headerPos <= 0 && _headerPos > -51  ) {
+						$('.header').css('top',_moveSumY);
+						//$('.container').css('padding-top',51 + _moveSumY);
+					}
+				}
+			} else {//위로 이동
+				//console.log('위로 이동')
+				if (_moveSumY < 51) {
+					if (_headerPos !== 0  ) {
+						$('.header').css('top',_headerPos + _moveSumY);
+						//$('.container').css('padding-top',_moveSumY);
+					}
+				}
+			}
+		});
+	}
+
+
+	//headerHendle()
+	headerHendleTouch()
+	assetMaybe()
+	handleStart()//당겨서 새로고침
+</script>
+
+<style type="text/css">
+	/*.nhasset .header{position:relative;}*/
+</style>
+
+<!-- <div class="pubUtileWrap">
+	<ul>
+		<li><button type="button" class="btnPubBack" onClick="javascript:history.back()">뒤로</button></li>
+		<li><button type="button" class="btnPubReload" onClick="javascript:location.reload(true)">새로고침</button></li>
+		<li><button type="button" class="btnPubFontBig" >글자크게</button></li>
+		<li><button type="button" class="btnPubFontNormal" >글자작게</button></li>
+	</ul>
+	<div class="pubToggleWrap"><button type="button" class="btnToggle"><span class="blind">열/닫</span></button></div>
+</div> -->
+<script type="text/javascript">
+	/*var $pubUtile = '<div class="pubUtileWrap"><ul><li><button type="button" class="btnPubBack" onClick="javascript:history.back()">뒤로</button></li><li><button type="button" class="btnPubReload" onClick="javascript:location.reload(true)">새로고침</button></li>	</ul><div class="pubToggleWrap"><button type="button" class="btnToggle"><span class="blind">열/닫</span></button></div></div>'
+	$('body').append($pubUtile)
+	$('.pubToggleWrap .btnToggle').click(function(){
+		var $this = $(this);
+		$this.closest('.pubUtileWrap').toggleClass('active')
+	});*/
+
+</script>
+</body>
+</html>

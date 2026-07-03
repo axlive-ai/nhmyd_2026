@@ -1,0 +1,294 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>소비서브메인(지난 달) | 소비A</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset hasGnb">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">NH마이데이터</a></h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 소비서브메인(이번 달) ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<!-- -------------------------------------- -->
+		<!-- [GNB] -->
+		<!-- -------------------------------------- -->
+		<div class="gnb">
+			<ul>
+				<li><a href="javascript:;">자산</a></li>
+				<li><a href="javascript:;" class="active" title="선택됨">소비</a></li>
+				<li class="menuStar"><a href="javascript:;"><span class="menuStarInner"><span class="blind">별별서비스</span></span></a></li> <!-- [접근성_2024] 메뉴명 변경 -->
+				<li><a href="javascript:;">전체</a></li>
+			</ul>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [업데이트바] -->
+		<!-- -------------------------------------- -->
+		<div class="pageRefreshWrap">
+			<div class="pageRefresInner">
+				<span>
+					<span class="date">08.05 10:45</span>
+					<button type="button" class="btnUpdate"><span class="blind">업데이트</span></button>
+				</span>
+				<button type="button" class="btnAlrt new" aria-expanded="false"><span class="blind">알림</span></button>
+			</div>
+			<div class="pageAlertWrap">
+				<ul>
+					<li class="alertNotice">
+						<a href="javascript:;" role="button">
+							<dl>
+								<dt>연결중인 자산 확인이 필요해요</dt>
+								<dd>OOO에서 전송 중단 또는 거절이 있었습니다.<br/>연결관리 화면에서 확인해주세요. </dd>
+							</dl>
+						</a>
+					</li>
+					<li class="alertError">
+						<a href="javascript:;" role="button">
+							<dl>
+								<dt>정보 확인이 필요해요</dt>
+								<dd><span>$연말정산$</span> 정보수집 중 오류가 있었습니다.<br/><span>$연말정산$</span> 설정 화면에서 확인해주세요. </dd>
+							</dl>
+						</a>
+					</li>
+					<li class="alertError">
+						<a href="javascript:;" role="button">
+							<dl>
+								<dt>업데이트한지 <span>N</span>일이 지났어요</dt>
+								<dd><span>$연말정산$</span> 정보 업데이트가 필요합니다.<br/>인증관리 화면에서 확인해주세요.</dd>
+							</dl>
+						</a>
+					</li>
+					<li class="alertError">
+						<a href="javascript:;" role="button">
+							<dl>
+								<dt>정보수집이 필요해요</dt>
+								<dd><span>$연말정산$</span> 서비스 이용을 위해 정보수집이 필요합니다. 인증관리 화면에서 확인해주세요.</dd>
+							</dl>
+						</a>
+					</li>
+
+				</ul>
+				<div class="pageAlertNoData">
+					<p>업데이트 알림 내역이 없습니다.</p>
+				</div>
+				<button type="button" aria-expanded="true" class="pageAlertClose"><span>닫기</span></button>
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [공통 베너] -->
+		<!-- -------------------------------------- -->
+		<div class="myTopBanner bgTy01"> <!-- case1 -->
+			<a href="javascript:;" class="close" title="베너 닫기 버튼"></a>
+			<p class="txt">만료예정인 N개 기관이 있어요</p>
+			<a href="javascript:;" class="link">재 연결하고 소비현황 확인하기</a>
+		</div>
+		<div class="myTopBanner bgTy02"> <!-- case2 -->
+			<a href="javascript:;" class="close" title="베너 닫기 버튼"></a>
+			<p class="txt">연결만료된 N개 기관이 있어요</p>
+			<a href="javascript:;" class="link">재 연결하고 소비현황 확인하기</a>
+		</div>
+		<div class="myTopBanner bgTy03">
+			<a href="javascript:;" class="close" title="베너 닫기 버튼"></a>
+			<p class="txt">N개 기관에 신규자산이 있어요</p>
+			<a href="javascript:;" class="link">새롭게 가입한 상품 연결하기</a>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTIOM1] 지난 달 총 소비 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap"> <!--s:boxTypeWrap-->
+			<div class="filterArea mt0">
+				<div>
+					<span class="txtt2">
+						6월 총 소비
+						<button type="button" class="assetSet" onclick="slidePopOption();"><span class="blind">총 자산 설정하기</span></button>
+					</span>
+				</div>
+				<div class="filterSelect"><button type="button" title="월 선택 팝업열기"><strong>6월</strong><span class="pointColor9">(06.05~07.04)</span></button></div>
+			</div>
+			<div>
+				<dl class="totalBalance bigSize2">
+					<dd><strong class="dataValue">0</strong><strong class="won">원</strong></dd>
+					<!-- <dt class="mt10">총 수입 7,234,567 원</dt> -->
+				</dl>
+			</div>
+		</div>
+		
+		<!-- -------------------------------------- -->
+		<!-- [2023 NH마이데이터 서비스 고도화] 배너추가 -->
+		<!-- -------------------------------------- -->
+		<div class="areaBanner2 t4">
+			<a href="javascript:;" class="img13">
+				<span>내 카드 분석</span>
+				<span>나는 얼마나 쓰고 내 또래는 얼마나 쓰고 있을까?</span>
+			</a>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTIOM2] 한달 소비 흐름 -->
+		<!-- -------------------------------------- -->
+		<div class="csChartWrap">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="boxTypeWrap pb0">
+							<h2 class="txtt2"><strong>카드와 계좌를 연결하고<br />지난 달과의 소비를 비교해보세요</strong></h2>
+							<a href="javascript:;" class="linkTxt3 posR">자산 연결하기</a> <!-- [2022-10-18] 수정 -->
+							<div class="mt20">
+								<img src="../../images/sample_spend0801.png" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="boxTypeWrap pb0">
+							<h2 class="txtt2"><strong>슬기로운 소비생활을 위한 첫 걸음<br />예산으로 한 달 살기에 도전해보세요</strong></h2>
+							<a href="javascript:;" class="linkTxt3 posR">예산 설정하기</a> <!-- [2022-10-18] 수정 -->
+							<div class="mt20">
+								<img src="../../images/sample_spend0701.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-button-prev blind"></div>
+			<div class="swiper-button-next blind"></div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTIOM3] 언제 썼을까? -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap">
+			<div class="cs_MonthImgWrap mb15">
+				<h2 class="txtt2"><strong>언제 썼을까?</strong></h2>
+				<strong class="txtb1">6월에는 소비가 없었어요</strong>
+			</div>
+			<div class="cms calenderArea">
+				<div class="ac"> <!-- [2022-10-18] ac 클래스 추가 -->
+					<img src="../../images/sample_spend0802.png" alt="">
+				</div>
+			</div>
+			<div class="ac">
+				<a href="javascript:;" class="linkTxt3 mt15">지난 달 전체내역 보기</a> <!-- [2022-10-18] 수정 -->
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTIOM4] 현금 소비 내역 -->
+		<!-- [2023 NH마이데이터 서비스 고도화] 삭제 -->
+		<!-- -------------------------------------- 
+		<div class="inBannerWarp">
+			<a href="javascript:;">
+				<div class="inBanner typeS2 bg18">
+					<div>
+						<span class="subTit">현금 소비 내역을 관리해볼까요?</span>
+						<div class="mt5">
+							<span class="contBtn03 bgWhite">현금영수증 연결</span>
+							<span class="contBtn03 bgWhite">직접등록</span>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+
+		<div class="inBannerWarp">
+			<a href="javascript:;">
+				<div class="inBanner typeS2 bg18">
+					<div>
+						<span class="subTit">현금 소비 내역도 관리해볼까요?</span>
+						<div class="mt5">
+							<span class="contBtn03 bgWhite">현금영수증 업데이트</span>
+							<span class="contBtn03 bgWhite">직접등록</span>
+						</div>
+						<span class="bnSub mt5 f12">현금영수증 업데이트 MM.DD hh:mm (N일 경과)</span>
+					</div>
+				</div>
+			</a>
+		</div>
+		-->
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTIOM5] 어디에 많이 썼을까? -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap pb0">
+			<div class="accTopInfo mt0">
+				<h2 class="txtt2"><strong><a href="javascript:;" class="csLink">어디에 많이 썼을까?</a></strong></h2>
+				<p class="txtb1">나도 몰랐던 <strong class="pointColor">소비 균형, 소비 TOP3</strong>를<br>알아보세요</p>
+			</div>
+			<div class="cssampleImg">
+				<img src="../../images/sample_pattern22.png">
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [배너영역] 추천카드 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap pb0">
+			<div class="accTopInfo mt0">
+				<h2 class="txtt2"><strong><a href="javascript:;" class="csLink">나에게 맞는 추천카드는?</a></strong></h2>
+				<p class="txtb1">더 많은 혜택을 받을 수 있는 <strong class="pointColor">카드를 추천</strong><br>해드려요</p>
+			</div>
+			<div class="cssampleImg">
+				<img src="../../images/sample_spend0601.png">
+			</div>
+		</div>
+		<!-- <div class="listNone mt20 mb0">
+			<p>나만의 기준으로 한 달 소비를 설정해보세요.</p>
+		</div> -->
+
+		<!-- -------------------------------------- -->
+		<!-- [바로가기영역] -->
+		<!-- -------------------------------------- -->
+		<div class="yatexbtnWrap mt20">
+			<a href="javascript:;" title="연결자산 숨기기" aria-haspopup="true" class="setHide">숨기기</a>
+			<a href="javascript:;" title="나의 한 달 설정" aria-haspopup="true" class="setBtn">나의 한 달 설정</a>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [플로팅버튼] -->
+		<!-- -------------------------------------- -->
+		<div class="cs registBtn" style="display: block;">
+			<a href="javascript:;" role="button">자산연결</a>
+		</div>
+		<!-- -------------------------------------- -->
+	</div>
+	<!-- ###################################### -->
+
+	<!-- footer --> <!-- 공통 마이데이터 푸터-->
+	<script type="text/javascript" src="../../../ms/pub/pub-assets/js/footer.js"></script>
+	<!-- //footer -->
+</div>
+
+<!-- [2022-10-19] 스와이퍼 추가 -->
+<script>
+	$(function () {
+		csChartWrapSwiper();
+	})
+</script>
+</body>
+</html>

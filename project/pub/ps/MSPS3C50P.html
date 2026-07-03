@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>popup</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script type="text/javascript">
+$(function(){
+    fullLayerPop();
+});
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>자산연력 목록조회 로딩</h1>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<div class="content">
+			<div class="btnWrap page">
+				<a href="javascript:;" onclick="fullLayerPop();return false;" aria-haspopup="true" role="button" class="btn">fullLayerPop</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="nhasset popWrap fullLayerPop" role="dialog">
+	<div class="popInner">
+		<h1 aria-hidden="true"></h1>
+		<div class="popCont">
+			<div class="assetLoadingWrap bgTypeAgency">
+				<!-- 2022-09-15 문구수정 -->
+				<div class="title">선택한 기관으로부터<br>필요한 정보를 조회하고 있어요</div>
+				<!-- //2022-09-15 문구수정 -->
+				<p class="subTxt2 mt10">앱을 종료 하지 말고 기다려 주세요.</p>
+				<div class="assetLoadingValue">
+					<span><strong>100.00</strong>% 완료</span>
+				</div>
+			</div>			
+		</div><!-- //.popCont -->
+
+		
+	</div>
+</div>
+
+
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		myCarCost();
+	});
+	function myCarCost() {
+		var $thisCost = $('.assetLoadingValue strong');
+		var memberCountContText = $thisCost.text()//.replace(/,/g,'');
+		$({ val : 0}).animate({ val : memberCountContText}, {
+			duration: 1500,//애니메이션 시간
+			step: function(){
+				var num = numberWithCommas(Math.floor(this.val));
+				//var num = numberWithCommas(this.val.toFixed(2));
+				$thisCost.text(num);
+			},
+			complete: function(){
+				var num = numberWithCommas(Math.floor(this.val));
+				//var num = numberWithCommas(this.val.toFixed(2));
+				$thisCost.text(num);
+			}
+		});
+		function numberWithCommas(x){
+			return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		}
+	}
+</script>
+</body>
+</html>

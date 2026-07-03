@@ -1,0 +1,3131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>NH자산+ || 셉템 가이드 시스템</title>
+	<!-- <meta http-equiv="Cache-Control" content="no-store"> -->
+	<meta name="publisher" content="[SEPTEM] UI Dev Team">
+	<link rel="stylesheet" href="com/css/datatables.min.css">
+	<link rel="stylesheet" href="com/css/colorbox.css">
+	<link rel="stylesheet" href="com/css/septem_pubcom.css">
+	<link rel="stylesheet" href="com/css/prism.css">
+	<script src="./com/js/prism.js"></script>
+	<script src="com/js/jquery-3.6.0.min.js"></script>
+	<!-- <script src="com/js/jquery-1.12.4.min.js"></script> -->
+</head>
+<body>
+
+<div class="skipNav">
+	<a href="#main">본문 바로가기</a>
+	<a href="#gnb">메뉴 바로가기</a>
+</div>
+
+<header>
+	<div class="title">
+		<div class="subject">
+			<img src="com/images/guide_logo_nh.svg" alt="NH Bank, NH 농협" class="nhLogo">
+			<span class="headerTit"><em class="headerYear">UI/UX Guide SYSTEM</em> <em class="prj">2022 NH자산+ | <a href="../../ms/pub/pubList.html" style="color:#eee;font-size:13px">NH마이데이터</a></em></span>
+		</div>
+		<div class="search">
+			<input type="text" id="tableSearch" placeholder="검색어입력">
+		</div>
+		<div class="menu">
+			<ul>
+				<li><a href="pubList.html">퍼블리스트</a></li>
+				<li><a href="pubGuide.html">UI가이드</a></li>
+				<li><a href="pubImage.html">이미지리스트</a></li>
+				<li><a class="active" href="pubA11y.html" title="선택됨">접근성</a></li>
+			</ul>
+		</div>		
+	</div>
+	<nav class="gnb">
+		<ul>
+			<!-- gnb는 depth1로 자동생성됩니다. -->
+			<li><span class="active">전체보기</span></li>
+		</ul>
+	</nav>
+</header>
+
+<main id="main" class="pubA11y">
+	<h1>접근성 대응 리스트</h1>
+	<ul>
+		<li>접근성 2차 심사 결과를 기준으로 작성된 리스트 입니다.</li>
+		<li><strong style="color:#19a647;">[내용보기]</strong> 버튼 클릭시 상세 내용을 확인 할 수 있습니다.</li>
+		<li>접근성 관련하여 수정된 부분은 다음과 같이 주석표시 하였습니다.</li>
+	</ul>
+	<pre>
+		<code class="language-markup">
+			<script type="prism-html-markup">
+				<!-- [접근성_2024] 오류항목 -->
+			</script>
+		</code>
+	</pre>
+
+	<!-- ----------------------------------------- -->
+	<!-- [검사 항목별 평가 결과] -->
+	<!-- ----------------------------------------- -->
+	<section class="guide_section">
+		<h2>검사 항목별 평가</h2>
+		<h3>보고서 : (MA심사)_농협 마이데이터 01_for_Android_PHONE_2nd.pdf</h3>
+		<div class="guide_table">
+			<table>
+				<caption>검사 항목별 평가</caption>
+				<colgroup>
+					<col style="width:50px;">
+					<col style="width:180px;">
+					<col style="width:360px;">
+					<col style="width:50px;">
+					<col style="width:360px;">
+					<col>
+					<col style="width:100px;">
+					<col style="width:100px;">
+					<col style="width:100px;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">번호</th>
+						<th scope="col">지침</th>
+						<th scope="col">화면경로</th>
+						<th scope="col">페이지</th>
+						<th scope="col">오류항목</th>
+						<th scope="col">해결방안</th>
+						<th scope="col">퍼블화면</th>
+						<th scope="col">개발화면</th>
+						<th scope="col">작업내용</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- [오류1] -->
+					<tr>
+						<td><span>1</span></td>
+						<td>7 초점</td>
+						<td>애플리케이션 공통 오류</td>
+						<td><span>9</span></td>
+						<td>부적절한 초점적용</td>
+						<td>CSS 변경 및 aria-label/aria-hidden 속성 추가</td>
+						<td><a href="./ps/MSPS3230.html" target="_blank">MSPS3230</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection01_1">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection01_1">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_01_1.png" alt=""/></span>
+								<ul>
+									<li>해당 체크박스는 임의탐색(화면터치 방식) 시 탐색이 되지 않습니다.</li>
+									<li>임의탐색 시에도 초점이 적용되도록 구현해야 합니다.</li>
+								</ul>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<div class="boxRadioInn">
+														<span>
+															<input name="used50" id="usedBtn07" type="radio"  title="정기전송 여부" >
+															<label class="radio" for="usedBtn07">아니요</label>
+														</span>
+													</div>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<div class="boxRadioInn">
+														<span>
+															<input name="used50" id="usedBtn07" type="radio"  title="정기전송 여부(아니요)">
+															<label class="radio" for="usedBtn07" aria-hidden="hidden">아니요</label>
+														</span>
+													</div>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+
+								<table>
+									<caption>동일 오류 페이지</caption>
+									<colgroup>
+										<col>
+										<col span="2" style="width:100px;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">화면명(경로)</th>
+											<th scope="col">퍼블파일</th>
+											<th scope="col">개발파일</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>자산 &gt; 자산현황 &gt; (팝업)순자산 금액 설정</td>
+											<td><a target="_blank" href="./as/MSASM300P.html">MSASM300P</a></td>
+											<td><strong>JSP</strong></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류2] -->
+					<tr>
+						<td><span>2</span></td>
+						<td>18 보조기술과의 호환성</td>
+						<td>애플리케이션 공통 오류</td>
+						<td><span>10</span></td>
+						<td>스크린리더로 이용이 어려운 콘텐츠</td>
+						<td>전체 UI 변경 이슈로 인한 작업 유무 확인 필요</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td><span>확인필요</span></td>
+					</tr>
+
+					<!-- [오류3] -->
+					<tr>
+						<td><span>3</span></td>
+						<td>7 초점</td>
+						<td>마이데이터홈</td>
+						<td><span>12</span></td>
+						<td>초점이 접근되지 않는 콘텐츠</td>
+						<td>role="button" 추가 필요</td>
+						<td><a href="./co/MSCO9210.html" target="_blank">MSCO9210</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection01_3">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection01_3">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_01_3.png" alt=""/></span>
+								<ul>
+									<li>링크에 href가 제공되지 않고 onclick 이벤트로만 기능이 구현된 경우 접근이 되지 않습니다.</li>
+									<li>해당 링크에 role="button"을 제공해야 합니다.</li>
+								</ul>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<a onclick="...">버튼명</a>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<a href="javascript:;" role="button" onclick="...">버튼명</a>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류4] -->
+					<tr>
+						<td><span>4</span></td>
+						<td>1 대체 텍스트</td>
+						<td>홈 &gt; 전체 &gt; 자산 &gt; 자산현황</td>
+						<td><span>14</span></td>
+						<td>대체텍스트 미제공</td>
+						<td>alt="{기관명}" 추가 필요 : 예) alt="카카오뱅크"</td>
+						<td><a href="./as/MSASM000.html" target="_blank">MSASM000</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection01_4">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection01_4">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_01_4.png" alt=""/></span>
+								<ul>
+									<li>로고 이미지에 대한 정보가 일부 누락되었습니다.</li>
+									<li>로고 이미지에 대한 정보를 추가 제공해야 합니다.</li>
+								</ul>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<!-- 오류 사례1) alt값이 없는 경우 -->
+													<img src="..." class="imgLogo">
+				
+													<!-- 오류 사례2) 빈 alt값인 경우 (기관명이 꼭 필요한 이미지일 경우) -->
+													<img src="..." class="imgLogo" alt="">
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<img src="..." class="imgLogo" alt="{기관명}">
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<!-- 
+								<table>
+									<caption>동일 오류 페이지</caption>
+									<colgroup>
+										<col>
+										<col span="2" style="width:100px;">
+										<col style="width:100px;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">화면명(경로)</th>
+											<th scope="col">퍼블파일</th>
+											<th scope="col">개발파일</th>
+											<th scope="col">비고</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>자산 &gt; 자산현황 &gt; (팝업)순자산 금액 설정</td>
+											<td><a target="_blank" href="./as/MSASM300P.html">MSASM300P</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>자산 &gt; 자산현황 &gt; 가상자산 상세 &gt; 가상자산 수정</td>
+											<td><a target="_blank" href="./as/MSAS5310P.html">MSAS5310P</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [확인필요]</td>
+										</tr>
+										<tr>
+											<td>자산 &gt; 자산현황 &gt; 가상자산 상세 &gt; 자산등록 &gt; (팝업)가상자산 검색</td>
+											<td><a target="_blank" href="./as/MSAS5460.html">MSAS5310P</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [확인필요]</td>
+										</tr>
+										<tr>
+											<td>자산 &gt; 자산현황 &gt; 선불페이 상세 &gt; (팝업)자동충전정보</td>
+											<td><a target="_blank" href="./as/MSAS6150P.html">MSAS6150P</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [확인필요]</td>
+										</tr>
+										<tr>
+											<td>자산 &gt; (팝업) 맞춤상품추천</td>
+											<td><a target="_blank" href="./as/MSASC110P.html">MSASC110P</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [확인필요]</td>
+										</tr>
+										<tr>
+											<td>자산 &gt; 목표 &gt; 새로 추가된 자산</td>
+											<td><a target="_blank" href="./as/MSOB1200.html">MSOB1200</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [확인필요]</td>
+										</tr>
+										<tr>
+											<td>소비 &gt; 카드이용내역 &gt; 승인내역 </td>
+											<td><a target="_blank" href="./cs/MSCS4320.html">MSCS4320</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; 자산진단 &gt; (팝업)투자수익률</td>
+											<td><a target="_blank" href="./ae/MSAE1230P.html">MSAE1230P</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [확인필요]</td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; 연말정산 &gt; 입력항목보기</td>
+											<td><a target="_blank" href="./ae/MSAE6120.html">MSAE6120</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [확인필요]</td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; NH주택청약플래너</td>
+											<td><a target="_blank" href="./ae/MSAE7100.html">MSAE7100</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [확인필요]</td>
+										</tr>
+										<tr>
+											<td>설정/관리 &gt; 데이터 전송관리</td>
+											<td><a target="_blank" href="./ps/MSPS5100.html">MSPS5100</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [확인필요]</td>
+										</tr>
+									</tbody>
+								</table>
+								-->
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류5] -->
+					<tr>
+						<td><span>5</span></td>
+						<td>7 초점</td>
+						<td>홈 &gt; 전체 &gt; 자산 &gt; 자산현황</td>
+						<td><span>15</span></td>
+						<td>초점이 접근되지 않는 콘텐츠</td>
+						<td>3번 내용 동일</td>
+						<td><a href="./as/MSASM000.html" target="_blank">MSASM000</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection01_5">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection01_5">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_01_5.png" alt=""/></span>
+								<ul>
+									<li>링크에 href가 제공되지 않고 onclick 이벤트로만 기능이 구현된 경우 접근이 되지 않습니다.</li>
+									<li>해당 링크에 role="button"을 제공해야 합니다.</li>
+								</ul>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<a onclick="...">버튼명</a>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<a href="javascript:;" role="button" onclick="...">버튼명</a>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류6] -->
+					<tr>
+						<td><span>6</span></td>
+						<td>18 보조기술과의 호환성</td>
+						<td>홈 &gt; 전체 &gt; 자산 &gt; 자산현황 &gt; 자산 사용관리(+콘텐츠)</td>
+						<td><span>18</span></td>
+						<td>상태정보 미제공</td>
+						<td>{계좌명} 즐겨찾기 활성화 또는 {계좌명} 즐겨찾기 비활성화로 텍스트 변경</td>
+						<td><a href="./ps/MSST5100.html" target="_blank">MSST5100</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection01_6">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection01_6">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_01_6.png" alt=""/></span>
+								<ul>
+									<li>선택유무에 대한 상태정보가 제공되지 않았으며, 스크린리더로 기능이 실행이 되지 않습니다.</li>
+									<li>적절한 상태정보를 제공해야 하며, 스크린리더로 기능이 실행되도록 구현해야 합니다.</li>
+									<li>또한 어느 상품의 즐겨찾기인지를 알 수 있도록 상품명 정보를 추가로 제공하는 것을 권장합니다.</li>
+								</ul>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<button type="button" class="BookmarkBtn"><span class="listBookmark active"><span class="blind">즐겨찾기</span></button>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<!-- [CASE1] 활성화 -->
+													<button type="button" class="BookmarkBtn"><span class="listBookmark active"><span class="blind">{계좌명} 즐겨찾기 활성화</span></button>
+				
+													<!-- [CASE2] 비활성화 -->
+													<button type="button" class="BookmarkBtn"><span class="listBookmark"><span class="blind">{계좌명} 즐겨찾기 비활성화</span></button>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류7] -->
+					<tr>
+						<td><span>7</span></td>
+						<td>1 대체 텍스트</td>
+						<td>홈 &gt; 전체 &gt; 자산 &gt; 자산현황 &gt; 자산연결 &gt; 공동인증서 인증</td>
+						<td><span>22</span></td>
+						<td>부적절한 대체텍스트</td>
+						<td>보안키패드 영역</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td><span>확인필요</span></td>
+					</tr>
+
+					<!-- [오류8] -->
+					<tr>
+						<td><span>8</span></td>
+						<td>7 초점</td>
+						<td>홈 &gt; 전체 &gt; 자산 &gt; 자산현황 &gt; 자산연결</td>
+						<td><span>25</span></td>
+						<td>부적절한 초점적용</td>
+						<td>1번 내용과 동일</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td><span>동일화면</span></td>
+					</tr>
+
+					<!-- [오류9] -->
+					<tr>
+						<td><span>9</span></td>
+						<td>18 보조기술과의 호환성</td>
+						<td>홈 &gt; 전체 &gt; 플래너 &gt; 금융 플래너</td>
+						<td><span>33</span></td>
+						<td>상태정보 부적절</td>
+						<td>aria-expanded="false"로 변경 필요</td>
+						<td><a href="./fp/MSFP2000.html" target="_blank">MSFP2000</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection01_9">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection01_9">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_01_9.png" alt=""/></span>
+								<ul>
+									<li>초기에만 상태정보가 반대로 제공되어 있습니다.</li>
+									<li>적절하게 수정해야 합니다.</li>
+									<li>aria-expanded="false"로 변경</li>
+								</ul>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<div class="touch_area" role="button" title="탭 하시면 월, 주 단위로 볼 수 있습니다."
+													aria-expanded="true"><span>달력 열기</span></div>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<div class="touch_area" role="button" title="탭 하시면 월, 주 단위로 볼 수 있습니다."
+													aria-expanded="false"><span>달력 열기</span></div>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+						</td>
+					</tr>
+					<!-- // -->
+				</tbody>
+			</table>
+		</div>
+
+		<h3>보고서 : (MA심사)_농협 마이데이터 02_for_Android_PHONE_2nd.pdf</h3>
+		<div class="guide_table">
+			<table>
+				<caption>검사 항목별 평가</caption>
+				<colgroup>
+					<col style="width:50px;">
+					<col style="width:180px;">
+					<col style="width:360px;">
+					<col style="width:50px;">
+					<col style="width:360px;">
+					<col>
+					<col style="width:100px;">
+					<col style="width:100px;">
+					<col style="width:100px;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">번호</th>
+						<th scope="col">지침</th>
+						<th scope="col">화면경로</th>
+						<th scope="col">페이지</th>
+						<th scope="col">오류항목</th>
+						<th scope="col">해결방안</th>
+						<th scope="col">퍼블파일</th>
+						<th scope="col">개발파일</th>
+						<th scope="col">작업내용</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- [오류1] -->
+					<tr>
+						<td><span>1</span></td>
+						<td>7 초점</td>
+						<td>애플리케이션 공통 오류</td>
+						<td><span>9</span></td>
+						<td>부적절한 초점적용</td>
+						<td>CSS 변경 및 aria-label/aria-hidden 속성 추가</td>
+						<td><a href="./ae/MSAE1211P.html" target="_blank">MSAE1211P</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection02_1">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection02_1">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_1.png" alt=""/></span>
+								<ul>
+									<li>모바일 스크린리더 순차탐색시 서식과 &lt;label&gt;에 초점이 중복 접근하며, 모바일 스크린리더 임의탐색시 &lt;label&gt;텍스트에만 접근하고 서식에 접근 할 수 없습니다.</li>
+									<li>서식의 z-index 값을 수정해 &lt;label&gt;텍스트 위로 위치시켜 임의탐색시 서식을 탐색 할 수 있도록 하거나, 서식에 aria-hidden="true" 제공 후 &lt;label&gt;요소에 role="radio" aria-checked="true/false"를 제공해 스크린리더 순차, 임의 탐색시 서식에 접근 할 수 있도록 해야 합니다.</li>
+								</ul>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<div class="boxRadioInn">
+														<span>
+															<input name="rdo13" id="rdo30" type="radio" checked="checked">
+															<label for="rdo30">150만원 미만</label>
+														</span>
+													</div>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<div class="boxRadioInn">
+														<span>
+															<input name="rdo13" id="rdo30" type="radio" checked="checked" aria-label="월 소득(150만원 미만)">
+															<label for="rdo30" aria-hidden="true">150만원 미만</label>
+														</span>
+													</div>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<!-- 
+								<table>
+									<caption>동일 오류 페이지</caption>
+									<colgroup>
+										<col>
+										<col span="2" style="width:200px;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">화면명(경로)</th>
+											<th scope="col">퍼블파일</th>
+											<th scope="col">개발파일</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>금융자산분석 &gt; 자산진단  &gt; (팝업) 자산진단 맞춤정보</td>
+											<td><a target="_blank" href="./ae/MSAE1100P.html">MSAE1100P</a></td>
+											<td><strong>JSP</strong></td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; 조기은퇴진단  &gt; (팝업) 다른사람선택</td>
+											<td><a target="_blank" href="./ae/MSAEa660P.html">MSAEa660P</a></td>
+											<td><strong>JSP</strong></td>
+										</tr>
+									</tbody>
+								</table>
+								-->
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류2] -->
+					<tr>
+						<td><span>2</span></td>
+						<td>13 인터페이스의 일관성</td>
+						<td>애플리케이션 공통 오류</td>
+						<td><span>10</span></td>
+						<td>일관되지 않은 컨트롤</td>
+						<td>개발 공통 header파일 수정 필요</td>
+						<td><a href="./co/MSCO2110.html" target="_blank">MSCO2110</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection02_2">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection02_2">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_2.png" alt=""/></span>
+								<ul>
+									<li>동일한 기능의 컨트롤에 'Back' / '이전화면으로', 'Menu' / '전체메뉴' 로 일관되지 않은 대체 텍스트를 제공했습니다.</li>
+									<li>동일한 기능의 컨트롤에는 일관된 명칭으로 대체텍스트를 제공해야 합니다.<br>
+										'Back', 'Menu'로 제공된 메뉴)<br>
+										ㄴ 컨설팅>조기은퇴진단<br>
+										ㄴ 컨설팅>세금계산기<br>
+										ㄴ 헬스케어>주말약국찾기<br>
+										ㄴ 생활편의>맞춤정부혜택<br>
+										ㄴ 설정/관리>연결자산관리
+									</li>
+								</ul>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+				
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류3] -->
+					<tr>
+						<td><span>3</span></td>
+						<td>18 보조기술과의 호환성</td>
+						<td>애플리케이션 공통 오류</td>
+						<td><span>11</span></td>
+						<td>부적절하게 제공한 역할 정보</td>
+						<td>&lt;h1&gt;안에 &lt;a&gt;태그 삭제 필요(풀팝업도 동일함)</td>
+						<td><a href="./co/MSCO2110.html" target="_blank">MSCO2110</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection02_3">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection02_3">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_3.png" alt=""/></span>
+								<ul>
+									<li>기능이 없는 텍스트를 링크로 제공해 스크린리더 운용시 부적절한 역할 정보를 안내합니다.</li>
+									<li>기능이 없는 요소는 텍스트로 인식 되도록 &lt;a&gt;요소를 링크를 삭제해야 합니다.</li>
+								</ul>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<h1><a href="javascript:;" role="text">타이틀</a></h1>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<h1>타이틀</h1>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류4] -->
+					<tr>
+						<td><span>4</span></td>
+						<td>7 초점</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 자산진단 &gt; 자산진단 맞춤정보</td>
+						<td><span>14</span></td>
+						<td>모바일 스크린리더에 초점 접근 불가</td>
+						<td>1번 내용과 동일함</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td><span>동일화면</span></td>
+					</tr>
+
+					<!-- [오류5] -->
+					<tr>
+						<td><span>5</span></td>
+						<td>3 색에 무관한 인식</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 자산진단 &gt; 또래비교</td>
+						<td><span>16</span></td>
+						<td>색상만으로 구분된 콘텐츠</td>
+						<td>기획 및 디자인 확인 필요</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td><span>확인필요</span></td>
+					</tr>
+
+					<!-- [오류6] -->
+					<tr>
+						<td><span>6</span></td>
+						<td>7 초점</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 자산진단 &gt; 또래비교</td>
+						<td><span>17</span></td>
+						<td>모바일 스크린리더에 초점 접근 불가</td>
+						<td>1번 내용과 동일함</td>
+						<td><a href="./ae/MSAE1211P.html" target="_blank">MSAE1211P</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection02_6">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection02_6">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_1.png" alt=""/></span>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<div class="boxRadioInn">
+														<span>
+															<input name="rdo13" id="rdo30" type="radio" checked="checked">
+															<label for="rdo30">150만원 미만</label>
+														</span>
+													</div>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<div class="boxRadioInn">
+														<span>
+															<input name="rdo13" id="rdo30" type="radio" checked="checked" aria-label="월 소득(150만원 미만)">
+															<label for="rdo30" aria-hidden="true">150만원 미만</label>
+														</span>
+													</div>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류7] -->
+					<tr>
+						<td><span>7</span></td>
+						<td>7 초점</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 자산진단 &gt; 또래비교</td>
+						<td><span>18</span></td>
+						<td>부적절한 모바일 스크린리더 초점 이동</td>
+						<td>각 버튼의 클릭 이벤트 시 포커스 이동 추가</td>
+						<td><a target="_blank" href="./ae/MSAE1210P.html">MSAE1210P</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection02_7">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection02_7">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_7.png" alt=""/></span>
+								<ul>
+									<li>링크 실헹시 모바일 스크린리더 초점이 초기화됩니다.</li>
+									<li>스크린리더 초점이 초기화되지 않고 해당 컨트롤 영역에 머물러야 합니다.</li>
+								</ul>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-javascript">
+												<script type="prism-html-markup">
+													$('.bannerSwiperPrd').find('.stopBtn').on('click', function () {
+														...
+														$('.bannerSwiperPrd').find('.playBtn').focus();
+													})
+													$('.bannerSwiperPrd').find('.playBtn').on('click', function () {
+														...
+														$('.bannerSwiperPrd').find('.stopBtn').focus();
+													})
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류8] -->
+					<tr>
+						<td><span>8</span></td>
+						<td>18 보조기술과의 호환성</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 자산진단 &gt; 또래비교</td>
+						<td><span>19</span></td>
+						<td>스크린리더에서 인식 할 수 없는 콘텐츠</td>
+						<td>차트에 role="img" 추가 후 aria-label로 대체텍스트 적용</td>
+						<td><a target="_blank" href="./ae/MSAE1210P.html">MSAE1210P</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection02_8">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection02_8">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_8_1.png" alt=""/></span>
+								<ul>
+									<li>스크린리더 환경에서 그래프 영역에 초점이 접근되지 않아 그래프 콘텐츠 내용을 인지 할 수 없습니다.</li>
+									<li>그래프에 제공된 정보와 동등한 내용의 대체 텍스트 또는 표 등의 대체 수단을 제공해야 합니다.</li>
+								</ul>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-javascript">
+												<script type="prism-html-markup">
+													$(".graphWrap").each(function(){
+														var _graph_txt1 = $(this).find('.graphTipBox').text().replace(/(\s*)/g, "");
+														var _graph_txt2 = $(this).find('.graphLegend').text().replace(/(\s*)/g, "");
+													   $(this).attr('aria-label',_graph_txt1 + ' ' + _graph_txt2)
+													});
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_8_2.png" alt=""/></span>
+								<ul>
+									<li>스크린리더 환경에서 그래프 영역에 초점이 접근되지 않아 그래프 콘텐츠에 제공된 데이터를 인지 할 수 없습니다.</li>
+									<li>그래프에서 운용 가능한 기능과 동등한 기능을 운용 할 수 있는 컨트롤을 제공하거나, 대체 텍스트를 제공해야 합니다.</li>
+								</ul>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-javascript">
+												<script type="prism-html-markup">
+													$(".graphAreaWrap").each(function(){
+														var _graph_item = $(this).find('.graphitem');
+														for(var j=0; j < _graph_item.length; j++){
+															var _graph_txt0 = '나';
+															var _graph_txt1 = $(_graph_item[j]).find('.graphTip .value').text();
+															var _graph_txt2 = $(_graph_item[j]).find('.graphValueData').text();
+															if(j == 0) _graph_txt0 = '또래부자';
+															$(_graph_item[j]).attr({
+																'role' : 'img',
+																'aria-label' : _graph_txt0 + ':' + _graph_txt1 + '('+ _graph_txt2 +')'
+															})
+														}
+													});
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류9] -->
+					<tr>
+						<td><span>9</span></td>
+						<td>7 초점</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 연금진단</td>
+						<td><span>21</span></td>
+						<td>스크린리더 초점이 접근하지 않는 콘텐츠</td>
+						<td>중복된 div.swiper-slide 삭제 필요</td>
+						<td><a target="_blank" href="./ae/MSAE2300.html">MSAE2300</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection02_9">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection02_9">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_9.png" alt=""/></span>
+								<ul>
+									<li>계좌별 탭 변경시 콘텐츠 영역에 스크린리더 초점이 접근하지 않아 사용자는 콘텐츠를 인지 할 수 없습니다.</li>
+									<li>활성화된 콘텐츠에 aria-hidden 속성이 있는 경우 속성을 삭제하거나, "false"로 수정하는 등 스크린리더에서 탐색 할 수 있도록 해야 합니다.</li>
+								</ul>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<div class="swiper-slide">
+														<div class="swiper-slide">
+															내용
+														</div>
+													</div>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<div class="swiper-slide">
+														내용
+													</div>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류10] -->
+					<tr>
+						<td><span>10</span></td>
+						<td>16 예측가능성</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 연금진단</td>
+						<td><span>22</span></td>
+						<td>사용자가 의도하지 않은 기능 실행</td>
+						<td>라디오버튼의 부모(span)을 버튼 역할로 변경하여(role="button") input의 접근을 제어함</td>
+						<td><a target="_blank" href="./ae/MSAE2300.html">MSAE2300</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection02_10">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection02_10">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_10.png" alt=""/></span>
+								<ul>
+									<li>공적연금 선택 라디오 서식에서 '예' 선택시 사용자가 의도하지 않은 화면 전환이 발생합니다.</li>
+									<li>라디오 버튼은 기능을 실행하는 컨트롤이 아닙니다.<br>
+										별도의 기능을 실행하는 컨트롤을 제공하거나, 라디오 서식이 아닌 기본 버튼으로 제공하는 방법이 있습니다.<br>
+										기본 버튼으로 제공시 title 속성 등으로 선택 여부를 알 수 있는 부가정보를 제공해야 합니다.</li>
+								</ul>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<div class="boxRadioInn">
+														<span>
+															<input name="rdo80" id="rdo81" type="radio" title="선택시 공적연금 페이지로 이동">
+															<label for="rdo81">예</label>
+														</span>
+													</div>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<div class="boxRadioInn">
+														<span role="button" tabindex="0" title="선택시 공적연금 페이지로 이동">
+															<input name="rdo80" id="rdo81" type="radio">
+															<label for="rdo81">예</label>
+														</span>
+													</div>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류11] -->
+					<tr>
+						<td><span>11</span></td>
+						<td>18 보조기술과의 호환성</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 연금진단</td>
+						<td><span>23</span></td>
+						<td>스크린리더에서 인식 할 수 없는 콘텐츠</td>
+						<td>알메이트 차트 대체텍스트 적용 필요 (개발 페이지 : 조기은퇴진단결과 및 소비 메인 참고)</td>
+						<td><a target="_blank" href="./ae/MSAE2300.html">MSAE2300</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection02_11">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection02_11">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_11.png" alt=""/></span>
+								<ul>
+									<li>스크린리더 환경에서 그래프 영역에 초점이 접근되지 않아 그래프 콘텐츠 내용을 인지 할 수 없습니다.</li>
+									<li>그래프에 제공된 정보와 동등한 내용의 대체 텍스트 또는 표 등의 대체 수단을 제공해야 합니다.</li>
+								</ul>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-javascript">
+												<script type="prism-html-markup">
+				
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류12] -->
+					<tr>
+						<td><span>12</span></td>
+						<td>1 대체 텍스트</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 연금진단 &gt; 내 연금 진단</td>
+						<td><span>25</span></td>
+						<td>부적절하게 제공된 대체 텍스트</td>
+						<td>해당 내용과 관련된 스크립트 추가 필요</td>
+						<td><a target="_blank" href="./ae/MSAE2340P.html">MSAE2300</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection02_12">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection02_12">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_12.png" alt=""/></span>
+								<ul>
+									<li>모바일스크린리더 초점 접근시 Previous slide', 'Next slide' 버튼으로만 인식해 동등한 정보를 인지 할 수 없습니다.</li>
+									<li>화면에 표시된 텍스트 정보와 동등한 내용의 대체 텍스트를 제공해야 하며, 'next', 'previous' slide 등의 정보는 title로 제공해야 합니다.</li>
+								</ul>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-javascript">
+												<script type="prism-html-markup">
+													$(e.navigation.prevEl).attr('aria-label', '이전 슬라이드 : ' + $btnPrev.text());
+													$(e.navigation.nextEl).attr('aria-label', '다음 슬라이드 : ' + $btnNext.text());
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류13] -->
+					<tr>
+						<td><span>13</span></td>
+						<td>1 대체 텍스트</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 연금진단 &gt; 내 연금 진단</td>
+						<td><span>26</span></td>
+						<td>부적절하게 제공한 대체 텍스트</td>
+						<td>aria-label의 텍스트 변경 필요</td>
+						<td><a target="_blank" href="./ae/MSAE2351P.html">MSAE2300</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection02_13">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection02_13">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_13.png" alt=""/></span>
+								<ul>
+									<li>aria-label에 금액 정보를 제공하지 않아 스크린리더 운용시 동등한 정보를 인지 할 수 없습니다.</li>
+									<li>생활비 금액 정보도 함께 제공해야 합니다.<br>예) aria-label="절약하며(118만원)" 등</li>
+								</ul>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<li>	
+														<input type="radio" name="rdo01" id="rdo011" checked="checked" aria-label="절약하며">
+														<label for="rdo011" class="rdoCheck" aria-hidden="true"><span>절약하며 </span><span class="value">118만원</span></label>
+													</li>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<li>	
+														<input type="radio" name="rdo01" id="rdo011" checked="checked" aria-label="절약하며 118만원">
+														<label for="rdo011" class="rdoCheck" aria-hidden="true"><span>절약하며 </span><span class="value">118만원</span></label>
+													</li>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류14] -->
+					<tr>
+						<td><span>14</span></td>
+						<td>7 초점</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 연금진단 &gt; 내 연금 진단</td>
+						<td><span>27</span></td>
+						<td>숨겨진 콘텐츠에 스크린리더 초점 접근</td>
+						<td>해당 내용과 관련된 스크립트 추가 필요</td>
+						<td><a target="_blank" href="./ae/MSAE2340P.html">MSAE2300</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection02_14">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection02_14">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_14.png" alt=""/></span>
+								<ul>
+									<li>모바일 스크린리더 순차 탐색시 화면에 표시되지 않은 '내 연금 현황' 콘텐츠 및 '내 연금 진단' 콘텐츠 탐색 후 '진단 솔루션' 콘텐츠에 초점이 접근됩니다.</li>
+									<li>화면에 표시되지 않은 콘텐츠는 display:none, visibility:hidden, aria-hidden="true" 속성을 제공하는 등 스크린리더 초점이 접근하지 않아야 합니다.</li>
+								</ul>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-javascript">
+												<script type="prism-html-markup">
+													$(this.slides[this.activeIndex]).attr('aria-hidden','false').siblings().attr('aria-hidden','true');
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류15] -->
+					<tr>
+						<td><span>15</span></td>
+						<td>7 초점</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 연금진단 &gt; 내 연금 진단</td>
+						<td><span>28</span></td>
+						<td>부적절한 모바일 스크린리더 초점 이동</td>
+						<td>개발 파일 확인 필요) 변경된 데이터를 기반으로 페이지를 재 로딩이 된다면 오류 아님</td>
+						<td><a target="_blank" href="./ae/MSAE2351P.html">MSAE2351P</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection02_15">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection02_15">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_15.png" alt=""/></span>
+								<ul>
+									<li>레이어 팝업 내 '확인' 선택시 스크린리더 초점이 초기화 됩니다.</li>
+									<li>스크린리더 초점이 초기화되지 않고 해당 콘텐츠 영역으로 회귀 해야 합니다.</li>
+								</ul>
+								<!-- 
+								<dl>
+									<dt>스크립트 추가</dt>
+									<dd>
+										<pre>
+											<code class="language-javascript">
+												<script type="prism-html-markup">
+													
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								-->
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류16] -->
+					<tr>
+						<td><span>16</span></td>
+						<td>12 입력 도움</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 연금진단 &gt; 내 연금 진단</td>
+						<td><span>29</span></td>
+						<td>레이블을 제공하지 않은 서식</td>
+						<td>input에  title="희망생활비 직접입력"  추가</td>
+						<td><a target="_blank" href="./ae/MSAE2351P.html">MSAE2351P</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection02_16">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection02_16">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_16.png" alt=""/></span>
+								<ul>
+									<li>직접입력 서식에 레이블을 제공하지 않았습니다.</li>
+									<li>서식과 1:1 매치된 <label>요소 또는 서식에 title, aria-label 속성 등을 이용해 서식의 목적에 맞는 레이블을 제공해야 합니다.</li>
+								</ul>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<div class="inputList unitMan"> 
+														<input type="tel" placeholder="직접입력">
+														<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+													</div>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<div class="inputList unitMan"> 
+														<input type="tel" title="희망생활비 직접입력" placeholder="직접입력">
+														<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+													</div>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류17] -->
+					<tr>
+						<td><span>17</span></td>
+						<td>7 초점</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 조기은퇴진단</td>
+						<td><span>31</span></td>
+						<td>숨겨진 콘텐츠에 스크린리더 초점 접근</td>
+						<td>퍼블 스크립트로 변경예정</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td><span>퍼블작업</span></td>
+					</tr>
+
+					<!-- [오류18] -->
+					<tr>
+						<td><span>18</span></td>
+						<td>18 보조기술과의 호환성</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 조기은퇴진단</td>
+						<td><span>32</span></td>
+						<td>역할정보를 제공하지 않은 컨트롤</td>
+						<td>역할정보 제공해 주고 있음</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td><span>확인필요</span></td>
+					</tr>
+
+					<!-- [오류19] -->
+					<tr>
+						<td><span>19</span></td>
+						<td>1 대체 텍스트</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 조기은퇴진단 &gt; 조기은퇴 맞춤정보</td>
+						<td><span>34</span></td>
+						<td>대체텍스트가 부적절하게 제공된 이미지</td>
+						<td>퍼블 스크립트로 변경함</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td><span>퍼블작업</span></td>
+					</tr>
+
+					<!-- [오류20] -->
+					<tr>
+						<td><span>20</span></td>
+						<td>1 대체 텍스트</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 세금계산기 &gt; 종합소득세</td>
+						<td><span>36</span></td>
+						<td>대체텍스트가 부적절하게 제공된 이미지</td>
+						<td>alt="{기관명}" 으로 해당 기관명으로 적용 필요</td>
+						<td><a target="_blank" href="./ae/MSAE8150p.html">MSAE8150p</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection02_20">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection02_20">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_20.png" alt=""/></span>
+								<ul>
+									<li>모든 로고 이미지에 대체 텍스트를 '미래에셋증권 로고'로 부적절하게 제공했습니다.</li>
+									<li>각 로고 정보에 맞는 대체 텍스트를 제공해야 합니다.</li>
+								</ul>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<!-- 오류 사례1) 기관명이 잘못 기재된 경우 -->
+													<img src="..." class="imgLogo" alt="미래에셋증권 로고">
+				
+													<!-- 오류 사례2) 계좌명 또는 상품명으로 기재된 경우 -->
+													<img src="..." class="imgLogo" alt="KB내맘대로적금(자유)">
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<img src="..." class="imgLogo" alt="{기관명}">
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<!-- 
+								<table>
+									<caption>동일 오류 페이지</caption>
+									<colgroup>
+										<col>
+										<col span="2" style="width:100px;">
+										<col style="width:100px;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">화면명(경로)</th>
+											<th scope="col">퍼블파일</th>
+											<th scope="col">개발파일</th>
+											<th scope="col">비고</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>자산 &gt; 자산현황 &gt; 배당내역</td>
+											<td><a target="_blank" href="./as/MSAS2300.html">MSAS2300</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [확인필요]</td>
+										</tr>
+										<tr>
+											<td>자산 &gt; 그때 그랬다면 &gt; 내 금융상품 선택</td>
+											<td><a target="_blank" href="./as/MSARb100.html">MSARb100</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>소비 &gt; 소비현황</td>
+											<td><a target="_blank" href="./cs/MSCSM100.html">MSCSM100</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>소비 &gt; 카드이용내역 &gt; 카드혜택비교 &gt; (팝업)내카드선택</td>
+											<td><a target="_blank" href="./cs/MSCS4590p.html">MSCS4590p</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>소비 &gt; 카드이용내역 &gt; 카드 리포트</td>
+											<td><a target="_blank" href="./cs/MSCS4800.html">MSCS4800</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>소비 &gt; 카드이용내역</td>
+											<td><a target="_blank" href="./cs/MSCS4000.html">MSCS4000</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>소비 &gt; 카드혜택비교 </td>
+											<td><a target="_blank" href="./cs/MSCS4500.html">MSCS4500</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>금융플래너 &gt; 출금예정관리</td>
+											<td><a target="_blank" href="./fp/MSFP4000.html">MSFP4000</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; DSR계산기 &gt; DSR 계산정보 입력</td>
+											<td><a target="_blank" href="./ae/MSAE5320.html">MSAE5320</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+									</tbody>
+								</table>
+								-->
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류21] -->
+					<tr>
+						<td><span>21</span></td>
+						<td>1 대체 텍스트</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 세금계산기 &gt; 종합소득세</td>
+						<td><span>36</span></td>
+						<td>대체텍스트가 부적절하게 제공된 컨트롤</td>
+						<td>&lt;span class="blind"&gt;원천징수 툴팁 열기&lt;/span&gt; 변경</td>
+						<td><a target="_blank" href="./ae/MSAE8100.html">MSAE8100</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection02_21">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection02_21">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_21.png" alt=""/></span>
+								<ul>
+									<li>컨트롤의 대체 텍스트를 '필요경비 툴팁 열기'로 부적절하게 제공했습니다.</li>
+									<li>원천징수 툴팁 콘텐츠에 맞는 대체 텍스트를 제공해야 합니다.</li>
+								</ul>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">필요경비 툴팁 열기</span></button>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">원천징수 툴팁 열기</span></button>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<!-- 
+								<table>
+									<caption>동일 오류 페이지</caption>
+									<colgroup>
+										<col>
+										<col span="2" style="width:100px;">
+										<col style="width:100px;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">화면명(경로)</th>
+											<th scope="col">퍼블파일</th>
+											<th scope="col">개발파일</th>
+											<th scope="col">비고</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>자산 &gt; 자산현황</td>
+											<td><a target="_blank" href="./as/MSASM000.html">MSASM000</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>자산 &gt; 자산현황 &gt; 계좌상세(예수금)</td>
+											<td><a target="_blank" href="./as/MSAS2250.html">MSAS2250</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>자산 &gt; 자산현황 &gt; 계좌상세(신용융자)</td>
+											<td><a target="_blank" href="./as/MSAS2260.html">MSAS2260</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>자산 &gt; 자산현황 &gt; 계좌상세(담보대출)</td>
+											<td><a target="_blank" href="./as/MSAS2270.html">MSAS2270</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>자산 &gt; 자산현황 &gt; 보험 상세 &gt; (팝업)나의 보장내역</td>
+											<td><a target="_blank" href="./as/MSAS7130P.html">MSAS7130P</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>소비 &gt; 머니 캘린더 &gt; (팝업)거래내역 저장</td>
+											<td><a target="_blank" href="./cs/MSCS2700P.html">MSCS2700P</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; 연말정산 &gt; 기본정보</td>
+											<td><a target="_blank" href="./ae/MSAE6C11.html">MSAE6C11</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; 자산진단 &gt; (팝업)또래비교</td>
+											<td><a target="_blank" href="./ae/MSAE1210P.html">MSAE1210P</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; 자산진단 &gt; (팝업)자산 편중 상태</td>
+											<td><a target="_blank" href="./ae/MSAE1220P.html">MSAE1210P</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; 자산진단 &gt; (팝업)투자수익률</td>
+											<td><a target="_blank" href="./ae/MSAE1230P.html">MSAE1230P</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; 자산진단 &gt; (팝업)여유자금</td>
+											<td><a target="_blank" href="./ae/MSAE1240P.html">MSAE1240P</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; 자산진단 &gt; (팝업)금융부채비율</td>
+											<td><a target="_blank" href="./ae/MSAE1250P.html">MSAE1250P</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; 자산진단 &gt; (팝업)투자스타일분석</td>
+											<td><a target="_blank" href="./ae/MSAE1260P.html">MSAE1260P</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; 연금진단 &gt; (팝업)연금진단 맞춤정보</td>
+											<td><a target="_blank" href="./ae/MSAE2200P.html">MSAE2200P</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; 연금진단 &gt; (팝업)내 연금 현황</td>
+											<td><a target="_blank" href="./ae/MSAE2340P.html">MSAE2340P</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; 연말정산</td>
+											<td><a target="_blank" href="./ae/MSAE6110.html">MSAE6110</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; 연말정산 &gt; 입력항목보기</td>
+											<td><a target="_blank" href="./ae/MSAE6120.html">MSAE6120</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; 연말정산 &gt; (팝업)계산결과 자세히보기</td>
+											<td><a target="_blank" href="./ae/MSAE6130P.html">MSAE6130P</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; 연말정산 &gt; 다시 계산하기</td>
+											<td><a target="_blank" href="./ae/MSAE6131.html">MSAE6131</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; 연말정산 &gt; 모의계산</td>
+											<td><a target="_blank" href="./ae/MSAE6300.html">MSAE6300</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; 연말정산 &gt; 모의계산 &gt; 상세보기</td>
+											<td><a target="_blank" href="./ae/MSAE6311p.html">MSAE6311p</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; NH주택청약플래너</td>
+											<td><a target="_blank" href="./ae/MSAE7200.html">MSAE7200</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; NH주택청약플래너 &gt; (팝업)청약가점 계산기</td>
+											<td><a target="_blank" href="./ae/MSAE7170P.html">MSAE7170P</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; NH주택청약플래너 &gt; (팝업)관심지역 선택</td>
+											<td><a target="_blank" href="./ae/MSAE7440P.html">MSAE7440P</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; NH주택청약플래너 &gt; (팝업)관심지역 선택</td>
+											<td><a target="_blank" href="./ae/MSAE7440P.html">MSAE7440P</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; 세금계산기 &gt; 상속세</td>
+											<td><a target="_blank" href="./ae/MSAE8600.html">MSAE8600</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; 세금계산기 &gt; 양도소득세</td>
+											<td><a target="_blank" href="./ae/MSAE8700.html">MSAE8700</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; 세금계산기 &gt; 건강보험료 &gt; 직장건강보험계산</td>
+											<td><a target="_blank" href="./ae/MSAE8810.html">MSAE8810</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>금융자산분석 &gt; 세금계산기 &gt; 건강보험료 &gt; 지역건강보험계산</td>
+											<td><a target="_blank" href="./ae/MSAE8830.html">MSAE8830</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+									</tbody>
+								</table>
+								-->
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류22] -->
+					<tr>
+						<td><span>22</span></td>
+						<td>7 초점</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 세금계산기 &gt; 종합소득세</td>
+						<td><span>37</span></td>
+						<td>모바일 스크린리더에 초점 접근 불가</td>
+						<td>1번 내용과 동일함</td>
+						<td><a target="_blank" href="./ae/MSAE8100.html">MSAE8100</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection02_22">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection02_22">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_22.png" alt=""/></span>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<div class="boxRadioInn">
+														<span>
+															<input name="rdo01" id="rdo001" type="radio">
+															<label for="rdo001">네</label>
+														</span>
+													</div>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<div class="boxRadioInn">
+														<span>
+															<input name="rdo01" id="rdo001" type="radio" aria-label="종합과세여부(네)">
+															<label for="rdo001" aria-hidden="true">네</label>
+														</span>
+													</div>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류23] -->
+					<tr>
+						<td><span>23</span></td>
+						<td>18 보조기술과의 호환성</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 세금계산기 &gt; 종합소득세</td>
+						<td><span>38</span></td>
+						<td>부적절하게 제공된 역할 정보</td>
+						<td>&lt;a&gt;태그를 div로 변경</td>
+						<td><a target="_blank" href="./ae/MSAE8150p.html">MSAE8150p</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection02_23">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection02_23">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_23.png" alt=""/></span>
+								<ul>
+									<li>기능이 없는 컨트롤을 링크로 제공했습니다.</li>
+									<li>컨트롤의 목적에 맞는 기능을 제공하거나, 기능이 없는 경우 &lt;a&gt;를 삭제해 스크린리더에서 단순 이미지 및 텍스트로 인식해야 합니다.</li>
+								</ul>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<a href="javascript:;" class="inbox">
+														<div class="totalAcc">...</div>
+														<div class="beadangItem">...</div>
+													</a>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<div class="inbox">
+														<div class="totalAcc">...</div>
+														<div class="beadangItem">...</div>
+													</div>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류24] -->
+					<tr>
+						<td><span>24</span></td>
+						<td>18 보조기술과의 호환성</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 세금계산기 &gt; 종합소득세</td>
+						<td><span>39</span></td>
+						<td>역할 정보 미제공</td>
+						<td>role="button" tabindex="0" title="종합소득세 절세팁 페이지 이동" 추가</td>
+						<td><a target="_blank" href="./ae/MSAE81e0.html">MSAE81e0</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection02_24">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection02_24">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_24.png" alt=""/></span>
+								<ul>
+									<li>기능이 있는 컨트롤을 단순 텍스트로 제공해 스크린리더 운용시 기능이 있음을 알기 어렵습니다.</li>
+									<li>링크 또는 버튼으로 제공해 기능이 있는 컨트롤임을 안내해야 합니다.</li>
+								</ul>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<div class="bannerBlue tip">
+														<strong class="pointColor">종합소득세 절세팁</strong><br><strong>지금 확인해보세요.</strong>
+													</div>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<div class="bannerBlue tip" role="button" tabindex="0" title="종합소득세 절세팁 페이지 이동">
+														<strong class="pointColor">종합소득세 절세팁</strong><br><strong>지금 확인해보세요.</strong>
+													</div>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+						</td>
+					</tr>
+					
+					<!-- [오류25] -->
+					<tr>
+						<td><span>25</span></td>
+						<td>1 대체 텍스트</td>
+						<td>홈 &gt; 전체 &gt; 생활편의 &gt; 맞춤정부혜택</td>
+						<td><span>43</span></td>
+						<td>대체텍스트를 부적절하게 제공한 이미지</td>
+						<td>관리자 등록 이미지 (이미지에 있는 모든 텍스트 적용 필요)</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td><span>확인필요</span></td>
+					</tr>
+
+					<!-- [오류26] -->
+					<tr>
+						<td><span>26</span></td>
+						<td>4 명도 대비</td>
+						<td>홈 &gt; 전체 &gt; 생활편의 &gt; 맞춤정부혜택</td>
+						<td><span>44</span></td>
+						<td>명도대비 기준 이하 콘텐츠</td>
+						<td>CSS 변경 필요</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td><span>퍼블작업</span></td>
+					</tr>
+
+					<!-- [오류27] -->
+					<tr>
+						<td><span>27</span></td>
+						<td>7 초점</td>
+						<td>홈 &gt; 전체 &gt; 생활편의 &gt; 맞춤정부혜택</td>
+						<td><span>45</span></td>
+						<td>숨겨진 콘텐츠에 모바일 스크린리더 초점 접근</td>
+						<td>개별 header 영역 삭제 후 공통 header 적용 필요 (부동산 등록 페이지 참고)</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td><span>개발확인</span></td>
+					</tr>
+
+					<!-- [오류28] -->
+					<tr>
+						<td><span>28</span></td>
+						<td>7 초점</td>
+						<td>홈 &gt; 전체 &gt; 생활편의 &gt; 맞춤정부혜택</td>
+						<td><span>46</span></td>
+						<td>모바일 스크린리더에 초점 접근 불가</td>
+						<td>1번 내용과 동일함</td>
+						<td><a target="_blank" href="./lf/MSLF2100.html">MSLF2100</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection02_28">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection02_28">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_28.png" alt=""/></span>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<div class="item">
+														<input type="radio" name="catetory" id="cate063" checked>
+														<label for="cate063">
+															<img src="../../images/category/icoCate63.png" alt="">
+															코로나
+														</label>
+													</div>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<div class="item">
+														<input type="radio" name="catetory" id="cate063" checked aria-label="정부24 맞춤혜택(코로나)">
+														<label for="cate063" aria-hidden="true">
+															<img src="../../images/category/icoCate63.png" alt="">
+															코로나
+														</label>
+													</div>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+
+							<table>
+								<caption>동일 오류 페이지</caption>
+								<colgroup>
+									<col>
+									<col span="2" style="width:200px;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">화면명(경로)</th>
+										<th scope="col">퍼블파일</th>
+										<th scope="col">개발파일</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>홈 &gt; 전체 &gt; 생활편의 &gt; 맞춤정부혜택 &gt; 맞춤정보 등록</td>
+										<td><a target="_blank" href="./lf/MSLF2151.html">MSLF2151</a></td>
+										<td><strong>JSP</strong></td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_28_2.png" alt=""/></span>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<div class="boxRadioInn">
+														<span>
+															<input name="rdo13" id="rdo16" type="radio" checked="checked">
+															<label for="rdo16">가족등록</label>
+														</span>
+													</div>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<div class="boxRadioInn">
+														<span>
+															<input name="rdo13" id="rdo16" type="radio" checked="checked" aria-label="가족등록">
+															<label for="rdo16" aria-hidden="true">가족등록</label>
+														</span>
+													</div>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+
+						</td>
+					</tr>
+
+					<!-- [오류29] -->
+					<tr>
+						<td><span>29</span></td>
+						<td>7 초점</td>
+						<td>홈 &gt; 전체 &gt; 생활편의 &gt; 맞춤정부혜택</td>
+						<td><span>46</span></td>
+						<td>부적절한 모바일 스크린리더 초점 이동</td>
+						<td>7번 내용과 동일함</td>
+						<td><a target="_blank" href="./lf/MSLF2100.html">MSLF2100</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection02_29">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection02_29">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_29.png" alt=""/></span>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-javascript">
+												<script type="prism-html-markup">
+													$('.bannerSwiperPrd').find('.stopBtn').on('click', function () {
+														...
+														$('.bannerSwiperPrd').find('.playBtn').focus();
+													})
+													$('.bannerSwiperPrd').find('.playBtn').on('click', function () {
+														...
+														$('.bannerSwiperPrd').find('.stopBtn').focus();
+													})
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류30] -->
+					<tr>
+						<td><span>30</span></td>
+						<td>16 예측가능성</td>
+						<td>홈 &gt; 전체 &gt; 생활편의 &gt; 맞춤정부혜택</td>
+						<td><span>47</span></td>
+						<td>사용자가 의도하지 않은 기능 실행</td>
+						<td>li애 role="button" tabindex="0" title="{이동 페이지명}으로 이동" 추가</td>
+						<td><a target="_blank" href="./lf/MSLF2130.html">MSLF2130</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection02_30">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection02_30">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_30.png" alt=""/></span>
+								<ul>
+									<li>라디오버튼 선택만으로 페이지 전환이 발생합니다.</li>
+									<li>라디오 버튼은 기능을 실행하는 컨트롤이 아닙니다.<br>
+										기능을 실행하는 별도의 컨트롤을 제공해 컨트롤을 통해 기능이 동작되도록 하거나, 라디오 버튼이 아닌 기본 버튼으로 제공하는 방법이 있습니다.
+									</li>
+								</ul>
+								<p>라디오 버튼의 기능을 해제하고 li에 role="button"을 추가함으로써 버튼 기능을 적용함.</p>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<ul class="lf pickList">
+														<li>
+															<input type="radio" name="pick001" id="rdo01" checked="checked">	
+															<label for="rdo01" class="rdoCheck">
+																<span class="txt">
+																	<em class="tit">직장인/사업자</em>
+																</span>
+															</label>
+														</li>
+														...
+													</ul>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<ul class="lf pickList">
+														<li role="button" tabindex="0" title="{이동 페이지명}으로 이동">
+															<input type="radio" name="pick001" id="rdo01" checked="checked">	
+															<label for="rdo01" class="rdoCheck">
+																<span class="txt">
+																	<em class="tit">직장인/사업자</em>
+																</span>
+															</label>
+														</li>
+														...
+													</ul>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+							<table>
+								<caption>동일 오류 페이지</caption>
+								<colgroup>
+									<col>
+									<col span="2" style="width:200px;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">화면명(경로)</th>
+										<th scope="col">퍼블파일</th>
+										<th scope="col">개발파일</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>홈 &gt; 전체 &gt; 생활편의 &gt; 맞춤정부혜택 &gt; 맞춤정보 등록</td>
+										<td><a target="_blank" href="./lf/MSLF2150.html">MSLF2151</a></td>
+										<td><strong>JSP</strong></td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_30_2.png" alt=""/></span>
+								<p>라디오 버튼의 기능을 해제하고 li에 role="button"을 추가함으로써 버튼 기능을 적용함.</p>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<ul class="pickList">
+														<li>	
+															<input type="radio" name="pick001" id="rdo01">	
+															<label for="rdo01" class="rdoCheck">
+																<span class="lf_bg pickCate"><img src="../../images/ico_lf01.gif" alt=""></span>
+																<span class="txt">
+																	<em class="tit">자동 등록</em>
+																	<em class="sub">주민등록등본 정보를 통해<br />자동으로 입력합니다.</em>
+																</span>
+															</label>
+														</li>
+														...
+													</ul>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<ul class="pickList">
+														<li role="button" tabindex="0" title="{이동 페이지명}으로 이동">	
+															<input type="radio" name="pick001" id="rdo01">	
+															<label for="rdo01" class="rdoCheck">
+																<span class="lf_bg pickCate"><img src="../../images/ico_lf01.gif" alt=""></span>
+																<span class="txt">
+																	<em class="tit">자동 등록</em>
+																	<em class="sub">주민등록등본 정보를 통해<br />자동으로 입력합니다.</em>
+																</span>
+															</label>
+														</li>
+														...
+													</ul>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류31] -->
+					<tr>
+						<td><span>31</span></td>
+						<td>18 보조기술과의 호환성</td>
+						<td>홈 &gt; 전체 &gt; 생활편의 &gt; 맞춤정부혜택</td>
+						<td><span>48</span></td>
+						<td>부적절하게 제공된 기능 정보</td>
+						<td>개발 페이지 확인 필요</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td><span>개발확인</span></td>
+					</tr>
+
+					<!-- [오류32] -->
+					<tr>
+						<td><span>32</span></td>
+						<td>18 보조기술과의 호환성</td>
+						<td>홈 &gt; 전체 &gt; 생활편의 &gt; 맞춤정부혜택</td>
+						<td><span>49</span></td>
+						<td>상태 정보 미제공</td>
+						<td>활성화된 버튼에 title="선택됨" 추가 필요</td>
+						<td><a target="_blank" href="./lf/MSLF2100.html">MSLF2100</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection02_32">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection02_32">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_32.png" alt=""/></span>
+								<ul>
+									<li>선택된 컨트롤에 대한 정보를 시각적인 요소로만 제공했습니다.</li>
+									<li>선택된 버튼에 title 속성 등으로 선택됐음을 알 수 있도록 부가정보를 제공해야 합니다.</li>
+								</ul>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<ul class="selectList">
+														<li class="active"><a href="javascript:;">서울특별시</a></li>
+														...
+													</ul>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<ul class="selectList">
+														<li class="active"><a href="javascript:;" title="선택됨">서울특별시</a></li>
+														...
+													</ul>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_32_2.png" alt=""/></span>
+								<ul>
+									<li>선택된 탭에 대한 정보를 시각적인 요소로만 제공했습니다.</li>
+									<li>활성화된 탭에 title 속성 등을 이용해 선택됐음을 알 수 있는 내용의 부가정보를 제공해야 합니다.</li>
+								</ul>
+								<p>aria-selected="true" 대신 title="선택됨"으로 변경함 (role="tab"이 아니면 해당 aria속성은 읽어주지 않음)</p>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<div class="scrollBtnArea">
+														<ul>
+															<li class="selected"><a href="javascript:;" aria-selected="true">전체</a></li>
+															...
+														</ul>
+													</div>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<div class="scrollBtnArea">
+														<ul>
+															<li class="selected"><a href="javascript:;" title="선택됨">전체</a></li>
+															...
+														</ul>
+													</div>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류33] -->
+					<tr>
+						<td><span>33</span></td>
+						<td>7 초점</td>
+						<td>홈 &gt; 전체 &gt; 생활편의 &gt; 맞춤정부혜택 &gt; 정보 설정</td>
+						<td><span>51</span></td>
+						<td>모바일 스크린리더에 초점 접근 불가</td>
+						<td>1번 내용과 동일함</td>
+						<td><a target="_blank" href="./lf/MSLF2190.html">MSLF2190</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection02_33">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection02_33">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_33.png" alt=""/></span>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<div class="chkBox">
+														<input type="checkbox" id="sample22" name="sample02" class="desgChk">
+														<label for="sample22">장애인</label>
+													</div>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<div class="chkBox">
+														<input type="checkbox" id="sample22" name="sample02" class="desgChk" aria-label="선택정보(장애인)">
+														<label for="sample22" aria-hidden="true">장애인</label>
+													</div>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류34] -->
+					<tr>
+						<td><span>34</span></td>
+						<td>18 보조기술과의 호환성</td>
+						<td>홈 &gt; 전체 &gt; 생활편의 &gt; 맞춤정부혜택 &gt; 정보 설정</td>
+						<td><span>52</span></td>
+						<td>상태 정보 미제공</td>
+						<td>31번 내용과 동일함</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td><span>동일화면</span></td>
+					</tr>
+
+					<!-- [오류35] -->
+					<tr>
+						<td><span>35</span></td>
+						<td>7 초점</td>
+						<td>홈 &gt; 전체 &gt; 설정/관리 &gt; 연결자산 관리</td>
+						<td><span>54</span></td>
+						<td>모바일 스크린리더에 초점 접근 불가</td>
+						<td>1번 내용과 동일함</td>
+						<td><a target="_blank" href="./ps/MSPS4000.html">MSPS4000</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection02_35">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection02_35">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_35.png" alt=""/></span>
+								<ul>
+									<li>모바일 스크린리더 임의탐색시 전체선택 서식에 접근 할 수 없습니다.</li>
+									<li>모바일 스크린리더 환경에서 서식에 임의탐색으로 접근 할 수 있어야 합니다.</li>
+								</ul>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<span class="checkBtnType"><input type="checkbox" id="listAll" ><label for="listAll">전체선택</label></span>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<span class="checkBtnType"><input type="checkbox" id="listAll" aria-label="전체선택"><label for="listAll" aria-hidden="true">전체선택</label></span>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류36] -->
+					<tr>
+						<td><span>36</span></td>
+						<td>7 초점</td>
+						<td>홈 &gt; 전체 &gt; 설정/관리 &gt; PUSH 관리</td>
+						<td><span>56</span></td>
+						<td>스크린리더 탐색 불가</td>
+						<td>스크롤 이동 제스처는 정상/하단 고정 버튼으로 인한 오류로 공통 UI 영역임 (IOS는 확인 필요)</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td><span>확인필요</span></td>
+					</tr>
+
+					<!-- [오류37] -->
+					<tr>
+						<td><span>37</span></td>
+						<td>7 초점</td>
+						<td>홈 &gt; 전체 &gt; MY &gt; MY정보</td>
+						<td><span>59</span></td>
+						<td>숨겨진 콘텐츠에 스크린리더 초점 접근</td>
+						<td>내용에 맞는 텍스트 제공 : &lt;caption&gt;가족정보 (구분, 출생년도)&lt;/caption&gt; 변경 필요</td>
+						<td><a target="_blank" href="./st/MSST3100.html">MSPS4000</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection02_37">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection02_37">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_02_37.png" alt=""/></span>
+								<ul>
+									<li>모바일 스크린리더 순차 탐색시 콘텐츠 내용에 맞지 않는 부적절한 &lt;caption&gt;에 초점이 접근합니다. ('고객구분 별 기준점수 등급표')</li>
+									<li>콘텐츠 내용에 맞지 않고 화면에 표시되지 않은 숨겨진 콘텐츠에 초점이 접근하지 않아야 합니다.</li>
+								</ul>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<caption>고객구분 별 기준점수등급표</caption>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													<caption>가족정보 (구분, 출생년도)</caption>
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류38] -->
+					<tr>
+						<td><span>38</span></td>
+						<td>18 보조기술과의 호환성</td>
+						<td>홈 &gt; 전체 &gt; MY &gt; MY정보</td>
+						<td><span>60</span></td>
+						<td>부적절하게 제공한 역할 정보</td>
+						<td>&lt;a&gt;태그 삭제 (개발페이지 확인필요)</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td><span>개발확인</span></td>
+					</tr>
+					<!-- // -->
+				</tbody>
+			</table>
+		</div>
+
+		<h3>보고서 : (MA심사)_농협 마이데이터 01_for_iOS_PHONE_2nd.pdf</h3>
+		<div class="guide_table">
+			<table>
+				<caption>검사 항목별 평가</caption>
+				<colgroup>
+					<col style="width:50px;">
+					<col style="width:180px;">
+					<col style="width:360px;">
+					<col style="width:50px;">
+					<col style="width:360px;">
+					<col>
+					<col style="width:100px;">
+					<col style="width:100px;">
+					<col style="width:100px;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">번호</th>
+						<th scope="col">지침</th>
+						<th scope="col">화면경로</th>
+						<th scope="col">페이지</th>
+						<th scope="col">오류항목</th>
+						<th scope="col">해결방안</th>
+						<th scope="col">퍼블파일</th>
+						<th scope="col">개발파일</th>
+						<th scope="col">작업내용</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><span>1</span></td>
+						<td>18 보조기술과의 호환성</td>
+						<td>애플리케이션 공통 오류</td>
+						<td><span>9</span></td>
+						<td>스크린리더로 이용이 어려운 콘텐츠</td>
+						<td>전체 UI 변경 이슈로 인한 작업 유무 확인 필요</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>2</span></td>
+						<td>7 초점</td>
+						<td>마이데이터홈</td>
+						<td><span>11</span></td>
+						<td>초점이 접근되지 않는 콘텐츠</td>
+						<td>role="button" 추가 필요</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>3</span></td>
+						<td>1 대체 텍스트</td>
+						<td>홈 &gt; 전체 &gt; 자산 &gt; 자산현황</td>
+						<td><span>13</span></td>
+						<td>대체텍스트 미제공</td>
+						<td>alt="{해당기관명}" 추가 필요 : 예) alt="카카오뱅크"</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>4</span></td>
+						<td>7 초점</td>
+						<td>홈 &gt; 전체 &gt; 자산 &gt; 자산현황</td>
+						<td><span>14</span></td>
+						<td>초점이 접근되지 않는 콘텐츠</td>
+						<td>role="button" 추가 필요</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>5</span></td>
+						<td>18 보조기술과의 호환성</td>
+						<td>홈 &gt; 전체 &gt; 자산 &gt; 자산현황 &gt; 자산 사용관리(+콘텐츠)</td>
+						<td><span>17</span></td>
+						<td>상태정보 미제공</td>
+						<td>{계좌명} 즐겨찾기 활성화 또는 {계좌명} 즐겨찾기 비활성화로 텍스트 변경</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>6</span></td>
+						<td>7 초점</td>
+						<td>홈 &gt; 전체 &gt; 자산 &gt; 자산현황 &gt; 자산연결</td>
+						<td><span>19</span></td>
+						<td>부적절한 초점이동</td>
+						<td>개발페이지 확인 필요</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>7</span></td>
+						<td>1 대체 텍스트</td>
+						<td>홈 &gt; 전체 &gt; 자산 &gt; 자산현황 &gt; 자산연결 &gt; 공동인증서 인증</td>
+						<td><span>22</span></td>
+						<td>부적절한 대체텍스트</td>
+						<td>보안키패드 영역</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>8</span></td>
+						<td>18 보조기술과의 호환성</td>
+						<td>홈 &gt; 전체 &gt; 플래너 &gt; 금융 플래너</td>
+						<td><span>33</span></td>
+						<td>상태정보 부적절</td>
+						<td>aria-expanded="false"로 변경 필요</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<h3>보고서 : (MA심사)_농협 마이데이터 02_for_iOS_PHONE_2nd.pdf</h3>
+		<div class="guide_table">
+			<table>
+				<caption>검사 항목별 평가</caption>
+				<colgroup>
+					<col style="width:50px;">
+					<col style="width:180px;">
+					<col style="width:360px;">
+					<col style="width:50px;">
+					<col style="width:360px;">
+					<col>
+					<col style="width:100px;">
+					<col style="width:100px;">
+					<col style="width:100px;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">번호</th>
+						<th scope="col">지침</th>
+						<th scope="col">화면경로</th>
+						<th scope="col">페이지</th>
+						<th scope="col">오류항목</th>
+						<th scope="col">해결방안</th>
+						<th scope="col">퍼블파일</th>
+						<th scope="col">개발파일</th>
+						<th scope="col">작업내용</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><span>1</span></td>
+						<td>13 인터페이스의 일관성</td>
+						<td>애플리케이션 공통 오류</td>
+						<td><span>9</span></td>
+						<td>일관되지 않은 컨트롤</td>
+						<td>개발 공통 header파일 수정 필요</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>2</span></td>
+						<td>18 보조기술과의 호환성</td>
+						<td>애플리케이션 공통 오류</td>
+						<td><span>10</span></td>
+						<td>부적절하게 제공한 역할 정보</td>
+						<td>&lt;h1&gt;안에 &lt;a&gt;태그 삭제 필요(풀팝업도 동일함)</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>3</span></td>
+						<td>3 색에 무관한 인식</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 자산진단 &gt; 또래비교</td>
+						<td><span>14</span></td>
+						<td>색상만으로 구분된 콘텐츠</td>
+						<td>기획 및 디자인 확인 필요</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>4</span></td>
+						<td>18 보조기술과의 호환성</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 자산진단 &gt; 또래비교</td>
+						<td><span>15</span></td>
+						<td>스크린리더에서 인식 할 수 없는 콘텐츠</td>
+						<td>해당 내용과 관련된 스크립트 추가 필요</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>5</span></td>
+						<td>7 초점</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 연금진단</td>
+						<td><span>17</span></td>
+						<td>스크린리더 초점이 접근하지 않는 콘텐츠</td>
+						<td>중복된 div.swiper-slide 삭제 필요</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>6</span></td>
+						<td>16 예측가능성</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 연금진단</td>
+						<td><span>18</span></td>
+						<td>사용자가 의도하지 않은 기능 실행</td>
+						<td>라디오버튼의 부모(span)을 버튼 역할로 변경하여(role="button") input의 접근을 제어함</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>7</span></td>
+						<td>1 대체 텍스트</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 연금진단 &gt; 내 연금 진단</td>
+						<td><span>20</span></td>
+						<td>부적절하게 제공된 대체 텍스트</td>
+						<td>해당 내용과 관련된 스크립트 추가 필요</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>8</span></td>
+						<td>1 대체 텍스트</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 연금진단 &gt; 내 연금 진단</td>
+						<td><span>21</span></td>
+						<td>부적절하게 제공한 대체 텍스트</td>
+						<td>aria-label의 텍스트 변경 필요</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>9</span></td>
+						<td>7 초점</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 연금진단 &gt; 내 연금 진단</td>
+						<td><span>22</span></td>
+						<td>숨겨진 콘텐츠에 스크린리더 초점 접근</td>
+						<td>해당 내용과 관련된 스크립트 추가 필요</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>10</span></td>
+						<td>12 입력 도움</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 연금진단 &gt; 내 연금 진단</td>
+						<td><span>23</span></td>
+						<td>레이블을 제공하지 않은 서식</td>
+						<td>input에  title="희망생활비 직접입력" 추가</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>11</span></td>
+						<td>7 초점</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 조기은퇴진단</td>
+						<td><span>25</span></td>
+						<td>숨겨진 콘텐츠에 스크린리더 초점 접근</td>
+						<td>퍼블 스크립트로 변경예정</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>12</span></td>
+						<td>1 대체 텍스트</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 조기은퇴진단 &gt; 조기은퇴 맞춤정보</td>
+						<td><span>27</span></td>
+						<td>대체텍스트가 부적절하게 제공된 이미지</td>
+						<td>퍼블 스크립트로 변경함</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>13</span></td>
+						<td>1 대체 텍스트</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 세금계산기 &gt; 종합소득세</td>
+						<td><span>29</span></td>
+						<td>대체텍스트가 부적절하게 제공된 이미지</td>
+						<td>alt="{기관명}" 으로 해당 기관명으로 적용 필요</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>14</span></td>
+						<td>1 대체 텍스트</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 세금계산기 &gt; 종합소득세</td>
+						<td><span>29</span></td>
+						<td>대체텍스트가 부적절하게 제공된 컨트롤</td>
+						<td>&lt;span class="blind"&gt;원천징수 툴팁 열기&lt;/span&gt; 변경</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>15</span></td>
+						<td>18 보조기술과의 호환성</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 세금계산기 &gt; 종합소득세</td>
+						<td><span>30</span></td>
+						<td>부적절하게 제공된 역할 정보</td>
+						<td>&lt;a&gt;태그를 div로 변경</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>16</span></td>
+						<td>18 보조기술과의 호환성</td>
+						<td>홈 &gt; 전체 &gt; 금융자산분석 &gt; 세금계산기 &gt; 종합소득세</td>
+						<td><span>31</span></td>
+						<td>역할 정보 미제공</td>
+						<td>role="button" tabindex="0" title="종합소득세 절세팁 페이지 이동" 추가</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>17</span></td>
+						<td>1 대체 텍스트</td>
+						<td>홈 &gt; 전체 &gt; 생활편의 &gt; 맞춤정부혜택</td>
+						<td><span>35</span></td>
+						<td>대체텍스트를 부적절하게 제공한 이미지</td>
+						<td>관리자 등록 이미지 (이미지에 있는 모든 텍스트 적용 필요)</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>18</span></td>
+						<td>4 명도 대비</td>
+						<td>홈 &gt; 전체 &gt; 생활편의 &gt; 맞춤정부혜택</td>
+						<td><span>36</span></td>
+						<td>명도대비 기준 이하 콘텐츠</td>
+						<td>CSS 변경 필요</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>19</span></td>
+						<td>7 초점</td>
+						<td>홈 &gt; 전체 &gt; 생활편의 &gt; 맞춤정부혜택</td>
+						<td><span>37</span></td>
+						<td>숨겨진 콘텐츠에 모바일 스크린리더 초점 접근</td>
+						<td>개발 페이지 확인 필요</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>20</span></td>
+						<td>16 예측가능성</td>
+						<td>홈 &gt; 전체 &gt; 생활편의 &gt; 맞춤정부혜택</td>
+						<td><span>38</span></td>
+						<td>사용자가 의도하지 않은 기능 실행</td>
+						<td>li애 role="button" tabindex="0" title="{이동 페이지명}으로 이동" 추가</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>21</span></td>
+						<td>18 보조기술과의 호환성</td>
+						<td>홈 &gt; 전체 &gt; 생활편의 &gt; 맞춤정부혜택</td>
+						<td><span>39</span></td>
+						<td>부적절하게 제공된 기능 정보</td>
+						<td>개발 페이지 확인 필요</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>22</span></td>
+						<td>18 보조기술과의 호환성</td>
+						<td>홈 &gt; 전체 &gt; 생활편의 &gt; 맞춤정부혜택</td>
+						<td><span>40</span></td>
+						<td>상태 정보 미제공</td>
+						<td>활성화된 버튼에 title="선택됨" 추가 필요</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>23</span></td>
+						<td>18 보조기술과의 호환성</td>
+						<td>홈 &gt; 전체 &gt; 생활편의 &gt; 맞춤정부혜택 &gt; 정보 설정</td>
+						<td><span>42</span></td>
+						<td>상태 정보 미제공</td>
+						<td>22번 내용과 동일함</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+
+					<!-- [오류24] -->
+					<tr>
+						<td><span>24</span></td>
+						<td>1 대체 텍스트</td>
+						<td>홈 &gt; 전체 &gt; 설정/관리 &gt; 연결자산 관리</td>
+						<td><span>44</span></td>
+						<td>대체텍스트를 제공하지 않은 이미지</td>
+						<td>이미지 옆에 텍스트로 정보를 제공하고 있으므로 빈 alt="" 속성 추가 필요</td>
+						<td><a target="_blank" href="./ps/MSPS4000.html">MSPS4000</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection03_24">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection03_24">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_03_24.png" alt=""/></span>
+								<ul>
+									<li>이미지에 대체 텍스트를 제공하지 않았습니다.</li>
+									<li>&lt;img&gt;요소에 alt 속성은 필수로 제공해야 하며, 이미지의 내용과 동등한 정보의 대체 텍스트를 제공해야 합니다.</li>
+									<li>이미지 옆에 텍스트로 정보가 제공된 경우 대체 텍스트를 빈값(alt="")으로 제공해도 무방합니다.</li>
+								</ul>
+								<p>텍스트로 기관명이 제시된 로고 이미지는 빈 alt=""을 추가하여 읽히지 않도록 합니다.</p>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup"><img src="..." class="imgLogo"></script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup"><img src="..." class="imgLogo" alt=""></script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<!-- 
+								<table>
+									<caption>동일 오류 페이지</caption>
+									<colgroup>
+										<col>
+										<col span="2" style="width:100px;">
+										<col style="width:100px;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">화면명(경로)</th>
+											<th scope="col">퍼블파일</th>
+											<th scope="col">개발파일</th>
+											<th scope="col">비고</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>설정/관리 &gt; 연결자산관리 &gt; 기관상세</td>
+											<td><a target="_blank" href="./ps/MSPS4100.html">MSPS4100</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [수정필요]</td>
+										</tr>
+										<tr>
+											<td>설정/관리 &gt; 데이터 전송관리 &gt; 요청내역 상세</td>
+											<td><a target="_blank" href="./ps/MSPS5110.html">MSPS5110</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [확인필요]</td>
+										</tr>
+										<tr>
+											<td>설정/관리 &gt; 데이터 전송관리 &gt; 제공이력 상세</td>
+											<td><a target="_blank" href="./ps/MSPS5210.html">MSPS5210</a></td>
+											<td><span>jsp</span></td>
+											<td>개발 [확인필요]</td>
+										</tr>
+									</tbody>
+								</table>
+								-->
+							</div>
+						</td>
+					</tr>
+
+					<!-- [오류25] -->
+					<tr>
+						<td><span>25</span></td>
+						<td>18 보조기술과의 호환성</td>
+						<td>홈 &gt; 전체 &gt; 설정/관리 &gt; 연결자산 관리</td>
+						<td><span>45</span></td>
+						<td>역할 정보가 제공되지 않은 컨트롤</td>
+						<td>개발페이지 확인 필요</td>
+						<td><a target="_blank" href="./ps/MSPS4000.html">MSPS4000</a></td>
+						<td><strong>JSP</strong></td>
+						<td><button type="button" data-tab="uiSection03_25">내용보기</button></td>
+					</tr>
+					<tr data-tabcont="uiSection03_25">
+						<td colspan="9">
+							<div class="guide_data">
+								<span class="img"><img src="./com/images/a11y/guide_a11y_03_25.png" alt=""/></span>
+								<ul>
+									<li>모바일 스크린리더 운용시 단순 텍스트로 인식합니다.</li>
+									<li>스크린리더에서 링크 또는 버튼 등의 기능이 있는 컨트롤에 대한 역할 정보를 인식해야 합니다.<br>
+										또한 각 컨트롤의 명확한 기능을 알 수 있도록 title 속성 등으로 기관명등을 구분한 부가 정보를 제공해야 합니다.<br>예) '농협은행 기관 상세보기' 등</li>
+								</ul>
+								<p>개발페이지 확인 후 해결방안 제시 예정</p>
+								<dl>
+									<dt>오류코드</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup">
+													
+												</script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+								<dl>
+									<dt>해결방안</dt>
+									<dd>
+										<pre>
+											<code class="language-markup">
+												<script type="prism-html-markup"></script>
+											</code>
+										</pre>
+									</dd>
+								</dl>
+							</div>
+						</td>
+					</tr>
+
+					<tr>	
+						<td><span>26</span></td>
+						<td>7 초점</td>
+						<td>홈 &gt; 전체 &gt; 설정/관리 &gt; PUSH 관리</td>
+						<td><span>47</span></td>
+						<td>스크린리더 탐색 불가</td>
+						<td>개발 페이지 확인 필요</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+					<tr>
+						<td><span>27</span></td>
+						<td>18 보조기술과의 호환성</td>
+						<td>홈 &gt; 전체 &gt; MY &gt; MY정보</td>
+						<td><span>50</span></td>
+						<td>부적절하게 제공한 역할 정보</td>
+						<td>&lt;a&gt;태그 삭제 필요</td>
+						<td><span>-</span></td>
+						<td><span>-</span></td>
+						<td>AOS와 동일오류</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<!-- ----------------------------------------- -->
+</main>
+
+<footer>
+	<button class="top" title="상단으로"></button>
+	<address>Copyright © NH Bank. All Rights Reserved.</address>
+</footer>
+
+<script src="com/js/datatables.min.js"></script>
+<script src="com/js/jquery.colorbox-min.js"></script>
+<script src="com/js/septem_pubcom.js"></script>
+<script>
+$(document).ready(function(){
+	$('[data-tab]').on('click', function(){
+		var _id = $(this).attr('data-tab');
+		var _cont = $('[data-tabcont="'+_id+'"]');
+		//$('[data-tabcont]').removeClass('active');
+		if(_cont.hasClass('active')) _cont.removeClass('active');
+		else _cont.addClass('active');
+	});
+});
+</script>
+</body>
+</html>

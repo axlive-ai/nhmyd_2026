@@ -1,0 +1,226 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>대출 상세 | 학자금대출 | 부채 | 자산</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">대출 상세</a></h1>
+		<a href="javascript:;" class="btnAcAdmin"><span class="blind">관리</span></a>
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 보험상세 ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<!-- -------------------------------------- -->
+		<!-- [상단영역] 보험정보 -->
+		<!-- -------------------------------------- -->
+		<div class="boxWrapShadow">
+			<!-- ### [계좌정보] 기본내용 ### -->
+			<div class="boxTypeWrap delShadow">
+				<!-- // -->
+				<div class="accTopInfo mt0">
+					<dl class="totalBalance t3">
+						<dt><span>2019년 1학기 등록금</span><span>남은금액</span></dt>
+						<dd><strong>4,200,000</strong>원</dd>
+					</dl>
+					<div class="wrapTag">
+						<span class="type01 radius4">#취업 후 상환</span><span class="type02 radius4">#금리 1.7%</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- ### [토글영역] 상세정보 ### -->
+			<div class="moreInfoArea">
+				<div class="moreInfoWrap toggleWrap">
+					<div class="moreInfo toggleCont" style="display:none">
+						<hr class="divLine2" aria-hidden="true">
+						<ul class="detailList">
+							<li>
+								<div class="tit">종류</div>
+								<div class="value dataWord1">
+									<span>1학기 취업 후 상환</span>
+									<span>등록금</span>
+								</div>
+							</li>
+							<li>
+								<div class="tit">빌린금액</div>
+								<div class="value"><strong class="dataValue">1,189,500</strong><em class="won">원</em></div>
+							</li>
+							<li>
+								<div class="tit">갚은금액</div>
+								<div class="value"><strong class="dataValue">1,189,500</strong><em class="won">원</em></div>
+							</li>
+							<li>
+								<div class="tit">기간
+									<div class="tooltipWrap">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">취업 후 상환대출 안내 툴팁 열기</span></button>
+										<div class="tooltipCont">
+											<p>취업 후 상환 대출은 일정 소득이 생기면 갚기 시작해요. 소득에 따라 갚아야 하는 기간과 금액이 달라져요.</p>     
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">취업 후 상환대출 안내 툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="value">2019.3.30 ~</div>
+							</li>
+							<li>
+								<div class="tit">현재금리</div>
+								<div class="value">1.7%</div>
+							</li>
+							<!-- [CASE] 상환중(직접납부) -->
+							<li>
+								<div class="tit">상태</div>
+								<div class="value">
+									<div class="pointColor05">상환중</div>
+								</div>
+							</li>
+							<li>
+								<div class="tit">정기 상환 방법
+									<div class="tooltipWrap">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">정기 상환 방법이란? 툴팁 열기</span></button>
+										<div class="tooltipCont">
+											<p>취업 후 상환 학자금 대출은 일정 기준 이상 연소득 발생 등 의무적 상환 대상자가 되실 경우, 고객님께서 다니고 계시는 회사에서 월급의 일부를 공제하여 국세청에 대신 납부하는 것이 기본이에요.</p>
+											<p class="mt10">매월 공제되는 것을 원치 않으시는 경우 국세청 혹은 한국장학재단을 통해 5월 말까지 의무상환액 1년치 전액을 전부 납부하거나 5월 말과 11월 말 절반씩 나누어 미리 납부할 수도 있어요.</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">정기 상환 방법이란? 툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="value">직접 납부</div>
+							</li>
+							<!-- [CASE] 상환중(회사납부) -->
+							<li>
+								<div class="tit">상태</div>
+								<div class="value">
+									<div class="pointColor05">상환중</div>
+									<div>일정 소득이 생겨서 갚고 있어요</div>
+								</div>
+							</li>
+							<li>
+								<div class="tit">정기 상환 방법
+									<div class="tooltipWrap">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">정기 상환 방법이란? 툴팁 열기</span></button>
+										<div class="tooltipCont">
+											<p>취업 후 상환 학자금 대출은 일정 기준 이상 연소득 발생 등 의무적 상환 대상자가 되실 경우, 고객님께서 다니고 계시는 회사에서 월급의 일부를 공제하여 국세청에 대신 납부하는 것이 기본이에요.</p>
+											<p class="mt10">매월 공제되는 것을 원치 않으시는 경우 국세청 혹은 한국장학재단을 통해 5월 말까지 의무상환액 1년치 전액을 전부 납부하거나 5월 말과 11월 말 절반씩 나누어 미리 납부할 수도 있어요.</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">정기 상환 방법이란? 툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="value">회사 납부</div>
+							</li>
+							<!-- [CASE] 유예 중 -->
+							<li>
+								<div class="tit">상태</div>
+								<div class="value">
+									<div class="pointColor05">유예 중</div>
+								</div>
+							</li>
+							<li>
+								<div class="tit">정기 상환 방법
+									<div class="tooltipWrap">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">정기 상환 방법이란? 툴팁 열기</span></button>
+										<div class="tooltipCont">
+											<p>취업 후 상환 학자금 대출은 일정 기준 이상 연소득 발생 등 의무적 상환 대상자가 되실 경우, 고객님께서 다니고 계시는 회사에서 월급의 일부를 공제하여 국세청에 대신 납부하는 것이 기본이에요.</p>
+											<p class="mt10">매월 공제되는 것을 원치 않으시는 경우 국세청 혹은 한국장학재단을 통해 5월 말까지 의무상환액 1년치 전액을 전부 납부하거나 5월 말과 11월 말 절반씩 나누어 미리 납부할 수도 있어요.</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">정기 상환 방법이란? 툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="value">미납부</div>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+					<button type="button" class="moreOpenBtn toggleBtn"><span class="toggleTxt07">상세정보 보기</span></button> <!--09.21 toggleTxt07 수정-->
+				</div>
+			</div>
+			<!-- ### // ### -->
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [목록영역] 거래내역 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap pt0">
+			<h2 class="defSubTit4 t1">거래내역</h2>
+			<div class="tooltipWrap w96">
+				<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">거래내역 안내 툴팁 열기</span></button>
+				<div class="tooltipCont">
+					<p>최근 1년 거래내역만 보여요</p>
+					<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">거래내역 안내 툴팁 닫기</span></button>
+				</div>
+			</div>
+
+			<!-- ### [CASE] 거래내역이 있을 경우 ### -->
+			<div class="inoutListWrap longTit t1">
+				<!-- [항목하나] -->
+				<div class="inoutListInn">
+					<p class="date bdtNone">2022</p>
+					<ul class="inoutList">
+						<li>
+							<div class="inoutTit dsf">
+								<span class="user">대출 상환</span>
+								<span class="amount"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+							</div>
+							<div class="inoutCont">
+								<div class="timeWrap">
+									<span class="time">12.15</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- [항목하나] -->
+				<div class="inoutListInn">
+					<p class="date bdtNone">2019</p>
+					<ul class="inoutList">
+						<li>
+							<div class="inoutTit dsf">
+								<span class="user">대출 실행</span>
+								<span class="amount"><strong class="dataValue">-3,000,000</strong><em class="won">원</em></span>
+							</div>
+							<div class="inoutCont">
+								<div class="timeWrap">
+									<span class="time">6.14</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- [//] -->
+			</div>
+			<!-- ### // ### -->
+			<div class="listMoreBtn"><a href="javascript:;" title="항목 더보기">더보기</a></div>
+
+			<!-- ### [CASE] 거래내역이 없을 경우 ### -->
+			<div class="noResultWrap">
+				<p>거래내역이 없습니다.</p>
+			</div>
+			<!-- ### // ### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</div>
+	<!-- ###################################### -->
+</div>
+</body>
+</html>

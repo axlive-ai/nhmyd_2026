@@ -1,0 +1,350 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>서브메인 | 신용관리 | 컨설팅</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">신용관리</a></h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 신용관리 서브메인 ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<!-- -------------------------------------- -->
+		<!-- [배너영역] 스팟배너 -->
+		<!-- -------------------------------------- -->
+		<!-- [CASE1] 만료예정 -->
+		<div class="yaTopBanner Ty01 bgTy02">
+			<a href="javascript:;" class="link yalinkBtn" role="button">
+				<span>만료예정인 N개 기관이 있어요</span>
+				<p>재연결하고 신용점수 확인하기</p>
+			</a>
+			<button type="button" class="btnClose"><span class="blind">닫기</span></button>
+		</div>
+
+		<!-- [CASE2] 기한만료 -->
+		<div class="yaTopBanner Ty01 bgTy01">
+			<a href="javascript:;" class="link yalinkBtn" role="button">
+				<span>연결 만료된 N개 기관이 있어요</span>
+				<p>재연결하고 신용점수 확인하기</p>
+			</a>
+			<button type="button" class="btnClose"><span class="blind">닫기</span></button>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [상단영역] NICE 신용점수 
+			*** data-value값 정의 ***
+			1) 남성/변동없음 : data-value="male_no"
+			2) 남성/점수UP : data-value="male_up"
+			3) 남성/점수DOWN : data-value="male_down"
+
+			1) 여성/변동없음 : data-value="female_no"
+			2) 여성/점수UP : data-value="female_up"
+			3) 여성/점수DOWN : data-value="female_down"
+		-->
+		<!-- -------------------------------------- -->
+		<section class="infoSummary2">
+			<!-- ### [CASE1] 남성/변동없음 ### -->
+			<div class="tit" data-value="male_no" role="button" tabindex="0" title="상세평가내역">
+				<h2>나의 신용점수는</h2>
+				<p class="con"><strong class="dataValue">763</strong><span>점</span></p>
+				<p class="sub">전체<span>NICE</span>인원 중 <span>상위<strong>14</strong>%</span>에요</p>
+			</div>
+
+			<!-- ### [CASE2] 남성/점수UP  ### -->
+			<div class="tit" data-value="male_up" role="button" tabindex="0" title="상세평가내역">
+				<h2>나의 신용점수는</h2>
+				<p class="con"><strong class="dataValue">981</strong><span>점</span></p>
+				<p class="sub">전체<span>NICE</span>인원 중 <span>상위<strong>4</strong>%</span>에요</p>
+			</div>
+
+			<!-- ### [CASE3] 남성/점수DOWN ### -->
+			<div class="tit" data-value="male_down" role="button" tabindex="0" title="상세평가내역">
+				<h2>나의 신용점수는</h2>
+				<p class="con"><strong class="dataValue">623</strong><span>점</span></p>
+				<p class="sub">전체<span>NICE</span>인원 중 <span>하위<strong>24</strong>%</span>에요</p>
+			</div>
+
+			<!-- ### [CASE4] 여성/변동없음 ### -->
+			<div class="tit" data-value="female_no" role="button" tabindex="0" title="상세평가내역">
+				<h2>나의 신용점수는</h2>
+				<p class="con"><strong class="dataValue">763</strong><span>점</span></p>
+				<p class="sub">전체<span>NICE</span>인원 중 <span>상위<strong>14</strong>%</span>에요</p>
+			</div>
+
+			<!-- ### [CASE5] 여성/점수UP  ### -->
+			<div class="tit" data-value="female_up" role="button" tabindex="0" title="상세평가내역">
+				<h2>나의 신용점수는</h2>
+				<p class="con"><strong class="dataValue">981</strong><span>점</span></p>
+				<p class="sub">전체<span>NICE</span>인원 중 <span>상위<strong>4</strong>%</span>에요</p>
+			</div>
+
+			<!-- ### [CASE6] 여성/점수DOWN ### -->
+			<div class="tit" data-value="female_down" role="button" tabindex="0" title="상세평가내역">
+				<h2>나의 신용점수는</h2>
+				<p class="con"><strong class="dataValue">623</strong><span>점</span></p>
+				<p class="sub">전체<span>NICE</span>인원 중 <span>하위<strong>24</strong>%</span>에요</p>
+			</div>
+			<!-- // -->
+			
+			<div class="areaBanner4 area1">
+				<a href="javascript:;" class="img1" title="신용점수 올리기 서비스 안내">
+					<span>로켓을 눌러서<br>신용점수를 즉시 올려보세요!</span>
+					<span>최근 15일 전 정보 제출</span>
+				</a>
+			</div>
+		</section>
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTION] 최근 1년 신용내역 -->
+		<!-- [M 2024-03-27] 배너로 변경 -->
+		<!-- -------------------------------------- -->
+		<div class="areaBanner6 t1">
+			<a href="javascript:;" class="img2"><span>최근 신용조회&middot;변동 내역 보기</span></a>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTION] 나의 신용평점 비교 -->
+		<!-- -------------------------------------- -->
+		<div class="infoCont2 t4">
+			<h3 class="tit">나의 신용점수는</h3>
+			<p class="con">
+				전체 상위 <strong>4%</strong>에요
+
+				<!-- [D] 이모지정의
+					 1) 높아요 / 동  일 : <span class="emoji"><img src="../../images/emoji/img_emoji_0204.png" alt=""></span> 
+					 2) 낮아요 : <span class="emoji"><img src="../../images/emoji/img_emoji_0221.png" alt=""></span> 
+				-->
+				<span class="emoji"><img src="../../images/emoji/img_emoji_0204.png" alt=""></span>
+			</p>
+
+			<!-- [D] 클래스정의 
+					1) 높아요 : <span class="case1"><strong>000점</strong> 높아요</span>
+					2) 낮아요 : <span class="case2"><strong>000점</strong> 낮아요</span>
+					3) 동  일 : <span class="case0">동일해요</span>
+			-->
+			<p class="con">30대 평균 대비는 <span class="case1"><strong>130점</strong> 높아요</span></p>
+			<p class="con">30대 평균 대비는 <span class="case2"><strong>130점</strong> 낮아요</span></p>
+			<p class="con">30대 평균과 신용점수가 <span class="case0">동일해요</span></p>
+			<div class="areaChart2 t1">
+				<dl class="item1">
+					<dt>나</dt>
+					<dd>
+						<div class="chart"><span style="width:80%;"></span></div> <!--  [D] 그래프 영역 style="width:00%;" -->
+						<div><span class="dataValue">981</span><em class="won">점</em></div>
+					</dd>
+				</dl>
+				<dl class="item2">
+					<dt>30대 평균</dt>
+					<dd>
+						<div class="chart"><span style="width:50%;"></span></div> <!--  [D] 그래프 영역 style="width:00%;" -->
+						<div><span class="dataValue">851</span><em class="won">점</em></div>
+					</dd>
+				</dl>
+			</div>
+			<div class="btns1"><a href="javascript:;" class="linkTxt">나의 신용평점 비교하기</a></div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTION] 당월 신용평가정보 -->
+		<!-- -------------------------------------- -->
+		<div class="areaSection3">
+			<h3 class="defSubTit1">MM월 신용평가정보</h3>
+			<!-- [M 2024-03-27] -->
+			<div class="boxTypeWrap">
+				<div class="areaInfo2 t1">
+					<dl>
+						<dt>카드</dt>
+						<dd><span>-</span></dd>
+					</dl>
+					<dl>
+						<dt>대출</dt>
+						<dd><span>-</span></dd>
+					</dl>
+					<dl>
+						<dt>연체</dt>
+						<dd><span>-</span></dd>
+					</dl>
+					<dl>
+						<dt>보증</dt>
+						<dd><span>-</span></dd>
+					</dl>
+				</div>
+				<div class="noResultWrap">
+					<p>신용평가정보를 확인 중이에요.</p>
+				</div>
+			</div>
+			<!-- //[M 2024-03-27] -->
+
+			<!-- [샘플] API 회신 정보 모두 있을 경우  -->
+			<div class="boxTypeWrap">
+				<div class="areaInfo2 t1">
+					<dl>
+						<dt>카드</dt>
+						<dd><a href="javascript:;" class="link" title="신용평가정보(카드)"><span>00</span>건</a></dd>
+					</dl>
+					<dl>
+						<dt>대출</dt>
+						<dd><a href="javascript:;" class="link" title="신용평가정보(대출)"><span>00</span>건</a></dd>
+					</dl>
+					<dl>
+						<dt>연체</dt>
+						<dd><a href="javascript:;" class="link" title="신용평가정보(연체)"><span>00000</span>건</a></dd>
+					</dl>
+					<dl>
+						<dt>보증</dt>
+						<dd><a href="javascript:;" class="link" title="신용평가정보(보증)"><span>00</span>건</a></dd>
+					</dl>
+				</div>
+				<ul class="detailList">
+					<li>
+						<span class="tit">카드 이용금액</span>
+						<span class="value bold">
+							<strong class="dataValue">5,630,000</strong>
+							<em class="won">원</em>
+						</span>
+					</li>
+					<li>
+						<span class="tit">대출 잔액</span>
+						<span class="value bold">
+							<strong class="dataValue">1,240,000</strong>
+							<em class="won">원</em>
+						</span>
+					</li>
+					<li>
+						<span class="tit">단기 연체 총액</span>
+						<span class="value bold">
+							<strong class="dataValue">3,630,000</strong>
+							<em class="won">원</em>
+						</span>
+					</li>
+					<li>
+						<span class="tit">장기 연체 총액</span>
+						<span class="value bold">
+							<strong class="dataValue">2,630,000</strong>
+							<em class="won">원</em>
+						</span>
+					</li>
+					<li>
+						<span class="tit">보증 총액</span>
+						<span class="value bold">
+							<strong class="dataValue">1,630,000</strong>
+							<em class="won">원</em>
+						</span>
+					</li>
+				</ul>
+			</div>
+
+			<!-- [샘플] API 회신 정보 일부 없을 경우  -->
+			<div class="boxTypeWrap">
+				<div class="areaInfo2 t1">
+					<dl>
+						<dt>카드</dt>
+						<dd><a href="javascript:;" class="link" title="신용평가정보(카드)"><span>3</span>건</a></dd>
+					</dl>
+					<dl>
+						<dt>대출</dt>
+						<dd><a href="javascript:;" class="link" title="신용평가정보(대출)"><span>9</span>건</a></dd>
+					</dl>
+					<dl>
+						<dt>연체</dt>
+						<dd>-</dd>
+					</dl>
+					<dl>
+						<dt>보증</dt>
+						<dd>-</dd>
+					</dl>
+				</div>
+				<ul class="detailList">
+					<li>
+						<span class="tit">카드 이용금액</span>
+						<span class="value bold">
+							<strong class="dataValue">5,630,000</strong>
+							<em class="won">원</em>
+						</span>
+					</li>
+					<li>
+						<span class="tit">대출 잔액</span>
+						<span class="value bold">
+							<strong class="dataValue">1,240,000</strong>
+							<em class="won">원</em>
+						</span>
+					</li>
+				</ul>
+			</div>
+			<!-- // -->
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [배너 영역] NH신용 매니저 -->
+		<!-- -------------------------------------- -->
+		<div class="areaBanner2">
+			<a href="https://card.nonghyup.com/IPCN010202.menu" target="_blank" class="img1" title="(새창) NH신용 Manger 서비스 안내">
+				<span>신용관리 어렵지 않아요</span>
+				<span>우리가 다 알아서 관리해주니까! </span>
+			</a>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [배너 영역] DSR계산기, 대환대출 -->
+		<!-- -------------------------------------- -->
+		<div class="areaBanner2 col">
+			<a href="javascript:;" class="img2" title="DSR계산기 서브메인">
+				<span>나의 DSR은 얼마?</span>
+				<span>DSR 계산기 가기</span>
+			</a>
+			<a href="javascript:;" class="img3" title="대환대출 서비스 안내">
+				<span>다른 금융기관 대출</span>
+				<span>NH로 갈아타기</span>
+			</a>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [배너 영역] FAQ | PUSH관리 -->
+		<!-- -------------------------------------- -->
+		<div class="yatexbtnWrap mt20">
+			<a href="javascript:;" class="faqBtn">자주 묻는 질문</a>
+			<a href="javascript:;" class="pushBtn">알림 설정</a>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [하단영역] 알아두세요 -->
+		<!-- -------------------------------------- -->
+		<div class="info_area">
+			<strong class="info_area_title">알아두세요</strong>
+			<ul class="listBul disc">
+				<li>신용관리 서비스의 모든 내용은 NICE평가정보의 데이터로 제공합니다.</li>
+				<li>NICE평가정보의 데이터 산정일, 기준금액의 차이로 실제 금융정보와 다를 수 있습니다.</li>
+			</ul>
+		</div>
+		<!-- -------------------------------------- -->
+	</div>
+	<!-- ###################################### -->
+</div>
+
+</body>
+</html>

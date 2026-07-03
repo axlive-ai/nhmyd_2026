@@ -1,0 +1,158 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>UI Guide(tooltip)</title>
+<script src="../pub-assets/js/head.js"></script>
+<style type="text/css">
+	.file_list{user-select: all}
+	.re_rec{width: 32px;height: 32px;border:solid 1px silver;position: fixed;top: -64px;left: 50%;margin-left: -16px;z-index: 2000;background: url('../../images/btn_update.png')no-repeat center;border-radius: 50% ;background-color: cyan;background-size: 24px auto;}
+</style>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">UI Guide</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div style="height:30px"></div>
+			<p class="subTxt2">툴팁간격등 케이스에 따라 안맞는 경우 다중클래스 사용</p>
+<pre style="font-size:12px;background-color:#fff;overflow-y:scroll;padding:10px;margin-top:5px;border-radius:10px">
+.nhasset .tooltipWrap.w96 .tooltipCont{width:calc(100% - 40px) !important;}
+.nhasset .tooltipWrap.w92 .tooltipCont{width:calc(100% - 72px) !important;}
+.nhasset .tooltipWrap .tooltipCont.lf0{left:0 !important;}
+.nhasset .tooltipWrap .tooltipCont.lf16{left:16px !important;}
+.nhasset .tooltipWrap .tooltipCont.lf20{left:20px !important;}
+.nhasset .tooltipWrap .tooltipCont.lf36{left:36px !important;}
+.nhasset .overUnset{overflow:unset !important;}
+</pre>
+			
+
+			<div style="height:30px"></div>
+			<h2 class="defSubTit2">차계부
+				<!-- tootip -->
+				<div class="tooltipWrap">
+					<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">차계부 툴팁 열기</span></button>
+					<div class="tooltipCont">
+						<p>자산 연결된 카드의 승인 내역을 조회하여 주유/주차/통행료/세차/정비 별 카드 상세내역과 월별 통계를 제공합니다.</p>
+						<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+					</div>
+				</div>
+				<!-- //tootip -->
+			</h2>
+
+			<div class="boxTypeWrap overUnset pb28">
+				<h2 class="defSubTit mt0">상담을 받으실 영업점은?
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">상담을 받으실 영업점 안내 툴팁 열기</span></button>
+						<div class="tooltipCont lf0">
+							<p>현재 위치와 가까운 영업점을 방문하시려면 ‘가까운 영업점 찾기’를, 고객님이 원하시는 영업점이 있으시다면 ‘영업점 찾기’를 선택해 주세요.
+							</p>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+				</h2>
+				<p class="subTxt3">VIP 금융컨설팅 상담은 영업점을 통해 진행됩니다.</p>
+				<div class="boxRadio mt20">
+					<div class="boxRadioInn">
+						<span>
+							<input name="rdo13" id="rdo16" type="radio" checked="checked">
+							<label for="rdo16">가까운 영업점 찾기</label>
+						</span>
+					</div>
+					<div class="boxRadioInn">
+						<span>
+							<input name="rdo13" id="rdo17" type="radio">
+							<label for="rdo17">이름으로 찾기</label>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div style="position: relative;">
+
+				<div class="boxTypeWrap overUnset pb28">
+					<h2 class="defSubTit mt0">상담을 받으실 영업점은?
+						<div class="tooltipWrap">
+							<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">상담을 받으실 영업점 안내 툴팁 열기</span></button>
+							<div class="tooltipCont lf0">
+								<p>현재 위치와 가까운 영업점을 방문하시려면 ‘가까운 영업점 찾기’를, 고객님이 원하시는 영업점이 있으시다면 ‘영업점 찾기’를 선택해 주세요.
+								</p>
+								<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+							</div>
+						</div>
+					</h2>
+					<p class="subTxt3">VIP 금융컨설팅 상담은 영업점을 통해 진행됩니다.</p>
+					<div class="boxRadio mt20">
+						<div class="boxRadioInn">
+							<span>
+								<input name="rdo13" id="rdo16" type="radio" checked="checked">
+								<label for="rdo16">가까운 영업점 찾기</label>
+							</span>
+						</div>
+						<div class="boxRadioInn">
+							<span>
+								<input name="rdo13" id="rdo17" type="radio">
+								<label for="rdo17">이름으로 찾기</label>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="formWrap boxTypeWrap">
+				<div class="txtt2"><strong>기존 대출상환 여부 선택</strong>
+					<div class="tooltipWrap w92">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">대출잔액 툴팁 열기</span></button>
+						<div class="tooltipCont lf36">
+							<p>현재 위치와 가까운 영업점을 방문하시려면 ‘가까운 영업점 찾기’를, 고객님이 원하시는 영업점이 있으시다면 ‘영업점 찾기’를 선택해 주세요.
+							</p>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="boxRadio">
+					<div class="boxRadioInn">
+						<span>
+							<input name="rdo03" id="rdo06" type="radio" checked="checked">
+							<label for="rdo06">상환 예정</label>
+						</span>
+					</div>
+					<div class="boxRadioInn">
+						<span>
+							<input name="rdo03" id="rdo07" type="radio">
+							<label for="rdo07">전부 유지 예정</label>
+						</span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- //container -->
+
+	</div>
+
+
+</body>
+</html>

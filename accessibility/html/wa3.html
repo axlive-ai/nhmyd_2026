@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Septem UI/UX accessibility</title>
+	<link rel="stylesheet" href="../css/a11y_com.css">
+	<link rel="stylesheet" href="../css/prism.css">
+	<script src="../js/prism.js"></script>
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/a11y_com.js"></script>
+</head>
+<body>
+	<!-- skip -->
+<div id="skipNav">
+	<a href="#">본문 바로가기</a>
+	<a href="#">메뉴 바로가기</a>
+</div>
+<!-- //skip -->
+<div id="wrap">
+	<!-- header -->
+	<header>
+	</header>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<nav>
+		</nav>
+		<!-- content -->
+		<main>
+			<h1>3. 이해의 용의성</h1>
+			<h2>3.1 기본 언어 표시</h2>
+			<blockquote>
+			<p>(기본 언어 표시) 주로 사용하는 언어를 명시해야 한다.</p>
+			</blockquote>
+			<p><a href="https://www.w3schools.com/tags/ref_language_codes.asp" target="_blank">HTML Language Code Reference</a></p>
+			<pre>
+				<code class="language-markup">
+					<script type="prism-html-markup">
+						<p lang="ko"></p>
+						<p lang="en"></p>
+						<p lang="zh"></p>
+						<p lang="ja"></p>
+					</script>
+				</code>
+			</pre>
+
+			<h2>3.2 예측 가능성</h2>
+			<blockquote><p>(사용자 요구에 따른 실행) 사용자가 의도하지 않은 기능(새 창, 초점에 의한 맥락 변화 등)은 실행되지 않아야 한다.</p></blockquote>
+			<p>초점의 이동으로 기능이 실행되서는 안되며, 항상 버튼 활성화(클릭)으로만 실행되어야한다.</p>
+			<p>새창의 링크(a)는 항상 target="blank" 속성을 가져야 한다.</p>
+
+			<h2>3.3 콘텐츠의 논리성</h2>
+			<h3>3.3.1 콘텐츠의 선형 구조</h3>
+			<blockquote><p>(콘텐츠의 선형 구조) 콘텐츠는 논리적인 순서로 제공해야 한다.</p></blockquote>
+			<p>스타일과 관계 없이 논리적인 순서대로 콘텐츠를 읽을 수 있도록 마크업한다.</p>
+			<p>"제목 > 내용 > 더보기" 순서를 권장하며, 더보기의 경우 명시적으로 어떠한 더보기인지 제공해야 한다.</p>
+
+			<h3>3.3.2 표의 구성</h3>
+			<blockquote><p>(표의 구성) 표는 이해하기 쉽게 구성해야 한다.</p></blockquote>
+			<p>&lt;table&gt;은 &lt;caption&gt;, &lt;thead&gt;, &lt;tfoot&gt;, &lt;tbody&gt;, &lt;th&gt; 요소등 의미있는 마크업을 사용해야 한다.</p>
+			<p>&lt;caption&gt;은 반드시 제공해야만 하며, th의 내용을 포함하여 제목과 요약을 작성한다.</p>
+			<p>HTML5에서는 table에 "align", "bgcolor", "border", "cellpadding", "cellspacing", "frameX", "rules", "summary", "width" 속성들을 더이상 지원하지 않기 때문에 summary를 사용하지 않는다.</p>
+			<p>scope="col", scope="row"를 사용하여 스크린리더가 읽는 순서를 지정해준다.</p>
+			<table>
+				<caption>구분, 상품종류, 1월, 2월, 계을(를) 포함한 상품에 따른 월별 판매현황</caption>
+				<thead>
+					<tr>
+						<th rowspan="2" scope="col">구분</th>
+						<th colspan="3" scope="colgroup">상품종류</th>
+					</tr>
+					<tr>
+						<th scope="col">스마트폰</th>
+						<th scope="col">태블릿PC</th>
+						<th scope="col">데스크탑PC</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">1월</th>
+						<td>5만대</td>
+						<td>3만대</td>
+						<td>1만대</td>
+					</tr>
+					<tr>
+						<th scope="row">2월</th>
+						<td>7만대</td>
+						<td>2만대</td>
+						<td>1만대</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<th scope="row">계</th>
+					<td>12만대</td>
+					<td>5만대</td>
+					<td>2만대</td>
+				</tfoot>
+			</table>
+			<pre>
+				<code class="language-markup">
+					<script type="prism-html-markup">
+						<h1>상품에 따른 월별 판매현황</h1>
+						<table>
+							<caption>구분, 상품종류을(를) 포함한 상품에 따른 월별 판매현황</caption>
+							<thead>
+								<tr>
+									<th rowspan="2" scope="col">구분</th>
+									<th colspan="3" scope="colgroup">상품종류</th>
+								</tr>
+								<tr>
+									<th scope="col">스마트폰</th>
+									<th scope="col">태블릿PC</th>
+									<th scope="col">데스크탑PC</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">1월</th>
+									<td>5만대</td>
+									<td>3만대</td>
+									<td>1만대</td>
+								</tr>
+								<tr>
+									<th scope="row">2월</th>
+									<td>7만대</td>
+									<td>2만대</td>
+									<td>1만대</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<th scope="row">계</th>
+								<td>12만대</td>
+								<td>5만대</td>
+								<td>2만대</td>
+							</tfoot>
+						</table>
+					</script>
+				</code>
+			</pre>
+
+			<h2>3.4 입력 도움</h2>
+			<h3>3.4.1 레이블 제공</h3>
+			<blockquote><p>(레이블 제공) 사용자 입력에는 대응하는 레이블을 제공해야 한다.</p></blockquote>
+			<p>입력 서식(&lt;input&gt;, &lt;textarea&gt;, &lt;select&gt; 요소 등)에 대응하는 레이블(&lt;label&gt; 요소, title 속성)을 제공해야 한다.</p>
+			<pre>
+				<code class="language-markup">
+					<script type="prism-html-markup">
+						<input type="text" title="ID">
+						<input type="raido" checked="checked" name="vt_align" id="alignLft"><label for="alignLft">왼쪽정렬</label>
+						<input type="checkbox" name="sports" id="soccer"> <label for="soccer">축구</label>
+						<label><input type="checkbox" name="sports">축구</label>
+					</script>
+				</code>
+			</pre>
+
+			<h3>3.4.2 오류 정정</h3>
+			<blockquote><p>(오류 정정) 입력 오류를 정정할 수 있는 방법을 제공해야 한다.</p></blockquote>
+			<p>온라인 서식에서 오류가 발생하는 경우, 사용자에게 오류가 발생한 위치와 오류를 유발하게 된 이유 등에 관한 정보를 알려 주어야 한다. 입력 항목이 여러개일 경우 어느 항목이 누락되었는지를 알려줘야 한다.</p>
+		</main>
+		<!-- //content -->
+	</div>
+	<!-- //container -->
+	<!-- footer -->
+	<footer>푸터 영역</footer>
+	<!-- //footer -->
+	
+</body>
+</html>

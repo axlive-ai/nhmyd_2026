@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* [SEPTEM] UI/UX Dev Team :: 접근성 com css*/
+ 
+/* =Reset */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;-ms-box-sizing:border-box;box-sizing:border-box;}
+body,h1,h2,h3,h4,h5,h6,select,input,textarea,button{font-family:'Spoqa', Dotum,'돋움',Helvetica,'Apple SD Gothic Neo',sans-serif;}
+body{font-size:17px;color:#363a3c;word-break:keep-all;line-height:1.6;-webkit-font-smoothing:antialiased;/*-webkit-text-size-adjust:none;*/}
+input,select,textarea,button{font-size:14px;vertical-align:top;}
+button,input,textarea{border-radius:0;}
+button{background-color:transparent;cursor:pointer;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+table{width:100%;table-layout:fixed;border-spacing:0;border-collapse:collapse;}
+ol,ul{list-style:none;}
+em,address{font-style:normal;}
+img,fieldset,iframe{border:0;}
+img{max-width:100%;height:auto;vertical-align:top;}
+a{color:#1870f0;}
+area{outline:0;}
+input::-ms-clear{display:none;}
+input[type=date]::-webkit-inner-spin-button{display:none;}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-calendar-picker-indicator{display:none;}
+input[type=number]{-moz-appearance:textfield;}
+select{border-radius:0;}
+
+/* =웹킷계열 브라우저 커스텀 스크롤바 */
+::-webkit-scrollbar{width:8px;height:3px;border-left:0;background:rgba(0,0,0,.1);}
+::-webkit-scrollbar-track{background-color:#eee;}
+::-webkit-scrollbar-thumb{width:6px;margin-left:1px;border-radius:20px;background-color:#bbb;}
+body{overflow-y:scroll;}
+
+@font-face {
+	font-family:"Spoqa";
+	font-weight:100;
+	src:local('Spoqa Han Sans Neo Light'), url('../fonts/SpoqaHanSansNeo-Light.woff2') format('woff2'), url('../fonts/SpoqaHanSansNeo-Light.woff') format('woff');
+	font-display:block;
+}
+@font-face {
+	font-family:"Spoqa";
+	font-weight:400;
+	src:local('Spoqa Han Sans Neo'), url('../fonts/SpoqaHanSansNeo-Regular.woff2') format('woff2'), url('../fonts/SpoqaHanSansNeo-Regular.woff') format('woff');
+	font-display:block;
+}
+@font-face {
+	font-family:"Spoqa";
+	font-weight:900;
+	font-weight:bold;
+	src:local('Spoqa Han Sans Neo Bold'), url('../fonts/SpoqaHanSansNeo-bold.woff2') format('woff2'), url('../fonts/SpoqaHanSansNeo-bold.woff') format('woff');
+	font-display:block;
+}
+
+
+/* skipNavigation */
+#skipNav {position:fixed;top:0;right:0;left:0;width:100%;text-align:center;z-index:10000;}
+#skipNav a {display:block;overflow:hidden;width:100%;height:0;margin:0;padding:0;background:#7e756b;font-size:15px;color:#fff;line-height:45px;}
+#skipNav a:hover, #skipNav a:active, #skipNav a:focus {height:45px;padding:0;background:#111;color:#fff;line-height:45px;}
+
+/* nav */
+nav, main{padding-top:60px;}
+nav{padding-bottom:80px;line-height:1.8;}
+nav h4{margin-top:20px;}
+nav li:first-child h4{margin-top:0;}
+nav a{color:#363a3c;text-decoration:none;}
+nav a:hover{color:#1870f0;}
+nav a.active{color:#1870f0;text-decoration:underline;text-underline-position:under;}
+
+/* layout */
+.container{display:grid;max-width:1440px;min-height:calc(100vh - 140px);margin:0 auto;padding-right:1rem;padding-left:1rem;grid-template-columns:minmax(0,1fr) minmax(0,3.5fr);grid-gap:3rem;gap:3rem;grid-template-areas:"sidebar main toc";}
+nav{display:-webkit-box;display:flex;position:-webkit-sticky;position:sticky;top:0;align-self:start;flex-direction:column;-webkit-box-orient:vertical;-webkit-box-direction:normal;grid-area:sidebar;}
+.inner{max-width:1440px;margin:0 auto;padding:20px 0;}
+header{border-bottom:1px solid #eee;font-size:22px;font-weight:bold;}
+footer{border-top:1px solid #eee;font-size:14px;}
+main{padding-bottom:200px;}
+ 
+table{width:100%;margin:1rem 0;border:1px solid #cfcfd8;font-size:1rem;border-collapse:collapse;}
+table td, table th {padding:.5rem .75rem;border:1px solid #cfcfd8;vertical-align:middle;}
+table th{background:#fbfbfe;font-weight:900;text-align:left;}
+table thead th{text-align:center;}
+caption{overflow:hidden;height:1px;}
+
+h1{margin-top:60px;}
+h1:first-child{margin-top:0;}
+h2{margin-top:50px;}
+h3{margin-top:40px;}
+h4{margin-top:40px;}
+p{margin:10px 0;}
+.listDot li{position:relative;padding-left:8px;}
+.listDot li:before{position:absolute;top:11px;left:0;width:4px;height:4px;border-radius:50%;background-color:#555;content:'';}
+
+.btnA{margin-left:10px;padding:0 5px;border:1px solid #999;border-radius:4px;font-size:15px;font-weight:normal;color:#555;text-decoration:none;}
+.btnA+.btnA{margin-left:3px;}

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>병원방문관리>방문내역</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		//tostpop();//토스트 팝업 호출 
+	})
+
+	function tostpop(){
+		var $tostCont = '<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg">업데이트를 완료했습니다.</div></div>'
+		$('.container').after($tostCont);
+		setTimeout(function(){
+			$('.tostpopupWrap').remove();
+		},4000)
+	}
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>병원방문내역</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+
+        <h2 class="defTit icoChart">
+            $김농협$ 님의<br>
+            <strong>진료 내역</strong>이에요
+            <div class="tooltipWrap">
+                <button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">결제 예정 금액 툴팁 열기</span></button>
+                <div class="tooltipCont">
+                    <div class="msaeTool">
+                        <ul class="popBul">
+                            <li>본 정보는 병·의원약국에서 청구한 진료비/약제비 정보를 바탕으로 제공되므로 청구되지 않은 최근의 진료내역/약물정보는 바로 조회되지 않을 수 있습니다.</li>
+                            <li>개인정보 보호를 위하여 특정 진료내역(법정전염병, 치매, 결핵 등)또는 약물(각성제, 정신신경용제, 일부 호르몬제 등)이 포함된 경우에는 정보가 제공되지 않습니다.</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+                </div>
+            </div>
+        </h2>
+
+        <div class="boxTypeWrap pt0 pb0">
+            <div class="historyWrap">
+                <ul class="hisList">
+                    <li>
+                        <!-- <span class="tag gray2">#일반외래</span> -->
+                        <span class="tag gray2">#처방조제</span> <!-- [2023-01-05] gray2로 통일 -->
+                        <div class="titCont">
+                            <span class="store">평화약국</span>
+                            <strong class="amount"><strong class="value">9,000</strong><em class="won">원</em></strong>
+                        </div>
+                        <div class="dateWrap">
+                            <span class="date">2022.02.12</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="tag gray2">#일반외래</span>
+                        <!-- <span class="tag gray2">#처방조제</span> --> <!-- [2023-01-05] gray2로 통일 -->
+                        <div class="titCont">
+                            <span class="store">열린성모이비인후과</span>
+                            <strong class="amount"><strong class="value">9,600</strong><em class="won">원</em></strong>
+                        </div>
+                        <div class="dateWrap">
+                            <span class="date">2022.02.12</span>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- <span class="tag gray2">#일반외래</span> -->
+                        <span class="tag gray2">#처방조제</span> <!-- [2023-01-05] gray2로 통일 -->
+                        <div class="titCont">
+                            <span class="store">대한약국</span>
+                            <strong class="amount"><strong class="value">12,800</strong><em class="won">원</em></strong>
+                        </div>
+                        <div class="dateWrap">
+                            <span class="date">2022.02.12</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="tag gray2">#일반외래</span>
+                        <!-- <span class="tag gray2">#처방조제</span> --> <!-- [2023-01-05] gray2로 통일 -->
+                        <div class="titCont">
+                            <span class="store">강서정형외과의원</span>
+                            <strong class="amount"><strong class="value">16,800</strong><em class="won">원</em></strong>
+                        </div>
+                        <div class="dateWrap">
+                            <span class="date">2022.02.12</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+		<div class="areaBtnDefault">
+			<!-- <a href="javascript:;" class="btnPressDefault" role="button">취소</a> -->
+			<a href="javascript:;" class="btnPressPoint" role="button">실손보험 청구하기</a> <!--활성화 class btnPressPoint --->
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

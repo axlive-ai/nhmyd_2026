@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>입력항목보기</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>입력항목보기</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+
+		<h2 class="defTit">
+			<strong class="foBold">2022년</strong> <span>13월의 월급은 <span><br>
+			<strong><span class="dataValue">11,970,000원</span></strong>  환급이 예상돼요!
+			<!-- [2023-01-17] 툴팁추가 -->
+			<div class="tooltipWrap">
+				<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">계산기준 안내 툴팁 열기</span><!-- [접근성_2024] blind 수정 --></button>
+				<div class="tooltipCont">
+					<ul class="popBul">
+						<li>계산된 금액은 실제 연말정산 시 환급금액과는 다를 수 있습니다.</li>
+						<li>올해 납부 예상 세액은 $금년-1$년 기납부 예상세액을 의미합니다.</li>
+						<li>농어촌특별세액은 제외됩니다.</li>
+					</ul>
+					<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+				</div>
+			</div>
+			<!-- //[2023-01-17] 툴팁추가 -->
+		</h2> <!--08.26 tc 삭제-->
+
+		<div class="yaListArea mt30">
+			<h3 class="topTit">소득공제</h3>
+		</div>
+
+		<div class="formWrap itemWrapShadow mt20"><!--s:formWrap-->
+
+			<div class="yatoggleWarp"><!--s:yatoggleWarp-->
+				<div class="yaInfoWrap toggleWrap">
+					<div class="TitWrap">
+						<a href="javascript:;" class="toggleBtn"> <!--열릴 경우가 default일 경우  active 추가-->
+							<strong class="tit fz16">소비</strong><!--08.19 fz16추가-->
+							<ul class="yalistBox">
+								<li>
+									<span class="list_title">총 사용금액</span>
+									<span class="list_item"><span class="dataValue">9,465,655</span>원</span>
+								</li>
+							</ul>
+						</a> 
+					</div>
+
+					<div class="yamoreInfo toggleCont" style="display:none"><!--열릴 경우가 default일 경우 display:block 변경 --> 
+						<div class="item"><!--s:item-->
+							<div class="titWrap">
+								<strong class="tit">신용카드</strong>
+								<div class="tooltipWrap">
+									<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">신용카드 툴팁 열기</span></button>
+									<div class="tooltipCont">
+										<p>서비스 가입 전 해지 및 재발급된 카드의 이용금액은 미반영됩니다.
+											</p>
+										<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+									</div>
+								</div>
+							</div>
+							<div class="cont">
+								<p class="whiteBox">
+									<span class="tit">총 사용금액</span><!--08.18 텍스트 수정-->
+									<span class="price"><span class="dataValue">18,589,055</span>원</span>
+								</p>
+								<ul class="instList">
+									<li>
+										<!-- <span class="imgWrap AAAZ0000"><em class="blind">NH농협카드</em></span> -->
+										<span class="imgWrap"> <!-- [2022-11-21] 사보현 : 로고 공통 이미지로 변경 -->
+											<img src="../../images/logos/AAAZ0000.png" alt="NH농협카드 로고" class="imgLogo">
+										</span>
+										<span class="accTit">NH농협카드</span>
+										<span class="accPrice"><span class="dataValue">8,000,000</span>원</span>
+									</li>
+									<li>
+										<!-- <span class="imgWrap A1AAER0000"><em class="blind">신한카드</em></span> -->
+										<span class="imgWrap"> <!-- [2022-11-21] 사보현 : 로고 공통 이미지로 변경 -->
+											<img src="../../images/logos/AAER0000.png" alt="신한카드 로고" class="imgLogo">
+										</span>
+										<span class="accTit">신한카드</span>
+										<span class="accPrice"><span class="dataValue">8,000,000</span>원</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!--//e:item-->
+						<div class="item"><!--s:item-->
+							<div class="titWrap">
+								<strong class="tit">체크카드</strong>
+								<div class="tooltipWrap">
+									<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">체크카드 툴팁 열기</span></button>
+									<div class="tooltipCont">
+										<p>서비스 가입 전 해지 및 재발급된 카드의 이용금액은 미반영됩니다.
+											</p>
+										<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+									</div>
+								</div>
+							</div>
+							<div class="cont">
+								<p class="whiteBox">
+									<span class="tit">총 사용금액</span><!--08.18 텍스트 수정-->
+									<span class="price"><span class="dataValue">18,589,055</span>원</span>
+								</p>
+								<ul class="instList">
+									<li>
+										<!-- <span class="imgWrap A1AAEO0000"><em class="blind">국민카드</em></span> -->
+										<span class="imgWrap"> <!-- [2022-11-21] 사보현 : 로고 공통 이미지로 변경 -->
+											<img src="../../images/logos/AAEO0000.png" alt="국민카드 로고" class="imgLogo">
+										</span>
+										<span class="accTit">국민카드</span>
+										<span class="accPrice"><span class="dataValue">8,000,000</span>원</span>
+									</li>
+									<li>
+										<!-- <span class="imgWrap A1AAEQ0000"><em class="blind">기업은행</em></span> -->
+										<span class="imgWrap"> <!-- [2022-11-21] 사보현 : 로고 공통 이미지로 변경 -->
+											<img src="../../images/logos/AAEQ0000.png" alt="기업은행 로고" class="imgLogo">
+										</span>
+										<span class="accTit">기업은행(카드) </span>
+										<span class="accPrice"><span class="dataValue">8,000,000</span>원</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!--//e:item-->
+						<div class="item ty02"><!--s:item-->
+							<div class="titWrap dsf">
+								<strong class="tit">현금영수증</strong>
+								<!-- <button type="button" class="contBtn01">불러오기</button> -->
+							</div>
+							<div class="cont">
+								<p class="whiteBox">
+									<span class="tit">총 사용금액</span><!--08.18 텍스트 수정-->
+									<span class="price"><span class="dataValue">560,000</span>원</span>
+								</p>
+								<!-- <div class="cashList">
+									<span class="Tit">수집일자</span>
+									<span class="cont">2022.07.31 12:05<span class="period">(3일 경과)</span>
+									<span class="period nonecont">미연결</span></span>
+								</div> -->
+							</div>
+						</div>
+						<!--//e:item-->
+						<div class="item ty02"><!--s:item-->
+							<div class="titWrap dsf">
+								<strong class="tit">제로페이</strong>
+								<!-- <button type="button" class="contBtn01">불러오기</button> -->
+							</div>
+							<div class="cont">
+								<p class="whiteBox">
+									<span class="tit">사용금액</span>
+									<span class="price"><span class="dataValue">100,000</span>원</span>
+								</p>
+								<!-- <div class="cashList">
+									<span class="Tit">수집일자</span>
+									<span class="cont">2022.07.31 12:05<span class="period">(3일 경과)</span>
+									<span class="period nonecont">미연결</span></span>
+								</div> -->
+							</div>
+						</div>
+						<!--//e:item-->
+					</div>
+					
+				</div>
+			</div>
+			<!--//e:yatoggleWarp-->
+
+			<div class="yasimulList">
+				<ul>
+					<li>
+						<h3 class="listTit">전통시장</h3>
+						<div class="listCont">
+							<span class="tit">총 사용금액</span>
+							<span class="price"><span class="dataValue">850,000</span>원</span>
+						</div>
+					</li>
+					<li>
+						<h3 class="listTit">대중교통</h3>
+						<div class="listCont">
+							<span class="tit">총 사용금액</span>
+							<span class="price"><span class="dataValue">500,000</span>원</span>
+						</div>
+					</li>
+					<li>
+						<h3 class="listTit">도서/문화</h3>
+						<div class="listCont">
+							<span class="tit">총 사용금액</span>
+							<span class="price"><span class="dataValue">520,000</span>원</span>
+						</div>
+					</li>
+					<li>
+						<h3 class="listTit dsin">연금보험료</h3>
+						<div class="tooltipWrap w96">
+							<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">연금보험료 툴팁 열기</span></button>
+							<div class="tooltipCont">
+								<p>연금보험료는 국민연금, 공무원연금, 군인연금, 사학연금, 우체국 연금 중 보유하신 연금의 합계 금액입니다.
+									</p>
+								<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+							</div>
+						</div>
+						<div class="listCont">
+							<span class="tit">총 납입금액</span><!--08.18 텍스트 수정-->
+							<span class="price"><span class="dataValue">20,000,000</span>원</span>
+						</div>
+					</li>
+					<li>
+						<h3 class="listTit">건강/요양보험료</h3>
+						<div class="listCont">
+							<span class="tit">총 납입금액</span><!--08.18 텍스트 수정-->
+							<span class="price"><span class="dataValue">4,015,000</span>원</span>
+						</div>
+					</li>
+					<li>
+						<h3 class="listTit">고용보험료</h3>
+						<div class="listCont">
+							<span class="tit">총 납입금액</span><!--08.18 텍스트 수정-->
+							<span class="price"><span class="dataValue">12,200,000</span>원</span>
+						</div>
+					</li>
+					<li>
+						<h3 class="listTit dsin">주택 임차 차입금</h3> <!--08.26  dsin추가 툴팁 추가-->
+						<div class="tooltipWrap w96"><!--08.26 툴팁 추가-->
+							<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">주택 임차 차입금 툴팁 열기</span><!-- [접근성_2024] blind 수정 --></button>
+							<div class="tooltipCont">
+								<p>무주택 세대의 세대주인 근로자가 국민주택규모의 주택을 임차하기 위해 대출기관관으로부터 차입하고 그 차입금의 원리금을 상환하는 경우 상환금액의 40%를 소득공제해주는 제도입니다.
+									</p>
+								<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+							</div>
+						</div>
+						<!--//08.26 툴팁 추가-->
+						<div class="listCont">
+							<span class="tit">총 납입금액</span><!--08.18 텍스트 수정-->
+							<span class="price"><span class="dataValue">12,200,000</span>원</span>
+						</div>
+					</li>
+					<li>
+						<h3 class="listTit">주택마련저축</h3>
+						<div class="listCont">
+							<span class="tit">총 납입금액</span><!--08.18 텍스트 수정-->
+							<span class="price"><span class="dataValue">9,200,000</span>원</span>
+						</div>
+					</li>
+					<li>
+						<h3 class="listTit dsin">장기주택저당 차입금</h3><!--08.26 dsin추가 툴팁 추가-->
+						<div class="tooltipWrap w96"><!--08.26 툴팁 추가-->
+							<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">장기주택저당 차입금 툴팁 열기</span><!-- [접근성_2024] blind 수정 --></button>
+							<div class="tooltipCont">
+								<p>무주택 또는 1주택을 보유한 세대의 세대주인 근로자가 취득당시 기준시가 5억원 이하인 주택을 취득하기 위하여 해당 주택에 저당권을 설정하고 금융회사 주택도시기금으로부터 차입한 자금의 이자상환액에 대해 상환기간별로 차등하여 소득공제해주는 제도입니다.
+									</p>
+								<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+							</div>
+						</div>
+						<!--//08.26 툴팁 추가-->
+						<div class="listCont">
+							<span class="tit">총 납입금액</span><!--08.18 텍스트 수정-->
+							<span class="price"><span class="dataValue">1,500,000</span>원</span>
+						</div>
+					</li>
+					<li>
+						<h3 class="listTit">개인연금저축</h3>
+						<div class="listCont">
+							<span class="tit">총 납입금액</span><!--08.18 텍스트 수정-->
+							<span class="price"><span class="dataValue">1,000,000</span>원</span>
+						</div>
+					</li>
+					<li>
+						<h3 class="listTit dsin">투자조합 출자</h3><!--08.26 dsin추가 툴팁 추가-->
+						<div class="tooltipWrap w96"><!--08.26 툴팁 추가-->
+							<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">투자조합 출자 툴팁 열기</span><!-- [접근성_2024] blind 수정 --></button>
+							<div class="tooltipCont">
+								<p>중소기업 창업투자조합 등에 직접출자 또는 투자한 금액을 올해의 기준으로 입력합니다.<br>
+									(근로소득금액의 50%한도, 벤처기업 투자신탁의 경우 300만원 한도)
+									</p>
+								<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+							</div>
+						</div>
+						<!--//08.26 툴팁 추가-->
+						<div class="listCont">
+							<span class="tit">총 납입금액</span><!--08.18 텍스트 수정-->
+							<span class="price"><span class="dataValue">1,500,000</span>원</span>
+						</div>
+					</li>
+					<li>
+						<h3 class="listTit">우리사주조합 출연금</h3>
+						<div class="listCont">
+							<span class="tit">총 납입금액</span><!--08.18 텍스트 수정-->
+							<span class="price"><span class="dataValue">1,500,000</span>원</span>
+						</div>
+					</li>
+					<li>
+						<h3 class="listTit">장기집합투자증권 저축</h3>
+						<div class="listCont">
+							<span class="tit">총 납입금액</span><!--08.18 텍스트 수정-->
+							<span class="price"><span class="dataValue">1,500,000</span>원</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--e:formWrap-->
+
+		<div class="yaListArea mt30"><!--08.18 타이틀 추가로 div  추가-->
+			<h3 class="topTit">인적공제</h3><!--08.18 타이틀 추가-->
+			<div class="yaboxTypeWrap ty01"><!--s:formWrap-->
+				<div class="yasimulList ty01">
+					<ul>
+						<li>
+							<div class="listCont">
+								<span class="tit">본인 인적공제</span>
+								<span class="num"><em>1</em>명</span>
+							</div>
+						</li>
+						<li>
+							<!-- [2023-02-03] 현행화 -->
+							<div class="listCont">
+								<div class="left">
+									<span class="tit">배우자 인적공제</span>
+									<div class="tooltipWrap w96">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">배우자 인적공제 툴팁 열기</span><!-- [접근성_2024] blind 수정 --></button>
+										<div class="tooltipCont">
+											<p>배우자의 급여기준 사업자는 100만원, 근로소득 년간 총 급여 500만원 이하 대상입니다.
+											</p> <!--08.23 텍스트 수정-->
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<span class="num"><em>1</em>명</span>
+							</div>
+						</li>
+						<li>
+							<div class="listCont">
+								<span class="tit">근로소득 공제</span>
+								<span class="num"><em>2</em>명</span>
+							</div>
+						</li>
+						<li>
+							<div class="listCont">
+								<div class="left">
+									<span class="tit">부모님 공제</span>
+										<div class="tooltipWrap w96">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">부모님 공제 툴팁 열기</span></button>
+										<div class="tooltipCont">
+											<p>만 60세 이상 연간소득금액 100만원 이하인 부모 또는 조부모(외가포함)를 말합니다. 배우자의 직계존속도 포함됩니다.
+												</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<span class="num"><em>2</em>명</span>
+							</div>
+						</li>
+						<li>
+							<div class="listCont">
+								<div class="left">
+									<span class="tit">자녀 공제</span>
+										<div class="tooltipWrap w96">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">자녀 공제 툴팁 열기</span></button>
+										<div class="tooltipCont">
+											<p>만 20세 이하 연간소득금액 100만원 이하인 자녀, 손자녀, 배우자의 자녀, 입양자녀를 말합니다.
+												</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<span class="num"><em>2</em>명</span>
+							</div>
+						</li>
+						<li>
+							<div class="listCont">
+								<span class="tit">형제/자매 공제</span>
+								<span class="num"><em>1</em>명</span>
+							</div>
+						</li>
+						<li>
+							<div class="listCont">
+								<span class="tit">기초수급자 공제</span>
+								<span class="num"><em>1</em>명</span>
+							</div>
+						</li>
+						<li>
+							<div class="listCont">
+								<span class="tit">위탁아동 공제</span>
+								<span class="num"><em>1</em>명</span>
+							</div>
+						</li>
+						<li>
+							<div class="listCont">
+								<div class="left">
+									<span class="tit">자녀 공제</span>
+										<div class="tooltipWrap w96">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">자녀 공제 툴팁 열기</span></button>
+										<div class="tooltipCont">
+											<p>기본공제대상 자녀 중 7세 이상 20세 이하 자녀가 해당됩니다. <br> **2023년 개정안 7세 → 8세
+											</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<span class="num"><em>2</em>명</span>
+							</div>
+						</li>
+						<li>
+							<div class="listCont">
+								<div class="left">
+									<span class="tit">출산·입양</span>
+										<div class="tooltipWrap w96">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">출산·입양 툴팁 열기</span></button>
+										<div class="tooltipCont">
+											<p>해당 과세연도에 출산하거나 입양신고한 경우를 말합니다.
+												</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<span class="num"><em>0</em>명</span>
+							</div>
+						</li>
+						<li>
+							<div class="listCont">
+								<div class="left">
+									<span class="tit">경로우대</span>
+										<div class="tooltipWrap w96">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">경로우대 툴팁 열기</span></button>
+										<div class="tooltipCont">
+											<p>만 70세 이상 연간소득금액 100만원 이하인 부모 또는 조부모(외가포함)를 말합니다. 배우자의 직계존속도 포함됩니다.
+												</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<span class="num"><em>2</em>명</span>
+							</div>
+						</li>
+						<li>
+							<div class="listCont">
+								<span class="tit">장애인</span>
+								<span class="num"><em>0</em>명</span>
+							</div>
+						</li>
+						<li>
+							<div class="listCont">
+								<div class="left">
+									<span class="tit">부녀자</span>
+										<div class="tooltipWrap w96">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">부녀자 툴팁 열기</span></button>
+										<div class="tooltipCont">
+											<p>부녀자 공제는 본인이 근로소득 3천만원 이하인 여성의 경우만 해당되며, 한부모공제와 중복적용 되지 않습니다.
+												</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<span class="num"><em>0</em>명</span>
+							</div>
+						</li>
+						<li>
+							<div class="listCont">
+								<div class="left">
+									<span class="tit">한부모</span>
+										<div class="tooltipWrap w96">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">한부모 툴팁 열기</span></button>
+										<div class="tooltipCont">
+											<p>한부모 공제는 배우자가 없는 자로서 기본공제대상자인 직계비속 또는 입양자가 있는 경우 해당되며, 부녀자공제와 중복적용 되지 않습니다.
+												</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<span class="num"><em>0</em>명</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			
+			</div>
+			<!--e:formWrap-->
+		</div>
+
+		<div class="yaListArea mt30">
+			<h3 class="topTit">세액공제</h3>
+			<div class="yaboxTypeWrap ty01"><!--s:yaboxTypeWrap-->
+				<div class="yasimulList ty02"><!--08.19 ty02 추가-->
+					<ul>
+						<li><!--08.18 bdtNone 추가--> <!-- 23.01.31  bdtNone 삭제 -->
+							<h3 class="listTit">IRP</h3>
+							<div class="listCont">
+								<span class="tit">총 납입금액</span>
+								<span class="price"><span class="dataValue">978,940</span>원</span>
+							</div>
+						</li>
+						<li>
+							<h3 class="listTit">연금저축</h3>
+							<div class="listCont">
+								<span class="tit">총 납입금액</span><!--08.18 텍스트 수정-->
+								<span class="price"><span class="dataValue">5,000,000</span>원</span>
+							</div>
+							<div class="garyBox">
+								<p class="bulList">연금저축은 2001.01.01 이후 가입하여 납입한<br>금액만 포함됩니다. <!--09.19 br추가-->
+								</p>
+							</div>
+						</li>
+						<li>
+							<h3 class="listTit">보장성보험</h3>
+							<div class="listCont">
+								<span class="tit">총 납입금액</span><!--08.18 텍스트 수정-->
+								<span class="price"><span class="dataValue">5,000,000</span>원</span>
+							</div>
+						</li>	
+						<li>
+							<h3 class="listTit">의료비</h3>
+							<div class="listCont">
+								<span class="tit">총 사용금액</span>
+								<span class="price"><span class="dataValue">1,200,000</span>원</span>
+							</div>
+						</li>
+						<li>
+							<h3 class="listTit">교육비</h3>
+							<div class="listCont">
+								<span class="tit">총 사용금액</span>
+								<span class="price"><span class="dataValue">78,000</span>원</span>
+							</div>
+						</li>
+						<li>
+							<h3 class="listTit">기부금</h3>
+							<div class="listCont">
+								<span class="tit">총 납입금액</span><!--08.18 텍스트 수정-->
+								<span class="price"><span class="dataValue">4,000,000</span>원</span>
+							</div>
+						</li>
+						<li>
+							<h3 class="listTit">월세액</h3>
+							<div class="listCont">
+								<span class="tit">총 납입금액</span><!--08.18 텍스트 수정-->
+								<span class="price"><span class="dataValue">6,000,000</span>원</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--e:yaboxTypeWrap-->		
+		</div>
+		
+
+		<div class="areaBtnDefault">
+			<a href="javascript:;" class="btnPressPoint" role="button">다시 계산하기</a>
+		</div>
+
+	</div>
+</div>
+
+
+</body>
+</html>

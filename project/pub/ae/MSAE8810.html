@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>컨설팅 > 세금계산서</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		//tostpop();//토스트 팝업 호출 
+	})
+
+	function tostpop(){
+		var $tostCont = '<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg">업데이트를 완료했습니다.</div></div>'
+		$('.container').after($tostCont);
+		setTimeout(function(){
+			$('.tostpopupWrap').remove();
+		},4000)
+	}
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>세금계산기</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<!-- [2022-11-01] 수정 -->
+		<h2 class="defTit icoHeart">
+			건강보험료 확인을 위해<br>			
+			<strong>정보를 입력해주세요</strong>
+		</h2>
+		<div class="resetArea mt20">
+			<h3 class="defSubTit2">직장 건강보험료 정보 입력</h3>
+			<div class="cs btnSetReset">
+				<button type="button">입력 초기화</button>
+			</div>
+		</div>
+		<div class="formWrap mt0">
+			<div class="boxTypeWrap">
+				<h4 class="boxMainTit">직장 월 급여 정보 입력</h4>
+				<div class="titListBox">
+					<ul>
+						<li>
+							<div class="formTitN">
+								<strong>월 급여액</strong>
+								<button type="button" class="contBtn01 green">불러오기</button>
+							</div>
+							<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+								<input type="tel" title="월 급여액" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+								<span class="unit">원</span>
+								<a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="boxTypeWrap containTooltip">
+				<h4 class="boxMainTit">월 급여 외 정보 입력 (연)</h4>
+				<div class="titListBox">
+					<ul>
+						<li>
+							<div class="formTitN">
+								<strong>사업소득 등
+									<div class="tooltipWrap">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">사업소득 등 툴팁 열기</span></button>
+										<div class="tooltipCont" style="display: none;">
+											<p>보수외 소득 연2,000만원 초과 시 소득월액보험료 별도부과 “사업소득 등” 에는 사업·이자·배당·기타소득 포함</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</strong>
+							</div>
+							<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+								<input type="tel" title="사업소득 등" name="" id="" value="" placeholder="숫자만 입력">
+								<span class="unit">원</span>
+								<a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+							</div>
+						</li>
+						<li>
+							<div class="formTitN">
+								<strong>연금소득
+									<div class="tooltipWrap">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">연금소득 툴팁 열기</span></button>
+										<div class="tooltipCont" style="display: none;">
+											<p>연금소득은 입력하신 금액의 50%만 보험료 산정에 반영됩니다.</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</strong>
+							</div>
+							<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+								<input type="tel" title="연금소득" name="" id="" value="" placeholder="숫자만 입력">
+								<span class="unit">원</span>
+								<a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+							</div>
+						</li>
+						<li>
+							<div class="formTitN">
+								<strong>근로소득
+									<div class="tooltipWrap">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">근로소득 툴팁 열기</span></button>
+										<div class="tooltipCont" style="display: none;">
+											<p>근로소득은 입력하신 금액의 50%만 보험료 산정에 반영됩니다.</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</strong>
+							</div>
+							<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+								<input type="tel" title="근로소득" name="" id="" value="" placeholder="숫자만 입력">
+								<span class="unit">원</span>
+								<a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+							</div>
+						</li>
+						<!-- [2022-11-17] 삭제 -->
+						<!-- <li>
+							<div class="formTitN">
+								<strong>분리과세 주택임대소득 여부
+									<div class="tooltipWrap">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">근로소득 툴팁 열기</span></button>
+										<div class="tooltipCont" style="display: none;">
+											<p>분리과세 주택임대소득은 입력하신 금액과 신고내역(정기 80%, 단기 40%) 만큼 보험료 산정에 반영됩니다.</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</strong>
+							</div>
+							<div class="boxRadio">
+								<div class="boxRadioInn">
+									<span>
+										<input name="rdo01" id="rdo001" type="radio" checked="checked">
+										<label for="rdo001">네</label>
+									</span>
+								</div>
+								<div class="boxRadioInn">
+									<span>
+										<input name="rdo01" id="rdo002" type="radio">
+										<label for="rdo002">아니오</label>
+									</span>
+								</div>
+							</div>
+						</li> -->
+						<!-- 분리과세 주택임대소득 여부 네 선택시 노출// -->
+						<!-- <li>
+							<div class="formTitN">
+								<strong>정기임대 신고</strong>
+							</div>
+							<div class="inputList unitMan">
+								<input type="tel" title="정기임대 신고" name="" id="" value="" placeholder="숫자만 입력">
+								<span class="unit">원</span>
+								<a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+							</div>
+						</li>
+						<li>
+							<div class="formTitN">
+								<strong>단기임대 신고</strong>
+							</div>
+							<div class="inputList unitMan">
+								<input type="tel" title="단기임대 신고" name="" id="" value="" placeholder="숫자만 입력">
+								<span class="unit">원</span>
+								<a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+							</div>
+						</li>
+						<li>
+							<div class="formTitN">
+								<strong>미신고</strong>
+							</div>
+							<div class="inputList unitMan">
+								<input type="tel" title="미신고" name="" id="" value="" placeholder="숫자만 입력">
+								<span class="unit">원</span>
+								<a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+							</div>
+						</li> -->
+						<!-- //분리과세 주택임대소득 여부 네 선택시 노출 -->
+						<!-- [2022-11-17] 추가 -->
+						<li>
+							<div class="formTitN">
+								<strong>주택임대소득
+									<div class="tooltipWrap">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">주택임대소득 안내 툴팁 열기</span><!-- [접근성_2024] .blind 수정 --></button>
+										<div class="tooltipCont" style="display: none;">
+											<p>주택임대소득은 입력하신 금액과 신고내역(정기 80%, 단기 40%) 만큼 보험료 산정에 반영됩니다.</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</strong>
+							</div>
+							<div class="inputList unitMan">
+								<input type="tel" title="근로소득" name="" id="" value="" placeholder="숫자만 입력">
+								<span class="unit">원</span>
+								<a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- //[2022-11-01] 수정 -->
+
+		<div class="areaBtnDefault">
+			<!-- <a href="javascript:;" class="btnPressDefault" role="button">취소</a> -->
+			<a href="javascript:;" class="btnPressPoint" role="button">계산하기</a> <!--활성화 class btnPressPoint --->
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>이용 동의</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script type="text/javascript">
+$(function(){
+    slidePopConfirm();
+});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">연결자산 등록</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container"> 
+			
+		</div>
+		<!-- // container -->
+
+		<!-- 컨펌 팝업 -->
+		<div class="nhasset popWrap slidePopConfirm">
+			<div class="dim"></div>
+			<div class="popInner">
+				<h1>이용 동의</h1>
+				<div class="popCont">
+					<div class="formWrap selectAll mt0 pt0">
+						<div class="total">
+							<div class="formHolder check">
+								<input type="checkbox" id="type_all01" checked class="chekTypeOther">
+								<label class="check" for="type_all01">전체동의</label>
+							</div>
+						</div>
+						<div class="cont" >
+							<div class="formHolder check ">
+								<input type="checkbox" id="type01" checked="checked">
+								<label class="check" for="type01"><em>[필수]</em>인증서 본인확인서비스 이용약관</label>
+								<a href="javascript:;" class="btnView" role="button" title="[필수]인증서 본인확인서비스 이용약관"><span class="blind">약관보기</span></a>
+							</div>
+							<div class="formHolder check">
+								<input type="checkbox" id="type02" checked="checked">
+								<label class="check" for="type02"><em>[필수]</em>개인정보 처리 동의</label>
+								<a href="javascript:;" class="btnView" role="button" title="[필수]개인정보 처리 동의"><span class="blind">약관보기</span></a>
+							</div>
+							<div class="formHolder check">
+								<input type="checkbox" id="type03" checked="checked">
+								<label class="check" for="type03"><em>[필수]</em>고유식별정보 수집·이용 및 위탁 동의</label>
+								<a href="javascript:;" class="btnView" role="button" title="[필수]고유식별정보 수집·이용 및 위탁 동의"><span class="blind">약관보기</span></a>
+							</div>
+						</div>
+
+						<!-- 필수 약관 1개 -->
+						<div class="total">
+							<div class="formHolder check">
+								<input type="checkbox" id="type_all02" checked class="chekTypeOther">
+								<label class="check" for="type_all02"><em>[필수]</em>개인(신용)정보 제3자 제공 동의서</label>
+								<a href="javascript:;" class="btnView" role="button" title="[필수]개인(신용)정보 제3자 제공 동의서"><span class="blind">약관보기</span></a>
+							</div>
+						</div>
+						<!-- //필수 약관 1개 -->
+					</div>
+				</div>
+		
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">확인</a>
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- //컨펌 팝업 -->
+	</div>
+
+</body>
+</body>
+</html>

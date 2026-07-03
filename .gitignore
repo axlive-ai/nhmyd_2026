@@ -1,0 +1,13 @@
+# 빌드 의존성 (재생성 가능, 커밋 대상 아님)
+project/node_modules/
+
+# 혹시 이 폴더를 SVN에서 그대로 복사해왔다면 남아있을 수 있는 메타데이터
+**/.svn/
+
+# 로그
+npm-debug.log*
+*.log
+
+# OS / 에디터 잡파일
+.DS_Store
+Thumbs.db

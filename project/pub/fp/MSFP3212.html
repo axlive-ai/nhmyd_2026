@@ -1,0 +1,113 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>금융플래너 - 금융일정수정</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">금융일정수정 </a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">			
+			<div class="boxTypeWrap">		
+                <h2 class="defTit mt8">직접 등록한 일정을<br> 수정할 수 있어요. </h2>
+                <div class="formWrap">
+                    <div class="titListBox">
+                        <ul class="lineType">
+                            <li>
+                                <div class="defSubTit2">
+                                    <strong>공과금 종류</strong>
+                                </div>
+                                <!-- <div class="inputList">
+                                    <a href="javascript:;" title="공과금 종류 선택" aria-haspopup="true">
+                                        <span class="selectValue">전기요금</span>
+                                        <span class="selectBtn"></span>
+                                    </a>
+                                    <select name="" title="선택해주세요">
+                                        <option value=""></option>
+                                    </select>
+                                </div> -->
+                                <div class="inputList disabled"> <!-- 에러인 경우 .error 추가-->
+                                    <input type="tel" class="al" title="공과금 입력" name="" id="" value="" readonly="" placeholder="전기요금">
+                                    <a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="defSubTit2">
+                                    <strong>전자납부번호</strong>
+                                    <!-- tootip -->
+                                    <div class="tooltipWrap">
+                                        <button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">전자납부번호 안내 툴팁 열기</span></button>
+                                        <div class="tooltipCont">
+                                            <div class="imgWrap"><img src="../../images/contents/giro_sample2.png" alt="전자납부번호 샘플 이미지"></div>
+                                            <button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+                                        </div>
+                                    </div>
+                                    <!-- //tootip -->
+                                </div>
+                                <div class="inputList"> <!-- 에러인 경우 .error 추가-->
+                                    <input type="tel" class="al" title="전자납부번호 7~10자리 입력" name="" id="" value="1234567" placeholder="">
+                                    <a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="defSubTit2">
+                                    <strong>공과금 내용</strong>
+                                </div>
+                                <div class="inputList"> <!-- 에러인 경우 .error 추가-->
+                                    <input type="text" title="공과금 내용입력" name="" id="" value="우리집 8월 전기요금" placeholder="">
+                                    <a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+                                </div>
+                                <div class="wrapFormTooltip mt25">
+                                    <div class="formHolder check">
+                                        <input type="checkbox" id="type_all01" checked="" class="chekTypeOther">
+                                        <label class="check" for="type_all01">출금계좌 연결</label>
+                                    </div>
+                                    <!-- tootip -->
+                                    <div class="tooltipWrap">
+                                        <button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">평가손익 툴팁 열기</span></button>
+                                        <div class="tooltipCont">
+                                            <p>출금계좌를 연결하시면 금융일정 전에 잔액 부족 여부를 안내해 드립니다.</p>
+                                            <button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+                                        </div>
+                                    </div>
+                                    <!-- //tootip -->
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+			</div>
+			<div class="areaBtnDefault">
+				<a href="javascript:;" class="btnPressDefault" role="button">삭제</a>
+				<a href="javascript:;" class="btnPressPoint" role="button">저장</a>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

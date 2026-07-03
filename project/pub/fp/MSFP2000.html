@@ -1,0 +1,1440 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>금융플래너</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text"><img src="../../images/logoMydata2.png" alt="금융과 일상을 연결하다 NH마이데이터"></a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+
+		<!-- container -->
+		<div class="container">
+			<!-- 메뉴 --><!-- 2022-11-17 GNB 변경 -->
+			<!-- <div class="gnb">
+				<ul>
+					<li><a href="javascript:;" class="active" title="선택됨">자산</a></li>
+					<li><a href="javascript:;">소비</a></li>
+					<li class="menuStar"><a href="javascript:;"><span class="menuStarInner"><span class="blind">별</span></span></a></li>
+					<li><a href="javascript:;" title=" 선택됨">전체</a></li>
+				</ul>
+			</div> -->
+			<!-- //메뉴 -->
+			<div class="pageRefreshWrap">
+				<div class="pageRefresInner">
+					<span>
+						<span class="date">08.05 10:45</span>
+						<button type="button" class="btnUpdate"><span class="blind">업데이트</span></button>
+					</span>
+					<button type="button" class="btnAlrt new" aria-expanded="false"><span class="blind">알림</span></button>
+				</div>
+				<div class="pageAlertWrap">
+					<ul>
+						<li class="alertNotice">
+							<a href="javascript:;" role="button">
+								<dl>
+									<dt>연결중인 자산 확인이 필요해요</dt>
+									<dd>OOO에서 전송 중단 또는 거절이 있었습니다.<br/>연결관리 화면에서 확인해주세요. </dd>
+								</dl>
+							</a>
+						</li>
+						<li class="alertError">
+							<a href="javascript:;" role="button">
+								<dl>
+									<dt>정보 확인이 필요해요</dt>
+									<dd><span>$연말정산$</span> 정보수집 중 오류가 있었습니다.<br/><span>$연말정산$</span> 설정 화면에서 확인해주세요. </dd>
+								</dl>
+							</a>
+						</li>
+						<li class="alertError">
+							<a href="javascript:;" role="button">
+								<dl>
+									<dt>업데이트한지 <span>N</span>일이 지났어요</dt>
+									<dd><span>$연말정산$</span> 정보 업데이트가 필요합니다.<br/>인증관리 화면에서 확인해주세요.</dd>
+								</dl>
+							</a>
+						</li>
+						<li class="alertError">
+							<a href="javascript:;" role="button">
+								<dl>
+									<dt>정보수집이 필요해요</dt>
+									<dd><span>$연말정산$</span> 서비스 이용을 위해 정보수집이 필요합니다. 인증관리 화면에서 확인해주세요.</dd>
+								</dl>
+							</a>
+						</li>
+
+					</ul>
+					<div class="pageAlertNoData">
+						<p>업데이트 알림 내역이 없습니다.</p>
+					</div>
+					<button type="button" aria-expanded="true" class="pageAlertClose"><span>닫기</span></button>
+				</div>
+			</div>
+
+			<div class="myTopBanner bgTy01"> <!-- case1 -->
+				<a href="javascript:;" class="close" title="베너 닫기 버튼"></a>
+				<p class="txt">만료예정인 N개 기관이 있어요</p>
+				<a href="javascript:;" class="link">재 연결하고 출금내역 확인하기</a>
+			</div>
+			<div class="myTopBanner bgTy02"> <!-- case2 -->
+				<a href="javascript:;" class="close" title="베너 닫기 버튼"></a>
+				<p class="txt">연결만료된 N개 기관이 있어요</p>
+				<a href="javascript:;" class="link">재 연결하고 출금내역 확인하기</a>
+			</div>
+
+			<div class="subMainDlWrap"><!-- 클래스명 변경 -->
+				<div class="wrap_dl_calender touch_cont active">
+					<div class="dlCalenderInner">
+						<div class="dl_calender_month">
+							<button type="button" class="pMonth">
+								<span class="blind">이전달</span>
+							</button>
+							<div class="swiper calenderInfoWrap">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<a href="javascript:;" class="selectMonth" role="button"
+											title="년/월 선택">2022.10</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="javascript:;" class="selectMonth" role="button"
+											title="년/월 선택">2022.11</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="javascript:;" class="selectMonth" role="button"
+											title="년/월 선택">2022.12</a>
+									</div>
+								</div>
+							</div>
+							<button type="button" class="nMonth">
+								<span class="blind">다음달</span>
+							</button>
+							<!-- 일정추가 버튼 -->
+							<button type="button" class="plannerSchlAdd"><span class="blind">일정추가</span></button>
+							<!-- //일정추가 버튼 -->
+						</div>
+
+
+						<div class="dl_calender_week">
+							<span class="weekend">일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span
+								class="weekend">토</span>
+						</div>
+						<div class="swiper dateItemWrap">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide dl_calender_day">
+									<div class="dl_calender_row">
+										<div class="hiddenDay">
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">28</span>
+											</a>
+										</div>
+										<div>
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">1</span>
+											</a>
+										</div>
+										<div>
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">2</span>
+											</a>
+										</div>
+										<div>
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">3</span>
+											</a>
+										</div>
+										<div>
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">4</span>
+											</a>
+										</div>
+										<div>
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">5</span>
+											</a>
+										</div>
+										<div>
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">6</span>
+											</a>
+										</div>
+									</div>
+
+									<div class="dl_calender_row">
+										<div>
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">7</span>
+											</a>
+										</div>
+										<div>
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">8</span>
+											</a>
+										</div>
+										<div>
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">9</span>
+											</a>
+										</div>
+										<div>
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">10</span>
+											</a>
+										</div>
+										<div>
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">11</span>
+											</a>
+										</div>
+										<div>
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">12</span>
+											</a>
+										</div>
+										<div>
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">13</span>
+											</a>
+										</div>
+									</div>
+
+									<div class="dl_calender_row">
+										<div>
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">14</span>
+												<span class="dl_calender_subject unerColor-o">납부예정</span>
+												<span class="dl_calender_subject unerColor-p">공모주</span>
+											</a>
+										</div>
+										<div class="thisday today">
+											<a href="javascript:;">
+												<span class="dl_calender_date">15</span>
+												<span class="dl_calender_subject unerColor-o">납부예정</span>
+												<span class="dl_calender_subject unerColor-p">외2건</span>
+											</a>
+										</div>
+										<div class="birthDay">
+											<a href="javascript:;">
+												<span class="dl_calender_date">16</span>
+												<span class="dl_calender_subject unerColor-p">만기예정</span>
+											</a>
+										</div>
+										<div class="holiday">
+											<a href="javascript:;">
+												<span class="dl_calender_date">17</span>
+												<span class="dl_calender_subject unerColor-b">만기예정</span>
+												<span class="dl_calender_subject ">외 2건</span>
+											</a>
+										</div>
+										<div>
+											<a href="javascript:;">
+												<span class="dl_calender_date">18</span>
+												<span class="dl_calender_subject  unerColor-g">만기예정</span>
+											</a>
+										</div>
+										<div>
+											<a href="javascript:;">
+												<span class="dl_calender_date">19</span>
+												<span class="dl_calender_subject">MYDATA</span>
+											</a>
+										</div>
+										<div>
+											<a href="javascript:;">
+												<span class="dl_calender_date">20</span>
+												<span class="dl_calender_subject unerColor-admin">만기예정</span><!-- 09-15 bar color 클래스 추가(unerColor-admin) -->
+											</a>
+										</div>
+									</div>
+
+									<div class="dl_calender_row">
+										<div>
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">21</span>
+											</a>
+										</div>
+										<div class="thisday">
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">22</span>
+											</a>
+										</div>
+										<div>
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">23</span>
+											</a>
+										</div>
+										<div>
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">24</span>
+											</a>
+										</div>
+										<div>
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">25</span>
+											</a>
+										</div>
+										<div>
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">26</span>
+											</a>
+										</div>
+										<div>
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">27</span>
+											</a>
+										</div>
+									</div>
+
+									<div class="dl_calender_row">
+										<div>
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">28</span>
+											</a>
+										</div>
+										<div>
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">29</span>
+											</a>
+										</div>
+										<div class="holiday">
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">30</span>
+											</a>
+										</div>
+										<div>
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">31</span>
+											</a>
+										</div>
+										<div class="hiddenDay">
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">1</span>
+											</a>
+										</div>
+										<div class="hiddenDay">
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">2</span>
+											</a>
+										</div>
+										<div class="hiddenDay">
+											<a href="javascript:;" role="button">
+												<span class="dl_calender_date">3</span>
+											</a>
+										</div>
+									</div>
+
+									<!-- 
+										항목별 칼라 적용
+										* unerColor-o : 만기도래
+										* unerColor-p : 납기일 도래
+										* unerColor-b : 금융일정등록
+										* unerColor-g : 연체방어
+										* 없는 경우 : 관리자 등록
+									-->
+								</div>
+								<div class="swiper-slide dl_calender_day" style="left: 0px;">
+									<div>
+										<div class="dl_calender_row" aria-hidden="false">
+											<div class="hiddenDay" val-bas_dt="20221030" val-dow_c="7">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: rgba(254, 76, 76, 0.4)">30</span>
+												</a>
+											</div>
+											<div class="hiddenDay" val-bas_dt="20221031" val-dow_c="1">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: rgba(1, 1, 1, 0.4)">31</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221101" val-dow_c="2">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">1</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221102" val-dow_c="3">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">2</span><span
+													class="dl_calender_subject unerColor-admin">MYDATA</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221103" val-dow_c="4">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">3</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221104" val-dow_c="5">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">4</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221105" val-dow_c="6">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #3257DF">5</span>
+												</a>
+											</div>
+										</div>
+										<div class="dl_calender_row" aria-hidden="false">
+											<div val-bas_dt="20221106" val-dow_c="7">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #fe4c4c">6</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221107" val-dow_c="1">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">7</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221108" val-dow_c="2">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">8</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221109" val-dow_c="3">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">9</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221110" val-dow_c="4">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">10</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221111" val-dow_c="5">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">11</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221112" val-dow_c="6">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #3257DF">12</span>
+												</a>
+											</div>
+										</div>
+										<div class="dl_calender_row on" aria-hidden="false">
+											<div val-bas_dt="20221113" val-dow_c="7">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #fe4c4c">13</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221114" val-dow_c="1" class="thisday">
+												<a href="javascript:;" role="button" title="오늘"><span
+													class="dl_calender_date" style="color: #111">14</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221115" val-dow_c="2">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">15</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221116" val-dow_c="3">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">16</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221117" val-dow_c="4">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">17</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221118" val-dow_c="5">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">18</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221119" val-dow_c="6">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #3257DF">19</span>
+												</a>
+											</div>
+										</div>
+										<div class="dl_calender_row" aria-hidden="false">
+											<div val-bas_dt="20221120" val-dow_c="7">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #fe4c4c">20</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221121" val-dow_c="1">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">21</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221122" val-dow_c="2">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">22</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221123" val-dow_c="3">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">23</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221124" val-dow_c="4">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">24</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221125" val-dow_c="5">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">25</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221126" val-dow_c="6">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #3257DF">26</span>
+												</a>
+											</div>
+										</div>
+										<div class="dl_calender_row" aria-hidden="false">
+											<div val-bas_dt="20221127" val-dow_c="7">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #fe4c4c">27</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221128" val-dow_c="1">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">28</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221129" val-dow_c="2">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">29</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221130" val-dow_c="3">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">30</span>
+												</a>
+											</div>
+											<div class="hiddenDay" val-bas_dt="20221201" val-dow_c="4">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: rgba(1, 1, 1, 0.4)">1</span><span
+													class="dl_calender_subject unerColor-admin">MYDATA</span>
+												</a>
+											</div>
+											<div class="hiddenDay" val-bas_dt="20221202" val-dow_c="5">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: rgba(1, 1, 1, 0.4)">2</span>
+												</a>
+											</div>
+											<div class="hiddenDay" val-bas_dt="20221203" val-dow_c="6">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: rgba(50, 87, 223, 0.4)">3</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide dl_calender_day" style="left: 0px;">
+									<div>
+										<div class="dl_calender_row" aria-hidden="false">
+											<div class="hiddenDay" val-bas_dt="20221030" val-dow_c="7">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: rgba(254, 76, 76, 0.4)">30</span>
+												</a>
+											</div>
+											<div class="hiddenDay" val-bas_dt="20221031" val-dow_c="1">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: rgba(1, 1, 1, 0.4)">31</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221101" val-dow_c="2">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">1</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221102" val-dow_c="3">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">2</span><span
+													class="dl_calender_subject unerColor-admin">MYDATA</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221103" val-dow_c="4">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">3</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221104" val-dow_c="5">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">4</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221105" val-dow_c="6">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #3257DF">5</span>
+												</a>
+											</div>
+										</div>
+										<div class="dl_calender_row" aria-hidden="false">
+											<div val-bas_dt="20221106" val-dow_c="7">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #fe4c4c">6</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221107" val-dow_c="1">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">7</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221108" val-dow_c="2">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">8</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221109" val-dow_c="3">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">9</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221110" val-dow_c="4">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">10</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221111" val-dow_c="5">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">11</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221112" val-dow_c="6">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #3257DF">12</span>
+												</a>
+											</div>
+										</div>
+										<div class="dl_calender_row on" aria-hidden="false">
+											<div val-bas_dt="20221113" val-dow_c="7">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #fe4c4c">13</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221114" val-dow_c="1" class="thisday">
+												<a href="javascript:;" role="button" title="오늘"><span
+													class="dl_calender_date" style="color: #111">14</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221115" val-dow_c="2">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">15</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221116" val-dow_c="3">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">16</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221117" val-dow_c="4">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">17</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221118" val-dow_c="5">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">18</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221119" val-dow_c="6">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #3257DF">19</span>
+												</a>
+											</div>
+										</div>
+										<div class="dl_calender_row" aria-hidden="false">
+											<div val-bas_dt="20221120" val-dow_c="7">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #fe4c4c">20</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221121" val-dow_c="1">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">21</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221122" val-dow_c="2">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">22</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221123" val-dow_c="3">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">23</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221124" val-dow_c="4">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">24</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221125" val-dow_c="5">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">25</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221126" val-dow_c="6">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #3257DF">26</span>
+												</a>
+											</div>
+										</div>
+										<div class="dl_calender_row" aria-hidden="false">
+											<div val-bas_dt="20221127" val-dow_c="7">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #fe4c4c">27</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221128" val-dow_c="1">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">28</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221129" val-dow_c="2">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">29</span>
+												</a>
+											</div>
+											<div val-bas_dt="20221130" val-dow_c="3">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: #111">30</span>
+												</a>
+											</div>
+											<div class="hiddenDay" val-bas_dt="20221201" val-dow_c="4">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: rgba(1, 1, 1, 0.4)">1</span><span
+													class="dl_calender_subject unerColor-admin">MYDATA</span>
+												</a>
+											</div>
+											<div class="hiddenDay" val-bas_dt="20221202" val-dow_c="5">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: rgba(1, 1, 1, 0.4)">2</span>
+												</a>
+											</div>
+											<div class="hiddenDay" val-bas_dt="20221203" val-dow_c="6">
+												<a href="javascript:;" role="button"><span
+													class="dl_calender_date" style="color: rgba(50, 87, 223, 0.4)">3</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="touch_area" role="button" title="탭 하시면 월, 주 단위로 볼 수 있습니다."
+						aria-expanded="false"><!-- [접근성_2024] aria-expanded="false"로 수정 -->
+						<span>달력 열기</span>
+					</div>
+				</div>
+
+				<div class="whiteArea lastWhite">
+					<div class="financePlanWrap">
+						<div class="financePlanInfo1">
+							<div class="planInfoTitleWrap">
+								<div class="date"><strong>4.07(화) ~ 4.13(월)</strong></div>
+								<div class="rCont"><a href="javascript:;" class="alam"><span class="blind">알림모아보기</span></a></div>
+							</div>
+							<div class="planInfoPara">
+								<span>금융일정 총 <em class="pointColor">4</em>건 입니다.</span>
+								<!-- 툴팁 -->
+								<div class="tooltipWrap">
+									<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">금융일정 툴팁 열기</span></button>
+									<div class="tooltipCont lf0">
+										<ul class="listDash">
+											<li>휴일 출금은 익영업일에 반영됩니다.</li>
+											<li>대출 중도 상환, 자동이체 휴일 출금일 지정 등 해당기관 개별 설정에 따라 플래너 내용이 변동될 수 있습니다.</li>
+											<li>타금융기관 대출상품은 원금균등, 원리금균등, 만기예정일시 상환방식에 한하여 제공하며 상환금액 및 상환일은 차이가 있을 수 있습니다.</li>
+											<li>국세, 지방세, 범칙금 등을 제외한 기타 공과금(지로, CMS 등)은 직접 금융일정등록을 해야 합니다.</li>
+											<li>공모주 안내는 청약 권유가 아닌 단순 금융 일정 안내입니다.</li>
+										</ul>
+										<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+									</div>
+								</div>
+								<!-- //툴팁 -->
+							</div>
+						</div>
+
+						<!-- 금융일정 없을때  -->
+						<div class="financePlanInfo1">
+							<div class="planInfoTitleWrap">
+								<div class="date"><strong>4.07(화) ~ 4.13(월)</strong></div>
+								<div class="rCont"><a href="javascript:;" class="alam"><span class="blind">알림모아보기</span></a></div>
+							</div>
+							<div class="planInfoPara">
+								<span>금융일정이 없습니다.</span>
+								<!-- 툴팁 -->
+								<div class="tooltipWrap">
+									<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">금융일정 툴팁 열기</span></button>
+									<div class="tooltipCont lf0">
+										<ul class="listDash">
+											<li>휴일 출금은 익영업일에 반영됩니다.</li>
+											<li>대출 중도 상환, 자동이체 휴일 출금일 지정 등 해당기관 개별 설정에 따라 플래너 내용이 변동될 수 있습니다.</li>
+											<li>타금융기관 대출상품은 원금균등, 원리금균등, 만기예정일시 상환방식에 한하여 제공하며 상환금액 및 상환일은 차이가 있을 수 있습니다.</li>
+											<li>국세, 지방세, 범칙금 등을 제외한 기타 공과금(지로, CMS 등)은 직접 금융일정등록을 해야 합니다.</li>
+											<li>공모주 안내는 청약 권유가 아닌 단순 금융 일정 안내입니다.</li>
+										</ul>
+										<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+									</div>
+								</div>
+								<!-- //툴팁 -->
+							</div>
+							<div class="financePlanNone type01">
+								화사한 꽃들처럼 즐거운 웃음이 넘치는<br>봄날 되시길 바랍니다.
+							</div>
+							<div class="financePlanNone type02">
+								무더운 여름이 계속되고 있습니다.<br>건강관리 잘 하셨으면 좋겠습니다.
+							</div>
+							<div class="financePlanNone type03">
+								무르익어가는 곡식처럼 아름다운 결실을<br>맺는 10월 보내시길 기원합니다.
+							</div>
+							<div class="financePlanNone type04">
+								찬바람이 불어와 겨울이 되었음을<br>알려주는 11월입니다.
+							</div>
+						</div>
+						<!-- //금융일정 없을때  -->
+
+						<div class="financePlanDay">
+							<p class="financePlanDayDate">4.13 (수)</p>
+
+							<!-- 만기예정 -->							
+							<div class="boxTypeRound wrap_folding">
+								<div class="titWrap">
+									<span class="planType unerColor-o">만기예정</span> 
+								</div>
+								<div class="planTitleWrap">
+									<img src="../../images/logos/AABG0000.png" alt="NH농협" class="imgLogo">
+									<a href="javascript:;" class="planTitleInner btn_folding" role="button" aria-expanded="false">
+										<strong class="planTitle"><span class="category">NH농협</span>NH사잇돌중금리대출</strong>
+										<p class="accountNum">1002-236-1616-11</p>
+									</a>
+								</div>
+								<dl class="listbox planList">
+									<dt class="list_title">잔액</dt>
+									<dd class="list_item"><strong>10,000,000</strong><span class="unit-b">원</span></dd><!-- 09-02 통화코드 금액뒤에 붙는 경우 --> 
+								</dl>
+								<div class="folding_cont" aria-hidden="true">
+									<!-- 예적금 -->
+									<div class="widthdrowDetail">
+										<!-- 09-15 서브타이틀 삭제 -->
+										<!-- <div class="detailTitle">상세내역</div> -->
+										<dl>
+											<dt>대출일</dt>
+											<dd>2005.01.31</dd>
+										</dl>
+										<dl>
+											<dt>만기예정일</dt>
+											<dd>2025.12.31</dd>
+										</dl>
+										<dl>
+											<dt>계좌구분</dt>
+											<dd>정기적금</dd>
+										</dl>
+										<dl>
+											<dt>대출원금</dt>
+											<dd>10,000,000원</dd>
+										</dl>
+										<dl>
+											<dt>적용금리</dt>
+											<dd>0.1%</dd>
+										</dl>
+										<dl>
+											<dt>상환방식</dt>
+											<dd>원금균등분할상환</dd>
+										</dl>
+										<div class="ar mt10"><a href="javascript:;" class="linkType1" aria-haspopup="true">삭제하기</a></div>
+									</div>
+								</div>
+							</div>
+							<!-- //만기예정 -->
+						</div>
+
+						<div class="financePlanDay">
+							<p class="financePlanDayDate">4.14 (목)</p>
+
+							<!-- 공모주 -->
+							<div class="boxTypeRound wrap_folding">
+								<div class="titWrap">
+									<span class="planType unerColor-stock">공모주</span> 
+								</div>
+								<div class="planTitleWrap">
+									<img src="../../images/icon_planner_03.png" alt="공모주" class="imgLogo">
+									<a href="javascript:;" class="planTitleInner btn_folding" role="button" aria-expanded="false">
+										<strong class="planTitle">쏘카</strong>
+									</a>
+								</div>
+								<dl class="listbox planList">
+									<dt class="list_title">공모가</dt>
+									<dd class="list_item"><strong>10,000,000</strong><span class="unit-b">원</span></dd>
+								</dl>
+								<div class="folding_cont" aria-hidden="true">
+									<div class="widthdrowDetail">
+										<dl>
+											<dt>청약일</dt>
+											<dd>2021.03.10 ~ 2021.03.13</dd>
+										</dl>
+										<!-- <dl>
+											<dt>경쟁률</dt>
+											<dd>621.01 : 1</dd>
+										</dl> -->
+										<dl class="wrap_lead_manager">
+											<dt>주간사</dt>
+											<dd>
+												<div class="lead_manager">
+													<span>가나다투자증권</span>
+													<span>라마사투자증권</span>
+													<span>아자차투자증권</span>
+													<span>카타파투자증권</span>
+													<span>NH투자증권</span>
+												</div>
+											</dd>
+										</dl>
+										<!-- 2022-12-13 해당영역 삭제 -->
+										<!-- <div class="ar mt10"><a href="javascript:;" class="linkType1" aria-haspopup="true">삭제하기</a></div> -->
+										<!-- 2022-12-13 해당영역 삭제 -->
+									</div>
+								</div>
+							</div>
+							<!-- //공모주 -->
+
+							<!-- 출금예정 -->
+							<div class="boxTypeRound wrap_folding">
+								<div class="titWrap">
+									<span class="planType unerColor-g">출금예정</span> 
+								</div>
+								<div class="planTitleWrap">
+									<img src="../../images/logos/AAEM0000.png" class="imgLogo" alt="우리은행">
+									<a href="javascript:;" class="planTitleInner btn_folding" role="button" aria-expanded="false">
+										<strong class="planTitle"><span class="category">우리은행</span>위비모바일통장</strong>
+										<div class="wrap_account">
+											<p class="accountNum">1002-236748-969</p>
+											<span class="tag bgGray">만료예정</span>
+										</div>
+									</a>
+								</div>
+								<!-- 잔액 충분 -->
+								<div class="widthdrowPlanWrap safety">
+									<div class="widthdrowPlan">
+										<dl class="listbox planList">
+											<dt class="list_title">출금예정액</dt>
+											<dd class="list_item"><strong>800,000</strong></dd>
+										</dl>
+										<dl class="listbox planList">
+											<dt class="list_title">현재잔액</dt>
+											<dd class="list_item"><strong>1,800,000</strong></dd>
+										</dl>
+									</div>
+								</div>
+								<!-- //잔액 충분 -->
+
+								<!-- 잔액 주의 -->
+								<div class="widthdrowPlanWrap caution">
+									<div class="widthdrowPlan">
+										<dl class="listbox planList">
+											<dt class="list_title">출금예정액</dt>
+											<dd class="list_item"><strong>800,000</strong></dd>
+										</dl>
+										<dl class="listbox planList">
+											<dt class="list_title">현재잔액</dt>
+											<dd class="list_item"><strong>1,800,000</strong></dd>
+										</dl>
+									</div>
+								</div>
+								<!-- 잔액 주의 -->
+
+								<!-- 잔액 부족 -->
+								<div class="widthdrowPlanWrap emergency">
+									<div class="widthdrowPlan">
+										<dl class="listbox planList">
+											<dt class="list_title">출금예정액</dt>
+											<dd class="list_item"><strong>800,000</strong></dd>
+										</dl>
+										<dl class="listbox planList">
+											<dt class="list_title">현재잔액</dt>
+											<dd class="list_item"><strong>1,800,000</strong></dd>
+										</dl>
+									</div>
+								</div>
+								<!-- 잔액 부족 -->
+
+								<div class="folding_cont" aria-hidden="true">
+									<div class="widthdrowDetail">
+										<dl>
+											<dt><div><span>[삼성카드]</span> 카드대금결제</div></dt>
+											<dd><a href="javascript:;" class="btnDetail_block" role="button" aria-haspopup="true" title="삼성카드 하나로카드 상세보기"><span>505,000</span></a></dd>
+										</dl>
+										<dl>
+											<dt><div><span>[지방세]</span> 주민세</div></dt>
+											<dd><a href="javascript:;" class="btnDetail_block" role="button" aria-haspopup="true" title="지방세 주민세 상세보기"><span>505,000</span></a></dd>
+										</dl>
+										<dl>
+											<dt><div><span>[교보생명]</span> 무배당가족사랑보험</div></dt>
+											<dd><a href="javascript:;" class="btnDetail_block" role="button" aria-haspopup="true" title="교보생명 무배당 상세보기"><span>150,000</span></a></dd>
+										</dl>
+										<dl>
+											<dt><div><span>[직접등록]</span> 대학교 동창회비</div><a href="javascript:;" class="btnModify" title="NH농협 대학교 동창회비"><span class="blind">수정</span></a></dt>
+											<dd><a href="javascript:;" class="btnDetail_block" role="button" aria-haspopup="true" title="NH농협 대학교 동창회비 상세보기"><span>100,000</span></a></dd>
+										</dl>
+										<dl>
+											<dt><div><span>[신한은행]</span> 신한 SOL 적금</div></dt>
+											<dd><a href="javascript:;" class="btnDetail_block" role="button" aria-haspopup="true" title="신한은행 신한 SOL 적금 상세보기"><span>145,000</span></a></dd>
+										</dl>
+										<dl>
+											<dt><div><span>[SK텔레콤]</span> 010*96**1****</div></dt>
+											<dd><a href="javascript:;" class="btnDetail_block" role="button" aria-haspopup="true" title="SK텔레콤 010*96**1**** 상세보기"><span>110,000</span></a></dd>
+										</dl>
+									</div>
+									<div class="areaBodyBtnFull mt0 mb20">
+										<a href="javascript:;" class="btnBodyLine" role="button">즉시 충전</a>
+									</div>
+								</div>
+							</div>
+							<!-- //출금예정 -->
+
+							<!-- 납부예정 -->
+							<div class="boxTypeRound wrap_folding">
+								<div class="titWrap">
+									<span class="planType unerColor-p">납부예정</span> 
+								</div>
+								<div class="planTitleWrap">
+									<img src="../../images/icon_planner_01.png" alt="공과금" class="imgLogo">
+									<a href="javascript:;" class="planTitleInner btn_folding" role="button" aria-expanded="false">
+										<strong class="planTitle">지방세 주민세</strong><!-- [접근성_2024] span class="category" 삭제 -->
+										<p class="accountNum">1234567890123456789</p>
+									</a>
+								</div>
+								<dl class="listbox planList">
+									<dt class="list_title">금액</dt>
+									<dd class="list_item"> <strong>150,000</strong></dd>
+								</dl>
+								<div class="folding_cont" aria-hidden="true">
+									<div class="widthdrowDetail">
+										<dl>
+											<dt>발행기관분류코드</dt>
+											<dd>12</dd>
+										</dl>
+										<dl>
+											<dt>지로번호</dt>
+											<dd>1100025</dd>
+										</dl>
+										<dl>
+											<dt>지방세입금구분 </dt>
+											<dd>지방세</dd>
+										</dl>
+										<dl>
+											<dt>전자수용가번호</dt>
+											<dd>1234567890123456789</dd>
+										</dl>
+										<dl>
+											<dt>세목명</dt>
+											<dd>주민세</dd>
+										</dl>
+										<dl>
+											<dt>고지구분</dt>
+											<dd>정상</dd>
+										</dl>
+										<dl>
+											<dt>납부금액</dt>
+											<dd>21,090원</dd>
+										</dl>
+										<dl>
+											<dt>납기내후구분</dt>
+											<dd>납기내 기한</dd>
+										</dl>
+										<dl>
+											<dt>납부기한</dt>
+											<dd>~ YYYY.MM.DD</dd>
+										</dl>
+									</div>
+									<div class="areaBodyBtnFull mt0">
+										<a href="javascript:;" class="btnBodyLine" role="button">납부하기</a>
+									</div>
+									<div class="ar mt10 mb20"><a href="javascript:;" class="linkType1" aria-haspopup="true">삭제하기</a></div>
+								</div>
+							</div>
+							<!-- //납부예정 -->
+
+							<!-- 카드대금결제 --> <!--12.05 추가-->
+							<div class="boxTypeRound wrap_folding">
+								<div class="titWrap">
+									<span class="planType unerColor-p">납부예정</span> 
+								</div>
+								<div class="planTitleWrap">
+									<span class="imgWrap">
+										<img src="../../images/logos/AAEV0000.png" alt="삼성전자 로고" class="imgLogo">
+									</span>
+									<a href="javascript:;" class="planTitleInner btn_folding" role="button" aria-expanded="false">
+										<strong class="planTitle">$삼성카드$ 카드대금결제</strong>
+										<!-- <p class="accountNum">1234567890123456789</p> -->
+									</a>
+								</div>
+								<dl class="listbox planList">
+									<dt class="list_title">금액</dt>
+									<dd class="list_item"> <a href="javascript:;" title="금액 상세보기로 이동" class="linkTxtArrow"><strong>1,000,000</strong></a></dd>
+								</dl>
+								<div class="folding_cont" aria-hidden="true">
+									<div class="widthdrowDetail">
+										<dl>
+											<dt>H-Coin</dt>
+											<dd>0<em>P</em></dd>
+										</dl>
+									</div>
+									<div class="ar mt10 mb20"><a href="javascript:;" class="linkType1" aria-haspopup="true">삭제하기</a></div>
+								</div>
+							</div>
+							<!-- //카드대금결제 -->
+
+							<!-- 주택청약 -->
+							<div class="boxTypeRound">
+								<div class="titWrap">
+									<span class="planType unerColor-h">주택청약</span> 
+								</div>
+								<div class="planTitleWrap">
+									<img src="../../images/icon_planner_04.png" alt="주택청약" class="imgLogo">
+									<div class="planTitleInner" >
+										<strong class="planTitle">김해 내덕지구 중흥S-클래스 더퍼스트</strong>
+									</div>
+								</div>
+								<div class="widthdrowDetail mt20">
+									<dl>
+										<dt>분양가</dt>
+										<dd>2억9천만 ~ 3억7천만</dd>
+									</dl>
+									<dl>
+										<dt>순위 구분</dt>
+										<dd>1순위</dd>
+									</dl>
+								</div>
+								<div class="areaBodyBtnFull mt0 mb20">
+									<a href="javascript:;" class="btnBodyLine" role="button">청약 신청하러 가기</a>
+								</div>
+							</div>
+							<!-- //주택청약 -->
+
+							<!-- 직접등록 -->
+							<div class="boxTypeRound wrap_folding">
+								<div class="titWrap">
+									<span class="planType unerColor-b">직접등록</span>
+								</div>
+								<div class="planTitleWrap">
+									<img src="../../images/icon_planner_02.png" alt="직접등록" class="imgLogo">
+									<div class="planTitleInner">
+										<strong class="planTitle withMod">동창회비<a href="javascript:;" class="btnModify" title="NH농협 대학교 동창회비"><span class="blind">수정</span></a>
+											<!-- 2022-12-14 툴팁 추가 -->
+											<!-- tootip -->
+											<div class="tooltipWrap w96">
+												<button type="button" class="toolTipBtn mt0" onclick="tooltipOpen($(this))"><span class="blind">월세 툴팁 열기</span></button>
+												<div class="tooltipCont">
+													<p>월세 일정의 변경 및 삭제는 자산메뉴의 부동산 정보 수정을 통해 가능합니다.</p>
+													<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+												</div>
+											</div>
+											<!-- //tootip -->
+											<!-- 2022-12-14 툴팁 추가 -->
+										</strong>
+										
+									</div>
+									<span class="btnArea"><a href="javascript:;" class="btnDetail btn_folding" title="동창회비" aria-expanded="false"><span class="blind">상세내용보기</span></a></span>
+								</div>
+								<dl class="listbox planList">
+									<dt class="list_title">금액</dt>
+									<dd class="list_item"><strong>100,000</strong></dd>
+								</dl>
+								<div class="folding_cont" aria-hidden="true">
+									<div class="widthdrowDetail">
+										<dl>
+											<dt>등록(수정)일</dt>
+											<dd>2001.01.31</dd>
+										</dl>
+										<dl>
+											<dt>반복설정</dt>
+											<dd>31(말일)</dd>
+										</dl>
+										<dl>
+											<dt>종료일</dt>
+											<dd>2020.01.31</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+							<!-- //직접등록 -->
+
+							<!-- MYDATA -->
+							<div class="boxTypeRound">
+								<div class="titWrap">
+									<span class="flagSchelule unerColor-admin">MYDATA</span>
+								</div>
+								<div class="planTitleWrap mb20">
+									<img src="../../images/icon_planner_05.png" alt="직접등록" class="imgLogo">
+									<div class="planTitleInner">
+										<strong class="planTitle">메리크리스마스</strong>
+										<p class="planAdiminCont">신나고 즐거운 성탄 보내세요!</p>
+									</div>
+								</div>
+							</div>
+							<!-- MYDATA -->
+							
+						</div>
+					</div>
+
+					<div class="grayArea">
+						<h3 class="titleSub2">지난일정</h3>
+						<div class="financePlanDay">
+							<p class="financePlanDayDate">4.13 (수)</p>
+
+							<!-- 만기예정 -->							
+							<div class="boxTypeRound wrap_folding">
+								<div class="titWrap">
+									<span class="planType unerColor-o">만기예정</span> 
+								</div>
+								<div class="planTitleWrap">
+									<img src="../../images/logos/AABG0000.png" alt="NH농협" class="imgLogo">
+									<a href="javascript:;" class="planTitleInner btn_folding" role="button" aria-expanded="false">
+										<strong class="planTitle"><span class="category">NH농협</span>NH사잇돌중금리대출</strong>
+										<p class="accountNum">1002-236-1616-11</p>
+									</a>
+								</div>
+								<dl class="listbox planList">
+									<dt class="list_title">잔액</dt>
+									<dd class="list_item"><strong>10,000,000</strong><span class="unit-b">원</span></dd><!-- 09-02 통화코드 금액뒤에 붙는 경우 --> 
+								</dl>
+								<div class="folding_cont" aria-hidden="true">
+									<!-- 예적금 -->
+									<div class="widthdrowDetail">
+										<!-- 09-15 서브타이틀 삭제 -->
+										<!-- <div class="detailTitle">상세내역</div> -->
+										<dl>
+											<dt>대출일</dt>
+											<dd>2005.01.31</dd>
+										</dl>
+										<dl>
+											<dt>만기예정일</dt>
+											<dd>2025.12.31</dd>
+										</dl>
+										<dl>
+											<dt>계좌구분</dt>
+											<dd>정기적금</dd>
+										</dl>
+										<dl>
+											<dt>대출원금</dt>
+											<dd>10,000,000원</dd>
+										</dl>
+										<dl>
+											<dt>적용금리</dt>
+											<dd>0.1%</dd>
+										</dl>
+										<dl>
+											<dt>상환방식</dt>
+											<dd>원금균등분할상환</dd>
+										</dl>
+										<div class="ar mt10"><a href="javascript:;" class="linkType1" aria-haspopup="true">삭제하기</a></div>
+									</div>
+								</div>
+							</div>
+							<!-- //만기예정 -->
+						</div>
+					</div>
+					<!-- //08-11 수정  -->
+
+					<!-- 슬라이딩 배너 영역 -->
+					<div class="swiper-container bannerSwiperImgtype ent01">
+						<div class="swiper-wrapper ">
+							<div class="swiper-slide bannerPrd1 pr0 pl0">
+								<a href="javascript:;">
+									<img src="../../images/temp/temp_car_drive_banner01.png" alt="대체택스트 들어갑니다." class="bannerImgType" />
+								</a>
+							</div>
+							<div class="swiper-slide bannerPrd1 pr0 pl0">
+								<a href="javascript:;">
+									<img src="../../images/temp/temp_car_drive_banner01.png" alt="대체택스트 들어갑니다." class="bannerImgType" />
+								</a>
+							</div>
+							<div class="swiper-slide bannerPrd1 pr0 pl0">
+								<a href="javascript:;">
+									<img src="../../images/temp/temp_car_drive_banner01.png" alt="대체택스트 들어갑니다." class="bannerImgType" />
+								</a>
+							</div>
+						</div>
+						<div class="auto_page_btnps mt0">
+							<div class="swiper-pagination pageCarDriveBanner"></div>
+							<div class="btnPSWrap">
+								<button type="button" class="stop"><span class="blind">자동재생 정지</span></button>
+							</div>
+						</div>
+					</div>
+					<!-- //슬라이딩 배너 영역 -->
+
+					<div class="planBannerArea">
+						<a href="javascript:;" role="button"><p>NH청약플래너에서<br>청약가점과 일정을 확인해보세요!</p></a>
+					</div>
+
+					<ul class="btnBoxWrap mt20">
+						<li><button type="button"><span class="iconOutAdmin">출금예정관리</span></button></li>
+						<li><button type="button"><span class="iconSetAlarm">PUSH 관리</span></button></li>
+					</ul>
+				</div>
+
+			</div>
+			<!-- //subMainDlWrap -->
+
+            <!-- <div style="background:cyan;height:1000px">스크롤테스트 용 DIV</div> -->
+            <button type="button" class="goTopBtn"><span class="blind">최상단으로 이동</span></button>
+		</div>
+		<!-- //container -->
+
+	</div>
+
+	<script type="text/javascript">
+		//달력 스와이프
+		var swiper = new Swiper(".calenderInfoWrap", {
+			spaceBetween: 10,
+			slidesPerView: 1,
+			observer: true,
+			observeParents: true,
+			a11y : false, //[2023-01-16] 추가
+			effect: "fade",
+			touchRatio: 0,	//touch move 비활성
+			freeMode: true,
+			watchSlidesProgress: true,
+			on: { //[2023-01-16] 추가
+				init: function(){
+					$('.calenderInfoWrap .swiper-slide').attr('aria-hidden', 'true')
+					$('.calenderInfoWrap .swiper-slide-active').attr('aria-hidden', 'false')
+				},
+				transitionEnd: function () {
+					$('.calenderInfoWrap .swiper-slide').attr('aria-hidden', 'true')
+					$('.calenderInfoWrap .swiper-slide-active').attr('aria-hidden', 'false')
+				}
+			}
+		});
+		
+	
+	
+		var swiper2 = new Swiper(".dateItemWrap", {
+			initialSlide :0, //시작슬라이드 번호 0부터 시작
+			spaceBetween: 10,
+			observer: true,
+			observeParents: true,
+			autoHeight : true,
+			a11y : false, //[2023-01-16] 추가
+			pagination: {
+				el: ".swiper-pagination",
+			},
+	
+			//pagination:false,
+			navigation: {
+				nextEl: ".nMonth",
+				prevEl: ".pMonth",
+			},
+			thumbs: {
+				swiper: swiper,
+			},
+		});
+	
+		//달력 폴딩
+		$('.touch_area').click(function(){
+			var  $this = $(this);
+			if ($this.hasClass('active')) {
+				$this.removeClass('active');
+				$this.children('span').text('달력 열기');
+				$this.attr('aria-expanded','false');
+				$('.wrap_dl_calender').addClass('active');
+				/*$('.thisWeek').each(function(){
+					var $thisPOs = $(this).position().left;
+					$(this).closest('.dateItem').scrollLeft($thisPOs);
+				});*/
+				$(".wrap_dl_calender").find('.pMonth span').text('이전주'); //[2023-01-16] 추가
+				$(".wrap_dl_calender").find('.nMonth span').text('다음주'); //[2023-01-16] 추가
+			}else{
+				$this.addClass('active');
+				$this.children('span').text('달력 접기');
+				$this.attr('aria-expanded','true');
+				/*$('.thisWeek').each(function(){
+					var $thisPOs = $(this).position().left;
+					$(this).closest('.dateItem').scrollLeft($thisPOs);
+				});*/
+				$('.wrap_dl_calender').removeClass('active');
+				$(".wrap_dl_calender").find('.pMonth span').text('이전달'); //[2023-01-16] 추가
+				$(".wrap_dl_calender").find('.nMonth span').text('다음달'); //[2023-01-16] 추가
+			}
+		});
+	
+	
+		//상세 내역 폴딩
+		$('.btn_folding').click(function(){
+			var $this = $(this);
+			var $wrap = $(this).parents('.wrap_folding');
+			$wrap.toggleClass('active');
+			if ($wrap.hasClass('active')) {
+				$wrap.children('.folding_cont').attr('aria-hidden','false');
+				$wrap.children('.folding_cont').slideDown(200);
+				$this.attr('aria-expanded','true')
+			}else{
+				$wrap.children('.folding_cont').attr('aria-hidden','true');
+				$wrap.children('.folding_cont').slideUp(200);
+				$this.attr('aria-expanded','false');
+			}
+		});
+	
+		//배너 스와이프
+		$('.bannerSwiperImgtype.ent01').each(function(){
+		var $swiperContainer = $(this);
+		var swiperBannerImg01 = new Swiper('.bannerSwiperImgtype.ent01', {
+			slidesPerView: 1,
+			watchOverflow:true,
+			spaceBetween: 10,
+			loop: true,
+			observer:true,
+			observeParents : true,
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: true,
+				pauseOnMouseEnter: true,
+			},
+	
+			pagination: {
+				el: '.swiper-pagination.pageCarDriveBanner',
+				type: 'bullets',
+				clickable: true,
+				bulletElement: 'a',
+			},
+			on: {
+				transitionEnd: function () {
+					$('.swiper-slide').attr('aria-hidden', 'true')
+					$('.swiper-slide-active').attr('aria-hidden', 'false')
+				}
+			}
+		});
+		var $psbtn = $swiperContainer.find('.stop');
+		$psbtn.click(function(){
+			$(this).toggleClass('active');
+			if($(this).hasClass('active')){
+				$(this).attr('title','자동재생 시작');
+				$(this).find('.blind').text('자동재생 시작');
+				swiperBannerImg01.autoplay.stop();
+			}
+			else {
+				$(this).attr('title','자동재생 정지');
+				$(this).find('.blind').text('자동재생 정지');
+				swiperBannerImg01.autoplay.start();
+			}
+		});
+	});
+	</script>
+	</body>
+</html>

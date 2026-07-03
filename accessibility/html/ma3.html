@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Septem UI/UX accessibility</title>
+	<link rel="stylesheet" href="../css/a11y_com.css">
+	<link rel="stylesheet" href="../css/prism.css">
+	<script src="../js/prism.js"></script>
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/a11y_com.js"></script>
+</head>
+<body>
+	<!-- skip -->
+<div id="skipNav">
+	<a href="#">본문 바로가기</a>
+	<a href="#">메뉴 바로가기</a>
+</div>
+<!-- //skip -->
+<div id="wrap">
+	<!-- header -->
+	<header>
+	</header>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<nav>
+		</nav>
+		<!-- content -->
+		<main>
+			<h1>3. 이해의 용의성</h1>
+			<h2>3.1 입력 도움</h2>
+			<blockquote><p>입력 서식 이용 시, 입력 오류를 방지하거나 정정할 수 있는 방법을 제공해야 한다. 입력 서식의 오류 내용을 수정하기 용이하도록 오류가 발생된 지점으로 초점을 이동시키는 것이	바람직하다.</p></blockquote>
+			<p>입력 서식(&lt;input&gt;, &lt;textarea&gt;, &lt;select&gt; 요소 등)에 대응하는 레이블(&lt;label&gt; 요소, title 속성)을 제공해야 한다.</p>
+			<pre>
+				<code class="language-markup">
+					<script type="prism-html-markup">
+						<input type="text" title="아이디">
+						<input type="raido" checked="checked" name="vt_align" id="alignLft"><label for="alignLft">왼쪽정렬</label>
+						<input type="checkbox" name="sports" id="soccer"> <label for="soccer">축구</label>
+						<label><input type="checkbox" name="sports">축구</label>
+					</script>
+				</code>
+			</pre>
+
+			<h2>3.2 사용자 인터페이스의 일관성</h2>
+			<blockquote><p>사용자 인터페이스 컴포넌트들은 일관성 있게 배치되어야 한다.</p></blockquote>
+
+
+			<h2>3.3 깜박거림의 사용 제한</h2>
+			<blockquote><p>(깜빡임과 번쩍임 사용 제한) 초당 3~50 회 주기로 깜빡이거나 번쩍이는 콘텐츠를 제공하지 않아야 한다.</p></blockquote>
+
+			<h2>3.4 자동재생 금지</h2>
+			<ol>
+				<li>자동으로 재생되는 배경음은 제공하지 않아야 한다. 단, 3 초 미만의 배경음은 예외로 인정한다.</li>
+				<li>배경음을 사용할 경우, 사용자가 손쉽게 멈춤, 일시 정지, 음량조절 등과 같이 이를 제어할 수 있는 수단을 제공해야 한다.</li>
+			</ol>
+
+			<h2>3.5 예측 가능성</h2>
+			<blockquote><p>(사용자 요구에 따른 실행) 사용자가 의도하지 않은 기능(새 창, 초점에 의한 맥락 변화 등)은 실행되지 않아야 한다.</p></blockquote>
+			<p>초점의 이동으로 기능이 실행되서는 안되며, 항상 버튼 활성화(클릭)으로만 실행되어야한다.</p>
+			<p>새창의 링크(a)는 항상 target="blank" 속성을 가져야 한다.</p>
+		</main>
+		<!-- //content -->
+	</div>
+	<!-- //container -->
+	<!-- footer -->
+	<footer>푸터 영역</footer>
+	<!-- //footer -->
+	
+</body>
+</html>

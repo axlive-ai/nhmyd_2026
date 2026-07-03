@@ -1,0 +1,1446 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>내차관리 - 서브메인</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset ">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">내차관리</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+		<!-- container -->
+		<div class="container">
+			<!-- 2022-10-25 업데이트바 공통수정 -->
+			<div class="pageRefreshWrap">
+				<div class="pageRefresInner">
+					<span>
+						<span class="date">08.05 10:45</span>
+						<button type="button" class="btnUpdate"><span class="blind">업데이트</span></button>
+					</span>
+					<button type="button" class="btnAlrt new" aria-expanded="false"><span class="blind">알림</span></button>
+				</div>
+				<div class="pageAlertWrap">
+					<ul>
+						<li class="alertNotice">
+							<a href="javascript:;" role="button">
+								<dl>
+									<dt>연결중인 자산 확인이 필요해요</dt>
+									<dd>OOO에서 전송 중단 또는 거절이 있었습니다.<br/>연결관리 화면에서 확인해주세요. </dd>
+								</dl>
+							</a>
+						</li>
+						<li class="alertError">
+							<a href="javascript:;" role="button">
+								<dl>
+									<dt>정보 확인이 필요해요</dt>
+									<dd><span>$연말정산$</span> 정보수집 중 오류가 있었습니다.<br/><span>$연말정산$</span> 설정 화면에서 확인해주세요. </dd>
+								</dl>
+							</a>
+						</li>
+						<li class="alertError">
+							<a href="javascript:;" role="button">
+								<dl>
+									<dt>업데이트한지 <span>N</span>일이 지났어요</dt>
+									<dd><span>$연말정산$</span> 정보 업데이트가 필요합니다.<br/>인증관리 화면에서 확인해주세요.</dd>
+								</dl>
+							</a>
+						</li>
+						<li class="alertError">
+							<a href="javascript:;" role="button">
+								<dl>
+									<dt>정보수집이 필요해요</dt>
+									<dd><span>$연말정산$</span> 서비스 이용을 위해 정보수집이 필요합니다. 인증관리 화면에서 확인해주세요.</dd>
+								</dl>
+							</a>
+						</li>
+
+					</ul>
+					<div class="pageAlertNoData">
+						<p>업데이트 알림 내역이 없습니다.</p>
+					</div>
+					<button type="button" aria-expanded="true" class="pageAlertClose"><span>닫기</span></button>
+				</div>
+			</div>
+			<!-- //2022-10-25 업데이트바 공통수정 -->
+			
+			<!-- [2022-10-21] 공통 베너 수정// -->
+			<div class="myTopBanner bgTy02"> <!-- case2 -->
+				<a href="javascript:;" class="close" title="베너 닫기 버튼"></a>
+				<p class="txt">연결만료된 N개 기관이 있어요</p>
+				<a href="javascript:;" class="link">재 연결하고 보험정보 확인하기</a>
+			</div>
+			<!-- //[2022-10-21] 공통 베너 수정 -->
+			
+			<!-- 내차시세 -->
+			<div class="mycarSection">
+				<h2 class="defSubTit2">내차시세</h2>
+				<!-- 내차시세 초기 진입 -->
+				<div class="boxTypeWrap mt15">
+					<div class="carPriceLanding">
+						<div class="title">당신의 드림카를 위한<br> 스마트한 내차관리<br>지금 바로 시작하세요!</div>
+						<div class="areaBodyBtnFull mt25">
+							<a href="javascript:;" class="btnBodyLine" role="button">내차 등록하기</a>
+						</div>
+					</div>
+					<div class="carPriceNone">
+						<div class="inner">
+							<div class="title">차량을 등록하고<br>내차 시세를 확인해 보세요</div>
+							<div class="mt20"><a href="javascript:;" class="linkTxt3">내차 등록하기</a></div>
+						</div>
+						<div class="areaBodyBtnFull mt25">
+							<a href="javascript:;" class="btnBodyLine green" role="button"><span class="btnAjsale"><span class="blind">AJ셀카</span><span class="btnAjsaleLogo"></span>에서 내차 팔기</span></a>
+						</div>
+					</div> 
+				</div>
+				<!-- 내차시세 초기 진입 -->
+
+				<!-- 내차시세 차량등록 후 -->
+				<div class="boxTypeWrap">
+					<div class="carPriceWrap">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+                                <div class="swiper-slide">
+									<div class="carInfoWrap">
+										<div class="title">
+											<strong>그랜저 <span class="carBookMark"><span class="blind">대표차량</span></span></strong>
+											<p>하이브리드익스클루시브</p>
+										</div>
+										<div class="carInfoSummary">
+											<ul>
+												<dl>
+													<dt>내차시세</dt>
+													<dd>
+														<strong class="carEmptyTxt">시세 정보 없음</strong> <!-- [2023-02-02] empty 케이스 추가 -->
+														<strong><em class="pointColor">3,200</em> 만원</strong>
+														<p>출고가 대비 78%</p>
+													</dd>
+												</dl>
+												<dl>
+													<dt>주행거리</dt>
+													<dd><strong><em class="pointColor">3,200</em> km</strong></dd>
+												</dl>
+											</ul>
+											<div class="carInfoImg"><img src="../../images/contents/img_car01.png" alt=""></div>
+										</div>
+										<div class="areaBodyBtnFull mt45"> <!-- [2023-02-02] mt25 → mt45 클래스 수정 -->
+											<a href="javascript:;" class="btnBodyLine" role="button">차량 관리하기</a>
+										</div>
+									</div>
+									<div class="carPriceArea">
+										<div class="titleWrap">
+											<div class="title">시세예측</div>
+											<div class="date">2022.01.01 기준
+												<!-- tootip -->
+												<div class="tooltipWrap">
+													<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">시세예측 툴팁 열기</span></button>
+													<div class="tooltipCont">
+														<p>자동차등록원부의 주행거리 또는 내차 설정에서 선택한 주행거리로 AJ셀카의 중고차 시세를 매월 17일 기준으로 제공해 드립니다.</p>
+														<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+													</div>
+												</div>
+												<!-- //tootip -->
+											</div>
+										</div>
+										<!-- [2023-02-02] 블러 케이스 추가// -->
+										<div class="myGraphWrap">
+											<div class="myCarBlur">
+												<p class="txt">시세 정보를 준비중입니다.</p>
+											</div>
+										</div>
+										<!-- //[2023-02-02] 블러 케이스 추가 -->
+										<!-- 그래프영역 -->
+										<div class="graphWrap mt20"> <!-- [2023-02-02] graphWrap 클래스 추가 -->
+											<img src="../../images/temp/temp_car01.png" alt="">
+										</div>
+										<!-- //그래프영역 -->
+										<div class="areaBodyBtnFull mt25">
+											<a href="javascript:;" class="btnBodyLine green" role="button"><span class="btnAjsale"><span class="blind">AJ셀카</span><span class="btnAjsaleLogo"></span>에서 내차 팔기</span></a>
+										</div>
+									</div>
+			                    </div>
+
+			                    <div class="swiper-slide">
+									<div class="carInfoWrap">
+										<div class="title">
+											<strong>그랜저</strong>
+											<p>하이브리드익스클루시브</p>
+										</div>
+										<div class="carInfoSummary">
+											<ul>
+												<dl>
+													<dt>내차시세</dt>
+													<dd>
+														<strong><em class="pointColor">3,200</em> 만원</strong>
+														<p>출고가 대비 78%</p>
+													</dd>
+												</dl>
+												<dl>
+													<dt>주행거리</dt>
+													<dd><strong><em class="pointColor">3,200</em> km</strong></dd>
+												</dl>
+											</ul>
+											<div class="carInfoImg"><img src="../../images/contents/img_car01.png" alt=""></div>
+										</div>
+										<div class="areaBodyBtnFull mt25">
+											<a href="javascript:;" class="btnBodyLine" role="button">차량 관리하기</a>
+										</div>
+									</div>
+									<div class="carPriceArea">
+										<div class="titleWrap">
+											<div class="title">시세예측</div>
+											<div class="date">2022.01.01 기준
+												<!-- tootip -->
+												<div class="tooltipWrap">
+													<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">시세예측 툴팁 열기</span></button>
+													<div class="tooltipCont">
+														<p>자동차등록원부의 주행거리 또는 내차 설정에서 선택한 주행거리로 AJ셀카의 중고차 시세를 매월 17일 기준으로 제공해 드립니다.</p>
+														<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+													</div>
+												</div>
+												<!-- //tootip -->
+											</div>
+										</div>
+										<!-- 그래프영역 -->
+										<div class="graphWrap mt20"> <!-- [2023-02-02] graphWrap 클래스 추가 -->
+											<img src="../../images/temp/temp_car01.png" alt="">
+										</div>
+										<!-- //그래프영역 -->
+										<div class="areaBodyBtnFull mt25">
+											<a href="javascript:;" class="btnBodyLine green" role="button"><span class="btnAjsale"><span class="blind">AJ셀카</span><span class="btnAjsaleLogo"></span>에서 내차 팔기</span></a>
+										</div>
+									</div>
+			                    </div>
+
+			                    <div class="swiper-slide">
+			                    	<div class="carPriceLanding">
+										<div class="title">당신의 드림카를 위한<br> 스마트한 내차관리<br>지금 바로 시작하세요!</div>
+										<div class="areaBodyBtnFull mt25">
+											<a href="javascript:;" class="btnBodyLine" role="button">내차 등록하기</a>
+										</div>
+									</div>
+									<div class="carPriceNone">
+										<div class="inner">
+											<div class="title">차량을 등록하고<br>내차 시세를 확인해 보세요</div>
+											<div class="mt20"><a href="javascript:;" class="linkTxt3">내차 등록하기</a></div>
+										</div>
+										<div class="areaBodyBtnFull mt25">
+											<a href="javascript:;" class="btnBodyLine green" role="button"><span class="btnAjsale"><span class="blind">AJ셀카</span><span class="btnAjsaleLogo"></span>에서 내차 팔기</span></a>
+										</div>
+									</div> 
+			                    </div>
+			                </div>
+			               <div class="swiper-control swiperControlNew">
+	                            <div class="swiper-pagination pageCArPrice mt20"></div>
+	                        </div>
+			            </div>
+					</div>
+				</div> 
+				<!-- 내차시세 차량등록 후 -->
+			</div>
+			<!-- //내차시세 -->
+
+			<!-- 보험 -->
+			<div class="mycarSection">
+				<h2 class="defSubTit2">자동차 보험확인
+					<!-- tootip -->
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">시세예측 툴팁 열기</span></button>
+						<div class="tooltipCont">
+							<p>자동차등록원부의 주행거리 또는 내차 설정에서 선택한 주행거리로 AJ셀카의 중고차 시세를 매월 17일 기준으로 제공해 드립니다.</p>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+					<!-- //tootip -->
+				</h2>
+
+				<!-- 보험사 슬라이딩 -->
+				<div class="carinsurSlide">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<a href="javascript:;" class="carinsur_cont" title="DB손해보험 조회화면(웹브라우저)으로 이동">
+									<div class="carinsur_inner">
+										<div class="carinsur_logo"><!--11.29  B1AAET0000 삭제-->
+											<span class="imgWrap"> <!-- [2022-11-29] 윤규송 : 로고 공통 이미지로 변경 -->
+												<img src="../../images/logos/AAET0000.png" alt="DB손해보험 로고" class="imgLogo">
+											</span>
+										</div>
+										<div class="carinsur_title">
+											<strong>DB손해보험</strong>
+											<div class="carinsur_btn_area">
+												<span type="button" class="carinsur_btn">2만원 상품권</span>
+												<span class="carinsur_go"><span>바로가기</span></span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="javascript:;" class="carinsur_cont" title="현대해상보험 조회화면(웹브라우저)으로 이동">
+									<div class="carinsur_inner">
+										<div class="carinsur_logo"><!--11.29  B2AAAL0000 삭제-->
+											<span class="imgWrap"> <!-- [2022-11-29] 윤규송 : 로고 공통 이미지로 변경 -->
+												<img src="../../images/logos/AAAL0000.png" alt="현대해상보험 로고" class="imgLogo">
+											</span>
+										</div>
+										<div class="carinsur_title">
+											<strong>현대해상보험</strong>
+											<div class="carinsur_btn_area">
+												<span type="button" class="carinsur_btn">2만원 상품권</span>
+												<span class="carinsur_go"><span>바로가기</span></span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="javascript:;" class="carinsur_cont" title="KB손해보험 조회화면(웹브라우저)으로 이동">
+									<div class="carinsur_inner">
+										<div class="carinsur_logo"><!--11.29  B1AANZ0000 삭제-->
+											<span class="imgWrap"> <!-- [2022-11-29] 윤규송 : 로고 공통 이미지로 변경 -->
+												<img src="../../images/logos/AANZ0000.png" alt="KB손해보험 로고" class="imgLogo">
+											</span>
+										</div>
+										<div class="carinsur_title">
+											<strong>KB손해보험</strong>
+											<div class="carinsur_btn_area">
+												<span type="button" class="carinsur_btn">2만원 상품권</span>
+												<span class="carinsur_go"><span>바로가기</span></span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="javascript:;" class="carinsur_cont" title="하나손해보험 조회화면(웹브라우저)으로 이동">
+									<div class="carinsur_inner">
+										<div class="carinsur_logo"><!--11.29 B2AABT0000 삭제-->
+											<span class="imgWrap"> <!-- [2022-11-29] 윤규송 : 로고 공통 이미지로 변경 -->
+												<img src="../../images/logos/AABT0000.png" alt="하나손해보험 로고" class="imgLogo">
+											</span>
+										</div>
+										<div class="carinsur_title">
+											<strong>하나손해보험</strong>
+											<div class="carinsur_btn_area">
+												<span type="button" class="carinsur_btn">2만원 상품권</span>
+												<span class="carinsur_go"><span>바로가기</span></span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="javascript:;" class="carinsur_cont" title="캐롯손해보험 조회화면(웹브라우저)으로 이동">
+									<div class="carinsur_inner">
+										<div class="carinsur_logo"><!--11.29 B2AAIF0000삭제-->
+											<span class="imgWrap"> <!-- [2022-11-29] 윤규송 : 로고 공통 이미지로 변경 -->
+												<img src="../../images/logos/AAIF0000.png" alt="캐롯손해보험 로고" class="imgLogo">
+											</span>
+										</div>
+										<div class="carinsur_title">
+											<strong>캐롯손해보험</strong>
+											<div class="carinsur_btn_area">
+												<span type="button" class="carinsur_btn">2만원 상품권</span>
+												<span class="carinsur_go"><span>바로가기</span></span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="auto_page_btnps">
+							<div class="swiper-pagination carInsur"></div>
+							<div class="btnPSWrap">
+								<button type="button" class="stop"><span class="blind">자동재생 정지</span></button>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<!-- //보험사 슬라이딩 -->
+
+				<!-- 자동차보험 초기 진입 -->
+				<div class="boxTypeWrap carBoxTypeWrap carInsurType">
+					<div class="carBoxTypTitle">
+						<h3 class="iconCarTitle">자동차 보험정보</h3>
+					</div>
+					<div class="carBoxTypeCont">
+						<p>자동차 보험 정보를 확인해보세요</p>
+						<div class="areaBodyBtnFull mt20">
+							<a href="javascript:;" class="btnBodyLine" role="button">차량 관리하기</a>
+						</div>
+						<ul class="listDash mt10">
+							<li>만기된 보험 정보는 표시되지 않습니다.</li>
+						</ul>
+
+					</div>
+				</div>
+				<!-- //자동차보험 초기 진입 -->
+
+				<!-- 자동차보험 자산연결 후 -->
+				<div class="boxTypeWrap carBoxTypeWrap carInsurType carToggleCase">
+					<div class="carBoxTypTitle">
+						<h3 class="iconCarTitle">자동차 보험정보</h3>
+						<div class="foldingArea">
+							<em class="value pointColor">만기D-187</em>
+							<button type="button" class="carToggleBtn" aria-expanded="false"><span class="blind">자동차 보험정보 상세 내역 열기/닫기</span></button>
+						</div>
+					</div>
+					<div class="carBoxTypeCont" style="display:none">
+						<!-- 슬라이드 영역 -->
+						<div class="carSlide-carInsur">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+                                	<div class="swiper-slide">
+										<h4 class="carNumTitle carBookMark">대표차량(123가 5678)</h4>
+										<div class="innerBoxWrap mt10">
+											<ul class="listTypeTable">
+												<li class="pt0">
+													<dl>
+														<dt>보험사</dt>
+														<dd>삼성화재</dd>
+													</dl>
+													<dl>
+														<dt>상품명</dt>
+														<dd>애니카다이렉트 개인용</dd>
+													</dl>
+													<dl>
+														<dt>보험료</dt>
+														<dd>600,130원</dd>
+													</dl>
+													<dl>
+														<dt>보험기간</dt>
+														<dd>2021.01.15~2022.01.15</dd>
+													</dl>
+												</li>
+												<li>
+													<dl>
+														<dt>계약상태</dt>
+														<dd>정상</dd>
+													</dl>
+													<dl>
+														<dt>차량번호</dt>
+														<dd>***1234</dd>
+													</dl>
+													<dl>
+														<dt>연령특약</dt>
+														<dd>만48세 이상</dd>
+													</dl>
+													<dl>
+														<dt>운전자한정특약</dt>
+														<dd>부부</dd>
+													</dl>
+													<dl>
+														<dt>자기차량손해</dt>
+														<dd>가입</dd>
+													</dl>
+												</li>
+												<li class="pb0">
+													<dl>
+														<dt>가입차량</dt>
+														<dd>123가3456, 123가7890 외 N 대</dd>
+													</dl>
+												</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="swiper-slide">
+										<h4 class="carNumTitle">123가 5678</h4>
+										<div class="innerBoxWrap mt10">
+											<ul class="listTypeTable">
+												<li class="pt0">
+													<dl>
+														<dt>보험사</dt>
+														<dd>삼성화재</dd>
+													</dl>
+													<dl>
+														<dt>상품명</dt>
+														<dd>애니카다이렉트 개인용</dd>
+													</dl>
+													<dl>
+														<dt>보험료</dt>
+														<dd>600,130원</dd>
+													</dl>
+													<dl>
+														<dt>보험기간</dt>
+														<dd>2021.01.15~2022.01.15</dd>
+													</dl>
+												</li>
+												<li>
+													<dl>
+														<dt>계약상태</dt>
+														<dd>정상</dd>
+													</dl>
+													<dl>
+														<dt>차량번호</dt>
+														<dd>***1234</dd>
+													</dl>
+													<dl>
+														<dt>연령특약</dt>
+														<dd>만48세 이상</dd>
+													</dl>
+													<dl>
+														<dt>운전자한정특약</dt>
+														<dd>부부</dd>
+													</dl>
+													<dl>
+														<dt>자기차량손해</dt>
+														<dd>가입</dd>
+													</dl>
+												</li>
+												<li class="pb0">
+													<dl>
+														<dt>가입차량</dt>
+														<dd>123가3456, 123가7890 외 N 대</dd>
+													</dl>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-control swiperControlNew">
+		                            <div class="swiper-pagination pageCarInsure mt20"></div>
+		                        </div>
+							</div>
+							 
+						</div>
+						<!-- //슬라이드 영역 -->
+					</div>
+				</div>
+				<!-- //자동차보험 자산연결 후 -->
+
+				<!-- 운전자보험 초기 진입 -->
+				<div class="boxTypeWrap carBoxTypeWrap carInsurType">
+					<div class="carBoxTypTitle">
+						<h3 class="iconDriveTitle">운전자 보험정보</h3>
+					</div>
+					<div class="carBoxTypeCont">
+						<p>운전자 보험 정보를 확인해보세요</p>
+						<div class="areaBodyBtnFull mt20">
+							<a href="javascript:;" class="btnBodyLine" role="button">보험 자산 연결하기</a>
+						</div>
+						<ul class="listDash mt10">
+							<li>만기된 보험 정보는 표시되지 않습니다.</li>
+						</ul>
+					</div>
+				</div>
+				<!-- //운전자보험 초기 진입 -->
+
+				<!-- 운전자보험 자산연결 후 -->
+				<div class="boxTypeWrap carBoxTypeWrap carInsurType carToggleCase">
+					<div class="carBoxTypTitle">
+						<h3 class="iconDriveTitle">운전자 보험정보</h3>
+						<div class="foldingArea">
+							<em class="value pointColor">만기D-187</em>
+							<button type="button" class="carToggleBtn" aria-expanded="false"><span class="blind">운전자 보험정보 상세 내역 열기/닫기</span></button>
+						</div>
+					</div>
+					<div class="carBoxTypeCont" style="display: none">
+						<!-- 슬라이드 영역 -->
+						<div class="carSlide-carDrive">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+                                	<div class="swiper-slide">
+										<div class="innerBoxWrap mt0">
+											<ul class="listTypeTable">
+												<li class="pt0 pb0">
+													<dl>
+														<dt>보험사</dt>
+														<dd>삼성화재</dd>
+													</dl>
+													<dl>
+														<dt>상품명</dt>
+														<dd>애니카다이렉트 개인용</dd>
+													</dl>
+													<dl>
+														<dt>보험료</dt>
+														<dd>600,130원</dd>
+													</dl>
+													<dl>
+														<dt>보험기간</dt>
+														<dd>2021.01.15~2022.01.15</dd>
+													</dl>
+												</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="swiper-slide">
+										<div class="innerBoxWrap mt0">
+											<ul class="listTypeTable">
+												<li class="pt0 pb0">
+													<dl>
+														<dt>보험사</dt>
+														<dd>삼성화재</dd>
+													</dl>
+													<dl>
+														<dt>상품명</dt>
+														<dd>애니카다이렉트 개인용</dd>
+													</dl>
+													<dl>
+														<dt>보험료</dt>
+														<dd>600,130원</dd>
+													</dl>
+													<dl>
+														<dt>보험기간</dt>
+														<dd>2021.01.15~2022.01.15</dd>
+													</dl>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-control swiperControlNew">
+		                            <div class="swiper-pagination pageCarDrive mt20"></div>
+		                        </div>
+							</div>
+							
+						</div>
+						<!-- //슬라이드 영역 -->
+					</div>
+				</div>
+				<!-- //운전자보험 자산연결 후 -->
+
+				<!-- 운전자 보험 배너 -->
+				<div class="swiper-container bannerSwiperImgtype ent01">
+					<div class="swiper-wrapper ">
+						<div class="swiper-slide bannerPrd1 pr0 pl0">
+							<a href="javascript:;">
+								<img src="../../images/temp/temp_car_drive_banner01.png" alt="대체택스트 들어갑니다." class="bannerImgType" />
+							</a>
+						</div>
+						<div class="swiper-slide bannerPrd1 pr0 pl0">
+							<a href="javascript:;">
+								<img src="../../images/temp/temp_car_drive_banner01.png" alt="대체택스트 들어갑니다." class="bannerImgType" />
+							</a>
+						</div>
+						<div class="swiper-slide bannerPrd1 pr0 pl0">
+							<a href="javascript:;">
+								<img src="../../images/temp/temp_car_drive_banner01.png" alt="대체택스트 들어갑니다." class="bannerImgType" />
+							</a>
+						</div>
+					</div>
+					<div class="auto_page_btnps">
+						<div class="swiper-pagination pageCarDriveBanner"></div>
+						<div class="btnPSWrap">
+							<button type="button" class="stop"><span class="blind">자동재생 정지</span></button>
+						</div>
+					</div>
+				</div>
+				<!-- 운전자 보험 배너 -->
+			</div>
+			<!-- //보험 -->
+
+			<!-- 차계부 -->
+			<div class="mycarSection">
+				<h2 class="defSubTit2">차계부
+					<!-- tootip -->
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">차계부 툴팁 열기</span></button>
+						<div class="tooltipCont">
+							<p>자산 연결된 카드의 승인 내역을 조회하여 주유/주차/통행료/세차/정비 별 카드 상세내역과 월별 통계를 제공합니다.</p>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+					<!-- //tootip -->
+				</h2>
+
+				<!-- 차계부 초기 진입 -->
+				<div class="boxTypeWrap mt15 pb0">
+					<div class="carPriceNone carDiaryType">
+						<div class="inner">
+							<div class="title">카드와 계좌를 연결하고<br>지난 달과의 소비를 비교해보세요</div>
+							<div class="mt20"><a href="javascript:;" class="linkTxt3">자산 연결하기</a></div>
+						</div>
+					</div>
+				</div>
+				<!-- //차계부 초기 진입 -->
+
+				<!-- 차계부 자산 연결 후 -->
+				<div class="boxTypeWrap carDiaryWrap">
+					<!-- 그래프영역 -->
+					<div class="mt15"><img src="../../images/temp/temp_car02.png"></div>
+					<!-- //그래프영역 -->
+
+					<div class="carSpendDetail mt20">
+						<dl class="carSpendCataSum">
+							<dt>7월 내차 관련 총 소비</dt>
+							<dd>200,000원</dd>
+						</dl>
+						<ul class="carSpendDetailList">
+							<li>
+								<div class="titleArea">
+									<span class="title">에쓰오일㈜ 염리동 주유소 에쓰오일㈜ 염리동 주유소</span>
+									<span class="value">129,000원</span>
+								</div>
+								<p class="carInfoPara"><span class="date">2022.03.23</span><span class="cardName">삼성 the 1 플래티늄 카드</span></p>
+							</li>
+							<li>
+								<div class="titleArea">
+									<span class="title">에쓰오일㈜ 염리동 주유소</span>
+									<span class="value">129,000원</span>
+								</div>
+								<p class="carInfoPara"><span class="date">2022.03.23</span><span class="cardName">삼성 the 1 플래티늄 카드</span></p>
+							</li>
+							<li>
+								<div class="titleArea">
+									<span class="title">에쓰오일㈜ 염리동 주유소</span>
+									<span class="value">129,000원</span>
+								</div>
+								<p class="carInfoPara"><span class="date">2022.03.23</span><span class="cardName">삼성 the 1 플래티늄 카드</span></p>
+							</li>
+						</ul>
+						<!-- 리스트 없음 -->
+						<div class="nolistBox stNone">
+							<div class="noResultWrap"><p>내역이 없습니다</p></div>
+						</div>
+						<!-- //리스트 없음 -->
+						<div class="areaBodyBtnFull mt20">
+							<a href="javascript:;" class="btnBodyLine" role="button">상세 지출 리스트 바로가기</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- 고속도록 통행료 내역 없음 -->
+				<div class="boxTypeWrap carBoxTypeWrap carDiaryType carToggleCase active">
+					<div class="carBoxTypTitle">
+						<h3 class="iconHipassTitle">고속도로 통행료
+							<!-- tootip -->
+							<div class="tooltipWrap">
+								<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">고속도록 통행료 툴팁 열기</span></button>
+								<div class="tooltipCont">
+									<p>하이패스(www.hipass.co.kr)에서 고속도로 통행료 고지 여부를 확인하여 제공해드립니다. 민자노선에서 발생한 고지통행료가 조회되지 않을 시 해당 민자사 영업소에 문의하시기 바랍니다.</p>
+									<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+								</div>
+							</div>
+							<!-- //tootip -->
+						</h3>
+						<span class="dataNone">미납 내역 없음</span>
+					</div>
+				</div>
+				<!-- //고속도록 통행료 내역 없음 -->
+
+				<!-- 고속도록 통행료 내역 있음 -->
+				<div class="boxTypeWrap carBoxTypeWrap carDiaryType carToggleCase">
+					<div class="carBoxTypTitle">
+						<h3 class="iconHipassTitle">고속도로 통행료
+							<!-- tootip -->
+							<div class="tooltipWrap">
+								<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">고속도록 통행료 툴팁 열기</span></button>
+								<div class="tooltipCont">
+									<p>하이패스(www.hipass.co.kr)에서 고속도로 통행료 고지 여부를 확인하여 제공해드립니다. 민자노선에서 발생한 고지통행료가 조회되지 않을 시 해당 민자사 영업소에 문의하시기 바랍니다.</p>
+									<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+								</div>
+							</div>
+							<!-- //tootip -->
+						</h3>
+						<div class="foldingArea">
+							<em class="value pointColor">미납 내역 있음</em>
+							<button type="button" class="carToggleBtn" aria-expanded="false"><span class="blind">고속도로 통행료 상세 내역 열기/닫기</span></button>
+						</div>
+					</div>
+					<div class="carBoxTypeCont" style="display:none;">
+						<div class="hipassCont">
+							<p>고지통행료가 있습니다.</p>
+							<div class="mt10"><a href="javascript:;" class="linkTxt3"><strong>보러가기</strong></a></div>
+						</div>
+					</div>
+				</div>
+				<!-- //고속도록 통행료 내역 있음 -->
+
+				<!-- 범칙금 내역 없음 -->
+				<div class="boxTypeWrap carBoxTypeWrap carPenaltyType carToggleCase">
+					<div class="carBoxTypTitle">
+						<h3 class="iconPenaltyTitle">범칙금/과태료/세금</h3>
+						<span class="dataNone">고지 내역 없음</span>
+					</div>
+				</div>
+				<!-- 범칙금 내역 없음 -->
+
+				<!-- 범칙금 내역 있음 -->
+				<div class="boxTypeWrap carBoxTypeWrap carPenaltyType carToggleCase">
+					<div class="carBoxTypTitle">
+						<h3 class="iconPenaltyTitle">범칙금/과태료/세금</h3>
+						<div class="foldingArea">
+							<span class="value">고지내역 <em class="pointColor">3</em>건</span>
+							<button type="button" class="carToggleBtn" aria-expanded="false"><span class="blind">범칙금/과태료/세금 상세 내역 열기/닫기</span></button>
+						</div>
+					</div>
+					<div class="carBoxTypeCont" style="display:none">
+						<ul class="carPenaltyList">
+							<li>
+								<a href="javascript" role="button">
+									<span class="title">속도위반(20km/h 이하)</span>
+									<span class="value">40,000원</span>
+								</a>
+								<div class="carPenaltyInfo"><span class="date">2021.04.06</span><span class="carNum">123가4567</span></div>
+							</li>
+							<li>
+								<a href="javascript" role="button">
+									<span class="title">신호/지시 위반</span>
+									<span class="value">70,000원</span>
+								</a>
+								<div class="carPenaltyInfo"><span class="date">2021.04.06</span><span class="carNum">123가4567</span></div>
+							</li>
+							<li>
+								<a href="javascript" role="button">
+									<span class="title">자동차세 1년 세액 신고</span>
+									<span class="value">8,400,000원</span>
+								</a>
+								<div class="carPenaltyInfo"><span class="date">2021.04.06 01:12:49</span><span class="carNum">123가4567</span></div>
+							</li>
+						</ul>
+						<div class="areaBodyBtnFull mt20">
+							<a href="javascript:;" class="btnBodyLine" role="button">전체 내역 보기</a>
+						</div>
+					</div>
+				</div>
+				<!-- 범칙금 내역 있음 -->
+
+
+				<!-- 리콜정보 내역 없음 -->
+				<div class="boxTypeWrap carBoxTypeWrap carRecallType carToggleCase ">
+					<div class="carBoxTypTitle">
+						<h3 class="iconRecallTitle">리콜정보
+							<!-- tootip -->
+							<div class="tooltipWrap">
+								<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">리콜정보 툴팁 열기</span></button>
+								<div class="tooltipCont">
+									<p>리콜조치여부는 자동차관리법에 의해 분기별로 제작사가 국토교통부에 보고한 리콜내역을 바탕으로 제공되어 이전 분기까지의 리콜조치여부 확인이 가능합니다.</p>
+									<p>*환경부 리콜은 리콜완료여부 서비스를 제공하지 않습니다.</p>
+									<p>*자동차리콜센터 업무시간(평일, 09:00~18:00)외에는 자동차 정보 조회 불가 등의 사유로 리콜대상확인 서비스가 제한될 수 있습니다.</p> <!-- [2023-02-09] 툴팁 내용 추가 -->
+									<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+								</div>
+							</div>
+							<!-- //tootip -->
+						</h3>
+						<!-- [2023-01-30] 토글버튼 추가// -->
+						<div class="foldingArea">
+							<span class="dataNone">내역 없음</span>
+							<button type="button" class="carToggleBtn" aria-expanded="false"><span class="blind">리콜정보 상세 내역 열기/닫기</span></button>
+						</div>
+						<!-- //[2023-01-30] 토글버튼 추가 -->
+					</div>
+					<!-- [2023-01-30] 토글내용 추가// -->
+					<div class="carBoxTypeCont" style="display:none">
+						<div class="noResultWrap">
+							<p>리콜정보 신규 내역이 없습니다.</p>
+						</div>
+						<div class="areaBodyBtnFull mt20">
+							<a href="javascript:;" class="btnBodyLine" role="button">리스트 바로가기</a>
+						</div>
+						<a href="javascript:;" class="linkTxt3" role="button">제공:자동차리콜센터</a> <!-- [2023-02-09] 링크버튼으로 변경 -->
+					</div>
+					<!-- //[2023-01-30] 토글내용 추가 -->
+				</div>
+				<!-- //리콜정보 내역 없음 -->
+
+				<!-- 리콜정보 내역 있음 -->
+				<div class="boxTypeWrap carBoxTypeWrap carRecallType carToggleCase">
+					<div class="carBoxTypTitle">
+						<h3 class="iconRecallTitle">리콜정보
+							<!-- tootip -->
+							<div class="tooltipWrap">
+								<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">리콜정보 툴팁 열기</span></button>
+								<div class="tooltipCont">
+									<p>리콜조치여부는 자동차관리법에 의해 분기별로 제작사가 국토교통부에 보고한 리콜내역을 바탕으로 제공되어 이전 분기까지의 리콜조치여부 확인이 가능합니다.</p>
+									<p>*환경부 리콜은 리콜완료여부 서비스를 제공하지 않습니다.</p>
+									<p>*자동차리콜센터 업무시간(평일, 09:00~18:00)외에는 자동차 정보 조회 불가 등의 사유로 리콜대상확인 서비스가 제한될 수 있습니다.</p> <!-- [2023-02-09] 툴팁 내용 추가 -->
+									<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+								</div>
+							</div>
+							<!-- //tootip -->
+						</h3>
+						<div class="foldingArea">
+							<span class="value">미완료 <em class="pointColor">3</em>건</span>
+							<button type="button" class="carToggleBtn" aria-expanded="false"><span class="blind">리콜정보 상세 내역 열기/닫기</span></button>
+						</div>
+					</div>
+					<div class="carBoxTypeCont" style="display:none">
+						<div class="carSlide-carRecall">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="carRecallTitle">
+											<span class="carRecallNum carBookMark">대표차량(123가4567)</span><!-- 대표차량 carBookMark 클래스 사용  -->
+											<span class="carRecallInfo">전체 <em>4</em>건 / 미완료 <em class="pointColor">3</em>건</span>
+										</div>
+										<ul class="carRecallList">
+											<li>
+												<a href="javascript:;" role="button">
+													<span class="carRecallSubject">
+														<span class="title">[비엠더블유] BMW 1 Series Sport 등 57차종- 배기가스재순환창치 관련 리콜 </span>
+														<span class="date">2021.11.29~</span>
+													</span>
+													<span><em class="tag red">미완료</em></span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:;" role="button">
+													<span class="carRecallSubject">
+														<span class="title">[비엠더블유] BMW 1 Series Sport 등 57차종- 배기가스재순환창치 관련 리콜 </span>
+														<span class="date">2021.11.29~</span>
+													</span>
+													<em class="tag red">미완료</em>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:;" role="button">
+													<span class="carRecallSubject">
+														<span class="title">[비엠더블유] BMW 1 Series Sport 등 57차종- 배기가스재순환창치 관련 리콜 </span>
+														<span class="date">2021.11.29~</span>
+													</span>
+													<em class="tag red">미완료</em>
+												</a>
+											</li>
+										</ul>
+										<div class="areaBodyBtnFull mt20">
+											<a href="javascript:;" class="btnBodyLine" role="button">리스트 바로가기</a>
+										</div>
+										<a href="javascript:;" class="linkTxt3" role="button">제공:자동차리콜센터</a> <!-- [2023-02-09] 링크버튼으로 변경 -->
+									</div>
+									<div class="swiper-slide">
+										<div class="carRecallTitle">
+											<span class="carRecallNum">123가4567</span><!-- 대표차량 carBookMark 클래스 사용  -->
+											<span class="carRecallInfo">전체 <em>4</em>건 / 미완료 <em class="pointColor">3</em>건</span>
+										</div>
+										<ul class="carRecallList">
+											<li>
+												<a href="javascript:;" role="button">
+													<span class="carRecallSubject">
+														<span class="title">[비엠더블유] BMW 1 Series Sport 등 57차종- 배기가스재순환창치 관련 리콜 </span>
+														<span class="date">2021.11.29~</span>
+													</span>
+													<span><em class="tag red">미완료</em></span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:;" role="button">
+													<span class="carRecallSubject">
+														<span class="title">[비엠더블유] BMW 1 Series Sport 등 57차종- 배기가스재순환창치 관련 리콜 </span>
+														<span class="date">2021.11.29~</span>
+													</span>
+													<em class="tag red">미완료</em>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:;" role="button">
+													<span class="carRecallSubject">
+														<span class="title">[비엠더블유] BMW 1 Series Sport 등 57차종- 배기가스재순환창치 관련 리콜 </span>
+														<span class="date">2021.11.29~</span>
+													</span>
+													<em class="tag red">미완료</em>
+												</a>
+											</li>
+										</ul>
+										<div class="areaBodyBtnFull mt20">
+											<a href="javascript:;" class="btnBodyLine" role="button">리스트 바로가기</a>
+										</div>
+										<p class="listDash subTxt7 mt10 pb5">제공:자동차리콜센터</p>
+									</div>
+								</div>
+								<div class="swiper-control swiperControlNew">
+		                            <div class="swiper-pagination pageCarRecall mt20"></div>
+		                        </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //리콜정보 내역 있음 -->
+
+				<!-- 자동차 검사 -->
+				<div class="boxTypeWrap carBoxTypeWrap carInspecType carToggleCase">
+					<div class="carBoxTypTitle">
+						<h3 class="iconInspecTitle">자동차 검사</h3>
+						<div class="foldingArea">
+							<em class="value pointColor">D-100</em>
+							<button type="button" class="carToggleBtn" aria-expanded="false"><span class="blind">자동차 보험정보 상세 내역 열기/닫기</span></button>
+						</div>
+					</div>
+					<div class="carBoxTypeCont" style="display: none">
+						<div class="carSlide-carInspec">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<h4 class="carNumTitle carBookMark">대표차량(123가 5678)</h4>
+										<div class="innerBoxWrap">
+											<ul class="listTypeTable">
+												<li class="pt0 pb0">
+													<dl>
+														<dt>정기/종합 검사일</dt>
+														<dd class="dayValue pointColor">D-100</dd><!-- 2022-11-28 클래스 수정 -->
+													</dl>
+													<dl>
+														<dt>검사기간</dt>
+														<dd>2021.01.15~2022.01.15</dd>
+													</dl>
+												</li>
+											</ul>
+										</div>
+										<div class="areaBodyBtnFull mt20">
+											<a href="javascript:;" class="btnBodyLine" role="button">자동차 검사 예약하기</a>
+										</div>
+									</div>
+
+									<div class="swiper-slide">
+										<h4 class="carNumTitle">123가 5678</h4>
+										<div class="innerBoxWrap">
+											<ul class="listTypeTable">
+												<li class="pt0 pb0">
+													<dl>
+														<dt>정기/종합 검사일</dt>
+														<dd class="dayValue">D-88</dd><!-- 2022-11-28 클래스 수정 -->
+													</dl>
+													<dl>
+														<dt>검사기간</dt>
+														<dd>2021.01.15~2022.01.15</dd>
+													</dl>
+												</li>
+											</ul>
+										</div>
+										<div class="areaBodyBtnFull mt20">
+											<a href="javascript:;" class="btnBodyLine" role="button">자동차 검사 예약하기</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-control swiperControlNew">
+		                            <div class="swiper-pagination pageCarInspec mt20"></div>
+		                        </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //자동차 검사 -->
+
+				<!-- 운전면허 초기 진입 -->
+				<div class="boxTypeWrap carBoxTypeWrap carLicenseType">
+					<div class="carBoxTypTitle">
+						<h3 class="iconLicenseTitle">운전면허 정보</h3>
+					</div>
+					<div class="carBoxTypeCont">
+						<p>운전면허 정보를 확인해보세요</p>
+						<div class="areaBodyBtnFull mt20">
+							<a href="javascript:;" class="btnBodyLine" role="button">운전면허 정보 불러오기</a>
+						</div>
+					</div>
+				</div>
+				<!-- //운전면허 초기 진입 -->
+
+				<!-- 운전면허 갱신일 -->
+				<div class="boxTypeWrap carBoxTypeWrap carLicenseType carToggleCase">
+					<div class="carBoxTypTitle otherType">
+						<div class="titleInner">
+							<h3 class="iconLicenseTitle">운전면허 갱신일</h3>
+							<div class="foldingArea">
+								<em class="value pointColor">D-100</em>
+								<button type="button" class="carToggleBtn" aria-expanded="false"><span class="blind">운전면허 갱신일 상세 내역 열기/닫기</span></button>
+							</div>
+						</div>
+						<div class="driveLicenseUpdate"><a href="javascript:;" class="">최종업데이트   YYYY.MM.DD hh:mm(N일 경과)</a></div>
+					</div>
+					<div class="carBoxTypeCont" style="display:none">
+						<div class="carLicenseTitle">
+							<h4>운전면허 정보</h4>
+							<a href="javascript:;" class="contBtn01">벌점/법규위반 조회</a>
+						</div>
+						<div class="innerBoxWrap mt10">
+							<ul class="listTypeTable">
+								<li class="pt0 pb0">
+									<dl>
+										<dt>면허정보</dt>
+										<dd>유효</dd>
+									</dl>
+									<dl>
+										<dt>소지종별</dt>
+										<dd>1종보통</dd>
+									</dl>
+									<dl>
+										<dt>적검(갱신)기간</dt>
+										<dd>2026.01.01~2026.12.31</dd>
+									</dl>
+									<dl>
+										<dt>적검(갱신)일자</dt>
+										<dd>2016.01.01</dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- //운전면허 갱신일 -->
+
+				<!-- 운전자 보험 배너 -->
+				<div class="swiper-container bannerSwiperImgtype ent02">
+					<div class="swiper-wrapper ">
+						<div class="swiper-slide bannerPrd1 pr0 pl0">
+							<a href="javascript:;">
+								<img src="../../images/temp/temp_car_drive_banner01.png" alt="대체택스트 들어갑니다." class="bannerImgType" />
+							</a>
+						</div>
+						<div class="swiper-slide bannerPrd1 pr0 pl0">
+							<a href="javascript:;">
+								<img src="../../images/temp/temp_car_drive_banner01.png" alt="대체택스트 들어갑니다." class="bannerImgType" />
+							</a>
+						</div>
+						<div class="swiper-slide bannerPrd1 pr0 pl0">
+							<a href="javascript:;">
+								<img src="../../images/temp/temp_car_drive_banner01.png" alt="대체택스트 들어갑니다." class="bannerImgType" />
+							</a>
+						</div>
+					</div>
+					<div class="auto_page_btnps">
+						<div class="swiper-pagination pageCarDriveBanner"></div>
+						<div class="btnPSWrap">
+							<button type="button" class="stop"><span class="blind">자동재생 정지</span></button>
+						</div>
+					</div>
+				</div>
+				<!-- 운전자 보험 배너 -->
+
+				<!-- //차계부 자산 연결 후 -->
+			</div>
+			<!-- //차계부 -->
+
+			<ul class="btnBoxWrap">
+				<li><button type="button"><span class="iconCertiAlarm">인증관리</span></button></li>
+				<li><button type="button"><span class="iconSetAlarm">알림설정</span></button></li>
+			</ul>
+
+			<button type="button" class="goTopBtn"><span class="blind">최상단으로 이동</span></button>
+		</div>
+		<!-- //container -->
+		<!-- <div class="cs registBtn" style="display: block;">
+            <a href="javascript:;" role="button">자산연결</a> </div> -->
+		<!-- footer --> <!-- 공통 마이데이터 푸터-->
+		<!-- <script type="text/javascript" src="../../../ms/pub/pub-assets/js/footer.js"></script> -->
+		<!-- //footer -->
+
+	</div>
+<script type="text/javascript">
+	$('.swiper-slide').each(function(){
+		var $this = $(this);
+		var $thisHeight = $this.outerHeight();
+		$this.css('minHeight',$thisHeight + 20)
+	});
+ $(function () {
+    var swiper = new Swiper('.carPriceWrap .swiper-container', {
+        spaceBetween: 16,
+        autoplay: false,
+        autoHeight: true,
+        observer:true,
+		observeParents : true,
+        pagination: {
+            el: '.swiper-pagination.pageCArPrice',
+            type: 'bullets',
+            clickable: true,
+            bulletElement: 'a',
+        },
+        on: {
+            init: function(){
+                $('.carPriceWrap .swiper-slide').attr('aria-hidden','true');
+                $('.carPriceWrap .swiper-slide-active').attr('aria-hidden','false');
+            },
+            slideChangeTransitionEnd : function(){
+                var $shareBannerBtn = $(".carPriceWrap .swiper-pagination");
+                $shareBannerBtn.find("a").attr('title','');
+                $shareBannerBtn.find("a").eq(this.activeIndex).attr('title','선택됨');
+                $('.swiper-slide').attr('aria-hidden','true');
+                $('.swiper-slide-active').attr('aria-hidden','false');
+            }
+        }
+    });
+})
+
+
+//자동차 보험사 슬라이딩
+var carinsurSlide = function(){
+	$('.carinsurSlide ').each(function(){
+		var $swiperContainer = $(this);
+		var swiper = new Swiper('.carinsurSlide .swiper-container', {
+			slidesPerView: 'auto',
+			spaceBetween: 10,
+			observer:true,
+			observeParents : true,
+			loop: true,
+			autoHeight: true,
+			autoplay:{
+				delay:1500,
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable:true,
+				bulletElement: 'a',
+			},
+			on: {
+				transitionEnd: function () {
+					$('.swiper-slide').attr('aria-hidden', 'true')
+					$('.swiper-slide-active').attr('aria-hidden', 'false')
+				}
+			}
+		});
+
+		var $psbtn = $swiperContainer.find('.stop');
+		$psbtn.click(function(){
+			$(this).toggleClass('active');
+			if($(this).hasClass('active')){
+				$(this).attr('title','자동재생 시작');
+				$(this).find('.blind').text('자동재생 시작');
+				swiper.autoplay.stop();
+			}
+			else {
+				$(this).attr('title','자동재생 정지');
+				$(this).find('.blind').text('자동재생 정지');
+				swiper.autoplay.start();
+			}
+		});
+	});
+}
+carinsurSlide()
+
+//자동차 보험 스와이프
+var swiperCarCar = new Swiper('.carSlide-carInsur .swiper-container', {
+    spaceBetween: 16,
+    autoplay: false,
+   	autoHeight: true,
+   	observer:true,
+	observeParents : true,
+    pagination: {
+        el: '.swiper-pagination.pageCarInsure',
+        type: 'bullets',
+        clickable: true,
+        bulletElement: 'a',
+    },
+    on: {
+        init: function(){
+            $('.carPriceWrap .swiper-slide').attr('aria-hidden','true');
+            $('.carPriceWrap .swiper-slide-active').attr('aria-hidden','false');
+        },
+        slideChangeTransitionEnd : function(){
+            var $shareBannerBtn = $(".carPriceWrap .swiper-pagination");
+            $shareBannerBtn.find("a").attr('title','');
+            $shareBannerBtn.find("a").eq(this.activeIndex).attr('title','선택됨');
+            $('.swiper-slide').attr('aria-hidden','true');
+            $('.swiper-slide-active').attr('aria-hidden','false');
+        }
+    }
+});
+
+//운전자 보험 스와이프
+var swiperCarDrive = new Swiper('.carSlide-carDrive .swiper-container', {
+    spaceBetween: 16,
+    autoplay: false,
+   	autoHeight: true,
+   	observer:true,
+	observeParents : true,
+    pagination: {
+        el: '.swiper-pagination.pageCarDrive',
+        type: 'bullets',
+        clickable: true,
+        bulletElement: 'a',
+    },
+    on: {
+        init: function(){
+            $('.carPriceWrap .swiper-slide').attr('aria-hidden','true');
+            $('.carPriceWrap .swiper-slide-active').attr('aria-hidden','false');
+        },
+        slideChangeTransitionEnd : function(){
+            var $shareBannerBtn = $(".carPriceWrap .swiper-pagination");
+            $shareBannerBtn.find("a").attr('title','');
+            $shareBannerBtn.find("a").eq(this.activeIndex).attr('title','선택됨');
+            $('.swiper-slide').attr('aria-hidden','true');
+            $('.swiper-slide-active').attr('aria-hidden','false');
+        }
+    }
+});
+
+//리콜정보 스와이프
+var swiperCarDrive = new Swiper('.carSlide-carRecall .swiper-container', {
+    spaceBetween: 16,
+    //watchOverflow:true,
+    autoplay: false,
+   	autoHeight: true,
+   	observer:true,
+	observeParents : true,
+    pagination: {
+        el: '.swiper-pagination.pageCarRecall',
+        type: 'bullets',
+        clickable: true,
+        bulletElement: 'a',
+    },
+    on: {
+        init: function(){
+            $('.carPriceWrap .swiper-slide').attr('aria-hidden','true');
+            $('.carPriceWrap .swiper-slide-active').attr('aria-hidden','false');
+        },
+        slideChangeTransitionEnd : function(){
+            var $shareBannerBtn = $(".carPriceWrap .swiper-pagination");
+            $shareBannerBtn.find("a").attr('title','');
+            $shareBannerBtn.find("a").eq(this.activeIndex).attr('title','선택됨');
+            $('.swiper-slide').attr('aria-hidden','true');
+            $('.swiper-slide-active').attr('aria-hidden','false');
+        }
+    }
+});
+
+//자동차 검사 스와이프 
+var swiperCarDrive = new Swiper('.carSlide-carInspec .swiper-container', {
+    spaceBetween: 16,
+    watchOverflow:true,
+    autoplay: false,
+   	autoHeight: true,
+   	observer:true,
+	observeParents : true,
+    pagination: {
+        el: '.swiper-pagination.pageCarInspec',
+        type: 'bullets',
+        clickable: true,
+        bulletElement: 'a',
+    },
+    on: {
+        init: function(){
+            $('.carPriceWrap .swiper-slide').attr('aria-hidden','true');
+            $('.carPriceWrap .swiper-slide-active').attr('aria-hidden','false');
+        },
+        slideChangeTransitionEnd : function(){
+            var $shareBannerBtn = $(".carPriceWrap .swiper-pagination");
+            $shareBannerBtn.find("a").attr('title','');
+            $shareBannerBtn.find("a").eq(this.activeIndex).attr('title','선택됨');
+            $('.swiper-slide').attr('aria-hidden','true');
+            $('.swiper-slide-active').attr('aria-hidden','false');
+            // 2022-11-28 추가
+            var ddayValue = $('.swiper-slide-active').find('.dayValue').text()
+            $('.carInspecType .foldingArea .value').text(ddayValue)
+        }
+    }
+});
+
+//운전자 보험 배너 스와이프
+$('.bannerSwiperImgtype.ent01').each(function(){
+	var $swiperContainer = $(this);
+	var swiperBannerImg01 = new Swiper('.bannerSwiperImgtype.ent01', {
+		slidesPerView: 1,
+		watchOverflow:true,
+		spaceBetween: 10,
+		loop: true,
+		observer:true,
+		observeParents : true,
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: true,
+			pauseOnMouseEnter: true,
+		},
+
+		pagination: {
+			el: '.swiper-pagination.pageCarDriveBanner',
+			type: 'bullets',
+			clickable: true,
+			bulletElement: 'a',
+		},
+		on: {
+			transitionEnd: function () {
+				$('.swiper-slide').attr('aria-hidden', 'true')
+				$('.swiper-slide-active').attr('aria-hidden', 'false')
+			}
+		}
+	});
+	var $psbtn = $swiperContainer.find('.stop');
+	$psbtn.click(function(){
+		$(this).toggleClass('active');
+		if($(this).hasClass('active')){
+			$(this).attr('title','자동재생 시작');
+			$(this).find('.blind').text('자동재생 시작');
+			swiperBannerImg01.autoplay.stop();
+		}
+		else {
+			$(this).attr('title','자동재생 정지');
+			$(this).find('.blind').text('자동재생 정지');
+			swiperBannerImg01.autoplay.start();
+		}
+	});
+});
+
+$('.bannerSwiperImgtype.ent02').each(function(){
+	var $swiperContainer02 = $(this);
+	var swiperBannerImg02 = new Swiper('.bannerSwiperImgtype.ent02', {
+		slidesPerView: 1,
+		watchOverflow:true,
+		spaceBetween: 10,
+		loop: true,
+		observer:true,
+		observeParents : true,
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: true,
+			pauseOnMouseEnter: true,
+		},
+
+		pagination: {
+			el: '.swiper-pagination.pageCarDriveBanner',
+			type: 'bullets',
+			clickable: true,
+			bulletElement: 'a',
+		},
+		on: {
+			transitionEnd: function () {
+				$('.swiper-slide').attr('aria-hidden', 'true')
+				$('.swiper-slide-active').attr('aria-hidden', 'false')
+			}
+		}
+	});
+	var $psbtn = $swiperContainer02.find('.stop');
+	$psbtn.click(function(){
+		$(this).toggleClass('active');
+		if($(this).hasClass('active')){
+			$(this).attr('title','자동재생 시작');
+			$(this).find('.blind').text('자동재생 시작');
+			swiperBannerImg02.autoplay.stop();
+		}
+		else {
+			$(this).attr('title','자동재생 정지');
+			$(this).find('.blind').text('자동재생 정지');
+			swiperBannerImg02.autoplay.start();
+		}
+	});
+})
+
+//슬라이드 토글 	
+$('.carToggleBtn').click(function(){
+	var $this = $(this);
+	var $parent = $this.closest('.carToggleCase');
+	var $target = $parent.find('.carBoxTypeCont')
+	if ($parent.hasClass('active')) {
+		$parent.removeClass('active');
+		$target.slideUp();
+		$this.attr('aria-expanded','false')
+	}else{
+		$parent.addClass('active')
+		$target.slideDown();
+		$this.attr('aria-expanded','true')
+	}
+});
+
+</script>
+</body>
+</html>

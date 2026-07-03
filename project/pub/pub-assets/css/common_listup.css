@@ -1,0 +1,44 @@
+body{padding:0 20px;font-family:"맑은 고딕","돋움";font-size:12px;font-weight:400;margin:0;overflow-y:scroll}
+h1{position:relative;font-size:20px;font-weight:700;margin-bottom:20px;padding:10px;background:#f3f3f3;border:1px solid #dedede;text-align:center}
+h1 strong{font-size:22px;color:#4265ed!important}
+table.type01{width:100%;border-collapse:collapse;text-align:left;line-height:1.5;border-left:1px solid #dedede;margin:15px 0;table-layout:fixed;font-size:12px;}
+table.type01 thead th{padding:7px 5px;font-weight:700;background:#4286f7;color:#fff;text-align:center;border-left:1px solid #5992bd;border-right:1px solid #5992bd}
+table.type01 tbody th{width:150px;padding:10px;font-weight:700;vertical-align:middle;border-right:1px solid #dedede;border-bottom:1px solid #dedede;background:#ececec;text-align:center}
+table.type01 td{width:350px;padding:5px;vertical-align:middle;border-right:1px solid #dedede;border-bottom:1px solid #dedede;word-break:break-all}
+table.type01 td:last-child{width:400px}
+td>a{color:#666;font-weight:700}
+
+/* */
+.info{padding-top:30px}
+.info>h2{font-size:14px;padding-bottom:10px;font-weight:700}
+.info>ul>li{font-size:14px;padding-bottom:7px}
+.red{color:red}
+.total{font-size:15px}
+.total em{font-style:normal}
+.date strong{font-weight:400}
+.date a{text-decoration:none;cursor:help}
+.date a:hover{color:red}
+.del td,.del td a,.del td strong{text-decoration:line-through;color:#ccc}
+.del td[rowspan]{text-decoration:none;color:#000}
+.bdTop{border-top:2px solid #000}
+.btnBack{position:absolute;top:13px;left:15px;padding:5px 10px;background:#000;border-radius:3px;font-size:13px;color:#fff;text-decoration:none}
+.category{position:absolute;top:20px;right:20px;font-size:13px;font-style:normal}
+/*! 2019_고도화 */
+.godoWrap.type01{display:block;margin-top:10px}
+.godoWrap.type02{display:block;margin-top:0}
+.godoWrap .gdTit.type01,.godoWrap .gdTit.type02{display:inline-block;color:#fff;background:red;padding:2px 4px;margin:5px 0 5px;border-radius:5px}
+.godoWrap .gdTit.type01{background:red}
+.godoWrap .gdTit.type02{background:#ff8400}
+.godoWrap .gdSub01,.godoWrap .gdSub02{display:block;padding-left:14px;text-indent:-14px}
+.godoWrap .gdSub01{color:#000}
+.godoWrap .gdSub02{color:red}
+/*! 2020_고도화 */
+select{width:100%;height:100%;padding:0;font-family:"맑은 고딕","돋움";font-size:12px;border:0;background-color:#3170ea;color:#fff;vertical-align:top}
+.linetitle{background-color:#eee}
+.remark strong{display:block}
+.date{color:#ddd}
+.date strong{display:block;color:#000}
+.remark span{color:#4885e0}
+.remark span:after{content:' : '}
+.remark p{margin:0 0 2px}
+.ac{text-align:center}

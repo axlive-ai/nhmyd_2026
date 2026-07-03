@@ -1,0 +1,147 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>숨긴내역</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function(){
+		fullLayerPop();
+	})
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<h1><a href="javascript:;" role="text"></a></h1>
+			<a href="javascript:;" class="btnEtc"></a>
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+		</div>
+		<!-- //container -->
+	</div>
+
+	<!-- 팝업시작 -->
+	<div class="nhasset popWrap fullLayerPop">
+		<div class="popInner">
+			<h1>숨긴내역</h1>
+			<div class="popCont fullH">
+				<h2 class="defTit mt25 mb0"><strong>정기지출에 숨긴 내역이<br />총 <span class="pointColor">N</span>건 있어요</strong></h2>
+				<div class="boxTypeWrap pt0 pb0">
+                    <div class="cardSpendList mt0">
+                        <div class="inoutListWrap">
+                            <div class="inoutListInn">
+                                <ul class="inoutList">
+                                    <li>
+                                        <a href="javascript:;" class="link">
+                                            <div class="isCategory">
+                                                <div class="mr10">
+                                                    <input type="checkbox" id="listAll" class="chekTypeOther" name="" checked>
+                                                </div>
+                                                <div class="imgWrap icoCate">
+                                                    <span class="img">
+                                                        <img src="../../images/ico_netflex.png" alt="">
+                                                    </span>
+                                                </div>
+                                                <div class="cs textWrap">
+                                                    <div class="inoutTit">
+                                                        <span class="use">넷플릭스</span>
+                                                        <span class="amount"><strong class="dataValue">5,500</strong><em class="won">원</em></span>
+                                                    </div>
+                                                    <div class="inoutCont">
+                                                        <div class="timeWrap">
+                                                            <span class="time">10일<span class="tit">농협카드</span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="link">
+                                            <div class="isCategory">
+                                                <div class="mr10">
+                                                    <input type="checkbox" id="listAll" class="chekTypeOther" name="" checked>
+                                                </div>
+                                                <div class="imgWrap icoCate">
+                                                    <span class="img">
+                                                        <img src="../../images/category/fc/ico_cate_fc09_01.png" alt="">
+                                                    </span>
+                                                </div>
+                                                <div class="cs textWrap">
+                                                    <div class="inoutTit">
+                                                        <span class="use">GS25의왕청계타워점</span>
+                                                        <span class="amount"><strong class="dataValue">24,160</strong><em class="won">원</em></span>
+                                                    </div>
+                                                    <div class="inoutCont">
+                                                        <div class="timeWrap">
+                                                            <span class="time">28일<span class="tit">현대카드</span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="link">
+                                            <div class="isCategory">
+                                                <div class="mr10">
+                                                    <input type="checkbox" id="listAll" class="chekTypeOther" name="" checked>
+                                                </div>
+                                                <div class="imgWrap icoCate">
+                                                    <span class="img">
+                                                        <img src="../../images/category/fc/ico_cate_fc09_01.png" alt="">
+                                                    </span>
+                                                </div>
+                                                <div class="cs textWrap">
+                                                    <div class="inoutTit">
+                                                        <span class="use">현대백화점</span>
+                                                        <span class="amount"><strong class="dataValue">150,000</strong><em class="won">원</em></span>
+                                                    </div>
+                                                    <div class="inoutCont">
+                                                        <div class="timeWrap">
+                                                            <span class="time">30일<span class="tit">롯데카드</span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+
+			<div class="popBtnWrap">
+				<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+                <div class="popBtn">
+                    <a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">숨기기 해제</a>
+                </div>
+            </div>
+		</div>
+	</div>
+	<!-- // 팝업 끝 -->
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="publisher" content="[SEPTEM] UI Dev Team">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title></title>
+<script src="../pub-assets/js/head.js"></script>
+<style>
+	body .inr{padding:30px 30px 10px}
+	.tit {font-size: 22px;color: #2d2d2d;display: block;margin-bottom: 40px;background-color: #fff;}
+	.h3Tit {margin: 50px 0 10px; font-size: 16px; color: #666; font-weight: normal; color: #3b5997}
+	table.type02 { width:100%;border-collapse: collapse; text-align: left;line-height: 1.5; border-left: 1px solid #ccc;}
+	table.type02 thead th { padding: 10px; font-weight: bold;border-top: 1px solid #ccc;border-right: 1px solid #ccc; border-bottom: 2px solid #c00;background: #8a8a8a;color:#fff;text-align:center;}
+	table.type02 tbody th { width: 150px; padding: 10px;font-weight: bold; vertical-align: middle; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; background: #ececec;}
+	table.type02 td {width: 350px; padding: 10px; vertical-align: middle; border-right: 1px solid #ccc;  border-bottom: 1px solid #ccc;}
+	/* td > a{color:#d36000 !important;} */
+	td > a:hover{text-decoration:underline !important;}
+
+	.bgColor {background: #eee;}
+</style>
+</head>
+
+<body>
+<div id="contentsF">
+	<div class="inr dfs">
+		<h2 class="tit">산출물 폴더구조</h2>
+		<p class="descTxt">프로젝트별 퍼블리싱 파일 리스트와 샘플가이드 등의 구조를 정의한다.</p>
+
+		<h3 class="h3Tit">폴더 구조</h3>
+		<p>회색영역에 실제 작업파일이 추가된다.</p>
+		<table class="type02 mt20" cellspacing="0" cellpadding="0">
+			<colgroup>
+				<col style="width:10%">
+				<col style="width:10%">
+				<col style="width:10%">
+				<col style="width:10%">
+				<col style="width:10%">
+				<col style="width:20%">
+				<col style="width:auto">
+			</colgroup>
+			<thead>
+				<tr>
+					<th colspan="5" scope="col">directory</th>
+					<th scope="col">file name</th>
+					<th scope="col">용도</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td colspan="5">./accessibility/</td>
+					<td>*</td>
+					<td>접근성 지침</td>
+				</tr>
+				<tr>
+					<td width="100" rowspan="20">./project/</td>
+					<td rowspan="17" class="bgColor">content/</td>
+					<td rowspan="7">ms_com/</td>
+					<td colspan="2">css/</td>
+					<td>*</td>
+					<td>공통 css</td>
+				</tr>
+				<tr>
+					<td colspan="2">fonts/</td>
+					<td>*</td>
+					<td>공통 폰트</td>
+				</tr>
+				<tr>
+					<td colspan="2">html/</td>
+					<td>*</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">images/</td>
+					<td>common/</td>
+					<td>*</td>
+					<td>공통 이미지</td>
+				</tr>
+				<tr>
+					<td>contents/</td>
+					<td>*</td>
+					<td>공통 이미지</td>
+				</tr>
+				<tr>
+					<td>logos/</td>
+					<td>*</td>
+					<td>공통 기관로고</td>
+				</tr>
+				<tr>
+					<td colspan="2">js/</td>
+					<td>*</td>
+					<td>공통 스크립트</td>
+				</tr>
+				<tr>
+					<td colspan="3">ms/</td>
+					<td></td>
+					<td>마이데이터포털</td>
+				</tr>
+				<tr>
+					<td rowspan="9" class="bgColor">nhasset/</td>
+					<td colspan="2" class="bgColor">css/</td>
+					<td class="bgColor">
+						<p>nhasset_com.css (컨텐츠 전반)<br>
+							nhasset_main.css (메인,서브메인)</p>
+					</td>
+					<td class="bgColor">NH자산+ css</td>
+				</tr>
+				<tr>
+					<td rowspan="3" class="bgColor">html/</td>
+					<td class="bgColor">co/</td>
+					<td class="bgColor">*</td>
+					<td class="bgColor">NH자산+ 약관</td>
+				</tr>
+				<tr>
+					<td class="bgColor">notice/</td>
+					<td class="bgColor">*</td>
+					<td class="bgColor">NH자산+ 공지사항 상세</td>
+				</tr>
+				<tr>
+					<td class="bgColor">rp/</td>
+					<td class="bgColor">*</td>
+					<td class="bgColor">NH자산+ 하나로가족고객 혜택</td>
+				</tr>
+				<tr>
+					<td rowspan="3" class="bgColor">images/</td>
+					<td class="bgColor">category/</td>
+					<td class="bgColor">*</td>
+					<td class="bgColor">NH자산+ 카테고리 이미지</td>
+				</tr>
+				<tr>
+					<td class="bgColor">notice/</td>
+					<td class="bgColor">*</td>
+					<td class="bgColor">NH자산+ 공지사항상세 이미지</td>
+				</tr>
+				<tr>
+					<td class="bgColor">terms/</td>
+					<td class="bgColor">*</td>
+					<td class="bgColor">NH자산+ 약관 이미지</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="bgColor">js/</td>
+					<td class="bgColor">nhasset-ui</td>
+					<td class="bgColor">NH자산 +js</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="bgColor">pub/</td>
+					<td class="bgColor">*</td>
+					<td class="bgColor">NH자산+ 퍼블리싱 작업파일</td>
+				</tr>
+				<tr>
+					<td rowspan="3">guide/</td>
+					<td colspan="3">css/</td>
+					<td></td>
+					<td>디자인가이드 css</td>
+				</tr>
+				<tr>
+					<td colspan="3">html/</td>
+					<td></td>
+					<td>디자인가이드 html</td>
+				</tr>
+				<tr>
+					<td colspan="3">images/</td>
+					<td></td>
+					<td>디자인가이드 이미지</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div><!-- //contentsF -->
+</body>
+
+</html>

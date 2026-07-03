@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>주소 검색</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script type="text/javascript">
+$(function(){
+    fullLayerPop();
+});
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>Full 팝업</h1>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<div class="content">
+			<div class="btnWrap page">
+				<a href="javascript:;" onclick="fullLayerPop();return false;" aria-haspopup="true" role="button" class="btn">fullLayerPop</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="nhasset popWrap fullLayerPop" role="dialog">
+	<div class="popInner">
+		<h1>주소 검색</h1>
+		<div class="popCont">
+			
+			<div class="formWrap">
+				<ul>
+					<li class="addrSrch">
+						<div class="txtt2 mb15"><strong>도로명 주소 찾기</strong></div>
+						<div class="inputList">
+							<input type="text" title="도로명 주소 찾기" value="" placeholder="">
+							<!-- 2022-12-07 버튼 위치변경 -->
+							<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+							<button class="btnSearch"><span class="blind">찾기</span></button>
+							<!-- //2022-12-07 버튼 위치변경 -->
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="searchResultWrap type02">
+				<ul class="searchResultList">
+					<li>
+						<a href="javascript:;" role="button">
+							<span class="title">경기도 의왕시 청계동 657
+								경기도 의왕시 성고개로 59 (포일동)</span>
+							<span class="subTxt">16006 (16006)</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;" role="button">
+							<span class="title">경기도 의왕시 청계동 657
+								경기도 의왕시 성고개로 59 (포일동)</span>
+							<span class="subTxt">16006 (16006)</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;" role="button">
+							<span class="title">경기도 의왕시 청계동 657
+								경기도 의왕시 성고개로 59 (포일동)</span>
+							<span class="subTxt">16006 (16006)</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="noResultWrap">
+				<p>검색 결과가 없습니다.</p>
+			</div>
+
+		</div>
+		<div class="popBtnWrap">
+			<div class="popBtn">
+				<a href="javascript:;" class="confirmBtn disabled" role="button" aria-disabled="true">확인</a> <!-- [2023-01-16] 접근성 수정 -->
+				<a href="javascript:;" class="confirmBtn" style="display:none;margin:0 !important" role="button">확인</a>
+			</div>
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$('.searchResultList a').click(function(){
+		var $this = $(this);
+		$this.closest('.searchResultList').find('li').removeClass('active')
+		$this.closest('li').addClass('active')
+	});
+
+</script>
+</body>
+</html>

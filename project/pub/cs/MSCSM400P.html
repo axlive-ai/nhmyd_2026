@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>나의 한 달 설정</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		fullLayerPop();
+	})
+</script>
+</head>
+
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<h1><a href="javascript:;" role="text"></a></h1>
+			<a href="javascript:;" class="btnEtc"></a>
+		</div>
+		<!-- //header -->
+
+		<!-- container -->
+		<div class="container">
+
+		</div>
+		<!-- //container -->
+	</div>
+
+	<!-- 팝업시작 -->
+	<div class="nhasset popWrap fullLayerPop">
+		<div class="popInner">
+			<h1>나의 한 달 설정</h1>
+			<div class="popCont grayPop">
+				<div class="cs btnSetReset mt20">
+					<button type="button">설정초기화</button>
+				</div>
+				<div class="warpMonthSet">
+					<div class="topHead month"> <!-- [2021-08-06] 한은정 : 에러케이스(.error) 삭제 -->
+						<div class="tit">
+							<span>나의 한 달은</span>
+							<div class="cs filterSelect">
+								<button type="button" title="월 시작일 선택" aria-haspopup="true" class="pointColor">30</button> 일
+							</div> 
+							<!-- [2021-08-06] 윤지현:날짜선택 팝업으로 변경에 따른 마크업수정 // 에러클래스(error)-->
+						</div>
+						<div class="tit">
+							<span>부터 시작해요.</span>
+						</div>
+						<div class="txt01 spendSet">
+							<p>이번 달</p>
+							<p>총 28일(07.05~08.04)</p>
+							<!-- <p class="error">1부터 31까지 입력 할 수 있습니다.</p> -->
+						</div>
+					</div>
+
+					<div class="boxTypeWrap">
+						<div class="cs_list_top_tit">
+							<div>
+								<h2 class="defSubTit mt0">
+									<strong>한 달 예산은?</strong>
+								</h2>
+							</div>
+							<div>
+								<p class="fs13">3개월 평균 약 <span class=pointColor>250만원</span> 소비</p> 
+							</div>
+						</div>
+						<div class="priceSet bdNone">
+							<div class="priceInp bgNone">
+								<div class="formWrapBox">
+									<ul>
+										<li>
+											<div class="inputList unitMan">
+												<input type="tel" id="" title="한 달 예산" class="ar" value="" placeholder="최소 1만원이상">
+												<span class="unit">만원</span>
+												<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+											</div>
+										</li>
+									</ul>
+								</div>
+								
+								<!-- [2022-12-29] 금액증가버튼 a로 수정 -->
+								<!-- <div class="cateSubList">
+									<div class="roundChkWrap flexType">
+										<ul>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="sample11" id="sample11">
+													<label for="sample11">+10만</label>
+												</span>
+											</li>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="sample11" id="sample12">
+													<label for="sample12">+50만</label>
+												</span>
+											</li>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="sample11" id="sample13">
+													<label for="sample13">+100만</label>
+												</span>
+											</li>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="sample11" id="sample14">
+													<label for="sample14">+300만</label>
+												</span>
+											</li>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="sample11" id="sample15">
+													<label for="sample15">+500만</label>
+												</span>
+											</li>
+										</ul>
+									</div>
+								</div> -->
+								<div class="roundBtnWrap">
+									<a href="javascript:;" role="button" title="10만원 추가">+10만</a>
+									<a href="javascript:;" role="button" title="50만원 추가">+50만</a>
+									<a href="javascript:;" role="button" title="100만원 추가">+100만</a>
+									<a href="javascript:;" role="button" title="300만원 추가">+300만</a>
+									<a href="javascript:;" role="button" title="500만원 추가">+500만</a>
+								</div>
+								<div class="errorTxt ls005">1부터 999,999,999까지 입력 가능합니다.</div>
+								<!--case: <div class="errorTxt ls005">월 예산 2만원은 카테고리 예산보다 작아요.</div> -->
+							</div>
+						</div>
+					</div>
+					<div class="boxTypeWrap">
+						<h2 class="defSubTit mt0"><strong>카테고리 별 소비 예산은?</strong></h2>
+						<div class="priceSetList">
+							<ul>
+								<li>
+									<div class="cate">
+										<span class="imgWrap icoCate">
+											<span class="img"><img src="../../images/category/cs/ico_cate_cs05.png" alt="온라인쇼핑 아이콘"></span>
+											온라인쇼핑
+										</span>									
+										<div class="data">지난달 <span class="value">1,001,045,000원</span></div>
+									</div>
+									<div class="formWrapBox">
+										<ul>
+											<li>
+												<div class="inputList unitMan error on">
+													<input type="tel" id="" title="온라인쇼핑 카테고리 소비 예산" class="ar" value="1,000" placeholder="이번 달 예산 입력"> <!-- error의 경우 클래스 추가 --> <!-- [2021-10-18]한은정 : title수정 -->
+													<span class="unit">만원</span>
+													<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+												</div>
+												<div class="graphBtm">
+													<span class="value pointColor10">설정가능 예산 100만원</span>
+												</div>
+												<!-- <p class="priceTxt">설정가능 예산 <span class="pointColor05">100</span>만원</p> -->
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div class="cate">
+										<span class="imgWrap icoCate">
+											<span class="img"><img src="../../images/category/cs/ico_cate_cs01.png" alt="외식 아이콘"></span>
+											외식
+										</span>									
+										<div class="data">지난달 <span class="value">45,000원</span></div>
+									</div>
+									<div class="formWrapBox">
+										<ul>
+											<li>
+												<div class="inputList unitMan">
+													<input type="tel" id="" title="외식 카테고리 소비 예산" class="ar" value="" placeholder="이번 달 예산 입력">
+													<span class="unit">만원</span>
+													<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+												</div>
+												<div class="graphBtm">
+													<p class="priceTxt">설정가능 예산 <span class="pointColor05">100</span>만원</p>
+													<!-- <span class="value pointColor10">설정가능 예산 100만원</span> -->
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div class="cate">
+										<span class="imgWrap icoCate">
+											<span class="img"><img src="../../images/category/cs/ico_cate_cs11.png" alt="자동차·주유 아이콘"></span>
+											자동차/주유
+										</span>									
+										<div class="data">지난달 <span class="value">45,000원</span></div>
+									</div>
+									<div class="formWrapBox">
+										<ul>
+											<li>
+												<div class="inputList unitMan">
+													<input type="tel" id="" title="자동차/주유 카테고리 소비 예산" class="ar" value="" placeholder="이번 달 예산 입력">
+													<span class="unit">만원</span>
+													<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+												</div>
+												<div class="graphBtm">
+													<p class="priceTxt">설정가능 예산 <span class="pointColor05">100</span>만원</p>
+													<!-- <span class="value pointColor10">설정가능 예산 100만원</span> -->
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="popBtnWrap">
+				<div class="popBtn">
+					<a href="javascript:;" class="confirmBtn" role="button">저장</a>
+				</div>
+				<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+			</div>
+		</div>
+	</div>
+	<!-- // 팝업 끝 -->
+
+</body>
+
+</html>

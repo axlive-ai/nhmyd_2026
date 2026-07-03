@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>간장질환</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">간장질환</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+			<div class="boxTypeWrap healthBox"> <!-- [2023-02-23] healthBox 클래스 추가 -->
+				<h2 class="defSubTit2"><strong class="bold">간장질환이란?</strong></h2>
+				<p class="subTxt">간암, 지방간, 간경변, 급성간염, 만성간염 등 간기능 장애로
+					인해 간에 발생하는 모든 질환</p>
+				<hr class="divLine3">
+				<h2 class="defSubTit2 containTooltip"><strong class="bold">내 검진결과 비교</strong>
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">그래프 구간안내 설명 툴팁</span></button>
+						<div class="tooltipCont">
+							<p>최근 검사일 기준 직전년도 결과 비교 제공</p>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+				</h2>
+				<div class="tabWrap type06">
+					<div class="scAreaWrap">
+						<ul role="tablist">
+							<li><a href="javascript:;" type="button" class="active">AST(SGOT)</a></li>
+							<li><a href="javascript:;" type="button">ALT(SGPT)</a></li>
+							<li><a href="javascript:;" type="button">감마지티피</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="tabContWrap type06">
+					<div class="tabCont01" aria-label="AST(SGOT) 탭">
+						<div class="graphWrap" style="height:160px;background:#f6f6f6;" tabindex="0" role="img" aria-label="AST(SGOT) 그래프 2013년 U/L 24, 2016년 U/L 43, 2021년 U/L 46">
+							<p style="text-align:center;">AST(SGOT) 그래프 영역</p>
+						</div>
+					</div>
+					<div class="tabCont02" aria-label="ALT(SGPT) 탭" style="display:none">
+						<div class="graphWrap" style="height:160px;background:#f6f6f6;" tabindex="0" role="img" aria-label="ALT(SGPT) 그래프 2013년 U/L 24, 2016년 U/L 43, 2021년 U/L 46">
+							<p style="text-align:center;">ALT(SGPT) 그래프 영역</p>
+						</div>
+					</div>
+					<div class="tabCont03" aria-label="감마지티피 탭" style="display:none;">
+						<div class="graphWrap" style="height:160px;background:#f6f6f6;" tabindex="0" role="img" aria-label="감마지티피 그래프 2013년 U/L 24, 2016년 U/L 43, 2021년 U/L 46">
+							<p style="text-align:center;">감마지티피 그래프 영역</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="healthBox"> <!-- [2023-02-23] healthBox 클래스 추가 -->
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn" aria-expanded="false" role="button">
+							<strong class="tit">AST(SGOT) 기준수치</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="detailList">
+							<li>
+								<strong class="tit">정상(A)</strong>
+								<strong class="value">40 이하</strong>
+							</li>
+							<li>
+								<strong class="tit">경계</strong>
+								<strong class="value">41~50</strong>
+							</li>
+							<li>
+								<strong class="tit">질환의심</strong>
+								<strong class="value">51 이상</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn" aria-expanded="false" role="button">
+							<strong class="tit">ALT(SGPT) 기준수치</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="detailList">
+							<li>
+								<strong class="tit">정상</strong>
+								<strong class="value">35 이하</strong>
+							</li>
+							<li>
+								<strong class="tit">경계</strong>
+								<strong class="value">36~45</strong>
+							</li>
+							<li>
+								<strong class="tit">질환의심</strong>
+								<strong class="value">46 이상</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn" aria-expanded="false" role="button">
+							<strong class="tit">감마 GTP 기준수치</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="detailList">
+							<li>
+								<strong class="tit">정상</strong>
+								<strong class="value">
+									남 11~63<br>
+									여 8~35
+								</strong>
+							</li>
+							<li>
+								<strong class="tit">경계</strong>
+								<strong class="value">
+									남 64~77<br>
+									여 36~45
+								</strong>
+							</li>
+							<li>
+								<strong class="tit">질환의심</strong>
+								<strong class="value">
+									남 178 이상<br>
+									여 46 이상
+								</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn" aria-expanded="false" role="button">
+							<strong class="tit">총 단백 기준수치</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="detailList">
+							<li>
+								<strong class="tit">정상</strong>
+								<strong class="value">6.0~8.5(g/dl)</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn" aria-expanded="false" role="button">
+							<strong class="tit">알부민 기준수치</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="detailList">
+							<li>
+								<strong class="tit">정상</strong>
+								<strong class="value">3.5~5.0(g/dl)</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn" aria-expanded="false" role="button">
+							<strong class="tit">총 빌리루빈 기준수치</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="detailList">
+							<li>
+								<strong class="tit">정상</strong>
+								<strong class="value">0.2~1.2(mg/dl)</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn" aria-expanded="false" role="button">
+							<strong class="tit">직접 빌리루빈 기준수치</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="detailList">
+							<li>
+								<strong class="tit">정상</strong>
+								<strong class="value">0.5 이하(mg/dl)</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+	
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn" aria-expanded="false" role="button">
+							<strong class="tit">알칼리 포스파타제(ALP) 기준수치</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="detailList">
+							<li>
+								<strong class="tit">정상</strong>
+								<strong class="value">30~115 U/L</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn" aria-expanded="false" role="button">
+							<strong class="tit">유산탈수소효소(LDH) 기준수치</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="detailList">
+							<li>
+								<strong class="tit">정상</strong>
+								<div class="value">
+									<dl>
+										<dt><strong>L > P (30℃)법</strong></dt>
+										<dd class="txtb3"><strong>80 ~ 120 U/L</strong></dd>
+									</dl>
+									<dl>
+										<dt><strong>L > P (37℃)법</strong></dt>
+										<dd class="txtb3"><strong>100 ~ 225 U/L</strong></dd>
+									</dl>
+									<dl>
+										<dt><strong>P > L (37℃)법</strong></dt>
+										<dd class="txtb3"><strong>200 ~ 400 U/L</strong></dd>
+									</dl>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+	
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn" aria-expanded="false" role="button">
+							<strong class="tit">알파피토프로테인(AFP)</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="detailList">
+							<li>
+								<strong class="tit">정상</strong>
+								<strong class="value">RPHA법 음성(-)</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn" aria-expanded="false" role="button">
+							<strong class="tit">검진항목 설명</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<strong class="listTitSimple mt0">AST(SGOT) / ALT(SGPT)</strong>
+						<ul class="listDot">
+							<li>간세포가 파괴되면 수치가 높아짐</li>
+							<li>중증의 간세포 손상 시 AST/ALT 비율 증가</li>
+						</ul>
+						<strong class="listTitSimple">감마GTP</strong>
+						<ul class="listDot">
+							<li>담도에 이상이 있을 때 높아지는 효소로, 음주·과체중·약물복용에 의해서도 약간 증가</li>
+							<li>감마GTP가 높고 알칼리 포스파타제가 정상인 경우 : 음주로 인한 가능성이 높음</li>
+						</ul>
+	
+						<strong class="listTitSimple">총 단백</strong>
+						<ul class="listDot">
+							<li>혈청 1dL에 존재하는 모든 단백질의 양(g) : 1/3은 글로불린, 2/3는 알부민</li>
+							<li>단백 농도의 변화를 통해 간기능, 신장기능 등을 간접적으로 평가</li>
+						</ul>
+	
+						<strong class="listTitSimple">알부민</strong>
+						<ul class="listDot">
+							<li>수치가 낮으면 간경화, 신장질환, 활동성 만성간염 등 중증질환 의심</li>
+						</ul>
+	
+						<strong class="listTitSimple">총 빌리루빈 / 직접 빌리루빈</strong>
+						<ul class="listDot">
+							<li>간담도계의 배설능 용혈 등의 지표</li>
+							<li>총 빌리루빈 3~10mg/dL이면 눈의 흰자가 노랗게 변하고 10mg/dL 이상이면 피부가 노랗게 변함</li>
+						</ul>
+	
+						<strong class="listTitSimple">알칼리 포스파타제(ALP)</strong>
+						<ul class="listDot">
+							<li>수치가 높으면 간이나 담도에 이상이 있거나 뼈 질환 의심</li>
+							<li>간경변, 알코올성 간염, 바이러스성 간염 등의 경우 3배 이하로 증가</li>
+							<li>담다가 막혀 담즙유출에 문제가 생기면 활달과 함께 정상수치의 4배 이상 증가</li>
+						</ul>
+	
+						<strong class="listTitSimple">유산탈수소효소(LDH)</strong>
+						<ul class="listDot">
+							<li>간, 뇌, 근육, 골격, 심장, 신장, 적혈구에 많음</li>
+							<li>조직 손상 시 수치가 높아짐</li>
+							<li>알칼리포스파타제와 함께 증가하고 AST, ALT는 증가하지 않으면 전이성 간암 의심</li>
+						</ul>
+	
+						<strong class="listTitSimple">알파피토프로테인</strong>
+						<ul class="listDot">
+							<li>간암의 조기발견에 유용한 검사로, EIA 검사법의 정상판정 수치는 0~8.7</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn" aria-expanded="false" role="button">
+							<strong class="tit">식사요법</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="listDot">
+							<li>당질, 단백질, 비타민 충분히 골고루 먹기</li>
+							<li>술을 비롯한 알코올 음료 삼가</li>
+						</ul>
+					</div>
+				</div>
+	
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn" aria-expanded="false" role="button">
+							<strong class="tit">운동요법</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="listDot">
+							<li>가벼운 유산소 운동은 간기능 회복에 도움</li>
+							<li>탁구, 달리기, 테니스 등 뛰는 운동은 오히려 간에 부담을 주므로 절대 금물</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="areaBtnDefault">
+				<a href="javascript:;" class="btnPressPoint" role="button">확인</a>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+	<script type="text/javascript">
+		$('.scAreaWrap a.active').each(function(){
+			var $this = $(this);
+			var $thisPos = $this.offset().left;
+			var $wrap = $this.closest('.scAreaWrap').scrollLeft();
+			$this.closest('.scAreaWrap').stop().animate({scrollLeft:$wrap + $thisPos - 16 },300);
+		});
+		$('.scAreaWrap a').on('click focus',function(e){
+			var $this = $(this);
+			var $thisPos = $this.offset().left;
+			var $wrap = $this.closest('.scAreaWrap').scrollLeft();
+			$this.closest('.scAreaWrap').stop().animate({scrollLeft:$wrap + $thisPos - 16 },300);	
+		});
+
+		$('.maybeWishList > li > a').click(function(){
+			$(this).closest('.maybeWishList').find('a').removeClass('active');
+			$(this).addClass('active');
+		});
+	</script>
+</body>
+</html>

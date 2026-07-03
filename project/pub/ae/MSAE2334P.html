@@ -1,0 +1,109 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산등록</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function() {
+		slidePopConfirm();
+	});	
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">자산등록</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+		</div>
+		<!-- //container -->
+
+		<!-- 등록방식 선택 팝업 -->
+		<div class="nhasset popWrap slidePopConfirm">
+			<div class="dim"></div>
+			<div class="popInner">
+				<h1 class="ac"><img src="../../images/popTitle.png" alt="NH 스마트뱅킹"></h1>
+				<div class="popCont">
+					<!--12.14 연금진단_WM_송수신 불가_B 케이스 추가-->
+					<div class="confirmMsg type02 boxBg"><!--12.14 boxBg 추가-->
+						<p>연금진단서비스 연결이 원활하지 않습니다.</p>
+					</div>
+					
+					<!--12.14 연금진단_국민연금_스크래핑오류_A 케이스 추가-->
+					<div class="confirmMsg type02 boxBg"><!--12.14 boxBg 추가-->
+						<p>국민연금 정보 조회가 원활하지 않습니다.</p>
+						<p class="grayTxt"> <span class="pointColor">‘다시 조회’</span> 하거나 <br>
+							연금 수령 중이면 <span class="pointColor">‘수령중＇</span>을 선택해주세요.
+						</p>
+					</div>
+
+					<!--12.14 연금진단_ 국민연금_공공API오류_B 추가-->
+					<!-- <div class="confirmMsg type02 boxBg">
+						<p>국민연금 정보 조회가 원활하지 않습니다.</p>
+						<p class="grayTxt"> 연금 수령 중이면 <span class="pointColor">‘수령중＇</span>을 선택하시고  <br>
+							수령 전이면 <span class="pointColor">‘다시 조회’</span> 또는  <br>
+							<span class="pointColor">‘직접 입력하기＇</span>를 이용해 주세요. 
+						</p>
+					</div> -->
+
+					<!--12.14 연금진단_공무원연금_스크래핑오류_A-->
+					<!-- <div class="confirmMsg type02 boxBg">
+						<p>공무원연금 정보 조회가 원활하지 않습니다.</p>
+						<p class="grayTxt"> 연금 수령 중이면 <span class="pointColor">‘수령중＇</span>을 선택하시고  <br>
+							재직기간이 10년 미만이면  <br>
+							<span class="pointColor">‘공적연금 없음＇</span>을 선택해 주세요. 
+						</p>
+					</div> -->
+
+					<!--12.14 연금진단_ 공무원연금_공공API오류_B-->
+					<!-- <div class="confirmMsg type02 boxBg">
+						<p>공무원연금 정보 조회가 원활하지 않습니다.</p>
+						<p class="grayTxt">연금 수령 중이면<span class="pointColor">‘수령중＇</span> 을 선택하시고  <br>
+							수령 전이면 <span class="pointColor">‘다시 조회’</span> 또는  <br>
+							<span class="pointColor">‘직접 입력하기＇</span>를 이용해 주세요. 							
+						</p>
+					</div> -->
+					<!--12.14 연금진단_ 사학연금_스크래핑오류_A-->
+					<!-- <div class="confirmMsg type02 boxBg">
+						<p>사학연금 정보 조회가 원활하지 않습니다.</p>
+						<p class="grayTxt">연금 수령 중이면 <span class="pointColor">‘수령중＇</span>을 선택해주세요.</p>
+					</div> -->
+					
+				</div>
+
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<a href="javascript:;" onclick="popClose(this);return false;" role="button">다음에 조회하기</a>
+						<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">다시하기</a>
+                    </div>
+                    <a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- // 등록방식 선택 팝업 -->
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>간편인증요청</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		fullLayerPop();
+	})
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text"></a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+
+		</div>
+		<!-- //container -->
+
+		<!-- 팝업시작 -->
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>간편인증 요청</h1>
+				<div class="popCont">
+					<div class="infoBox3">
+						<p class="bigTit"><span>카카오로</span><br><strong>간편인증 요청을 보냈습니다.</strong></p>
+					</div>
+					<div class="certiTimeWrap"><span class="certiTime" aria-label="인증 남은 시간">mm:ss</span></div>
+					<div class="certiTimeWrap"><span class="certiTime count" aria-label="인증 남은 시간">mm:ss</span></div>
+
+					<ol class="certStep">
+						<li>
+							<strong class="certStepTitle"><span class="num">1</span> 카카오톡 앱에서</strong>
+							<p class="certStepPara">채팅 목록에서 ‘카카오톡 지갑’을 선택하세요.</p>
+							<div class="certStepImg"><img src="../../images/img_certi_kakao01.png" alt="채팅 목록에서 ‘카카오톡 지갑’을 선택하세요."></div>
+							<p class="certStepPara">카카오톡 지갑 인증 요청 안내 메시지에서 ‘인증하기’를 선택합니다.</p>
+							<div class="certStepImg"><img src="../../images/img_certi_kakao02.png" alt="카카오톡 지갑 인증 요청 안내 메시지에서 ‘인증하기’를 선택합니다."></div>
+						</li>
+						<li>
+							<strong class="certStepTitle"><span class="num">2</span> NH스마트뱅킹 앱에서</strong>
+							<p class="certStepPara">인증 완료 후 아래 ‘인증완료’ 버튼을 선택하세요.</p>
+						</li>
+					</ol>
+					
+				</div>
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<a href="javascript:;" class="confirmBtn" role="button">인증완료</a>
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- 팝업끝 -->
+	</div>
+
+</body>
+</html>

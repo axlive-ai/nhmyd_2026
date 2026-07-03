@@ -1,0 +1,2332 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산현황</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset hasGnb" id="wrap">
+	<!-- header -->
+	<div class="header">
+		<!-- <a href="javascript:;" class="btnBack" role="button"><span>이전화면으로</span></a> -->
+		<h1><a href="javascript:;" role="text"><img src="../../images/logoMydata2.png" alt="금융과 일상을 연결하다 NH마이데이터"></a></h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>전체메뉴</span></a>
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 자산메인 ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<!-- -------------------------------------- -->
+		<!-- [GNB] -->
+		<!-- -------------------------------------- -->
+		<div class="gnb">
+			<ul>
+				<li><a href="javascript:;" class="active" title="선택됨">자산</a></li>
+				<li><a href="javascript:;">소비</a></li>
+				<li class="menuStar"><a href="javascript:;"><span class="menuStarInner"><span class="blind">별별서비스</span></span></a></li> <!-- [접근성_2024] 메뉴명 변경 -->
+				<li><a href="javascript:;">전체</a></li>
+			</ul>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [업데이트바] -->
+		<!-- -------------------------------------- -->
+		<div class="pageRefreshWrap">
+			<div class="pageRefresInner">
+				<span>
+					<span class="date">08.05 10:45</span>
+					<button type="button" class="btnUpdate"><span class="blind">업데이트</span></button>
+				</span>
+				<button type="button" class="btnAlrt new" aria-expanded="false"><span class="blind">알림</span></button>
+			</div>
+			<div class="pageAlertWrap">
+				<ul>
+					<li class="alertNotice">
+						<a href="javascript:;" role="button">
+							<dl>
+								<dt>연결중인 자산 확인이 필요해요</dt>
+								<dd>OOO에서 전송 중단 또는 거절이 있었습니다.<br/>연결관리 화면에서 확인해주세요. </dd>
+							</dl>
+						</a>
+					</li>
+					<li class="alertError">
+						<a href="javascript:;" role="button">
+							<dl>
+								<dt>정보 확인이 필요해요</dt>
+								<dd><span>$연말정산$</span> 정보수집 중 오류가 있었습니다.<br/><span>$연말정산$</span> 설정 화면에서 확인해주세요. </dd>
+							</dl>
+						</a>
+					</li>
+					<li class="alertError">
+						<a href="javascript:;" role="button">
+							<dl>
+								<dt>업데이트한지 <span>N</span>일이 지났어요</dt>
+								<dd><span>$연말정산$</span> 정보 업데이트가 필요합니다.<br/>인증관리 화면에서 확인해주세요.</dd>
+							</dl>
+						</a>
+					</li>
+					<li class="alertError">
+						<a href="javascript:;" role="button">
+							<dl>
+								<dt>정보수집이 필요해요</dt>
+								<dd><span>$연말정산$</span> 서비스 이용을 위해 정보수집이 필요합니다. 인증관리 화면에서 확인해주세요.</dd>
+							</dl>
+						</a>
+					</li>
+
+				</ul>
+				<div class="pageAlertNoData">
+					<p>업데이트 알림 내역이 없습니다.</p>
+				</div>
+				<button type="button" aria-expanded="true" class="pageAlertClose"><span>닫기</span></button>
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [개인화영역] -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap mt0">
+			<div class="mainTopInfo">
+				<dl class="totalBalance">
+					<dt><strong>김농협님의 순자산</strong>
+						<button type="button" class="assetSet" ><span class="blind">나의 자산 설정하기</span></button>
+					</dt>
+					<dd class="totalBalanceNow addType"> <!--11.10  addType 추가 수정-->
+						<a href="javascript:;" title="나의 보유자산으로 이동">
+							<div class="asset"><strong>1,690,804,400</strong>원
+								<!-- <strong class="noneHover"> 쉿! 비밀이에요</strong> -->
+								<span  class="btnArrow"><span class="blind">분석</span></span> <!--11.10 위치 수정-->
+							</div>
+						</a> <!--12-26 링크 영역 수정-->
+
+						<span> <!--11.10 추가-->
+							<span class="tgBtn3 s24"><!-- [접근성_2024] class명 변경 및 label span 삭제  -->
+								<input type="checkbox" id="toggle10" checked="checked" title="보유순자산 보이기"> <!-- [접근성_2024] title 추가 -->
+								<label for="toggle10">금액</label>
+							</span>
+						</span>
+					</dd><!--11.10 수정-->
+				</dl>
+				<div class="balanceDiff">
+					<span class="balanceDiffDate">08.31 대비</span>
+					<span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span>
+					<span class="amount inColor"><strong>56,897</strong>원 </span>
+				</div>
+				<div class="balanceDiff"><a href="javascript:;" class="linkTxt mt0" role="button" title="자산연결 페이지 이동">연결만료된 N개 기관을 재연결 해주세요</a><!-- [접근성_2024] role="button" title 추가 --></div>
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [배너영역] -->
+		<!-- -------------------------------------- -->
+		<div class="bannerWarpPrd" style="display:none">
+			<!-- 관리자 영역 // -->
+			<div class="swiper-container bannerSwiperPrd">
+				<div class="swiper-wrapper">
+					<!-- style background-color, background-image 관리자페이지에서 입력 -->
+					<div class="swiper-slide" style="background-image:url('../../images/banner/banner01.gif'), linear-gradient(to right, #ddbaff, #998fff)">
+						<a href="javascript:;">
+							입출금 통장의 잠 자는 돈 발견!
+							<br>굴리기 딱 좋은 상품을 찾았어요!
+						</a>
+					</div>
+					
+				</div>
+				<div class="swiper-control">
+					<div class="swiper-pagination"></div>
+					<!-- <div class="swiper-autoBtn playing">
+						<a href="javascript:;" class="stopBtn" title="자동재생중 두번 터치시 멈춤"></a>
+						<a href="javascript:;" class="playBtn" title="자동재생 멈춤 두번 터치시 자동재생시작"></a>
+					</div> -->
+				</div>
+				<div class="swiper-button-prev blind"></div>
+				<div class="swiper-button-next blind"></div>
+			</div>
+			<script>
+				
+			</script>
+			<!-- //관리자 영역  -->
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [배너영역] -->
+		<!-- -------------------------------------- -->
+		<div class="inBannerWarp">
+			<a href="javascript:;" role="button">
+				<div class="inBanner shadowBox bg20"> <!--10..26 수정-->
+					<p>
+						<span class="bnSub">예적금 만기가 얼마 남지 않은 당신!</span>
+						<span class="bnSub">지금 한 번 확인해볼까요?</span>
+					</p>
+				</div>
+				<div class="inBanner shadowBox bg20"> <!--10..26 수정-->
+					<p>
+						<span class="bnSub">가장 인기있는 추천 예금 상품은?</span>
+						<span class="bnSub">NH이달의 예금 보러가기</span>
+					</p>
+				</div>
+				<div class="inBanner shadowBox bg20"> <!--10..26 수정-->
+					<p>
+						<span class="bnSub">가장 인기있는 추천 예금 상품은?</span>
+						<span class="bnSub">예적금 상품 보러가기</span>
+					</p>
+				</div>
+				<!--10..26 추가-->
+				<div class="inBanner shadowBox bg21">
+					<p>
+						<span class="bnSub">나만 없어, 청약통장!</span>
+						<span class="bnSub">주택청약종합저축이 필요한 이유는?</span>
+					</p>
+				</div>
+				<div class="inBanner shadowBox bg21">
+					<p>
+						<span class="bnSub">나만 없는 청약통장!</span>
+						<span class="bnSub">청년형 주택청약종합저축으로 시작!</span>
+					</p>
+				</div>
+				<div class="inBanner shadowBox bg22">
+					<p>
+						<span class="bnSub">매달 나가는 돈, 잊고 있었나요?</span>
+						<span class="bnSub">입출금 통장의 정기지출 확인하기</span>
+					</p>
+				</div>
+				<div class="inBanner shadowBox bg22">
+					<p>
+						<span class="bnSub">쿨쿨쿨, 자고 있는 돈을 깨워보세요!</span>
+						<span class="bnSub">입출금 통장의 잠자는 돈 깨우기</span>
+					</p>
+				</div>
+				<div class="inBanner shadowBox bg23">
+					<p>
+						<span class="bnSub">투자고수는 어떻게 투자하고 있을까?</span>
+						<span class="bnSub">투자고수 확인하러 가기</span>
+					</p>
+				</div>
+				<div class="inBanner shadowBox bg24">
+					<p>
+						<span class="bnSub">대출 만기가 얼마 남지 않은 당신!</span>
+						<span class="bnSub">만기 되기 전에 꼼꼼하게 챙겨보세요.</span>
+					</p>
+				</div>
+				<div class="inBanner shadowBox bg24">
+					<p>
+						<span class="bnSub">내 DSR은 얼마?</span>
+						<span class="bnSub">DSR계산기로 손쉽게 확인해보세요</span>
+					</p>
+				</div>
+				<!-- <div class="inBanner shadowBox bg24">
+					<p>
+						<span class="bnSub">내게 딱 맞는 대출 상품은?</span>
+						<span class="bnSub">빅데이터로 우대금리를 분석했어요.</span>
+					</p>
+				</div>  12.23 배너삭제-->
+				<div class="inBanner shadowBox bg25">
+					<p>
+						<span class="bnSub">나만 없는 IRP, 왜 필요할까?</span>
+						<span class="bnSub">노후준비의 첫걸음, 지금 시작해보세요.</span>
+					</p>
+				</div>
+				<div class="inBanner shadowBox bg25">
+					<p>
+						<span class="bnSub">나는 노후준비를 잘 하고 있을까?</span>
+						<span class="bnSub">은퇴 후 연금수령액을 확인해보세요</span>
+					</p>
+				</div>
+				<div class="inBanner shadowBox bg26">
+					<p>
+						<span class="bnSub">주택청약 알림신청하고</span>
+						<span class="bnSub">남보다 청약정보 빨리 받아보세요</span>
+					</p>
+				</div>
+				<div class="inBanner shadowBox bg26">
+					<p>
+						<span class="bnSub">내 집 마련 계획, 목표 등록하고</span>
+						<span class="bnSub">NH마이데이터에서 시작해보세요</span>
+					</p>
+				</div>
+				<div class="inBanner shadowBox bg27">
+					<p>
+						<span class="bnSub">병원비 발견! 실손보험이 있다면 </span>
+						<span class="bnSub">NH헬스케어에서 간편청구 하세요</span>
+					</p>
+				</div>
+				<div class="inBanner shadowBox bg27">
+					<p>
+						<span class="bnSub">건강검진 받으셨나요?</span>
+						<span class="bnSub">건강검진 결과 확인해보세요</span>
+					</p>
+				</div>
+				<div class="inBanner shadowBox bg27">
+					<p>
+						<span class="bnSub">실손보험이 있으신가요?</span>
+						<span class="bnSub">간편하게 보험금 청구하세요</span>
+					</p>
+				</div>
+				<div class="inBanner shadowBox bg27">
+					<p>
+						<span class="bnSub">위험에 대비한 보장자산 늘리기</span>
+						<span class="bnSub">지금 뜨는 상품만 쏙쏙 알려드려요.</span>
+					</p>
+				</div>
+				<!--10..26 추가-->
+			</a>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [플로팅배너] -->
+		<!-- -------------------------------------- -->
+		<div class="registBtn">
+			<a href="javascript:;" role="button">자산연결</a>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [배너영역] -->
+		<!-- -------------------------------------- -->
+		<div class="assetBookMarkWrap">
+			<ul>
+				<li class="assetBookMarEmpty">
+					<a href="javascript:;" role="button">
+						<div class="inner">자주 사용할 계좌<br>숨길 계좌를 편집해보세요.</div> 
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" role="button">
+						<!-- <div class="imgWrap A1AAHJ0000"><em class="blind">카카오뱅크</em></div> -->
+						<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+							<img src="../../images/logos/AAHJ0000.png" alt="카카오뱅크 로고" class="imgLogo"><!-- [접근성_2024] 등록된 은행명을 alt에 추가 부탁드립니다. --><span>입출금입출금입출금입출금입출금</span>
+						</span>
+						<div class="accName">$별칭$ or $계좌명$$별칭$ or $계좌명$$별칭$ or $계좌명$</div>
+						<div class="accBalance"><span class="dataValue">10,000,000</span>원</div>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" role="button">
+						<!-- <div class="imgWrap A1AAHJ0000"><em class="blind">카카오뱅크</em><span>입출금</span></div> -->
+						<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+							<img src="../../images/logos/AAHJ0000.png" alt="카카오뱅크 로고" class="imgLogo"><span>입출금</span>
+						</span>
+						<div class="accName">$별칭$ or $계좌명$$별칭$ or $계좌명$$별칭$ or $계좌명$</div>
+						<div class="accBalance"><button type="button" class="linkType2">연결확인</button></div>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" role="button">
+						<!-- <div class="imgWrap A1AAHJ0000"><em class="blind">카카오뱅크</em><span>자동차보험</span></div> -->
+						<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+							<img src="../../images/logos/AAHJ0000.png" alt="카카오뱅크 로고" class="imgLogo"><span>입출금</span>
+						</span>
+						<div class="accName">$별칭$ or $계좌명$$별칭$ or $계좌명$$별칭$ or $계좌명$</div>
+						<div class="accBalance"><span class="dataValue">10,000,000</span>원</div>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" role="button">
+						<!-- <div class="imgWrap A1AAHJ0000"><em class="blind">카카오뱅크</em><span>입출금</span></div> -->
+						<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+							<img src="../../images/logos/AAHJ0000.png" alt="카카오뱅크 로고" class="imgLogo"><span>입출금</span>
+						</span>
+						<div class="accName">$별칭$ or $계좌명$</div>
+						<div class="accBalance"><span class="dataValue">10,000,000</span>원</div>
+					</a>
+				</li>
+				<li class="assetBookMarkAdd">
+					<a href="javascript:;"  role="button" title="자산 사용 관리 이동">자산 즐겨찾기 설정</a><!-- [접근성_2024] 내용 수정 -->
+				</li>
+			</ul>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [목록영역] 계좌 -->
+		<!-- -------------------------------------- -->
+		<div class="subMain assetTotalList toggleWrap boxTypeWrap">
+			<!-- 계좌 토탈 -->
+			<!-- [2023-01-11] 수정 -->
+			<div class="totalTitWrap">
+				<a href="javascript:;" class="toggleBtn active less">
+					<h2 class="totalTit">계좌 <strong class="cnt pointColor">4개</strong></h2>
+					<span class="totalAmnt"><strong class="dataValue">1,000,000,000,000</strong><em class="won">원</em></span>
+				</a>
+			</div>
+			<!-- //[2023-01-11] 수정 -->
+			<!-- // 계좌 토탈 -->
+			<div class="toggleCont" style="display:block">
+				<div class="subMainBanner">
+					<a href="javascript:;" role="button" class="typeAccount">
+						<div class="type01">가장인기 있는 NH 이달의 예금 보러가기</div><!--10.27 수정-->
+					</a>
+				</div>
+				<!-- 계좌 상세 -->
+				<ul class="totalAccList">
+					<li>
+						<div class="totalAcc">
+							<span class="tit">입출금</span>
+						</div>
+						<ul class="accList">
+							<li>
+								<a href="javascript:;" role="button">
+									<!-- <span class="imgWrap A1AAEQ0000"><em class="blind">기업은행</em></span> -->
+									<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+										<img src="../../images/logos/AAEQ0000.png" alt="기업은행 로고" class="imgLogo"><!-- [접근성_2024] 기관명 추가 -->
+									</span>
+									<div class="accInfoWrap">
+										<div class="titAreaWrap">
+											<div class="titArea">
+												<span class="accTit">[별칭]NH주거래우대통장NH주거래우대통장NH주거래우대통장</span>
+												<em class="icoNew2"><span class="blind">NEW</span></em>
+												<span class="acBookmark"><span class="blind">즐겨찾기</span></span>
+											</div>
+											<div class="transAcc"><button type="button" class="contBtn03">이체</button></div>
+										</div>
+										<div class="accInfo">
+											<span class="accLabel">
+												<em class="tag purple">목표</em>
+											</span>
+											<span class="accValue"><strong class="dataValue">10,000,000,000</strong><em class="won">원</em></span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button">
+									<!-- <span class="imgWrap A1AAER0000"><em class="blind">신한은행</em></span> -->
+									<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+										<img src="../../images/logos/AAER0000.png" alt="신한은행 로고" class="imgLogo">
+									</span>
+									<div class="accInfoWrap">
+										<div class="titArea">
+											<span class="accTit">KB 樂 Star통장-저축예금(자동이체계좌) KB 樂 Star통장-저축예금(자동이체계좌)</span>
+											<!-- <em class="icoNew"><span class="blind">NEW</span></em> -->
+										</div>
+										<div class="accInfo">
+											<span class="accLabel">
+												<em class="tag purple">목표</em>
+												<em class="tag gray">만료</em>
+											</span>
+											<span class="accValue"><button href="javascript:;" class="linkType1 pointColor">연결확인</button></span>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<div class="totalAcc">
+							<span class="tit">예적금</span>
+						</div>
+						<ul class="accList">
+							<li>
+								<a href="javascript:;" role="button">
+									<!-- <span class="imgWrap A1AAHJ0000"><em class="blind">카카오뱅크</em></span> -->
+									<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+										<img src="../../images/logos/AAHJ0000.png" alt="카카오뱅크 로고" class="imgLogo">
+									</span>
+									<div class="accInfoWrap">
+										<div class="titArea">
+											<span class="accTit">카카오26주적금</span>
+											<em class="icoNew2"><span class="blind">NEW</span></em>
+										</div>
+										<div class="accInfo">
+											<span class="accLabel">
+												<em class="tag gray">만료예정</em>
+											</span>
+											<span class="accValue">
+												<strong class="dataValue">10,000,000</strong><em class="won">원</em>
+											</span>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!-- // 계좌 상세 -->
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [목록영역] 투자 -->
+		<!-- -------------------------------------- -->
+		<!-- 자산 연결전 -->
+		<div class="subMain assetTotalList toggleWrap boxTypeWrap">
+			<div class="totalTitWrap">					
+				<h2 class="totalTit">투자 <span class="cnt">0개</span></h2>
+				<button type="button" class="btnAdd">추가하기</button>
+			</div>
+		</div>
+		<!-- //자산 연결전 -->
+
+		<!-- 투자 // -->
+		<div class="subMain assetTotalList toggleWrap boxTypeWrap">
+			<!-- 투자 토탈 -->
+			<!-- [2023-01-11] 수정 -->
+			<div class="totalTitWrap">
+				<a href="javascript:;" class="toggleBtn active less">
+					<h2 class="totalTit">투자 <strong class="cnt pointColor">2개</strong></h2>
+					<span class="totalAmnt"><strong class="dataValue">1,000,000,000,000</strong><em class="won">원</em></span>
+				</a>
+			</div>
+			<!-- //[2023-01-11] 수정 -->
+			<!-- // 투자 토탈 -->
+
+			<div class="toggleCont" style="display:block">
+				<div class="subMainBanner">
+					<a href="javascript:;" role="button" class="typeInvestment">
+						<div class="type02">2022 배당내역 확인 하기</div> <!--10.27 수정-->
+					</a>
+				</div>
+				<!-- 투자 상세 -->
+				<ul class="totalAccList">
+					<li>
+						<div class="swiper-container listSwiperInv" >
+							<div class="totalSort addTolTip"></div>
+							<div class="tooltipWrap">
+								<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">계좌별 금액 안내 툴팁 열기</span><!-- [접근성_2024] .blind 수정 --></button>
+								<!-- [2022-12-06] 툴팁추가 -->
+								<div class="tooltipCont">
+									<p>계좌별 금액은
+										순자산 금액과 다를 수 있습니다.</p>
+									<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+								</div>
+								<!-- //[2022-12-06] 툴팁추가 -->
+							</div>			
+
+							<span class="tSbtn">
+								<button type="button" class="assetSet"><span class="blind">나의 자산 설정하기</span></button>
+							</span>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"> <!-- 상품별 정렬 -->
+								
+									<div class="tSaddTxt"> <!--10.17추가-->
+										<span class="stockico">국내주식</span>
+										<p class="txt">해당 종목을 여러 증권사를 통해 매수한 경우, +가 표시됩니다.</p>
+									</div>
+									<ul class="accList">
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap ACRB0000"><em class="blind">삼성전자</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/ACRB0000.png" alt="삼성전자 로고" class="imgLogo"><!-- [접근성_2024] 기관명 추가 -->
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit"><em class="icoBuy">+</em>삼성전자</span></div>
+													<div class="accInfo">
+														<span class="accLabel">
+															<em class="tag blue">주식</em><em class="tag gray">만료예정</em>
+														</span>
+														<span class="accValue">
+															<strong class="dataValue">99,999,999,999</strong><em class="won">원</em>
+															<!-- <div class="mainAmount">
+																<span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span>
+																<span class="amount inColor"><strong>12,123,456,897</strong>원 (+<strong class="dataValue">1.53</strong><em class="won">%</em>)</span>
+															</div> -->
+														</span>
+													</div>
+													<div class="mainAmount"> <!--12.27 위치변경-->
+														<span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span>
+														<span class="amount inColor"><strong>12,123,456,897</strong>원 (+<strong class="dataValue">1.53</strong><em class="won">%</em>)</span>
+													</div>
+													
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap AAOG0000"><em class="blind">LG전자</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AAOG0000.png" alt="LG전자 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">LG전자</span></div>
+													<div class="accInfo">
+														<span class="accLabel">
+															<em class="tag gray">만료예정</em>
+														</span>
+														<span class="accValue">
+															<strong class="dataValue">20,000,000</strong><em class="won">원</em>
+															<!-- <div class="mainAmount">
+																<span class="arrowDown" role="img" aria-label="감소"><em class="blind">감소</em></span>
+																<span class="amount inColor"><strong>56,897</strong>원 (-<strong class="dataValue">1.53</strong><em class="won">%</em>)</span>
+															</div> -->
+														</span>
+													</div>
+													<div class="mainAmount"> <!--12.27 위치변경-->
+														<span class="arrowDown" role="img" aria-label="감소"><em class="blind">감소</em></span>
+														<span class="amount inColor"><strong>56,897</strong>원 (-<strong class="dataValue">1.53</strong><em class="won">%</em>)</span>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+
+									<div class="tSaddTxt mt10"><!--10.26  mt10로 수정-->
+										<span class="stockico">해외주식</span>
+										<p class="txt">해당 종목을 여러 증권사를 통해 매수한 경우, +가 표시됩니다.</p>
+									</div>
+									<ul class="accList">
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap ACAA0000"><em class="blind">테슬라</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/ACAA0000.png" alt="테슬라 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">테슬라</span></div>
+													<div class="accInfo">
+														<span class="accValue">
+															<strong class="dataValue">20,000,000</strong><em class="won">원</em>
+															<!-- <div class="mainAmount">
+																<span class="arrowDown" role="img" aria-label="감소"><em class="blind">감소</em></span>
+																<span class="amount inColor"><strong>132,548</strong>원 (-<strong class="dataValue">0.03</strong><em class="won">%</em>)</span>
+															</div> -->
+														</span>
+													</div>
+													<div class="mainAmount"><!--12.27 위치수정-->
+														<span class="arrowDown" role="img" aria-label="감소"><em class="blind">감소</em></span>
+														<span class="amount inColor"><strong>132,548</strong>원 (-<strong class="dataValue">0.03</strong><em class="won">%</em>)</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap ACAB0000"><em class="blind">애플</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/ACAB0000.png" alt="애플 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">애플</span></div>
+													<div class="accInfo">
+														<span class="accValue">
+															<strong class="dataValue">99,999,999,999</strong><em class="won">원</em>
+															<!-- <div class="mainAmount">
+																<span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span>
+																<span class="amount inColor"><strong>232,759</strong>원 (+<strong class="dataValue">2.30</strong><em class="won">%</em>)</span>
+															</div> -->
+														</span>
+													</div>
+													<div class="mainAmount"><!--12.27 위치 수정-->
+														<span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span>
+														<span class="amount inColor"><strong>232,759</strong>원 (+<strong class="dataValue">2.30</strong><em class="won">%</em>)</span>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+									
+									<!--11.18  국내펀드와 해와펀드 merge 수정-->
+									<div class="tSaddTxt mt10">
+										<span class="stockTit">펀드</span>
+									</div>
+									<ul class="accList">
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap ADAA0000"><em class="blind">국내펀드</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/ADAA0000.png" alt="국내펀드 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit"><!--<sup>+</sup>-->
+														<em class="icoBuy">+</em> <!--12.27 수정 -->
+														피델글로벌테크놀로지[재간접주식채권식채권</span></div>
+													<div class="accInfo">
+														<span class="accValue">
+															<strong class="dataValue">20,000,000</strong><em class="won">원</em>
+															<!-- <div class="mainAmount">
+																<span class="arrowDown" role="img" aria-label="감소"><em class="blind">감소</em></span>
+																<span class="amount inColor"><strong>132,548</strong>원 (-<strong class="dataValue">0.03</strong><em class="won">%</em>)</span>
+															</div> -->
+														</span>
+													</div>
+													<div class="mainAmount"><!--12.27 위치 수정-->
+														<span class="arrowDown" role="img" aria-label="감소"><em class="blind">감소</em></span>
+														<span class="amount inColor"><strong>132,548</strong>원 (-<strong class="dataValue">0.03</strong><em class="won">%</em>)</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap ADAA0000"><em class="blind">해외펀드</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/ADAA0000.png" alt="해외펀드 로고" class="imgLogo"> <!-- 해외펀드 기관코드 확인필요 -->
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">피델글로벌테크놀로지[재간접주식채권식채권</span></div>
+													<div class="accInfo">
+														<span class="accValue">
+															<strong class="dataValue">99,999,999,999</strong><em class="won">원</em>
+															<!-- <div class="mainAmount">
+																<span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span>
+																<span class="amount inColor"><strong>232,759</strong>원 (+<strong class="dataValue">2.30</strong><em class="won">%</em>)</span>
+															</div> -->
+														</span>
+													</div>
+													<div class="mainAmount"><!--12.27 위치 수정-->
+														<span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span>
+														<span class="amount inColor"><strong>232,759</strong>원 (+<strong class="dataValue">2.30</strong><em class="won">%</em>)</span>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+
+									<!-- <div class="tSaddTxt mt10">
+										<span class="stockTit">해외펀드</span>
+									</div>
+									<ul class="accList">
+										<li>
+											<a href="javascript:;" role="button">
+												<span class="imgWrap ADAA0000"><em class="blind">해외펀드</em></span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">피델글로벌테크놀로지[재간접주식채권식채권</span></div>
+													<div class="accInfo">
+														<span class="accValue">
+															<strong class="dataValue">99,999,999,999</strong><em class="won">원</em>
+															<div class="mainAmount">
+																<span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span>
+																<span class="amount inColor"><strong>232,759</strong>원 (+<strong class="dataValue">2.30</strong><em class="won">%</em>)</span>
+															</div>
+														</span>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul> -->
+									<!--11.18  국내펀드와 해와펀드 merge 수정-->
+
+									<div class="tSaddTxt mt10">
+										<span class="stockTit">예수금</span>
+									</div>
+									<ul class="accList">
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap AABG0000"><em class="blind">농협</em></span>10.26 추가 -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AABG0000.png" alt="농협 로고" class="imgLogo">
+												</span>													
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">NH투자증권</span></div>
+													<div class="accInfo">
+														<span class="accValue"><strong class="dataValue">9,000,000</strong><em class="won">원</em></span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap AAEY0000"><em class="blind">삼성증권</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AAEY0000.png" alt="삼성증권 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">삼성증권</span></div>
+													<div class="accInfo">
+														<span class="accValue"><strong class="dataValue pointColor06">8,000,000</strong><em class="won">원</em></span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap AACU0000"><em class="blind">미래에셋증권</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AACU0000.png" alt="미래에셋증권 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">미래에셋증권</span></div>
+													<div class="accInfo">
+														<span class="accValue"><strong class="dataValue">9,000,000</strong><em class="won">원</em></span>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+
+									<div class="tSaddTxt mt10">
+										<span class="stockTit">기타투자상품</span>
+									</div>
+									<ul class="accList bdbNone"> <!--12.07 bdbNone추가-->
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap C1AACQ0000"><em class="blind">농협</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AACQ0000.png" alt="농협 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">신탁</span></div>
+													<div class="accInfo">
+														<span class="accValue"><strong class="dataValue">9,000,000</strong><em class="won">원</em>
+															<!-- <div class="mainAmount">
+																<span class="arrowDown" role="img" aria-label="감소"><em class="blind">감소</em></span>
+																<span class="amount inColor"><strong>132,548</strong>원 (-<strong class="dataValue">0.03</strong><em class="won">%</em>)</span>
+															</div> -->
+														</span>
+													</div>
+													<div class="mainAmount"><!--12.27 위치 수정-->
+														<span class="arrowDown" role="img" aria-label="감소"><em class="blind">감소</em></span>
+														<span class="amount inColor"><strong>132,548</strong>원 (-<strong class="dataValue">0.03</strong><em class="won">%</em>)</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap C1AACQ0000"><em class="blind">농협</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AACQ0000.png" alt="농협 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">ISA</span></div>
+													<div class="accInfo">
+														<span class="accValue"><strong class="dataValue">9,000,000</strong><em class="won">원</em>
+															<!-- <div class="mainAmount">
+																<span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span>
+																<span class="amount inColor"><strong>232,759</strong>원 (+<strong class="dataValue">2.30</strong><em class="won">%</em>)</span>
+															</div> -->
+														</span>
+													</div>
+													<div class="mainAmount"><!--12.27 위치 수정-->
+														<span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span>
+														<span class="amount inColor"><strong>232,759</strong>원 (+<strong class="dataValue">2.30</strong><em class="won">%</em>)</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap C1AACQ0000"><em class="blind">농협</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AACQ0000.png" alt="농협 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">담보대출</span></div>
+													<div class="accInfo">
+														<span class="accValue"><strong class="dataValue">-1,000,000</strong><em class="won">원</em></span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap C1AACQ0000"><em class="blind">농협</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AACQ0000.png" alt="농협 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">신용융자</span></div>
+													<div class="accInfo">
+														<span class="accValue"><strong class="dataValue">-1,000,000</strong><em class="won">원</em></span>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+
+									<div class="asMainBanner">
+										<a href="javascript:" role="button">
+											<span class="txt">가입한 신탁/ISA를 연결해보세요</span> <!-- [23-01-31].삭제 -->
+										</a>
+									</div>
+
+								</div>
+								<div class="swiper-slide"> <!-- 계좌별 정렬 -->
+									<ul class="accList">
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap ACRB0000"><em class="blind">삼성전자</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/ACRB0000.png" alt="삼성전자 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">삼성전자</span></div>
+													<div class="accNumWrap"><!--12.27 위치 변경-->
+														<span class="accNum">123-456-789</span>
+													</div>
+													<div class="accInfo">
+														<span class="accValue">
+															<strong class="dataValue">1,000,999</strong><em class="won">원</em>
+															<!-- <div class="mainAmount">
+																<span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span>
+																<span class="amount inColor"><strong>56,897</strong>원 (+<strong class="dataValue">1.53</strong><em class="won">%</em>)</span>
+															</div> -->
+														</span>
+													</div>
+													<div class="mainAmount"><!--12.27 위치수정-->
+														<span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span>
+														<span class="amount inColor"><strong>56,897</strong>원 (+<strong class="dataValue">1.53</strong><em class="won">%</em>)</span>
+													</div>
+													
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap AAOG0000"><em class="blind">LG전자</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AAOG0000.png" alt="LG전자 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">LG전자</span></div>
+													<div><!--12.27 위치 변경-->
+														<span class="accNum">123-456-789</span>
+													</div>
+													<div class="accInfo">
+														<span class="accLabel">
+															<em class="tag gray">만료예정</em>
+														</span>
+														<span class="accValue">
+															<strong class="dataValue">20,000,000</strong><em class="won">원</em>
+															<!-- <div class="mainAmount">
+																<span class="arrowDown" role="img" aria-label="감소"><em class="blind">감소</em></span>
+																<span class="amount inColor"><strong>56,897</strong>원 (-<strong class="dataValue">1.53</strong><em class="won">%</em>)</span>
+															</div> -->
+														</span>
+													</div>
+													<div class="mainAmount"><!--12.27 위치 수정-->
+														<span class="arrowDown" role="img" aria-label="감소"><em class="blind">감소</em></span>
+														<span class="amount inColor"><strong>56,897</strong>원 (-<strong class="dataValue">1.53</strong><em class="won">%</em>)</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap ACAA0000"><em class="blind">테슬라</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/ACAA0000.png" alt="테슬라 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">테슬라</span></div>
+													<div class="accInfo">
+														<span class="accValue">
+															<strong class="dataValue">20,000,000</strong><em class="won">원</em>
+															<!-- <div class="mainAmount">
+																<span class="arrowDown" role="img" aria-label="감소"><em class="blind">감소</em></span>
+																<span class="amount inColor"><strong>132,548</strong>원 (-<strong class="dataValue">0.03</strong><em class="won">%</em>)</span>
+															</div> -->
+														</span>
+													</div>
+													<div class="mainAmount"><!--12.27 위치 수정-->
+														<span class="arrowDown" role="img" aria-label="감소"><em class="blind">감소</em></span>
+														<span class="amount inColor"><strong>132,548</strong>원 (-<strong class="dataValue">0.03</strong><em class="won">%</em>)</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap ACAB0000"><em class="blind">애플</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/ACAB0000.png" alt="애플 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">애플</span></div>
+													<div class="accInfo">
+														<span class="accLabel">
+															<em class="tag purple">목표</em>
+															<em class="tag gray">만료</em>
+														</span>
+														<span class="accValue">
+															<strong class="dataValue">99,999,999,999</strong><em class="won">원</em>
+															<!-- <div class="mainAmount">
+																<span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span>
+																<span class="amount inColor"><strong>232,759</strong>원 (+<strong class="dataValue">2.30</strong><em class="won">%</em>)</span>
+															</div> -->
+														</span>
+													</div>
+													<div class="mainAmount"><!--12.27 위치 수정-->
+														<span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span>
+														<span class="amount inColor"><strong>232,759</strong>원 (+<strong class="dataValue">2.30</strong><em class="won">%</em>)</span>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+									<div class="asMainBanner">
+										<a href="javascript:" role="button">
+											<span class="txt">가입한 신탁/ISA를 연결해보세요</span> <!-- [23-01-31].삭제 -->
+										</a>
+									</div>
+								</div>
+							</div>
+							
+						</div>	
+						<!-- -->
+						<!-- <div class="totalAcc">
+							<span class="tit">직접투자 1개</span>
+							<span class="value">10,000,000원</span>
+						</div> -->
+								
+					</li>
+				</ul>
+				<!-- // 투자 상세 -->
+			</div>
+		</div>
+		<!-- // 투자 -->
+
+		<!-- -------------------------------------- -->
+		<!-- [목록영역] 부채 -->
+		<!-- -------------------------------------- -->
+		<div class="subMain assetTotalList toggleWrap boxTypeWrap">
+			<!-- 부채 토탈 -->
+			<!-- [2023-01-11] 수정 -->
+			<div class="totalTitWrap">
+				<a href="javascript:;" class="toggleBtn active less">
+					<h2 class="totalTit">부채 <strong class="cnt pointColor">2개</strong></h2>
+					<span class="totalAmnt"><strong class="dataValue">15,000,000</strong><em class="won">원</em></span>
+				</a>
+			</div>
+			<!-- //[2023-01-11] 수정 -->
+			<!-- // 부채 토탈 -->
+
+			<div class="toggleCont" style="display:block;">
+				<div class="subMainBanner">
+					<a href="javascript:;" role="button" class="typeLoan">
+						<div class="type03">만기가 얼마 안 남은 대출이 <span class="pointColor">3건</span> 있어요</div><!--10.27 수정-->
+					</a>
+				</div>
+
+				<!-- 부채 상세 -->
+				<ul class="totalAccList">
+					<li>
+						<div class="swiper-container listSwiperlia">
+							<div class="totalSort"></div>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"> <!-- 잔액순 정렬 -->
+									<ul class="accList">
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap C1AACQ0000"><em class="blind">NH투자증권</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AACQ0000.png" alt="NH투자증권 로고" class="imgLogo"><!-- [접근성_2024] 기관명 추가 -->
+												</span>													
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">올원마이너스대출</span></div>
+													<div class="accInfo">
+														<span class="accLabel">
+															<span class="txt">2021.06.10</span>
+														</span>
+														<span class="accValue">
+															<strong class="dataValue">20,000,000</strong><em class="won">원</em>
+															<div class="mainAmount">
+																<span class="amount">연 <strong class="dataValue">8.34</strong><em class="won">%</em></span>
+															</div>
+														</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap C1AACQ0000"><em class="blind">NH투자증권</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AACQ0000.png" alt="NH투자증권 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titAreaWrap">
+														<div class="titArea">
+															<span class="accTit">[별칭]주택담보대출</span>
+														</div>	
+														<div class="transAcc"><button type="button" class="contBtn03">이체</button></div>
+													</div>
+													
+													<div class="accInfo">
+														<span class="accLabel wrapTag">
+															<em class="tag skyblue">마이너스</em>
+															<em class="tag red"> 만기경과</em>
+															<em class="tag skyblue">D-Day</em>
+															<em class="tag green">D-45</em>
+															<em class="tag purple">목표</em>
+															<em class="tag gray">만료예정</em>
+														</span>
+														<span class="accValue">
+															<strong class="dataValue">99,999,999,999</strong><em class="won">원</em>
+															<div class="mainAmount">
+																<span class="amount">연 <strong class="dataValue">8.34</strong><em class="won">%</em></span>
+															</div>
+														</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap C1AACQ0000"><em class="blind">NH투자증권</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AACQ0000.png" alt="NH투자증권 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">카드장기대출이지론</span></div>
+													<div class="accInfo">
+														<span class="accLabel">
+															<!-- <em class="tag gray">마이너스</em> -->
+															<em class="tag green">D-45</em>
+															<em class="tag purple">목표</em>
+															<em class="txt">2021.06.10</em>
+														</span>
+														<span class="accValue">
+															<strong class="dataValue">1,000,000</strong><em class="won">원</em>
+															<div class="mainAmount">
+																<span class="amount">연 <strong class="dataValue">8.34</strong><em class="won">%</em></span>
+															</div>
+														</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap C1AACQ0000"><em class="blind">NH투자증권</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AACQ0000.png" alt="NH투자증권 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">금융리스</span></div>
+													<div class="accInfo">
+														<span class="accValue">
+															<strong class="dataValue">1,000,000</strong><em class="won">원</em>
+															<div class="mainAmount">
+																<span class="amount">연 <strong class="dataValue">8.34</strong><em class="won">%</em></span>
+															</div>
+														</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" class="flexAlineCenter" role="button">
+												<!-- <span class="imgWrap C1AACQ0000"><em class="blind">NH투자증권</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AACQ0000.png" alt="NH투자증권 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">벤츠 파이낸셜</span><em class="icoNew2"><span class="blind">NEW</span></em></div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap C1AACQ0000"><em class="blind">NH투자증권</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AACQ0000.png" alt="NH투자증권 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">포르쉐 파이낸셜</span></div>
+													<div class="accInfo">
+														<span class="accLabel">
+															<em class="tag gray">만료</em>
+														</span>
+													</div>
+												</div>
+											</a>
+										</li>
+
+										<!-- [2023 NH마이데이터 서비스 고도화] 학자금 추가 -->
+										<li>
+											<a href="javascript:;" role="button">
+												<span class="imgWrap">
+													<img src="../../images/logos/AAOV0000.png" alt="한국장학재단" class="imgLogo">
+												</span>	
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">학자금 대출</span></div>
+													<div class="accInfo">
+														<span class="accValue">
+															<strong class="dataValue">20,000,000</strong><em class="won">원</em>
+														</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<!-- // [2023 NH마이데이터 서비스 고도화] 학자금 추가 -->
+									</ul>
+								</div>
+								<div class="swiper-slide"> <!-- 금리순 정렬 -->
+									<ul class="accList">
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap C1AACQ0000"><em class="blind">NH투자증권</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AACQ0000.png" alt="NH투자증권 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">올원마이너스대출</span></div>
+													<div class="accInfo">
+														<span class="accLabel">
+															<span class="txt">2021.06.10</span>
+														</span>
+														<span class="accValue">
+															<strong class="dataValue">20,000,000</strong><em class="won">원</em>
+															<div class="mainAmount">
+																<span class="amount">연 <strong class="dataValue">8.34</strong><em class="won">%</em></span>
+															</div>
+														</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap C1AACQ0000"><em class="blind">NH투자증권</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AACQ0000.png" alt="NH투자증권 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">[별칭]주택담보대출</span></div>
+													<div class="accInfo">
+														<span class="accLabel">
+															<em class="tag gray">마이너스</em>
+															<em class="tag green">D-45</em>
+															<em class="tag purple">목표</em>
+														</span>
+														<span class="accValue">
+															<strong class="dataValue">99,999,999,999</strong><em class="won">원</em>
+															<div class="mainAmount">
+																<span class="amount">연 <strong class="dataValue">8.34</strong><em class="won">%</em></span>
+															</div>
+														</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap C1AACQ0000"><em class="blind">NH투자증권</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AACQ0000.png" alt="NH투자증권 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">카드장기대출이지론</span></div>
+													<div class="accInfo">
+														<span class="accLabel">
+															<!-- <em class="tag gray">마이너스</em> -->
+															<em class="tag green">D-45</em>
+															<em class="tag purple">목표</em>
+															<em class="txt">2021.06.10</em>
+														</span>
+														<span class="accValue">
+															<strong class="dataValue">1,000,000</strong><em class="won">원</em>
+															<div class="mainAmount">
+																<span class="amount">연 <strong class="dataValue">8.34</strong><em class="won">%</em></span>
+															</div>
+														</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap C1AACQ0000"><em class="blind">NH투자증권</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AACQ0000.png" alt="NH투자증권 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">금융리스</span></div>
+													<div class="accInfo">
+														<span class="accValue">
+															<strong class="dataValue">1,000,000</strong><em class="won">원</em>
+															<div class="mainAmount">
+																<span class="amount">연 <strong class="dataValue">8.34</strong><em class="won">%</em></span>
+															</div>
+														</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" class="flexAlineCenter" role="button">
+												<!-- <span class="imgWrap C1AACQ0000"><em class="blind">NH투자증권</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AACQ0000.png" alt="NH투자증권 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">벤츠 파이낸셜</span><em class="icoNew2"><span class="blind">NEW</span></em></div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap C1AACQ0000"><em class="blind">NH투자증권</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AACQ0000.png" alt="NH투자증권 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">포르쉐 파이낸셜</span></div>
+													<div class="accInfo">
+														<span class="accLabel">
+															<em class="tag gray">만료</em>
+														</span>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<!-- // 부채 상세 -->
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [목록영역] 연금 -->
+		<!-- -------------------------------------- -->
+		<div class="subMain assetTotalList toggleWrap boxTypeWrap">
+			<!-- 연금 토탈 -->
+			<!-- [2023-01-11] 수정 -->
+			<div class="totalTitWrap">
+				<a href="javascript:;" class="toggleBtn active less">
+					<h2 class="totalTit">연금 <strong class="cnt pointColor">3개</strong></h2>
+					<span class="totalAmnt">
+						<strong class="dataValue">14,000,000,000</strong><em class="won">원</em>
+					</span>
+				</a>
+			</div>
+			<!-- //[2023-01-11] 수정 -->
+			<!-- // 연금 토탈 -->
+
+			<div class="toggleCont" style="display: block;">
+				<div class="subMainBanner">
+					<a href="javascript:;" role="button" class="typePension">
+						<div class="type04">예상 연금 수령액이 궁금하신가요?</div><!--10.27 수정-->
+					</a>
+				</div>
+				<!-- 연금 상세 -->
+				<ul class="totalAccList">
+					<li>
+						<div class="swiper-container listSwiperPension">
+							<div class="totalSort"></div>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<ul class="accList">
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap B1AABD0000"><em class="blind">아이비케이연금보험㈜</em class="blind"></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AABD0000.png" alt="아이비케이연금보험㈜ 로고" class="imgLogo"><!-- [접근성_2024] 기관명 추가 -->
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">개인형IRP</span></div> <!-- [접근성_2024] 등록된 은행명을 alt에 추가 부탁드립니다. -->
+													<div class="accInfo">
+														<span class="accValue"><strong class="dataValue">10,000,000</strong><em class="won">원</em></span>
+													</div>
+													<div class="mainAmount">
+														<span class="arrowDown" role="img" aria-label="감소"><em class="blind">감소</em></span>
+														<span class="amount inColor"><strong>56,897</strong>원 (-<strong class="dataValue">1.53</strong><em class="won">%</em>)</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li> 
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap B1AABD0000"><em class="blind">아이비케이연금보험㈜</em class="blind"></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AABD0000.png" alt="아이비케이연금보험㈜ 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">연금저축펀드(금투업권)</span></div>
+													<div class="accInfo">
+														<span class="accValue"><strong class="dataValue">0</strong><em class="won">원</em></span>
+													</div>
+													<div class="mainAmount">
+														<span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span>
+														<span class="amount inColor"><strong>56,897</strong>원 (+<strong class="dataValue">1.53</strong><em class="won">%</em>)</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap B1AABD0000"><em class="blind">아이비케이연금보험㈜</em class="blind"></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AABD0000.png" alt="아이비케이연금보험㈜ 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">개인형IRP</span></div>
+													<div class="accInfo">
+														<span class="accLabel">
+															<em class="tag gray">만료</em>
+														</span>
+														<span class="accValue"><button href="javascript:;" class="linkType1 pointColor">연결확인</button></span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap B1AABD0000"><em class="blind">아이비케이연금보험㈜</em class="blind"></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AABD0000.png" alt="아이비케이연금보험㈜ 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">연금저축펀드(금투업권)</span></div>
+													<div class="accInfo">
+														<span class="accLabel">
+															<em class="tag gray">만료예정</em>
+														</span>
+														<span class="accValue"><strong class="dataValue">0</strong><em class="won">원</em></span>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="swiper-slide">
+									<ul class="accList">
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap B1AABD0000"><em class="blind">아이비케이연금보험㈜</em class="blind"></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AABD0000.png" alt="아이비케이연금보험㈜ 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">개인형IRP</span></div>
+													<div class="accInfo">
+														<span class="accValue"><strong class="dataValue">10,000,000</strong><em class="won">원</em></span>
+													</div>
+													<div class="mainAmount">
+														<span class="arrowDown" role="img" aria-label="감소"><em class="blind">감소</em></span>
+														<span class="amount inColor"><strong>56,897</strong>원 (-<strong class="dataValue">1.53</strong><em class="won">%</em>)</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li> 
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap B1AABD0000"><em class="blind">아이비케이연금보험㈜</em class="blind"></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AABD0000.png" alt="아이비케이연금보험㈜ 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">연금저축펀드(금투업권)</span></div>
+													<div class="accInfo">
+														<span class="accValue"><strong class="dataValue">0</strong><em class="won">원</em></span>
+													</div>
+													<div class="mainAmount">
+														<span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span>
+														<span class="amount inColor"><strong>56,897</strong>원 (+<strong class="dataValue">1.53</strong><em class="won">%</em>)</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap B1AABD0000"><em class="blind">아이비케이연금보험㈜</em class="blind"></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AABD0000.png" alt="아이비케이연금보험㈜ 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">개인형IRP</span></div>
+													<div class="accInfo">
+														<span class="accLabel">
+															<em class="tag gray">만료</em>
+														</span>
+														<span class="accValue"><button href="javascript:;" class="linkType1 pointColor">연결확인</button></span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap B1AABD0000"><em class="blind">아이비케이연금보험㈜</em class="blind"></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AABD0000.png" alt="아이비케이연금보험㈜ 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">연금저축펀드(금투업권)</span></div>
+													<div class="accInfo">
+														<span class="accLabel">
+															<em class="tag gray">만료예정</em>
+														</span>
+														<span class="accValue"><strong class="dataValue">0</strong><em class="won">원</em></span>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<!-- // 연금 상세 -->
+				<div class="asMainBanner"><!--10.26 추가-->
+					<a href="javascript:" role="button">
+						<span class="txt">가입한 퇴직연금(DC)를 연결해보세요</span> <!-- [23-01-31].삭제 -->
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [목록영역] 가상자산 -->
+		<!-- -------------------------------------- -->
+		<div class="subMain assetTotalList toggleWrap boxTypeWrap">
+			<!-- 가상자산 토탈 -->
+			<!-- [2023-01-11] 수정 -->
+			<div class="totalTitWrap">
+				<a href="javascript:;" class="toggleBtn active less">
+					<h2 class="totalTit">가상자산 <strong class="cnt pointColor">2개</strong></h2>
+					<span class="totalAmnt">
+						<strong class="dataValue">15,000,000</strong><em class="won">원</em>
+					</span>
+				</a>
+			</div>
+			<!-- //[2023-01-11] 수정 -->
+			<!-- // 가상자산 토탈 -->
+
+			<div class="toggleCont" style="display:block;">
+				<div class="subMainBanner">
+					<a href="javascript:;" role="button" class="typeCrypto">
+						<div class="type05">가상자산 배너 문구 입력</div><!--10.27 수정-->
+					</a>
+				</div>
+
+				<!-- 가상자산 상세 -->
+				<ul class="totalAccList">
+					<li>
+						<div class="swiper-container listSwiperCrypto">
+							<div class="totalSortWrap">
+								<div class="totalSort"></div>
+								<div class="cryptoDate">
+									<div>시세기준일</div>
+									<div>YYYY.MM.DD HH:MM:SS </div>
+								</div>
+							</div>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"> <!-- 금액순 정렬 -->
+									<ul class="accList">
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap subscribe"><span class="img"><img src="../../images/logo_bithumb.png" alt="코인이름"></span></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/ABAA0000.png" alt="코인이름 로고" class="imgLogo"><!-- [접근성_2024] 기관명 추가 -->
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">비트코인</span><span class="coinUnit">0.2 BTC</span>
+														<!-- <span class="acBookmark"><span class="blind">즐겨찾기</span></span> 12.23 삭제-->
+													</div>
+													<div class="accInfo">
+														<span class="accLabel">
+															<em class="tag green">직접등록</em>
+														</span>
+														<span class="accValue"><strong class="dataValue">99,999,999,999</strong><em class="won">원</em></span>
+													</div>
+													<div class="mainAmount">
+														<span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span>
+														<span class="amount inColor"><strong>56,897</strong>원 (+<strong class="dataValue">1.53</strong><em class="won">%</em>)</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap subscribe"><span class="img"><img src="../../images/logo_bithumb.png" alt="코인이름"></span></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/ABAA0000.png" alt="코인이름 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">이더리움클래식</span><span class="coinUnit">0.2 ETH</span></div>
+													<div class="accInfo">
+														<span class="accLabel">
+															<em class="tag gray">만료예정</em>
+														</span>
+														<span class="accValue"><strong class="dataValue">20,000,000</strong><em class="won">원</em></span>
+													</div>
+													<div class="mainAmount">
+														<span class="arrowDown" role="img" aria-label="감소"><em class="blind">감소</em></span>
+														<span class="amount inColor"><strong>56,897</strong>원 (-<strong class="dataValue">1.53</strong><em class="won">%</em>)</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap subscribe"><span class="img"><img src="../../images/logo_bithumb.png" alt="코인이름"></span></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/ABAA0000.png" alt="코인이름 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">이더리움클래식</span></div>
+													<div class="accInfo">
+														<span class="accLabel">
+															<em class="tag gray">만료</em>
+														</span>
+														<span class="accValue"><button href="javascript:;" class="linkType1 pointColor">연결확인</button></span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<!-- 2022-07-12 거래중지 케이스 추가 -->
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap subscribe"><span class="img"><img src="../../images/logo_bithumb.png" alt="코인이름"></span></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/ABAA0000.png" alt="코인이름 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">이더리움클래식</span></div>
+													<div class="accInfo">
+														<span class="accValue"><button href="javascript:;" class="linkType1">거래중지</button></span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<!-- 2022-07-12 거래중지 케이스 추가 -->
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap subscribe"><span class="img"><img src="../../images/logo_bithumb.png" alt="코인이름"></span></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/ABAA0000.png" alt="코인이름 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">원화</span></div>
+													<div class="accInfo">
+														<span class="accValue"><strong class="dataValue">10,000,000</strong><em class="won">원</em></span>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="swiper-slide"> <!-- 수익률순 정렬 -->
+									<ul class="accList">
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap subscribe"><span class="img"><img src="../../images/logo_bithumb.png" alt="코인이름"></span></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/ABAA0000.png" alt="코인이름 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">비트코인</span><span class="coinUnit">0.2 BTC</span>
+														<!-- <span class="acBookmark"><span class="blind">즐겨찾기</span></span> 12.23 삭제-->
+													</div>
+													<div class="accInfo">
+														<span class="accLabel">
+															<em class="tag green">직접등록</em>
+														</span>
+														<span class="accValue"><strong class="dataValue">99,999,999,999</strong><em class="won">원</em></span>
+													</div>
+													<div class="mainAmount">
+														<span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span>
+														<span class="amount inColor"><strong>56,897</strong>원 (+<strong class="dataValue">1.53</strong><em class="won">%</em>)</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap subscribe"><span class="img"><img src="../../images/logo_bithumb.png" alt="코인이름"></span></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/ABAA0000.png" alt="코인이름 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">이더리움클래식</span><span class="coinUnit">0.2 ETH</span></div>
+													<div class="accInfo">
+														<span class="accLabel">
+															<em class="tag gray">만료예정</em>
+														</span>
+														<span class="accValue"><strong class="dataValue">20,000,000</strong><em class="won">원</em></span>
+													</div>
+													<div class="mainAmount">
+														<span class="arrowDown" role="img" aria-label="감소"><em class="blind">감소</em></span>
+														<span class="amount inColor"><strong>56,897</strong>원 (-<strong class="dataValue">1.53</strong><em class="won">%</em>)</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap subscribe"><span class="img"><img src="../../images/logo_bithumb.png" alt="코인이름"></span></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/ABAA0000.png" alt="코인이름 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">이더리움클래식</span></div>
+													<div class="accInfo">
+														<span class="accLabel">
+															<em class="tag gray">만료</em>
+														</span>
+														<span class="accValue"><button href="javascript:;" class="linkType1 pointColor">연결확인</button></span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<!-- 2022-07-12 거래중지 케이스 추가 -->
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap subscribe"><span class="img"><img src="../../images/logo_bithumb.png" alt="코인이름"></span></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/ABAA0000.png" alt="코인이름 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">이더리움클래식</span></div>
+													<div class="accInfo">
+														<span class="accValue"><button href="javascript:;" class="linkType1">거래중지</button></span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<!-- 2022-07-12 거래중지 케이스 추가 -->
+										<li>
+											<a href="javascript:;" role="button">
+												<!-- <span class="imgWrap subscribe"><span class="img"><img src="../../images/logo_bithumb.png" alt="코인이름"></span></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/ABAA0000.png" alt="코인이름 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">원화</span></div>
+													<div class="accInfo">
+														<span class="accValue"><strong class="dataValue">10,000,000</strong><em class="won">원</em></span>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							
+						</div>	
+					</li>
+				</ul>
+				<!-- // 투자 상세 -->
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [목록영역] 선불페이 -->
+		<!-- -------------------------------------- -->
+		<div class="subMain assetTotalList toggleWrap boxTypeWrap">
+			<!-- 선불페이 토탈 -->
+			<!-- [2023-01-11] 수정 -->
+			<div class="totalTitWrap">
+				<a href="javascript:;" class="toggleBtn active">
+					<h2 class="totalTit">선불페이&middot;카드 <span class="cnt pointColor">2개</span></h2>
+					<span class="totalAmnt"><strong class="dataValue">90,000,000,000</strong><em class="won">원</em></span>
+				</a>
+			</div>
+			<!-- //[2023-01-11] 수정 -->
+			<!-- // 선불페이 토탈 -->
+			<div class="toggleCont" style="display:block;">
+				<div class="subMainBanner">
+					<a href="javascript:;" role="button" class="typePay">
+						<div class="type06">혜택 받으며 선불페이 이용하는 꿀팁</div><!--10.27 수정-->
+					</a>
+				</div>
+				<!-- 선불페이 상세 -->
+				<ul class="totalAccList">
+					<li>
+						<ul class="accList">
+							<li>
+								<a href="javascript:;" role="button">
+									<!-- <span class="imgWrap E1AAIE0000"><em class="blind">엔에이치엔페이코</em class="blind"></span> -->
+									<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+										<img src="../../images/logos/AAIE0000.png" alt="엔에이치엔페이코 로고" class="imgLogo"><!-- [접근성_2024] 기관명 추가 -->
+									</span>
+									<div class="accInfoWrap">
+										<div class="titArea"><span class="accTit">엔에이치엔페이코</span>
+											<!-- <span class="acBookmark"><span class="blind">즐겨찾기</span></span> 12.23 삭제-->
+										</div>
+										<div class="accInfo">
+											<span class="accValue"><strong class="dataValue">90,000,000,000</strong><em class="won">원</em></span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button">
+									<!-- <span class="imgWrap E1AAIA0000"><em class="blind">카카오 페이</em class="blind"></span> -->
+									<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+										<img src="../../images/logos/AAIA0000.png" alt="카카오페이 로고" class="imgLogo">
+									</span>
+									<div class="accInfoWrap">
+										<div class="titArea"><span class="accTit">카카오 페이</span></div>
+										<div class="accInfo">
+											<span class="accLabel">
+												<em class="tag gray">만료</em>
+											</span>
+											<span class="accValue"><button type="button" class="linkType1 pointColor">연결확인</button></span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button">
+									<!-- <span class="imgWrap E1AAIA0000"><em class="blind">카카오 페이</em class="blind"></span> -->
+									<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+										<img src="../../images/logos/AAIA0000.png" alt="카카오페이 로고" class="imgLogo">
+									</span>
+									<div class="accInfoWrap">
+										<div class="titArea"><span class="accTit">카카오 페이</span></div>
+										<div class="accInfo">
+											<span class="accLabel">
+												<em class="tag gray">만료예정</em>
+											</span>
+											<span class="accValue"><strong class="dataValue">90,000,000,000</strong><em class="won">원</em></span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button">
+									<!-- <span class="imgWrap E1AAIA0000"><em class="blind">카카오 페이</em class="blind"></span> -->
+									<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+										<img src="../../images/logos/AAIA0000.png" alt="카카오페이 로고" class="imgLogo">
+									</span>
+									<div class="accInfoWrap">
+										<div class="titArea"><span class="accTit">카카오 페이</span></div>
+										<div class="accInfo">
+											<span class="accValue off"><strong class="dataValue">10,000,000</strong><em class="won">원</em></span>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!-- // 선불페이 상세 -->
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [목록영역] 부동산 -->
+		<!-- -------------------------------------- -->
+		<div class="subMain assetTotalList toggleWrap boxTypeWrap">
+			<!-- 부동산 토탈 -->
+			<!-- [2023-01-11] 수정 -->
+			<div class="totalTitWrap">
+				<a href="javascript:;" class="toggleBtn active less">
+					<h2 class="totalTit">부동산 <strong class="cnt pointColor">3개</strong></h2>
+					<span class="totalAmnt">
+						<strong class="dataValue">15</strong><em class="won">억</em>
+						<strong class="dataValue">5000</strong><em class="won">만원</em>
+					</span>
+				</a>
+			</div>
+			<!-- [2023-01-11] 수정 -->
+			<!-- // 부동산 토탈 -->
+
+			<div class="toggleCont" style="display: block">
+				<div class="subMainBanner">
+					<a href="javascript:;" role="button" class="typeProperty">
+						<div class="type07">내 집 마련의 꿈, 주택청약 알림 신청하기</div><!--10.27 수정-->
+					</a>
+				</div>
+
+				<!-- 부동산 상세 -->
+				<ul class="totalAccList">
+					<li>
+						<ul class="accList">
+							<li>
+								<a href="javascript:;" role="button">
+									<span class="imgWrap icoEtcAsset01"><em class="blind">아파트</em></span>
+									<div class="accInfoWrap">
+										<div class="titArea"><span class="accTit">강남푸르지오</span><span class="coinUnit">지분률 50%</span></div>
+										<div class="accInfo">
+											<span class="accLabel">
+												<em class="tag green">자가</em>
+											</span>
+											<span class="accValue"><strong class="dataValue">20</strong><em class="won">억원</em></span>
+										</div>
+										<div class="mainAmount">
+											<span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span>
+											<span class="amount inColor"><strong class="dataValue">3</strong>억<strong>2,500</strong>만원</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button">
+									<span class="imgWrap icoEtcAsset01"><em class="blind">아파트</em></span>
+									<div class="accInfoWrap">
+										<div class="titArea"><span class="accTit">강남푸르지오</span><span class="coinUnit">지분률 50%</span></div>
+										<div class="accInfo">
+											<span class="accLabel">
+												<em class="tag green">자가</em>
+											</span>
+											<span class="accValue"><strong class="dataValue">20</strong><em class="won">억원</em></span>
+										</div>
+										<div class="mainAmount">
+											<span class="arrowDown" role="img" aria-label="감소"><em class="blind">감소</em></span>
+											<span class="amount inColor"><strong class="dataValue">3</strong>억<strong>2,500</strong>만원</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button">
+									<span class="imgWrap icoEtcAsset03"><em class="blind">오피스텔</em></span>
+									<div class="accInfoWrap">
+										<div class="titArea"><span class="accTit">오피스텔</span></div>
+										<div class="accInfo">
+											<span class="accLabel">
+												<em class="tag green">전세</em>
+											</span>
+											<span class="accValue"><strong class="dataValue">11</strong><em class="won">억원</em></span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button">
+									<span class="imgWrap icoEtcAsset01"><em class="blind">아파트</em></span>
+									<div class="accInfoWrap">
+										<div class="titArea"><span class="accTit">강남프르지오</span></div>
+										<div class="accInfo">
+											<span class="accLabel">
+												<em class="tag green">월세</em>
+											</span>
+											<span class="accValue"><strong class="dataValue">8 ,000</strong><em class="won">만원</em></span>
+										</div>
+										<div class="mainAmount">
+											<span class="amount">월세 <strong class="dataValue">50</strong>만원</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button">
+									<span class="imgWrap icoEtcEmpty" aria-hidden="true"></span>
+									<div class="accInfoWrap">
+										<div class="accInfo">
+											<span class="assetAddPara">
+												혹시 보유하신 <br>다른 부동산이 있나요?
+											</span>
+											<span class="accValue"><span class="labelAdd">추가하기</span></span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<!-- <li>
+								<a href="javascript:;" role="button">
+									<span class="imgWrap icoEtcAsset02"><em class="blind">기타 부동산</em></span>
+									<div class="accInfoWrap">
+										<div class="titArea"><span class="accTit">기타 부동산</span></div>
+										<div class="accInfo">
+											<span class="accLabel">
+											</span>
+											<span class="accValue"><strong class="dataValue">8 ,000</strong><em class="won">만원</em></span>
+										</div>
+										<div class="mainAmount">
+											<span class="amount"><strong>0</strong>원 (-<strong class="dataValue">1.53</strong><em class="won">%</em>)</span>
+										</div>
+									</div>
+								</a>
+							</li> -->
+						</ul>
+					</li>
+				</ul>
+				<!-- // 부동산 상세 -->
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [목록영역] 자동차 -->
+		<!-- -------------------------------------- -->
+		<div class="assetTotalList" style="display: none"> <!-- [2021] .toggleWrap boxLine 삭제 -->
+			<!-- 자동차 토탈 -->
+			<div class="totalTitWrap">
+				<!-- <a href="javascript:;" class="toggleBtn"> --> <!-- [2021] a 삭제 -->
+					<h2 class="totalTit">자동차 <span class="cnt">6개</span>
+						<span class="totalDate">시세기준일 2021.06.10</span>
+					</h2>
+					<span class="totalAmnt">
+						<strong class="dataValue">10</strong><em class="won">억원</em>
+					</span>
+				<!-- </a> -->
+			</div>
+			<!-- // 자동차 토탈 -->
+
+			<!-- 자동차 상세 -->
+			<ul class="totalAccList">  <!-- [2021] toggleCont 삭제, .totalAccList로 변경 -->
+				<li>
+					<ul class="accList">
+						<li>
+							<a href="javascript:;">
+								<span class="imgWrap icoEtcAsset06"><em class="blind">자동차</em></span>
+								<div class="accInfoWrap">
+									<div class="titArea"><span class="accTit">G4 렉스턴</span></div>
+									<div class="accInfo">
+										<span class="accLabel">
+											<em class="tag bgGreen">자동등록</em>
+											<em class="txt">11가1111</em>
+										</span>
+										<span class="accValue"><strong class="dataValue">8,000</strong><em class="won">만원</em></span>
+									</div>
+								</div>
+							</a>
+						</li> 
+						<li>
+							<a href="javascript:;">
+								<span class="imgWrap icoEtcAsset06"><em class="blind">기타 부동산</em></span>
+								<div class="accInfoWrap">
+									<div class="titArea"><span class="accTit">현대 더 뉴아반떼 MD</span></div>
+									<div class="accInfo">
+										<span class="accLabel">
+											<em class="tag green">직접등록</em>
+											<em class="txt">37어3554</em>
+										</span>
+										<span class="accValue">
+											<strong class="dataValue">15</strong><em class="won">억</em>
+											<strong class="dataValue">5000</strong><em class="won">만원</em>
+										</span>
+									</div>
+								</div>
+							</a>
+						</li> 
+					</ul>
+				</li>
+			</ul>
+			<!-- // 자동차 상세 -->
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [목록영역] 실물+ -->
+		<!-- -------------------------------------- -->
+		<div class="subMain assetTotalList toggleWrap boxTypeWrap">
+			<!-- 실물+ 토탈 -->
+			<!-- [2023-01-11] 수정 -->
+			<div class="totalTitWrap">
+				<a href="javascript:;" class="toggleBtn active less">
+					<h2 class="totalTit">실물 <strong class="cnt pointColor">5개</strong></h2>
+					<span class="totalAmnt">
+						<strong class="dataValue">11,000,100</strong><em class="won">원</em>
+					</span>
+				</a>
+			</div>
+			<!-- //[2023-01-11] 수정 -->
+			<!-- // 실물+ 토탈 -->
+			<div class="toggleCont" style="display:block;">
+				<!-- <div class="subMainBanner">
+					<a href="javascript:;" role="button" class="typeReal">
+						<div class="type01">내 집 마련의 꿈, 주택청약 알림 신청하기</div>
+					</a>
+				</div> -->
+				<!-- 실물+ 상세 -->
+				<ul class="totalAccList">
+					<li>
+						<ul class="accList">
+							<li>
+								<a href="javascript:;">
+									<span class="imgWrap icoEtcAsset05"><em class="blind">외화</em></span>
+									<div class="accInfoWrap">
+										<div class="titArea"><span class="accTit">여행 후 남은 달러</span></div>
+										<div class="accInfo">
+											<span class="accLabel"><em class="won">USD</em> <strong class="dataValue">2,000</strong></span>
+											<span class="accValue"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+										</div>
+									</div>
+								</a>
+							</li> 
+							<li>
+								<a href="javascript:;">
+									<span class="imgWrap icoEtcAsset08"><em class="blind">금</em></span>
+									<div class="accInfoWrap">
+										<div class="titArea"><span class="accTit">결혼예물</span></div>
+										<div class="accInfo">
+											<span class="accLabel"><strong class="dataValue">375</strong><em class="won">g</em></span>
+											<span class="accValue"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+										</div>
+										<div class="mainAmount">
+											<span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span>
+											<span class="amount inColor"><strong>56,897</strong>원 (+<strong class="dataValue">1.53</strong><em class="won">%</em>)</span>
+										</div>
+									</div>
+								</a>
+							</li> 
+							<li>
+								<a href="javascript:;">
+									<span class="imgWrap icoEtcAsset08"><em class="blind">금</em></span>
+									<div class="accInfoWrap">
+										<div class="titArea"><span class="accTit">돌반지</span></div>
+										<div class="accInfo">
+											<span class="accLabel"><strong class="dataValue">1</strong><em class="won">돈</em></span>
+											<span class="accValue"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+										</div>
+										<div class="mainAmount">
+											<span class="arrowDown" role="img" aria-label="감소"><em class="blind">감소</em></span>
+											<span class="amount inColor"><strong>56,897</strong>원 (-<strong class="dataValue">1.53</strong><em class="won">%</em>)</span>
+										</div>
+									</div>
+								</a>
+							</li> 
+							<li>
+								<a href="javascript:;">
+									<span class="imgWrap icoEtcAsset07"><em class="blind">기타</em></span>
+									<div class="accInfoWrap">
+										<div class="titArea"><span class="accTit">기타 고가의 명품가방</span></div>
+										<div class="accInfo">
+											<span class="accValue"><strong class="dataValue">186,100</strong><em class="won">원</em>
+											</span>
+										</div>
+									</div>
+								</a>
+							</li> 
+							<li>
+								<a href="javascript:;" role="button">
+									<span class="imgWrap icoEtcEmpty" aria-hidden="true"></span>
+									<div class="accInfoWrap">
+										<div class="accInfo">
+											<span class="assetAddPara">
+												실물자산도 곧 내 자산! <br>자동차, 금, 외화, 기타자산
+											</span><!-- [2023-02-07] 오타수정 -->
+											<span class="accValue"><span class="labelAdd">추가하기</span></span>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!-- // 실물+ 상세 -->
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [목록영역] 보험 -->
+		<!-- -------------------------------------- -->
+		<div class="subMain assetTotalList toggleWrap boxTypeWrap">
+			<!-- 보험 토탈 -->
+			<!-- [2023-01-11] 수정 -->
+			<div class="totalTitWrap">
+				<a href="javascript:;" class="toggleBtn active less">
+					<h2 class="totalTit">보험 <span class="cnt pointColor">1개</span></h2>
+					<span class="totalAmnt">
+						<span class="info">보험료를 확인해보세요</span>
+					</span>
+				</a>
+			</div>
+			<!-- //[2023-01-11] 수정 -->
+			<!-- // 보험 토탈 -->
+			<div class="toggleCont" style="display:block">
+				<div class="subMainBanner">
+					<a href="javascript:;" role="button" class="typeInsu">
+						<div class="type08">혜택 받으며 선불페이 이용하는 꿀팁</div><!--10.27 수정-->
+					</a>
+				</div>
+				<!-- 보험 상세 -->
+				<ul class="totalAccList">
+					<li>
+						<ul class="accList">
+							<li>
+								<a href="javascript:;" class="flexAlineCenter">
+									<!-- <span class="imgWrap B1AAFP0000"><em class="blind">ABL생명</em></span> -->
+									<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+										<img src="../../images/logos/AAFP0000.png" alt="ABL생명 로고" class="imgLogo"><!-- [접근성_2024] 기관명 추가 -->
+									</span>
+									<div class="accInfoWrap">
+										<div class="titArea"><span class="accTit">삼성생명 종합건강보험1.0(무배당)일당백_2종</span>
+											<!-- <span class="acBookmark"><span class="blind">즐겨찾기</span></span> 12.23 삭제-->
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="">
+									<!-- <span class="imgWrap B1AAFP0000"><em class="blind">ABL생명</em></span> -->
+									<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+										<img src="../../images/logos/AAFP0000.png" alt="ABL생명 로고" class="imgLogo">
+									</span>
+									<div class="accInfoWrap">
+										<div class="titArea"><span class="accTit">삼성생명 종합건강보험1.0(무배당)일당백_2종</span>
+											<!-- <span class="acBookmark"><span class="blind">즐겨찾기</span></span> 12.23 삭제-->
+										</div>
+										<div class="accInfo">
+											<span class="accLabel">
+												<em class="tag gray">만료</em>
+											</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<!-- <span class="imgWrap B2AAAL0000"><em class="blind">현대해상</em></span> -->
+									<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+										<img src="../../images/logos/AAAL0000.png" alt="현대해상 로고" class="imgLogo">
+									</span>
+									<div class="accInfoWrap">
+										<div class="titArea"><span class="accTit">[별칭]애니카 다이렉트 자동차보험12312
+										</span></div>
+										<div class="accCar">
+											<div class="divingTxt fcGray"><span>123가1234</span><span>아슬란</span></div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<!-- <span class="imgWrap B2AAAL0000"><em class="blind">현대해상</em></span> -->
+									<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+										<img src="../../images/logos/AAAL0000.png" alt="현대해상 로고" class="imgLogo">
+									</span>
+									<div class="accInfoWrap">
+										<div class="titArea"><span class="accTit">[별칭]애니카 다이렉트 자동차보험12312
+										</span></div>
+										<div class="accCar">
+											<div class="divingTxt fcGray"><span>123가1234</span><span>아슬란</span></div>
+										</div>
+										<div class="accInfo">
+											<span class="accLabel">
+												<em class="tag gray">만료예정</em>
+											</span>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<div class="totTit">
+					<h3>다른 사람이 가입해준 내 보험은?</h3>
+				</div>
+				<ul class="totalAccList">
+					<li>
+						<ul class="accList">
+							<li>
+								<a href="javascript:;" class="flexAlineCenter">
+									<!-- <span class="imgWrap B1AAFP0000"><em class="blind">ABL생명</em></span> -->
+									<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+										<img src="../../images/logos/AAFP0000.png" alt="ABL생명 로고" class="imgLogo">
+									</span>
+									<div class="accInfoWrap">
+										<div class="titArea"><span class="accTit">삼성생명 종합건강보험1.0(무배당)일당백_2종</span>
+											<!-- <span class="acBookmark"><span class="blind">즐겨찾기</span></span> 12.23 삭제-->
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!-- // 보험 상세 -->
+				<div class="asMainBanner"><!--10.26 추가-->
+					<a href="javascript:" role="button">
+						<span class="txt">가입한 보장성 보험을 연결해보세요</span> <!-- [23-01-31].삭제 -->
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [배너영역] -->
+		<!-- -------------------------------------- -->
+		<!--11.10 배너 추가-->
+		<div class="asMainBannerTy01 bgTy01">
+			<a href="javascript:;" title="재무·세무·부동산 전문가 상담 페이지로 이동">
+				<div>
+					<p class="addTxt">금융자산 5억원 이상 VIP고객님을 위한</p>
+					<span class="tit">재무·세무·부동산 전문가 상담</span>
+				</div>
+			</a>
+		</div>
+		<!--case 추가-->
+		<div class="asMainBannerTy01 bgTy01">
+			<a href="javascript:;" title="재무·세무·부동산 전문가 상담 페이지로 이동">
+				<div>
+					<p class="addTxt">금융자산 1억원 이상 VIP고객님을 위한</p>
+					<span class="tit">재무·세무·부동산 전문가 상담</span>
+				</div>
+			</a>
+		</div>
+		<div class="asMainBannerTy01 bgTy01">
+			<a href="javascript:;" title="재무·세무·부동산 전문가 상담 페이지로 이동">
+				<div>
+					<p class="addTxt">VIP고객님을 위한</p>
+					<span class="tit">재무·세무·부동산 전문가 상담</span>
+				</div>
+			</a>
+		</div>
+		<!--//case 추가-->
+		<div class="asMainBannerTy01 bgTy02">
+			<a href="javascript:;" title="">
+				<div>
+					<p class="addTxt">내 DSR은 얼마?</p>
+					<span class="tit02"><span>DSR계산기</span>로 손쉽게 확인해보세요</span>
+				</div>
+			</a>
+		</div>
+		<!--//11.10 배너 추가-->
+
+		<!-- -------------------------------------- -->
+		<!-- [배너영역] -->
+		<!-- -------------------------------------- -->
+		<ul class="subMainFootBannerWrap">
+			<li>
+				<a href="javascript:;" class="type01" role="button" title="자산진단으로 이동">
+					<div class="inner">
+						<span>자산진단하기</span>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="type02" role="button" title="연금진단으로 이동">
+					<div class="inner">
+						<span>연금진단하기</span>
+					</div>
+				</a>
+			</li>
+		</ul>
+
+		<!-- -------------------------------------- -->
+		<!-- [바로가기] -->
+		<!-- -------------------------------------- -->
+		<ul class="btnBoxWrap mt20">
+			<li><button type="button"><span class="iconBookmark">즐겨찾기 · 숨기기</span></button></li>
+			<li><button type="button"><span class="iconDataAdmin">순자산 금액 설정</span></button></li>
+		</ul>
+		<!-- -------------------------------------- -->
+	</div>
+	<!-- ###################################### -->
+
+	<!-- footer 올원 -->
+	<div class="linked-bottom-menu">
+		<a href="javascript:void(0);" class="linked-finance">NH금융</a>
+		<a href="javascript:void(0);" class="linked-mall">상품몰</a>
+		<a href="javascript:void(0);" class="linked-mydata">마이데이터</a>
+		<a href="javascript:void(0);" class="linked-life">생활+</a>
+	</div>
+
+	<!-- footer 스뱅 -->
+	<div class="footer sb">
+		<ul class="footerNav"> 
+			<li><a href="javascript:;" class="home">홈</a></li>
+			<li><a href="javascript:;" class="mydata on">마이데이터</a></li>
+			<li><a href="javascript:;" class="mall">금융상품몰</a></li>
+			<li><a href="javascript:;" class="talk">상담톡</a></li>
+		</ul>
+	</div>
+
+	<!-- 총 자산설정 팝업 --> <!-- [2021] 한은정 : 나의 자산 설정 FMAS1110P로 변경-->
+
+	<script>
+		$(function(){
+			listSwiperInvest();
+			listSwiperlia();
+			listSwiperPension();
+			listSwiperCrypto();
+			bannerSwiperPrd()
+		});
+	</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>연체(탭) | 신용평가정보 | 신용관리 | 컨설팅</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">신용평가정보</a></h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 신용평가정보_연체(탭) ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<!-- -------------------------------------- -->
+		<!-- [탭 메뉴]  -->
+		<!-- -------------------------------------- -->
+		<div class="tabNavi">
+			<ul>
+				<li><a href="javascript:;">카드</a></li>
+				<li><a href="javascript:;">대출</a></li>
+				<li><a href="javascript:;" aria-current="page">연체</a></li> <!-- [D] 활성화 : aria-current="page" -->
+				<li><a href="javascript:;">보증</a></li>
+			</ul>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [상단영역] 연체금액, 연체 상시 배너 -->
+		<!-- -------------------------------------- -->
+		<section class="infoSummary1 t2">
+			<div class="tit">
+				<h2>현재 나의 연체금액은</h2>
+				<div class="tooltipWrap">
+					<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">연체란? 열기</span></button>
+					<div class="tooltipCont">
+						<div class="msaeTool">
+							<p>단기연체의 기준은 5영업일 10만원 이상이며, 장기연체는 90일 이상 연체 등재를 기준으로 하고 있습니다.<br>단, 일시적 소액연체는 신용평가에 활용되지 않습니다.</p>
+						</div>
+						<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">연체란? 닫기</span></button>
+					</div>
+				</div>
+			</div>
+
+			<!-- [연체배너영역] -->
+			<div class="info4">
+				<dl>
+					<dt>단기연체</dt>
+					<dd><strong class="dataValue">0</strong><span class="won">원</span></dd>
+				</dl>
+				<dl>
+					<dt>장기연체</dt>
+					<dd><strong class="dataValue">10,000,000</strong><span class="won">원</span></dd>
+				</dl>
+				<p>연체기간이 길수록 신용평점 회복 소요기간도 길어지니 연체는 <strong>가능한 빨리 상환</strong>하는 것이 좋아요</p>
+			</div>
+			<!-- // -->
+		</section>
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTION] 연체 목록 -->
+		<!-- -------------------------------------- -->
+		<!-- [단기연체 목록] -->
+		<div class="areaSection4">
+			<h3 class="defSubTit2 t1">
+				<strong>단기연체 목록</strong>
+				<span class="sub">총 <span class="pointColor">2개</span></span>
+			</h3>
+
+			<!-- ### 반복 ### -->
+			<div class="toggleWrap boxTypeToggle t1">
+				<!-- 총합계 -->
+				<div class="boxTitWrap">
+					<a href="javascript:;" class="toggleBtn">
+						<span class="tit">
+							<span class="imgWrap"><img src="../../images/logos/AAEV0000.png" alt="" class="imgLogo"></span>
+							<strong>삼성카드</strong>
+						</span>
+						<span class="sub"><strong class="dataValue">1,000,000</strong><span class="won">원</span></span>
+					</a> 
+				</div>
+
+				<!-- 상세내역 -->
+				<div class="toggleCont" style="display:none">
+					<ul class="detailList">
+						<li>
+							<span class="tit">연체금액</span>
+							<span class="value"><strong class="dataValue">5,000,000</strong><span class="won">원</span></span>
+						</li>
+						<li>
+							<span class="tit">최초연체발생일</span>
+							<span class="value"><strong>YYYY.MM.DD</strong></span>
+						</li>
+					</ul>
+				</div>
+				<!-- // -->
+			</div>
+			<!-- ### 반복 ### -->
+			<div class="toggleWrap boxTypeToggle t1">
+				<div class="boxTitWrap">
+					<a href="javascript:;" class="toggleBtn">
+						<span class="tit">
+							<span class="imgWrap"><img src="../../images/logos/AAHJ0000.png" alt="" class="imgLogo"></span>
+							<strong>카카오뱅크</strong>
+						</span>
+						<span class="sub"><strong class="dataValue">1,000,000</strong><span class="won">원</span></span>
+					</a> 
+				</div>
+				<div class="toggleCont" style="display:none">
+					<ul class="detailList">
+						<li>
+							<span class="tit">연체금액</span>
+							<span class="value"><strong class="dataValue">5,000,000</strong><span class="won">원</span></span>
+						</li>
+						<li>
+							<span class="tit">최초연체발생일</span>
+							<span class="value"><strong>YYYY.MM.DD</strong></span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- ### // ### -->
+		</div>
+
+		<!-- [장기연체 목록] -->
+		<div class="areaSection4">
+			<h3 class="defSubTit2 t1">
+				<strong>장기연체 목록</strong>
+				<span class="sub">총 <span class="pointColor">2개</span></span>
+			</h3>
+
+			<!-- ### 반복 ### -->
+			<div class="toggleWrap boxTypeToggle t1">
+				<div class="boxTitWrap">
+					<a href="javascript:;" class="toggleBtn">
+						<span class="tit">
+							<span class="imgWrap"><img src="../../images/logos/AAEV0000.png" alt="" class="imgLogo"></span>
+							<strong>삼성카드</strong>
+						</span>
+						<span class="sub"><strong class="dataValue">1,000,000</strong><span class="won">원</span></span>
+					</a> 
+				</div>
+				<div class="toggleCont" style="display:none">
+					<ul class="detailList">
+						<li>
+							<span class="tit">연체금액</span>
+							<span class="value"><strong>이자/제비용 연체중</strong></span>
+						</li>
+						<li>
+							<span class="tit">등록사유발생일</span>
+							<span class="value"><strong>YYYY.MM.DD</strong></span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- ### 반복 ### -->
+			<div class="toggleWrap boxTypeToggle t1">
+				<div class="boxTitWrap">
+					<a href="javascript:;" class="toggleBtn">
+						<span class="tit">
+							<span class="imgWrap"><img src="../../images/logos/AAHJ0000.png" alt="" class="imgLogo"></span>
+							<strong>카카오뱅크</strong>
+						</span>
+						<span class="sub"><strong class="dataValue">1,000,000</strong><span class="won">원</span></span>
+					</a> 
+				</div>
+				<div class="toggleCont" style="display:none">
+					<ul class="detailList">
+						<li>
+							<span class="tit">연체금액</span>
+							<span class="value"><strong class="dataValue">500,000</strong><span class="won">원</span></span>
+						</li>
+						<li>
+							<span class="tit">등록사유발생일</span>
+							<span class="value"><strong>YYYY.MM.DD</strong></span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- ### // ### -->
+		</div>
+		<!-- // -->
+
+		<!-- -------------------------------------- -->
+		<!-- [하단영역] 알아두세요 -->
+		<!-- -------------------------------------- -->
+		<div class="info_area">
+			<strong class="info_area_title">알아두세요</strong>
+			<ul class="listBul disc">
+				<li>연체 정보는 한국신용정보원, NICE에 등록된 정보입니다.</li>
+				<li>일반적으로 단기연체는 변제 후 최장 3년, 장기연체는 변제 후 최장 5년 동안 신용평점에 영향을 미칠 수 있습니다. 세부 연체정보 반영 기준은 금융위원회의 '2019년도 개인신용평가체계 개선' 가이드를 준용하고 있습니다.</li>
+				<li>신용평가정보 서비스의 모든 내용은 NICE평가정보의 데이터로 제공합니다.</li>
+				<li>자세한 문의는 NICE지키미 사이트 또는 NICE지키미 고객센터(1588-2486)으로 문의해주세요.</li>
+			</ul>
+			<a href="tel:1588-2486" class="linkType5">NICE지키미 고객센터</a>
+		</div>
+		<!-- -------------------------------------- -->
+	</div>
+	<!-- ###################################### -->
+</div>
+</body>
+</html>

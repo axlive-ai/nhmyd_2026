@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>기본정보</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		//tostpop();//토스트 팝업 호출 
+	})
+
+	function tostpop(){
+		var $tostCont = '<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg">업데이트를 완료했습니다.</div></div>'
+		$('.container').after($tostCont);
+		setTimeout(function(){
+			$('.tostpopupWrap').remove();
+		},4000)
+	}
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>세금계산기</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+
+		<h2 class="defTit icoOverseas">
+			양도소득세(해외주식) 확인을<br>			
+			위해 <strong>정보를 입력해주세요</strong>
+		</h2>
+
+		<div class="resetArea mt20">
+			<h3 class="defSubTit2">양도소득세(해외주식) 입력</h3>
+			<div class="cs btnSetReset">
+				<button type="button">입력 초기화</button>
+			</div>
+		</div>
+
+		<div class="formWrap boxTypeWrap containTooltip">
+			<div class="titListBox">
+				<ul>
+					<li>
+						<div class="formTitN">
+							<strong>거래기간</strong>
+							<button type="button" class="contBtn01 green">불러오기</button>
+						</div>
+						<div class="calendarForm">
+							<div class="cal">
+								<div class="inputList">
+									<input type="text" value="2020.09.03" title="거래기간 시작일" placeholder="" readonly="readonly">
+									<a href="javascript:;" class="btnCalendar" title="거래기간 시작일 날짜선택" role="button"><span class="blind">날짜선택</span></a>
+								</div>
+							</div>
+							<span class="symbol">-</span>
+							<div class="cal">
+								<div class="inputList">
+									<input type="text" value="2020.09.03" title="거래기간 종료일" placeholder="" readonly="readonly">
+									<a href="javascript:;" class="btnCalendar" title="거래기간 종료일 날짜선택" role="button"><span class="blind">날짜선택</span></a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="formTitN">
+							<strong>양도가액</strong>
+						</div>
+						<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+							<input type="tel" title="양도가액" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+							<span class="unit">원</span>
+							<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+						</div>
+					</li>
+					<li>
+						<div class="formTitN">
+							<div><strong>취득가액 계산방식</strong>
+								<!-- tootip -->
+								<div class="tooltipWrap">
+									<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">취득가액 계산방식 안내 툴팁 열기</span><!-- [접근성_2024] .blind 수정 --></button>
+									<div class="tooltipCont">
+										<ul class="listDot">
+											<li>선입선출 : <br>매매차익 계산시에 매도시 보유한 최초 매수 수량부터 매도한 것으로 계산</li>
+											<li>이동평균 : <br>매매차익 계산시에도 매도시 보유한 종목의 평균매수금액으로 계산</li>
+										</ul>
+										<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+									</div>
+								</div>
+								<!-- //tootip -->
+							</div>
+						</div>
+						<div class="boxRadio">
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo00" id="rdo001" type="radio">
+									<label for="rdo001">선입선출</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo00" id="rdo002" type="radio" checked="checked">
+									<label for="rdo002">이동평균</label>
+								</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="formTitN">
+							<strong>취득가액</strong>
+						</div>
+						<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+							<input type="tel" title="취득가액" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+							<span class="unit">원</span>
+							<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+						</div>
+					</li>
+					<li>
+						<div class="formTitN">
+							<strong>수수료</strong>
+						</div>
+						<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+							<input type="tel" title="수수료" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+							<span class="unit">원</span>
+							<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="bannerBlue link">
+			<strong>해외주식 거래내역 확인 바로가기</strong>
+		</div>
+
+		<div class="areaBtnDefault">
+			<!-- <a href="javascript:;" class="btnPressDefault" role="button">취소</a> -->
+			<a href="javascript:;" class="btnPressPoint" role="button">계산하기</a> <!--활성화 class btnPressPoint --->
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

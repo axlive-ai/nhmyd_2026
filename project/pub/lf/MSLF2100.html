@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>정부혜택_메인</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>맞춤정부혜택</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<div class="boxTypeWrap totalBalance">
+			<h2 class="defTit mt0"><strong>김농협님의 가족을 위한</strong><br>26건의 정부혜택을 알려드려요</strong></h2><!-- 2022-10-13 "."삭제 -->
+			<div class="hashWrap bdb pb20">
+				<span class="hashTag">#만 39세</span>
+				<span class="hashTag">#경기도 수원</span>
+				<span class="hashTag">#대학생/대학원생</span>
+				<span class="hashTag">#다문화</span>
+			</div>
+			<style type="text/css">.famWrap + .famWrap{display:none}</style>
+			<div class="famWrap">
+				<!-- 09-06 수정
+					li 에 'a' 태그 추가 활성화시 class="selected" title="선택됨"
+				 -->
+				<ul><!-- 07-01 수정 -->
+					<li class="male02"><a href="javascript:;" role="button" title="선택됨"><span class="selected">남자 중년</span><em>본인</em></a></li>
+					<li class="female02"><a href="javascript:;" role="button"><span>여자 중년</span><em>배우자</em></a></li>
+				</ul>
+				<ul>
+					<li class="male01"><span>남자 노년</span><em>부</em></li>
+					<li class="female01"><span>여자 노년</span><em>모</em></li>
+					<li class="male03"><span>남자 청년</span><em>아들1</em></li>
+					<li class="female03"><span>여자 청년</span><em>딸1</em></li>
+					<li class="male06"><span>남자 청소년</span><em>아들2</em></li>
+					<li class="baby02"><span>아기</span><em>출산예정</em></li>
+				</ul>
+			</div>
+		</div>
+		<div class="boxTypeWrap pt0">
+			<div class="tabWrap type01">
+				<ul role="tablist">
+					<li role="presentation"><a href="javascript:;" aria-selected="true" class="active on" role="tab">본인</a></li>
+					<li role="presentation"><a href="javascript:;" role="tab" aria-selected="false" class="">배우자</a></li>
+					<li role="presentation"><a href="javascript:;" role="tab" aria-selected="false" class="">부모님</a></li>
+					<li role="presentation"><a href="javascript:;" role="tab" aria-selected="false" class="">자녀</a></li>
+				</ul>
+			</div>
+			<div class="tabContWrap type01">
+				<div class="tabCont01 pt20" aria-label="본인으로 연결 탭" style="display: block;">
+					<div class="benefitTargetWrap">
+						<div class="benefitTarget">
+							<div><span class="male02 type2">본인</span><em>중장년</em></div> <!-- ##가족세트2 이미지 도출 시 class="male02 type2"## -->
+						</div>
+
+						<!-- 2022-11-02 버튼영역 수정 -->
+						<div class="scrollBtnArea">
+							<ul>
+								<li class="selected"><a href="javascript:;" aria-selected="true" >전체</a></li>
+								<li><a href="javascript:;" aria-selected="false">출산비</a></li>
+								<li><a href="javascript:;" aria-selected="false">출산이후</a></li>
+								<li><a href="javascript:;" aria-selected="false">고용안정</a></li>
+								<li><a href="javascript:;" aria-selected="false">출산비</a></li>
+								<li><a href="javascript:;" aria-selected="false">출산이후</a></li>
+								<li><a href="javascript:;" aria-selected="false">고용안정</a></li>
+							</ul>
+						</div>
+
+						<script type="text/javascript">
+							$(".scrollBtnArea li a").on("click",function(){
+								var $this = $(this);
+								$this.closest('.scrollBtnArea').find('li').removeClass('selected').children('a').attr('aria-selected','false');
+								$this.closest('li').addClass('selected').children('a').attr('aria-selected','true');
+								var $thisPos = $this.position().left;
+								$this.closest('.scrollBtnArea').stop().animate({scrollLeft:$thisPos},300);
+							})
+						</script>							
+						<!-- //2022-11-02 버튼영역 수정 -->
+						
+						
+						<!-- <div class="cateSubList">
+							<div class="lf roundChkWrap flexType">
+								<ul>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample11" id="sample11" checked>
+											<label for="sample11">전체</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample11" id="sample12">
+											<label for="sample12">출산비</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample11" id="sample13">
+											<label for="sample13">출산이후</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample11" id="sample14">
+											<label for="sample14">고용안정</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample11" id="sample15">
+											<label for="sample15">고용안정</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample11" id="sample16">
+											<label for="sample16">고용안정</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</div> -->
+						<ul class="lf accList">
+							<li>
+								<a href="javascript:;" class="link" role="button">
+									<div class="accInfoWrap">
+										<div class="accInfo">
+											<span class="accTit"><strong>자녀 출산 및 입양 지원금</strong></span>
+											<span class="accValue"></span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="link" role="button">
+									<div class="accInfoWrap">
+										<div class="accInfo">
+											<span class="accTit"><strong>모성보호육아지원</strong></span>
+											<span class="accValue"></span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="link" role="button">
+									<div class="accInfoWrap">
+										<div class="accInfo">
+											<span class="accTit"><strong>내집마련 디딤돌 대출</strong></span>
+											<span class="accValue"></span>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<div class="mt20">
+							<a href="javascript:;" class="lf fullInbodyBtn">더보기</a>
+						</div>
+					</div>
+
+					<!-- 2022-10-19 정보없을 때 예시 -->
+					<div class="benefitTargetWrap">
+						<div class="benefitTarget">
+							<div><span class="male02 type2">본인</span></div>
+						</div>
+						<div class="listNone">
+							<p>조회된 맞춤정부혜택이 없습니다.</p>
+						</div>
+						<div class="mt20">
+							<a href="javascript:;" class="lf fullInbodyBtn">전체 혜택 알아보기</a>
+						</div>
+					</div>
+				</div><!-- //.tabCont01 -->
+				<div class="tabCont02 pt20" aria-label="배우자 직접선택 탭" style="display: none;">
+					<div class="benefitTargetWrap">
+						<div class="benefitTarget">
+							<div><span class="female02">배우자</span><em>중장년</em></div>
+						</div>
+						<div class="cateSubList">
+							<div class="lf roundChkWrap flexType">
+								<ul>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample12" id="sample17" checked>
+											<label for="sample17">전체</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample12" id="sample18">
+											<label for="sample18">출산비</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample12" id="sample19">
+											<label for="sample19">출산이후</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample12" id="sample20">
+											<label for="sample20">고용안정</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample12" id="sample21">
+											<label for="sample21">고용안정</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample12" id="sample22">
+											<label for="sample22">고용안정</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<ul class="lf accList">
+							<li>
+								<a href="javascript:;" class="link" role="button">
+									<div class="accInfoWrap">
+										<div class="accInfo">
+											<span class="accTit"><strong>자녀 출산 및 입양 지원금</strong></span>
+											<span class="accValue"></span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="link" role="button">
+									<div class="accInfoWrap">
+										<div class="accInfo">
+											<span class="accTit"><strong>모성보호육아지원</strong></span>
+											<span class="accValue"></span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="link" role="button">
+									<div class="accInfoWrap">
+										<div class="accInfo">
+											<span class="accTit"><strong>내집마련 디딤돌 대출</strong></span>
+											<span class="accValue"></span>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<div class="mt20">
+							<a href="javascript:;" class="lf fullInbodyBtn">더보기</a>
+						</div>
+					</div>
+				</div><!-- //.tabCont02 -->
+				<div class="tabCont03 pt20" aria-label="부모님 직접선택 탭" style="display: none;">
+					<div class="benefitTargetWrap">
+						<div class="benefitTarget">
+							<div><span class="male01">부</span><em>노년</em></div>
+						</div>
+						<div class="cateSubList">
+							<div class="lf roundChkWrap flexType">
+								<ul>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample13" id="sample23" checked>
+											<label for="sample23">전체</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample13" id="sample24">
+											<label for="sample24">출산비</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample13" id="sample25">
+											<label for="sample25">출산이후</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample13" id="sample26">
+											<label for="sample26">고용안정</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample13" id="sample27">
+											<label for="sample27">고용안정</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample13" id="sample28">
+											<label for="sample28">고용안정</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<ul class="lf accList">
+							<li>
+								<a href="javascript:;" class="link" role="button">
+									<div class="accInfoWrap">
+										<div class="accInfo">
+											<span class="accTit"><strong>자녀 출산 및 입양 지원금</strong></span>
+											<span class="accValue"></span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="link" role="button">
+									<div class="accInfoWrap">
+										<div class="accInfo">
+											<span class="accTit"><strong>모성보호육아지원</strong></span>
+											<span class="accValue"></span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="link" role="button">
+									<div class="accInfoWrap">
+										<div class="accInfo">
+											<span class="accTit"><strong>내집마련 디딤돌 대출</strong></span>
+											<span class="accValue"></span>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<div class="mt20">
+							<a href="javascript:;" class="lf fullInbodyBtn">더보기</a>
+						</div>
+					</div>
+
+					<div class="benefitTargetWrap">
+						<div class="benefitTarget">
+							<div><span class="female01">모</span><em>노년</em></div>
+						</div>
+						<div class="cateSubList_all">
+							<div class="lf roundChkWrap flexType">
+								<ul>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample14" id="sample29" checked>
+											<label for="sample29">전체</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample14" id="sample30">
+											<label for="sample30">출산비</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample14" id="sample31">
+											<label for="sample31">출산이후</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample14" id="sample32">
+											<label for="sample32">고용안정</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample14" id="sample33">
+											<label for="sample33">고용안정</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample14" id="sample34">
+											<label for="sample34">고용안정</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<ul class="lf accList">
+							<li>
+								<a href="javascript:;" class="link" role="button">
+									<div class="accInfoWrap">
+										<div class="accInfo">
+											<span class="accTit"><strong>자녀 출산 및 입양 지원금</strong></span>
+											<span class="accValue"></span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="link" role="button">
+									<div class="accInfoWrap">
+										<div class="accInfo">
+											<span class="accTit"><strong>모성보호육아지원</strong></span>
+											<span class="accValue"></span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="link" role="button">
+									<div class="accInfoWrap">
+										<div class="accInfo">
+											<span class="accTit"><strong>내집마련 디딤돌 대출</strong></span>
+											<span class="accValue"></span>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<div class="mt20">
+							<a href="javascript:;" class="lf fullInbodyBtn">더보기</a>
+						</div>
+					</div>
+				</div><!-- //.tabCont03 -->
+				<div class="tabCont04 pt20" aria-label="자녀 직접선택 탭" style="display: none;">
+					<div class="benefitTargetWrap">
+						<div class="benefitTarget">
+							<div><span class="male05">자녀1</span><span class="female05">자녀2</span><span class="male05">자녀1</span><span class="female05">자녀2</span><em>아동/청소년</em></div>
+						</div>
+						<div class="cateSubList">
+							<div class="lf roundChkWrap flexType">
+								<ul>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample15" id="sample35" checked>
+											<label for="sample35">전체</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample15" id="sample36">
+											<label for="sample36">출산비</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample15" id="sample37">
+											<label for="sample37">출산이후</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample15" id="sample38">
+											<label for="sample38">고용안정</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample15" id="sample39">
+											<label for="sample39">고용안정</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample15" id="sample40">
+											<label for="sample40">고용안정</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<ul class="lf accList">
+							<li>
+								<a href="javascript:;" class="link" role="button">
+									<div class="accInfoWrap">
+										<div class="accInfo">
+											<span class="accTit"><strong>자녀 출산 및 입양 지원금</strong></span>
+											<span class="accValue"></span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="link" role="button">
+									<div class="accInfoWrap">
+										<div class="accInfo">
+											<span class="accTit"><strong>모성보호육아지원</strong></span>
+											<span class="accValue"></span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="link" role="button">
+									<div class="accInfoWrap">
+										<div class="accInfo">
+											<span class="accTit"><strong>내집마련 디딤돌 대출</strong></span>
+											<span class="accValue"></span>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<div class="mt20">
+							<a href="javascript:;" class="lf fullInbodyBtn">더보기</a>
+						</div>
+					</div>
+
+					<div class="benefitTargetWrap">
+						<div class="benefitTarget">
+							<div><span class="female06">자녀3</span><em>영유아</em></div>
+						</div>
+						<div class="cateSubList_all">
+							<div class="lf roundChkWrap flexType">
+								<ul>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample16" id="sample41" checked>
+											<label for="sample41">전체</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample16" id="sample42">
+											<label for="sample42">출산비</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample16" id="sample43">
+											<label for="sample43">출산이후</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample16" id="sample44">
+											<label for="sample44">고용안정</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample16" id="sample45">
+											<label for="sample45">고용안정</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample16" id="sample46">
+											<label for="sample46">고용안정</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<ul class="lf accList">
+							<li>
+								<a href="javascript:;" class="link" role="button">
+									<div class="accInfoWrap">
+										<div class="accInfo">
+											<span class="accTit"><strong>자녀 출산 및 입양 지원금</strong></span>
+											<span class="accValue"></span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="link" role="button">
+									<div class="accInfoWrap">
+										<div class="accInfo">
+											<span class="accTit"><strong>모성보호육아지원</strong></span>
+											<span class="accValue"></span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="link" role="button">
+									<div class="accInfoWrap">
+										<div class="accInfo">
+											<span class="accTit"><strong>내집마련 디딤돌 대출</strong></span>
+											<span class="accValue"></span>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<div class="mt20">
+							<a href="javascript:;" class="lf fullInbodyBtn">더보기</a>
+						</div>
+					</div>
+				</div><!-- //.tabCont04 -->
+			</div>
+		</div>
+		<div class="bannerWarpPrd bannerImg120Type"><!-- 2022-10-05 클래스명(bannerOutgoings > bannerImg120Type ) 변경 -->
+			<!-- 관리자 영역 // -->
+			<div class="swiper-container bannerSwiperPrd">
+				<div class="swiper-wrapper "><!-- 2022-10-05 클래스(mt20 mb20) 삭제 -->
+					<div class="swiper-slide bannerPrd1 pr0 pl0">
+						<a href="javascript:;">
+							<img src="../../images/temp/bn_c_1.png" alt="대체택스트 들어갑니다." /> <!-- [접근성_2024] 등록된 배너 타이틀을 alt에 추가 부탁드립니다. -->
+						</a>
+					</div>
+					<!-- <div class="swiper-slide bannerPrd1 pr0 pl0">
+						<a href="javascript:;">
+							<img src="../../images/temp/bn_c_2.png" alt="대체택스트 들어갑니다." />
+						</a>
+					</div>
+					<div class="swiper-slide bannerPrd1 pr0 pl0">
+						<a href="javascript:;">
+							<img src="../../images/temp/bn_c_3.png" alt="대체택스트 들어갑니다." />
+						</a>
+					</div>
+					<div class="swiper-slide bannerPrd1 pr0 pl0">
+						<a href="javascript:;">
+							<img src="../../images/temp/bn_c_4.png" alt="대체택스트 들어갑니다." />
+						</a>
+					</div> -->
+				</div>
+				<div class="swiper-control">
+					<div class="swiper-pagination"></div>
+					<div class="swiper-autoBtn playing">
+						<a href="javascript:;" class="stopBtn" title="자동재생중 두번 터치시 멈춤"></a>
+						<a href="javascript:;" class="playBtn" title="자동재생 멈춤 두번 터치시 자동재생시작"></a>
+					</div>
+				</div>
+				<div class="swiper-button-prev blind"></div>
+				<div class="swiper-button-next blind"></div>
+			</div>
+			<script>
+				$(function () {
+					var swiper = new Swiper('.bannerSwiperPrd', {
+						slidesPerView: 1,
+						spaceBetween: 10,
+						loop: true,
+						observer:true,
+						observeParents : true,
+						autoplay: {
+							delay: 2500,
+							disableOnInteraction: true,
+							pauseOnMouseEnter: true,
+						},
+
+						pagination: {
+							el: '.swiper-pagination',
+							type: 'bullets',
+							clickable: true,
+						},
+						on: {
+							transitionEnd: function () {
+								$('.swiper-slide').attr('aria-hidden', 'true')
+								$('.swiper-slide-active').attr('aria-hidden', 'false')
+							}
+						}
+					});
+					$('.bannerSwiperPrd').find('.stopBtn').on('click', function () {
+						$('.swiper-autoBtn').removeClass('playing');
+						swiper.autoplay.stop();
+						console.log('자동재생 멈춤');
+					})
+					$('.bannerSwiperPrd').find('.playBtn').on('click', function () {
+						$('.swiper-autoBtn').addClass('playing');
+
+						swiper.autoplay.start();
+						console.log('자동재생 시작');
+					})
+				})
+			</script>
+			<!-- //관리자 영역  -->
+		</div>
+		<div class="boxTypeWrap">
+			<div class="location">
+				<h2 class="defTit"><strong>정부24 맞춤혜택</strong></h2>
+				<span class="titleSub">경기도 수원시</span>
+			</div>
+			<style>
+				.nhasset .lf.categoryWrap.cateSubList .item{width:auto;}
+				.nhasset .lf.cateSubList .roundChkWrap li{width:calc(25% - 6px)}
+				.nhasset .lf.cateSubList li:last-child{margin-right:0}
+			</style>
+			<div class="lf cateSubList categoryWrap">
+				<ul class="roundChkWrap flexType flexWrap">
+					<li>
+						<div class="item">
+							<input type="radio" name="catetory" id="cate063" checked>
+							<label for="cate063">
+								<img src="../../images/category/icoCate63.png" alt="">
+								코로나
+							</label>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<input type="radio" name="catetory" id="cate064">
+							<label for="cate064">
+								<img src="../../images/category/icoCate64.png" alt="">
+								교육
+							</label>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<input type="radio" name="catetory" id="cate065">
+							<label for="cate065">
+								<img src="../../images/category/icoCate65.png" alt="">
+								고용안전
+							</label>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<input type="radio" name="catetory" id="cate068">
+							<label for="cate068">
+								<img src="../../images/category/icoCate68.png" alt="">
+								보건/의료
+							</label>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<ul class="lf accList">
+				<li>
+					<a href="javascript:;" class="link" role="button">
+						<div class="accInfoWrap">
+							<div class="accInfo">
+								<span class="accTit"><strong>자녀 출산 및 입양 지원금</strong></span>
+								<span class="accValue"></span>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="link" role="button">
+						<div class="accInfoWrap">
+							<div class="accInfo">
+								<span class="accTit"><strong>모성보호육아지원</strong></span>
+								<span class="accValue"></span>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="link" role="button">
+						<div class="accInfoWrap">
+							<div class="accInfo">
+								<span class="accTit"><strong>내집마련 디딤돌 대출</strong></span>
+								<span class="accValue"></span>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="mt20">
+				<a href="javascript:;" class="lf fullInbodyBtn">더보기</a>
+			</div>
+		</div>
+		<div class="yatexbtnWrap">
+			<a href="javascript:;" class="penBtn" title="등록방식 수정" aria-haspopup="true">등록방식 수정</a>
+			<a href="javascript:;" class="setBtn" title="정보 설정" aria-haspopup="true">정보 설정</a>
+		</div>
+	</div>
+
+</div>
+<script type="text/javascript">
+	$('.famWrap > ul li > a > span').click(function(){
+		$('.famWrap > ul li > a > span').removeClass('selected');
+		$(this).addClass('selected')
+	})
+</script>
+</body>
+</html>

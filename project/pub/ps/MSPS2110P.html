@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>[P] 권유직원 찾기</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		fullLayerPop();
+		categorySwipe()
+	})
+</script>
+</head>
+<body>
+<div class="wrapper nhasset"> </div>
+<div class="nhasset popWrap fullLayerPop">
+	<div class="popInner">
+		<h1>권유직원 찾기</h1>
+		<div class="popCont">
+			<h2 class="defTit">NH마이데이터 서비스를<br><strong>소개한 직원이 있다면 입력</strong>해주세요</h2>
+			<div class="formWrap">
+				<ul>
+					<li>
+						<div class="formArray mt20">
+							<span class="chkRadio radio active">
+								<input type="radio" id="sample003" name="sample01" checked="checked" onChange="mssb5050p.checkFindType(1)">
+								<label for="sample003">이름(사번)으로 찾기</label>
+							</span>
+							<span class="chkRadio">
+								<input type="radio" id="sample004" name="sample01" onChange="mssb5050p.checkFindType(2)">
+								<label for="sample004">영업점으로 찾기</label>
+							</span>
+						</div>
+					</li>
+					<li class="addrSrch ">
+						<div class="inputList" id="inputList">
+							<input type="text" title="아파트명" value="" id='inputStaffInfo' placeholder="이름(사번)을 입력해 주세요.">
+							<button class="btnSearch" onclick="mssb5050p.findEmp();" ><span class="blind">찾기</span></button>
+							<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+						</div>
+					</li>
+				</ul>	
+			</div>	
+
+			<div id="searchResultWrap">
+				<div class='noResultWrap'><p>검색 결과가 없습니다.</p></div>
+
+				<div class='searchResultWrap'>
+					<p class='srPara'>전체 <strong>00</strong>건이 검색되었습니다.</p>
+					<ul class='searchResultList selectType'>
+						<li>
+							<a href='javascript:;' class='link' role='button' title='항목을 선택하고 해당 창을 닫습니다.'>
+								<span class='title'>안양남지점</span>
+								<span class='items'>김*원 (1111****)</span>
+							</a>
+						</li>
+						<li>
+							<a href='javascript:;' class='link' role='button' title='항목을 선택하고 해당 창을 닫습니다.'>
+								<span class='title'>안양남지점</span>
+								<span class='items'>김*원 (1111****)</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+
+
+			</div>
+			<div class="popBtnWrap">
+				<a href="javascript:;" onclick="popup_cfLayerClose(); return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

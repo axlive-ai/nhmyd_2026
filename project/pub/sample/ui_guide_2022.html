@@ -1,0 +1,622 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>UI Guide(2020)</title>
+<script src="../pub-assets/js/head.js"></script>
+<style type="text/css">
+	.file_list{user-select: all}
+	.re_rec{width: 32px;height: 32px;border:solid 1px silver;position: fixed;top: -64px;left: 50%;margin-left: -16px;z-index: 2000;background: url('../../images/btn_update.png')no-repeat center;border-radius: 50% ;background-color: cyan;background-size: 24px auto;}
+</style>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">UI Guide</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="boxTypeWrap pt0">
+				<div class="boxTitArea">form</div>
+				<div class="mt10"><strong>Radio</strong></div>
+				<div class="formArray mt20">
+					<span class="chkRadio">
+						<input type="radio" id="sample003" name="sample01" checked="checked">
+						<label for="sample003">카드</label>
+					</span>
+					<span class="chkRadio">
+						<input type="radio" id="sample004" name="sample01">
+						<label for="sample004">현금</label>
+					</span>
+				</div>
+				<div class="formArray mt10">
+					<span class="chkRadio">
+						<input type="radio" id="sample001" name="sample02" disabled >
+						<label for="sample001">disabled</label>
+					</span>
+					<span class="chkRadio">
+						<input type="radio" id="sample002" name="sample02" checked disabled >
+						<label for="sample002">disabled Check</label>
+					</span>
+				</div>
+				<div class="formArray mt10">
+					<span class="chkRadio">
+						<input type="radio" id="sample005" name="sample" class="desgChk" checked="checked">
+						<label for="sample005">카드</label>
+					</span>
+					<span class="chkRadio">
+						<input type="radio" id="sample006" name="sample" class="desgChk">
+						<label for="sample006">현금</label>
+					</span>
+				</div>
+
+				<div class="mt20"><strong>checkbox</strong></div>
+				<div class="mt10">
+					<input type="checkbox" id="listAll" class="chekTypeOther" name=""><label for="listAll">전체선택</label>
+				</div>
+				<div class="mt10">
+					<input type="checkbox" id="listAll" class="chekTypeOther" name="" checked><label for="listAll">전체선택</label>
+				</div>
+				<p class="subTxt2 mt15">disabled 케이스</p>
+
+				<div class="mt10">
+					<input type="checkbox" id="listAll01" disabled class="chekTypeOther" name=""><label for="listAll01">전체선택</label>
+				</div>
+
+				<div class="mt10">
+					<input type="checkbox" id="listAll02" disabled class="chekTypeOther" checked name=""><label for="listAll02">전체선택</label>
+				</div>
+
+				<div class="formWrap">
+					<ul>
+						<li class="addrSrch ">
+							<strong class="formTit">권유직원 (선택)</strong>
+							<div class="inputList">
+								<input type="text" title="아파트명" value="" placeholder="이름(사번)을 입력해 주세요.">
+								<!-- 2022-12-07 버튼 위치변경 -->
+								<a href="javascript:" class="btnReset" role="button" >입력내용삭제</a>
+								<button class="btnSearch"><span class="blind">찾기</span></button>								
+								<!-- 2022-12-07 버튼 위치변경 -->
+							</div>
+						</li>
+					</ul>
+				</div>
+
+
+				<div class="formWrap">
+					<ul>
+						<li class="addrSrch ">
+							<strong class="formTit">생년월일</strong>
+							<div class="inputList juminNum">
+								<input type="tel" title="생년월일" value="" placeholder="생년월일 6자리 ">
+								<span class="daesh">-</span>
+								<input type="tel" title="주민등록 뒷 첫째자리" maxlength="1" value="" placeholder="&nbsp;">
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="formWrap">
+					<ul>
+						<li class="addrSrch ">
+							<strong class="formTit">주민번호 (뒷자리 까지 받는 케이스)</strong>
+							<div class="inputList juminNumAll readonlyWhite">
+								<input type="tel" title="생년월일" value="" placeholder="생년월일 6자리 ">
+								<span class="daesh">-</span>
+								<input type="password" title="주민등록 뒷자리" maxlength="7" readonly value="" placeholder="주민번호 뒷자리">
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="mt20"><strong>toggle</strong></div>
+				
+				<div class="mt10">
+					<p class="desc">.tgBtnType2</p>
+					<span class="tgBtnType2">
+						<input type="checkbox" id="toggle0">
+						<label for="toggle0"><span class="blind">즐겨찾는 자산으로 설정</span></label>
+					</span>
+				</div>
+
+				<p class="desc">- .tgBtnWrap > .tgTxt + .tgBtn</p>
+				<div class="tgBtnWrap">
+					<span class="tgTxt">등록기관만 보기</span>
+					<span class="tgBtn">
+						<input type="checkbox" id="toggle1" checked="checked">
+						<label for="toggle1">선택</label>
+					</span>
+				</div>
+				
+				<p class="desc">- .tgBtnWrap > tgTxt + .tgBtn1</p>
+				<div class="tgBtnWrap">
+					<span class="tgTxt">이용카드만</span>
+					<span class="tgBtn2">
+						<input type="checkbox" id="toggle2" checked="checked" title="등록기관만 보기">
+						<label for="toggle2">선택</label>
+					</span>
+				</div>
+			</div>
+
+
+			<div class="boxTypeWrap pt0">
+				<div class="boxTitArea">Button</div>
+				<p class="mt20">.areaBodyBtnFlex .btnBodyGray, .btnBodyGreen </p>
+				<div class="areaBodyBtnFlex mt20">
+					<button type="button" class="btnBodyGray">변경</button>
+					<button type="button" class="btnBodyGreen">기한연장</button>
+				</div>
+
+				<p class="mt20" style="margin-bottom: -20px;">.areaBodyBtnFull a.btnBodyLine </p>
+				<div class="areaBodyBtnFull">
+					<a href="javascript:;" class="btnBodyLine" role="button">기본</a>
+					<a href="javascript:;" class="btnBodyLine green" role="button">그린</a>
+					<a href="javascript:;" class="btnBodyLine disabled" role="button">비활성</a>
+				</div>
+
+				<p class="mt20 mb10">.fullInbodyBtn</p>
+				<div>
+					<a href="javascript:;" class="fullInbodyBtn">카드연결</a>
+				</div>
+
+				<p class="mt20" style="margin-bottom: -20px;" >.areaBodyBtnFull .inner > ul > li > a </p>
+				<div class="areaBodyBtnFull">
+					<div class="inner">
+						<ul>
+							<li><a href="javascript:;" role="button" aria-pressed="false">동의안함</a></li>
+							<li><a href="javascript:;" role="button" class="green" aria-pressed="true">동의</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<p class="mt20" style="margin-bottom: -25px;">상세정보 보기</p>
+				<!-- 추가정보 열/닫 -->
+				<div class="moreInfoWrap toggleWrap">
+					<button type="button" class="moreOpenBtn toggleBtn">상세정보 보기</button>
+					<div class="moreInfo toggleCont" style="display:none">
+						<ul class="detailList">
+							<li>
+								<span class="tit">계좌번호</span>
+								<span class="value">03580204123456  <button type="button" class="contBtn01" title="계좌번호 복사">복사</button></span>
+							</li>
+							<li>
+								<span class="tit">계좌신규일</span>
+								<span class="value">2020.07.21</span>
+							</li>
+							<li>
+								<span class="tit">대출약정일</span>
+								<span class="value">2020.05.01</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- // 추가정보 열/닫 -->
+
+				<p class="mt20" style="margin-bottom:-10px">.listMoreBtn > a</p>
+				<div class="listMoreBtn">
+					<a href="javascript:;" title="항목 더보기">더보기</a>
+				</div>
+
+				<p class="mt20 mb5">a.contBtn06</p>
+				<div>
+					<a href="javascript:;" class="contBtn06">연말정산 NOW용 큰버튼</a>
+				</div>
+
+				<p class="mt20 mb5">a.contBtn04</p>
+				<div>
+					<a href="javascript:;" class="contBtn04">재조회</a>
+				</div>
+
+				<p class="mt20 mb5">a.contBtn03</p>
+				<div>
+					<a href="javascript:;" class="contBtn03">이체</a>
+				</div>
+
+				<p class="mt20 mb5">a.contBtn02</p>
+				<div>
+					<a href="javascript:;" class="contBtn02 green">신청하기</a>
+				</div>
+
+				<p class="mt20 mb5">a.contBtn01</p>
+				<div>
+					<a href="javascript:;" class="contBtn01 green">신청하기</a>
+					<button type="button" class="contBtn01">수정</button>
+				</div>
+
+				<p class="mt20">.linkType1, .linkType2</p>
+				<div>
+					<a href="javascript:;" class="linkType1">수정</a>
+					<a href="javascript:;" class="linkType2">수정</a>					
+				</div>
+
+				<p class="mt20">.linkTxt</p>
+				<div>
+					<a href="javascript:;" class="linkTxt">부동산 정보 더보기</a>
+				</div>
+				<p class="mt20">.linkTxt2</p>
+				<div>
+					<a href="javascript:;" class="linkTxt2">부동산 정보 더보기</a>
+				</div>
+				<p class="mt20">.link.arrGreen</p>
+				<div>
+					<a href="javascript:;" class="link arrGreen">카드 연결</a>
+				</div>
+				<div>
+					<a href="javascript:;" class="link arrGreen disabled">카드 연결(disabled)</a>
+				</div>
+			</div>
+
+			<div class="boxTypeWrap pt0">
+				<div class="boxTitArea">Tag</div>
+				<p class="mt20">Solid Type (.tag.bg~)</p>
+				<div>
+					<em class="tag bgSky">신청가능</em><em class="tag bgSky">달성</em><em class="tag bgSky">상환</em>
+				</div>
+
+				<div>
+					<em class="tag bgOrange">신청불가</em><em class="tag bgOrange">오류</em><em class="tag bgOrange">취소</em>
+				</div>
+
+				<div>					
+					<em class="tag bgGreen">신청완료</em><em class="tag bgGreen">완납</em><em class="tag bgGreen">완료</em>
+				</div>
+
+				<div>
+					<em class="tag bgBlue">진행중</em><em class="tag bgBlue">예정</em><em class="tag bgBlue">변경</em><em class="tag bgBlue">이용중</em><em class="tag bgBlue">달성중</em>
+				</div>
+
+				<div>
+
+					<em class="tag bgGray">기간만료</em><em class="tag bgGray">해지</em><em class="tag bgGray">종료</em><em class="tag bgGray">해지완료</em><em class="tag bgGray">D-29</em>
+				</div>
+
+				<p class="mt20">.wrapTag > span.type~</p>
+				<div class="wrapTag">
+					<span class="type01">본인</span>
+					<span class="type02">신용</span>
+					<span class="type04">교통</span>
+					<span class="type03">현금</span>
+					<span class="type05">MASTER</span>
+				</div>
+
+				<div class="wrapTag">
+					<span class="tag green">자가</span><span class="txt">지분율 50%</span>
+				</div>
+
+				<p class="mt20">.tag.colorSelecter</p>
+				<div>
+					<em class="tag blue">충족</em><em class="tag red">미충족</em><em class="tag gray">미충족</em><em class="tag orange">미충족</em><em class="tag skyblue">미충족</em><em class="tag purple">미충족</em>
+				</div>
+			</div>
+			<div class="formWrap mt15">
+				<ul class="chkList thin mt0 boxTypeWrap">
+					<li>
+						<span class="chkWrap">
+							<input type="radio" id="chk01" name="radio01" checked="checked" class="desgChk">	
+						</span>
+						<label for="chk01" class="chkLabel">
+							<span class="tit">절약하며</span>
+							<span class="value">
+								<strong class="dataValue">118</strong><em class="won">만원</em>
+							</span>
+						</label>
+					</li>
+					<li>
+						<span class="chkWrap">
+							<input type="radio" id="chk02" name="radio01" class="desgChk">	
+						</span>
+						<label for="chk02" class="chkLabel">
+							<span class="tit">적정하게</span>
+							<span class="value">
+								<strong class="dataValue">167</strong><em class="won">만원</em>
+							</span>
+						</label>
+					</li>
+					<li>
+						<span class="chkWrap">
+							<input type="radio" id="chk03" name="radio01" class="desgChk">	
+						</span>
+						<label for="chk03" class="chkLabel">
+							<span class="tit">여유롭게</span>
+							<span class="value">
+								<strong class="dataValue">329</strong><em class="won">만원</em>
+							</span>
+						</label>
+					</li>
+					<li class="isError directInputWrap" >
+						<input type="radio" id="chk04" name="radio01" class="desgChk" title="직접입력">
+						<label for="chk04" class="chkLabel">
+							직접입력
+						</label>
+						<div class="directInputArea">
+							<div class="inputList unitMan">
+								<input type="tel" title="매수금" value="" placeholder="1 ~ 1,000">
+								<span class="unit">만원</span>
+								<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+							</div>
+							<p class="errorTxt">최대 1,000만원까지</p>
+						</div>
+					</li>
+				</ul>
+				<style type="text/css">
+					.directInputWrap{display: flex;}
+					.directInputArea{flex: 1 1 auto}
+					.directInputArea .inputList{border: 0 !important}
+					.directInputWrap > input[type="radio"]{flex: 0 0 22px;}
+					.directInputWrap > input[type="radio"] ~ .directInputArea{display: none;}
+					.directInputWrap > input[type="radio"]:checked ~ .directInputArea{display:block;margin-left: 10px;}
+					.directInputWrap > input[type="radio"]:checked ~ .chkLabel{display: none;}
+				</style>
+			</div>
+
+			<div class="boxTypeWrap">
+				<!-- 상단 계좌정보 영역 -->
+				<div class="accTopInfo mt0">
+					<h2 class="accName A1AAEO0000">WISE통장-저축예금<span class="blind">국민은행</span></h2>
+					<dl class="totalBalance">
+						<dt>총 잔액</dt>
+						<dd><strong>2,098,694</strong>원</dd>
+					</dl>
+					<!-- 변동없을 경우 케이스 추가 - arrowNone 클래스 사용, amount 옆의 in, out 관련 색상 클래스 빠짐  -->
+					<!-- <div class="etcInfo compare">
+						지난달 대비 
+						<span class="arrowUp"><em class="blind">증가</em></span> 
+						<span class="amount inColor"><strong>273,000</strong>원</span>
+					</div> -->
+				</div>
+				<!-- // 상단 계좌정보 영역 -->
+				<hr class="divLine">
+
+				<!-- 계좌정보 상세 -->
+				<div class="accInfoDetail">
+					<ul class="detailList">
+						<li>
+							<span class="tit">유형</span>
+							<span class="value">입출금</span>
+						</li>
+						<li>
+							<span class="tit">상품명</span>
+							<!-- <span class="value"><a href="javascript:;" class="underline">미입력</a></span> -->
+							<span class="value">내집마련</span>
+						</li>
+					</ul>
+
+					<!-- 추가정보 열/닫 -->
+					<div class="moreInfoWrap toggleWrap">
+						<button type="button" class="moreOpenBtn toggleBtn">상세정보 보기</button>
+						<div class="moreInfo toggleCont" style="display:none">
+							<ul class="detailList">
+								<li>
+									<span class="tit">계좌번호</span>
+									<span class="value">03580204123456  <button type="button" class="contBtn01" title="계좌번호 복사">복사</button></span>
+								</li>
+								<li>
+									<span class="tit">신규일자</span>
+									<span class="value">2020.07.21</span>
+								</li>
+								<li>
+									<span class="tit">출금가능금액</span>
+									<span class="value"><strong class="dataValue">2,098,694</strong><em class="won">원</em></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- // 추가정보 열/닫 -->
+				</div>
+				<!-- // 계좌정보 상세 -->
+			</div>
+
+			<div class="noDataBox">
+				<div class="tooltipWrap">
+					<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">총 잔액 툴팁 열기</span></button>
+					<div class="tooltipCont">
+						<p>인증토큰 만료, 전송 중단 등의 경우에는 적용되지 않습니다.</p>
+						<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+					</div>
+				</div>
+				<a href="javascript:;" class="link">적요 제공에 동의하고 거래내역 보기</a>
+			</div>
+
+			<div class="boxTypeWrap pt0">
+				<div class="filterSearchWrap">
+					<!-- 날짜 선택 및 정렬 -->
+					<div class="filterWrap">
+						<button type="button" class="btnSearch2"><span class="blind">적요검색 열기</span></button>
+						<span class="sortValue">2020.09.01 ~ 2020.09.30</span>
+						<span class="sortValue">전체</span>
+						<button type="button" class="sortBtn"><span class="blind">조회조건 선택 설정하기</span></button>
+					</div>
+					<!-- // 날짜 선택 및 정렬 -->
+
+					<div class="filterSearch" aria-label="적요검색" style="display:none">
+						<div class="inputList ty01">
+							<input type="text" title="적요 검색(2자 이상)" value="" placeholder="적요 검색 (2자 이상)">
+							<button class="btnSearch"><span class="blind">검색</span></button>
+							<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+						</div>
+						<button class="btnSearDel"><span class="blind">적요검색 닫기</span></button><!--09.02 추가-->
+						<div class="filterSearchRes" style="">‘길동’ 검색결과 총 1건</div>
+						
+					</div>
+				</div>
+
+				
+
+				<script type="text/javascript">
+					$('.filterSearchWrap .btnSearch2').click(function(){
+						var $this = $(this);
+						var $parent = $this.closest('.filterSearchWrap');
+						if (!$this.hasClass('searchAfter')){
+							$parent.find('.filterSearch').show().find('.inputList').show().find('input:text').focus();
+							$parent.find('.filterSearchRes').hide();
+							$parent.find('.filterSearch').find('.btnSearDel').show().removeClass('mt0');
+							//$this.addClass('searchAfter').find('.blind').text('적요검색 닫기');
+						}else{
+								$parent.find('.filterSearch').hide();
+								$this.removeClass('searchAfter').find('.blind').text('적요검색 열기');
+							}
+					});
+					$('.filterSearchWrap .btnSearch').click(function(){
+						var $this = $(this);
+						$this.closest('.filterSearch').find('.filterSearchRes').show();
+						$this.closest('.inputList').hide();
+						$this.closest('.inputList').siblings('.btnSearDel').addClass('mt0');
+						//$this.closest('.filterSearchWrap').find('.btnSearch2').removeClass('searchAfter').find('.blind').text('적요검색 열기');
+					});
+
+					$('.btnSearDel').click(function(){
+						var $this = $(this);
+						$this.closest('.filterSearch').hide();
+					});
+				</script>
+
+				<!-- <script type="text/javascript">
+					$('.filterSearchWrap .btnSearch2').click(function(){
+						var $this = $(this);
+						var $parent = $this.closest('.filterSearchWrap');
+						if (!$this.hasClass('searchAfter')){
+							$parent.find('.filterSearch').show().find('.inputList').show().find('input:text').focus();
+							$parent.find('.filterSearchRes').hide();
+							$this.addClass('searchAfter').find('.blind').text('적요검색 닫기');
+						}else{
+								$parent.find('.filterSearch').hide();
+								$this.removeClass('searchAfter').find('.blind').text('적요검색 열기');;
+							}
+					});
+					$('.filterSearchWrap .btnSearch').click(function(){
+						var $this = $(this);
+						$this.closest('.filterSearch').find('.filterSearchRes').show();
+						$this.closest('.inputList').hide();
+						$this.closest('.filterSearchWrap').find('.btnSearch2').removeClass('searchAfter').find('.blind').text('적요검색 열기');
+					});
+				</script> -->
+
+				<div class="inoutListWrap longTit">
+					<!-- [2021-09-08] 한은정 : 미동의 케이스 추가// -->
+					<div class="inoutListInn">
+						<p class="date">2020년 8월 01일</p>
+						<ul class="inoutList">
+							<li>
+								<p class="inoutTit noAgree">출금(적요 제공에 동의하지 않은 거래)</p>
+								<div class="inoutCont">
+									<div class="timeWrap">
+										<span class="time">18:35</span>
+									</div>
+									<span class="amount outColor"><strong class="dataValue">-3,000</strong><em class="won">원</em></span>
+								</div>
+								<div class="totalAmount"><span class="txt">잔액</span> <strong class="dataValue">2,101,194</strong><em class="won">원</em></div>
+							</li>
+						</ul>
+					</div>
+					<!-- //[2021-09-08] 한은정 : 미동의 케이스 추가 -->
+					<div class="inoutListInn">
+						<p class="date">2020년 7월 31일</p>
+						<ul class="inoutList">
+							<li>
+								<!-- <label class="inoutChkWrap" for="chk01"> --> <!-- [2021] 한은정 : 선택등록 삭제 -->
+									<p class="inoutTit">홍길동</p>
+									<div class="inoutCont">
+										<div class="timeWrap">
+											<span class="time">18:35</span>
+										</div>
+										<span class="amount inColor"><strong class="dataValue">+100,000,000,000</strong><em class="won">원</em></span>
+									</div>
+									<div class="totalAmount"><span class="txt">잔액</span> <strong class="dataValue">100,000,000,000</strong><em class="won">원</em></div>
+								<!-- </label> -->
+								<!--<span class="inoutChk"><input type="checkbox" name="" id="chk01" disabled></span> -->  <!-- [2021] 한은정 : 선택등록 삭제 -->
+							</li>
+							<li>
+								<!-- <label class="inoutChkWrap" for="chk02"> -->  <!-- [2021] 한은정 : 선택등록 삭제 -->
+									<p class="inoutTit">홍길동</p>
+									<div class="inoutCont">
+										<div class="timeWrap">
+											<span class="time">18:35</span>
+										</div>
+										<span class="amount outColor"><strong class="dataValue">-3,000</strong><em class="won">원</em></span>
+									</div>
+									<div class="totalAmount"><span class="txt">잔액</span> <strong class="dataValue">2,101,194</strong><em class="won">원</em></div>
+								<!-- </label> -->
+								<!-- <span class="inoutChk"><input type="checkbox" name="" id="chk02"></span> -->  <!-- [2021] 한은정 : 선택등록 삭제 -->
+							</li>
+						</ul>
+					</div>
+
+					<div class="inoutListInn">
+						<p class="date">2020년 7월 31일</p>
+						<ul class="inoutList">
+							<li>
+								<!-- <label class="inoutChkWrap" for="chk03"> -->   <!-- [2021] 한은정 : 선택등록 삭제 -->
+									<p class="inoutTit">홍길동</p>
+									<div class="inoutCont">
+										<div class="timeWrap">
+											<span class="time">18:35</span>
+										</div>
+										<span class="amount outColor"><strong class="dataValue">-3,000</strong><em class="won">원</em></span>
+									</div>
+									<div class="totalAmount"><span class="txt">잔액</span> <strong class="dataValue">2,101,194</strong><em class="won">원</em></div>
+								<!-- </label> --> 
+								<!-- <span class="inoutChk"><input type="checkbox" name="" id="chk03" checked></span> -->   <!-- [2021] 한은정 : 선택등록 삭제 -->
+							</li>
+							<li>
+								<!-- <label class="inoutChkWrap" for="chk04"> -->    <!-- [2021] 한은정 : 선택등록 삭제 -->
+									<p class="inoutTit">모어커피</p> 
+									<div class="inoutCont">
+										<div class="timeWrap">
+											<span class="time">18:35</span>
+										</div>
+										<span class="amount inColor"><strong class="dataValue">+3,000</strong><em class="won">원</em></span>
+									</div>
+									<div class="totalAmount"><span class="txt">잔액</span> <strong class="dataValue">2,101,194</strong><em class="won">원</em></div>
+								<!-- </label> -->
+								<!-- <span class="inoutChk"><input type="checkbox" name="" id="chk04" disabled></span> -->   <!-- [2021] 한은정 : 선택등록 삭제 -->
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="listMoreBtn">
+					<a href="javascript:;" title="항목 더보기">더보기</a>
+				</div>
+
+				<!-- 리스트 없을 경우 -->
+				<div class="listNone">
+					<p>거래내역이 없습니다.</p> <!-- [한은정 : 2021-05-07] 문구수정 -->
+				</div>
+				<!-- // 리스트 없을 경우 -->
+			</div>
+
+			<div class="nolistBox">
+				<div class="noResultWrap"><p>조회 내역이 없습니다.</p></div>
+			</div>
+
+			
+
+			
+
+		</div>
+		<!-- //container -->
+
+	</div>
+
+
+</body>
+</html>

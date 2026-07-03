@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>혜택플러스</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function() {
+		fullLayerPop();
+	});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">자산</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container"></div>
+		<!-- //container -->
+
+		<!-- 팝업시작 -->
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>혜택플러스 이용안내</h1> 
+				<div class="popCont grayPop">
+					<div class="boxTypeWrap yatexinfoWrap">
+						<h2 class="defTit">
+							<strong>NH포인트란?</strong>
+						</h2>
+						<p class="subTxt">NH농협 제휴사의 다양한 거래 · 제휴 혜택을 편리하게 이용할 수 있는 NH멤버스에서 NH포인트몰, 바로쓰기, 선물, 캐시백, 기부..등 여러 서비스를 이용할 수 있는 포인트입니다. 
+						</p>
+						<hr class="divLine mr0 ml0" aria-hidden="true">
+						<div class="icoList2 nhPointWrap">
+							<p class="txtt2">포인트 제공 안내</p>
+							<ul>
+								<li>미션에 달성하여 배지를 받으세요!</li>
+								<li>친구 초대하고 포인트도 받으세요!</li>
+								<li>재밌는 퀴즈도 풀어보세요!</li>
+							</ul>
+						</div>
+					</div>
+					<h2 class="defTit">
+						<strong>미션은 어떻게 참여하나요?</strong>
+					</h2>
+					<div class="boxTypeWrap pb0">
+						<div class="stepList">
+							<ul>
+								<li>
+									<span class="step">STEP 1</span>
+									<p class="txtt2">미션 선택하기</p>
+									<p class="subTxt">혜택플러스 메뉴를 클릭하고 참여가능 미션을 선택합니다.</p>
+									<div class="imgWrapNor">
+										<img src="../../images/contents/img_ht_notice01.jpg" alt="">
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="boxTypeWrap pb0">
+						<div class="stepList">
+							<ul>
+								<li>
+									<span class="step">STEP 2</span>
+									<p class="txtt2">미션 수행하기</p>
+									<p class="subTxt">미션 선택 후 주어진 미션을 수행합니다.</p>
+									<div class="imgWrapNor">
+										<img src="../../images/contents/img_ht_notice02.jpg" alt="">
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="boxTypeWrap pb0">
+						<div class="stepList">
+							<ul>
+								<li>
+									<span class="step">STEP 3</span>
+									<p class="txtt2">미션 완료하고 NH포인트 받기</p>
+									<p class="subTxt">미션완료 후 혜택으로 돌아오면 NH포인트 획득!</p> <!-- [2023-01-11] 클래스 수정 -->
+									<div class="imgWrapNor">
+										<img src="../../images/contents/img_ht_notice03.jpg" alt="">
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<!-- <a href="javascript:;" class="" role="button">이전</a> -->
+						<a href="javascript:;" class="confirmBtn" role="button">미션하러가기</a>
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- // 팝업 끝 -->
+	</div>
+
+</body>
+</html>

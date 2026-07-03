@@ -1,0 +1,269 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산현황</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function() {
+		fullLayerPop();
+	});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">자산</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container"></div>
+		<!-- //container -->
+
+		<!-- 팝업시작 -->
+		<div class="nhasset popWrap fullLayerPop"> <!-- [2021] 한은정 : fullLayerPop으로 변경 -->
+			<div class="popInner">
+				<h1>잠 자는 돈 깨우기</h1>
+				<div class="popCont grayPop">
+					<div class="visualWrap">
+						<div class="visualTopWrap3">
+							<h2 class="visualTit">입출금 통장에서 돈이 놀고 있어요</h2>
+							<div class="visualImgWrap">
+								<div class="bgImg05"><span class="blind">꾸준히 노력해서 돈을 많이 모았어요 그림</span></div>
+								<div class="textBox">푼돈모아 목돈으로! <span class="icoImg"><img src="../../images/ico_smile02.png" alt="스마일 아이콘"></span></div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="boxTypeWrap pt0 pb0">
+						<div class="totalTitWrap typeDb">
+							<span class="totalTit">입출금 총 잔액</span>
+							<span class="totalAmnt"><strong class="dataValue">4,000,000</strong><em class="won">원</em></span>
+						</div>
+					</div><!-- //boxTypeWrap -->
+
+					<!--s:안내시작-->
+					<!-- 선택약관(7번) 미동의한 고객의 경우 
+					<div class="boxTypeWrap bgType04 addShadow"> 
+						<div class="visualSubWrap">
+							<h3 class="prodListTit img01">빅데이터로 분석한<br>우대금리 맞춤상품을 찾았어요.</h3>
+							<p class="subTxt4">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+						</div>
+						<ul class="prodListWrap">
+							<li>
+								<div class="disagree">
+									<a href="javascript:;" role="button">
+										<p class="disagreeP"><strong>나만 알고 싶은 추천상품</strong></p>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					선택약관(7번) 미동의한 고객의 경우 -->
+
+					<!--e:안내시작-->
+
+
+					<!-- s:우대금리기반-->
+					<div class="boxTypeWrap bgType04 addShadow"> <!--09.06 수정-->
+						<div class="visualSubWrap">
+							<h3 class="prodListTit img01">빅데이터로 분석한
+								<br><strong>우대금리 맞춤상품</strong>을 찾았어요</h3>
+							<p class="subTxt4">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+						</div>
+						<ul class="prodListWrap">
+							<li>
+								<a href="javascript:;">
+									<div class="prodRecomWrap">
+										<strong class="prodTit">NH왈츠회전예금II</strong>
+										<em class="prodRecommInfo">조건유지시 나의 예상금리</em>
+										<div class="prodRecomVal dsf">
+											<span class="dataValueWrap">
+												<strong class="dataValue">2.85</strong><em class="per">%</em>
+											</span>
+											<div class="prodVal ty01">
+												기본 <span class="dataValue">1.05</span><em class="per">%</em>(연/세전)
+											</div>
+										</div>
+									</div>
+									<div class="prodInfoWrap">	
+										<span class="prodValue">예상우대금리(1.8%p)</span>
+										<!-- <span class="prodValue">급여이체, 마케팅동의, 월평균 2회 비대면 이체등</span> -->
+										<span class="hashWrap3"><!--09.20수정-->
+											<em class="hastag">급여이체,</em> <em class="hastag">마케팅동의,</em><em class="hastag">월평균 2회 비대면이체</em> 등
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="type02">
+									<div class="prodRecomWrap">
+										<strong class="prodTit">NH직장인월복리적금</strong>
+										<em class="prodRecommInfo">조건유지시 나의 예상금리</em>
+										<div class="prodRecomVal dsf">
+											<span class="dataValueWrap">
+												<strong class="dataValue">3.56</strong><em class="per">%</em>
+											</span>
+											<div class="prodVal ty01">기본 <span class="dataValue">1.76</span><em class="per">%</em>(연/세전)
+											</div>
+										</div>
+									</div>
+									<div class="prodInfoWrap">
+										<span class="prodValue">예상우대금리(1.8%p)</span>
+										<!-- <span class="prodValue">급여이체, 마케팅동의, 월평균 2회 비대면 이체등</span> -->
+										<span class="hashWrap3"><!--09.20수정-->
+											<em class="hastag">급여이체,</em> <em class="hastag">마케팅동의,</em><em class="hastag">월평균 2회 비대면이체</em> 등
+										</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- e:우대금리기반-->
+
+					<!-- 일반 빅데이터 상품추천 빅데이터 시나리오 1,2 3,4 동일 레이아웃// -->
+					<!-- 관리자 지정 상품추천 - 빅데이터 시나리오X -->
+					<div class="boxTypeWrap bgType04 addShadow">
+						<!-- 일반 빅데이터 상품추천 빅데이터 시나리오 1,2 3,4 동일 레이아웃 -->
+						<div class="visualSubWrap">
+							<h3 class="prodListTit img01">빅데이터 분석을 통한
+								<br><strong>최적의 맞춤상품</strong>을 찾았어요</h3>
+							<p class="subTxt4">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+						</div>
+						<!-- 관리자 지정 상품추천 - 빅데이터 시나리오X -->
+						<div class="visualSubWrap">
+							<h3 class="prodListTit img01">농협은행 대표 상품으로<br>잠 자는 돈을 깨워보세요!</h3>
+							<p class="subTxt4">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+						</div>
+						<ul class="prodListWrap">
+							<li>
+								<a href="javascript:;">
+									<div class="prodRecomWrap">
+										<strong class="prodTit">e금리우대예금</strong>
+										<em class="prodRecommInfo">최고(연/세전)</em>
+										<div class="prodRecomVal dsf">
+											<span class="dataValueWrap">
+												<strong class="dataValue">1.80</strong><em class="per">%</em>
+											</span>
+											<div class="prodVal ty01">
+												온라인 전용 농협은행 대표 예금
+											</div>
+										</div>
+										<span class="hashWrap">
+											<em class="hastag bg01">#국내거주자</em>
+											<em class="hastag bg02">#1인1계좌</em>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<div class="prodRecomWrap">
+										<strong class="prodTit">NH직장인 월 복리 적금</strong>
+										<em class="prodRecommInfo">최고(연/세전)</em>
+										<div class="prodRecomVal dsf">
+											<span class="dataValueWrap">
+												<strong class="dataValue">1.80</strong><em class="per">%</em>
+											</span>
+											<div class="prodVal ty01">
+												직장인재테크를 위한 월복리<br>적금상품
+											</div>
+										</div>
+										<span class="hashWrap">
+											<em class="hastag bg01">#국내거주자</em>
+											<em class="hastag bg02">#1인1계좌</em>
+										</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- //일반 빅데이터 상품추천 빅데이터 시나리오 1,2 3,4 동일 레이아웃 -->
+
+					<!-- 선택약관(7번) 미동의한 고객의 경우 //-->
+					<div class="boxTypeWrap bgType04 addShadow">
+						<div class="visualSubWrap">
+							<h3 class="prodListTit img01">빅데이터 분석을 통한
+								<br><strong>최적의 맞춤상품</strong>을 찾았어요</h3>
+							<p class="subTxt4">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+						</div>
+						<ul class="prodListWrap">
+							<li>
+								<a href="javascript:;">
+									<div class="prodRecomWrap">
+										<strong class="prodTit">NH직장인월복리적금</strong>
+										<em class="prodRecommInfo">최고(연/세전)</em>
+										<div class="prodRecomVal dsf">
+											<span class="dataValueWrap">
+												<strong class="dataValue">1.80</strong><em class="per">%</em>
+											</span>
+											<div class="prodVal ty01">
+												직장인재테크를 위한 월복리 적금상품
+											</div>
+										</div>
+										<span class="hashWrap">
+											<em class="hastag bg01">#국내거주자</em>
+											<em class="hastag bg02">#1인1계좌</em>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<div class="prodRecomWrap">
+										<strong class="prodTit">e금리우대예금</strong>
+										<em class="prodRecommInfo">최고(연/세전)</em>
+										<div class="prodRecomVal dsf">
+											<span class="dataValueWrap">
+												<strong class="dataValue">1.80</strong><em class="per">%</em>
+											</span>
+											<div class="prodVal ty01">
+												온라인 전용 농협은행 대표 예금
+											</div>
+										</div>
+										<span class="hashWrap">
+											<em class="hastag bg01">#국내거주자</em>
+											<em class="hastag bg02">#1인1계좌</em>
+										</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!--// 선택약관(7번) 미동의한 고객의 경우 -->
+				</div>
+
+
+
+				<div class="popBtnWrap">
+					<!-- <div class="popBtn">
+						<a href="javascript:;" class="" role="button">이전</a>
+						<a href="javascript:;" class="confirmBtn" role="button">저장</a>
+					</div> -->
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- // 팝업 끝 -->
+	</div>
+</body>
+</html>

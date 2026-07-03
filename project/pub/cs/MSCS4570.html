@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>카드혜택비교</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">카드혜택비교</a></h1><!-- 20022-09-16 메뉴명 수정 -->
+			<!-- <a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>  -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="cardComparedTitle">
+				<div class="inner"><strong>내가 쓰는</strong> <button type="button" title="카드 선택"><span>카카오 BC카드</span></button> 를</div>
+				<div class="inner2"><strong><span class="pointColor">NH농협카드</span>로 바꾸면?
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">카드추천 툴팁 열기</span></button>
+						<div class="tooltipCont" style="z-index:10">
+							<p>고객님의 카드소비내역을 기반으로 예측한 혜택이 많은 카드를 추천해드려요</p>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+				</strong></div>
+			</div>
+			<div class="boxTypeWrap cardBgType03 mt0">
+				<!-- 20022-09-30 수정 -->
+				<div class="cardBGcont">지금 가맹점정보를 불러오면<br>혜택 많이 받는 카드를 <br>알려드릴게요. </div>
+				<!-- //20022-09-30 수정 -->
+				<div class="areaBodyBtnFull mt25">
+					<a href="javascript:;" class="btnBodyLine green" role="button">가맹점정보 불러오기</a>
+				</div>
+			</div>
+
+			<div class="boxTypeWrap">
+				<a href="javascript:;" role="button" class="swCardComp t1">
+					<div class=""><span class="cardBenefitFlag">김농협님을 위한 추천카드</span></div>
+					<div class="cardInfoWrap mt5">
+						<div class="cardInfoArea"><strong>조건없는 기본적립에 추가할인까지 <span class="pointColor">NH1934카드</span></strong></div>
+						<span class="cardImgArea" aria-hidden="true"><img src="../../images/temp/temp_card_img.png"></span>
+					</div>
+					<div class="cardHashtag"><span>#온라인쇼핑</span><span>#온라인쇼핑</span></div>
+					<div class="cardReview mt15">준법감시인 심의필 정보노출</div>
+				</a>
+			</div>
+
+			<div class="boxTypeWrap">
+				<h2 class="defSubTit2 mt0">NH마이데이터 고객이<br> 가장 많이 보유한 카드는?</h2>
+				<div class="tabWrap type07 mt25">
+					<ul role="tablist">
+						<li><a href="javascript:;" class="active">NH농협카드</a></li>
+						<li><a href="javascript:;">타사카드</a></li>
+					</ul>
+				</div>
+				<div class="tabContWrap type07 mt20">
+					<div class="tabCont01" aria-label="NH농협카드 탭">
+						<ol class="cardOrderList nhCard">
+							<li>
+								<a href="javascript" title="NH농협카드 웹 브라우저 열기"> <!-- [2023-01-15] 접근성 수정 -->
+									<span class="num">1</span>
+									<span class="cardImgArea"><img src="../../images/img_card_allone11.png" alt="올바른 베이직카드"></span>
+									<span class="cardTitle">올바른 베이직카드</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript" title="NH농협카드 웹 브라우저 열기"> <!-- [2023-01-15] 접근성 수정 -->
+									<span class="num">2</span>
+									<span class="cardImgArea"><img src="../../images/img_card_allone11.png" alt="올바른 베이직카드"></span>
+									<span class="cardTitle">올바른 베이직카드</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript" title="NH농협카드 웹 브라우저 열기"> <!-- [2023-01-15] 접근성 수정 -->
+									<span class="num">3</span>
+									<span class="cardImgArea"><img src="../../images/img_card_allone11.png" alt="올바른 베이직카드"></span>
+									<span class="cardTitle">올바른 베이직카드</span>
+								</a>
+							</li>
+						</ol>
+					</div>
+					<div class="tabCont02" aria-label="타사카드 탭" style="display:none">
+						<ol class="cardOrderList">
+							<li>
+								<span class="num">1</span>
+								<!-- <span class="imgWrap A1AABG0000">BC 시발카드</span> -->
+								<span class="imgWrap"> <!-- [2022-11-21] 사보현 : 로고 공통 이미지로 변경 -->
+									<img src="../../images/logos/AABG0000.png" alt="NH농협카드" class="imgLogo"><span>BC 시발카드</span>
+								</span>
+							</li>
+							<li>
+								<span class="num">2</span>
+								<!-- <span class="imgWrap A1AABG0000">BC 시발카드</span> -->
+								<span class="imgWrap"> <!-- [2022-11-21] 사보현 : 로고 공통 이미지로 변경 -->
+									<img src="../../images/logos/AABG0000.png" alt="NH농협카드" class="imgLogo"><span>BC 시발카드</span>
+								</span>
+							</li>
+							<li>
+								<span class="num">3</span>
+								<!-- <span class="imgWrap A1AABG0000">BC 시발카드</span> -->
+								<span class="imgWrap"> <!-- [2022-11-21] 사보현 : 로고 공통 이미지로 변경 -->
+									<img src="../../images/logos/AABG0000.png" alt="NH농협카드" class="imgLogo"><span>BC 시발카드</span>
+								</span>
+							</li>
+						</ol>
+					</div>
+					
+				</div>
+
+			</div>
+
+			<!-- 2022-09-20 추가 -->
+			<div class="info_area">
+				<strong class="info_area_title">알아두세요</strong>
+				<ul class="listBul disc">
+					<li>혜택 금액은 타사카드 최근 3개월 사용내역으로 계산한 추정 금액으로 실제 금액과 차이가 발생할 수 있습니다.</li>
+					<li>추천 카드별 세부 내용은 카드상세 페이지를 참고하시기 바랍니다.</li>
+				</ul>
+			</div>
+			<!-- //2022-09-20 추가 -->
+
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>

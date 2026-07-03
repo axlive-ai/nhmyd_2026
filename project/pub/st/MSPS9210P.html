@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>공지사항 상세</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script type="text/javascript">
+$(function(){
+    fullLayerPop();
+});
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>공지사항</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<div class="btnWrap page">
+			<a href="javascript:;" onclick="fullLayerPop();return false;" aria-haspopup="true" role="button" class="btn">fullLayerPop</a>
+		</div>
+	</div>
+</div>
+
+<div class="nhasset popWrap fullLayerPop">
+	<div class="popInner">
+		<h1>공지사항</h1>
+		<div class="popCont">
+			<div class="eventViewTitie">
+				<span class="title">NH마이데이터 서비스 일시 중단 안내</span>
+				<div class="date">2021.08.04</div>
+			</div>
+			<div class="eventViewCont">
+				<div class="eventImg sample">
+                   <img src="../../images/notice/img_open_event.png" alt="샘플이미지">
+				</div>
+				
+				<p>서비스 개선을 위한 긴급 시스템 점검 작업으로 인하여 
+                    NH마이데이터 서비스가 일시 중단될 예정이오니 이용 시 
+                    참고하여 주시기 바랍니다.</p>
+				<p class="date">중단일시 : <span>6.19(일)22:00 ~ 6.20(월)06:00</span></p>
+            </div>
+        </div>
+
+		<div class="popBtnWrap">
+			<div class="popBtn">
+				<a href="javascript:;" class="confirmBtn" role="button">확인</a>
+			</div>
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

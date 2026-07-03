@@ -1,0 +1,448 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>UI Guide [기타]</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="nhasset guide_wrapper">
+	<header class="guide_header">
+		<h1>UI GUIDE <span>기타</span></h1>
+		<nav data-toggle="wrap">
+			<button type="button" class="guide_btn" data-toggle="btn" aria-expanded="false">전체메뉴</button>
+			<div data-toggle="cont">
+				<a href="txt_sample.html">타이틀/텍스트</a>
+				<a href="mes_sample.html">메세지</a>
+				<a href="button_sample.html">버튼</a>
+				<a href="form_sample.html">폼</a>
+				<a href="list_sample.html">리스트</a>
+				<a href="info_sample.html">정보</a>
+				<a href="table_sample.html">테이블</a>
+				<a href="bbs_sample.html">게시판</a>
+				<a href="banner_sample.html">배너</a>
+				<a href="chart_sample.html">차트</a>
+				<a href="etc_sample.html" aria-current="page">기타</a>
+			</div>
+		</nav>
+	</header>
+
+	<!-- ###################################### -->
+	<!-- ### UI Guide [기타] ### -->
+	<!-- ###################################### -->
+	<div class="guide_container">
+		<nav class="guide_menu">
+			<a href="#GCONTENT1" class="active">컨텐츠영역</a>
+			<a href="#GCONTENT2">박스영역</a>
+			<a href="#GCONTENT3">이미지영역</a>
+		</nav>
+
+		<div class="guide_box">
+			<h2>2022/2023 가이드 정의</h2>
+			<ul>
+				<li>공통적으로 사용한 클래스 네이밍에 한하여 정리되었으며, 일부 페이지에서만 사용할 수 있는 클래스 네이밍은 가이드에서 제외함.<br><strong>예시) .yeartexForm(연말정산)</strong></li>
+				<li>2023년 고도화 작업시 추가된 스타일 정의에 대해선 다음과 같이 표기함.<i class="guide_tag">2023고도화</i></li>
+			</ul>
+		</div>
+
+		<!-- ################################# -->
+		<!-- ### 컨텐츠영역 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT1">
+			<h2 class="guide_title">컨텐츠영역</h2>
+			<!-- -------------------------------------- -->
+			<!-- [유형1] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형1 : .areaSection1 <i class="guide_tag">2023고도화</i> <span class="sub">상하간격:24px</span></h3>
+				<div class="guide_area2">
+					<div class="areaSection1">
+						<p class="guide_empty">컨텐츠영역</p>
+					</div>
+					<div class="areaSection1 line">
+						<p class="guide_empty">하단 라인이 있을 경우 .line</p>
+					</div>
+					<div class="areaSection1">
+						<p class="guide_empty">컨텐츠영역</p>
+					</div>
+				</div>
+				<div class="guide_area">
+					<h4 class="guide_title3">활용</h4>
+					<div class="areaSection1">
+						<h5 class="defSubTit1">첫번째 타이틀은 margin-top:0</h5>
+						<h5 class="defSubTit2">.defSubTit2은 margin-bottom:6px</h5>
+						<p class="guide_empty">컨텐츠영역</p>
+						<div class="btns">
+							<button type="button" class="btnBodyLine">버튼명</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [유형2] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형2 : .areaSection2 <i class="guide_tag">2023고도화</i>  <span class="sub">좌우여백:16px</span></h3>
+				<div class="guide_area2" style="border-left:1px solid #666;border-right:1px solid #666;">
+					<div class="areaSection2">
+						<p class="guide_empty">컨텐츠영역</p>
+					</div>
+				</div>
+				<div class="guide_area">
+					<h4 class="guide_title3">활용</h4>
+					<div class="areaSection2">
+						<h5 class="defSubTit1">첫번째 타이틀은 margin-top:0</h5>
+						<h5 class="defSubTit2">.defSubTit2은 margin-bottom:6px</h5>
+						<p class="guide_empty">컨텐츠영역</p>
+						<div class="areaChart3" style="border:1px dashed #999">.areaChart3영역은 좌우 여백(20px)이 있음</div>
+						<div class="btns">
+							<button type="button" class="btnBodyLine">버튼명</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [유형3] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형3 : .areaSection3 <i class="guide_tag">2023고도화</i>  <span class="sub">상하간격:30px, 24px</span></h3>
+				<div class="guide_area2">
+					<div class="areaSection3">
+						<p class="guide_empty">컨텐츠영역</p>
+					</div>
+					<div class="areaSection3">
+						<p class="guide_empty">컨텐츠영역</p>
+					</div>
+				</div>
+
+				<div class="guide_area">
+					<h4 class="guide_title3">활용</h4>
+					<div class="areaSection3">
+						<h5 class="defSubTit1">첫번째 타이틀은 margin-top:0</h5>
+						<h5 class="defSubTit2">.defSubTit2은 margin-bottom:6px</h5>
+						<p class="guide_empty">컨텐츠영역</p>
+						<div class="btns">
+							<button type="button" class="btnBodyLine">버튼명</button>
+						</div>
+					</div>
+					<div class="areaSection2">
+						<p class="guide_empty">.areaSection3 다음에 .areaSection2올 경우<br>margin-top:-4px; </p>
+					</div>
+				</div>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [유형4] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형4 : .areaSection4 <i class="guide_tag">2023고도화</i> <span class="sub">상하간격:40px</span></h3>
+				<div class="guide_area2">
+					<div class="areaSection4">
+						<p class="guide_empty">컨텐츠영역</p>
+					</div>
+					<div class="areaSection4">
+						<p class="guide_empty">컨텐츠영역</p>
+					</div>
+				</div>
+
+				<div class="guide_area2">
+					<h4 class="guide_title3">활용</h4>
+					<div class="areaSection4">
+						<h5 class="defSubTit1">첫번째 타이틀은 margin-top:0</h5>
+						<div class="boxTypeWrap">
+							<p class="guide_empty">margin-top:16px;변경</p>
+							<ul class="detailList">
+								<li>
+									<div class="tit">항목명</div>
+									<div class="value bold"><span class="dataValue">000,000</span></div>
+								</li>
+								<li>
+									<div class="tit">항목명</div>
+									<div class="value bold"><span class="dataValue">000,000</span></div>
+								</li>
+							</ul>
+						</div>
+						
+
+						
+						<div class="btns">
+							<button type="button" class="btnBodyLine">버튼명</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [구분선] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">구분선</h3>
+				<pre class="guide_code">&lt;hr class="divLine**" aria-hidden="true"&gt;</pre>
+
+				<!-- ### 유형1 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">유형1 : .divLine</h4>
+					<ul class="guide_txt">
+						<li>속성 : H:8px / M:25px -16px / BG:#ebebeb</li>
+						<li>.boxTypeWrap 안에 내용이 들어갈 경우 스타일 변경</li>
+					</ul>
+					<!-- // -->
+					<div class="guide_empty">컨텐츠영역</div>
+					<hr class="divLine" aria-hidden="true">
+					<div class="guide_empty">컨텐츠영역</div>
+					<!-- // -->
+					<div class="boxTypeWrap">
+						<div class="guide_empty">컨텐츠영역</div>
+						<hr class="divLine" aria-hidden="true">
+						<div class="guide_empty">컨텐츠영역</div>
+						<hr class="divLine ty01" aria-hidden="true">
+					</div>
+				</div>
+
+				<!-- ### 유형2 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">유형2 : .divLine2</h4>
+					<ul class="guide_txt">
+						<li>속성 : H:1px / M:0px -16px 30px -16px  / BG:#ebebeb</li>
+						<li>토글 컨텐츠에 주로 사용함.</li>
+					</ul>
+					<!-- // -->
+					<div class="guide_empty">컨텐츠영역</div>
+					<hr class="divLine2" aria-hidden="true">
+					<div class="guide_empty">컨텐츠영역</div>
+					<!-- // -->
+					<div class="boxTypeWrap">
+						<div class="guide_empty">컨텐츠영역</div>
+						<hr class="divLine2" aria-hidden="true">
+						<div class="guide_empty">컨텐츠영역</div>
+					</div>
+				</div>
+
+				<!-- ### 유형3 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">유형3 : .divLine3</h4>
+					<ul class="guide_txt">
+						<li>속성 : H:1px / M:30px 0  / BG:#ebebeb</li>
+						<li>내역 컨텐츠의 구분선으로 주로 사용함.</li>
+					</ul>
+					<!-- // -->
+					<div class="boxTypeWrap">
+						<div class="guide_empty">컨텐츠영역</div>
+						<hr class="divLine3" aria-hidden="true">
+						<div class="guide_empty">컨텐츠영역</div>
+					</div>
+				</div>
+
+				<!-- ### 유형4 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">유형4 : .divLine4</h4>
+					<ul class="guide_txt">
+						<li>속성 : H:3px / M:28px -20px  / BG:#ebebeb</li>
+					</ul>
+					<!-- // -->
+					<div style="padding:0 4px">
+						<div class="guide_empty">컨텐츠영역</div>
+						<hr class="divLine4" aria-hidden="true">
+						<div class="guide_empty">컨텐츠영역</div>
+					</div>
+				</div>
+			</div>
+			<!-- -------------------------------------- -->
+		</section>
+
+		<!-- ################################# -->
+		<!-- ### 박스영역 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT2">
+			<h2 class="guide_title">박스영역</h2>
+			<!-- -------------------------------------- -->
+			<!-- [유형1] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형1 : .boxTypeWrap</h3>
+				<div class="guide_area2">
+					<h4 class="guide_title3">기본</h4>
+					<div class="boxTypeWrap">
+						<div class="guide_empty">컨텐츠영역</div>
+					</div>
+				</div>
+				<div class="guide_area2">
+					<h4 class="guide_title3">라인형 : .line</h4>
+					<div class="boxTypeWrap line">
+						<div class="guide_empty">컨텐츠영역</div>
+					</div>
+				</div>
+				<div class="guide_area2">
+					<h4 class="guide_title3">그림자삭제 : .delShadow</h4>
+					<div class="boxTypeWrap delShadow">
+						<div class="guide_empty">컨텐츠영역</div>
+					</div>
+				</div>
+				<div class="guide_area">
+					<h4 class="guide_title3">색상정의 : .bgType**</h4>
+					<div class="boxTypeWrap bgType01">
+						<div class="guide_empty">컨텐츠영역 : .bgType01</div>
+					</div>
+					<div class="boxTypeWrap bgType02">
+						<div class="guide_empty">컨텐츠영역 : .bgType02</div>
+					</div>
+					<div class="boxTypeWrap bgType03">
+						<div class="guide_empty">컨텐츠영역 : .bgType03</div>
+					</div>
+					<div class="boxTypeWrap bgType04">
+						<div class="guide_empty">컨텐츠영역 : .bgType04</div>
+					</div>
+					<div class="boxTypeWrap bgType05">
+						<div class="guide_empty">컨텐츠영역 : .bgType05</div>
+					</div>
+					<div class="boxTypeWrap bgType06">
+						<div class="guide_empty">컨텐츠영역 : .bgType06</div>
+					</div>
+					<div class="boxTypeWrap bgType07">
+						<div class="guide_empty">컨텐츠영역 : .bgType07</div>
+					</div>
+					<div class="boxTypeWrap bgType08">
+						<div class="guide_empty">컨텐츠영역 : .bgType08</div>
+					</div>
+					<div class="boxTypeWrap bgType09">
+						<div class="guide_empty">컨텐츠영역 : .bgType09</div>
+					</div>
+					<div class="boxTypeWrap bgType10">
+						<div class="guide_empty">컨텐츠영역 : .bgType10</div>
+					</div>
+				</div>
+
+				<div class="guide_area2">
+					<h4 class="guide_title3">타이틀 추가 : .boxTypeWrap.pt0 &gt; .boxTitArea</h4>
+					<div class="boxTypeWrap pt0">
+						<div class="boxTitArea">타이틀</div>
+						<div class="guide_empty">컨텐츠영역</div>
+					</div>
+					<div class="boxTypeWrap pt0">
+						<div class="boxTitArea bgAssetConn">타이틀</div>
+						<div class="guide_empty">컨텐츠영역</div>
+					</div>
+				</div>
+
+				<div class="guide_area2">
+					<h4 class="guide_title3">유형추가 <i class="guide_tag">2023고도화</i> </h4>
+					<h5 class="guide_title4">스타일변경 : .t1 </h5>
+					<p class="guide_txt">AS-IS에서 특정 속성을 추가하여 사용하였으며, 내용들의 간격을 20px로 공통 정의 함.</p>
+					<div class="boxTypeWrap t1">
+						<div class="guide_empty">컨텐츠영역:</div>
+					</div>
+					<div class="boxTypeWrap t1" role="button" tabindex="0" title="대체텍스트">
+						<h6 class="defSubTit1">타이틀</h6>	
+						<div class="guide_empty">div자체가 링크 영역일 경우 :  role="button" tabindex="0" title="대체텍스트"</div>
+					</div>
+					<div class="boxTypeWrap t1">
+						<p class="guide_empty">컨텐츠영역</p>
+						<button type="button" class="btnMore" data-txt="접기">더보기</button>
+					</div>
+
+					<h5 class="guide_title4">스타일변경 : .t2 </h5>
+					<p class="guide_txt">padding값 및 diaplay:flex를 사용하여 정렬 : 토글 없는 버전</p>
+					<div class="boxTypeWrap t2">
+						<strong class="defSubTit1">타이틀</strong>
+						<span class="iconTxt2 grade0">태그</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [유형2] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형2 : .grayBox</h3>
+				<div class="guide_area">
+					<div class="grayBox">
+						<div class="guide_empty">컨텐츠영역</div>
+					</div>
+
+					<div class="grayBox">
+						<strong class="subTit">타이틀 .subTit</strong>
+						<p class="subTxt2">내용 .subTxt2</p>
+					</div>
+
+					<div class="grayBox ac">
+						<strong class="subTit">타이틀 .subTit</strong>
+						<p class="subTxt2">내용 .subTxt2</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [유형3] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형3 : .greenBox2</h3>
+				<div class="guide_area">
+					<div class="greenBox2">
+						<div class="guide_empty">컨텐츠영역</div>
+					</div>
+					<hr class="guide_line">
+					<div class="greenBox2 ac">
+						<div class="guide_empty" style="display:inline-block">컨텐츠 센터 정렬 : .ac</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [유형4] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형4 : .areaBox1 <i class="guide_tag">2023고도화</i></h3>
+				<div class="guide_area2">
+					<h4 class="guide_title3">기본 : 100vh - 상단 하단 여백</h4>
+					<div class="areaBox1">
+						<h5 class="defSubTit1">타이틀 영역</h5>
+						<p class="guide_empty area">컨텐츠영역</p>
+						<div class="btns"><button type="button" class="btnBodyLine">버튼명</button></div>
+					</div>
+				</div>
+
+				<div class="guide_area2">
+					<h4 class="guide_title3">기본 + 필터영역 제외</h4>
+					<div class="areaBox1 t1">
+						<h5 class="defSubTit1">타이틀 영역</h5>
+						<p class="guide_empty area">컨텐츠영역</p>
+						<div class="btns"><button type="button" class="btnBodyLine">버튼명</button></div>
+					</div>
+				</div>
+			</div>
+			<!-- -------------------------------------- -->
+		</section>
+		
+		<!-- ################################# -->
+		<!-- ### 이미지영역 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT3" style="height:calc(100vh - 135px)">
+			<h2 class="guide_title">이미지영역</h2>
+
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형1 : .areaImg1</h3>
+				<div class="areaImg1"><img src="../../images/creditscore/img_grade1.png" alt="매우안정"></div>
+			</div>	
+		</section>
+		<!-- ################################# -->
+	</div>
+	<!-- ###################################### -->
+</div>
+</body>
+</html>

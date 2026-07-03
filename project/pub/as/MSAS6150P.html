@@ -1,0 +1,116 @@
+<DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 목표관리</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(function() {
+		slidePopConfirm();
+	});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">등록완료</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 --> <!-- [2020-11-16] 전체메뉴 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+		</div>
+		<!-- //container -->
+
+		<!-- 자동충전 정보 -->
+		<div class="nhasset popWrap slidePopConfirm">
+			<div class="dim"></div>
+			<div class="dimCloseArea" onclick="popClose(this);return false;">터치 시 해당 창을 닫습니다.</div>
+			<div class="popInner">
+				<h1>자동충전 정보</h1>
+				<div class="popCont">
+
+					<h2 class="defSubTit5">자동충전계좌</h2> <!--09.23 수정-->
+					<ul class="selectList accList isBorder">
+						<li class="dsfNone">
+							<a href="javascript:;">
+								<div class="accTit">
+									<span class="imgWrap"><img src="../../images/logos/AAAZ0000.png" alt="NH농협은행 로고" class="imgLogo"></span>
+									<div class="accInfoWrap">
+										<p class="accTit">NH농협은행</p>
+										<div class="accInfo">
+											<span class="accNum">301******</span>
+										</div>
+									</div>
+								</div>
+								 <ul class="detailList">
+									 <li>
+										 <span class="tit">충전조건</span>
+										 <span class="value">매월 15일</span>
+									 </li>
+									 <li>
+										<span class="tit">충전금액</span>
+										<span class="value">300,000<em class="won">원</em></span>
+									</li>
+								 </ul>
+							</a>
+						</li>
+						<!-- <li class="dsfNone">
+							<a href="javascript:;">
+								<div class="accTit">
+									<span class="imgWrap AAAZ0000"><em class="blind">농협은행</em></span>
+									<div class="accInfoWrap">
+										<p class="accTit">NH농협은행</p>
+										<div class="accInfo">
+											<span class="accNum">301******</span>
+										</div>
+									</div>
+								</div>
+								 <ul class="detailList">
+									 <li>
+										 <span class="tit">충전조건</span>
+										 <span class="value">매월 15일</span>
+									 </li>
+									 <li>
+										<span class="tit">충전금액</span>
+										<span class="value">300,000<em class="won">원</em></span>
+									</li>
+								 </ul>
+							</a>
+						</li> -->
+					</ul>
+				</div>
+
+				<div class="popBtnWrap">
+					<!-- <div class="popBtn">
+						<a href="javascript:;" class="confirmBtn disabled" role="button">확인</a>
+					</div> -->
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다."><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- //자동충전 정보 -->
+
+	</div>
+
+</body>
+</html>

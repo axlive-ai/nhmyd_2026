@@ -1,0 +1,219 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산현황</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+        tostpop();//토스트 팝업 호출
+        
+        $('html').addClass('fixS')
+        var $conH =  $('.wrapper').height() - $('.header').height() - 32; /* 숫자 container pb */
+        var $ast =  $('.boxWrapShadow.astfixed');	
+        var $astH = $('.boxWrapShadow.astfixed').height() + 20;
+        console.log('$popH : ' + $conH);
+        console.log('$astH : ' + $astH);
+        $ast.next('.boxTypeWrap').css('height','calc(' + $conH +'px - ' + $astH + 'px - 20px)');
+        console.log($conH +' - ' + $astH + 'px');
+    })
+    
+	function tostpop(){
+		var $tostCont = '<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg">조회가 완료되었습니다.</div></div>'
+		//조회중일때
+		//var $tostCont = '<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg error">조회 중입니다.</div></div>'
+		$('.container').after($tostCont);
+		setTimeout(function(){
+			$('.tostpopupWrap').remove();
+		},4000)
+	}
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">배당내역</a></h1>
+			<!-- <a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>  -->
+			<a href="javascript:;" class="btnAcAdmin"><span class="blind">관리</span></a>
+
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="boxWrapShadow astfixed"><!-- 11.18  boxWrapShadow 삭제-->
+				<div class="boxTypeWrap pb0"><!-- s:boxTypeWrap-->
+					<!-- 상단 계좌정보 영역 -->
+					<div class="accTopInfo baedangBg">
+						<dl class="totalBalance bigSize">  <!-- [2022-11-22] 한은정 : .bigSize 추가 -->
+                            <dt class="foSt">나의 최근 배당내역</dt>
+							<dd><em class="chong">총</em><strong class="dataValue">6,399,000</strong><em class="won">원</em></dd> <!-- [2022-11-22] 한은정 : 수정 -->
+                        </dl>
+                        <p class="timeTxt">조회기간 : 2021.05.31 ~ 2022.05.31</p> <!-- [2022-11-22] 한은정 : 수정 -->
+					</div>
+					<!-- // 상단 계좌정보 영역 -->			
+					<hr class="divLine mt10">	
+					<!-- 계좌정보 상세 -->
+					<div class="accInfoDetail">
+						<ul class="detailList">
+							<!-- <li>
+								<span class="tit">받은 배당금</span>
+								<span class="value"><strong class="dataValue">10,000</strong><em class="won">원</em></span>
+							</li> -->
+							<li>
+								<span class="tit">국내</span>
+								<span class="value"><strong class="dataValue">90,000</strong><em class="won">원</em></span>
+                            </li>
+                            <li>
+                                <span class="tit">해외</span>
+                                <div class="dspb">
+                                    <span class="value"><strong class="dataValue">100</strong><em class="won">원</em></span>
+                                    <span class="value"><strong class="dataValue">USD 100</strong></span>
+                                </div>
+							</li>
+						</ul>
+					</div>
+					<!-- // 계좌정보 상세 -->
+				</div>
+				<!--e:boxTypeWrap-->
+			</div>
+			<!--e:boxWrapShadow-->
+
+            <div class="boxTypeWrap pt0 pb0">
+                <ul class="totalAccList small beadangArea"><!--10.26 beadangArea추가-->
+                    <li>
+                        <div class="totalAcc garyBox"><!--10.25  추가-->
+                            <span class="time">2022년 5월</span>
+                            <span class="accValue"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+                        </div>
+                        <ul class="accList bdbNone">
+                            <li>
+                                <a href="javascript:;"><!--10.26 수정-->
+                                    <div class="totalAcc">
+                                        <span class="time">4일</span>
+                                    </div>
+                                    <div class="beadangItem">
+                                        <span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+                                            <img src="../../images/logos/ACRB0000.png" alt="삼성전자 로고" class="imgLogo">
+                                        </span>
+                                        <div class="accInfoWrap">
+                                            <div class="titArea">
+                                                <span class="accTit"><sup>+</sup>삼성전자</span> <!--11.18 + 추가-->
+                                            </div>
+                                            <div class="accInfo dpBlock">
+                                                <span class="accValue"><strong class="dataValue">10,000,000,000</strong><em class="won">원</em></span>
+                                                <p class="accEtc"><em class="won">USD</em> <em class="dataValue">100,000,000,000</em></p> <!-- [2022-01-02] 케이스 추가 -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><!--10.26 수정-->
+                                    <div class="totalAcc">
+                                        <span class="time">15일</span>
+                                    </div>
+                                    <div class="beadangItem">
+                                        <span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+                                            <img src="../../images/logos/AACU0000.png" alt="미래에셋증권 로고" class="imgLogo">
+                                        </span>
+                                        <div class="accInfoWrap">
+                                            <div class="titArea">
+                                                <span class="accTit">미래에셋증권</span>
+                                            </div>
+                                            <div class="accInfo dpBlock">
+                                                <span class="accValue"><strong class="dataValue">100</strong></span>
+                                                <!-- <p class="accEtc">배당액(USD)</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="totalAcc garyBox"><!--10.25  추가-->
+                            <span class="time">2022년 5월</span>
+                            <span class="accValue"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+                        </div>
+                       
+                        <ul class="accList bdbNone">
+                            <li>
+                                <a href="javascript:;"><!--10.26 수정-->
+                                    <div class="totalAcc">
+                                        <span class="time">4일</span>
+                                    </div>
+                                    <div class="beadangItem">
+                                        <span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+                                            <img src="../../images/logos/AAEQ0000.png" alt="삼성전자 로고" class="imgLogo">
+                                        </span>
+                                        <div class="accInfoWrap">
+                                            <div class="titArea">
+                                                <span class="accTit">삼성전자</span>
+                                            </div>
+                                            <div class="accInfo dpBlock">
+                                                <span class="accValue"><strong class="dataValue">10,000,000,000</strong><em class="won">원</em></span>
+                                                <!-- <p class="accEtc">배당액</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><!--10.26 수정-->
+                                    <div class="totalAcc">
+                                        <span class="time">15일</span>
+                                    </div>
+                                    <div class="beadangItem">
+                                        <span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+                                            <img src="../../images/logos/AACU0000.png" alt="미래에셋증권 로고" class="imgLogo">
+                                        </span>
+                                        <div class="accInfoWrap">
+                                            <div class="titArea">
+                                                <span class="accTit">미래에셋증권</span>
+                                            </div>
+                                            <div class="accInfo dpBlock">
+                                                <span class="accValue"><strong class="dataValue">100</strong></span>
+                                                <!-- <p class="accEtc">배당액(USD)</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="listMoreBtn">
+					<a href="javascript:;" title="항목 더보기">더보기</a>
+				</div>
+            </div>
+            
+            <!-- <div class="baedangBanner">
+                <a href="javascript:" role="button">
+                    <span class="txt">2021 나의 배당내역 확인하기</span>
+                </a>
+            </div> -->
+		</div>
+		<!-- //container -->
+
+	</div>
+</body>
+</html>

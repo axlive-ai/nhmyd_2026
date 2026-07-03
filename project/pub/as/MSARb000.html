@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>투자시뮬레이션</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">그때 그랬다면</a></h1>
+			<!-- <a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>  -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="asssetMaybeWrap">
+				<div class="asssetMaybeTitle">
+					<p>만약, 그때 그랬다면 어땠을까?<br>과거 나의 <strong class="pointColor">자산을 시뮬레이션</strong> 해보세요</p>
+					<div class="asssetMaybe_ani1">
+						<div class="assetCoin coin1"><img src="../../images/aesset_coin1.png" alt="" /></div>
+						<div class="assetCoin1 coin2"><img src="../../images/aesset_coin2.png" alt="" /></div>
+						<div class="assetCoin2 coin3"><img src="../../images/aesset_coin3.png" alt="" /></div>
+						<div class="assetCoin3 coin4"><img src="../../images/aesset_coin4.png" alt=""  style="width:108px" /></div>
+					</div>
+					<div class="asssetMaybe_ani2">
+						<div class="gold1"><img src="../../images/aesset_gold1.png" alt="" /></div>
+						<div class="gold2"><img src="../../images/aesset_gold2.png" alt="" /></div>
+						<div class="assetCoin3 coin4"><img src="../../images/aesset_coin4.png" alt=""  style="width:108px" /></div>
+					</div>
+					<div class="asssetMaybe_ani3">
+						<div class="bar1"><img src="../../images/aesset_bar1.png" alt="" style="width:16px" /></div>
+						<div class="bar2"><img src="../../images/aesset_bar2.png" alt="" style="width:15px" /></div>
+						<div class="bar3"><img src="../../images/aesset_bar3.png" alt="" style="width:18px" /></div>
+						<div class="bar4"><img src="../../images/aesset_bar4.png" alt="" style="width:66px" /></div>
+						<div class="assetCoin3 coin4"><img src="../../images/aesset_coin4.png" alt=""  style="width:108px" /></div>
+					</div>
+				</div>
+
+				<ul class="asssetMaybeList">
+					<li class="myAssSetSel">
+						<a href="javascript:;" role="button">
+							<strong>내 자산으로 선택</strong>
+							<p>내가 가진 자산을 다른 데 투자했다면<br>어땠을까요? </p><!-- 2022-10-07 띄어쓰기 수정 -->
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;" role="button">
+							<strong>가상으로 선택</strong>
+							<p>그때 내 여유자금을 안쓰고 투자했다면<br>어땠을까요?</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="info_area">
+				<strong class="info_area_title">알아두세요</strong>
+				<!-- 2022-09-27 문구수정 -->
+				<ul class="listBul disc">
+					<li>해당 서비스는 고객이 보유한 자산 거래내역과 금융상품의 과거 금리, 기준가, 종가, 환율 등을 활용한 단순 시뮬레이션 서비스입니다.</li>
+					<li>따라서 결과는 사실과 다를 수 있으며, 법적 책임소재에 대한 증빙자료로 사용될 수 없습니다.</li>
+				</ul>
+				<!-- //2022-09-27 문구수정 -->
+			</div>
+
+		</div>
+		<!-- //container -->
+	</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.asssetMaybeTitle > div').hide();
+		$('.asssetMaybe_ani1').show();
+		setTimeout(function() { 
+		    $('.asssetMaybe_ani1').hide()
+		    $('.asssetMaybe_ani2').show()
+		},1300);
+		setTimeout(function() { 
+		    $('.asssetMaybe_ani2').hide()
+		    $('.asssetMaybe_ani3').show()
+		},2600);
+	})
+</script>
+</body>
+</html>

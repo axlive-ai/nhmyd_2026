@@ -1,0 +1,489 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>UI Guide [게시판]</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="nhasset guide_wrapper">
+	<header class="guide_header">
+		<h1>UI GUIDE <span>게시판</span></h1>
+		<nav data-toggle="wrap">
+			<button type="button" class="guide_btn" data-toggle="btn" aria-expanded="false">전체메뉴</button>
+			<div data-toggle="cont">
+				<a href="txt_sample.html">타이틀/텍스트</a>
+				<a href="mes_sample.html">메세지</a>
+				<a href="button_sample.html">버튼</a>
+				<a href="form_sample.html">폼</a>
+				<a href="list_sample.html">리스트</a>
+				<a href="info_sample.html">정보</a>
+				<a href="table_sample.html">테이블</a>
+				<a href="bbs_sample.html" aria-current="page">게시판</a>
+				<a href="banner_sample.html">배너</a>
+				<a href="chart_sample.html">차트</a>
+				<a href="etc_sample.html">기타</a>
+			</div>
+		</nav>
+	</header>
+
+	<!-- ###################################### -->
+	<!-- ### UI Guide [게시판] ### -->
+	<!-- ###################################### -->
+	<div class="guide_container">
+		<nav class="guide_menu">
+			<a href="#GCONTENT1" class="active">목록형</a>
+			<a href="#GCONTENT2">상세유형</a>
+		</nav>
+
+		<div class="guide_box">
+			<h2>2022/2023 가이드 정의</h2>
+			<ul>
+				<li>공통적으로 사용한 클래스 네이밍에 한하여 정리되었으며, 일부 페이지에서만 사용할 수 있는 클래스 네이밍은 가이드에서 제외함.<br><strong>예시) .yeartexForm(연말정산)</strong></li>
+				<li>2023년 고도화 작업시 추가된 스타일 정의에 대해선 다음과 같이 표기함.<i class="guide_tag">2023고도화</i></li>
+			</ul>
+		</div>
+
+		<!-- ################################# -->
+		<!-- ### 목록형 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT1">
+			<h2 class="guide_title">목록형</h2>
+			<!-- -------------------------------------- -->
+			<!-- [유형1] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형1 : .bbsList1 <i class="guide_tag">2023고도화</i></h3>
+				<div class="bbsList1" data-toggle="wrap">
+					<dl>
+						<dt role="button" tabindex="0" aria-expanded="false" data-toggle="btn">타이틀타이틀타이틀타이틀타이틀타이틀타이틀타이틀타이틀타이틀타이틀타이틀타이틀타이틀</dt>
+						<dd data-toggle="con">내용</dd>
+					</dl>
+					<dl>
+						<dt role="button" tabindex="0" aria-expanded="false" data-toggle="btn">타이틀</dt>
+						<dd data-toggle="con">내용</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [유형2] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형2 : .eventListWrap</h3>
+				<div class="guide_area">
+					<h4 class="guide_title3">목록형</h4>
+					<ul class="eventListWrap">
+						<li>
+							<div class="eventSummary">
+								<a href="javascript:;" role="button">
+									<div class="summary">
+										<div class="titleArea">
+											<strong class="title">이벤트 제목이 노출됩니다.</strong>
+										</div>
+										<div class="date">0000.00.00 - 0000.00.00</div>
+									</div>
+								</a>
+							</div>
+							<hr class="divLine3" aria-hidden="true">
+						</li>
+						<li>
+							<div class="eventSummary">
+								<a href="javascript:;" role="button">
+									<div class="summary">
+										<div class="titleArea">
+											<span class="tag mint">진행중</span>
+											<strong class="title">이벤트 제목이 노출됩니다.</strong>
+										</div>
+										<div class="date">0000.00.00 - 0000.00.00</div>
+									</div>
+								</a>
+							</div>
+							<hr class="divLine3" aria-hidden="true">
+						</li>
+						<li>
+							<div class="eventSummary">
+								<a href="javascript:;" role="button">
+									<div class="summary">
+										<div class="titleArea">
+											<span class="tag blue">추첨중</span>
+											<strong class="title">이벤트 제목이 노출됩니다.</strong>
+										</div>
+										<div class="date">0000.00.00 - 0000.00.00</div>
+									</div>
+								</a>
+							</div>
+							<hr class="divLine3" aria-hidden="true">
+						</li>
+						<li>
+							<div class="eventSummary">
+								<a href="javascript:;" role="button">
+									<div class="summary">
+										<div class="titleArea">
+											<span class="tag red">결과발표</span>
+											<strong class="title">이벤트 제목이 노출됩니다.</strong>
+										</div>
+										<div class="date">0000.00.00 - 0000.00.00</div>
+									</div>
+								</a>
+							</div>
+							<hr class="divLine3" aria-hidden="true">
+						</li>
+						<li>
+							<div class="eventSummary">
+								<a href="javascript:;" role="button">
+									<div class="summary">
+										<div class="titleArea">
+											<span class="tag gray">종료</span>
+											<strong class="title">이벤트 제목이 노출됩니다.</strong>
+										</div>
+										<div class="date">0000.00.00 - 0000.00.00</div>
+									</div>
+								</a>
+							</div>
+						</li>
+					</ul>
+
+					<h4 class="guide_title3">카드형</h4>
+					<ul class="eventListWrap">
+						<li>
+							<div class="eventSummary">
+								<a href="javascript:;" role="button">
+									<div class="eventImgArea"><img src="../../images/temp/temp_event01.png" alt="대체텍스트가 들어갑니다."></div>
+									<div class="summary">
+										<div class="titleArea">
+											<span class="tag mint">진행중</span>
+											<strong class="title">이벤트 제목이 노출됩니다.</strong>
+										</div>
+										<div class="date">0000.00.00 - 0000.00.00</div>
+									</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="eventSummary">
+								<a href="javascript:;" role="button">
+									<div class="eventImgArea"><img src="../../images/temp/temp_event02.png" alt="AJ셀카 내차팔기 상품권 지급 이벤트 잘가 MY Car~안녕 상품권!"></div>
+									<div class="summary">
+										<div class="titleArea">
+											<span class="tag red">결과발표</span>
+											<strong class="title">이벤트 제목이 노출됩니다.</strong>
+										</div>
+										<div class="date">0000.00.00 - 0000.00.00</div>
+									</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="eventSummary">
+								<a href="javascript:;" role="button">
+									<div class="eventImgArea"><img src="../../images/temp/temp_event04.png" alt="대체텍스트가 들어갑니다."></div>
+									<div class="summary">
+										<div class="titleArea">
+											<span class="tag gray">종료</span>
+											<strong class="title">이벤트 제목이 노출됩니다.</strong>
+										</div>
+										<div class="date">0000.00.00 - 0000.00.00</div>
+									</div>
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- -------------------------------------- -->
+		</section>
+
+		<!-- ################################# -->
+		<!-- ### 상세유형 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT2">
+			<h2 class="guide_title">상세유형</h2>
+			<!-- -------------------------------------- -->
+			<!-- [트렌드상세] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">트렌드상세 : .bbsView1 <i class="guide_tag">2023고도화</i></h3>
+				<section class="bbsView1">
+					<h4 class="tit">게시판 타이틀</h4>
+					<div class="area">
+						<!-- [이미지] -->
+						<div class="areaImg1" data-swiper-type="list1" data-swiper-pagination="fraction">
+							<ul>
+								<li><img src="../../images/temp/@img_trend01.png" alt="대체텍스트"></li>
+								<li><img src="../../images/temp/@img_trend02.png" alt="대체텍스트"></li>
+								<li><img src="../../images/temp/@img_trend03.png" alt="대체텍스트"></li>
+							</ul>
+						</div>
+
+						<!-- [해시태그] -->
+						<div class="tagWrap">
+							<span class="tag gray1">태그</span>
+							<span class="tag gray1">태그</span>
+						</div>
+
+						<!-- [등록일/조회수] -->
+						<div class="data">
+							<dl>
+								<dt>등록일</dt>
+								<dd>0000.00.00</dd>
+							</dl>
+							<dl>
+								<dt>조회수</dt>
+								<dd>0000</dd>
+							</dl>
+						</div>
+						<!-- // -->
+					</div>
+				</section>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [이벤트상세] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">이벤트상세 : .eventViewTitle + .eventImgBox</h3>
+				<div class="boxTypeWrap">
+					<div class="eventViewTitle">
+						<span class="title">이벤트타이틀</span>
+						<div class="date">0000.00.00 ~ 0000.00.00</div>
+					</div>
+					<div class="eventImgBox">
+						<img src="../../images/notice/img_event_new01.png" alt="대체 택스트 본문 내용과 똑같이 입력 필요">
+					</div>
+					<h4 class="boxMainTit mt20">응모정보 등록</h4>
+					<div class="titListBox termBox">
+						<ul>
+							<li>
+								<div class="txtb1">
+									<strong>이름</strong>
+								</div>
+								<div class="inputList"> <!-- 에러인 경우 .error 추가-->
+									<input type="text" title="이름" name="" id="" value="김농협" placeholder="dddd" disabled="">
+									<!-- <a href="javascript:" class="btnReset" role="button">입력내용삭제</a> --> <!-- disabled일 경우 삭제 -->
+								</div>
+							</li>
+							<li>
+								<div class="txtb1">
+									<strong>휴대폰번호</strong>
+								</div>
+								<div class="inputList"> <!-- 에러인 경우 .error 추가-->
+									<input type="tel" title="휴대폰번호" name="" id="" value="" placeholder="'-' 없이 입력해주세요.">
+									<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+								</div>
+							</li>
+							<li>
+								<div class="formWrap selectAll">
+									<div class="total">
+										<div class="formHolder check">
+											<input type="checkbox" id="type_chk01" checked="" class="chekTypeOther inputChecked">
+											<label class="check" for="type_chk01">개인정보 수집 및 이용에 동의합니다. (필수)</label>
+										</div>
+									</div>
+								</div>
+								<div class="grayBox">
+									<strong class="subTit">농협은행 주식회사 귀중</strong>
+									<p class="subTxt2">귀 행이 이벤트 진행을 위하여 본인의 개인정보를 수집·이용하는 경우에는 「 개인정보 보호법 」 제 15조 등 관련법령에 따라 본인의 동의가 필요합니다.</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="shareIcoWrap mt30">
+                        <ul>
+                            <li class="event-kakao">
+                                <a href="javascript:;" role="button">
+                                    <span class="event-kakao">카카오톡 공유하기</span>
+                                </a>
+                            </li>
+                            <li class="event-link">
+                                <a href="javascript:;" role="button">
+                                    <span class="event-link">링크 복사하기</span>
+                                </a>
+                            </li>
+                        </ul>
+					</div>
+					<div class="recomCont">
+						<div class="mainBox">
+							<span class="resultTit">내 추천으로 가입한 친구</span>
+							<span class="resultVal"><span class="pointColor">4명</span></span>
+						</div>
+						<div class="subBox">
+							<span class="resultTit">나보다 많이 추천한 사람은?</span>
+							<span class="resultVal"><span class="pointColor">1명</span></span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [올리상세] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">올리상세 : .bbsView2 <i class="guide_tag">2023고도화</i></h3>
+				<!-- ### 템플릿1 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title4">템플릿1 : +.ty01</h4>
+					<div class="boxTypeWrap">
+						<div class="eventViewTitle">
+							<span class="title">이벤트 제목</span>
+							<div class="date">0000.00.00 ~ 0000.00.00</div>
+						</div>
+						<div class="eventCont">
+							<div class="bssView2 ty01">
+								<img src="../../images/event/findally/img_view_allybg01.png" alt="꼭꼭 숨은 올리를 찾아라 화면 속 숨겨진 올리를 찾아 경품 받자!">
+								<div class="info">
+									<dl>
+										<dt>숨은 올리</dt>
+										<dd>000</dd>
+									</dl>
+									<dl>
+										<dt>찾은 올리</dt>
+										<dd>000</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- ### 템플릿2 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title4">템플릿2 : +.ty02</h4>
+					<div class="boxTypeWrap">
+						<div class="eventViewTitle">
+							<span class="title">이벤트 제목</span>
+							<div class="date">0000.00.00 ~ 0000.00.00</div>
+						</div>
+						<div class="eventCont">
+							<div class="bssView2 ty02">
+								<img src="../../images/event/findally/img_view_allybg02.png" alt="올리를 찾아서! 마이데이터 화면 속 올리를 톡! 터치하면 올리찾기 완료~">
+								<div class="info">
+									<dl>
+										<dt>숨은 올리</dt>
+										<dd>000</dd>
+									</dl>
+									<dl>
+										<dt>찾은 올리</dt>
+										<dd>000</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- ### 템플릿3 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title4">템플릿3 : +.ty03</h4>
+					<div class="boxTypeWrap">
+						<div class="eventViewTitle">
+							<span class="title">이벤트 제목</span>
+							<div class="date">0000.00.00 ~ 0000.00.00</div>
+						</div>
+						<div class="eventCont">
+							<div class="bssView2 ty03">
+								<img src="../../images/event/findally/img_view_allybg03.png" alt="꼭꼭 숨은 올리를 찾아서! 마이데이터 화면 속 숨겨진 올리를 찾아보세요!">
+								<div class="info">
+									<dl>
+										<dt>숨은 올리</dt>
+										<dd>000</dd>
+									</dl>
+									<dl>
+										<dt>찾은 올리</dt>
+										<dd>000</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- ### 템플릿4 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title4">템플릿4 : +.ty04</h4>
+					<div class="boxTypeWrap">
+						<div class="eventViewTitle">
+							<span class="title">이벤트 제목</span>
+							<div class="date">0000.00.00 ~ 0000.00.00</div>
+						</div>
+						<div class="eventCont">
+							<div class="bssView2 ty04">
+								<img src="../../images/event/findally/img_view_allybg04.png" alt="숨은 올리를 찾아라 마이데이터 화면 속 올리를 톡! 터치하면 올리찾기 완료~">
+								<div class="info">
+									<dl>
+										<dt>숨은 올리</dt>
+										<dd>000</dd>
+									</dl>
+									<dl>
+										<dt>찾은 올리</dt>
+										<dd>000</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ### // ### -->
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [공지사항상세] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">공지사항상세</h3>
+				<div class="guide_area">
+					<h4 class="guide_title3">유형1 : .eventViewTitle + .eventViewCont</h4>
+					<div class="eventViewTitie">
+						<span class="title">타이틀</span>
+						<div class="date">0000.00.00</div>
+					</div>
+					<div class="eventViewCont">
+						<div class="eventImg sample">
+							<img src="../../images/notice/img_open_event.png" alt="샘플이미지">
+						</div>
+						
+						<p>텍스트가 노출됩니다.</p>
+						<p class="date">중단일시 : <span>00.00(일)00:00 ~ 00.00(월)00:00</span></p>
+					</div>
+				</div>
+
+				<div class="guide_area">
+					<h4 class="guide_title3">유형2 : .noticeContWrap &gt; .eventViewTitle + .noticeCont</h4>
+					<div class="noticeContWrap">
+						<div class="eventViewTitle mt20">
+							<span class="tag Green">공지</span>
+							<span class="title">타이틀</span><em class="icoNew"><span class="blind">NEW</span></em>
+							<div class="date">0000.00.00 ~ 0000.00.00</div>
+						</div>
+						<div class="noticeCont">
+							<!-- cms 경로 : /content/html/fm/notice/noti_challenge.html -->
+							<div class="notiWrap">
+								<img src="../../images/notice/img_challenge01.png" alt="대체텍스트">						
+							</div>
+							<!-- //cms 경로 -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- -------------------------------------- -->
+		</section>
+		<!-- ################################# -->
+	</div>
+	<!-- ###################################### -->
+</div>
+</body>
+</html>

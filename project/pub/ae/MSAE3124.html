@@ -1,0 +1,75 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - VIP 금융컨설팅</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">가까운 영업점 찾기</a></h1>
+			<a href="javascript:;" class="btnEtc">나가기</a>
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container bgWhite">
+			<div class="branchArea">
+				<h2 class="defTit">현위치 영업점</h2>
+				<div class="branchOfficeWrap h100p">
+					<ul class="tabDistance">
+						<li><a href="#" title="영업점 위치 거리 선택">500m</a></li>
+						<li class="active"><a href="#" title="영업점 위치 거리 선택">1km</a></li>
+						<li><a href="#" title="영업점 위치 거리 선택">2km</a></li>
+					</ul>
+					<div class="branchReset">
+						<a href="#" class="postBtn active" role="button" aria-label="위치로딩버튼"><span>위치로딩</span></a> <!--버튼 클릭시 클래스 active 들어갑니다. 위치 로딩이 끝났을 경우 active 제거 해주세요-->
+						<a href="#" class="postReset"  role="button" aria-label="위치리셋버튼"><span>위치리셋</span></a>
+					</div>
+					<div class="branchBarbox">
+						<span class="branchbarBlue"><em class="nhLogo">NH</em></span>
+						<span class="branchbarBlue"><em>ATM</em></span>
+						<span class="branchbarGreen"><em>ATM</em></span>
+						<span class="branchbarGreen"><em class="nhLogo">NH</em></span>
+					</div>    
+				
+					<div class="branchMap">
+						<!-- 지도 영역 들어가는곳 -->
+						<div id="map" style="width:100%;height:100%;background-color:#eee" alt="지도"> </div>
+						<!-- 지도 영역 들어가는곳 -->
+						<div class="loadingArea"> <!-- class active 추가 시 모션있음 -->
+							영업점 접근 지점
+						</div>
+						<div class="currentPos">
+							<span>현재 위치</span>
+						</div>
+						<div class="mapQucik">
+							<a href="#" class="btnAddon btnbgGray" title="영업점 목록으로 보기">목록으로 보기</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+
+	</div>
+
+</body>
+</html>

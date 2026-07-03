@@ -1,0 +1,1103 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>조기은퇴 진단결과 | 조기은퇴진단 | 컨설팅</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">조기은퇴진단</a></h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 조기은퇴 진단결과 ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<!-- -------------------------------------- -->
+		<!-- [공통영역] 업데이트바 -->
+		<!-- -------------------------------------- -->
+		<div class="pageRefreshWrap">
+			<div class="pageRefresInner">
+				<span>
+					<span class="date">00.00 00:00</span>
+					<button type="button" class="btnUpdate"><span class="blind">업데이트</span></button>
+				</span>
+				<button type="button" class="btnAlrt new" aria-expanded="false"><span class="blind">알림</span></button>
+			</div>
+			<div class="pageAlertWrap">
+				<ul>
+					<li class="alertNotice">
+						<a href="javascript:;" role="button">
+							<dl>
+								<dt>연결중인 자산 확인이 필요해요</dt>
+								<dd>OOO에서 전송 중단 또는 거절이 있었습니다.<br/>연결관리 화면에서 확인해주세요. </dd>
+							</dl>
+						</a>
+					</li>
+					<li class="alertNotice">
+						<a href="javascript:;" role="button">
+							<dl>
+								<dt>연결중인 자산 확인이 필요해요</dt>
+								<dd>OOO 외 n개 기관에서 전송 중단 또는 거절이 있었습니다. 연결관리 화면에서 확인해주세요.</dd>
+							</dl>
+						</a>
+					</li>
+				</ul>
+				<div class="pageAlertNoData">
+					<p>업데이트 알림 내역이 없습니다.</p>
+				</div>
+				<button type="button" aria-expanded="true" class="pageAlertClose"><span>닫기</span></button>
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTION] 조기은퇴 설계정보 -->
+		<!-- -------------------------------------- -->
+		<section class="infoSummary1 t1">
+			<div class="tit">
+				<h2><span class="sub">나의 조기은퇴 설계정보</span>내가 <button type="button" class="btn" title="조기은퇴 맞춤정보 은퇴희망나이" aria-haspopup="true">47세</button>에 은퇴한다면?</h2>
+			</div>
+			<div class="info2">
+				<dl>
+					<dt>기대수익률</dt>
+					<dd><div class="filterSelect"><button type="button" title="조기은퇴 맞춤정보 기대수익률" aria-haspopup="true">3%</button></div></dd>
+				</dl>
+				<dl>
+					<dt>희망생활비</dt>
+					<dd><div class="filterSelect"><button type="button" title="조기은퇴 맞춤정보 희망생활비" aria-haspopup="true">적정하게 167만원</button></div></dd>
+				</dl>
+			</div>
+		</section>
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTION] 경제수명 그래프 -->
+		<!-- -------------------------------------- -->
+		<div class="infoCont2 t1">
+			<h3 class="hide">경제수명</h3>
+
+			<!-- [진단일] -->
+			<div class="areaInfo1 t1">
+				<p><span>진단일 : </span><strong>0000.00.00</strong></p>
+				<div class="side">
+					<div class="mesToast1"><p>최신금액으로 새롭게 진단해 보세요</p></div>
+					<button type="button" class="contBtn04 ic1">다시진단하기</button>
+				</div>
+			</div>
+
+			<!-- [CASE1_제언메시지] 자금부족기간이 있는 경우  -->
+			<p class="con">모은 자산으로<br><strong>64세</strong>까지 생활할 수 있어요</p>
+			<!-- [CASE2_제언메시지] 자금부족기간이 없는 경우
+			<p class="con">모은 자산으로<br>원하는 은퇴생활이 가능해요</p>
+			-->
+			<div class="con2">
+				<p>예상 경제수명은 <strong>64세</strong>에요</p>
+				<div class="tooltipWrap">
+					<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">경제수명 안내 툴팁 열기</span></button>
+					<div class="tooltipCont">
+						<dl>
+							<dt>경제수명(Economic Life)</dt>
+							<dd>희망생활비로 은퇴자금을 소비했을 때 자금이 고갈되는 나이를 말해요.</dd>
+							<dd class="subTxt2 mt10">※ 은퇴자금이 남아있어도 희망생활비를 완전히 충당하지 못하는 나이부터 경제수명으로 간주합니다.</dd>
+						</dl>
+						<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">경제수명 안내 툴팁 닫기</span></button>
+					</div>
+				</div>
+				<p class="block">기대수명까지 <strong>24년</strong> 자금이 부족해요</p>
+			</div>
+			
+			<!-- [탭버튼] -->
+			<div class="tabWrap type06">
+				<div class="scAreaWrap">
+					<ul>
+						<li><a href="javascript:;" class="active on">간략보기</a></li>
+						<li><a href="javascript:;">자세히보기</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- [탭컨텐츠] -->
+			<div class="tabContWrap type06">
+				<!-- [탭컨텐츠] 간략보기 -->
+				<div class="tabCont01">
+					<div class="areaChart1" style="height:160px;">
+						<div class="info"><span>64</span>세에 고갈예상</div>
+						<div class="chart"><div class="guide_empty">차트가 들어갑니다.</div></div>
+					</div>
+					<div class="txt2"><p>‘자세히보기’에서 연령별 상세금액을 확인하세요.</p></div>
+				</div>
+
+				<!-- [탭컨텐츠] 자세히보기 -->
+				<div class="tabCont02" style="display:none">
+					<div class="areaChart1" style="height:160px;">
+						<div class="info"><span>64</span>세에 고갈예상</div>
+						<div class="info img1">좌우로 스크롤 해주세요</div>
+						<div class="chart"><div class="guide_empty">차트가 들어갑니다.</div></div>
+					</div>
+					<div class="txt2"><p>그래프를 선택하면 연령별 상세금액 확인이 가능합니다.</p></div>
+				</div>
+				<!-- // -->
+			</div>
+			<!-- // -->
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTION] 준비자금 달성률 -->
+		<!-- -------------------------------------- -->
+		<!-- [CASE1_1] 희망나이 50세 미만 / 달성률 30미만 -->
+		<div class="infoCont2 t1">
+			<h3 class="hide">준비자금 달성률</h3>
+
+			<!-- 
+				[제안메세지] : 이모티콘 정의
+				50세미만 / 달성률 30미만 : <span class="emoji"><img src="../../images/emoji/img_emoji_0206.png" alt=""></span>
+				50세이상 / 달성률 30미만 : <span class="emoji"><img src="../../images/emoji/img_emoji_0207.png" alt=""></span>
+
+				50세미만 / 달성률 30~59 : <span class="emoji"><img src="../../images/emoji/img_emoji_0208.png" alt=""></span>
+				50세이상 / 달성률 30~59 : <span class="emoji"><img src="../../images/emoji/img_emoji_0209.png" alt=""></span>
+
+				50세미만 / 달성률 60~89 : <span class="emoji"><img src="../../images/emoji/img_emoji_0205.png" alt=""></span>
+				50세이상 / 달성률 60~89 : <span class="emoji"><img src="../../images/emoji/img_emoji_0210.png" alt=""></span>
+
+				50세미만/이상 / 달성률 90~99 : <span class="emoji"><img src="../../images/emoji/img_emoji_0211.png" alt=""></span>
+				50세미만/이상 / 달성률 100~119 : <span class="emoji"><img src="../../images/emoji/img_emoji_0212.png" alt=""></span>
+				50세미만/이상 / 달성률 120이상 : <span class="emoji"><img src="../../images/emoji/img_emoji_0213.png" alt=""></span>
+			-->
+			<p class="con">은퇴를 얘기하긴 일러요 <span class="emoji"><img src="../../images/emoji/img_emoji_0206.png" alt=""></span></p>
+			<p class="con"><strong>47세</strong>에 은퇴준비율은 <strong>5%</strong>입니다!</p>
+
+			<!-- [달성률 그래프] -->
+			<div class="areaChart2"> <!-- [D] 달성률 100% 이상일 경우 클래스명(.t1) 추가 -->
+				<div class="chart"><span style="width:5%;"></span></div> <!-- [D] style="width:달성률값" -->
+				<p><span class="dataValue">0억 0,000</span><em class="won">만원</em> <span>부족해요</span></p>
+			</div>
+
+			<!-- [수신받은 필요자금 / 준비자금] -->
+			<div class="info3">
+				<dl>
+					<dt class="hide">수신받은 필요자금</dt>
+					<dd><strong class="dataValue">0억 0,000</strong><span class="won">만원</span></dd>
+					<dd>필요해요</dd>
+				</dl>
+				<dl>
+					<dt class="hide">수신받은 준비자금</dt>
+					<dd><strong class="dataValue">0억 0,000</strong><span class="won">만원</span></dd>
+					<dd>모을 수 있어요</dd>
+				</dl>
+			</div>
+
+			<!-- [버튼영역] -->
+			<div class="btns2"><button type="button" class="linkType1" aria-haspopup="true">준비금액 수정하기</button></div>
+			<!-- // -->
+		</div>
+
+		<!-- [CASE1_2] 희망나이 50세 초과 / 달성률 30미만 -->
+		<div class="infoCont2 t1">
+			<h3 class="hide">준비자금 달성률</h3>
+			<p class="con">자유를 찾아서 열심히 항해 중~<span class="emoji"><img src="../../images/emoji/img_emoji_0207.png" alt=""></span></p>
+			<p class="con"><strong>67세</strong>에 은퇴준비율은 <strong>28%</strong>입니다!</p>
+			<div class="areaChart2">
+				<div class="chart"><span style="width:28%;"></span></div>
+				<p><span class="dataValue">0억 0,000</span><em class="won">만원</em> <span>부족해요</span></p>
+			</div>
+			<div class="info3">
+				<dl>
+					<dt class="hide">수신받은 필요자금</dt>
+					<dd><strong class="dataValue">0억 0,000</strong><span class="won">만원</span></dd>
+					<dd>필요해요</dd>
+				</dl>
+				<dl>
+					<dt class="hide">수신받은 준비자금</dt>
+					<dd><strong class="dataValue">0억 0,000</strong><span class="won">만원</span></dd>
+					<dd>모을 수 있어요</dd>
+				</dl>
+			</div>
+			<div class="btns2"><button type="button" class="linkType1" aria-haspopup="true">준비금액 수정하기</button></div>
+		</div>
+
+		<!-- [CASE2_1] 희망나이 50세 미만 / 달성률 30~59 -->
+		<div class="infoCont2 t1">
+			<h3 class="hide">준비자금 달성률</h3>
+			<p class="con">조금 더 일하는게 좋겠어요<span class="emoji"><img src="../../images/emoji/img_emoji_0208.png" alt=""></span></p>
+			<p class="con"><strong>47세</strong>에 은퇴준비율은 <strong>40%</strong>입니다!</p>
+			<div class="areaChart2">
+				<div class="chart"><span style="width:40%;"></span></div>
+				<p><span class="dataValue">0억 0,000</span><em class="won">만원</em> <span>부족해요</span></p>
+			</div>
+			<div class="info3">
+				<dl>
+					<dt class="hide">수신받은 필요자금</dt>
+					<dd><strong class="dataValue">0억 0,000</strong><span class="won">만원</span></dd>
+					<dd>필요해요</dd>
+				</dl>
+				<dl>
+					<dt class="hide">수신받은 준비자금</dt>
+					<dd><strong class="dataValue">0억 0,000</strong><span class="won">만원</span></dd>
+					<dd>모을 수 있어요</dd>
+				</dl>
+			</div>
+			<div class="btns2"><button type="button" class="linkType1" aria-haspopup="true">준비금액 수정하기</button></div>
+		</div>
+
+		<!-- [CASE2_2] 희망나이 50세 초과 / 달성률 30~59 -->
+		<div class="infoCont2 t1">
+			<h3 class="hide">준비자금 달성률</h3>
+			<p class="con">은퇴는 바라보는 시각이 중요해요<br>숨지(은)않기,<br>물러서지(퇴)않기!<span class="emoji"><img src="../../images/emoji/img_emoji_0209.png" alt=""></span></p>
+			<p class="con"><strong>67세</strong>에 은퇴준비율은 <strong>59%</strong>입니다!</p>
+			<div class="areaChart2">
+				<div class="chart"><span style="width:59%;"></span></div>
+				<p><span class="dataValue">0억 0,000</span><em class="won">만원</em> <span>부족해요</span></p>
+			</div>
+			<div class="info3">
+				<dl>
+					<dt class="hide">수신받은 필요자금</dt>
+					<dd><strong class="dataValue">0억 0,000</strong><span class="won">만원</span></dd>
+					<dd>필요해요</dd>
+				</dl>
+				<dl>
+					<dt class="hide">수신받은 준비자금</dt>
+					<dd><strong class="dataValue">0억 0,000</strong><span class="won">만원</span></dd>
+					<dd>모을 수 있어요</dd>
+				</dl>
+			</div>
+			<div class="btns2"><button type="button" class="linkType1" aria-haspopup="true">준비금액 수정하기</button></div>
+		</div>
+
+		<!-- [CASE3_1] 희망나이 50세 미만 / 달성률 60~89 -->
+		<div class="infoCont2 t1">
+			<h3 class="hide">준비자금 달성률</h3>
+			<p class="con">열심히 일할 때<span class="emoji"><img src="../../images/emoji/img_emoji_0205.png" alt=""></span></p>
+			<p class="con"><strong>47세</strong>에 은퇴준비율은 <strong>70%</strong>입니다!</p>
+			<div class="areaChart2">
+				<div class="chart"><span style="width:70%;"></span></div>
+				<p><span class="dataValue">0억 0,000</span><em class="won">만원</em> <span>부족해요</span></p>
+			</div>
+			<div class="info3">
+				<dl>
+					<dt class="hide">수신받은 필요자금</dt>
+					<dd><strong class="dataValue">0억 0,000</strong><span class="won">만원</span></dd>
+					<dd>필요해요</dd>
+				</dl>
+				<dl>
+					<dt class="hide">수신받은 준비자금</dt>
+					<dd><strong class="dataValue">0억 0,000</strong><span class="won">만원</span></dd>
+					<dd>모을 수 있어요</dd>
+				</dl>
+			</div>
+			<div class="btns2"><button type="button" class="linkType1" aria-haspopup="true">준비금액 수정하기</button></div>
+		</div>
+
+		<!-- [CASE3_2] 희망나이 50세 초과 / 달성률 60~89 -->
+		<div class="infoCont2 t1">
+			<h3 class="hide">준비자금 달성률</h3>
+			<p class="con">은퇴란 말은 없는 거죠<br>난 열심히 살아갈 뿐!!<span class="emoji"><img src="../../images/emoji/img_emoji_0210.png" alt=""></span></p>
+			<p class="con"><strong>67세</strong>에 은퇴준비율은 <strong>89%</strong>입니다!</p>
+			<div class="areaChart2">
+				<div class="chart"><span style="width:89%;"></span></div>
+				<p><span class="dataValue">0억 0,000</span><em class="won">만원</em> <span>부족해요</span></p>
+			</div>
+			<div class="info3">
+				<dl>
+					<dt class="hide">수신받은 필요자금</dt>
+					<dd><strong class="dataValue">0억 0,000</strong><span class="won">만원</span></dd>
+					<dd>필요해요</dd>
+				</dl>
+				<dl>
+					<dt class="hide">수신받은 준비자금</dt>
+					<dd><strong class="dataValue">0억 0,000</strong><span class="won">만원</span></dd>
+					<dd>모을 수 있어요</dd>
+				</dl>
+			</div>
+			<div class="btns2"><button type="button" class="linkType1" aria-haspopup="true">준비금액 수정하기</button></div>
+		</div>
+
+		<!-- [CASE4_1] 희망나이 50세 미만 / 달성률 90~99 -->
+		<div class="infoCont2 t1">
+			<h3 class="hide">준비자금 달성률</h3>
+			<p class="con">조기은퇴 실현이 코 앞!<br>조금만 더 힘내볼까요<span class="emoji"><img src="../../images/emoji/img_emoji_0211.png" alt=""></span></p>
+			<p class="con"><strong>47세</strong>에 은퇴준비율은 <strong>95%</strong>입니다!</p>
+			<div class="areaChart2">
+				<div class="chart"><span style="width:95%;"></span></div>
+				<p><span class="dataValue">0억 0,000</span><em class="won">만원</em> <span>부족해요</span></p>
+			</div>
+			<div class="info3">
+				<dl>
+					<dt class="hide">수신받은 필요자금</dt>
+					<dd><strong class="dataValue">0억 0,000</strong><span class="won">만원</span></dd>
+					<dd>필요해요</dd>
+				</dl>
+				<dl>
+					<dt class="hide">수신받은 준비자금</dt>
+					<dd><strong class="dataValue">0억 0,000</strong><span class="won">만원</span></dd>
+					<dd>모을 수 있어요</dd>
+				</dl>
+			</div>
+			<div class="btns2"><button type="button" class="linkType1" aria-haspopup="true">준비금액 수정하기</button></div>
+		</div>
+
+		<!-- [CASE4_2] 희망나이 50세 초과 / 달성률 90~99 -->
+		<div class="infoCont2 t1">
+			<h3 class="hide">준비자금 달성률</h3>
+			<p class="con">은퇴 실현이 코 앞!<br>조금만 더 힘내볼까요<span class="emoji"><img src="../../images/emoji/img_emoji_0211.png" alt=""></span></p>
+			<p class="con"><strong>67세</strong>에 은퇴준비율은 <strong>99%</strong>입니다!</p>
+			<div class="areaChart2">
+				<div class="chart"><span style="width:99%;"></span></div>
+				<p><span class="dataValue">0억 0,000</span><em class="won">만원</em> <span>부족해요</span></p>
+			</div>
+			<div class="info3">
+				<dl>
+					<dt class="hide">수신받은 필요자금</dt>
+					<dd><strong class="dataValue">0억 0,000</strong><span class="won">만원</span></dd>
+					<dd>필요해요</dd>
+				</dl>
+				<dl>
+					<dt class="hide">수신받은 준비자금</dt>
+					<dd><strong class="dataValue">0억 0,000</strong><span class="won">만원</span></dd>
+					<dd>모을 수 있어요</dd>
+				</dl>
+			</div>
+			<div class="btns2"><button type="button" class="linkType1" aria-haspopup="true">준비금액 수정하기</button></div>
+		</div>
+
+		<!-- [CASE5_1] 희망나이 50세 미만 / 달성률 100~119 -->
+		<div class="infoCont2 t1">
+			<h3 class="hide">준비자금 달성률</h3>
+			<p class="con">나는야 파이어족<span class="emoji"><img src="../../images/emoji/img_emoji_0212.png" alt=""></span> <br>계획대로 조기은퇴 할 수 있어요</p>
+			<p class="con"><strong>47세</strong>에 은퇴준비율은 <strong>100%</strong>입니다!</p>
+			<div class="areaChart2 c1">
+				<div class="chart"><span style="width:100%;"></span></div>
+				<p><span class="dataValue">0억 0,000</span><em class="won">만원</em> <span>남아요</span></p>
+			</div>
+			<div class="info3">
+				<dl>
+					<dt class="hide">수신받은 필요자금</dt>
+					<dd><strong class="dataValue">0억 0,000</strong><span class="won">만원</span></dd>
+					<dd>필요해요</dd>
+				</dl>
+				<dl>
+					<dt class="hide">수신받은 준비자금</dt>
+					<dd><strong class="dataValue">0억 0,000</strong><span class="won">만원</span></dd>
+					<dd>모을 수 있어요</dd>
+				</dl>
+			</div>
+			<div class="btns2"><button type="button" class="linkType1" aria-haspopup="true">준비금액 수정하기</button></div>
+		</div>
+
+		<!-- [CASE5_2] 희망나이 50세 초과 / 달성률 100~119 -->
+		<div class="infoCont2 t1">
+			<h3 class="hide">준비자금 달성률</h3>
+			<p class="con">계획대로 은퇴할 수 있어요<span class="emoji"><img src="../../images/emoji/img_emoji_0212.png" alt=""></span></p>
+			<p class="con"><strong>67세</strong>에 은퇴준비율은 <strong>119%</strong>입니다!</p>
+			<div class="areaChart2 c1">
+				<div class="chart"><span style="width:119%;"></span></div>
+				<p><span class="dataValue">0억 0,000</span><em class="won">만원</em> <span>남아요</span></p>
+			</div>
+			<div class="info3">
+				<dl>
+					<dt class="hide">수신받은 필요자금</dt>
+					<dd><strong class="dataValue">0억 0,000</strong><span class="won">만원</span></dd>
+					<dd>필요해요</dd>
+				</dl>
+				<dl>
+					<dt class="hide">수신받은 준비자금</dt>
+					<dd><strong class="dataValue">0억 0,000</strong><span class="won">만원</span></dd>
+					<dd>모을 수 있어요</dd>
+				</dl>
+			</div>
+			<div class="btns2"><button type="button" class="linkType1" aria-haspopup="true">준비금액 수정하기</button></div>
+		</div>
+
+		<!-- [CASE6] 달성률 120+ -->
+		<div class="infoCont2 t1">
+			<h3 class="hide">준비자금 달성률</h3>
+			<p class="con">노동은 취미일 뿐~<br>지금 바로 은퇴해도 되겠는데요<span class="emoji"><img src="../../images/emoji/img_emoji_0213.png" alt=""></span></p>
+			<p class="con"><strong>47세</strong>에 은퇴준비율은 <strong>120%</strong>입니다!</p>
+			<div class="areaChart2 c1">
+				<div class="chart"><span style="width:120%;"></span></div>
+				<p><span class="dataValue">0억 0,000</span><em class="won">만원</em> <span>남아요</span></p>
+			</div>
+			<div class="info3">
+				<dl>
+					<dt class="hide">수신받은 필요자금</dt>
+					<dd><strong class="dataValue">0억 0,000</strong><span class="won">만원</span></dd>
+					<dd>필요해요</dd>
+				</dl>
+				<dl>
+					<dt class="hide">수신받은 준비자금</dt>
+					<dd><strong class="dataValue">0억 0,000</strong><span class="won">만원</span></dd>
+					<dd>모을 수 있어요</dd>
+				</dl>
+			</div>
+			<div class="btns2"><button type="button" class="linkType1" aria-haspopup="true">준비금액 수정하기</button></div>
+		</div>
+
+		<!-- // -->
+		<div class="infoCont2 t1">
+			<h3 class="hide">준비자금 달성률</h3>
+			<p class="con">노동은 취미일 뿐~<br>지금 바로 은퇴해도 되겠는데요<span class="emoji"><img src="../../images/emoji/img_emoji_0213.png" alt=""></span></p>
+			<p class="con"><strong>47세</strong>에 은퇴준비율은 <strong>120%</strong>입니다!</p>
+			<div class="areaChart2 c1">
+				<div class="chart"><span style="width:120%;"></span></div>
+				<p>부족한 금액이 없어요</p>
+			</div>
+			<div class="info3">
+				<dl>
+					<dt class="hide">수신받은 필요자금</dt>
+					<dd><strong class="dataValue">0억 0,000</strong><span class="won">만원</span></dd>
+					<dd>필요해요</dd>
+				</dl>
+				<dl>
+					<dt class="hide">수신받은 준비자금</dt>
+					<dd><strong class="dataValue">0억 0,000</strong><span class="won">만원</span></dd>
+					<dd>모을 수 있어요</dd>
+				</dl>
+			</div>
+			<div class="btns2"><button type="button" class="linkType1" aria-haspopup="true">준비금액 수정하기</button></div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTION] 조기은퇴 TIP -->
+		<!-- -------------------------------------- -->
+		<div class="areaSection3">
+			<h3 class="defSubTit1">조기은퇴를 위한 작은 TIP</h3>
+
+			<!-- ----------------------- -->
+			<!-- [관리자 등록 컨텐츠] -->
+			<!-- [D] 배경 이미지는 CSS처리되어 li순서대로 노출되며, 배경색과는 무관합니다. (단, 파이어족 이미지는 .img1 클래스 추가) -->
+			<!-- [D] 배경색 정의 : --el-background:@관리자등록BG코드 -->
+			<!-- ----------------------- -->
+			<div class="listCont1" data-random="2" data-swiper-type="list1" data-swiper-space="12" data-swiper-slidesperview="auto"> <!-- [D] 동적 컨텐츠일 경우 마지막에 uiSetSwiper() 함수 호출  -->
+				<ul>
+					<li class="img1" style="--el-background:#ffffff;"> <!-- [D] 파이어족 고정 이미지 .img1 / BG : --el-background:@관리자등록BG코드 -->
+						<strong class="tit">나도 파이어족이<br>될 수 있을까?</strong>
+						<span class="con">파이어족이란, 이른 은퇴를 목표로 지출을 줄이고 소득의 70 %이상 저축해 은퇴자산을 만들어 가는 사람을 이야기 합니다.</span>
+					</li>
+					<li style="--el-background:#d5f2f5;">
+						<strong class="tit">단기적금으로<br>소비를 다스린다</strong>
+						<span class="con">단기 적금상품에 가입해 꾸준히 모아보세요.<br>충동 소비 보다 계획 소비를 하게되고, 카드 할부 이용도 줄어들 수 있습니다.</span>
+					</li>
+					<li style="--el-background:#d6f1ea;">
+						<strong class="tit">필요한 것이 아니라 <br>‘필수’한 것에 소비하기</strong>
+						<span class="con">당장 사지 않으면 큰 문제가 생기는 ‘필수적인 것’만 구매할 수 있도록 합니다.<br>안사도 괜찮은 물건이 생각보다 많을꺼에요.</span>
+					</li>
+					<li style="--el-background:#edfad4;">
+						<strong class="tit">할인에 현혹되지 않겠어요</strong>
+						<span class="con">카드실적, 할인율, 캐시백 등의 카드혜택은 소비를 늘리기 위한 미끼일 뿐!<br>계획 소비가 아니라면, 카드는 넣어두세요.</span>
+					</li>
+					<li style="--el-background:#f8f6da;">
+						<strong class="tit">오늘은 무지출데이!</strong>
+						<span class="con">주 1회 무지출데이를 정해 커피도, 외식도, 쇼핑도, 하지 않기 어때요?</span>
+					</li>
+					<li style="--el-background:#ffefef;">
+						<strong class="tit">구독, 정기결제 서비스 다이어트</strong>
+						<span class="con">OTT, 영상, 음악, 빠른배송서비스 등 자주 이용하지 않거나,<br>없더라도 삶이 불편하지 않은 서비스는 해지하세요</span>
+					</li>
+					<li style="--el-background:#dee5fe;">
+						<strong class="tit">알뜰교통카드로 교통비도 알뜰하게</strong>
+						<span class="con">버스·지하철 정류장까지 걷거나 자전거로 이동한 거리만큼 마일리지를 적립해줍니다.<br>카드사의 추가할인 혜택까지 최대 30%의 대중교통비를 절감할 수 있습니다.</span>
+					</li>
+					<li style="--el-background:#fff;">
+						<strong class="tit">탄소포인트제 인센티브 받기</strong>
+						<span class="con">전기, 상수도, 도시가스 사용량을 절감하고 탄소포인트를 받으세요.<br>과거 사용량과 비교하여 연 2회 현금과 상품권을 받을 수 있답니다.</span>
+					</li>
+					<li style="--el-background:#d5f2f5;">
+						<strong class="tit">적금계좌는 자동이체만 받아요</strong>
+						<span class="con">쓰고나서 저축하는 습관 NO!<br>월급의 20%, 30%.. 늘려가며 적금계좌에 자동이체를 해놓으면 좋아요.</span>
+					</li>
+					<li style="--el-background:#d6f1ea;">
+						<strong class="tit">보너스? 저축계좌로 DIVE!</strong>
+						<span class="con">연말정산환급, 보너스, 성과금 등 월급 외 부수입은 저축합니다.<br>요즘은 짠테크가 대세라니까요~</span>
+					</li>
+				</ul>
+			</div>
+	
+			<!-- ----------------------- -->
+			<!-- [조기은퇴 TIP] 1) 은퇴준비율 -->
+			<!-- ----------------------- -->
+			<!-- [CASE1] 월 저축금액 0원 이상 -->
+			<div class="infoCont2 t2">
+				<div class="subTxt9">조기은퇴 TIP 1</div>
+				<h4 class="tit">은퇴준비율 100% 만들기</h4>
+				<p class="con">
+					<!-- <span class="filterSelect"><button type="button" title="기대수익률 선택" aria-haspopup="true">3%</button></span> -->
+					<strong><span>3%</span></strong> 기대수익률로<br>
+					매월 <strong><span class="dataValue">0,000</span><span class="won">만원</span></strong>을 저축하면<br>
+					원하는 조기은퇴가 가능해요.
+				</p>
+				<div class="con3">
+					<p>은퇴시점에 <strong><span class="dataValue">0,000</span><span class="won">만원</span></strong> <strong class="case2">부족해요</strong><span class="emoji"><img src="../../images/emoji/img_emoji_0206.png" alt=""></span></p>
+					<p>은퇴까지 <strong>7년</strong> 남았어요</p>
+				</div>
+			</div>
+	
+			<!-- [CASE2] 월 저축금액이 0원 이하 -->
+			<div class="infoCont2 t2">
+				<div class="subTxt9">조기은퇴 TIP 1</div>
+				<h4 class="tit">은퇴준비율 100% 만들기</h4>
+				<p class="con">
+					<strong><span>3%</span></strong> 기대수익률이면<br>
+					추가 저축 없이 조기은퇴할 수 있어요.
+				</p>
+				<div class="con3">
+					<p>은퇴시점에 <strong><span class="dataValue">0,000</span><span class="won">만원</span></strong> <strong class="case3">남아요</strong><span class="emoji"><img src="../../images/emoji/img_emoji_0214.png" alt=""></span></p>
+					<p>은퇴까지 <strong>7년</strong> 남았어요</p>
+				</div>
+			</div>
+
+			<div class="infoCont2 t2">
+				<div class="subTxt9">조기은퇴 TIP 1</div>
+				<h4 class="tit">은퇴준비율 100% 만들기</h4>
+				<p class="con">
+					<strong><span>3%</span></strong> 기대수익률이면<br>
+					추가 저축 없이 조기은퇴할 수 있어요.
+				</p>
+				<div class="con3">
+					<p>은퇴시점에 부족한 금액이 없어요</strong><span class="emoji"><img src="../../images/emoji/img_emoji_0214.png" alt=""></span></p>
+					<p>은퇴까지 <strong>7년</strong> 남았어요</p>
+				</div>
+			</div>
+
+			<!-- ----------------------- -->
+			<!-- [조기은퇴 TIP] 2) 씀씀이 절약 저축 -->
+			<!-- ----------------------- -->
+			<!-- [CASE1] 다른사람보다 많이 쓴 카테고리 있음 -->
+			<div class="infoCont2 t2">
+				<div class="subTxt9">조기은퇴 TIP 2</div>
+				<h4 class="tit">씀씀이를 절약하여 목돈만들기</h4>
+				<p class="con">
+					<span class="filterSelect"><button type="button" title="씀씀이 줄이기(카테고리 선택)" aria-haspopup="true">온라인쇼핑</button></span>
+					매월 <strong><span class="dataValue">000</span><span class="won">만원</span></strong> 절약해서<br>
+					<span class="filterSelect"><button type="button" title="저축기간 선택" aria-haspopup="true">4년</button></span> 동안 모으면<br>
+					<strong><span class="dataValue">000</span><span class="won">만원</span></strong>을 모을 수 있어요.
+				</p>
+				<div class="area">
+					<div class="filterSelect"><button type="button" title="다른사람 선택" aria-haspopup="true"><span>40대 남자</span><span>월 소득 800~1000만원</span></button></div>
+					
+					<!-- 차트 : 클릭 이벤트 하단 스크립트 샘플 참고 -->
+					<div class="areaChart2 t1" data-chart="wrap">
+						<!-- // -->
+						<dl role="button" tabindex="0" aria-expanded="false">
+							<dt>온라인쇼핑</dt>
+							<dd>
+								<div class="data1">
+									<div class="chart item3"><span style="width:80%;"></span></div> <!-- [D] 나 차트 값 : style="width:80%;  -->
+									<div class="chart item2"><span style="width:30%;"></span></div> <!-- [D] 다른사람 차트 값 : style="width:80%;  -->
+								</div>
+								<div class="data2" data-chart="cont">
+									<dl>
+										<dt>나</dt>
+										<dd>000,000만원</dd>
+									</dl>
+									<dl>
+										<dt>다른사람</dt>
+										<dd>0,000만원</dd>
+									</dl>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl role="button" tabindex="0" aria-expanded="false">
+							<dt>외식</dt>
+							<dd>
+								<div class="data1">
+									<div class="chart item3"><span style="width:80%;"></span></div> <!-- [D] 나 차트 값 : style="width:80%;  -->
+									<div class="chart item2"><span style="width:30%;"></span></div> <!-- [D] 다른사람 차트 값 : style="width:80%;  -->
+								</div>
+								<div class="data2" data-chart="cont">
+									<dl>
+										<dt>나</dt>
+										<dd>000,000만원</dd>
+									</dl>
+									<dl>
+										<dt>다른사람</dt>
+										<dd>0,000만원</dd>
+									</dl>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl role="button" tabindex="0" aria-expanded="false">
+							<dt>생활/마트</dt>
+							<dd>
+								<div class="data1">
+									<div class="chart item3"><span style="width:80%;"></span></div> <!-- [D] 나 차트 값 : style="width:80%;  -->
+									<div class="chart item2"><span style="width:30%;"></span></div> <!-- [D] 다른사람 차트 값 : style="width:80%;  -->
+								</div>
+								<div class="data2" data-chart="cont">
+									<dl>
+										<dt>나</dt>
+										<dd>000,000만원</dd>
+									</dl>
+									<dl>
+										<dt>다른사람</dt>
+										<dd>0,000만원</dd>
+									</dl>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+					</div>
+					<!-- // -->
+
+					<div class="graphAddEx">
+						<ul class="ty01 item1">
+							<li class="bl09">나</li> 
+							<li class="bl03">다른사람
+								<div class="tooltipWrap">
+									<button type="button" onclick="tooltipOpen($(this))"><span class="blind">다른사람이란? 툴팁 열기</span></button>
+									<div class="tooltipCont">
+										<dl>
+											<dt>나VS다른사람 씀씀이 비교</dt>
+											<dd>전월 소비 기준 나와 다른사람의 소비 카테고리를 비교합니다. 다른사람보다 많이 쓴 카테고리 3가지를 확인하고, 저축목표를 세워보세요. 씀씀이 절약은 다른사람 보다 많이 쓴 카테고리만 선택할 수 있습니다.</dd>
+											<dt>다른사람이란?</dt>
+											<dd>나와 같은 연령대 중 소득규모가 비슷한 그룹입니다. 분류기준은 다음과 같습니다.
+												<ul>
+													<li>연령 : 20대, 30대, 40대, 50대, 60대 이상 전체 또는 성별.</li>
+													<li>월 소득 : 150만원 미만, 150~300만원, 300~500만원, 500~800만원, 800~1000만원, 1000만원 이상.</li>
+												</ul>
+											</dd>
+										</dl>
+										<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">다른사람이란? 안내 툴팁 닫기</span></button>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+	
+			<!-- [CASE2_1] 다른사람보다 많이 쓴 카테고리 없음 : AND 전월소비 ＞ 산출평균 -->
+			<div class="infoCont2 t2">
+				<div class="subTxt9">조기은퇴 TIP 2</div>
+				<h4 class="tit">씀씀이를 절약하여 목돈만들기</h4>
+				<p class="con">
+					매월 <strong><span class="dataValue">000</span><span class="won">만원</span></strong> 을 아껴
+					<strong>1년</strong> 동안 모으면<br>
+					약 <strong><span class="dataValue">000</span><span class="won">만원</span></strong>을 모을 수 있어요.
+				</p>
+				<div class="area">
+					<div class="filterSelect"><button type="button" title="다른사람 선택" aria-haspopup="true"><span>40대 남자</span><span>월 소득 800~1000만원</span></button></div>
+					<div class="txt1"><p>다른사람보다 많이 쓴 내역이 없어<br>3개월 평균소비와 지난달 나의 소비를 비교했어요.</p></div>
+
+					<!-- 차트 : 클릭 이벤트 하단 스크립트 샘플 참고 -->
+					<div class="areaChart4" data-chart="wrap"  data-label="평균소비" style="--el-line-value:50%;"> <!-- [D] 평균소비 % : --el-line-value:00%; -->
+						<!-- // -->
+						<dl style="--el-value:5%;" role="button" tabindex="0" aria-expanded="false"> <!-- [D] 각 항목별 % : --el-value:00%; -->
+							<dt>4월</dt>
+							<dd>
+								<div class="chart"></div>
+								<div data-chart="cont">000,000,000,000원</div>
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl style="--el-value:40%;" role="button" tabindex="0" aria-expanded="false">
+							<dt>5월</dt>
+							<dd>
+								<div class="chart"></div>
+								<div data-chart="cont">000,000원</div>
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl style="--el-value:80%;" role="button" tabindex="0" aria-expanded="false">
+							<dt>6월</dt>
+							<dd>
+								<div class="chart"></div>
+								<div data-chart="cont">000,000원</div>
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl class="data1" style="--el-value:100%;" role="button" tabindex="0" aria-expanded="false">
+							<dt>지난달</dt>
+							<dd>
+								<div class="chart"></div>
+								<div data-chart="cont">000,000,000,000원</div>
+							</dd>
+						</dl>
+						<!-- // -->
+					</div>
+					<!-- // -->
+
+					<div class="graphAddEx graphLegend">
+						<ul class="ty01 betweenItem">
+							<li class="bl01">평균소비</li>
+							<li class="value">000,000,000,000원</li>
+						</ul>
+						<ul class="ty01 betweenItem">
+							<li class="bl09">지난달</li>
+							<li class="value">000,000,000,000원</li>
+						</ul>
+					</div>
+					<div class="con4">
+						<p>
+							<strong class="block">평균대비 씀씀이가 <span class="dataValue">328,520</span><span class="won">원</span> 늘었어요</strong>
+							<span>불필요한 지출은 없었는지 소비패턴을 확인해 보세요. 계획적인 소비가 필요합니다.</span>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- [CASE2_2] 다른사람보다 많이 쓴 카테고리 없음 : AND 전월소비 ＜ 산출평균 -->
+			<div class="infoCont2 t2">
+				<div class="subTxt9">조기은퇴 TIP 2</div>
+				<h4 class="tit">씀씀이를 절약하여 목돈만들기</h4>
+				<div class="area">
+					<div class="filterSelect"><button type="button" title="다른사람 선택" aria-haspopup="true"><span>40대 남자</span><span>월 소득 800~1000만원</span></button></div>
+					<div class="txt1"><p>다른사람보다 많이 쓴 내역이 없어<br>3개월 평균소비와 지난달 나의 소비를 비교했어요.</p></div>
+					
+					<!-- 차트 : 클릭 이벤트 하단 스크립트 샘플 참고 -->
+					<div class="areaChart4" data-chart="wrap"  data-label="평균소비" style="--el-line-value:80%;"> <!-- [D] 평균소비 % : --el-line-value:00%; -->
+						<!-- // -->
+						<dl style="--el-value:60%;" role="button" tabindex="0" aria-expanded="false"> <!-- [D] 각 항목별 % : --el-value:00%; -->
+							<dt>4월</dt>
+							<dd>
+								<div class="chart"></div>
+								<div data-chart="cont">000,000,000,000원</div>
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl style="--el-value:40%;" role="button" tabindex="0" aria-expanded="false">
+							<dt>5월</dt>
+							<dd>
+								<div class="chart"></div>
+								<div data-chart="cont">000,000원</div>
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl style="--el-value:80%;" role="button" tabindex="0" aria-expanded="false">
+							<dt>6월</dt>
+							<dd>
+								<div class="chart"></div>
+								<div data-chart="cont">000,000원</div>
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl class="data1" style="--el-value:10%;" role="button" tabindex="0" aria-expanded="false">
+							<dt>지난달</dt>
+							<dd>
+								<div class="chart"></div>
+								<div data-chart="cont">0,000원</div>
+							</dd>
+						</dl>
+						<!-- // -->
+					</div>
+					<!-- // -->
+
+					<div class="graphAddEx graphLegend">
+						<ul class="ty01 betweenItem">
+							<li class="bl01">평균소비</li>
+							<li class="value">000,000,000,000원</li>
+						</ul>
+						<ul class="ty01 betweenItem">
+							<li class="bl09">지난달</li>
+							<li class="value">000,000,000,000원</li>
+						</ul>
+					</div>
+					<div class="con4">
+						<p>
+							<strong class="block">평균대비 씀씀이가 <span class="dataValue">29</span><span class="won">만원</span> 줄었어요</strong>
+							<span>나만의 절약 꿀팁이 있나요? 평소보다 적게 쓴 한달이었네요. 아껴쓴 돈은 목돈이 될 수 있게 차곡차곡 모아보세요.</span>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- ----------------------- -->
+			<!-- [조기은퇴 TIP] 3) 여유자금 저축 -->
+			<!-- ----------------------- -->
+			<!-- [CASE1] 여유자금 충분 -->
+			<div class="infoCont2 t2">
+				<div class="subTxt9">조기은퇴 TIP 3</div>
+				<h4 class="tit">여유자금을 모아 목돈만들기</h4>
+				<div class="con">
+					<p>
+						매월 <strong><span class="dataValue">220</span><span class="won">만원</span></strong>씩 
+						<span class="filterSelect"><button type="button" title="저축기간 선택" aria-haspopup="true">4년</button></span> 동안 모으면<br>
+						약 <strong><span class="dataValue">1억 560</span><span class="won">만원</span></strong>을 모을 수 있어요.
+					</p>
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">저축금액 산출 안내 툴팁 열기</span></button>
+						<div class="tooltipCont">
+							<p>매월 저축금액은 나의 여유자금과 최소권장금액의 차액을 12개월로 나눈 금액이에요.</p>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">저축금액 산출 안내 툴팁 닫기</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="info2">
+					<dl>
+						<dt>나의 여유자금</dt>
+						<dd><strong class="dataValue">000</strong><span class="won">만원</span></dd>
+						<dd class="areaChart2 c1"><div class="chart"><span style="width:100%;"></span></div></dd>
+					</dl>
+					<dl>
+						<dt>최소권장금액
+							<!-- // -->
+							<div class="tooltipWrap">
+								<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">최소권장금액이란? 툴팁 열기</span></button> 
+								<div class="tooltipCont">
+									<dl>
+										<dt class="hide">최소권장금액</dt>
+										<dd>매월 평균적으로 소비하는 금액의 3배 정도를 말해요.
+											<ul>
+												<li>우선, 자산진단 서비스의 최소권장 설정금액, 그렇지 않으면 지난달 내 소비금액의 3배가 설정되요. </li>
+												<li>만약, 지난달 내 소비금액이 없는 경우 동일한 또래그룹의 평균 소비금액의 3배가 설정되고 있습니다.</li>
+											</ul>
+										</dd>
+									</dl>
+									<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">최소권장금액이란? 안내 툴팁 닫기</span></button> 
+								</div>
+							</div>
+							<!-- // -->
+							<span>(지난달 내 소비 <strong><span class="dataValue">000</span><span class="won">만원</span></strong>의 3배)</span>
+						</dt>
+						<dd><strong class="dataValue">000</strong><span class="won">만원</span></dd>
+						<dd class="areaChart2 c3"><div class="chart"><span style="width:50%;"></span></div></dd>
+					</dl>
+				</div>
+				<div class="btns2"><button type="button" class="linkType1" title="여유자금 선택" aria-haspopup="true">여유자금이란?</button></div>
+				<div class="con3">
+					<p>
+						<strong class="block">여유자금이 <span class="case1">충분해요</span><span class="emoji"><img src="../../images/emoji/img_emoji_0215.png" alt=""></span></strong>
+						<span>여유자금에서 최소권장금액을 빼고 남은 금액은 저축할 수 있어요.</span>
+					</p>
+				</div>
+			</div>
+	
+			<!-- [CASE2] 여유자금 부족 -->
+			<div class="infoCont2 t2">
+				<div class="subTxt9">조기은퇴 TIP 3</div>
+				<h4 class="tit">여유자금을 모아 목돈만들기</h4>
+				<div class="info2">
+					<dl>
+						<dt>나의 여유자금</dt>
+						<dd><strong class="dataValue">000</strong><span class="won">만원</span></dd>
+						<dd class="areaChart2 c1"><div class="chart"><span style="width:50%;"></span></div></dd>
+					</dl>
+					<dl>
+						<dt>최소권장금액
+							<!-- // -->
+							<div class="tooltipWrap">
+								<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">최소권장금액이란? 툴팁 열기</span></button> 
+								<div class="tooltipCont">
+									<dl>
+										<dt class="hide">최소권장금액</dt>
+										<dd>매월 평균적으로 소비하는 금액의 3배 정도를 말해요.
+											<ul>
+												<li>우선, 자산진단 서비스의 최소권장 설정금액, 그렇지 않으면 지난달 내 소비금액의 3배가 설정되요. </li>
+												<li>만약, 지난달 내 소비금액이 없는 경우 동일한 또래그룹의 평균 소비금액의 3배가 설정되고 있습니다.</li>
+											</ul>
+										</dd>
+									</dl>
+									<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">최소권장금액이란? 안내 툴팁 닫기</span></button> 
+								</div>
+							</div>
+							<!-- // -->
+							<span>(지난달 내 소비 <strong><span class="dataValue">000</span><span class="won">만원</span></strong>의 3배)</span>
+						</dt>
+						<dd><strong class="dataValue">000</strong><span class="won">만원</span></dd>
+						<dd class="areaChart2 c3"><div class="chart"><span style="width:100%;"></span></div></dd>
+					</dl>
+				</div>
+				<div class="btns2"><button type="button" class="linkType1" title="여유자금 선택" aria-haspopup="true">여유자금이란?</button></div>
+				<div class="con3">
+					<p>
+						<strong class="block">여유자금이 <span class="case2">부족해요</span><span class="emoji"><img src="../../images/emoji/img_emoji_0208.png" alt=""></span></strong>
+						<span>불필요한 지출을 줄여 저축하는 습관을 만들어보세요. 작은 금액도 차곡차곡 모으면 조금 더 여유 있는 준비가 될 수 있답니다.</span>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTION] 추천상품 -->
+		<!-- -------------------------------------- -->
+		<!-- [CASE1] 마케팅동의 동의인 사용자  -->
+		<div class="boxTypeWrap bgType10">
+			<div class="visualSubWrap">
+				<h3 class="prodListTit img18">조기은퇴를 위한<br>추천상품</h3>
+				<p class="subTxt4 mb0">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+			</div>
+			<ul class="prodListWrap">
+				<!-- 예금상품 -->
+				<li>
+					<a href="javascript:;">
+						<div class="prodRecomWrap">
+							<strong class="prodTit">e금리우대예금</strong>
+							<em class="prodRecommInfo">최고(연/세전)</em>
+							<div class="prodRecomVal dsf">
+								<span class="dataValueWrap">
+									<strong class="dataValue">1.80</strong><em class="per">%</em>
+								</span>
+								<div class="prodVal ty01">
+									온라인 전용 농협은행 대표 예금
+								</div>
+							</div>
+							<span class="hashWrap">
+								<em class="hastag bg01">#국내거주자</em>
+								<em class="hastag bg02">#1인1계좌</em>
+							</span>
+						</div>
+					</a>
+				</li>
+				<!-- 적금상품 -->
+				<li>
+					<a href="javascript:;">
+						<div class="prodRecomWrap">
+							<strong class="prodTit">NH페이모아통장</strong>
+							<em class="prodRecommInfo">최고(연/세전)</em>
+							<div class="prodRecomVal dsf">
+								<span class="dataValueWrap">
+									<strong class="dataValue">2.85</strong><em class="per">%</em>
+								</span>
+								<div class="prodVal ty01">
+									간편결제 이용 고객님을 위한 입출식 특화상품
+								</div>
+							</div>
+						</div>
+						<div class="prodInfoWrap">
+							<span class="hashWrap">
+								<em class="hastag bg01">#1인1계좌</em>
+							</span>
+						</div>
+					</a>
+				</li>
+				<!-- 연금상품 : 빅데이터 상품추천 -->
+				<li>
+					<div class="disagree img1">
+						<a href="javascript:;" role="button">
+							<p class="disagreeP"><strong>개인형 퇴직연금(IRP)</strong>
+								<span class="txt">은퇴 걱정 없는 노후 월급 준비하기</span>
+							</p>
+						</a>
+					</div>
+				</li>
+				<!-- 연금상품 : 관리자 지정 상품추천 -->
+				<li>
+					<div class="disagree img2">
+						<a href="javascript:;" role="button">
+							<p class="disagreeP"><strong>연금보험</strong>
+								<span class="txt">미리미리 준비하는 은퇴준비</span>
+							</p>
+						</a>
+					</div>
+				</li>
+				<!-- // -->
+			</ul>
+		</div>
+
+		<!-- [CASE2] 미동의인 사용자인 경우 -->
+		<div class="boxTypeWrap bgType10">
+			<div class="visualSubWrap">
+				<h3 class="prodListTit img18">조기은퇴를 위한<br>추천상품</h3>
+				<p class="subTxt4 mb0">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+			</div>
+			<ul class="prodListWrap">
+				<!-- 미동의 배너 -->
+				<li>
+					<div class="disagree">
+						<a href="javascript:;" role="button">
+							<p class="disagreeP"><strong>나만 알고 싶은 추천상품</strong></p>
+						</a>
+					</div>
+				</li>
+				<!-- 연금상품 : 빅데이터 상품추천 -->
+				<li>
+					<div class="disagree img1">
+						<a href="javascript:;" role="button">
+							<p class="disagreeP"><strong>개인형 퇴직연금(IRP)</strong>
+								<span class="txt">은퇴 걱정 없는 노후 월급 준비하기</span>
+							</p>
+						</a>
+					</div>
+				</li>
+				<!-- 연금상품 : 관리자 지정 상품추천 -->
+				<li>
+					<div class="disagree img2">
+						<a href="javascript:;" role="button">
+							<p class="disagreeP"><strong>연금보험</strong>
+								<span class="txt">미리미리 준비하는 은퇴준비</span>
+							</p>
+						</a>
+					</div>
+				</li>
+				<!-- // -->
+			</ul>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTION] 바로가기 -->
+		<!-- -------------------------------------- -->
+		<div class="yatexbtnWrap">
+			<a href="javascript:;" class="penBtn" aria-haspopup="true">맞춤정보수정</a>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [하단영역] 안내문구 -->
+		<!-- -------------------------------------- -->
+		<div class="info_area">
+			<strong class="info_area_title">알아두세요</strong>
+			<ul class="listBul disc">
+				<li>조기은퇴진단 결과는 기대수익률, 물가상승률 등 다양한 경제변수를 가정하여 계산한 값이며 실제와 다를 수 있습니다. </li>
+				<li>선택한 기대수익률은 현재나이부터 은퇴 전까지 적용됩니다. </li>
+				<li>은퇴 후 현금흐름은 물가상승률과 동일한 수익률이 반영된 미래가치 금액입니다.</li>
+				<li>물가상승률은 최근 3개년도 평균값인 <span>2.7%</span>를 적용합니다.</li>
+				<li>은퇴준비율(%)은 은퇴시점에 준비한 금액을 은퇴 이후 필요한 금액으로 나눈 비율입니다. </li>
+				<li>자산의 고갈 시점은 은퇴시점 총자산을 은퇴생활비로 모두 충당했을 경우 총자산이 소진되는 시점을 의미합니다.</li>
+			</ul>
+		</div>
+		<!-- -------------------------------------- -->
+	</div>
+	<!-- ###################################### -->
+</div>
+
+<!-- ###################################### -->
+<!-- ### [샘플] 스크립트 ### -->
+<!-- ###################################### -->
+<script>
+	//토스트팝업 샘플
+	$('.mesToast1').delay(4000).fadeOut(400);
+
+	//차트 클릭 이벤트 샘플 : 상세정보 노출
+	$(document).off('click.chart').on('click.chart','[data-chart="wrap"] [role="button"]', function(){
+		var _chart_cont = $(this).find('[data-chart="cont"]'); //오픈되는 영역
+		
+		// 세로막대인 경우 항목명 추가
+		if($(this).parents('[data-chart="wrap"]').hasClass('areaChart4')){
+			var _chart_label_txt = $(this).find('dt').text();
+			_chart_cont.attr('data-label',_chart_label_txt);
+		}
+
+		//접근성
+		if($(this).attr('aria-expanded') == 'true') $(this).attr('aria-expanded',false);
+		else $(this).attr('aria-expanded',true).siblings().attr('aria-expanded',false);
+
+		//초기화
+		$(this).siblings().find('[data-chart="cont"]').removeClass('active');
+
+		//오픈
+		if(_chart_cont.hasClass('active')) _chart_cont.removeClass('active');
+		else _chart_cont.addClass('active')
+	})
+</script>
+<!-- ###################################### -->
+</body>
+</html>

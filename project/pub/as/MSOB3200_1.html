@@ -1,0 +1,185 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 목표</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<h1><a href="javascript:;" role="text">등록완료</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav" role="button"><span class="blind">전체메뉴</span></a>
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="boxTypeWrap"><!--s:boxTypeWrap-->
+				<div class="toptourText">
+					<p><strong>나 홀로 유럽일주</strong>목표가 등록되었습니다.</p>
+					<span class="toptourImg">
+						<div><span><img src="../../images/category/ob/ico_cate_ob01_09.png" alt="여행 아이콘"></span></div> <!-- [2022-12-16] 아이콘 변경 -->
+					</span>
+				</div>
+				<div class="resultList">
+					<ul class="detailList">
+						<li>
+							<span class="tit">목표금액</span>
+							<span class="value"><strong class="dataValue">20,000,000</strong><em class="won">원</em></span>
+						</li>
+						<li>
+							<span class="tit">목표기간</span>
+							<span class="value">6개월(~ 2021.10.11)</span><!--10.06 기간 수정-->
+						</li>
+						<li>
+							<span class="tit">필요금액</span>
+							<span class="value">월 <strong class="dataValue">6,666,666</strong><em class="won">원</em></span>
+						</li>
+						<li>
+							<span class="tit">연결계좌</span>
+							<span class="value pointColor">농협 12345679</span>
+						</li>
+						<li>
+							<span class="tit">연결계좌</span>
+							<span class="value"><a href="javascript:;" class="linkType1 pointColor">계좌를 연결해주세요.</a></span>
+						</li>
+						<!-- //계좌미연결 case -->
+					</ul>
+				</div>
+			</div>
+			<!-- [2022-12-28] 마크업 수정 -->
+			<div class="boxTypeWrap bgType02 oblistbg02 addShadow">
+				<div class="visualSubWrap">
+					<h3 class="visualSub type01">챌린지 달성을 위한 추천상품
+						<div class="tooltipWrap">
+							<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">챌린지 달성을 위한 추천상품 안내툴팁</span></button>
+							<div class="tooltipCont">
+								<p>6개월 기간동안 자동으로 목표금액을 모아주는 논스톱 목표달성 기능입니다.</p>
+								<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+							</div>
+						</div>
+					</h3>
+					<p class="visualSubPara">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+				</div>
+				<ul class="prodListWrap">
+					<li>
+						<a href="javascript:;"  role="button">
+							<div class="prodRecomWrap">
+								<strong class="prodTit">올원 5늘도 적금</strong>
+								<em class="prodRecommInfo">최고(연/세전)</em>
+								<div class="d-flex mt10">
+									<div class="prodRecomVal">
+										<span class="dataValueWrap">
+											<strong class="dataValue">2.85%</strong>
+										</span>
+									</div>
+									<div class="prodVal">
+										6개월 매일(토/공휴일)제외<br>소액자동이체 적금
+									</div>
+								</div>
+							</div>
+
+							<div class="prodInfoWrap totalBalance mt0 p0">
+								<div class="hashWrap">
+									<span class="hashTag">#사회초년생</span>
+									<span class="hashTag">#직장인</span>
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- //[2022-12-28] 마크업 수정 -->
+
+			<!--s:boxTypeWrap
+			<div class="boxTypeWrap bgType04 oblistbg01 pt0">
+				<div class="visualSubWrap">
+					<h3 class="visualSub type01">알아서 모아드리는 똑똑계좌</h3>
+					<p class="visualSubPara">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+				</div>
+				<ul class="prodListWrap">
+					<li>
+						<a href="javascript:;">
+							<div class="prodRecomWrap">
+								<strong class="prodTit">NH왈츠회전예금</strong>
+								<em class="prodRecommInfo">조건유지시 나의 예상금리</em>
+								<div class="d-flex mt10">
+									<div class="prodRecomVal">
+										<span class="dataValueWrap">
+											<strong class="dataValue">2.85%</strong>
+										</span>
+									</div>
+									<div class="prodVal">
+										기본 <strong class="dataValue">1.08</strong><em class="per">%</em>
+									</div>
+								</div>
+							</div>
+
+							<div class="prodInfoWrap">
+								
+								<span class="prodValue">예상우대금리(1.8%p)</span>
+								<span class="hashWrap3">
+									<em class="hastag">월평균 2회 비대면이체,</em> <em class="hastag">급여이체,</em> <em class="hastag">마케팅동의</em>
+								</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;" class="type02">
+							<div class="prodRecomWrap">
+								<strong class="prodTit">직장인월복리적금이름이긴경우</strong>
+								<em class="prodRecommInfo">조건유지시 나의 예상금리</em>
+								<div class="d-flex mt10">
+									<div class="prodRecomVal">
+										<span class="dataValueWrap">
+											<strong class="dataValue">2.85%</strong>
+										</span>
+									</div>
+									<div class="prodVal">
+										기본 <strong class="dataValue">1.08</strong><em class="per">%</em>
+									</div>
+								</div>
+							</div>
+
+							<div class="prodInfoWrap">
+								<span class="prodValue">예상우대금리(1.8%p)</span>
+								<span class="hashWrap3">
+									<em class="hastag">급여이체,</em> <em class="hastag">마케팅동의,</em> <em class="hastag">월평균 2회 비대면이체일 경우</em>
+								</span>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			e:boxTypeWrap-->
+			<div class="areaBtnDefault half">
+				<a href="javascript:;" class="btnPressDefault" role="button">확인</a>
+				<a href="javascript:;" class="btnPressPoint" role="button">목표 추가하기</a>
+			</div>
+		</div>
+		<!-- //container -->
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산등록</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function() {
+		fullLayerPop();
+	});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		
+		<!-- container -->
+		<div class="container">
+			
+		</div>
+		<!-- //container -->
+
+		<!-- 팝업시작 -->
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>순서 설정</h1>
+				<div class="popCont grayPop">
+					<div class="totalBalance obtit">
+						<h2 class="defTxt">진행중인 목표 총 <span class="pointColor">7</span>건의 순서를<br>설정해보세요</h2>
+						<p>순서 버튼 선택 시 목표 순서를 변경할 수 있습니다.</p>
+					</div>
+
+					<div class="purposeList sortableWrap"> <!--11.22 sortableWrap 추가 unDown 삭제-->
+                        <div class="sortableBtnsWrap mt10"><!--11.22 sortableBtnsWrap 추가-->
+							<div class="sortableBtns">
+								<button type="button" class="drag active" aria-selected="true" title="드래그로 메뉴 순서 변경"><span class="blind">드래그</span></button>
+								<button type="button" class="button"><span class="blind" title="클릭으로 메뉴 순서 변경">버튼</span></button>
+							</div>
+						</div>
+                        <ul class="sortable"><!--11.22 sortable 추가-->
+							<li>
+								<a href="javascript:;" role="button">
+									<div class="purposeTit">
+										<span class="purposeCateS"><img src="../../images/category/ob/ico_cate_ob02_06.png" alt="내가만든목표 아이콘"></span> <!-- [2022-12-19] 아이콘 변경 -->
+										<p class="tit">은퇴</p>
+									</div>
+									
+									<div class="recentResult">
+										<span class="now minus"><em class="blind">현재까지 금액</em>1,000,000 <em class="won">원</em></span>
+										<span class="amnt"><em>7일 남음</em></span>
+									</div> 
+		
+									<!-- <div class="goalResult">
+										<span class="dDay"><em class="blind">목표일까지</em>40일 남음</span>
+										<span class="percent">65.0% 달성</span>
+									</div> -->
+									
+									<div class="baseGraph msBar"><span class="lineGraph red" data-value="70"></span></div>
+									<div class=" msobunitWrap">
+										<p class="unit1"><span class="step01">위험</span><span class="icoWrap"><span class="blind">위험 아이콘</span></span></p>
+									</div>
+								</a>
+								<!-- <span class="changeWrap long">
+									<button class="drag" title="맨아래로"></button> 
+								</span> 변경전 -->
+								<span class="dragBtn"><span class="blind">드래그</span></span><!-- 2022-12-19 추가 -->
+								<span class="changeWrap reback btnClick"> <!--11.22 추가 btnClick-->
+									<button type="button" class="btnUp2"><span class="blind">순서 한 단계 위로</span></button>
+									<button type="button" class="btnDown2"><span class="blind">순서 한 단계 아래로</span></button>
+								</span>
+							</li>
+							<!--10.11 30프로 이하 케이스 추가-->
+							<li>
+								<a href="javascript:;" role="button">
+									<div class="purposeTit">
+										<span class="purposeCateS"><img src="../../images/category/ob/ico_cate_ob02_06.png" alt="내가만든목표 아이콘"></span> <!-- [2022-12-19] 아이콘 변경 -->
+										<p class="tit">은퇴</p>
+									</div>
+									
+									<div class="recentResult">
+										<span class="now minus"><em class="blind">현재까지 금액</em>1,000,000 <em class="won">원</em></span>
+										<span class="amnt"><em>7일 남음</em></span>
+									</div> 
+									<div class="baseGraph msBar"><span class="lineGraph red" data-value="25"></span></div>
+									<div class=" msobunitWrap"><!--10.11 30프로 이하인 경우 케이스 추가 class="uni4로 변경"-->
+										<p class="unit4"><span class="step01">위험</span><span class="icoWrap"><span class="blind">위험 아이콘</span></span></p>
+									</div>
+								</a>
+								<span class="dragBtn"><span class="blind">드래그</span></span><!-- 2022-12-19 추가 -->
+								<span class="changeWrap reback btnClick"> <!--11.22 추가 btnClick-->
+									<button type="button" class="btnUp2"><span class="blind">순서 한 단계 위로</span></button>
+									<button type="button" class="btnDown2"><span class="blind">순서 한 단계 아래로</span></button>
+								</span>
+							</li>
+							<!--//10.11 30프로 이하 케이스 추가-->
+							<li>
+								<a href="javascript:;" role="button">
+									<div class="purposeTit">
+										<span class="purposeCateS"><img src="../../images/category/ob/ico_cate_ob02_06.png" alt="내가만든목표 아이콘"></span> <!-- [2022-12-19] 아이콘 변경 -->
+										<p class="tit">은퇴</p>
+									</div>
+									
+									<div class="recentResult">
+										<span class="now minus"><em class="blind">현재까지 금액</em>1,000,000 <em class="won">원</em></span>
+										<span class="amnt"><em>7일 남음</em></span>
+									</div>
+									<div class="baseGraph msBar"><span class="lineGraph yellow" data-value="70"></span></div>
+									<div class=" msobunitWrap">
+										<p class="unit2"><span class="step02">흐음..</span><span class="icoWrap"><span class="blind">위험 아이콘</span></span></p>
+									</div>
+								</a>
+								<span class="dragBtn"><span class="blind">드래그</span></span><!-- 2022-12-19 추가 -->
+								<span class="changeWrap reback btnClick"> <!--11.22 추가 btnClick-->
+									<button type="button" class="btnUp2"><span class="blind">순서 한 단계 위로</span></button>
+									<button type="button" class="btnDown2"><span class="blind">순서 한 단계 아래로</span></button>
+								</span>
+							</li>
+
+							<!--10.11 30프로 이하 케이스 추가-->
+							<li>
+								<a href="javascript:;" role="button">
+									<div class="purposeTit">
+										<span class="purposeCateS"><img src="../../images/category/ob/ico_cate_ob02_06.png" alt="내가만든목표 아이콘"></span> <!-- [2022-12-19] 아이콘 변경 -->
+										<p class="tit">은퇴</p>
+									</div>
+									
+									<div class="recentResult">
+										<span class="now minus"><em class="blind">현재까지 금액</em>1,000,000 <em class="won">원</em></span>
+										<span class="amnt"><em>7일 남음</em></span>
+									</div>
+									<div class="baseGraph msBar"><span class="lineGraph yellow" data-value="20"></span></div>
+									<div class=" msobunitWrap"><!--10.11 30프로 이하인 경우 class="unit5"-->
+										<p class="unit5"><span class="step02">흐음..</span><span class="icoWrap"><span class="blind">위험 아이콘</span></span></p>
+									</div>
+								</a>
+								<span class="dragBtn"><span class="blind">드래그</span></span><!-- 2022-12-19 추가 -->
+								<span class="changeWrap reback btnClick"> <!--11.22 추가 btnClick-->
+									<button type="button" class="btnUp2"><span class="blind">순서 한 단계 위로</span></button>
+									<button type="button" class="btnDown2"><span class="blind">순서 한 단계 아래로</span></button>
+								</span>
+							</li>
+							<!--//10.11 30프로 이하 케이스 추가-->
+
+							<li>
+								<a href="javascript:;" role="button">
+									<div class="purposeTit">
+										<span class="purposeCateS"><img src="../../images/category/ob/ico_cate_ob02_06.png" alt="내가만든목표 아이콘"></span> <!-- [2022-12-19] 아이콘 변경 -->
+										<p class="tit">은퇴</p>
+									</div>
+									<div class="recentResult">
+										<span class="now minus"><em class="blind">현재까지 금액</em>1,000,000 <em class="won">원</em></span>
+										<span class="amnt"><em>7일 남음</em></span>
+									</div>
+									<div class="baseGraph  msBar"><span class="lineGraph mildgreen" data-value="90"></span></div>
+									<div class=" msobunitWrap">
+										<p class="unit3"><span class="step03">최고</span><span class="icoWrap"><span class="blind">위험 아이콘</span></span></p>
+									</div>
+								</a>
+								<span class="dragBtn"><span class="blind">드래그</span></span><!-- 2022-12-19 추가 -->
+								<span class="changeWrap reback btnClick"> <!--11.22 추가 btnClick-->
+									<button type="button" class="btnUp2"><span class="blind">순서 한 단계 위로</span></button>
+									<button type="button" class="btnDown2"><span class="blind">순서 한 단계 아래로</span></button>
+								</span>
+							</li>
+							<!--//10.11 30프로 이하 케이스 추가-->
+							<li>
+								<a href="javascript:;" role="button">
+									<div class="purposeTit">
+										<span class="purposeCateS"><img src="../../images/category/ob/ico_cate_ob02_06.png" alt="내가만든목표 아이콘"></span> <!-- [2022-12-19] 아이콘 변경 -->
+										<p class="tit">은퇴</p>
+									</div>
+									
+									<div class="recentResult">
+										<span class="now minus"><em class="blind">현재까지 금액</em>1,000,000 <em class="won">원</em></span>
+										<span class="amnt"><em>7일 남음</em></span>
+									</div>
+									<div class="baseGraph  msBar"><span class="lineGraph mildgreen" data-value="30"></span></div>
+									<div class=" msobunitWrap"><!--10.11 30프로 이하인 경우 class="unit6"-->
+										<p class="unit6"><span class="step03">최고</span><span class="icoWrap"><span class="blind">위험 아이콘</span></span></p>
+									</div>
+								</a>
+								<span class="dragBtn"><span class="blind">드래그</span></span><!-- 2022-12-19 추가 -->
+								<span class="changeWrap reback btnClick"> <!--11.22 추가 btnClick-->
+									<button type="button" class="btnUp2"><span class="blind">순서 한 단계 위로</span></button>
+									<button type="button" class="btnDown2"><span class="blind">순서 한 단계 아래로</span></button>
+								</span>
+							</li>
+							<!--//10.11 30프로 이하 케이스 추가-->
+						</ul>
+					</div>
+
+					<script>
+						signalLabel();  // 신호등이 들어가는 ui 가 있을 경우 사용
+						graphActive();  // 퍼센트의 라인그래프가 들어가는 경우 사용
+					</script>
+
+				</div>
+
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<a href="javascript:;" class="confirmBtn" role="button">저장</a>
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- // 팝업 끝 -->
+	</div>
+	<script>
+		$(".purposeList ul li").each(function(i) {
+			graphValue = $(this).find(".lineGraph").attr("data-value");
+			$(this).find(".lineGraph").animate({width:graphValue + "%"}, 500);
+			iconPs = $(this).find(".msobunitWrap >  p");
+			iconPs.animate({left:graphValue + "%"}, 500);
+		});
+		//$("#sortable").sortable({axis : 'y'});
+        // $(".purposeList > ul").sortable({axis : 'y'});
+        $('.sortableBtns button').click(function(){
+            var $this = $(this);
+            if ($this.hasClass('drag')) {
+                if (!$this.hasClass('active')) {
+                    $this.closest('.sortableBtns').find('button').removeClass('active').attr('aria-selected','false');
+                    $this.addClass('active').attr('aria-selected','true');
+                    $this.closest('.sortableWrap').find('.sortable').removeClass('clickType');
+                    sortOn()
+                }
+            } else if ($this.hasClass('button')) {
+                if (!$this.hasClass('active')) {
+                    $this.closest('.sortableBtns').find('button').removeClass('active').attr('aria-selected','false');
+                    $this.addClass('active').attr('aria-selected','true');
+                    $this.closest('.sortableWrap').find('.sortable').addClass('clickType');
+                    sortOff()
+                }
+
+            }
+            
+        });
+        var sortOn =  function(){$(".sortable").sortable({axis : 'y',disabled:false,handle:$('.dragBtn')});}//2022-12-19  옵션 추가
+        var sortOff =  function(){$(".sortable").sortable('option','disabled',true);}
+        sortOn()
+        $('.btnClick button').click(function(){
+            var $target = $(this).closest('li');
+            $target.addClass('ui-sortable-helper');
+            setTimeout(function(){
+                $target.removeClass('ui-sortable-helper');
+            },800)
+        });
+	</script>
+</body>
+</html>

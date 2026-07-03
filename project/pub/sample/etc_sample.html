@@ -1,0 +1,424 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>etc</title>
+<script src="../pub-assets/js/head.js"></script>
+<style>
+	h2.guide{margin:20px 0;padding:5px 0;font-size:20px;font-weight:900;background:rgb(255, 248, 157);text-align:center}
+	.title{margin:20px 0 10px;font-size:15px;font-weight:bold;color:blue}
+	.desc{margin:30px 0 20px;font-size:13px;font-weight:bold;color:#65aee2}
+	.title + .desc{margin-top:10px;}
+</style>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">자산등록</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<h2 class="guide">2021년</h2>
+
+			<hr class="divLine">
+			
+			<p class="title">gnb</p>
+			<div class="gnb">
+				<ul>
+					<li><a href="javascript:;">자산</a></li>
+					<li><a href="javascript:;" class="active" title="선택됨">소비내역</a></li>
+					<li><a href="javascript:;">소비패턴</a></li>
+					<li><a href="javascript:;">카드</a></li>
+					<li><a href="javascript:;">목표</a></li>
+					<li><a href="javascript:;">MY</a></li>
+				</ul>
+			</div>
+
+			<hr class="divLine">
+
+			<p class="title">tab</p>
+			<p class="desc">- toggle형 : .filterTab</p>
+			<div class="filterTab">
+				<button type="button" role="button">총소비</button>
+				<button type="button" class="active" role="button">월예산</button>
+			</div>
+
+			<p class="desc">- full tab형 : .tabWrap.type01</p>
+			<div class="tabWrap type01">
+				<ul role="tablist">
+					<li role="presentation"><a href="javascript:;" role="tab" title="" aria-selected="false">현황</a></li>
+					<li role="presentation"><a href="javascript:;" role="tab" class="on" title="" aria-selected="true">통계</a></li>
+				</ul>
+			</div>
+
+			<p class="desc">- full tab형(2줄) : .tabWrap.type01.line2</p>
+			<div class="tabWrap type01 line2">
+				<ul role="tablist">
+					<li role="presentation"><a href="javascript:;" class="on" role="tab" aria-selected="true">기본 우대<br>서비스</a></li>
+					<li role="presentation"><a href="javascript:;" role="tab" aria-selected="false">특별우대<br>서비스</a></li>
+					<li role="presentation"><a href="javascript:;" role="tab" aria-selected="false">자산관리<br>서비스</a></li>
+				</ul>
+			</div>
+
+			<p class="desc">- filterArea : .filterArea > .filterTab + .filterSelect</p>
+			<div class="filterArea">
+				<div class="filterTab">
+					<button type="button" aria-pressed="false">이번달</button>
+					<button type="button" class="active" aria-pressed="true">지난달</button>
+				</div>
+				<div class="filterSelect"><button type="button">2021.5월</button></div>
+			</div>
+
+			<p class="desc">- box형</p>
+			<div class="tabWrap type02">
+				<ul role="tablist">
+					<li class="active" role="presentation"><a href="javascript:;" aria-selected="false" role="tab">전체</a></li>
+					<li role="presentation"><a href="javascript:;" role="tab" aria-selected="false">은행</a></li>
+					<li role="presentation"><a href="javascript:;" role="tab" aria-selected="false">카드</a></li>
+					<li role="presentation"><a href="javascript:;" role="tab" aria-selected="false">금융투자</a></li>
+					<li role="presentation"><a href="javascript:;" role="tab" aria-selected="false">보험</a></li>
+					<li role="presentation"><a href="javascript:;" role="tab" aria-selected="false">전자금융</a></li>
+					<li role="presentation"><a href="javascript:;" role="tab" aria-selected="false">할부금융</a></li>
+					<li role="presentation"><a href="javascript:;" role="tab" aria-selected="false">통신</a></li>
+				</ul>
+			</div>
+			
+			<hr class="divLine">
+
+			<p class="title">select</p>
+			<p class="desc">- .filterSelect</p>
+			<div class="filterSelect"><button type="button" title="기준월선택">기준월 : 11월</button></div>
+
+			<p class="desc">- .itemSelect</p>
+
+			<div class="itemSelect">
+				<a href="javascript:;" role="button" aria-haspopup="true" title="카테고리 선택">
+					<span>생활/마트</span>
+				</a>
+			</div>
+
+			<p class="desc">- 양쪽 : .itemSelect.flex</p>
+			<div class="itemSelect flex">
+				<a href="javascript:;" class="link arrGreen">실적 충족 현황</a>
+				<button type="button" class="selec">다른카드선택</button>
+			</div>
+			
+			<hr class="divLine">
+			
+			<p class="title">카테고리 icon</p>
+			<p class="desc">- 기본 : 55x55</p>
+			<span class="icoCate">
+				<span class="img"><img src="../../images/category/icoCate_06.png" alt="생활/마트"></span>
+			</span>
+
+			<p class="desc">- 기본 : 25x25</p>
+			<div class="compareList">
+				<span class="imgWrap icoCate">
+					<span class="img"><img src="../../images/category/icoCate_03.png" alt="술/유흥"></span>술/유흥
+				</span>
+			</div>
+
+			<hr class="divLine">
+			
+			<p class="title">tag</p>
+			<p class="desc">- 단독 : .tag</p>
+			<span class="tag green">본인</span>
+			<em class="tag bgGreen">본인</em>
+
+			<p class="desc">- 그룹 : .wrapTag > span</p>
+			<div class="wrapTag">
+				<span class="type01">본인</span><span class="type02">신용</span><span class="type04">교통</span><span class="type03">현금</span><span class="type05">MASTER</span>
+			</div>
+
+			<hr class="divLine">
+			
+			<p class="title">toggle 버튼</p>
+			<p class="desc">- .tgBtnWrap > .tgTxt + .tgBtn</p>
+			<div class="tgBtnWrap">
+				<span class="tgTxt">등록기관만 보기</span>
+				<span class="tgBtn">
+					<input type="checkbox" id="toggle1" checked="checked">
+					<label for="toggle1">선택</label>
+				</span>
+			</div>
+			
+			<p class="desc">- .tgBtnWrap > tgTxt + .tgBtn1</p>
+			<div class="tgBtnWrap">
+				<span class="tgTxt">이용카드만</span>
+				<span class="tgBtn2">
+					<input type="checkbox" id="toggle2" checked="checked" title="등록기관만 보기">
+					<label for="toggle2">선택</label>
+				</span>
+			</div>
+
+			<hr class="divLine">
+			
+			<p class="title">배너</p>
+			<div class="inBannerWarp">
+				<a href="javascript:;">
+					<div class="inBanner typeS bg04">
+						<p>
+							<span class="bnTit">1분이면 OK!<br>
+								간단정보 입력하고 <strong class="pointColor">자산진단</strong> 받기</span>
+						</p>
+					</div>
+				</a>
+			</div>
+			
+			<div class="inBannerWarp">
+				<a href="javascript:;">
+					<div class="inBanner typeG bg02">
+						<p>
+							<span class="bnSub">금융자산 5억원 이상 <em class="pointColor">VIP고객님을 위한</em></span>
+							<span class="bnTit">재무·세무·부동산 전문가 상담 </span>
+						</p>
+					</div>
+				</a>
+			</div>
+			
+			<div class="inBannerWarp">
+				<a href="javascript:;">
+					<div class="inBanner typeB bg03">
+						<p>
+							<span class="bnSub">#건강 #여행/레져 #운전자 #화재</span>
+							<span class="bnTit">내 보장자산 늘리기!</span>
+						</p>
+					</div>
+				</a>
+			</div>
+			
+			<div class="inBannerWarp">
+				<a href="javascript:;">
+					<div class="inBanner typeY bg01">
+						<p>
+							<span class="bnTit"><em class="pointColor">숨은 카드포인트</em> 찾아서 <em class="pointColor">계좌로 입금</em>하세요.</span>
+							<span class="bnArrow">여신금융협회 바로가기</em></span>
+						</p>
+					</div>
+				</a>
+			</div>
+			
+			<div class="inBannerWarp">
+				<a href="javascript:;">
+					<div class="inBanner typeP bg09">
+						<p>
+							<span class="bnTit">나만 투자 안해도 괜찮은걸까?</span>
+							<span class="bnArrow">나에게 맞는 펀드 찾기</span>
+						</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="inBannerWarp">
+				<a href="javascript:;">
+					<div class="inBanner typeY2 bg11">
+						<p>
+							<span class="bnTit">비대면으로 스마트하게!<br>
+								최대 80% 환율우대 적용</span>
+							<span class="bnArrow">너도나도 환전신청</span>
+						</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="inBannerWarp">
+				<a href="javascript:;">
+					<div class="inBanner typeG3 bg10">
+						<p>
+							<span class="bnTit">원할 때 환전하고, 안전하게 보관하고!<br>
+								최대 90% 환율우대 적용</span>
+							<span class="bnArrow">내맘대로 외화BOX</span>
+						</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="inBannerWarp">
+				<a href="javascript:;">
+					<div class="inBanner typeB bg07">
+						<p>
+							<span class="bnTit">보장자산으로 든든하게 준비하기!</span>
+							<span class="bnArrow">나에게 맞는 보험 찾기</span>
+						</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="inBannerWarp">
+				<a href="javascript:;">
+					<div class="inBanner typeO bg08">
+						<p>
+							<span class="bnTit">소중한 우리 아이,<br>
+								갑자기 아프면 어떡하지?</span>
+							<span class="bnArrow">자녀보험 확인하기</span>
+						</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="inBannerWarp">
+				<a href="javascript:;">
+					<div class="inBanner typeP3 bg12">
+						<p>
+							<span class="bnTit">행복한 미래를 위한 시니어꿀팁</span>
+							<span class="bnArrow">은퇴설계에 도움이 되는 금융정보</em></span>
+						</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="inBannerWarp">
+				<a href="javascript:;">
+					<div class="inBanner typeS2 bg13">
+						<p>
+							<span class="bnTit">All100플랜</span>
+							<span class="bnArrow">내 삶의 힘, 100세 시대 은퇴 파트너!</em></span>
+						</p>
+					</div>
+				</a>
+			</div>
+
+			<hr class="divLine">
+			
+			<p class="title">상단 인포박스</p>
+			<div class="infoBox">
+				<p class="tit">강남 파라곤</p>
+				<div class="divingTxt"><span>서울</span><span>아파트</span><span>143.68㎡</span></div>
+				<div class="divingTxt fcGray"><span>전세가 시세</span><span>2억</span></div>
+			</div>
+			<div class="infoBox">
+				<p class="tit">강남 파라곤</p>
+				<div class="divingTxt">경기 의왕시 안양판교로 232-25</div>
+			</div>
+			<div class="infoBox">
+				<ul class="detailList">
+					<li>
+						<span class="tit">통화</span>
+						<span class="value">USD</span>
+					</li>
+					<li>
+						<span class="tit">매매기준율</span>
+						<span class="value">1달러=1,320.33원<br>
+							(2020.06.03 11:43:06 기준)</span>
+					</li>
+					<li>
+						<span class="tit">등록일</span>
+						<span class="value">2020.07.31</span>
+					</li>
+				</ul>
+			</div>
+
+			<hr class="divLine">
+			
+			<p class="title">하단 인포박스</p>
+			<p class="desc">- 한줄일 경우</p>
+			<p class="infoTxt">참고 : 하나로가족고객 등급</p>
+			<p class="desc">- 여러줄일 경우</p>
+			<div class="guideList">
+				<ul class="listDash">
+					<li>매매기준율 아래와 같이 적용하여 환산합니다.</li>
+					<li>개장 전 자산 등록 시 이전영업일 현찰 팔 때 환율 적용</li>
+					<li>개장 후 자산 등록 시 금일 현찰 팔 때 환율 적용</li>
+				</ul>
+			</div>
+
+			<hr class="divLine">
+
+			<p class="title">gray 인포박스</p>
+			<p class="desc">- .grayBgLine</p>
+			<div class="grayBgLine">
+				<ul class="detailList">
+					<li>
+						<span class="tit">매매기준율</span>
+						<span class="value">1USD=1,215.12원</span>
+					</li>
+					<li>
+						<span class="tit">매매기준일</span>
+						<span class="value">YYYY.MM.DD</span>
+					</li>
+					<li>
+						<span class="tit">등록일</span>
+						<span class="value">2020.07.31</span>
+					</li>
+					<li>
+						<span class="tit">정보제공</span>
+						<span class="value">서울외국환중개소</span>
+					</li>
+				</ul>
+			</div>
+
+			<p class="desc">- .noDataBox</p>
+			<div class="noDataBox">
+				<p>
+					이번달에 아직 소비내역이 없어서,
+					김농협님의 최근 3개월 소비 패턴을 분석해봤어요.
+				</p>
+			</div>
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<hr class="divLine">
+
+			<h2 class="guide">2020년</h2>
+
+			<hr class="divLine">
+
+			<p>완료 메시지 - 긍정</p>
+			<div class="topConfirmArea confirmMsg type01">
+				<p><strong>5개 기관</strong>을 찾았습니다.</p>
+			</div>
+
+			<p>완료 메시지 - 부정</p>
+			<div class="topConfirmArea confirmMsg type02">
+				<p>자산이 조회가 되지 않습니다</p>
+				<p class="subTxt">공인인증서를 확인하시고<br>다시 시도해주세요</p>
+			</div>
+
+			<p>완료 메시지 - 정보</p>
+			<div class="topConfirmArea confirmMsg type04">
+				<p>정확한 통계를 위한<br>소비 내역이 부족합니다</p>
+			</div>
+
+			
+		</div>
+		<!-- //container -->
+
+	</div>
+
+</body>
+</html>

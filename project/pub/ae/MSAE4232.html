@@ -1,0 +1,115 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>컨설팅-보고서 알림 설정</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function(){
+		fullLayerPop();
+	});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">영업점 찾기</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+		</div>
+		<!-- //container -->
+
+		<!-- 서비스이용 약관 팝업 -->
+		<div class="popWrap fullLayerPop nhasset">
+			<div class="popInner">
+				<h1>보고서 알림 설정</h1>
+				<div class="popCont">
+                    <div class="reptPopTit">
+                        <h2><strong>보고서의 알림 상태</strong>를 관리합니다.</h2>
+                        <p>자산관리에 도움이 되는 알찬 보고서가 매월 발행됩니다. 
+                            알림 설정하고 바로 확인해보세요. </p><!--10.07 텍스트 수정-->
+                    </div>
+                    
+                    <div class="alarmArea">
+                        <h3 class="title">알림수신</h3>
+                        <hr class="divLine3 mtSt" aria-hidden="true">
+                        <!--s:자산 연결 주기 수시인 경우-->
+                        <div class="alaBox">
+                            <span class="txt">
+                                자산연결 주기가 <span class="pointColor">수시</span>로 설정되어 있어서<br>
+                                상세 알림을 설정할 수 없습니다.
+                            </span>
+                            <p>
+                                알림설정을 위해 수집주기를 <span class="pointColor">정기</span>로<br>
+                                변경해주세요.
+                            </p>
+                            <div class="mt20">
+                                <a href="javascript:;" class="btnBodyLine" role="button">수집주기 변경하기</a>
+                            </div>
+                        </div>
+                        <!--//e:자산 연결 주기 수시인 경우-->
+
+                         <!--s:자산 알림 설정 경우-->
+                        <div class="alaBoxOn">
+                            <div class="title">
+                                <h2> 월간 보고서 발행 알림</h2>
+                                <div class="tgWarp ty01">
+                                    <span class="tgBtnType2">
+                                        <input type="checkbox" id="toggle10" checked="checked">
+                                        <label for="toggle10"><span>나의 한달로 보기</span></label>
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="info_area">
+                                <strong class="info_area_title">알아두세요</strong>
+                                <ul class="listBul disc">
+                                    <li>APP 알림 수신을 동의한 경우에만 보고서 알림을 받을 수 있습니
+                                        다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--e:자산 알림 설정 경우-->
+
+                    </div>
+                    
+					
+				</div>
+				<!-- popBtnWrap -->
+				<div class="popBtnWrap">
+                    <div class="popBtn">
+						<a href="javascript:;" class="confirmBtn disabled" role="button" aria-disabled="true">저장</a><!--활성화인 경우  disabled 삭제 --> <!-- [2023-01-16] 접근성 수정 -->
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다."><img src="../../images/common/btn_popClose.png" alt="저장" /></a>
+				</div>
+				<!--// popBtnWrap -->
+			</div>
+		</div>
+		<!-- //서비스이용 약관 팝업 -->
+
+	</div>
+
+</body>
+</html>

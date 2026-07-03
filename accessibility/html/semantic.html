@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Septem UI/UX accessibility</title>
+	<link rel="stylesheet" href="../css/a11y_com.css">
+	<link rel="stylesheet" href="../css/prism.css">
+	<script src="../js/prism.js"></script>
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/a11y_com.js"></script>
+</head>
+<body>
+	<!-- skip -->
+<div id="skipNav">
+	<a href="#">본문 바로가기</a>
+	<a href="#">메뉴 바로가기</a>
+</div>
+<!-- //skip -->
+<div id="wrap">
+	<!-- header -->
+	<header>
+		셉템 접근성
+	</header>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<nav>
+		</nav>
+		<!-- content -->
+		<main>
+			<h1>의미론적 HTML(semantic html)</h1>
+			<div>
+				<p>HTML은 원래 초기 인터넷 상의 문서를 설명하기 위한 마크업 언어로 만들어졌습니다. 인터넷이 성장하고 더 많은 사람들에 의해 채택되면서, 인터넷에 대한 요구는 바뀌었습니다.</p>
+				<p>인터넷이 원래 과학 문서를 공유하기 위한 것이었던 곳에서, 이제 사람들은 다른 것들도 공유하기를 원했다. 매우 빠르게, 사람들은 웹을 더 멋지게 만들고 싶어하기 시작했다.</p>
+				<p>웹은 처음에 설계하기 위해 만들어지지 않았기 때문에 프로그래머들은 다른 방식으로 배치하기 위해 다양한 해커를 사용했습니다. 프로그래머는 표를 사용하여 정보를 기술하기 위해 를 사용하는 것이 아니라 다른 요소를 페이지 상에 배치하기 위해 사용합니다. </p>
+				<p>시각적으로 디자인된 레이아웃의 사용이 진행됨에 따라 프로그래머들은 와 같은 일반적인 "의미적이지 않은" 태그를 사용하기 시작했습니다. 그들은 종종 그들의 목적을 설명하기 위해 이러한 요소들에 a 또는 속성을 부여한다. 예를 들어, 이 대신에 &lt;div&gt;classid&lt;div&gt;&lt;div class="disp"&gt;라고 써지는 경우가 많습니다.</p>
+			</div>
+			<h2>의미론적 HTML의 장점</h2>
+			<div>
+				<p>첫째, 읽기가 훨씬 쉽다. 이것은 아마도 의미 요소를 사용하여 코드의 첫 번째 블록을 볼 때 가장 먼저 알아차릴 것입니다. 이것은 작은 예이지만 프로그래머로서 수백, 수천 줄의 코드를 읽을 수 있습니다. 코드를 읽고 이해하는 것이 쉬울수록 작업이 쉬워집니다.</p>
+
+				<p>전반적으로 의미적 요소들은 또한 보다 일관된 코드로 이어집니다. 의미적이지 않은 요소를 사용하여 헤더를 작성할 경우, &lt;div class="had"&gt; &lt;div id="had"&gt; &lt;div class="head"&gt; &lt;div&gt; 등 헤더 요소를 작성할 수 있는 방법은 매우 다양하며, 모두 프로그래머의 개인 취향에 따라 달라집니다. 표준적인 의미 요소를 작성함으로써 모든 사람이 쉽게 이해할 수 있습니다.</p>
+
+				<p>둘째, 비 의미성 코드보다 파일 크기가 가볍고 응답속도가 빠릅니다.</p>
+				
+				<p>셋째, 접근성이 뛰어납니다. 의미 요소를 이해하기 쉬운 것은 당신뿐만이 아닙니다. 또, 검색 엔진이나 보조 테크놀로지(시력 장애가 있는 유저의 화면 리더등)는, 유저의 Web 사이트의 컨텍스트나 컨텐츠를 보다 잘 이해할 수 있기 때문에, 유저에게 있어서 보다 나은 체험을 제공할 수 있습니다.</p>
+				
+				<p>넷째, SEO에 적합합니다. 검색 엔진은 제목, 링크 등에 포함된 키워드보다 제목, 링크 등에 포함된 키워드를 더 중요시하므로 고객이 문서를 더 쉽게 찾을 수 있습니다.</p>
+			</div>
+			<h2>의미론적 HTML의 요소</h2>
+			<div>
+				<p>HTML5는 아직 비교적 새로운 것이기 때문에 의미적이지 않은 요소를 사용하는 것은 오늘날 웹사이트에서 여전히 매우 흔하다. HTML5에 추가된 의미 체계 요소는 다음과 같습니다.</p>
+				<a href="https://www.freecodecamp.org/news/semantic-html5-elements/" target="_blank"><strong>HTML5에 추가된 요소&#xE001;</strong></a>
+				<p>&lt;article&gt;, &lt;aside&gt;, &lt;details&gt;, &lt;figcaption&gt;, &lt;figure&gt;, &lt;footer&gt;, &lt;header&gt;, &lt;main&gt;, &lt;mark&gt;, &lt;nav&gt;, &lt;section&gt;, &lt;summary&gt;, &lt;time&gt;</p>
+				<strong>기타 기존에 있던 요소</strong>
+				<p>&lt;head&gt;, &lt;title&gt;, &lt;body&gt;, &lt;header&gt;, &lt;footer&gt;, &lt;article&gt;, &lt;section&gt;, &lt;p&gt;, &lt;div&gt;, &lt;span&gt;, &lt;img&gt;, &lt;aside&gt;, &lt;audio&gt;, &lt;canvas&gt;, &lt;datalist&gt;, &lt;details&gt;, &lt;embed&gt;, &lt;nav&gt;, &lt;output&gt;, &lt;progress&gt;, &lt;video&gt;, &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt; 
+				</p>
+			</div>		
+			<h2>의미론적 HTML의 방법</h2>
+			<p>의미론적인 마크업 - 통일되며, 명확합니다.</p>
+			<pre>
+				<code class="language-markup">
+					<script type="prism-html-markup">
+						<header></header>
+						<section>
+							<article>
+								<figure>
+									<img>
+									<figcaption></figcaption>
+								</figure>
+							</article>
+						</section>
+						<footer></footer>
+					</script>
+				</code>
+			</pre>
+
+			<p>의미론적이지 못한 마크업 - div, span은 아무 의미도 없습니다.</p>
+			<pre>
+				<code class="language-markup">
+					<script type="prism-html-markup">
+						<div id="header"></div>
+						<div class="section">
+							<div class="article">
+								<div class="figure">
+									<img>
+									<div class="figcaption"></div>
+								</div>
+							</div>
+						</div>
+						<div id="footer"></div>
+					</script>
+				</code>
+			</pre>
+
+			<table>
+				<tbody>
+					<tr><td colspan="2">&lt;header&gt;</td></tr>
+					<tr><td colspan="2">&lt;nav&gt;</td></tr>
+					<tr><td>&lt;section&gt;</td><td rowspan="2">&lt;aside&gt;</td></tr>
+					<tr><td>&lt;article&gt;</td></tr>
+					<tr><td colspan="2">&lt;footer&gt;</td></tr>
+				</tbody>
+			</table>	
+		</main>
+		<!-- //content -->
+	</div>
+	<!-- //container -->
+	<!-- footer -->
+	<footer>푸터 영역</footer>
+	<!-- //footer -->
+	
+</body>
+</html>

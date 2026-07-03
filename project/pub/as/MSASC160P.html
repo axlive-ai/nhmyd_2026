@@ -1,0 +1,317 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산현황</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+    $(document).ready(function(){
+        slidePopOption();
+    })  
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">자산등록</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+		</div>
+		<!-- //container -->
+
+		<!-- 계좌별칭 설정 팝업 -->
+		<div class="nhasset popWrap slidePopOption">
+            <div class="dim"></div>
+            <div class="popInner">
+				<h1>대출상품 안내</h1><!--12.20  타이틀 수정-->
+                <div class="popCont">    
+					<div class="transfer">
+						<div class="boxTypeWrap bgType03 mt0 addShadow"> <!-- [2022-12-12] 수정 -->
+							<!-- [2022-12-12] 마크업 통일 -->
+							<div class="visualSubWrap">
+								<h3 class="prodListTit img03">
+									직업, 소득에 관계없이 대출이<br>필요한 통신3사 이용고객이라면!
+								</h3>
+								<p class="subTxt4">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+							</div>
+							<!-- <h2 class="prodListTit">
+								대출이 필요하신 당신을 위해<br>
+								<strong>빅데이터 분석 상품</strong>을 추천 드려요!
+							</h2> -->
+							
+							<ul class="prodListWrap">
+								<li>
+									<a href="javascript:;">
+										<div class="prodRecomWrap">
+											<span class="tagLabel">신용</span>
+											<strong class="prodTit">올원 비상금 대출</strong>
+											<em class="prodRecommInfo">나의 예상우대금리</em>
+											<div class="prodRecomVal dsf">
+												<span class="dataValueWrap">
+													<strong class="dataValue">2.85</strong><em class="per down">% p</em>
+												</span>
+												<div class="prodVal ty01">
+													최저<span class="dataValue">1.67</span><em class="per">%</em>(연)
+												</div>
+											</div>
+										</div>
+
+										<div class="prodInfoWrap">
+											<span class="prodValue">나의 우대금리 적용 항목</span>
+											<span class="prodValue">급여이체, 자동이체 3건, 카드이용실적 등</span> <!-- [2023-01-27] 수정 -->
+										</div>
+									</a>
+								</li>
+								<!-- <li>
+									<a href="javascript:;">
+										<div class="prodRecomWrap">
+											<span class="tagLabel">담보</span>
+											<strong class="prodTit">NH모바일아파트대출2.0</strong>
+											<em class="prodRecommInfo">나의 예상우대금리</em>
+											<div class="prodRecomVal dsf">
+												<span class="dataValueWrap">
+													<strong class="dataValue">2.85</strong><em class="per down">% p</em>
+												</span>
+												<div class="prodVal ty01">
+													최저<span class="dataValue">1.67</span><em class="per">%</em>(연)
+												</div>
+											</div>
+										</div>
+
+										<div class="prodInfoWrap">
+											<span class="prodValue">나의 우대금리 적용 항목</span>
+											<span class="prodValue">급여이체, 마케팅 동의, 월평균 2회 비대면 이체 등</span>
+										</div>
+									</a>
+								</li> -->
+							</ul>
+						</div>
+
+						<!-- s:우대금리기반-->
+						<div class="boxTypeWrap bgType04 addShadow"> <!--09.06 수정-->
+							<div class="visualSubWrap">
+								<h3 class="prodListTit img01">빅데이터로 분석한<br> 우대금리 맞춤상품을 찾았어요</h3> <!-- [2023-02-02] 문구수정 -->
+								<p class="subTxt4">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+							</div>
+							<ul class="prodListWrap">
+								<li>
+									<a href="javascript:;">
+										<div class="prodRecomWrap">
+											<span class="tagLabel">신용</span>
+											<strong class="prodTit">NH로바꿈대출</strong>
+											<em class="prodRecommInfo">나의 예상우대금리</em>
+											<div class="prodRecomVal dsf">
+												<span class="dataValueWrap">
+													<strong class="dataValue">0.3</strong><em class="per down">% p</em>
+												</span>
+												<div class="prodVal ty01">
+													최저(연)<span class="dataValue">1.67</span><em class="per">%</em>(연/세전)
+												</div>
+											</div>
+										</div>
+										<div class="prodInfoWrap">	
+											<span class="prodValue">나의 우대금리 적용 항목</span>
+											<span class="prodValue">급여이체, 자동이체 3건, 카드이용실적 등</span> <!-- [2023-01-27] 수정 -->
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="type02">
+										<div class="prodRecomWrap">
+											<span class="tagLabel">신용</span>
+											<strong class="prodTit">NH모바일아파트대출2.0</strong>
+											<em class="prodRecommInfo">나의 예상우대금리</em>
+											<div class="prodRecomVal dsf">
+												<span class="dataValueWrap">
+													<strong class="dataValue">0.3</strong><em class="per down">% p</em>
+												</span>
+												<div class="prodVal ty01">
+													최저(연)<span class="dataValue">1.67</span><em class="per">%</em>(연/세전)
+												</div>
+											</div>
+										</div>
+										<div class="prodInfoWrap">	
+											<span class="prodValue">나의 우대금리 적용 항목</span>
+											<span class="prodValue">급여이체, 자동이체 3건, 카드이용실적 등</span> <!-- [2023-01-27] 수정 -->
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- e:우대금리기반-->
+
+						<!-- s:일반빅데이터-->
+						<div class="boxTypeWrap bgType04 addShadow"> 
+							<div class="visualSubWrap">
+								<h3 class="prodListTit img07">
+									대출이 필요하신 당신을 위해<br>농협은행 대표 상품을 추천해요 <!-- [2023-02-02] 문구수정  -->
+								</h3> <!--12.20 수정-->
+								<p class="subTxt4">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+							</div>
+							<ul class="prodListWrap">
+								<li>
+									<a href="javascript:;">
+										<div class="prodRecomWrap">
+											<span class="tagLabel">신용</span>
+											<strong class="prodTit">NH로바꿈대출</strong>
+											<em class="prodRecommInfo">최저(연)</em>
+											<div class="prodRecomVal dsf">
+												<span class="dataValueWrap">
+													<strong class="dataValue">1.80</strong><em class="per">%</em>
+												</span>
+												<div class="prodVal ty01">
+													모바일을 통해 최대 1.5억원까지 <br>이용 가능한 직장인 전용 대환 신용대출상품
+												</div>
+											</div>
+											<span class="hashWrap"><!--09.15 추가-->
+												<em class="hastag bg01">#개인사업자</em>
+												<em class="hastag bg02">#사회초년생</em>
+												<em class="hastag bg03">#중금리</em>
+											</span><!--//09.15 추가-->
+										</div>
+										<!-- <div class="prodInfoWrap">	
+											<span class="prodValue">예상우대금리(1.8%p)</span>
+											<span class="prodValue">급여이체, 마케팅동의, 월평균 2회 비대면 이체등</span>
+										</div> -->
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+										<div class="prodRecomWrap">
+											<span class="tagLabel">담보</span>
+											<strong class="prodTit">NH모바일아파트대출2.0</strong>
+											<em class="prodRecommInfo">최저(연)</em>
+											<div class="prodRecomVal dsf">
+												<span class="dataValueWrap">
+													<strong class="dataValue">1.80</strong><em class="per">%</em>
+												</span>
+												<div class="prodVal ty01">
+													은행 방문없이 휴대폰 하나로 가능한<br> 아파트담보대출
+												</div>
+											</div>
+											<span class="hashWrap"><!--09.15 추가-->
+												<em class="hastag bg01">#개인사업자</em>
+												<em class="hastag bg02">#사회초년생</em>
+												<em class="hastag bg03">#중금리</em>
+											</span><!--//09.15 추가-->
+										</div>
+										<!-- <div class="prodInfoWrap">	
+											<span class="prodValue">예상우대금리(1.8%p)</span>
+											<span class="prodValue">급여이체, 마케팅동의, 월평균 2회 비대면 이체등</span>
+										</div> -->
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- e:일반빅데이터-->
+
+						<!-- s:선택약관(7번) 미동의한 고객의 경우 //--><!-- [2022-12-20] 케이스 추가 -->
+						<div class="boxTypeWrap bgType04 addShadow"> 
+							<div class="visualSubWrap">
+								<h3 class="prodListTit img01">농협은행 대표 대출 상품을<br> 소개해드려요</h3>
+								<p class="subTxt4">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+							</div>
+							<ul class="prodListWrap">
+								<li>
+									<div class="disagree">
+										<a href="javascript:;" role="button">
+											<p class="disagreeP"><strong>나만 알고 싶은 추천상품</strong></p>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!--// e:선택약관(7번) 미동의한 고객의 경우 -->
+
+						<div class="boxTypeWrap bgType03 addShadow"> 
+							<div class="visualSubWrap">
+								<h3 class="prodListTit img03">
+									직업, 소득 관계 없이 대출이 필요한<br>통신 3사 이용고객이라면?
+								</h3>
+								<p class="subTxt4">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+							</div>
+							
+							<ul class="prodListWrap">
+								<li>
+									<a href="javascript:;">
+										<div class="prodRecomWrap">
+											<span class="tagLabel">신용</span>
+											<strong class="prodTit">올원 비상금 대출</strong>
+											<em class="prodRecommInfo">최저(연)</em>
+											<div class="prodRecomVal dsf">
+												<span class="dataValueWrap">
+													<strong class="dataValue">6.57</strong><em class="per">%</em>
+												</span>
+												<div class="prodVal ty01">
+													24시간 365일 비상금 소액대출
+												</div>
+											</div>
+											<span class="hashWrap">
+												<em class="hastag bg01">#개인사업자</em>
+												<em class="hastag bg02">#사회초년생</em>
+												<em class="hastag bg03">#중금리</em>
+											</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- //[2022-12-20] 케이스 추가 -->
+
+						<!-- s:선택약관(7-1번) 미동의한 고객의 경우 //-->
+						<div class="boxTypeWrap bgType04 addShadow"> 
+							<div class="visualSubWrap">
+								<h3 class="prodListTit img01">직업, 소득 관계 없이 대출이 필요한<br>통신 3사 이용고객이라면?</h3><!--12.20 텍스트 수정-->
+								<p class="subTxt4">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+							</div>
+							<ul class="prodListWrap">
+								<li>
+									<div class="disagree">
+										<a href="javascript:;" role="button">
+											<p class="disagreeP"><strong>나만 알고 싶은 추천상품</strong></p>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!--// e:선택약관(7-1번) 미동의한 고객의 경우 -->
+
+					</div><!-- //.transfer -->
+                </div>
+
+                <div class="popBtnWrap">
+                    <!-- <div class="popBtn">
+                        <a href="javascript:;" class="confirmBtn">조회</a>
+                    </div> -->
+                    <a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다."><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+                </div>
+            </div>
+        </div>
+		<!-- // 계좌별칭 설정 팝업 -->
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,932 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>UI Guide [차트]</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="nhasset guide_wrapper">
+	<header class="guide_header">
+		<h1>UI GUIDE <span>차트</span></h1>
+		<nav data-toggle="wrap">
+			<button type="button" class="guide_btn" data-toggle="btn" aria-expanded="false">전체메뉴</button>
+			<div data-toggle="cont">
+				<a href="txt_sample.html">타이틀/텍스트</a>
+				<a href="mes_sample.html">메세지</a>
+				<a href="button_sample.html">버튼</a>
+				<a href="form_sample.html">폼</a>
+				<a href="list_sample.html">리스트</a>
+				<a href="info_sample.html">정보</a>
+				<a href="table_sample.html">테이블</a>
+				<a href="bbs_sample.html">게시판</a>
+				<a href="banner_sample.html">배너</a>
+				<a href="chart_sample.html" aria-current="page">차트</a>
+				<a href="etc_sample.html">기타</a>
+			</div>
+		</nav>
+	</header>
+
+	<!-- ###################################### -->
+	<!-- ### UI Guide [차트] ### -->
+	<!-- ###################################### -->
+	<div class="guide_container">
+		<nav class="guide_menu">
+			<a href="#GCONTENT1" class="active">차트영역</a>
+			<a href="#GCONTENT2">가로막대</a>
+			<a href="#GCONTENT3">세로막대</a>
+			<a href="#GCONTENT4">범례</a>
+		</nav>
+
+		<div class="guide_box">
+			<h2>2022/2023 가이드 정의</h2>
+			<ul>
+				<li>공통적으로 사용한 클래스 네이밍에 한하여 정리되었으며, 일부 페이지에서만 사용할 수 있는 클래스 네이밍은 가이드에서 제외함.<br><strong>예시) .yeartexForm(연말정산)</strong></li>
+				<li>2023년 고도화 작업시 추가된 스타일 정의에 대해선 다음과 같이 표기함.<i class="guide_tag">2023고도화</i></li>
+			</ul>
+		</div>
+
+		<!-- ################################# -->
+		<!-- ### 차트영역 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT1">
+			<h2 class="guide_title">차트영역</h2>
+			<!-- -------------------------------------- -->
+			<!-- [유형1] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형1 : .areaChart1  <i class="guide_tag">2023고도화</i></h3>
+				<p class="guide_txt">차트 플러그인 영역으로 인라인으로 높이값을 지정해 준다.</p>
+
+				<div class="guide_area">
+					<h4 class="guide_title4">기본구조</h4>
+					<div class="areaChart1" style="height:200px;">
+						<div class="chart"><div class="guide_empty">차트가 들어갑니다.</div></div>
+					</div>
+				</div>
+
+				<div class="guide_area">
+					<h4 class="guide_title4">안내문구 추가 : .info</h4>
+					<div class="areaChart1" style="height:160px;">
+						<div class="info">안내문구</div>
+						<div class="chart"><div class="guide_empty">차트가 들어갑니다.</div></div>
+					</div>
+
+					<h4 class="guide_title4">이미지 추가 : .info + .img*</h4>
+					<div class="areaChart1" style="height:160px;">
+						<div class="info img1">좌우로 스크롤 해주세요</div>
+						<div class="chart"><div class="guide_empty">차트가 들어갑니다.</div></div>
+					</div>
+				</div>
+
+				<div class="guide_area">
+					<h4 class="guide_title4">데이터 추가 : .data1</h4>
+					<div class="areaChart1" style="height:240px;">
+						<dl class="data1">
+							<dt>나의 신용점수는</dt>
+							<dd><strong class="dataValue">000</strong><span>점</span></dd>
+						</dl>
+						<div class="chart"><div class="guide_empty"><!--차트가 들어갑니다.--></div></div>
+					</div>
+				</div>
+
+				<div class="guide_area">
+					<h4 class="guide_title4">기준점 추가 : .item</h4>
+					<p class="guide_txt">알메이트차트 내용 중 "I" 기준으로 위치 잡음</p>
+					<div class="areaChart1" style="height:160px;">
+						<p class="item"><span>소득중간</span><span>000,000만원</span></p>
+						<div class="chart"><div class="guide_empty">차트가 들어갑니다.</div></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [유형2] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형2 : .areaChart3  <i class="guide_tag">2023고도화</i></h3>
+				<p class="guide_txt">이미지영역과 데이터가 함께 공존하는 영역으로 이미지 비율과 동일하게 font size 조정(vw사용) </p>
+				<div class="guide_area">
+					<div class="areaChart3" role="img" aria-label="대체텍스트">
+						<div class="img"><img src="../../images/earlyretire/img_investment01.png" alt=""></div>
+						<dl class="data1">
+							<dt>항목명</dt>
+							<dd>6.5</dd>
+							<dd>5.5</dd>
+							<dd>4.5</dd>
+							<dd>2.5</dd>
+							<dd>2.5</dd>
+						</dl>
+						<dl class="data2">
+							<dt>항목명</dt>
+							<dd>0</dd>
+							<dd>3.5</dd>
+							<dd>6.9</dd>
+							<dd>10.4</dd>
+							<dd>14.3</dd>
+							<dd>19.0</dd>
+						</dl>
+					</div>
+
+					<div class="areaChart3" role="img" aria-label="대체텍스트">
+						<div class="img"><img src="../../images/earlyretire/img_investment10.png" alt=""></div>
+						<dl class="data1">
+							<dt>항목명</dt>
+							<dd>6.5</dd>
+							<dd>4.5</dd>
+							<dd>2.5</dd>
+						</dl>
+						<dl class="data2">
+							<dt>항목명</dt>
+							<dd>0</dd>
+							<dd>3.5</dd>
+							<dd>10.4</dd>
+							<dd>19.0</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<!-- -------------------------------------- -->
+		</section>
+
+		<!-- ################################# -->
+		<!-- ### 가로막대차트 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT2">
+			<h2 class="guide_title">가로막대차트</h2>
+			<!-- -------------------------------------- -->
+			<!-- [유형1] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형1 : .areaChart2  <i class="guide_tag">2023고도화</i></h3>
+
+				<!-- ### 기본 ### -->
+				<div class="guide_area">
+					<h4 class="guide_title3">색상정의 : .c*</h4>
+
+					<h5 class="guide_title4">기본색상</h5>
+					<div class="areaChart2"><div class="chart"><span style="width:30%;"></span></div></div>
+
+					<h5 class="guide_title4">.c1</h5>
+					<div class="areaChart2 c1"><div class="chart"><span style="width:50%;"></span></div></div>
+
+					<h5 class="guide_title4">.c2</h5>
+					<div class="areaChart2 c2"><div class="chart"><span style="width:80%;"></span></div></div>
+
+					<h5 class="guide_title4">.c3</h5>
+					<div class="areaChart2 c3"><div class="chart"><span style="width:100%;"></span></div></div>
+				</div>
+
+				<!-- ### 텍스트 노출 ### -->
+				<div class="guide_area">
+					<h4 class="guide_title3">텍스트 노출</h4>
+					<div class="areaChart2">
+						<div class="chart"><span style="width:5%;"></span></div>
+						<p><span class="dataValue">0억 0,000</span><em class="won">만원</em> <span>부족해요</span></p>
+					</div>
+					<div class="areaChart2 c1">
+						<div class="chart"><span style="width:120%;"></span></div>
+						<p><span class="dataValue">0억 0,000</span><em class="won">만원</em> <span>남아요</span></p>
+					</div>
+				</div>
+
+				<!-- ### 좌우배치유형 ### -->
+				<div class="guide_area">
+					<h4 class="guide_title3">좌우배치유형 : .t1</h4>
+					<div class="areaChart2 t1">
+						<dl class="item1">
+							<dt>항목명</dt>
+							<dd>
+								<div class="chart"><span style="width:80%;"></span></div> <!--  [D] 그래프 영역 style="width:00%;" -->
+								<div><span class="dataValue">000</span><em class="won">점</em></div>
+							</dd>
+						</dl>
+						<dl class="item2">
+							<dt>항목명</dt>
+							<dd>
+								<div class="chart"><span style="width:50%;"></span></div> <!--  [D] 그래프 영역 style="width:00%;" -->
+								<div><span class="dataValue">000</span><em class="won">점</em></div>
+							</dd>
+						</dl>
+					</div>
+
+					<div class="areaChart2 t1" data-chart="wrap">
+						<!-- // -->
+						<dl role="button" tabindex="0" aria-expanded="false">
+							<dt>항목명</dt>
+							<dd>
+								<div class="data1">
+									<div class="chart item3"><span style="width:80%;"></span></div>
+									<div class="chart item2"><span style="width:30%;"></span></div>
+								</div>
+								<div class="data2" data-chart="cont">
+									<dl>
+										<dt>항목명</dt>
+										<dd>000,000만원</dd>
+									</dl>
+									<dl>
+										<dt>항목명</dt>
+										<dd>0,000만원</dd>
+									</dl>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl role="button" tabindex="0" aria-expanded="false">
+							<dt>항목명</dt>
+							<dd>
+								<div class="data1">
+									<div class="chart item3"><span style="width:50%;"></span></div>
+									<div class="chart item2"><span style="width:80%;"></span></div>
+								</div>
+								<div class="data2" data-chart="cont">
+									<dl>
+										<dt>항목명</dt>
+										<dd>000,000만원</dd>
+									</dl>
+									<dl>
+										<dt>항목명</dt>
+										<dd>0,000만원</dd>
+									</dl>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+					</div>
+				</div>
+
+				<!-- ### 상하배치유형 ### -->
+				<div class="guide_area">
+					<h4 class="guide_title3">상하배치유형 : .t2</h4>
+					<div class="areaChart2 t2">
+						<div class="chart"><span style="width:14%;"></span></div>
+						<ul class="item1">
+							<li>항목명 <strong class="dataValue">000,000,000</strong><span class="won">원</span></li>
+							<li>항목명 <strong class="dataValue">000,000,000</strong><span class="won">원</span></li>
+						</ul>
+					</div>
+
+					<div class="areaChart2 t2 c1">
+						<div class="chart"><span style="width:50%;"></span></div>
+						<ul class="item1">
+							<li>항목명 <strong class="dataValue">000,000,000</strong><span class="won">원</span></li>
+							<li>항목명 <strong class="dataValue">000,000,000</strong><span class="won">원</span></li>
+						</ul>
+					</div>
+
+					<div class="areaChart2 t2 c2">
+						<div class="chart"><span style="width:80%;"></span></div>
+						<ul class="item1">
+							<li>항목명 <strong class="dataValue">000,000,000</strong><span class="won">원</span></li>
+							<li>항목명 <strong class="dataValue">000,000,000</strong><span class="won">원</span></li>
+						</ul>
+					</div>
+
+					<div class="areaChart2 t2 c3">
+						<div class="chart"><span style="width:100%;"></span></div>
+						<ul class="item1">
+							<li>항목명 <strong class="dataValue">000,000,000</strong><span class="won">원</span></li>
+							<li>항목명 <strong class="dataValue">000,000,000</strong><span class="won">원</span></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- ### 위치가변형 ### -->
+				<h4 class="guide_title3">위치가변형 : .t3</h4>
+				<div class="guide_area" style="overflow:hidden;">
+					<div class="areaChart2 t3">
+						<div class="chart"><span style="width:0%;"></span></div> 
+						<ul class="item1">
+							<li><p><span>항목명</span><span class="dataValue">000,000,000</span><em class="won">원</em></p></li>
+							<li style="--el-width:0%;"><span>0% 갚음</span></li>
+						</ul>
+					</div>
+					<div class="areaChart2 t3">
+						<div class="chart"><span style="width:2.3%;"></span></div> 
+						<ul class="item1">
+							<li><p><span>항목명</span><span class="dataValue">000,000,000</span><em class="won">원</em></p></li>
+							<li style="--el-width:2.3%;"><span>2.3% 갚음</span></li>
+						</ul>
+					</div>
+					<div class="areaChart2 t3">
+						<div class="chart"><span style="width:50.5%;"></span></div> 
+						<ul class="item1">
+							<li><p><span>항목명</span><span class="dataValue">000,000,000</span><em class="won">원</em></p></li>
+							<li style="--el-width:50.5%;"><span>50.5% 갚음</span></li>
+						</ul>
+					</div>
+					<div class="areaChart2 t3">
+						<div class="chart"><span style="width:100%;"></span></div> 
+						<ul class="item1">
+							<li><p><span>항목명</span><span class="dataValue">000,000,000</span><em class="won">원</em></p></li>
+							<li style="--el-width:100%;"><span>100% 갚음</span></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- ### 가로등분형 ### -->
+				<div class="guide_area">
+					<h4 class="guide_title3">가로등분형 : .t4</h4>
+					<div class="areaChart2 t4" data-chart="wrap">
+						<ul>
+							<li class="item1" role="button" tabindex="0" aria-expanded="false" style="--el-value:40%">
+								<div class="chart"></div>
+								<div class="info" data-chart="cont">
+									<span>항목명</span>
+									<span>0,000,000,000원</span>
+								</div>
+							</li>
+							<li class="item2" role="button" tabindex="0" aria-expanded="false" style="--el-value:30%">
+								<div class="chart"></div>
+								<div class="info" data-chart="cont">
+									<span>항목명</span>
+									<span>0,000,000,000원</span>
+								</div>
+							</li>
+							<li class="item3" role="button" tabindex="0" aria-expanded="false" style="--el-value:20%">
+								<div class="chart"></div>
+								<div class="info" data-chart="cont">
+									<span>항목명</span>
+									<span>0,000,000,000원</span>
+								</div>
+							</li>
+							<li class="item4" role="button" tabindex="0" aria-expanded="false" style="--el-value:10%">
+								<div class="chart"></div>
+								<div class="info" data-chart="cont">
+									<span>항목명</span>
+									<span>0,000,000,000원</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="areaChart2 t4" data-chart="wrap">
+						<ul>
+							<li class="item5" role="button" tabindex="0" aria-expanded="false" style="--el-value:40%">
+								<div class="chart"></div>
+								<div class="info" data-chart="cont">
+									<span>항목명</span>
+									<span>0,000,000,000원</span>
+								</div>
+							</li>
+							<li class="item6" role="button" tabindex="0" aria-expanded="false" style="--el-value:30%">
+								<div class="chart"></div>
+								<div class="info" data-chart="cont">
+									<span>항목명</span>
+									<span>0,000,000,000원</span>
+								</div>
+							</li>
+							<li class="item7" role="button" tabindex="0" aria-expanded="false" style="--el-value:20%">
+								<div class="chart"></div>
+								<div class="info" data-chart="cont">
+									<span>항목명</span>
+									<span>0,000,000,000원</span>
+								</div>
+							</li>
+							<li class="item8" role="button" tabindex="0" aria-expanded="false" style="--el-value:10%">
+								<div class="chart"></div>
+								<div class="info" data-chart="cont">
+									<span>항목명</span>
+									<span>0,000,000,000원</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- ################################# -->
+		<!-- ### 세로막대차트 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT3">
+			<h2 class="guide_title">세로막대차트</h2>
+			<!-- -------------------------------------- -->
+			<!-- [유형1] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형1 : .graphWrap</h3>
+				<div class="graphWrap" role="img" aria-label="대체텍스트">
+					<div class="graphVerWrap graphPeer type02">
+						<div class="graphTypeWrap">
+							<div class="graphVerLine" style="bottom:100px"> <!-- 위치 0px ~ 100px -->
+								<span class="title">또래부자평균</span>
+								<div class="lineWrap">
+									<span class="dotLine"><span class="blind">도트라인</span></span>
+								</div>
+							</div>
+							<div class="graphType">
+								<div class="graphTip02 darkgreen">
+									<p class="graphTipBox">
+										<span>3월</span>
+										<span class="value">1,250,234<em>원</em></span>
+									</p>
+								</div>
+								<div class="baseGraph02 msBar" onclick="graphVerTipOpen($(this))"><span class="lineGraph " data-value="30"></span></div>
+								<div class="graphValueData"><span class="blind">3월 또래부자평균 자산</span></div>
+							</div>
+							<div class="graphType">
+								<div class="graphTip02 darkgreen">
+									<p class="graphTipBox">
+										<span>이번달</span>
+										<span class="value">1,250,234<em>원</em></span>
+									</p>
+								</div>
+								<div class="baseGraph02 msBar" onclick="graphVerTipOpen($(this))"><span class="lineGraph" data-value="100"></span></div>
+								<div class="graphValueData"><span class="blind">이번달 또래부자평균 자산</span></div>
+							</div>
+						</div>
+						<div class="graphBotText">
+							<span>3월</span>
+							<span>이번달</span>
+						</div>	
+					</div>
+
+					<div class="graphVerWrap graphPeer type03">
+						<div class="graphTypeWrap">
+							<div class="graphVerLine" style="bottom:100px">
+								<span class="title">또래부자평균</span>
+								<div class="lineWrap">
+									<span class="dotLine"><span class="blind">도트라인</span></span>
+								</div>
+							</div>
+							<div class="graphType">
+								<div class="graphTip02 darkgreen">
+									<p class="graphTipBox">
+										<span>3월</span>
+										<span class="value">1,250,234<em>원</em></span>
+									</p>
+								</div>
+								<div class="baseGraph02 msBar" onclick="graphVerTipOpen($(this))"><span class="lineGraph " data-value="30"></span></div>
+								<div class="graphValueData"><span class="blind">3월 또래부자평균 자산</span></div>
+							</div>
+							<div class="graphType">
+								<div class="graphTip02 darkgreen">
+									<p class="graphTipBox">
+										<span>4월</span>
+										<span class="value">1,250,234<em>원</em></span>
+									</p>
+								</div>
+								<div class="baseGraph02 msBar" onclick="graphVerTipOpen($(this))"><span class="lineGraph " data-value="50"></span></div>
+								<div class="graphValueData"><span class="blind">4월 또래부자평균 자산</span></div>
+							</div>
+							<div class="graphType">
+								<div class="graphTip02 darkgreen">
+									<p class="graphTipBox">
+										<span>이번달</span>
+										<span class="value">1,250,234<em>원</em></span>
+									</p>
+								</div>
+								<div class="baseGraph02 msBar" onclick="graphVerTipOpen($(this))"><span class="lineGraph" data-value="100"></span></div>
+								<div class="graphValueData"><span class="blind">이번달 또래부자평균 자산</span></div>
+							</div>
+						</div>
+						<div class="graphBotText">
+							<span>3월</span>
+							<span>4월</span>
+							<span>이번달</span>
+						</div>	
+					</div>
+					<div class="graphVerWrap graphPeer type04">
+						<div class="graphTypeWrap">
+							<div class="graphVerLine" style="bottom:100px"> <!-- 위치 0px ~ 100px -->
+								<span class="title">또래부자평균</span>
+								<div class="lineWrap">
+									<span class="dotLine"><span class="blind">도트라인</span></span>
+								</div>
+							</div>
+							<div class="graphType">
+								<div class="graphTip02 darkgreen">
+									<p class="graphTipBox">
+										<span>3월</span>
+										<span class="value">1,250,234<em>원</em></span>
+									</p>
+								</div>
+								<div class="baseGraph02 msBar" onclick="graphVerTipOpen($(this))"><span class="lineGraph " data-value="30"></span></div>
+								<div class="graphValueData"><span class="blind">3월 또래부자평균 자산</span></div>
+							</div>
+							<div class="graphType">
+								<div class="graphTip02 darkgreen">
+									<p class="graphTipBox">
+										<span>4월</span>
+										<span class="value">1,250,234<em>원</em></span>
+									</p>
+								</div>
+								<div class="baseGraph02 msBar" onclick="graphVerTipOpen($(this))"><span class="lineGraph " data-value="50"></span></div>
+								<div class="graphValueData"><span class="blind">4월 또래부자평균 자산</span></div>
+							</div>
+							<div class="graphType">
+								<div class="graphTip02 darkgreen">
+									<p class="graphTipBox">
+										<span>5월</span>
+										<span class="value">1,250,234<em>원</em></span>
+									</p>
+								</div>
+								<div class="baseGraph02 msBar" onclick="graphVerTipOpen($(this))"><span class="lineGraph" data-value="80"></span></div> <!-- [2023-02-03] darkgreen 클래스 삭제 -->
+								<div class="graphValueData"><span class="blind">5월 나의 금융자산</span></div>
+							</div>
+							<div class="graphType">
+								<div class="graphTip02 darkgreen">
+									<p class="graphTipBox">
+										<span>이번달</span>
+										<span class="value">1,250,234<em>원</em></span>
+									</p>
+								</div>
+								<div class="baseGraph02 msBar" onclick="graphVerTipOpen($(this))"><span class="lineGraph" data-value="100"></span></div>
+								<div class="graphValueData"><span class="blind">이번달 또래부자평균 자산</span></div>
+							</div>
+						</div>
+						<div class="graphBotText">
+							<span>3월</span>
+							<span>4월</span>
+							<span>5월</span>
+							<span>이번달</span>
+						</div>	
+					</div>
+				</div>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [유형2] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형2 : .areaChart4 <i class="guide_tag">2023고도화</i></h3>
+				<p class="guide_txt">특정 바의 색상만 변경 (클릭시 변경되지 않음)</p>
+				<div class="areaChart4" data-chart="wrap"  data-label="평균소비" style="--el-line-value:50%;"> <!-- [D] 평균소비 % : --el-line-value:00%; -->
+					<!-- // -->
+					<dl style="--el-value:5%;" role="button" tabindex="0" aria-expanded="false"> <!-- [D] 각 항목별 % : --el-value:00%; -->
+						<dt>항목명</dt>
+						<dd>
+							<div class="chart"></div>
+							<div data-chart="cont">000,000,000,000원</div>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl style="--el-value:40%;" role="button" tabindex="0" aria-expanded="false">
+						<dt>항목명</dt>
+						<dd>
+							<div class="chart"></div>
+							<div data-chart="cont">000,000원</div>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl style="--el-value:80%;" role="button" tabindex="0" aria-expanded="false">
+						<dt>항목명</dt>
+						<dd>
+							<div class="chart"></div>
+							<div data-chart="cont">000,000원</div>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="data1" style="--el-value:100%;" role="button" tabindex="0" aria-expanded="false">
+						<dt>지난달</dt>
+						<dd>
+							<div class="chart"></div>
+							<div data-chart="cont">000,000,000,000원</div>
+						</dd>
+					</dl>
+					<!-- // -->
+				</div>
+			</div>
+		</section>
+
+		<!-- ################################# -->
+		<!-- ### 범례 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT4">
+			<h2 class="guide_title">범례</h2>
+			<!-- -------------------------------------- -->
+			<!-- [유형1] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형1 : .graphAddEx</h3>
+				<div class="guide_area">
+					<h4 class="guide_title3">기본 : ul.ty01</h4>
+					<div class="graphAddEx" >
+						<ul class="ty01">
+							<li class="bl01">항목명</li>
+							<li class="bl02">항목명</li>
+						</ul>
+						<ul class="ty01">
+							<li class="bl03">항목명</li>
+							<li class="bl04">항목명</li>
+						</ul>
+						<ul class="ty01">
+							<li class="bl05">항목명</li>
+							<li class="bl06">항목명</li>
+						</ul>
+						<ul class="ty01">
+							<li class="bl07">항목명</li>
+							<li class="bl08">항목명</li>
+						</ul>
+						<ul class="ty01">
+							<li class="bl09">항목명 <i class="guide_tag">2023고도화</i></li>
+							<li class="bl10">항목명 <i class="guide_tag">2023고도화</i></li>
+						</ul>
+						<ul class="ty01">
+							<li class="bl11">항목명 <i class="guide_tag">2023고도화</i></li>
+							<li class="bl12">항목명 <i class="guide_tag">2023고도화</i></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="guide_area">
+					<h4 class="guide_title3">스타일 변경 : ul.ty01 + .item1  <i class="guide_tag">2023고도화</i></h4>
+					<div class="graphAddEx">
+						<ul class="ty01 item1">
+							<li class="bl09">항목명</li> 
+							<li class="bl03">항목명
+								<div class="tooltipWrap">
+									<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">툴팁 열기</span></button>
+									<div class="tooltipCont">
+										<p>툴팁내용이 노출됩니다.</p>
+										<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">안내 툴팁 닫기</span></button>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<hr class="guide_line">
+					<h5 class="guide_title4">등급정보 : &gt; .grade* </h5>
+					<div class="graphAddEx">
+						<ul class="ty01 item1">
+							<li class="grade1">매우안정</li>
+							<li class="grade2">안정</li>
+							<li class="grade3">다소안정</li>
+							<li class="grade4">보통</li>
+							<li class="grade5">우려</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="guide_area">
+					<h4 class="guide_title3">2단배치 : ul.ty01 + .item2  <i class="guide_tag">2023고도화</i></h4>
+					<div class="graphAddEx">
+						<ul class="ty01 item2">
+							<li class="bl10">항목명</li>
+							<li class="bl02">항목명</li>
+							<li class="bl11">항목명</li>
+							<li class="bl12">항목명</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="guide_area">
+					<h4 class="guide_title3">좌우배치 : ul.ty01 + .betweenItem</h4>
+					<div class="graphAddEx graphLegend">
+						<ul class="ty01 betweenItem">
+							<li class="bl01">항목명</li>
+							<li class="value">000,000,000원</li>
+						</ul>
+						<ul class="ty01 betweenItem">
+							<li class="bl09">항목명</li>
+							<li class="value">000,000,000원</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="guide_area">
+					<h4 class="guide_title3">색상재정의 : ul.ty03</h4>
+					<h5 class="guide_title4">3단 배치 : + .item3</h5>
+					<div class="graphAddEx">
+						<ul class="ty03 item3">
+							<li class="bl01">.bl01 </li>
+							<li class="bl02">.bl02</li>
+							<li class="bl03">.bl03 </li>
+							<li class="bl04">.bl04</li>
+							<li class="bl05">.bl05 </li>
+							<li class="bl06">.bl06</li>
+							<li class="bl07">.bl07 </li>
+							<li class="bl08">.bl08</li>
+							<li class="bl09">.bl09</li>
+						</ul>
+					</div>
+
+					<h5 class="guide_title4">2단 배치 : + .w33</h5>
+					<div class="graphAddEx" style="overflow:hidden;">
+						<ul class="ty03 w33">
+							<li class="bl01">.bl01 </li>
+							<li class="bl02">.bl02</li>
+							<li class="bl03">.bl03 </li>
+							<li class="bl04">.bl04</li>
+							<li class="bl05">.bl05 </li>
+							<li class="bl06">.bl06</li>
+							<li class="bl07">.bl07 </li>
+							<li class="bl08">.bl08</li>
+							<li class="bl09">.bl09</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [유형2] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형2 : .legendList</h3>
+				<div class="guide_area">
+					<h4 class="guide_title4">기본</h4>
+					<p class="guide_txt">페이지에 사용한 클래스만 정의</p>
+					<hr class="guide_line">
+					<ul class="legendList">
+						<li>
+							<span class="legendTit type10"><strong>항목명 : type10</strong></span>
+							<span class="legendAmnt"><em class="value">000,000,000</em>원</span>
+						</li>
+						<li>
+							<span class="legendTit type30"><strong>항목명 : type30</strong></span>
+							<span class="legendAmnt"><em class="value">000,000,000</em>원</span>
+						</li>
+						<li>
+							<span class="legendTit type31"><strong>항목명 : type31</strong></span>
+							<span class="legendAmnt"><em class="value">000,000,000</em>원</span>
+						</li>
+						<li>
+							<span class="legendTit type32"><strong>항목명 : type32</strong></span>
+							<span class="legendAmnt"><em class="value">000,000,000</em>원</span>
+						</li>
+						<li>
+							<span class="legendTit type33"><strong>항목명 : type33</strong></span>
+							<span class="legendAmnt"><em class="value">000,000,000</em>원</span>
+						</li>
+						<li>
+							<span class="legendTit type34"><strong>항목명 : type34</strong></span>
+							<span class="legendAmnt"><em class="value">000,000,000</em>원</span>
+						</li>
+						<li>
+							<span class="legendTit type35"><strong>항목명 : type35</strong></span>
+							<span class="legendAmnt"><em class="value">000,000,000</em>원</span>
+						</li>
+						<li>
+							<span class="legendTit type36"><strong>항목명 : type36</strong></span>
+							<span class="legendAmnt"><em class="value">000,000,000</em>원</span>
+						</li>
+						<li>
+							<span class="legendTit type37"><strong>항목명 : type37</strong></span>
+							<span class="legendAmnt"><em class="value">000,000,000</em>원</span>
+						</li>
+						<li>
+							<span class="legendTit type38"><strong>항목명 : type38</strong></span>
+							<span class="legendAmnt"><em class="value">000,000,000</em>원</span>
+						</li>
+						<li>
+							<span class="legendTit type39"><strong>항목명 : type39</strong></span>
+							<span class="legendAmnt"><em class="value">000,000,000</em>원</span>
+						</li>
+						<li>
+							<span class="legendTit type41"><strong>항목명 : type41</strong></span>
+							<span class="legendAmnt"><em class="value">000,000,000</em>원</span>
+						</li>
+						<li>
+							<span class="legendTit type42"><strong>항목명 : type42</strong></span>
+							<span class="legendAmnt"><em class="value">000,000,000</em>원</span>
+						</li>
+						<li>
+							<span class="legendTit type43"><strong>항목명 : type43</strong></span>
+							<span class="legendAmnt"><em class="value">000,000,000</em>원</span>
+						</li>
+						<li>
+							<span class="legendTit type44"><strong>항목명 : type44</strong></span>
+							<span class="legendAmnt"><em class="value">000,000,000</em>원</span>
+						</li>
+						<li>
+							<span class="legendTit type45"><strong>항목명 : type45</strong></span>
+							<span class="legendAmnt"><em class="value">000,000,000</em>원</span>
+						</li>
+						<li>
+							<span class="legendTit type47"><strong>항목명 : type47</strong></span>
+							<span class="legendAmnt"><em class="value">000,000,000</em>원</span>
+						</li>
+						<li>
+							<span class="legendTit type50"><strong>항목명 : type50</strong></span>
+							<span class="legendAmnt"><em class="value">000,000,000</em>원</span>
+						</li>
+						<li>
+							<span class="legendTit type51"><strong>항목명 : type51</strong></span>
+							<span class="legendAmnt"><em class="value">000,000,000</em>원</span>
+						</li>
+						<li>
+							<span class="legendTit type52"><strong>항목명 : type52</strong></span>
+							<span class="legendAmnt"><em class="value">000,000,000</em>원</span>
+						</li>
+					</ul>
+				</div>
+				<div class="guide_area">
+					<h4 class="guide_title4">스타일변경 : .tyrd</h4>
+					<ul class="legendList tyrd mt25">
+						<li>
+							<span class="legendTit type41">항목명</span>
+						</li>
+						<li>
+							<span class="legendTit type42">항목명</span>
+						</li>
+						<li>
+							<span class="legendTit type43">항목명</span>
+						</li>
+						<li>
+							<span class="legendTit type44">항목명</span>
+						</li>
+						<li>
+							<span class="legendTit type45">항목명</span>
+						</li>
+					</ul>
+				</div>
+				<div class="guide_area">
+					<h4 class="guide_title4">스타일변경 : .tyac</h4>
+					<ul class="legendList tyac">
+						<li>
+							<span class="legendTit type10">항목명</span>
+						</li>
+						<li>
+							<span class="legendTit type33">항목명</span>
+						</li>
+						<li>
+							<span class="legendTit type34">항목명</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- -------------------------------------- -->
+		</section>
+		<!-- ################################# -->
+	</div>
+	<!-- ###################################### -->
+</div>
+
+<!-- ###################################### -->
+<!-- ### [샘플] 스크립트 ### -->
+<!-- ###################################### -->
+<script type="text/javascript">
+	$(".graphitem .graphStatus").each(function(i) {
+		graphValue = $(this).find(".lineGraph").attr("data-value");
+		$(this).find(".lineGraph").animate({width:graphValue + "%"}, 500);
+		iconPs = $(this).find(".graphTip");
+		iconPs.animate({left:graphValue + "%"}, 500);
+		graphData = $(this).siblings('.graphValueData');
+		graphData.text(graphValue + ".0 %");
+	});
+
+	var graphTipOpen = function(obj) {
+		var $item = $(this).find('.msBar');
+		var $tip =  $item.siblings('.graphTip');
+		$tip = obj.closest(".graphStatus").find(".graphTip");
+		$(".graphTip").hide();
+		$tip.show();
+	};
+	// 금융자산 총액 그래프
+	$(".graphVerWrap.graphPeer .graphType").each(function(i) {
+		graphValue = $(this).find(".lineGraph").attr("data-value");
+		graphline = $(this).find(".lineGraph.mildgreen").attr("data-value");
+		graphBg = $(".graphVerLine").position().top + 20;
+		height1 =$('.lineGraph.mildgreen').outerHeight() + 24;
+		height2 =$('.graphTip02.mildgreen').outerHeight();
+		graphBgH = height1 + height2;
+		$(this).find(".lineGraph").height(graphValue);
+		$(this).find(".graphTip02").css('bottom' , graphValue + "px");
+	});
+	var graphVerTipOpen = function(obj) {
+		var $item = $(this).find('.msBar');
+		var $tip =  $item.siblings('.graphTip02');
+		$tip = obj.closest(".graphType").find(".graphTip02");
+		$(".graphTip02").hide();
+		$(".graphPeer .lineGraph").removeClass("darkgreen");
+		$tip.show();
+		obj.find(".lineGraph").addClass("darkgreen");
+	};
+
+	$(document).ready(function(){
+		//차트 클릭 이벤트 샘플 : 상세정보 노출
+		$(document).off('click.chart').on('click.chart','[data-chart="wrap"] [role="button"]', function(){
+			var _chart_cont = $(this).find('[data-chart="cont"]'); //오픈되는 영역
+			
+			//접근성
+			if($(this).attr('aria-expanded') == 'true') $(this).attr('aria-expanded',false);
+			else $(this).attr('aria-expanded',true).siblings().attr('aria-expanded',false);
+
+			//초기화
+			$(this).siblings().find('[data-chart="cont"]').removeClass('active');
+
+			//오픈
+			if(_chart_cont.hasClass('active')) _chart_cont.removeClass('active');
+			else _chart_cont.addClass('active')
+		});
+	});
+</script>
+<!-- ###################################### -->
+</body>
+</html>

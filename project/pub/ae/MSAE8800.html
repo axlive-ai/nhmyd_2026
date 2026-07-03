@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>컨설팅 > 세금계산서</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		//tostpop();//토스트 팝업 호출 
+	})
+
+	function tostpop(){
+		var $tostCont = '<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg">업데이트를 완료했습니다.</div></div>'
+		$('.container').after($tostCont);
+		setTimeout(function(){
+			$('.tostpopupWrap').remove();
+		},4000)
+	}
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>세금계산기</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<h2 class="defTit icoHeart">
+			<strong>건강보험료 모의계산<br>한 번 해볼까?</strong> <!-- [2022-11-17] 수정 -->
+		</h2>
+		<p class="subTxt">
+			예상 건강보험료를 계산할 수 있는 서비스 입니다.<br>
+			건강보험료 유형을 선택해주세요.  <!-- [2022-11-17] 수정 -->
+		</p>
+		<ul class="typeSelList">
+			<li>
+				<a href="javascript:;">직장건강보험료계산<br>바로가기</a>
+			</li>
+			<li>
+				<a href="javascript:;">지역건강보험료 계산<br>바로가기</a>
+			</li>
+		</ul>
+		<!-- [2022-11-17] 알아두세요 추가 -->
+		<div class="info_area">
+			<strong class="info_area_title">알아두세요</strong>
+			<ul class="listBul disc">
+				<li>모의 계산된 보험료는 소득·재산의 변동, 취업·퇴직 등 상황 변화 및 조회 시점에 따라 실제 납부하는 보험료와는 차이가 있을 수 있습니다.</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

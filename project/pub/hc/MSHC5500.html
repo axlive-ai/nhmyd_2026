@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>헬스케어</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>비만</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+        <h2 class="txtt2 mt40"><strong>초절식 다이어트가 위험한 이유</strong></h2>
+        <div class="htNewsBanner">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="javascript:;" title="">
+                            <div class="cardBgWrap">
+                                <img src="../../images/banner/bg_htCardNews_sample01.jpg" alt="대체 텍스트 본문 내용과 똑같이 입력 필요">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="javascript:;" title="">
+                            <div class="cardBgWrap">
+                                <img src="../../images/banner/bg_htCardNews_sample02.jpg" alt="대체 텍스트 본문 내용과 똑같이 입력 필요">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="javascript:;" title="">
+                            <div class="cardBgWrap">
+                                <img src="../../images/banner/bg_htCardNews_sample03.jpg" alt="대체 텍스트 본문 내용과 똑같이 입력 필요">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="javascript:;" title="">
+                            <div class="cardBgWrap">
+                                <img src="../../images/banner/bg_htCardNews_sample04.jpg" alt="대체 텍스트 본문 내용과 똑같이 입력 필요">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="javascript:;" title="">
+                            <div class="cardBgWrap">
+                                <img src="../../images/banner/bg_htCardNews_sample05.jpg" alt="대체 텍스트 본문 내용과 똑같이 입력 필요">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-control">
+                    <div class="swiper-pagination"></div>
+                </div>
+                <a href="javascript:;" role="button" class="swiper-button-prev blind">이전슬라이드</a>
+                <a href="javascript:;" role="button" class="swiper-button-next blind">다음슬라이드</a>
+            </div>
+            <script>
+                $(function () {
+                    var swiper = new Swiper('.htNewsBanner .swiper-container', {
+                        spaceBetween: 16,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            type: 'fraction',
+                            clickable: true,
+                            bulletElement: 'a',
+                        },
+                        on: {
+                            init: function(){
+                                $('.htNewsBanner .swiper-slide').attr('aria-hidden','true');
+                                $('.htNewsBanner .swiper-slide-active').attr('aria-hidden','false');
+                            },
+                            slideChangeTransitionEnd : function(){
+                                var $shareBannerBtn = $(".htNewsBanner .swiper-pagination");
+                                $shareBannerBtn.find("a").attr('title','');
+                                $shareBannerBtn.find("a").eq(this.activeIndex).attr('title','선택됨');
+                                $('.swiper-slide').attr('aria-hidden','true');
+                                $('.swiper-slide-active').attr('aria-hidden','false');
+                            }
+                        }
+                    });
+                })
+            </script>
+        </div>
+        <h2 class="txtt2 mt30">관련 콘텐츠</h2>
+        
+        <!-- [2022-12-06] 배너 수정 -->
+        <!-- 비만 배너 : htSubMainBanner typeFat -->
+        <div class="htSubMainBanner typeFat">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="yabannerArea">
+                            <a href="javascript:;" title="">
+                                <div class="yabanner" style="background-image:url('../../images/banner/bg_ht_obj01.png');">
+                                    <span class="subTxt"><strong>비만</strong></span>
+                                    <p class="subTit"><strong>초절식 다이어트가<br>위험한 이유</strong></p>
+                                    <div class="tagWrap"><span class="tag text">#다이어트</span><span class="tag text">#초절식</span></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="yabannerArea">
+                            <a href="javascript:;" title="">
+                                <div class="yabanner" style="background-image:url('../../images/banner/bg_ht_obj02.png');">
+                                    <span class="subTxt"><strong>비만</strong></span>
+                                    <p class="subTit"><strong>다이어트 속설의<br>진실과 오해</strong></p>
+                                    <div class="tagWrap"><span class="tag text">#다이어트</span><span class="tag text">#운동</span></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="yabannerArea">
+                            <a href="javascript:;" title="">
+                                <div class="yabanner" style="background-image:url('../../images/banner/bg_ht_obj03.png');">
+                                    <span class="subTxt"><strong>비만</strong></span>
+                                    <p class="subTit"><strong>다이어트 실패 주범!<br>공복 호르몬 극복하려면?</strong></p>
+                                    <div class="tagWrap"><span class="tag text">#다이어트</span><span class="tag text">#호르몬</span></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-control">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-autoBtn playing">
+						<a href="javascript:;" class="stopBtn" title="자동재생중 두번 터치시 멈춤"></a>
+						<a href="javascript:;" class="playBtn" title="자동재생 멈춤 두번 터치시 자동재생시작"></a>
+					</div>
+                </div>
+            </div>
+            <script>
+                $(function () {
+                    var swiper = new Swiper('.htSubMainBanner.typeFat .swiper-container', {
+                        spaceBetween: 20,
+                        autoplay: {
+							delay: 2500,
+							disableOnInteraction: true,
+							pauseOnMouseEnter: true,
+						},
+                        pagination: {
+                            el: '.swiper-pagination',
+                            type: 'bullets',
+                            clickable: true,
+                            bulletElement: 'a',
+                        },
+                        on: {
+                            init: function(){
+                                $('.htSubMainBanner.typeFat .swiper-slide').attr('aria-hidden','true');
+                                $('.htSubMainBanner.typeFat .swiper-slide-active').attr('aria-hidden','false');
+                            },
+                            slideChangeTransitionEnd : function(){
+                                var $shareBannerBtn = $(".htSubMainBanner.typeFat .swiper-pagination");
+                                $shareBannerBtn.find("a").attr('title','');
+                                $shareBannerBtn.find("a").eq(this.activeIndex).attr('title','선택됨');
+                                $('.htSubMainBanner.typeFat .swiper-slide').attr('aria-hidden','true');
+                                $('.htSubMainBanner.typeFat .swiper-slide-active').attr('aria-hidden','false');
+                            }
+                        }
+                    });
+                    $('.htSubMainBanner.typeFat').find('.stopBtn').on('click', function () {
+						$('.htSubMainBanner.typeFat .swiper-autoBtn').removeClass('playing');
+						swiper.autoplay.stop();
+						console.log('자동재생 멈춤');
+					})
+					$('.htSubMainBanner.typeFat').find('.playBtn').on('click', function () {
+						$('.htSubMainBanner.typeFat .swiper-autoBtn').addClass('playing');
+						swiper.autoplay.start();
+						console.log('자동재생 시작');
+					})
+                })
+            </script>
+        </div>
+        <!-- //비만 배너 : htSubMainBanner typeFat -->
+        <!-- //[2022-12-06] 배너 수정 -->
+
+        
+
+        <a href="javascript:;" class="linkTxt3 mt20" role="button">헬스인뉴스에서 제공한 컨텐츠 입니다</a>
+
+        <!-- <div style="background:cyan;height:1000px">스크롤테스트 용 DIV</div> -->
+        <!-- [2022-12-30] 마크업 수정 -->
+        <button type="button" class="goTopBtn"><span class="blind">최상단으로 이동</span></button>
+        <!-- //[2022-12-30] 마크업 수정 -->
+
+	</div>
+</div>
+
+</body>
+</html>

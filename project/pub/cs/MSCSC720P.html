@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>카테고리 선택</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		fullLayerPop();
+	})
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack" role="button"><span class="blind">이전화면으로</span></a> <!-- [2020-11-16] role="button" 추가 -->
+			<h1><a href="javascript:;" role="text">카테고리 선택</a></h1>
+			<a href="javascript:;" class="btnEtc">나가기</a>
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+		</div>
+		<!-- //container -->
+
+		<!-- 팝업시작 -->
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>카테고리 선택</h1>
+				<div class="popCont grayPop">
+                    <div class="formWrap boxTypeWrap cataBoxTypeWrap"><!-- 2022-10-19 클래스 추가(cataBoxTypeWrap)  -->
+                        <ul>
+                            <li>
+                                <strong class="cs formTit">이체</strong>
+                                <ul class="selectCerti noChk">
+                                    <li>
+                                        <input type="radio" id="selCerti011" name="selCerti00" >
+                                        <label for="selCerti011">
+											<div class="logoArea">
+												<img src="../../images/category/cs/ico_cate_cs82.png" alt="출금이체"><!--12.09 카테고리 아이콘 수정-->
+											</div>
+                                            <div class="title">출금이체</div>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="selCerti022" name="selCerti00">
+                                        <label for="selCerti022">
+                                            <div class="logoArea">
+												<img src="../../images/category/cs/ico_cate_cs83.png" alt="저축"><!--12.09 카테고리 아이콘 수정-->
+											</div>
+                                            <div class="title">저축</div>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="selCerti033" name="selCerti00">
+                                        <label for="selCerti033">
+                                            <div class="logoArea">
+												<img src="../../images/category/cs/ico_cate_cs84.png" alt="현금"><!--12.09 카테고리 아이콘 수정-->
+											</div>
+                                            <div class="title">현금</div>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="selCerti044" name="selCerti00">
+                                        <label for="selCerti044">
+                                            <div class="logoArea">
+												<img src="../../images/category/cs/ico_cate_cs85.png" alt="이체 기타"><!--12.09 카테고리 아이콘 수정-->
+											</div>
+                                            <div class="title">이체 기타</div>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="mt20">
+							<li class="wrapCataWrap"><!-- 2022-10-19 클래스 추가(하단 동일)  -->
+                                <strong class="cs formTit">소비</strong>
+                                <ul class="selectCerti">
+                                    <div class="e e1">
+                                        <li>
+                                            <input type="radio" id="selCerti01" name="selCerti00">
+                                            <label for="selCerti01">
+                                                <div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs01.png" alt="외식"><!--12.09 카테고리 아이콘 수정-->
+												</div>
+                                                <div class="title">외식</div>
+                                            </label>
+										</li>
+										<div class="info_area mt20 mb20">
+                                            <strong class="info_area_title">알아두세요</strong>
+                                            <ul class="listBul disc">
+                                                <li>카테고리를 급여로 설정하시는 경우, 농협의 급여 인식과 무관합니다.</li>
+                                            </ul>
+										</div>
+										
+                                    </div>
+                                    <div class="e e2">
+                                        <li>
+                                            <input type="radio" id="selCerti02" name="selCerti00">
+                                            <label for="selCerti02">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs02.png" alt="카페·간식"><!--12.09 카테고리 아이콘 수정-->
+												</div>
+                                                <div class="title">카페/간식</div>
+                                            </label>
+                                        </li>
+                                    </div>
+
+                                    <div class="e e3">
+                                        <li>
+                                            <input type="radio" id="selCerti03" name="selCerti00">
+                                            <label for="selCerti03">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs03.png" alt="술·유흥"><!--12.09 카테고리 아이콘 수정-->
+												</div>
+                                                <div class="title">술/유흥</div>
+                                            </label>
+                                        </li>
+                                    </div>
+                                </ul>
+                                <div class="cate_SubWrap cate_01 overseaType">
+                                    <strong class="formTit mt0">세부 카테고리 선택</strong>
+                                    <div class="boxRadio">
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo01" id="rdo1" type="radio" type="radio" >
+												<label for="rdo1">한식</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo01" id="rdo2" type="radio">
+												<label for="rdo2">중식</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo01" id="rdo3" type="radio">
+												<label for="rdo3">일식</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo01" id="rdo4" type="radio">
+												<label for="rdo4">양식/뷔페</label>
+											</span>
+                                        </div>
+                                        <div class="boxRadioInn">
+											<span>
+												<input name="rdo01" id="rdo5" type="radio">
+												<label for="rdo5">페스트푸드</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo01" id="rdo6" type="radio">
+												<label for="rdo6">배달</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo01" id="rdo7" type="radio">
+												<label for="rdo7">외식 기타</label>
+											</span>
+										</div>
+									</div>
+                                </div>
+                                <div class="cate_SubWrap cate_02 overseaType">
+                                    <strong class="formTit mt0">세부 카테고리 선택</strong>
+                                    <div class="boxRadio">
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo02" id="rdo8" type="radio" type="radio" >
+												<label for="rdo8">커피/음료</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo02" id="rdo9" type="radio">
+												<label for="rdo9">빵/디저트</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo02" id="rdo10" type="radio">
+												<label for="rdo10">카페/간식</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo02" id="rdo11" type="radio">
+												<label for="rdo11">카페/간식 기타</label>
+											</span>
+                                        </div>
+									</div>
+                                </div>
+                                <div class="cate_SubWrap cate_03 overseaType">
+                                    <strong class="formTit mt0">세부 카테고리 선택</strong>
+                                    <div class="boxRadio">
+										
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo03" id="rdo13" type="radio">
+												<label for="rdo13">주점</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo03" id="rdo14" type="radio">
+												<label for="rdo14">노래방</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo03" id="rdo15" type="radio">
+												<label for="rdo15">주류</label>
+											</span>
+                                        </div>
+                                        <div class="boxRadioInn">
+											<span>
+												<input name="rdo03" id="rdo16" type="radio">
+												<label for="rdo16">술/유흥 기타</label>
+											</span>
+                                        </div>
+									</div>
+                                </div>
+                            </li>
+                            <li class="wrapCataWrap">
+                                <ul class="selectCerti">
+                                    <div class="e e1">
+                                        <li>
+                                            <input type="radio" id="selCerti04" name="selCerti00">
+                                            <label for="selCerti04">
+                                                <div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs04.png" alt=" 쇼핑"><!--12.09 카테고리 아이콘 수정-->
+												</div>
+                                                <div class="title">쇼핑</div>
+                                            </label>
+                                        </li>
+                                    </div>
+                                    <div class="e e2">
+                                        <li>
+                                            <input type="radio" id="selCerti05" name="selCerti00">
+                                            <label for="selCerti05">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs05.png" alt="온라인쇼핑"><!--12.09 카테고리 아이콘 수정-->
+												</div>
+                                                <div class="title">온라인쇼핑</div>
+                                            </label>
+                                        </li>
+                                    </div>
+
+                                    <div class="e e3">
+                                        <li>
+                                            <input type="radio" id="selCerti06" name="selCerti00">
+                                            <label for="selCerti06">
+                                                <div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs06.png" alt="생활·마트"><!--12.09 카테고리 아이콘 수정-->
+												</div>
+                                                <div class="title">생활/마트</div>
+                                            </label>
+                                        </li>
+                                    </div>
+                                </ul>
+                                <div class="cate_SubWrap cate_01 overseaType">
+                                    <strong class="formTit mt0">세부 카테고리 선택</strong>
+                                    <div class="boxRadio">
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo04" id="rdo17" type="radio" type="radio" >
+												<label for="rdo17">백화점</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo04" id="rdo18" type="radio">
+												<label for="rdo18">의류</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo04" id="rdo19" type="radio">
+												<label for="rdo19">잡화</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo04" id="rdo20" type="radio">
+												<label for="rdo20">액세서리</label>
+											</span>
+                                        </div>
+                                        <div class="boxRadioInn">
+											<span>
+												<input name="rdo04" id="rdo21" type="radio">
+												<label for="rdo21">쇼핑 기타</label>
+											</span>
+                                        </div>
+									</div>
+                                </div>
+                                <div class="cate_SubWrap cate_02 overseaType">
+                                    <strong class="formTit mt0">세부 카테고리 선택</strong>
+                                    <div class="boxRadio">
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo05" id="rdo22" type="radio" type="radio" >
+												<label for="rdo22">인터넷쇼핑</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo05" id="rdo23" type="radio">
+												<label for="rdo23">홈쇼핑</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo05" id="rdo24" type="radio">
+												<label for="rdo24">앱스토어</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo05" id="rdo25" type="radio">
+												<label for="rdo25">온라인쇼핑 기타</label>
+											</span>
+                                        </div>
+									</div>
+                                </div>
+                                <div class="cate_SubWrap cate_03 overseaType">
+                                    <strong class="formTit mt0">세부 카테고리 선택</strong>
+                                    <div class="boxRadio">
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo06" id="rdo26" type="radio" type="radio" >
+												<label for="rdo26">대형마트</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo06" id="rdo27" type="radio">
+												<label for="rdo27">편의점</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo06" id="rdo28" type="radio">
+												<label for="rdo28">식재료</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo06" id="rdo29" type="radio">
+												<label for="rdo29">생활용품</label>
+											</span>
+                                        </div>
+                                        <div class="boxRadioInn">
+											<span>
+												<input name="rdo06" id="rdo30" type="radio">
+												<label for="rdo30">가구/가전</label>
+											</span>
+                                        </div>
+                                        <div class="boxRadioInn">
+											<span>
+												<input name="rdo06" id="rdo31" type="radio">
+												<label for="rdo31">택배/우편</label>
+											</span>
+                                        </div>
+                                        <div class="boxRadioInn">
+											<span>
+												<input name="rdo06" id="rdo32" type="radio">
+												<label for="rdo32">생활/마트 기타</label>
+											</span>
+                                        </div>
+									</div>
+                                </div>
+                            </li>
+							<li class="wrapCataWrap">
+                                <ul class="selectCerti">
+                                    <div class="e e1">
+                                        <li>
+                                            <input type="radio" id="selCerti07" name="selCerti00">
+                                            <label for="selCerti07">
+                                                <div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs07.png" alt="주거·통신"><!--12.09 카테고리 아이콘 수정-->
+												</div>
+                                                <div class="title">주거/통신</div>
+                                            </label>
+                                        </li>
+                                    </div>
+                                    <div class="e e2">
+                                        <li>
+                                            <input type="radio" id="selCerti08" name="selCerti00">
+                                            <label for="selCerti08">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs08.png" alt="의료·건강"><!--12.09 카테고리 아이콘 수정-->
+												</div>
+                                                <div class="title">의료/건강</div>
+                                            </label>
+                                        </li>
+                                    </div>
+
+                                    <div class="e e3">
+                                        <li>
+                                            <input type="radio" id="selCerti09" name="selCerti00">
+                                            <label for="selCerti09">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs09.png" alt=" 교육·자녀"><!--12.09 카테고리 아이콘 수정-->
+												</div>
+                                                <div class="title">교육/자녀</div>
+                                            </label>
+                                        </li>
+                                    </div>
+                                </ul>
+                                <div class="cate_SubWrap cate_01 overseaType">
+                                    <strong class="formTit mt0">세부 카테고리 선택</strong>
+                                    <div class="boxRadio">
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo07" id="rdo33" type="radio" type="radio" >
+												<label for="rdo33">통신비</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo07" id="rdo34" type="radio">
+												<label for="rdo34">관리비/공과금</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo07" id="rdo35" type="radio">
+												<label for="rdo35">월세</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo07" id="rdo36" type="radio">
+												<label for="rdo36">가스/전기/수도</label>
+											</span>
+                                        </div>
+                                        <div class="boxRadioInn">
+											<span>
+												<input name="rdo07" id="rdo37" type="radio">
+												<label for="rdo37">국세/지방세</label>
+											</span>
+                                        </div>
+                                        <div class="boxRadioInn">
+											<span>
+												<input name="rdo07" id="rdo38" type="radio">
+												<label for="rdo38">주거/통신 기타</label>
+											</span>
+                                        </div>
+									</div>
+                                </div>
+                                <div class="cate_SubWrap cate_02 overseaType">
+                                    <strong class="formTit mt0">세부 카테고리 선택</strong>
+                                    <div class="boxRadio">
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo08" id="rdo39" type="radio" type="radio" >
+												<label for="rdo39">병원</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo08" id="rdo40" type="radio">
+												<label for="rdo40">약국</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo08" id="rdo41" type="radio">
+												<label for="rdo41">건강식품</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo08" id="rdo42" type="radio">
+												<label for="rdo42">운동</label>
+											</span>
+                                        </div>
+                                        <div class="boxRadioInn">
+											<span>
+												<input name="rdo08" id="rdo43" type="radio">
+												<label for="rdo43">의료/건강 기타</label>
+											</span>
+                                        </div>
+									</div>
+                                </div>
+                                <div class="cate_SubWrap cate_03 overseaType">
+                                    <strong class="formTit mt0">세부 카테고리 선택</strong>
+                                    <div class="boxRadio">
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo09" id="rdo44" type="radio" type="radio" >
+												<label for="rdo44">학교</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo09" id="rdo45" type="radio">
+												<label for="rdo45">유치원/어린이집</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo09" id="rdo46" type="radio">
+												<label for="rdo46">학원/강의</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo09" id="rdo47" type="radio">
+												<label for="rdo47">학습교재</label>
+											</span>
+                                        </div>
+                                        <div class="boxRadioInn">
+											<span>
+												<input name="rdo09" id="rdo48" type="radio">
+												<label for="rdo48">돌봄비</label>
+											</span>
+                                        </div>
+                                        <div class="boxRadioInn">
+											<span>
+												<input name="rdo09" id="rdo49" type="radio">
+												<label for="rdo49">자녀용돈</label>
+											</span>
+                                        </div>
+                                        <div class="boxRadioInn">
+											<span>
+												<input name="rdo09" id="rdo50" type="radio">
+												<label for="rdo50">교육/자녀 기타</label>
+											</span>
+                                        </div>
+									</div>
+                                </div>
+                            </li>
+                            <li class="wrapCataWrap">
+                                <ul class="selectCerti">
+                                    <div class="e e1">
+                                        <li>
+                                            <input type="radio" id="selCerti10" name="selCerti00">
+                                            <label for="selCerti10">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs10.png" alt="뷰티·미용"><!--12.09 카테고리 아이콘 수정-->
+												</div>
+                                                <div class="title">뷰티/미용</div>
+                                            </label>
+                                        </li>
+                                    </div>
+                                    <div class="e e2">
+                                        <li>
+                                            <input type="radio" id="selCerti11" name="selCerti00">
+                                            <label for="selCerti11">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs11.png" alt="자동차·주유"><!--12.09 카테고리 아이콘 수정-->
+												</div>
+                                                <div class="title">자동차/주유</div>
+                                            </label>
+                                        </li>
+                                    </div>
+
+                                    <div class="e e3">
+                                        <li>
+                                            <input type="radio" id="selCerti12" name="selCerti00">
+                                            <label for="selCerti12">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs12.png" alt="교통"><!--12.09 카테고리 아이콘 수정-->
+												</div>
+                                                <div class="title">교통</div>
+                                            </label>
+                                        </li>
+                                    </div>
+                                </ul>
+                                <div class="cate_SubWrap cate_01 overseaType">
+                                    <strong class="formTit mt0">세부 카테고리 선택</strong>
+                                    <div class="boxRadio">
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo010" id="rdo51" type="radio" type="radio" >
+												<label for="rdo51">화장품</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo010" id="rdo52" type="radio">
+												<label for="rdo52">미용실</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo010" id="rdo53" type="radio">
+												<label for="rdo53">바디관리</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo010" id="rdo54" type="radio">
+												<label for="rdo54">미용관리</label>
+											</span>
+                                        </div>
+                                        <div class="boxRadioInn">
+											<span>
+												<input name="rdo010" id="rdo55" type="radio">
+												<label for="rdo55">피부/성형외과</label>
+											</span>
+                                        </div>
+                                        <div class="boxRadioInn">
+											<span>
+												<input name="rdo010" id="rdo56" type="radio">
+												<label for="rdo56">뷰티/미용 기타</label>
+											</span>
+                                        </div>
+									</div>
+                                </div>
+                                <div class="cate_SubWrap cate_02 overseaType">
+                                    <strong class="formTit mt0">세부 카테고리 선택</strong>
+                                    <div class="boxRadio">
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo011" id="rdo57" type="radio" type="radio" >
+												<label for="rdo57">주유</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo011" id="rdo58" type="radio">
+												<label for="rdo58">주차</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo011" id="rdo59" type="radio">
+												<label for="rdo59">세차</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo011" id="rdo60" type="radio">
+												<label for="rdo60">통행료</label>
+											</span>
+                                        </div>
+                                        <div class="boxRadioInn">
+											<span>
+												<input name="rdo011" id="rdo61" type="radio">
+												<label for="rdo61">차량구매</label>
+											</span>
+                                        </div>
+                                        <div class="boxRadioInn">
+											<span>
+												<input name="rdo011" id="rdo62" type="radio">
+												<label for="rdo62">정비</label>
+											</span>
+                                        </div>
+                                        <div class="boxRadioInn">
+											<span>
+												<input name="rdo011" id="rdo63" type="radio">
+												<label for="rdo63">대리운전</label>
+											</span>
+                                        </div>
+                                        <div class="boxRadioInn">
+											<span>
+												<input name="rdo011" id="rdo64" type="radio">
+												<label for="rdo64">자동차/주유 기타</label>
+											</span>
+                                        </div>
+									</div>
+                                </div>
+                                <div class="cate_SubWrap cate_03 overseaType">
+                                    <strong class="formTit mt0">세부 카테고리 선택</strong>
+                                    <div class="boxRadio">
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo012" id="rdo65" type="radio" type="radio" >
+												<label for="rdo65">버스/지하철</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo012" id="rdo66" type="radio">
+												<label for="rdo66">택시</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo012" id="rdo67" type="radio">
+												<label for="rdo67">철도/고속버스</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo012" id="rdo68" type="radio">
+												<label for="rdo68">교통 기타</label>
+											</span>
+                                        </div>
+									</div>
+                                </div>
+                            </li>
+							<li class="wrapCataWrap">
+                                <ul class="selectCerti">
+                                    <div class="e e1">
+                                        <li>
+                                            <input type="radio" id="selCerti13" name="selCerti00">
+                                            <label for="selCerti13">
+                                                <div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs13.png" alt=" 문화·여가"><!--12.09 카테고리 아이콘 수정-->
+												</div>
+                                                <div class="title">문화/여가</div>
+                                            </label>
+                                        </li>
+                                    </div>
+                                    <div class="e e2">
+                                        <li>
+                                            <input type="radio" id="selCerti14" name="selCerti00">
+                                            <label for="selCerti14">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs14.png" alt=" 여행·숙박"><!--12.09 카테고리 아이콘 수정-->
+												</div>
+                                                <div class="title">여행/숙박</div>
+                                            </label>
+                                        </li>
+                                    </div>
+
+                                    <div class="e e3">
+                                        <li>
+                                            <input type="radio" id="selCerti15" name="selCerti00">
+                                            <label for="selCerti15">
+                                                <div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs15.png" alt="금융"><!--12.09 카테고리 아이콘 수정-->
+												</div>
+                                                <div class="title">금융</div>
+                                            </label>
+                                        </li>
+                                    </div>
+                                </ul>
+                                <div class="cate_SubWrap cate_01 overseaType">
+                                    <strong class="formTit mt0">세부 카테고리 선택</strong>
+                                    <div class="boxRadio">
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo013" id="rdo69" type="radio" type="radio" >
+												<label for="rdo65">영화</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo013" id="rdo70" type="radio">
+												<label for="rdo70">도서</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo013" id="rdo71" type="radio">
+												<label for="rdo71">게임</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo013" id="rdo72" type="radio">
+												<label for="rdo72">음악</label>
+											</span>
+                                        </div>
+                                        <div class="boxRadioInn">
+											<span>
+												<input name="rdo013" id="rdo73" type="radio">
+												<label for="rdo73">공연/전시</label>
+											</span>
+                                        </div>
+                                        <div class="boxRadioInn">
+											<span>
+												<input name="rdo013" id="rdo74" type="radio">
+												<label for="rdo74">레저/스포츠</label>
+											</span>
+                                        </div>
+                                        <div class="boxRadioInn">
+											<span>
+												<input name="rdo013" id="rdo75" type="radio">
+												<label for="rdo75">문화/여가 기타</label>
+											</span>
+                                        </div>
+									</div>
+                                </div>
+                                <div class="cate_SubWrap cate_02 overseaType">
+                                    <strong class="formTit mt0">세부 카테고리 선택</strong>
+                                    <div class="boxRadio">
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo014" id="rdo76" type="radio" type="radio" >
+												<label for="rdo76">숙박비</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo014" id="rdo77" type="radio">
+												<label for="rdo77">항공권</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo014" id="rdo78" type="radio">
+												<label for="rdo78">여행/관광</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo014" id="rdo79" type="radio">
+												<label for="rdo79">여행/숙박 기타</label>
+											</span>
+                                        </div>
+									</div>
+                                </div>
+                                <div class="cate_SubWrap cate_03 overseaType">
+                                    <strong class="formTit mt0">세부 카테고리 선택</strong>
+                                    <div class="boxRadio">
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo015" id="rdo80" type="radio" type="radio" >
+												<label for="rdo80">보험</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo015" id="rdo81" type="radio">
+												<label for="rdo81">이자/대출</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo015" id="rdo82" type="radio">
+												<label for="rdo82">금융 기타</label>
+											</span>
+										</div>
+									</div>
+                                </div>
+                            </li>
+                            <li class="wrapCataWrap">
+                                <ul class="selectCerti">
+                                    <div class="e e1">
+                                        <li>
+                                            <input type="radio" id="selCerti16" name="selCerti00">
+                                            <label for="selCerti16">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs16.png" alt="경조사 선물"><!--12.09 카테고리 아이콘 수정-->
+												</div>
+                                                <div class="title">경조사/선물</div>
+                                            </label>
+                                        </li>
+                                    </div>
+                                    <div class="e e2">
+                                        <li>
+                                            <input type="radio" id="selCerti17" name="selCerti00">
+                                            <label for="selCerti17">
+                                                <div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs17.png" alt=" 반려동물"><!--12.09 카테고리 아이콘 수정-->
+												</div>
+                                                <div class="title">반려동물</div>
+                                            </label>
+                                        </li>
+                                    </div>
+
+                                    <div class="e e3">
+                                        <li>
+                                            <input type="radio" id="selCerti18" name="selCerti00">
+                                            <label for="selCerti18">
+                                                <div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs18.png" alt="소비기타"><!--12.09 카테고리 아이콘 수정-->
+												</div>
+                                                <div class="title">소비 기타</div>
+                                            </label>
+                                        </li>
+                                    </div>
+                                </ul>
+                                <div class="cate_SubWrap cate_01 overseaType">
+                                    <strong class="formTit mt0">세부 카테고리 선택</strong>
+                                    <div class="boxRadio">
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo016" id="rdo83" type="radio" type="radio" >
+												<label for="rdo83">경조사비</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo016" id="rdo84" type="radio">
+												<label for="rdo84">기부/회비</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo016" id="rdo85" type="radio">
+												<label for="rdo85">선물</label>
+											</span>
+                                        </div>
+                                        <div class="boxRadioInn">
+											<span>
+												<input name="rdo016" id="rdo86" type="radio">
+												<label for="rdo86">결혼</label>
+											</span>
+                                        </div>
+                                        <div class="boxRadioInn">
+											<span>
+												<input name="rdo016" id="rdo87" type="radio">
+												<label for="rdo87">경조사/선물 기타</label>
+											</span>
+										</div>
+									</div>
+                                </div>
+                                <div class="cate_SubWrap cate_02" style="padding:0">
+                                    
+                                </div>
+                                <div class="cate_SubWrap cate_03" style="padding:0">
+                                    
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cateBottomFixBox">
+                        <input type="checkbox" id="listAll" class="chekTypeOther" name=""><label for="listAll">앞으로 같은 카테고리 자동 적용하기</label>
+                    </div>
+				</div>
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">확인</a>
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- 팝업끝 -->
+
+	</div>
+
+</body>
+<style>
+    .nhasset .boxRadio input[type="radio"] + label, .nhasset .boxRadio input[type="checkbox"] + label{font-size:clamp(13px, 1.3rem, 20px)}
+</style>
+
+<script type="text/javascript">
+	// 2022-10-19 스크립트 변경
+	$('.nhasset .selectCerti .e li input[type="radio"]').each(function(){
+		var $this = $(this);
+		$this.on('change',function(){
+			var _checked = $this.is(':checked');
+			if (_checked) {
+				var $thisIndex = $this.closest('div.e').index();
+				$('.cate_SubWrap').hide();
+				$(this).closest('.wrapCataWrap').find('.cate_SubWrap').eq($thisIndex).slideDown(300).find('.formTit').attr('tabindex','-1').focus();
+				var $thisPos = $this.closest('.selectCerti').position().top;
+				$('.popCont').animate({ scrollTop: $thisPos },{}, 300);
+			}
+		})
+	});
+	$(document).ready(function(){
+        var selecWidth = $('.selectCerti').width() - 7.9;
+        $('.info_area').css('width', selecWidth).hide()
+        $('.e').click(function(){
+            $('.info_area').css('margin-left', '0');
+            $('.e > .info_area').hide();
+            $(this).children('.info_area').stop().slideDown('fast')
+        })
+    })
+</script>
+
+<!-- <script>
+    $(document).ready(function(){
+
+        $('.popCont').on('scroll', function () {
+            var scrollTop = $('.popCont').scrollTop();
+            var scrollBottom = $('.popCont').height() / scrollTop
+            if(scrollBottom < 1.6){
+                $('.cateBottomFixBox').css('position','inherit').css('width','100%')
+            }
+            else{
+                $('.cateBottomFixBox').css('position','fixed').css('width','calc(100% - 30px)')
+            }
+        });
+
+        $('.e1').click(function(){
+            var offset = $(this).parents().children('.cate_01').offset().top
+            var h = $('.nhasset .formWrap > ul > li').height() +  offset / 2
+            $('.cate_SubWrap').css('margin-left', '0');
+            $('.cate_SubWrap').hide();
+            $(this).parents().children('.cate_01').show();
+            $('.popCont').scrollTop (h)
+            $('.popCont').on('scroll', function () {
+                var scrollTop = $('.popCont').scrollTop();
+                var scrollBottom = $('.popCont').height() / scrollTop
+                if(scrollBottom < 1.5){
+                    $('.cateBottomFixBox').css('position','inherit').css('width','100%')
+                }
+                else{
+                    $('.cateBottomFixBox').css('position','fixed').css('width','calc(100% - 30px)')
+                }
+            });
+        })
+        $('.e2').click(function(){
+            var offset = $(this).parents().children('.cate_02').offset().top
+            var h = $('.nhasset .formWrap > ul > li').height() +  offset / 2
+            $('.cate_SubWrap').css('margin-left', '0');
+            $('.cate_SubWrap').hide();
+            $(this).parents().children('.cate_02').show();
+            $('.popCont').scrollTop (h)
+            // $('.popCont').animate({scrollTop : offset.top})
+            $('.popCont').on('scroll', function () {
+                var scrollTop = $('.popCont').scrollTop();
+                var scrollBottom = $('.popCont').height() / scrollTop
+                if(scrollBottom < 1.5){
+                    $('.cateBottomFixBox').css('position','inherit').css('width','100%')
+                }
+                else{
+                    $('.cateBottomFixBox').css('position','fixed').css('width','calc(100% - 30px)')
+                }
+            });
+        })
+        $('.e3').click(function(){
+            var offset = $(this).parents().children('.cate_03').offset().top
+            var h = $('.nhasset .formWrap > ul > li').height() +  offset / 2
+            $('.cate_SubWrap').css('margin-left', '0');
+            $('.cate_SubWrap').hide();
+            $(this).parents().children('.cate_03').show();
+            $('.popCont').scrollTop (h)
+            $('.popCont').on('scroll', function () {
+                var scrollTop = $('.popCont').scrollTop();
+                var scrollBottom = $('.popCont').height() / scrollTop
+                if(scrollBottom < 1.5){
+                    $('.cateBottomFixBox').css('position','inherit').css('width','100%')
+                }
+                else{
+                    $('.cateBottomFixBox').css('position','fixed').css('width','calc(100% - 30px)')
+                }
+            });
+        })
+    })
+
+</script> -->
+</html>

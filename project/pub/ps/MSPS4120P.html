@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>popup</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script type="text/javascript">
+$(function(){
+    slidePopConfirm();
+});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">해제 진행</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container"> 
+			
+		</div>
+		<!-- // container -->
+
+		<!-- 컨펌 팝업 -->
+		<div class="nhasset popWrap slidePopConfirm">
+			<div class="dim"></div>
+			<div class="popInner">
+				<h1>해제/삭제</h1>
+				<div class="popCont">
+					<div class="transfer">
+						<p class="defSubTit2"><strong>자산연결을 <span class="pointColor">해제(철회)</span> 하시겠습니까?</strong></p>
+						<p class="subTxt">자산연결을 해제(철회)하면 즉시 해당 자산정보의 수집이 중지됩니다.<br />현재까지 가져온 데이터는 보관되지만 더 이상 새로운 정보를 가져오지 않아, 서비스 이용이 불편할 수 있습니다.</p>
+						<div class="assetSelectLlistWrap">
+							<div class="assetSelectLlistAll">
+								<span>
+									<input type="checkbox" id="listAll" class="chekTypeOther" name="">
+									<label for="listAll">전송요구 해제(철회)에 동의합니다.</label>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+		
+				<div class="popBtnWrap">
+					<style>
+						.btnPressDefault{background:#666 !important}
+					</style>
+					<div class="popBtn btnHalf"><!-- 2022-10-11 클래스 추가 -->
+						<a href="javascript:;" class="btnPressDefault" onclick="popClose(this);return false;" role="button">취소</a>
+						<a href="javascript:;" class="" onclick="popClose(this);return false;" role="button">해제(철회)</a><!-- 동의클래스 confirmBtn -->
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- //컨펌 팝업 -->
+	</div>
+
+</body>
+</body>
+</html>

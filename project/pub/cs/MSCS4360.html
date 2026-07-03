@@ -1,0 +1,207 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>승인 내역</title>
+<script src="../pub-assets/js/head.js"></script>
+
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">승인 내역</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="boxWrapShadow">
+				<div class="boxTypeWrap delShadow containTooltip">
+					<div class="swiper dateSelWrap">
+						<a href="javascript:;" class="btn-month-prev" role="button" tabindex="0" aria-label="이전달"><span class="blind">이전달</span></a>
+						<a href="javascript:;" class="btn-month-next" role="button" tabindex="0" aria-label="다음달"><span class="blind">다음달</span></a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="monthSelectArea">
+									<strong class="month">2022년 7월</strong>
+								</div>
+							</div>
+							<!-- <div class="swiper-slide">
+								<div class="monthSelectArea">	
+									<strong class="month">2022년 8월</strong>
+								</div>
+							</div> -->
+						</div>
+					</div>
+					<div class="accTopInfo mt15">
+						<div class="wrapTag">
+                            <!-- <span class="type01">본인</span><span class="type02">신용</span><span class="type04">교통</span><span class="type03">현금</span><span class="type05">MASTER</span> -->
+                            <span class="type07">선불</span>
+						</div>
+						<div class="totalBalance bigSize flex mt0">
+                            <button type="button" class="bigArrDown"><strong>핀크카드</strong></button>
+                            <div class="imgWrap icoCate">
+                                <span class="img"><img src="../../images/logos/AAJI0000.png" alt="핀크카드 로고"></span>
+                            </div>
+						</div>
+					</div>
+                    <!-- <hr class="divLine"> -->  <!-- [2022-12-29] 삭제 -->
+					<ul class="mt20 pt20 bdt detailList posR"> <!-- [2022-12-29] 클래스 수정 -->
+						<li>
+							<span class="tit">이용기간</span>
+							<span class="value">11.01 ~ 11.10</span>
+						</li>
+						<li>
+							<span class="tit">
+								이용금액
+								<!-- 툴팁 -->
+								<div class="tooltipWrap">
+									<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">이용금액 툴팁열기</span></button>
+									<div class="tooltipCont lf0"> <!-- [2022-12-29] .lf0 추가 -->
+										<p>1일부터 오늘까지 카드 이용금액 총 합입니다. 가족카드, 리볼빙, 카드론 이용금액이 제외된 금액입니다.</p>
+										<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+									</div>
+								</div>
+								<!-- // 툴팁 -->
+							</span>
+							<span class="value pointColor"><strong class="dataValue">4,200,000</strong><em class="won">원</em></span>
+						</li>
+					</ul>
+				</div>
+				<div class="moreInfoArea">
+					<!-- 추가정보 열/닫 -->
+					<div class="moreInfoWrap toggleWrap">
+						<div class="moreInfo toggleCont" style="display:none">
+							<hr class="divLine2" aria-hidden="true">
+							<ul class="detailList">
+								<li>
+									<span class="tit">카드 발급일</span>
+									<span class="value">2020.05.01</span>
+                                </li>
+                                <li>
+									<span class="tit">최대충전한도</span>
+									<span class="value">400만원</span>
+								</li>
+							</ul>
+						</div>
+						<button type="button" class="moreOpenBtn toggleBtn"><span class="toggleTxt05">추가정보 보기</span></button> <!--09.03 toggleTxt03 추가-->
+					</div>
+					<!-- // 추가정보 열/닫 -->
+				</div>
+			</div>
+
+			<div class="swiper allListWrap widH"><!--s:swiper-->
+				<div class="swiper-wrapper"><!--s:swiper-wrapper-->
+
+					<div class="swiper-slide"><!--s:swiper-slide-->
+                        <div class="boxTypeWrap mb10 pt0">
+                            <div class="cardSpendList mt0">
+                                <div class="inoutListWrap">
+                                    <div class="inoutListInn">
+                                        <ul class="inoutList">
+                                            <li>
+                                                <a href="javascript:;" class="link">
+                                                    <div class="isCategory">
+                                                        <div class="imgWrap icoCate">
+                                                            <span class="img"><img src="../../images/category/cs/ico_cate_cs01.png" alt="외식 아이콘"></span>
+                                                        </div>
+                                                        <div class="textWrap">
+                                                            <div class="inoutTit">
+                                                                <span class="use">한솥도시락</span>
+                                                                <span class="amount"><strong class="dataValue">140,000</strong><em class="won">원</em></span>
+                                                            </div>
+                                                            <div class="inoutCont">
+                                                                <div class="timeWrap">
+                                                                    <span class="time">2021.10.20 10:30</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="link">
+                                                    <div class="isCategory">
+                                                        <div class="imgWrap icoCate">
+                                                            <span class="img"><img src="../../images/category/cs/ico_cate_cs01.png" alt="외식 아이콘"></span>
+                                                        </div>
+                                                        <div class="textWrap">
+                                                            <div class="inoutTit">
+                                                                <span class="use">한솥도시락 한솥도시락 한솥도시락 한솥도시락</span>
+                                                                <span class="amount"><em class="won">USD</em> <strong class="dataValue">80,000.113</strong></span>
+                                                            </div>
+                                                            <div class="inoutCont">
+                                                                <div class="timeWrap">
+                                                                    <span class="time">2021.10.20 10:30</span>
+                                                                </div>
+                                                                <span class="totalAmount">3개월 할부</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="link">
+                                                    <div class="isCategory">
+                                                        <div class="imgWrap icoCate">
+                                                            <span class="img"><img src="../../images/category/cs/ico_cate_cs06.png" alt="생활/마트 아이콘"></span>
+                                                        </div>
+                                                        <div class="textWrap">
+                                                            <div class="inoutTit">
+                                                                <span class="use">CU</span>
+                                                                <span class="amount cancel"><strong class="dataValue">2,000</strong><em class="won">원</em></span> <!-- 취소시 cancel 클래스 추가 -->
+                                                            </div>
+                                                            <div class="inoutCont">
+                                                                <div class="timeWrap">
+                                                                    <span class="time">2021.10.20 10:30</span>
+                                                                </div>
+																<span class="totalAmount">취소</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="listMoreBtn mt0">
+                                <a href="javascript:;" title="가장 많이 소비한 곳 더보기">더보기</a>
+                            </div>
+                        </div>
+					</div>
+					<!--e:swiper-slide-->
+			
+				</div>
+				<!--e:swiper-wrapper-->
+			</div>
+			<!--e:swiper-->
+		</div>
+		<!-- //container -->
+
+	</div>
+</body>
+
+<script>
+
+</script>
+
+</html>

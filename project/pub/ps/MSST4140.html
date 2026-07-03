@@ -1,0 +1,99 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>설정 - PUSH관리</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">PUSH 관리</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+
+			<div class="boxTypeWrap pt0">
+				<div class="pushSet">
+					<div class="totalTitWrap pushTitWrap">
+                        <h2>PUSH알림 설정</h2> 
+                     </div>
+					<ul>
+						<li>
+							<div>
+								<span class="tit">알림수신 APP</span>
+                                <div class="boxRadio mt10">
+                                    <div class="boxRadioInn">
+                                        <span>
+                                            <input name="rdo02" id="rdo003" type="radio" >
+                                            <label for="rdo003">NH스마트뱅킹</label>
+                                        </span>
+                                    </div>
+                                    <div class="boxRadioInn">
+                                        <span>
+                                            <input name="rdo02" id="rdo004" type="radio" checked="checked">
+                                            <label for="rdo004">NH올원뱅크</label> <!-- [2023-01-04] 텍스트 수정 -->
+                                        </span>
+                                    </div>
+                                </div>
+							</div>
+                            <div class="flex02 mt20">
+								<span class="tit">올원뱅크 혜택정보 알림수신 동의 여부</span>
+								<span class="value">미동의</span> <!-- case: 알림수신 APP ≠ 접근 APP 일때 display:none -->
+							</div>
+						</li>	
+						<li>
+							<div class="disAgree psSt">
+								<div class="inner">
+									<p class="txt">
+										$상위채널명$의 PUSH 알림 수신이 미동의되었습니다.
+									</p>
+								</div>
+							</div>
+						</li>
+                    </ul>
+                   
+                    <!-- [2023-01-04] 수정 -->
+					<div class="formWrap selectAll psSt">
+						<div class="total">
+                            <div class="formHolder check">
+                                <input type="checkbox" id="type_all01" class="chekTypeOther">
+                                <label class="check" for="type_all01"><em>[필수]</em> PUSH알림 수신동의<br>(정기점검, 업데이트 등 주요정보 안내)</label>
+                            </div>
+                        </div>
+                    </div>
+
+				</div>
+            </div>
+            
+            <div class="areaBtnDefault half">
+                <a href="javascript:;" class="btnPressPoint" role="button">확인</a>
+            </div>
+
+		</div>
+		<!-- //container -->
+
+	</div>
+
+</body>
+</html>

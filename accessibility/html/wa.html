@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Septem UI/UX accessibility</title>
+	<link rel="stylesheet" href="../css/a11y_com.css">
+	<link rel="stylesheet" href="../css/prism.css">
+	<script src="../js/prism.js"></script>
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/a11y_com.js"></script>
+</head>
+<body>
+	<!-- skip -->
+<div id="skipNav">
+	<a href="#">본문 바로가기</a>
+	<a href="#">메뉴 바로가기</a>
+</div>
+<!-- //skip -->
+<div id="wrap">
+	<!-- header -->
+	<header>
+		셉템 접근성
+		<nav>메뉴</nav>
+	</header>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<nav class="sidebar">
+			<ol>
+				<li><a href="javascript:;">메뉴</a></li>
+				<li><a href="javascript:;">메뉴</a></li>
+				<li><a href="javascript:;">메뉴</a></li>
+				<li><a href="javascript:;">메뉴</a></li>
+				<li><a href="javascript:;">메뉴</a></li>
+			</ol>
+		</nav>
+		<!-- content -->
+		<main class="content">
+			<h1>웹 접근성(Web Accessibility)?</h1>
+            <blockquote>
+                <p>텍장애인, 고령자 등 정보접근약자가 웹 사이트 이용에 불편이 없도록 「국가정보화기본법」 제32조의2 및 동법 시행규칙 제3조의3에 의거 ‘국가표준 한국형 웹 콘텐츠 접근성 지침 2.1’을 준수한 웹사이트에 대해 웹 접근성 수준을 인정하고 이를 상징하는 웹 접근성 품질 마크를 부여하는 인증 제도</p>
+			</blockquote>
+
+			<h2>인증 대상</h2>
+			<p>인터넷을 통해 정보통신 서비스를 제공하는 웹사이트</p>
+
+			<h2>인증 유효기간</h2>
+			<p>1년</p>
+
+			<h3>(KS X OT0003) 한국형 웹 콘텐츠 접근성 지침 2.1<a href="../../down/(KS X OT0003) 한국형 웹 콘텐츠 접근성 지침 2.1" download class="btnA">다운로드▼</a></h3>
+			<p>
+				- 제개정일 : 2015-03-31<br>
+				- 개정자 : <a href="https://www.rra.go.kr/ko/reference/kcsList_view.do?nb_seq=1348&cpage=1&nb_type=6" target="_blank">국립전파연구원(http://www.rra.go.kr)</a><br>
+				※ 방송통신발전 기본법 제 33조 및 방송통신발전 기본법 시행령 제 30조에 의거하여 2015년 3월 31일 KWCAG 2.1 개정
+			</p>
+
+			<h2>심사기준</h2>
+
+			<div class="fc_black">
+				http://www.websoul.co.kr/accessibility/WA_guide21.asp
+				<strong><a href="https://webwatch.or.kr:50010/WA/010301.html?MenuCD=130#contents">참고</a></strong><br>
+				웹 접근성 품질인증의 핵심인 기술심사는 웹 접근성 국가 표준인 KWCAG2.1을 기준으로 진행되며, 세부 기준은 과학기술정보통신부가 정한 표준심사 지침을 최소 기준으로 정하고 있습니다.
+				전문가 심사 : 선정된 심사 페이지에서 모든 검사 항목이 권고 이상 이어야 함
+				사용자심사 : 선정된 심사 과업을 모든 장애 유형이 수행 가능해야 함
+				※ 기술심사는 1차 심사만 실시하는 것을 원칙으로 한다. 다만 다음의 경우는 2차 심사를 실시할 수 있다.<br>
+				① 전문가심사 결과 18개 이상의 검사 항목이 95%이상 준수한 경우<br>
+				② 전문가심사 결과 전체 검사 항목 평균 준수율이 85%이상인 경우<br>
+				③ 사용자심사 결과 과업 성공률 85%이상인 경우
+			</div>
+
+			<div class="table">
+				<table>
+					<caption><strong>심사 기준</strong> <p>심사 구분, 심사 방법, 전문가 심사, 사용자심사  정보를 포함하는 표</p></caption>
+					<thead>
+						<tr>
+							<th scope="col" class="w30p">심사 구분</th>
+							<th scope="col">심사 방법</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">전문가 심사</th>
+							<td>최소 3인 이상의 전문가심사원이 심사 진행 및 보고서 작성 <br> 모든 지침 모든 검사 항목을 기술적    심사</td>
+						</tr>
+						<tr>
+							<th scope="row">사용자심사 </th>
+							<td>심사 대상 사이트의 주요 목적 콘텐츠    및 다양한 기능에 대한 과업을 설정하고 이를 장애유형별(전맹, 저시력, 지체(상지)/뇌병변) 사용자의 이용방식으로 정해진 시간 내에 수행가능한지를 평가하는 심사 <br>사이트 규모 및 특성에 따라 주    목적 과업으로 구성</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<h2>검사항목</h2>
+			<strong class="pointColor">(*)는 웹에만 있는 항목</strong>
+			<table>
+				<thead>
+					<tr>
+						<th scope="col">4대원칙</th>
+						<th scope="col" colspan="2">검사항목 (24개)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="col">1. 인식의 용의성<br>(Perceivable)</th>
+						<td>
+							<ul class="noMargin">
+								<li>1.1.1 적절한 대체 텍스트 제공</li>
+								<li>1.2.1 자막 제공</li>
+								<li>1.3.1 색에 무관한 콘텐츠 인식</li>
+								<li>1.3.2 명확한 지시사항 제공</li>
+							</ul>
+						</td>
+						<td>
+							<ul class="noMargin">
+								<li>1.3.3 텍스트 콘텐츠의 명도 대비</li>
+								<li>1.3.4 자동재생 금지</li>
+								<li>1.3.5 콘텐츠 간의 구분</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th scope="col">2. 운용의 용의성<br>(Operable)</th>
+						<td>
+							<ul class="noMargin">
+								<li>2.1.1 키보드 사용 보장(PC웹)</li>
+								<li>2.1.1 누르기 동작 지원(모바일웹)</li>
+								<li>2.1.2 초점 이동</li>
+								<li>2.1.3 조작 가능</li>
+								<li>2.2.1 응답시간 조절</li>
+							</ul>
+						</td>
+						<td>
+							<ul class="noMargin">
+								<li>2.2.2 정지 기능 제공</li>
+								<li>2.3.1 깜빡임과 번쩍임 사용 제한</li>
+								<li><strong class="pointColor">* 2.4.1 반복영역 건너뛰기</strong></li>
+								<li><strong class="pointColor">* 2.4.2 제목 제공</strong></li>
+								<li>2.4.3 적절한 링크 텍스트</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th scope="col">3. 이해의 용의성<br>(Understandable)</th>
+						<td>
+							<ul class="noMargin">
+								<li><strong class="pointColor">* 3.1.1 기본 언어 표시</strong></li>
+								<li>3.2.1 사용자 요구에 따른 실행</li>
+								<li>3.3.1 콘텐츠의 선형화</li>
+							</ul>
+						</td>
+						<td>
+							<ul class="noMargin">
+								<li><strong class="pointColor">* 3.3.2 표의 구성</strong></li>
+								<li>3.4.1 레이블 제공</li>
+								<li>3.4.2 오류 정정</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th scope="col">4. 견고성 (Robust)</th>
+						<td>
+							<ul class="noMargin">
+								<li>4.1.1 마크업 오류 방지</li>
+							</ul>
+						</td>
+						<td>
+							<ul class="noMargin">
+								<li>4.2.1 웹 애플리케이션 접근성 준수</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2>심사환경</h2>
+			<h3>전문가심사 웹 브라우저 및 버전 기준</h3>
+			<div class="table">
+				<table>
+					<caption><strong>전문가심사 웹 브라우저 및 버전 기준</strong> <p>구분, 웹 브라우저, 비고, PC 웹, 모바일 웹 정보를 포함하는 표</p></caption>
+					<thead>
+						<tr>
+							<th scope="col" class="w15p">구분</th>
+							<th scope="col" class="w30p">웹 브라우저</th>
+							<th scope="col">비고</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="col">PC 웹</th>
+							<td class="tac">과기정통부가 지정한 <br>Chrome 최신 버전</td>
+							<td>
+								<ul>
+									<li>최신 기술환경의 변화 및 웹 브라우저 이용율 등을 종합적으로 <br>고려하여 심사 웹 브라우저 지정 </li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th scope="col">모바일 웹</th>
+							<td class="tac">모바일 환경으로 <br>
+								User Agent 변경 가능한 브라우저 최신버전</td>
+							<td>
+								<ul>
+									<li>User Agent 설정은 최신 OS 설치가 가능한 기기 </li>
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<h3>사용자심사 보조기기(스크린리더) 기준</h3>
+			<p>
+				<a href="https://support.google.com/accessibility/android/answer/6007100?hl=ko" target="_blank">Android talkback 사용법</a> / 
+				<a href="https://help.apple.com/iphone/9/?lang=ko#/iph3e2e2329" target="_blank">iPhone VoiceOver 사용법</a>
+			</p>
+			<div class="table">
+				<table>
+					<caption><strong>사용자심사 보조기기(스크린리더) 기준</strong> <p>구분, 보조기기 (스크린리더), 비고, PC 웹, 모바일 정보를 포함하는 표</p></caption>
+					<thead>
+						<tr>
+							<th scope="col" class="w15p">구분</th>
+							<th scope="col" class="w30p">보조기기 (스크린리더)</th>
+							<th scope="col">비고</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="col">PC 웹</th>
+							<td class="tac">센스리더 최신버전 또는 <br>
+								죠스, NVDA 등 최신버전</td>
+							<td>
+								<ul>
+									<li>기기 및 OS는 가장 최적화된 접근성 환경을 제공하는 상태를 기준으로 함 </li>
+									<li>두 가지 중 하나 이상이 보조기기에서 과업 수행이 가능해야 함 </li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th scope="col">모바일</th>
+							<td class="tac">iOS VoiceOver, Android Talk Back 등의 최신버전</td>
+							<td><ul>
+								<li>기기 및 OS는 가장 최적화된 접근성 환경을 제공하는 상태를 기준으로 함 </li>
+								<li>두 가지 모두 보조기기에서 과업 수행이 가능해야 함 </li>
+							</ul></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h3>사용자심사 모바일 단말 기준</h3>
+				<div class="table">
+					<table>
+						<caption><strong>사용자심사 모바일 단말 기준</strong> <p>단말, 모바일 운영체제 및 브라우저, 비고 정보를 포함하는 표</p></caption>
+						<thead>
+							<tr>
+								<th scope="col">단말</th>
+								<th scope="col">모바일 운영체제 및 브라우저</th>
+								<th scope="col">비고</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>최신iOS가 설치된 기기</td>
+								<td>iOS 및 Safari(기본 브라우저) 최신 버전</td>
+								<td>VoiceOver 사용</td>
+							</tr>
+							<tr>
+								<td>최신Android OS가    설치된 기기</td>
+								<td>Android 및 Android(기본 브라우저) 최신 버전</td>
+								<td>TalkBack 등의 최신 버전</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			
+			<pre>
+				<code class="language-markup">
+					<script type="prism-html-markup">
+						<h1 class="foo">h1. Heading 1</h1>
+							<h2>h2. Heading 2</h2>
+							<h3>h3. Heading 3</h3>
+							<h4>h4. Heading 4</h4>
+							<h5>h5. Heading 5</h5>
+						<h6>h6. Heading 6</h6>
+						<ul role="tablist">
+							<li role="presentation"><a href="javascript:;" role="tab" title="" aria-selected="false">현황</a></li>
+							<li role="presentation"><a href="javascript:;" role="tab" class="on" title="" aria-selected="true">통계</a></li>
+						</ul>
+					</script>
+				</code>
+			</pre>
+		</main>
+		<!-- //content -->
+	</div>
+	<!-- //container -->
+	<!-- footer -->
+	<footer>푸터 영역</footer>
+	<!-- //footer -->
+	
+</body>
+</html>

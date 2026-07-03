@@ -1,0 +1,154 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산현황</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">보험 상세</a></h1> <!-- [한은정 : 2021-05-07] 타이틀 변경 -->
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+
+			<div class="boxWrapShadow"><!--09.02 boxWrapShadow 추가 s:boxWrapShadow-->
+				<div class="boxTypeWrap delShadow"><!--09.02 delShadow 추가 s:delShadow-->
+					<!-- [2021-08-06] 한은정 : 업데이트 영역 삭제 -->
+					
+					<!-- 상단 계좌정보 영역 -->
+					<div class="accTopInfo">
+						<h2 class="accName">애니카 다이렉트 자동차보험
+							<img src="../../images/logos/AAAJ0000.png" alt="애니카다이렉트 로고" class="imgLogo"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+						</h2>
+						<!-- <dl class="totalBalance">
+							<dt>총 납입보험료</dt> 
+							<dd><strong>4,200,000</strong>원</dd>
+						</dl> -->
+						<div class="etcInfo">
+							<span class="carNum">123가1234</span>｜<span class="carName">G4 렉스턴</span>
+						</div>
+					</div>
+					<!-- // 상단 계좌정보 영역 -->
+
+					<!-- [2021-10-05] 한은정 수정// -->
+					<!-- 보장내역 없을 경우 -->
+					<!-- <hr class="divLine"> -->
+
+					<!-- 보장내역 있을 경우 09.22 미확정으로 미노출
+					<div class="statusWrap addTpye">
+						<a href="javascript:;" class="link">
+							<span class="statusTit">이 상품의 보장내역을 알아볼까요?</span>
+						</a>
+					</div>
+					// 09.22 미확정으로 미노출 -->
+					<hr class="divLine"><!--09.26 추가-->
+					<!-- 계좌정보 상세 -->
+					<div class="accInfoDetail">
+						<ul class="detailList">
+							<li>
+								<span class="tit">유형</span>
+								<span class="value">
+									자동차보험&gt;종합보장보험
+								</span>
+							</li>
+							<li>
+								<span class="tit">상품명</span>
+								<span class="value">애니카 다이렉트 자동차보험
+									<!-- <button type="button" class="contBtn01" title="별칭 수정">수정</button> -->
+								</span>
+							</li>
+							<li><!--10.20 추가-->
+								<span class="tit">보장내역</span>
+								<span class="value">10건
+									<button type="button" class="contBtnArrow" title="보장내역 더보기">더보기</button><!--09.21 수정-->
+								</span>
+							</li>
+						</ul>
+					</div>
+					<!-- // 계좌정보 상세 -->
+				</div>
+				<!--e:delShadow-->
+
+				<div class="moreInfoArea"><!--09.02 div moreInfoArea 추가  및 이동 s:moreInfoArea-->
+					<!-- 추가정보 열/닫 -->
+					<div class="moreInfoWrap toggleWrap">
+							
+						<div class="moreInfo toggleCont" style="display:none">
+							<hr class="divLine2" aria-hidden="true">
+							<ul class="detailList">
+								<li>
+									<span class="tit">증권번호</span>
+									<span class="value">03580204123456 <button type="button" class="contBtn01" title="계좌번호 복사">복사</button></span></span>
+								</li>
+								<li>
+									<span class="tit">보험기간</span>
+									<span class="value">2017.01.01~2027.12.31</span>
+								</li>
+								<li>
+									<span class="tit">연령특약</span>
+									<span class="value">만35세 이상</span>
+								</li>
+								<li>
+									<span class="tit">운전자한정특약</span>
+									<span class="value">기피보험자 1인</span>
+								</li>
+								<li>
+									<span class="tit">자기차량손해</span>
+									<span class="value">가입</span>
+								</li>
+								<li>
+									<span class="tit">자기부담금(20%)</span>
+									<span class="value">최소 <strong class="dataValue">700,000</strong><em class="won">원</em></span> <!-- [2021-08-11] 한은정 : 최소 추가 -->
+								</li>
+							</ul>
+						</div>
+						<button type="button" class="moreOpenBtn toggleBtn"><span class="toggleTxt07">상세정보 보기</span></button> <!--09.21 toggleTxt07 수정-->
+					</div>
+					<!-- // 추가정보 열/닫 -->
+				</div>
+				<!--e:moreInfoArea-->
+			</div>
+			<!--e:boxWrapShadow-->
+		</div>
+		<!-- //container -->
+
+	</div>
+<script type="text/javascript">
+
+	var $toggleBtn = $(".toggleBtn"),
+		$toggleWrap = $(".toggleWrap"),
+		$toggleCont = $(".toggleCont"),
+		$toggleTxt = $(".toggleTxt03");
+
+		$toggleBtn.click(function(){
+			if ($(this).closest($toggleWrap).find( $toggleCont).css("display") == "block"){
+			$(this).parents().closest($toggleWrap).find($toggleTxt).text("상세정보 보기");
+			}else{
+			$(this).parents().closest($toggleWrap).find($toggleTxt).text("접기");
+			}
+	});
+</script>
+</body>
+</html>

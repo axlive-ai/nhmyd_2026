@@ -1,0 +1,114 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산현황</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+    $(document).ready(function(){
+        slidePopConfirm();
+    })  
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">자산등록</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+		</div>
+		<!-- //container -->
+
+		<!-- 선불페이 이용꿀팁 팝업 -->
+		<div class="nhasset popWrap slidePopConfirm"><!--09.21 하단영역이 많이 생겨서 slidePopConfirm 수정-->
+            <div class="dim"></div>
+            <div class="popInner">
+                <h1>맞춤상품추천</h1><!--09.30 타이틀 수정-->
+                <div class="popCont">    
+					<!-- <div class="as totalPopWrap">  
+						<div class="totalTit">선불페이 총 잔액</div>
+						<div class="totalAmnt"><strong class="dataValue">10,000,000,000</strong><em class="won">원</em></div>
+					</div>  -->
+					<div class="transfer">
+						<div class="boxTypeWrap bgType04 pt0 mt0">
+							<h2 class="prodListTit img15">
+                                연간 최대 700만원 세액공제 혜택!<br>노후준비, 지금 시작해보세요.
+							</h2>
+							<p class="subTxt4">소득 및 연령에 따라 다를 수 있습니다.</p>
+							<!-- <ul class="prodListWrap">
+								<li>
+									<a href="javascript:;">
+										<div class="prodRecomWrap">
+											<strong class="prodTit">NH페이모아통장</strong>
+											<em class="prodRecommInfo">최고(연/세전)</em>
+											<div class="prodRecomVal">
+												<span class="dataValueWrap">
+													<strong class="dataValue">2.85</strong><em class="per">%</em>
+												</span>
+											</div>
+										</div>
+
+										<div class="prodInfoWrap">
+											<div class="prodVal">
+												간편결제 이용 고객님을 위한 입출식 특화상품
+											</div>
+											<span class="hashWrap3">
+												<em class="hastag">#1인1계좌</em>
+											</span>
+										</div>
+									</a>
+								</li>
+							</ul> -->
+							<!-- 선택약관(7번) 미동의한 고객의 경우 //-->
+							<ul class="prodListWrap mt10">
+								<li>
+									<div class="disagree">
+										<a href="javascript:;" role="button">
+                                            <p class="disagreeP"><strong>개인형퇴직연금(IRP)</strong>
+                                                <span class="txt">은퇴 걱정 없는 노후 월급 준비하기</span>
+                                            </p>
+										</a>
+									</div>
+								</li>
+							</ul>
+							<!--// 선택약관(7번) 미동의한 고객의 경우 -->
+						</div>
+					</div>
+				</div>
+
+                <div class="popBtnWrap">
+                    <!-- <div class="popBtn">
+                        <a href="javascript:;" class="confirmBtn">조회</a>
+                    </div> -->
+                    <a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다."><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+                </div>
+            </div>
+        </div>
+		<!-- // 계좌별칭 설정 팝업 -->
+
+	</div>
+
+</body>
+</html>

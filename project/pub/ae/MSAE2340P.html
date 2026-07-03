@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>[P] 내 연금 현황</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		fullLayerPop();
+	})
+</script>
+</head>
+<body>
+<div class="wrapper nhasset"><!-- 바닥페이지 --></div>
+
+<!-- ###################################### -->
+<!-- ### [팝업] 내 연금 현황 ### -->
+<!-- ###################################### -->
+<div class="nhasset popWrap fullLayerPop">
+	<div class="popInner">
+		<h1>내 연금 현황</h1>
+		<div class="popCont grayPop">
+			<div class="msaeAreaWrap">
+				<div class="swiper-container">
+					<div class="swiper-inner">
+						<!-- -------------------------------------- -->
+						<!-- [좌우 컨트롤버튼] -->
+						<!-- -------------------------------------- -->
+						<div class="PsSWiperBtn">
+							<button type="button" class="swiper-prev swiper-navi"><span class="btn-text">진단솔루션</span></button>
+							<button type="button" class="swiper-next swiper-navi"><span class="btn-text">내 연금 진단</span></button>
+						</div>
+
+						<!-- -------------------------------------- -->
+						<!-- [컨탠츠] -->
+						<!-- -------------------------------------- -->
+						<div class="swiper productSwiperCont">
+							<div class="swiper-wrapper">
+								<!-- ### 내 연금 현황 ### -->
+								<div class="swiper-slide" data-swiper-title="내 연금 현황" >
+									<div class="msaeCont">
+										<div class="totalBalance boxTypeWrap mt50">
+											<h2 class="defTit mt0">
+												<strong>김농협</strong>님의 맞춤정보
+												<a href="javascript:;" class="editBtn" aria-label="맞춤정보 다시입력"><span class="blind">다시입력</span></a>
+												<span class="retryTxt">다시 하기</span>
+											</h2>
+											<div class="hashWrap">
+												<span class="hashTag">#현재 만36세</span>
+												<span class="hashTag">#55세부터</span>
+												<span class="hashTag">#85세까지</span>
+												<span class="hashTag">#희망생활비 167만원</span>
+												<span class="hashTag">#국민연금 70세개시(연기수령) 예상수령액 월154만원</span>
+											</div>
+										</div>
+
+										<div class="areaInfo1 t1"><p><span>진단일 : </span><strong>0000.00.00</strong></p></div> <!-- [2023 NH마이데이터 서비스 고도화] 진단일 추가 -->
+										<div class="boxTypeWrap msae">
+											<div class="msaeAseetItem">
+												<h2 class="title"> <strong>희망생활비 준비는?</strong>
+													<div class="tooltipWrap">
+														<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">희망생활비 툴팁 열기</span></button>
+														<div class="tooltipCont">
+															<div class="msaeTool">
+																<p>희망생활비 총액 계산</p>
+																<ul class="popBul">
+																	<li>맞춤정보에서 입력한 월 희망생활비와 81세이후 감소여부에
+																		따라 적용된 금액을 연금수령기간 동안 합산하여 계산 </li>
+																</ul>
+															</div>
+															<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+														</div>
+													</div>
+												</h2>
+												<div class="mt10">
+													현재까지 필요한 희망 생활비 대비 내가 준비한
+													연금 자산은 <strong class="dataValue pointColor">150%</strong>에요
+												</div>
+												<div class="graphWrap mt35" role="img" aria-label="" id="hopeExpnsGraph">
+													<img src="../../images/temp/assets_graph_dumy43.png">
+													<ul class="legendList mt25">
+														<li>
+															<span class="legendTit type37"><strong>희망생활비</strong></span>
+															<span class="legendAmnt"><em class="value">912,600,000</em>원</span>
+														</li>
+														<li>
+															<span class="legendTit type50"><strong>내 연금자산</strong></span>
+															<span class="legendAmnt"><em class="value">360,234.000</em>원</span>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="boxTypeWrap msae mb40">
+											<div class="msaeAseetItem">
+												<h2 class="title"> <strong>연금자산 비중은?</strong>
+													<div class="tooltipWrap">
+														<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">연금자산 비중 안내 툴팁 열기</span></button>
+														<div class="tooltipCont">
+															<div class="msaeTool">
+																<p>은퇴준비자금</p>
+																<ul class="popBul">
+																	<li>금융자산【계좌, 투자, 선불페이·카드】, 연금, 실물자산, 가상자산의 합계액이며 부채, 보험은 제외합니다.</li>
+																</ul>
+																<p>내 연금자산</p>
+																<ul class="popBul">
+																	<li>개인연금[연금저축펀드, 연금저축신탁, 연금(저축)보험 수기입력], 퇴직연금[개인형 IRP, 퇴직연금DC, 퇴직연금 간편계산] 및 공적연금의 합계액입니다.</li>
+																</ul>
+															</div>
+															<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+														</div>
+													</div>
+												</h2>
+												<div class="mt10">
+													<strong>은퇴준비자금 대비</strong> 내가 준비한 연금 자산은 <strong class="dataValue pointColor">25.5%</strong>에요 <!-- [2023-02-21] 텍스트 수정 -->
+												</div>
+												<div class="graphWrap mt35" role="img" aria-label="">
+													<div class="graphVerWrap graphPeer">
+														<div class="graphVerLine" style="bottom:70px">
+														</div>
+														<div class="graphTypeWrap graphPercent">
+															<div class="graphType">
+																<div class="graphTip02 midgreen">
+																	<p class="graphTipBox">
+																		<span>생애설계자금</span> <!-- [2023 NH마이데이터 서비스 고도화] 문구수정 -->
+																		<span class="value">9,999,999,999<em>원</em></span>
+																	</p>
+																</div>
+																<div class="baseGraph02 msBar" onclick="graphVerTipOpen($(this))"><span class="lineGraph midgreen" data-value="100" style="width:60px"></span></div>
+																<div class="graphValueData"><span class="blind">생애설계자금</span></div> <!-- [2023 NH마이데이터 서비스 고도화] 문구수정 -->
+															</div>
+															<div class="graphType">
+																<div class="graphTip02 darkgreen">
+																	<p class="graphTipBox">
+																		<span>내 연금자산</span>
+																		<span class="value">123,999<em>원</em></span>
+																	</p>
+																</div>
+																<div class="baseGraph02 msBar" onclick="graphVerTipOpen($(this))"><span class="lineGraph darkgreen" data-value="20" style="width:60px"></span></div>
+																<div class="graphValueData"><span class="blind">내 연금자산</span></div>
+															</div>
+															<div class="percentNum">
+																<div class="top">100%</div>
+																<div class="middle">50%</div>
+																<div class="bottom">0%</div>
+															</div>
+														</div>
+													</div>
+													<ul class="legendList mt25">
+														<li>
+															<span class="legendTit type37"><strong>생애설계자금</strong></span> <!-- [2023 NH마이데이터 서비스 고도화] 문구수정 -->
+															<span class="legendAmnt"><em class="value">1,000,000,000</em>원</span>
+														</li>
+														<li>
+															<span class="legendTit type50"><strong>내 연금자산</strong></span>
+															<span class="legendAmnt"><em class="value">360,234.000</em>원</span>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- ### 내 연금 진단 ### -->
+								<div class="swiper-slide"  data-swiper-title="내 연금 진단">
+									<div class="msaeCont">
+										<!-- [샘플] 올리 노출 영역 -->
+										<div class="findOllyWrap nhasset">
+											<div class="findOlly" style="display:block">
+												<button type="button" class="findImg" aria-label="숨은 올리 획득" aria-haspopup="true"><img src="../../images/event/findally/img_view_ally01.png" alt=""></button>
+											</div>
+										</div>
+										<!-- // -->
+
+										<div class="totalBalance boxTypeWrap mt50">
+											<h2 class="defTit mt0">
+												<strong>김농협</strong>님의 맞춤정보
+												<a href="javascript:;" class="editBtn" aria-label="맞춤정보 다시입력"><span class="blind">다시입력</span></a>
+											</h2>
+											<div class="hashWrap">
+												<span class="hashTag">#현재 만36세</span>
+												<span class="hashTag">#55세부터</span>
+												<span class="hashTag">#85세까지</span>
+												<span class="hashTag">#희망생활비 167만원</span>
+												<span class="hashTag">#국민연금 70세개시(연기수령) 예상수령액 월154만원</span>
+											</div>
+										</div>
+
+										<div class="areaInfo1 t1"><p><span>진단일 : </span><strong>0000.00.00</strong></p></div> <!-- [2023 NH마이데이터 서비스 고도화] 진단일 추가 -->
+										<div class="boxTypeWrap msae">
+											<div class="msaeAseetItem psBgTy">
+												<h2 class="title"> <strong>내가 모은 연금진단</strong>
+													<div class="tooltipWrap">
+														<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">내가 모은 연금진단 인내 툴팁 열기</span><!-- [접근성_2024] blind 수정 --></button>
+														<div class="tooltipCont">
+															<div class="msaeTool">
+																<ul class="popBul">
+																	<li>공적연금 수령 이후 연금 개시를 하는 경우공적연금 수령나이부터 알려드려요. </li>
+																	<li>간편계산 또는 입력하신 금액은 개인연금에 포함되어 있어요.</li>
+																</ul>
+															</div>
+															<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+														</div>
+													</div>
+												</h2>
+												<div class="mt10">
+													나는 <strong class="pointColor">55세</strong>부터 <strong class="pointColor">30년</strong>동안
+												</div>
+												<div class="timeLineWrap">
+													<ul>
+														<li class="active">
+															<em class="age">55세</em>
+															<div class="speechBox">
+																월 평균 <strong class="pointColor">50만원</strong> 받을 수 있어요
+																<ul class="keywordList">
+																	<li>개인연금 50만원</li>
+																</ul>
+															</div>
+														</li>
+														<li class="active">
+															<em class="age">65세</em>
+															<div class="speechBox">
+																월 평균 <strong class="pointColor">150만원</strong> 받을 수 있어요
+																<ul class="keywordList">
+																	<li>개인연금 50만원</li>
+																	<li>국민연금 100만원</li>
+																</ul>
+															</div>
+														</li>
+														<li class="active">
+															<em class="age">85세</em>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="boxTypeWrap msae">
+											<div class="msaeAseetItem">
+												<h2 class="title">
+													매월 자유롭게
+													<button type="button" title="연금 개시 팝업" class="psPopBtn"><span>235만원</span></button>
+													을, 그리고 81세 부터는 <strong class="pointColor">165만원</strong>을 생활비로 쓰고 싶은데...
+												</h2>
+												<div class="graphVerWrap">
+													<div class="graphVerLine" style="bottom: 86px;">
+														<span class="title">희망생활비</span>
+														<div class="lineWrap">
+															<span class="left"></span>
+															<span class="right" style="bottom:-10px"></span> <!-- bottom으로 높이조절 -->
+														</div>
+													</div>
+													<div class="graphTypeWrap">
+														<div class="graphType">
+															<span class="tipCircle01">부족</span>
+															<div class="graphTip02 mildgreen" style="bottom: 30px;">
+																<p class="graphTipBox">
+																	<span>월 평균</span>
+																	<span class="value">50<em>만원</em></span>
+																</p>
+															</div>
+															<div class="baseGraph02 msBar" onclick="graphVerTipOpen($(this))"><span class="lineGraph mildgreen" data-value="30" style="height: 30px;"></span></div>
+														</div>
+														<div class="graphType">
+															<span class="tipCircle01">부족</span>
+															<div class="graphTip02 midgreen" style="bottom: 60px;">
+																<p class="graphTipBox">
+																	<span>월 평균</span>
+																	<span class="value">50<em>만원</em></span>
+																</p>
+															</div>
+															<div class="baseGraph02 msBar" onclick="graphVerTipOpen($(this))"><span class="lineGraph midgreen" data-value="60" style="height: 60px;"></span></div>
+														</div>
+														<div class="graphType">
+															<span class="tipCircle02">충족</span>
+															<div class="graphTip02 darkgreen" style="bottom: 60px;">
+																<p class="graphTipBox">
+																	<span>월 평균</span>
+																	<span class="value">50<em>만원</em></span>
+																</p>
+															</div>
+															<div class="baseGraph02 msBar" onclick="graphVerTipOpen($(this))"><span class="lineGraph darkgreen" data-value="60" style="height: 60px;"></span></div>
+														</div>
+													</div>
+													<div class="graphBotText">
+														<span>55~64세</span>
+														<span>64~80세</span>
+														<span>81~85세</span>
+													</div>
+												</div>
+											</div>
+											<div class="psBoxWrap">
+												<strong class="pointColor">81세</strong>세 이후 희망생활비가 <strong class="pointColor">70%</strong>로
+												낮아졌어요. 연금수령 시작 후 <strong class="pointColor">80세</strong>까지는
+												원하는 노후생활이 힘들 수 있어요.
+											</div>
+
+											<hr class="divLine3" aria-hidden="true">
+
+											<div class="msaeAseetItem toolTipTop">
+												<h2 class="title"> <strong>희망 생활비 대비</strong>
+													<div class="tooltipWrap">
+														<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">희망 생활비 안내 툴팁 열기</span><!-- [접근성_2024] blind 수정 --></button>
+														<div class="tooltipCont">
+															<div class="msaeTool">
+																<p>공적연금개시나이와 희망 생활비 감소 적용 여부에 따라 구간별 과부족 금액과 AI전문가의 Advice를 안내 드려요.</p>
+																<p class="mt5">소득 크레바스(Income Crevasse) </p>
+																<ul class="popBul">
+																	<li>
+																		원래 빙하의 갈라진 틈을 의미해요. 경제용어로는
+																		주된 직장 퇴직으로 부터 공적연금개시나이 전까지
+																		소득 공백이 있거나 소득이 불안전한 구간을 말해요
+																	</li>
+																</ul>
+															</div>
+															<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+														</div>
+													</div>
+												</h2>
+											</div>
+											<div class="hopeWrap">
+												<ul>
+													<li>
+														<div class="age">
+															<span>55세부터 64세까지</span>
+														</div>
+														<div class="money">
+															<strong>월 평균 166만원 <em class="pointColorRed">부족해요</em><img src="../../images/ico_emoji17.png" alt=""></strong><span class="right">(총 6,325만원)</span>
+														</div>
+
+														<div class="toggleWrap psLiveMoney">
+															<div class="toggleCont" style="display: none;">
+																<div class="psMcont" style="display: none;">
+																	<div class="psMlist">
+																		공적연금 수령조정으로 소득 크레바스 기간과 부족
+																		금액을 줄일 수 있어요. 조기연금은 최대 5년 먼저
+																		받고 연기연금은 연간 7.2%씩 더 받을 수 있어요.
+																		<p class="btnR">
+																			<a href="javascript:;" class="link arrGreen"><span>공적연금 조정하러 가기 </span></a>
+																		</p>
+																	</div>
+																</div>
+																<div class="psMcont">
+																	<div class="psMlist">
+																		공적연금 수령조정으로 소득 크레바스 기간과 부족
+																		금액을 줄일 수 있어요. 조기연금은 최대 5년 먼저
+																		받고 연기연금은 연간 7.2%씩 더 받을 수 있어요.
+																		<p class="btnR">
+																			<a href="javascript:;" class="link arrGreen"><span>공적연금 조정하러 가기 </span></a>
+																		</p>
+																	</div>
+																</div>
+																<div class="psMcont">
+																	<div class="psMlist">
+																		공적연금 수령조정으로 소득 크레바스 기간과 부족
+																		금액을 줄일 수 있어요. 조기연금은 최대 5년 먼저
+																		받고 연기연금은 연간 7.2%씩 더 받을 수 있어요.
+																		<p class="btnR">
+																			<a href="javascript:;" class="link arrGreen"><span>공적연금 조정하러 가기 </span></a>
+																		</p>
+																	</div>
+																</div>
+															</div>
+															<div class="psMbtnWrap">
+																<a href="javascript:;" class="toggleBtnN" role="button" title="축소됨"><span class="toggleTxt10">자세히 보기</span></a> <!-- [2023-01-10] 수정 -->
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="age">
+															<span>65세 ~ 80세</span>
+														</div>
+														<div class="money">
+															<strong>월 평균 13만원 <em class="pointColorRed">부족해요</em><img src="../../images/ico_emoji17.png" alt=""></strong><span class="right">(총 2,599만원)</span>
+														</div>
+														<div class="toggleWrap psLiveMoney">
+															<div class="toggleCont psMcont" style="display: none;">
+																<div class="psMlist">
+																	건강한 노후를 위해 여가와 교육 그리고 경제활동을
+																	반복해서 순환시켜 보세요.
+																</div>
+															</div>
+															<div class="psMbtnWrap">
+																<a href="javascript:;" class="toggleBtnN" role="button" title="축소됨"><span class="toggleTxt10">자세히 보기</span></a> <!-- [2023-01-10] 수정 -->
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="age">
+															<span>55세부터 64세까지</span>
+														</div>
+														<div class="money">
+															<strong>월 평균 13만원 <em class="pointColor">남아요</em><img src="../../images/ico_emo01.png" alt=""></strong><span class="right">(총 2,599만원)</span>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- ### 진단솔루션 ### -->
+								<div class="swiper-slide"  data-swiper-title="진단솔루션">
+									<div class="msaeCont">
+										<div class="totalBalance boxTypeWrap mt50">
+											<h2 class="defTit mt0">
+												<strong>김농협</strong>님의 맞춤정보
+												<a href="javascript:;" class="editBtn" aria-label="맞춤정보 다시입력"><span class="blind">다시입력</span></a>
+											</h2>
+											<div class="hashWrap">
+												<span class="hashTag">#현재 만36세</span>
+												<span class="hashTag">#55세부터</span>
+												<span class="hashTag">#85세까지</span>
+												<span class="hashTag">#희망생활비 167만원</span>
+												<span class="hashTag">#국민연금 70세개시(연기수령) 예상수령액 월154만원</span>
+											</div>
+										</div>
+
+										<div class="areaInfo1 t1"><p><span>진단일 : </span><strong>0000.00.00</strong></p></div> <!-- [2023 NH마이데이터 서비스 고도화] 진단일 추가 -->
+										<div class="boxTypeWrap msae">
+											<div class="msaeAseetItem psBgTy02">
+												<h2 class="title"> <strong>연금진단 솔루션</strong>
+													<div class="tooltipWrap">
+														<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">연금진단 솔루션 안내 툴팁 열기</span><!-- [접근성_2024] blind 수정 --></button>
+														<div class="tooltipCont">
+															<div class="msaeTool">
+																<p>공적연금 수령 이후 연금 개시를 하는 경우 필요저축금액은 국민연금 수령나이 기준으로 알려드립니다.</p>
+															</div>
+															<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+														</div>
+													</div>
+												</h2>
+												<div class="psBoxArea">
+													<h2>매월저축</h2>
+													<div class="box">
+														지금부터 연금 개시 전까지 <br>
+														매월 <strong class="pointColor">518만원</strong> 저축하거나
+													</div>
+												</div>
+												<div class="psBoxArea">
+													<h2>목돈준비</h2>
+													<div class="box">
+														지금바로 <strong class="pointColor">2억 6000만원</strong> 넣으면 <br>
+													희망 생활비 준비가 가능해요!
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="boxTypeWrap">
+											<div class="psTopTxt">
+												지금 더 준비하면<br>
+												<strong class="pointColor">따뜻한 은퇴생활</strong>이 가능해요
+											</div>
+											<div class="tabWrap type05">
+												<ul role="tablist">
+													<li role="presentation" class="on"><a href="javascript:;" role="tab" title="선택됨" aria-selected="true" class="active on">저축으로 꾸준하게</a></li>
+													<li role="presentation"><a href="javascript:;" role="tab" class="" title="" aria-selected="false">목돈으로 한번에</a></li>
+												</ul>
+											</div>
+											<!-- //탭 없을 경우 숨기기 -->
+											<div class="tabContWrap type05">
+												<div class="tabCont01" aria-label="저축으로 꾸준하게 탭">
+													<div class="ac mb20 psHope">
+														<p class="defSubTit">지금부터 연금 개시 전까지</p>
+														<p class="ty01">매월 <button type="button" title="저축 선택 팝업" class="psPopBtn"><span>30만원</span></button>저축하면,</p>
+													</div>
+													<div class="type05 ac">
+														<div class="graphTxt">
+															<span class="sub">국민연금 개시 전까지 </span>
+															<p class="tit">매월 <em class="pointColor">120만원</em> 받을 수 있어요!</p>
+														</div>
+
+														<div class="graphTxt mt20">
+															<span class="sub">국민연금 개시 후 부터</span>
+															<p class="tit">매월 <em class="pointColor">210만원</em> 받을 수 있어요!</p>
+														</div>
+													</div>
+												</div>
+												<div class="tabCont02" aria-label="목돈으로 한번에 탭"style="display:none">
+													<div class="ac mb20 psHope">
+														<p class="defSubTit">지금 바로</p>
+														<p class="ty01">목돈 <button type="button" title="목돈 선택 팝업" class="psPopBtn"><span>5,000만원</span></button>저축하면</p>
+													</div>
+													<div class="type05 ac">
+														<div class="graphTxt">
+															<span class="sub">은퇴후 100세까지</span>
+															<p class="tit">매월 <em class="pointColor">120만원</em> 받을 수 있어요!</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- ### 추천상품 ### -->
+								<div class="swiper-slide"  data-swiper-title="추천상품">
+									<div class="msaeCont">
+										<div class="psGoodTit mt50">
+											<h2>은퇴준비 추천상품</h2>
+										</div>
+										<div class="boxTypeWrap pt0 pb0">
+											<div class="inoutListWrap">
+												<div class="inoutListInn">
+													<ul class="inoutList">
+														<li>
+															<a href="javascript:;" class="link linkArrow">
+																<div class="isCategory">
+																	<div class="imgWrap icoCate">
+																		<span class="img"><img src="../../images/category/icoCate43.png" alt="외식"></span>
+																	</div>
+																	<div class="textWrap">
+																		<div class="inoutTit">
+																			<span class="use">개인형 퇴직연금(IRP)</span>
+																		</div>
+																		<div class="inoutCont">
+																			<div class="timeWrap">
+																				<span class="time">은퇴 걱정 없는 노후 월급 준비하기</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</a>
+														</li>
+														<li>
+															<a href="javascript:;" class="link linkArrow">
+																<div class="isCategory">
+																	<div class="imgWrap icoCate">
+																		<span class="img"><img src="../../images/category/icoCate46.png" alt="외식"></span>
+																	</div>
+																	<div class="textWrap">
+																		<div class="inoutTit">
+																			<span class="use">퇴직연금 포트폴리오</span>
+																		</div>
+																		<div class="inoutCont">
+																			<div class="timeWrap">
+																				<span class="time">나에게 적합한 맞춤형 포트폴리오 알아보기</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</a>
+														</li>
+														<li>
+															<a href="javascript:;" class="link linkArrow">
+																<div class="isCategory">
+																	<div class="imgWrap icoCate">
+																		<span class="img"><img src="../../images/category/icoCate47.png" alt="외식"></span>
+																	</div>
+																	<div class="textWrap">
+																		<div class="inoutTit">
+																			<span class="use">퇴직연금 펀드</span>
+																		</div>
+																		<div class="inoutCont">
+																			<div class="timeWrap">
+																				<span class="time">투자상품으로 실속 있게 관리하기</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</a>
+														</li>
+														<li>
+															<a href="javascript:;" class="link linkArrow">
+																<div class="isCategory">
+																	<div class="imgWrap icoCate">
+																		<span class="img"><img src="../../images/category/icoCate48.png" alt="외식"></span>
+																	</div>
+																	<div class="textWrap">
+																		<div class="inoutTit">
+																			<span class="use">연금보험</span>
+																		</div>
+																		<div class="inoutCont">
+																			<div class="timeWrap">
+																				<span class="time">미리미리 준비하는 은퇴준비</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="msaeBannerWrap03">
+											<p class="tit">행복한 미래를 위한 시니어 꿀팁</p>
+											<p class="addTxt">은퇴설계에 도움이 되는 금융정보</p>
+										</div>
+
+										<div class=" bannerPrd2 mt12">
+											<a href="javascript:;">
+												<div class="inBanner typeS2 bg13 addShoow">
+													<p>
+														<span class="bnTit">All100플랜</span>
+														<span class="addTxt">내 삶의 힘, 100세 시대 은퇴 파트너!</span>
+													</p>
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+								<!-- ### // ### -->
+							</div>
+						</div>
+						<!-- -------------------------------------- -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="popBtnWrap">
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+		</div>
+	</div>
+</div>
+
+<!-- ###################################### -->
+<!-- ### [샘플] 스크립트 ### -->
+<!-- ###################################### -->
+<script>
+var prevButton = $('.swiper-prev');
+var nextButton = $('.swiper-next');
+var prevButtonText = prevButton.find('> .btn-text');
+var nextButtonText = nextButton.find('> .btn-text');
+
+/* [2023-01-10] 수정// */
+var swiper = new Swiper(".productSwiperCont", {
+	loop: true,
+	spaceBetween: 50,
+	autoHeight : true,
+	variableWidth:true,
+	observer : true,
+	observeParents : true,
+	resizeObserver : false, /* 리사이즈 오류 팝업 수정 */
+	navigation: {
+		nextEl: ".swiper-next",
+		prevEl: ".swiper-prev"
+	},
+	on: {
+		transitionEnd: function (e){
+			$(".productSwiperCont").css("padding-bottom","");
+			var $btnPrev = $('.PsSWiperBtn .swiper-prev .btn-text');
+			var $btnNext = $('.PsSWiperBtn .swiper-next .btn-text');
+			$btnPrev.text($('.swiper-slide').eq(this.activeIndex-1).attr('data-swiper-title'));
+			$btnNext.text($('.swiper-slide').eq(this.activeIndex+1).attr('data-swiper-title'));
+			$(".grayPop").scrollTop(0);
+			if(e.activeIndex == 2) uiOilyShow();
+			
+			// [접근성_2024] 활성화 컨텐츠만 읽을 수 있게 수정
+			$(this.slides[this.activeIndex]).attr('aria-hidden','false').siblings().attr('aria-hidden','true');
+
+			// [접근성_2024] 슬라이드 대체 텍스트 수정
+			$(e.navigation.prevEl).attr('aria-label', '이전 슬라이드 : ' + $btnPrev.text());
+			$(e.navigation.nextEl).attr('aria-label', '다음 슬라이드 : ' + $btnNext.text());
+		},
+	},
+});
+
+//샘플 : 올리랜덤노출
+function uiOilyShow(){
+	var _ollyPos = 'pos0' + uiSetRandom(1,10);
+	var _ollyImg = '../../images/event/findally/img_view_ally0' + uiSetRandom(1,7) + '.png';
+	$('.findOlly').removeClass().addClass('findOlly ' + _ollyPos); //위치 랜덤
+	$('.findOlly img').attr('src', _ollyImg);
+}
+
+/* 자세히 보기 버튼 수정 및 스와이프 높이 수정 */
+$(function(){
+	$(".psMbtnWrap .toggleBtnN").on("click",function(){
+		if($(this).closest(".psMbtnWrap").prev(".toggleCont").css("display") == "none"){
+			$(this).addClass('active').attr('title',"확장됨");
+			$(this).find('.toggleTxt10').text("닫기");
+
+			$(".productSwiperCont").css("padding-bottom",$(this).closest(".psMbtnWrap").prev(".toggleCont").innerHeight()+parseInt($(this).closest(".psMbtnWrap").prev(".toggleCont").css("margin-top")));
+			$(this).closest(".toggleWrap").find(".toggleCont").slideDown("fast",function(){
+				$(".grayPop").animate({
+					scrollTop : $(".grayPop")[0].scrollHeight
+				},300)
+			});
+		}else{
+			$(this).removeClass('active').attr('title',"축소됨");
+			$(this).find('.toggleTxt10').text("자세히 보기");
+			$(this).closest(".toggleWrap").find(".toggleCont").slideUp("fast",function(){
+				$(".swiper-wrapper").css("height","");
+				$(".productSwiperCont").css("padding-bottom","");
+				$(".grayPop").animate({
+					scrollTop : $(".grayPop")[0].scrollHeight
+				},300)
+		});
+		}
+	})
+})
+/* //[2023-01-10] 수정 */
+
+function ChangeButtonText(event, loop) {
+var slides = event.slides;
+var currentSlideIndex = event.activeIndex;
+var prevSlideIndex = event.activeIndex - 1;
+var nextSlideIndex = event.activeIndex + 1;
+//   console.log(`다음 슬라이드 : ${prevSlideIndex}`);
+//   console.log(`현재 슬라이드 : ${currentSlideIndex}`);
+//   console.log(`다음 슬라이드 : ${nextSlideIndex}`);
+
+var currentSlideTitle = slides[currentSlideIndex].dataset.swiperTitle;
+var prevSlideTitle;
+var nextSlideTitle;
+// console.log(prevSlideIndex, nextSlideIndex);
+$('.popInner > h1').text(currentSlideTitle);
+if (loop) {
+	if (prevSlideIndex === -1) {
+	prevSlideIndex = slides.length - 3
+	}
+
+	if (nextSlideIndex >= slides.length) {
+	nextSlideIndex -= prevSlideIndex;
+	}
+
+	prevSlideTitle = slides[prevSlideIndex].dataset.swiperTitle;
+	nextSlideTitle = slides[nextSlideIndex].dataset.swiperTitle;
+	// console.log(prevSlideTitle, nextSlideTitle);
+
+	prevButtonText.text(prevSlideTitle);
+	nextButtonText.text(nextSlideTitle);
+} else {
+	// 루프가 아닐 경우
+	if (prevSlideIndex >= 0) {
+	prevSlideTitle = slides[prevSlideIndex].dataset.swiperTitle;
+	prevButton.removeClass('invisible');
+	prevButtonText.text(prevSlideTitle);
+	} else {
+	prevButton.addClass('invisible');
+	}
+
+	if (nextSlideIndex >= 0 && nextSlideIndex < slides.length ) {
+	nextSlideTitle = slides[nextSlideIndex].dataset.swiperTitle;
+	nextButton.removeClass('invisible');
+	nextButtonText.text(nextSlideTitle);
+	} else {
+	nextButton.addClass('invisible')
+	}
+	// console.log(prevSlideTitle, nextSlideTitle);
+}
+
+}
+
+// var Toptit =$('.swiper-slide-active').attr("data-value");
+$(".swiper-next").removeClass('invisible');
+
+
+	// 금융자산 총액 그래프
+	$(".graphVerWrap.graphPeer .graphType").each(function(i) {
+		graphValue = $(this).find(".lineGraph").attr("data-value");
+		graphline = $(this).find(".lineGraph.mildgreen").attr("data-value");
+		graphBg = $(".graphVerLine").position().top + 20;
+		height1 =$('.lineGraph.mildgreen').outerHeight() + 24;
+		height2 =$('.graphTip02.mildgreen').outerHeight();
+		graphBgH = height1 + height2;
+		$(this).find(".lineGraph").height(graphValue);
+		$(this).find(".graphTip02").css('bottom' , graphValue + "px");
+	});
+	var graphVerTipOpen = function(obj) {
+		var $item = $(this).find('.msBar');
+		var $tip =  $item.siblings('.graphTip02');
+		$tip = obj.closest(".graphType").find(".graphTip02");
+		$(".graphTip02").hide();
+		$tip.show();
+	};
+
+
+</script>
+<!-- ###################################### -->
+</body>
+</html>

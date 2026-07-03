@@ -1,0 +1,95 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 연결자산 등록</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		slidePopConfirm();
+	})
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">연결자산 등록</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container"> 
+			
+		</div>
+		<!-- // container -->
+
+		<!-- 컨펌 팝업 -->
+		<div class="nhasset popWrap slidePopConfirm">
+			<div class="dim"></div>
+			<div class="popInner">
+				<h1>가상자산 서비스 가입 동의</h1>
+				<div class="popCont">
+					<div class="formWrap selectAll mt0 pt0"><!--10.06 수정-->
+						<div class="total">
+							<div class="formHolder check">
+								<input type="checkbox" id="type_all01" checked class="chekTypeOther">
+								<label class="check" for="type_all01">전체동의</label>
+							</div>
+						</div>
+						<div class="cont" >
+							<div class="formHolder check ">
+								<input type="checkbox" id="type01" checked="checked">
+								<label class="check" for="type01"><em>[필수]</em>개인(신용)정보 수집&middot; 이용 동의서(별도)</label>
+								<a href="javascript:;" class="btnView" role="button" title="[필수]개인(신용)정보 수집.이용 동의서(별도)"><span class="blind">약관보기</span></a>
+							</div>
+							<div class="formHolder check">
+								<input type="checkbox" id="type02" checked="checked">
+								<label class="check" for="type02"><em>[필수]</em> 개인(신용)정보 제3자 제공 동의서</label>
+								<a href="javascript:;" class="btnView" role="button" title="[필수] 개인(신용)정보 제3자 제공 동의서"><span class="blind">약관보기</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="info_area pa20 mt10">
+						<strong class="info_area_title">알아두세요</strong>
+						<ul class="listBul disc">
+							<!-- 2022-07-11 문구수정 -->
+							<li>가상자산 등록 및 조회는 마이데이터와 별개입니다.</li>
+							<li>개인정보 활용 동의서에 동의하셔야 등록이 가능합니다.</li>
+							<!-- //2022-07-11 문구수정 -->
+						</ul>
+					</div>
+
+					
+				</div>
+		
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">확인</a>
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../../ms_com/images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- //컨펌 팝업 -->
+	</div>
+
+</body>
+</html>

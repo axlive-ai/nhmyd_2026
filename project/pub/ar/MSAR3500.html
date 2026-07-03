@@ -1,0 +1,71 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산 연결 안내 | 서비스가입 | 유틸</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">자산 연결 안내</a></h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span class="blind">전체메뉴</span></a>
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 자산 연결 안내 ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<div class="mesArea1 img2">
+			<p>
+				<strong>자산을 연결해보세요</strong>
+				<span>자산을 연결하면 더욱 다양한<br>마이데이터 서비스를 이용하실 수 있습니다.</span>
+			</p>
+		</div>
+		<div class="areaBtnDefault">
+			<a href="javascript:;" class="btnPressDefault">다음에</a>
+			<a href="javascript:;" class="btnPressPoint">연결하러 가기</a>
+		</div>
+	</div>
+	<!-- ###################################### -->
+</div>
+
+<!-- ###################################### -->
+<!-- ### [샘플] 스크립트 ### -->
+<!-- ###################################### -->
+<script>
+	$(document).ready(function () {
+		tostpop();//토스트 팝업 호출
+	})
+
+	function tostpop(){
+		var $tostCont = '<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg">서비스 가입이 완료되었습니다.</div></div>'
+		//부정형 일때
+		// var $tostCont = '<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg error">잠시후 다시 시도해주세요.</div></div>'
+		$('.container').after($tostCont);
+		setTimeout(function(){
+			$('.tostpopupWrap').remove();
+		},4000)
+	}
+</script>
+<!-- ###################################### -->
+</body>
+</html>

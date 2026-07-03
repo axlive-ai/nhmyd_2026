@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>기본정보</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		//tostpop();//토스트 팝업 호출 
+	})
+
+	function tostpop(){
+		var $tostCont = '<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg">업데이트를 완료했습니다.</div></div>'
+		$('.container').after($tostCont);
+		setTimeout(function(){
+			$('.tostpopupWrap').remove();
+		},4000)
+	}
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>세금계산기</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<div class="content">
+			<!-- 2022-10-25 업데이트바 공통수정 -->
+			<div class="pageRefreshWrap">
+				<div class="pageRefresInner">
+					<span>
+						<span class="date">08.05 10:45</span>
+						<button type="button" class="btnUpdate"><span class="blind">업데이트</span></button>
+					</span>
+					<button type="button" class="btnAlrt new" aria-expanded="false"><span class="blind">알림</span></button>
+				</div>
+				<div class="pageAlertWrap">
+					<ul>
+						<li class="alertNotice">
+							<a href="javascript:;" role="button">
+								<dl>
+									<dt>연결중인 자산 확인이 필요해요</dt>
+									<dd>OOO에서 전송 중단 또는 거절이 있었습니다.<br/>연결관리 화면에서 확인해주세요. </dd>
+								</dl>
+							</a>
+						</li>
+						<li class="alertError">
+							<a href="javascript:;" role="button">
+								<dl>
+									<dt>정보 확인이 필요해요</dt>
+									<dd><span>$연말정산$</span> 정보수집 중 오류가 있었습니다.<br/><span>$연말정산$</span> 설정 화면에서 확인해주세요. </dd>
+								</dl>
+							</a>
+						</li>
+						<li class="alertError">
+							<a href="javascript:;" role="button">
+								<dl>
+									<dt>업데이트한지 <span>N</span>일이 지났어요</dt>
+									<dd><span>$연말정산$</span> 정보 업데이트가 필요합니다.<br/>인증관리 화면에서 확인해주세요.</dd>
+								</dl>
+							</a>
+						</li>
+						<li class="alertError">
+							<a href="javascript:;" role="button">
+								<dl>
+									<dt>정보수집이 필요해요</dt>
+									<dd><span>$연말정산$</span> 서비스 이용을 위해 정보수집이 필요합니다. 인증관리 화면에서 확인해주세요.</dd>
+								</dl>
+							</a>
+						</li>
+
+					</ul>
+					<div class="pageAlertNoData">
+						<p>업데이트 알림 내역이 없습니다.</p>
+					</div>
+					<button type="button" aria-expanded="true" class="pageAlertClose"><span>닫기</span></button>
+				</div>
+			</div>
+			<!-- //2022-10-25 업데이트바 공통수정 -->
+	
+			<div class="formWrap boxTypeWrap mt0">
+				<h2 class="defTit icoTax">
+					어렵고 복잡한 세금계산<br>
+					<strong>이제 간편하게 확인하세요</strong>
+				</h2>
+				<ul class="mainLinkList tax">
+					<li>
+						<a href="javascript:;">
+							<div>
+								<strong class="tit">종합소득세</strong>
+								<p class="txt">연간 2,000만원 초과 금융소득 등 종합과세 대상</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<div>
+								<strong class="tit">양도소득세</strong>
+								<p class="txt">토지나 건물 등 재산의 소유권 양도에 따라 발생하는 세금</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<div>
+								<strong class="tit">재산세·종합부동산세</strong>
+								<p class="txt">부동산을 소유 시 부과하는 세금</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<div>
+								<strong class="tit">취득세</strong>
+								<p class="txt">주택, 토지 등 자산 취득 시 부과되는 세금</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<div>
+								<strong class="tit">증여세</strong>
+								<p class="txt">증여에 의한 재산이 무상 이전되는 경우 부과되는 세금</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<div>
+								<strong class="tit">상속세</strong>
+								<p class="txt">피상속인의 사망에 따른 재산 상속시 부과되는 세금</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<div>
+								<strong class="tit">양도소득세(해외주식)</strong>
+								<p class="txt">외국 시장에 상장된 주식을 소유시 부과하는 세금</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- <div class="mainTaxBanner">
+				<a href="javascript:;">
+					<p class="txtLink2">건강보험료 계산<br>바로가기</p>
+				</a>
+				<a href="javascript:;">
+					<p class="txtLink2">똑똑하게 준비하는<br>절세팁</p>
+				</a> -->
+			<!-- </div>
+			<div class="bottomLink">
+				<a href="javascript:;" class="btmBtnConfig">설정하기</a>
+				<a href="javascript:;" class="btmBtnPlus">자산연결</a>
+			</div> -->
+			<div class="yabannerArea baHalf">
+				<div class="yabanner ty11 ty13">
+					<a href="javascript:;" class="link">
+						건강보험료 계산<br> 바로가기
+					</a>
+				</div>
+	
+				<div class="yabanner ty11 ty14">
+					<a href="javascript:;" class="link">
+						똑똑하게 준비하는 <br>절세팁
+					</a>
+				</div>
+			</div>
+			<div class="yatexbtnWrap mt25">
+				<a href="javascript:;" class="setBtn" title="모의계산 설정하기" aria-haspopup="true">설정하기</a>
+				<a href="javascript:;" class="sinmBtn" title=" 모의계산 자산연결" aria-haspopup="true">자산연결</a>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+</body>
+</html>

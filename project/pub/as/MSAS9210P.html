@@ -1,0 +1,183 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산현황</title>
+<script src="../pub-assets/js/head.js"></script>
+<script> 
+	$(function(){
+		fullLayerPop();
+	})
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">금 관리</a></h1> 
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+		</div>
+		<!-- //container -->
+		
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>금 관리</h1>
+				<div class="popCont">
+					<div class="formWrap realAsset"> <!--10.25 realAsset 추가-->
+						<ul>
+							<li>
+								<strong class="formTit">명칭</strong>
+								<div class="inputList">
+									<input type="text" title="명칭" value="결혼예물" placeholder="명칭을 입력해주세요.">
+									<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+								</div>
+								<div class="roundChkWrap flexType mt10">
+									<ul>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="sample00" id="sample01">
+												<label for="sample01">재테크</label>
+											</span>
+										</li>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="sample00" id="sample02">
+												<label for="sample02">돌잔치</label>
+											</span>
+										</li>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="sample00" id="sample03" checked="checked">
+												<label for="sample03">결혼예물</label>
+											</span>
+										</li>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="sample00" id="sample04">
+												<label for="sample04">모임</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+								<p class="errorTxt">특수문자[!@#$*()-=|;:,./]만 입력 가능합니다.</p>
+							</li>
+							<li>
+								<strong class="formTit">금 단위</strong>
+								<div class="boxRadio">
+									<div class="boxRadioInn">
+										<span>
+											<input name="rdo01" id="rdo01" type="radio" checked="checked">
+											<label for="rdo01">그램(g)</label>
+										</span>
+									</div>
+									<div class="boxRadioInn">
+										<span>
+											<input name="rdo01" id="rdo03" type="radio">
+											<label for="rdo03">돈</label>
+										</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<strong class="formTit">보유량<em class="inputVal">(총 1.875g, 환산금액 = 1,000,000원)</em></strong>
+								<div class="inputList">
+									<input type="tel" title="보유량" value="50" placeholder="보유량을 입력해주세요.">
+									<span class="unit">g</span>
+									<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+								</div>
+								<p class="errorTxt">0보다 큰 숫자만 입력 가능합니다.</p>
+							</li>
+
+							<li>
+								<strong class="formTit">총 구매가(선택)<em class="inputVal">(1g = 70,345원)</em></strong>
+								<div class="inputList">
+									<input type="tel" title="총 구매가(선택)" value="132,306" placeholder="금액을 입력해주세요.">
+									<span class="unit">원</span>
+									<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+								</div>
+								<p class="errorTxt">1부터 999,999,999,999까지 입력 가능합니다.</p>
+							</li>
+						</ul>
+						<!-- <script type="text/javascript">
+							//단위 자동 추가
+							$('.inputList .unit').each(function(){
+								var $this = $(this); 
+								var $this_text = $(this).text();
+								var $target = $(this).closest('.inputList').find('input[type=tel]');
+								var $target_val = $target.val();
+								$this.attr('aria-hidden','true')
+								if ($target_val.length > 0) {
+									$target.val($target_val + $this_text)
+								}
+								$target.bind('focusout',function(){
+									var $target_val = $(this).val();
+									if ($target_val.length > 0) {
+										$target.val($target_val + $this_text)
+									}
+								})
+								$target.bind('focusin',function(){
+									var $target_val = $(this).val();
+									var $newVal = $target_val.replace($this_text,'')
+									$(this).val($newVal)
+								})
+							});
+						</script> -->
+					</div>
+					<div class="grayBgLine mt30">
+						<ul class="detailList">
+							<li>
+								<span class="tit">매매기준율</span>
+								<span class="value">77,782원/1𝑔<br>(YYYY.MM.DD)</span>
+							</li>
+							<li>
+								<span class="tit">정보제공</span>
+								<span class="value">한국금거래소쓰리엠
+								</span>
+							</li>
+							<li>
+								<span class="tit">등록일</span>
+								<span class="value">2020.07.31</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="popBtnWrap">
+					<div class="popBtn"> 
+						<a href="javascript:;" class="" role="button">삭제</a> 
+						<a href="javascript:;" class="confirmBtn" role="button">확인</a> 
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button">
+						<img src="../../images/common/btn_popClose.png" alt="닫기">
+					</a>
+				</div>
+			</div>
+		</div>
+
+		
+
+	</div>
+
+</body>
+</html>

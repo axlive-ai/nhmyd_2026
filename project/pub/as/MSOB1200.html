@@ -1,0 +1,272 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 새로 추가된 자산</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">새로 추가된 자산</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="totalBalance obtit">
+                <h2 class="defTxt">30일 이내 가입한<br />신규 계좌가 <span class="pointColor">n</span>개 있어요!</h2>
+                <p>1개 이상의 계좌 선택 후 목표를 선택해주세요.</p>
+            </div>
+            <div class="obAseetlist"><!--11.01 추가-->
+                <div class="boxTypeWrap">
+                    <div class="cardSpendList mt0">
+                        <div class="inoutListWrap">
+                            <div class="inoutListInn">
+                                <ul class="inoutList">
+                                    <li class="p0">
+                                        <a href="javascript:;" class="link">
+                                            <div class="isCategory">
+                                                <!-- <span class="imgWrap AABF0000"><em class="blind">NH투자증권</em></span> -->
+                                                <span class="imgWrap"> <!-- [2022-11-21] 사보현 : 로고 공통 이미지로 변경 -->
+                                                    <img src="../../images/logos/AABF0000.png" alt="NH투자증권 로고" class="imgLogo">
+                                                </span>
+                                                <div class="textWrap">
+                                                    <div class="inoutTit">
+                                                        <span class="use"><strong>NH투자증권</strong></span>
+                                                        <span class="amount"><strong class="dataValue">10,000,000</strong><em class="won">원</em></span>
+                                                    </div>
+                                                    <div class="inoutCont">
+                                                        <div class="timeWrap">
+                                                            <span class="time">12345*****</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="boxTypeWrap">
+                    <div class="cardSpendList mt0">
+                        <div class="inoutListWrap">
+                            <div class="inoutListInn">
+                                <ul class="inoutList">
+                                    <li class="p0">
+                                        <a href="javascript:;" class="link">
+                                            <div class="isCategory">
+                                                <!-- <span class="imgWrap A1AAHJ0000"><em class="blind">카카오뱅크</em></span> -->
+                                                <span class="imgWrap"> <!-- [2022-11-21] 사보현 : 로고 공통 이미지로 변경 -->
+                                                    <img src="../../images/logos/AAHJ0000.png" alt="카카오뱅크 로고" class="imgLogo">
+                                                </span>
+                                                <div class="textWrap">
+                                                    <div class="inoutTit">
+                                                        <span class="use"><strong>카카오뱅크</strong></span>
+                                                        <span class="amount"><strong class="dataValue">10,000,000</strong><em class="won">원</em></span>
+                                                    </div>
+                                                    <div class="inoutCont">
+                                                        <div class="timeWrap">
+                                                            <span class="time">12345*****</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="totalBalance obtit">
+                <h2 class="defTxt fs16">연결할 목표를 골라주세요</h2>
+            </div>
+
+            <div class="swiper-container bannerSwiperGoal"> <!--11.09 슬라이드 추가-->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide bannerPrd1">
+                        <a href="javascript:;"  role="button" class="swLink">             
+                            <div class="purposeList boxTypeWrap" >
+                                <div class="purposeTit">
+                                    <span class="purposeCateS"><img src="../../images/category/ob/ico_cate_ob02_06.png" alt="내가만든목표 아이콘"></span> <!-- [2022-12-19] 아이콘 변경 -->
+                                    <p class="tit">은퇴</p>
+                                </div>
+                                
+                                <div class="recentResult">
+                                    <span class="now minus connetTit">계좌를 연결해주세요</span>
+                                    <span class="amnt"><em>7일 남음</em></span>
+                                </div> 
+                                <div class="baseGraph msBar"><span class="lineGraph" data-value="25" style="width: 25%;"></span></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide bannerPrd2">
+                        <a href="javascript:;"  role="button"  class="swLink">             
+                            <div class="purposeList boxTypeWrap" style="height: auto;">
+                                <div class="purposeTit">
+                                    <span class="purposeCateS"><img src="../../images/category/ob/ico_cate_ob02_06.png" alt="내가만든목표 아이콘"></span> <!-- [2022-12-19] 아이콘 변경 -->
+                                    <p class="tit">은퇴</p>
+                                </div>
+                                
+                                <div class="recentResult">
+                                    <span class="now minus connetTit">계좌를 연결해주세요</span>
+                                    <span class="amnt"><em>7일 남음</em></span>
+                                </div> 
+                                <div class="baseGraph msBar"><span class="lineGraph" data-value="25" style="width: 25%;"></span></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide bannerPrd3">
+                        <a href="javascript:;" role="button">
+                            <div class="purposeTit">
+                                <span class="purposeCateS"><img src="../../images/category/ob/ico_cate_ob01_02.png" alt="결혼 아이콘"></span> <!-- [2022-12-16] 아이콘 변경 -->
+                                <p class="tit">결혼, 언제부터 준비할까?</p>
+                            </div>
+                            
+                            <div class="recentResult">
+                                <span class="noti">지금부터 계획 세우기</span>
+                                <span class="discountDay"><span class="icoQes"></span><em>일 남음</em></span>
+                            </div>
+                            <p class="recoTag"><span class="blind">추천 태그</span></p>
+                        </a>
+                    </div>
+                </div>
+                <!-- <div class="swiper-control">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-autoBtn playing">
+                        <a href="javascript:;" class="stopBtn" title="자동재생중 두번 터치시 멈춤"></a>
+                        <a href="javascript:;" class="playBtn" title="자동재생 멈춤 두번 터치시 자동재생시작"></a>
+                    </div>
+                </div> -->
+            </div>
+
+            <script>
+                $(function () {
+                    var swiper = new Swiper('.bannerSwiperGoal', {
+                        slidesPerView: "auto",
+                        spaceBetween: 10,
+                        // loop: true,
+						centerSlides:true,
+                        // autoplay: {
+                        //     delay: 2500,
+                        //     disableOnInteraction: true,
+                        //     pauseOnMouseEnter: true,
+                        // },
+
+                        pagination: {
+                            el: '.swiper-pagination',
+                            type: 'bullets',
+                            clickable: true,
+                        },
+                        on: {
+                            transitionEnd: function () {
+                                $('.swiper-slide').attr('aria-hidden', 'true')
+                                $('.swiper-slide-active').attr('aria-hidden', 'false')
+                            }
+                        }
+                    });
+                    $('.bannerSwiperGoal').find('.stopBtn').on('click', function () {
+                        $('.swiper-autoBtn').removeClass('playing');
+                        swiper.autoplay.stop();
+                        console.log('자동재생 멈춤');
+                    })
+                    $('.bannerSwiperGoal').find('.playBtn').on('click', function () {
+                        $('.swiper-autoBtn').addClass('playing');
+
+                        swiper.autoplay.start();
+                        console.log('자동재생 시작');
+                    })
+                })
+            </script>
+
+            <!-- <div class="csChartWrap">
+				<ul class="pt0">
+					<li>
+						<a href="javascript:;" role="button">
+                            <div class="purposeList boxTypeWrap" style="height: auto;">
+                                <div class="purposeTit">
+                                    <span class="purposeCateS"><img src="../../images/category/icoCate90.png" alt=""></span> 
+                                    <p class="tit">은퇴</p>
+                                </div>
+                                
+                                <div class="recentResult">
+                                    <span class="now minus connetTit">계좌를 연결해주세요</span>
+                                    <span class="amnt"><em>7일 남음</em></span>
+                                </div> 
+                                <div class="baseGraph msBar"><span class="lineGraph" data-value="25" style="width: 25%;"></span></div>
+                            </div>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;" role="button">
+                            <div class="purposeList boxTypeWrap" style="height: auto;">
+                                <div class="purposeTit">
+                                    <span class="purposeCateS"><img src="../../images/category/icoCate90.png" alt=""></span> 
+                                    <p class="tit">은퇴</p>
+                                </div>
+                                
+                                <div class="recentResult">
+                                    <span class="now minus connetTit">계좌를 연결해주세요</span>
+                                    <span class="amnt"><em>7일 남음</em></span>
+                                </div> 
+                                <div class="baseGraph msBar"><span class="lineGraph" data-value="25" style="width: 25%;"></span></div>
+                            </div>
+						</a>
+					</li>
+				</ul>
+            </div> -->
+            <div class="boxTypeWrap bgf8">
+                <a href="javascript:;" class="link"> <!--11.09 링크 추가-->
+                    <p><img src="../../images/ico_obTropy.png" alt="" /><br />새로운 목표를 생성할래요.</p>
+                </a>
+            </div>
+		</div>
+        <!-- //container -->
+        <div class="areaBtnDefault">
+            <!-- <a href="javascript:;" class="btnPressPoint" role="button">연결하기</a>  -->
+            <a href="javascript:;" class="btnPressPoint disabled" role="button" aria-disabled="true">연결하기</a> 
+            <!-- disabled일 경우 : disabled 클래스 추가 및  aria-disabled="true" 추가 -->
+        </div>
+	</div>
+</body>
+<script type="text/javascript">
+	$('.inoutList a , .link').click(function(){
+		var $this = $(this);
+		//$this.closest('.obAseetlist').find('.boxTypeWrap').removeClass('active');
+		$this.closest('.boxTypeWrap').addClass('active');
+
+    });
+    
+    $('.swLink').click(function(){
+		var $this = $(this);
+		//$this.closest('.obAseetlist').find('.boxTypeWrap').removeClass('active');
+		$this.children('.boxTypeWrap').addClass('active');
+
+	});
+</script>
+</html>

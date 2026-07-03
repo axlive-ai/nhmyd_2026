@@ -1,0 +1,38 @@
+/*
+ * @project         Septem 현황판 intro 용도
+ * @author          Septem Corp.
+ * @copyright       Copyright (c)2020, Septem Corp
+ */
+
+@charset "utf-8";
+input,select,textarea,button,label,strong,a,time {vertical-align:inherit;}
+input,select,textarea,button,option {font-family:inherit;font-weight:inherit;border:1px solid #eee}
+input,select,textarea {appearance:none;-webkit-appearance:none;} 
+input[type="text"]::-webkit-search-cancel-button {appearance:none;-webkit-appearance:none;} 
+
+body.intro{background:#1f2c49;text-align:center;}
+body.pj.nh{background:#1f2c49}
+body .wrap{max-width:1920px;margin:0 auto;padding:50px 0;background:#1f2c49 url(/new/project/nh/com/img/bg_intro_01.png) no-repeat bottom -40px right 0}
+
+ul{display:block;width:1000px;padding:0;margin:110px 0 0 160px;overflow:hidden;}
+body .wrap{position:relative;max-width:1920px;margin:0 auto}
+h1{text-align:left;font-size:60px;width:1000px;margin:100px 0 50px 160px;padding:0;color:#fff;font-weight:normal}
+h1 a > span{margin-right:15px;opacity:0.5}
+h1 > span {display:block;font-size:40px;font-weight:bold}
+body.pj h1{text-align:left;margin:0 0 80px 160px;font-size:0;}
+ul{display:block;width:1000px;padding:0;margin:0 0 0 160px;overflow:hidden;}
+ul::after{content:' ';display:block;clear:both;}
+ul + ul{margin-top:20px}
+ul li{position:relative;float:left;margin:20px 20px 0 0;width:180px;height:180px;text-align:left;padding:30px 20px;list-style-type:none;vertical-align:top;border-radius:6px}
+.item01 li{background-color:#3083FF;}
+.item02 li{background-color:#16ACB3;}
+.item03 li{background-color:#673DBC;}
+ul li strong{display:block;font-size:20px;line-height:24px;color:#fff;font-weight:normal}
+ul li .tag + strong{margin-top:3px}
+ul li .tag{display:inline-block;height:18px;padding:0 8px;color:#fff;border-radius:9px;font-size:11px;text-transform:uppercase;font-weight:normal;line-height:18px;font-weight:normal;}
+.item01 li .tag{background-color:#2462bf;}
+.item02 li .tag{background-color:#0f7175;}
+.item03 li .tag{background-color:#41247b;}
+ul li p{margin-top:3px;color:#fff;font-size:16px;line-height:20px;color:#fff;word-break:keep-all;opacity:.6}
+ul li a.btn{position:absolute;left:20px;right:20px;bottom:24px;text-align:center;display:block;height:40px;border:1px solid #fff;border-radius:6px;color:#fff;font-size:14px;line-height:38px;background:url(/new/project/nh/com/img/ico_arr.png) no-repeat right 15px top 50%;}
+a.septem{width:176px;height:50px;position:absolute;top:50px;right:150px;background:url('/new/project/nh/com/img/logo_septem.png') no-repeat;opacity:.6;font-size:0}

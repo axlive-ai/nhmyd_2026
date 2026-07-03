@@ -1,0 +1,61 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>쿠션페이지 | 서브메인 | 자산</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function() {
+		fullLayerPop();
+		$('#popupLayer_dim').show().css('z-index','1');
+	});
+</script>
+</head>
+<body>
+<div class="wrapper nhasset"><!-- 바닥페이지 --></div>
+
+<!-- ###################################### -->
+<!-- ### [팝업] 쿠션페이지 ### -->
+<!-- ###################################### -->
+<div class="nhasset popWrap fullLayerPop">
+	<div class="mesArea3 img1">
+		<p>
+			<strong>고객님의 배당내역을<br>불러오고 있어요.</strong>
+			<span class="btns none">
+				<button type="button" class="contBtn06 green">뒤로가기</button>
+			</span>
+		</p>
+	</div>
+</div>
+
+<div class="nhasset popWrap" id="popupLayer_dim" aria-hidden="true"><div class="dim"></div></div> <!-- [샘플용] -->
+
+<!-- ###################################### -->
+<!-- ### [샘플] 스크립트 ### -->
+<!-- ###################################### -->
+<script>
+	$(window).on('load',function(){
+		//샘플 : 10초 초과 시 문구 변경 예시
+		setTimeout(function(){
+			$('.mesArea3.img1 strong').html('고객님의 배당내역을<br>불러오고 있어요.<br>잠시만 기다려주세요.');
+			$('.mesArea3.img1 .btns').removeClass('none')
+		},10000);
+	});
+</script>
+<!-- ###################################### -->
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 소비내역</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		fullLayerPop();
+	})
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">대학등록금 계산해보기</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+
+		</div>
+		<!-- //container -->
+
+		<!-- 팝업시작 -->
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>대학등록금 계산해보기</h1>
+				<div class="popCont grayPop">
+					<div class="boxTypeWrap addchallType"><!--s:boxTypeWrap-->
+						<div class="obTitleWrap">
+							<div><strong>우리 아이 대학 등록금 계획<br>도와드릴게요!</strong></div><!--10.11 텍스트 수정-->
+							<div><span><img src="../../images/category/ob/ico_cate_ob01_04.png" alt="교육 아이콘"></span></div> <!-- [2022-12-16] 아이콘 변경 -->
+						</div>
+						<hr class="divLine" aria-hidden="true">
+						<div class="formWrap overseaType mt20"><!--s:formWrap-->
+							<ul>
+								<li class="pt0">
+									<strong class="formTit">어떤 계열로 진학할까요?</strong>
+									<div class="boxRadio">
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo13" id="rdo16" type="radio" checked="checked">
+												<label for="rdo16">공대</label> <!-- [2021-11-03] 한은정 : 문구수정 -->
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo13" id="rdo17" type="radio">
+												<label for="rdo17">의대</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo13" id="rdo18" type="radio">
+												<label for="rdo18">예체대</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo13" id="rdo19" type="radio">
+												<label for="rdo19">일반대</label>
+											</span>
+										</div>
+									</div>	
+                                </li>
+                                <li>
+									<strong class="formTit">언제까지 지원할까요?</strong>
+									<div class="ob boxRadio">
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo23" id="rdo20" type="radio" checked="checked">
+												<label for="rdo20">입학</label> <!-- [2021-11-03] 한은정 : 문구수정 -->
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo23" id="rdo21" type="radio">
+												<label for="rdo21">1학년</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo23" id="rdo22" type="radio">
+												<label for="rdo22">졸업</label>
+											</span>
+										</div>
+									</div>	
+								</li>
+								<li>
+									<strong class="formTit">한달 용돈(생활비)은 얼마나 생각하나요?</strong>
+									<div class="inputList">
+										<input type="tel" title="용돈" value="" placeholder="용돈을 입력해 주세요.">
+										<span class="unit">만원</span>
+										<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+                                    </div>
+                                    <div class="infoTxt pointColor11">* 대학생 월 평균 생활비 : 64만 6166원
+                                        <div class="tooltipWrap">
+                                            <button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">생활비 안내툴팁</span></button>
+                                            <div class="tooltipCont">
+                                                <p>선택한 지원 기간(1개월/12개월/48개월) * 한달 용돈(생활비) 금액
+                                                </p>
+                                                <button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+									<p class="errorTxt">한달 용돈(생활비)는 최대 1,000만원까지 입력 가능합니다.</p>
+								</li>
+								<li>
+									<div class="briefgreenBox">
+										<h2>필요 교육자금</h2>
+										<div class="moneySum">0만원</div>
+										<div>
+											<ul class="listDash">
+												<li>필요 교육자금은 선택한 조건에 따른 평균 교육비를 토대로 계산한 비용입니다.
+												</li><!--10.11 텍스트 수정-->
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="tourGuide bgNone">
+										<div class="toggleWrap">
+											<button type="button" class="toggleBtn " aria-expanded="true">어떤 기준으로 계산된 건가요?</button>
+											<div class="toggleCont">
+												<div class="wrapTblDefault mt20">
+													<table class="thCenter">
+														<caption>대학등록금 표</caption>
+														<colgroup>
+															<col width="*">
+															<col width="*">
+															<col width="*">
+                                                            <col width="*">
+                                                            <col width="*">
+														</colgroup>
+														<thead>
+															<tr>
+                                                                <th></th>
+																<th scope="col">공대</th>
+																<th scope="col">의대</th>
+																<th scope="col">예체대</th>
+																<th scope="col">일반대</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+                                                                <th class="bgNone" scope="row">입학</th>
+																<td>540만원</td>
+																<td>660만원</td>
+																<td>610만원</td>
+																<td>360만원</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th class="bgNone" scope="row">1학년</th>
+																<td>1,080만원</td>
+																<td>1,320만원</td>
+																<td>1,220만원</td>
+																<td>720만원</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th class="bgNone" scope="row">졸업</th>
+																<td>4,320만원</td>
+																<td>5,280만원</td>
+																<td>4,800만원</td>
+																<td>2,800만원</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!--e:formWrap-->
+					</div>
+					<!--e:boxTypeWrap-->
+				</div>
+				<!--e:boxTypeWrap-->
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<a href="javascript:;" class="" role="button">취소</a>
+						<a href="javascript:;" class="confirmBtn" role="button">목표금액으로 등록</a>
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- 팝업끝 -->
+
+	</div>
+
+</body>
+</html>

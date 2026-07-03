@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>NH마이데이터</title>
+<link type="text/css" rel="stylesheet" href="/content/nhmyd/css/swiper.min.css">
+<link type="text/css" rel="stylesheet" href="/content/nhmyd/css/nh_base.css">
+<link type="text/css" rel="stylesheet" href="/content/nhmyd/css/nh_layout.css">
+<link type="text/css" rel="stylesheet" href="/content/nhmyd/css/nh_comm.css">
+<link type="text/css" rel="stylesheet" href="/content/nhmyd/css/nh_com.css">
+<link type="text/css" rel="stylesheet" href="/content/nhmyd/css/ms_style.css">
+<link type="text/css" rel="stylesheet" href="/content/nhmyd/css/ms_allone.css">
+<script src="/content/ms_com/js/jquery-1.9.1.min.js"></script>
+<script src="/content/ms_com/js/jquery-ui.min.js"></script>
+<script src="/content/ms_com/js/jquery.ui.touch-punch.min.js"></script>
+<style type="text/css">
+	.mainGsWrap{margin-bottom:0}
+</style>
+</head>
+
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+	<!-- container -->
+	<div class="container dfs">
+		<!-- content -->
+		<div class="content">
+			<div class="etc_logo"><img src="/content/ms/images/common/logoMydata.png" alt="금융과 일상을 연결하다 NH마이데이터"></div>
+			<div class="wrap_qrEvent">
+				<div class="qrEvent_title">슬기로운 금융생활의 시작<br> <em>NH마이데이터</em>와 함께 하세요.</div>
+                                                  <br> 
+                                                     <br> 
+					<p><strong><em id="name">김농협</em>님께서 <em>가입을 추천</em>하셨습니다!</strong> 아래 버튼을 눌러<br>NH마이데이터를 이용해보세요.</p>
+				</div>
+
+				<div class="btnWrap page">
+					<button type="button" class="btn em"><a href="javascript:bindEvent('sb', this);">스마트뱅킹으로 가입하기</a></button>
+				</div>
+				<div class="nhd_allone mt15">
+					<div class="btnWrap page dfs">
+						<button type="button" class="btn em"><a href="javascript:bindEvent('ab', this);">올원뱅크로 가입하기</a></button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //content -->
+	</div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+//<![CDATA[
+
+var param = "";
+function bindEvent( gubun, self ){
+	console.log("111");
+	//if(param !== ""){
+		// url 진입 경로 확인 필요
+		var sbGateway = "https://smartbank.nonghyup.com/service/html/sbgateway.html?WEB=Y&serviceId=NSRP6000R&nhType=1&pfmMnt=Y&GateType=1&GateYn=Y&pfmServiceId=MSSB1000R&mPrm=prmStaffs:" + param; 
+		//var abGateway = "https://allonebank.nonghyup.com/service/html/abgateway.html?WEB=Y&SRV_ID=NABPM6000R";
+		var abGateway = "https://nhallonebank.nonghyup.com/service/html/abgateway.html?WEB=Y&SRV_ID=ABPMP6000R&GateYn=Y&pfmServiceId=MSSB1000R&mPrm=prmStaffs:" + param;
+		if(gubun === "sb"){
+			self.location.href = sbGateway;
+		}else{
+			self.location.href = abGateway;
+		}
+	//}	
+};
+
+$(function(){
+	getParam = (function(){
+		var _param = document.location.search.substr(document.location.search.indexOf("cusNo"));
+		if(_param !== ""){
+			var param_tmp = _param.split("&");
+			var param_cusno = param_tmp[0].split("=");
+			var param_name 	= "";
+			
+			if(param_tmp.length > 1){
+				param_name 	= param_tmp[1].split("=");
+			}
+			
+			$("#name").text(decodeURIComponent(param_name[1] || "김농협"));
+			param = param_cusno[1] === "N" ? "" : param_cusno[1]; // 추천 고객정보없이 이벤트성 이름으로 QR 진행시
+		}
+	})();
+});
+//]]>
+</script>

@@ -1,0 +1,760 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산사용 관리 | 설정관리</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">자산 사용 관리</a></h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 자산사용 관리 ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<!-- -------------------------------------- -->
+		<!-- [상단영역] -->
+		<!-- -------------------------------------- -->
+		<div class="accTopInfo">
+			<h2 class="defTit bgAssetConnAdmin"> <strong>자산을 즐겨찾기하거나</strong><br><strong>목록에서 숨길 수 있어요</strong></h2>
+			<div class="explainTxt psAssetSt">
+				<p class="pointColor03">
+					전체 자산 <span class="pointColor">99개</span> 중에 <span class="pointColor">99개</span>를 보여주고 있어요.<br>
+					입출금 계좌를 즐겨찾기하려면 우측의 별표(<span class="psBookmark"><span class="blind">즐겨찾기</span></span>)를 선택해주세요.
+				</p>
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [기관목록] -->
+		<!-- -------------------------------------- -->
+		<div class="billListWrap">
+			<!-- ### 바로가기 링크 ### -->
+			<div class="billLisMenu psAtSt bgWhite">
+				<ul class="billMenu">
+					<li class="selected"><a href="javascript:;" anchor-title="dem01" class="btnBillMenu" data-bill-menu="dbm01">은행</a></li>
+					<li><a href="javascript:;" anchor-title="dem02" class="btnBillMenu" data-bill-menu="dbm02">카드</a></li>
+					<li><a href="javascript:;" anchor-title="dem03" class="btnBillMenu" data-bill-menu="dbm03">증권</a></li>
+					<li><a href="javascript:;" anchor-title="dem04" class="btnBillMenu" data-bill-menu="dbm04">보험</a></li>
+					<li><a href="javascript:;" anchor-title="dem05" class="btnBillMenu" data-bill-menu="dbm05">전자금융</a></li>
+					<li><a href="javascript:;" anchor-title="dem06" class="btnBillMenu" data-bill-menu="dbm06">할부금융</a></li>
+					<li><a href="javascript:;" anchor-title="dem07" class="btnBillMenu" data-bill-menu="dbm07">통신</a></li>
+					<li><a href="javascript:;" anchor-title="dem08" class="btnBillMenu" data-bill-menu="dbm08">기타</a></li>
+				</ul>
+			</div>
+
+			<!-- ### 목록 ### -->
+			<div class="billListCont">
+				<!-- 은행 -->
+				<div class="inoutListWrap" anchor-cont="dem01">
+					<div class="assetSelectLlistWrap">
+						<h2 class="togTit fo16">은행</h2>
+						<ul class="assetSelectLlist shadowType mt10">
+							<!-- // -->
+							<li class="toggleWrap">
+								<div class="assetSelectGroup">
+									<span class="subject pr10">
+										<input type="checkbox" id="listSub0104" name="" class="chekTypeOther" checked>
+										<label for="listSub0104">
+											<span class="imgWrap">
+												<img src="../../images/logos/AABG0000.png" alt="농협은행 로고" class="imgLogo">
+											</span>
+											농협은행<span class="pointColor ml10">3</span>
+										</label>
+										<span class="tag bgGray">만료예정</span>
+									</span>
+									<a href="javascript:;" class="toggleBtn active less" role="button" aria-expanded="true"><span class="blind">농협은행 자산목록</span></a>
+								</div>
+								<div class="toggleCont">
+									<ul class="psAssetList">
+										<li>
+											<div class="assetSelectGroup">
+												<span class="subject">
+													<input type="checkbox" id="listSub0105" name="" class="chekTypeOther" checked="checked">
+													<label for="listSub0105">
+														<div class="title">
+															<span class="accName">자유입출금통장</span>
+														</div>
+													</label>
+													<button type="button" class="BookmarkBtn"><span class="listBookmark active"><span class="blind">자유입출금통장 즐겨찾기 활성화</span></button> <!-- [접근성_2024] blind를 상품명 + 즐겨찾기 + listBookmark active 시 활성화 / 아닐 시 비활성화로 변경 부탁드립니다. -->
+												</span>
+											</div>
+										</li>
+										<!-- [CASE] 여러 회차 정보 있는 수신계좌 -->
+										<li>
+											<div class="assetSelectGroup">
+												<span class="subject">
+													<input type="checkbox" id="listSub00" name="" class="chekTypeOther" checked="checked">
+													<label for="listSub00">
+														<div class="title">
+															<span class="accName">
+																자유입출금통장
+
+																<!-- [2023 NH마이데이터 서비스 고도화] -->
+																<div class="tooltipWrap">
+																	<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">회차안내 툴팁 열기</span></button>
+																	<div class="tooltipCont">
+																		<p>모든 회차의 금액을 합산하여 자산현황에 노출됩니다.</p>
+																		<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+																	</div>
+																</div>
+																<!-- // -->
+
+																<span class="acctNum">000-1234-1234-11</span>
+															</span>
+														</div>
+														<div class="totalAmnt">
+															<strong class="dataValue">1,000,000,000,000</strong><em class="won">원</em>
+														</div>
+													</label>
+
+													<!-- [2023 NH마이데이터 서비스 고도화] -->
+													<div class="areaToggle1" data-toggle="wrap">
+														<button type="button" data-toggle="btn" aria-expanded="false">회차정보 보기</button>
+														<div data-toggle="con">
+															<ul class="detailList">
+																<li>
+																	<span class="tit">1회차</span>
+																	<span class="value"><strong class="dataValue">1,000,000,000,000</strong><em class="won">원</em></span>
+																</li>
+																<li>
+																	<span class="tit">2회차</span>
+																	<span class="value"><strong class="dataValue">1,000,000,000,000</strong><em class="won">원</em></span>
+																</li>
+																<li>
+																	<span class="tit">3회차</span>
+																	<span class="value"><strong class="dataValue">1,000,000,000,000</strong><em class="won">원</em></span>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<!-- // -->
+
+													<button type="button" class="BookmarkBtn"><span class="listBookmark active"><span class="blind">자유입출금통장 즐겨찾기 비활성화</span></button>
+												</span>
+											</div>
+										</li>
+										<!-- // -->
+										<li>
+											<div class="assetSelectGroup">
+												<span class="subject">
+													<input type="checkbox" id="listSub000" name="" class="chekTypeOther">
+													<label for="listSub000">
+														<div class="title">
+															<span class="accName">
+															외화입출금통장<span class="acctNum">000-1234-1234-11</span>
+															</span>
+														</div>
+														<div class="totalAmnt"><strong class="dataValue">1,000,000,000,000</strong><em class="won">원</em></div>
+													</label>
+													<button type="button" class="BookmarkBtn"><span class="listBookmark"><span class="blind">외화입출금통장 즐겨찾기 비활성화</span></button>
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="assetSelectGroup">
+												<span class="subject">
+													<input type="checkbox" id="listSub000000" name="" class="chekTypeOther">
+													<label for="listSub000000">
+														<div class="title">
+															<span class="accName">
+															마이너스통장<span class="acctNum">000-1234-1234-11</span>
+															</span>
+														</div>
+														<div class="totalAmnt"><strong class="dataValue">1,000,000,000,000</strong><em class="won">원</em></div>
+													</label>
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="assetSelectGroup">
+												<span class="subject">
+													<input type="checkbox" id="listSub00000" name="" class="chekTypeOther">
+													<label for="listSub00000">
+														<div class="title">
+															<span class="accName">
+															마이너스통장<span class="acctNum">000-1234-1234-11</span>
+															</span>
+														</div>
+														<div class="totalAmnt"><strong class="dataValue">1,000,000,000,000</strong><em class="won">원</em></div>
+													</label>
+													<div class="areaToggle1" data-toggle="wrap">
+														<button type="button" data-toggle="btn" aria-expanded="false">회차정보 보기</button>
+														<div data-toggle="con">
+															<ul class="detailList">
+																<li>
+																	<span class="tit">1회차</span>
+																	<span class="value"><strong class="dataValue">1,000,000,000,000</strong><em class="won">원</em></span>
+																</li>
+																<li>
+																	<span class="tit">2회차</span>
+																	<span class="value"><strong class="dataValue">1,000,000,000,000</strong><em class="won">원</em></span>
+																</li>
+																<li>
+																	<span class="tit">3회차</span>
+																	<span class="value"><strong class="dataValue">1,000,000,000,000</strong><em class="won">원</em></span>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<!-- // -->
+							<li class="toggleWrap">
+								<div class="assetSelectGroup">
+									<span class="subject pr10">
+										<input type="checkbox" id="listSub02" name="" class="chekTypeOther" >
+										<label for="listSub02">
+											<span class="imgWrap">
+												<img src="../../images/logos/AAEQ0000.png" alt="기업은행 로고" class="imgLogo">
+											</span>
+											기업은행<span class="pointColor ml10">2</span>
+										</label>
+									</span>
+									<a href="javascript:;" class="toggleBtn" role="button" aria-expanded="false"><span class="blind">기업은행 자산목록</span></a>
+								</div>
+								<div class="toggleCont" style="display: none">
+									<ul class="psAssetList">
+										<li>
+											<div class="assetSelectGroup">
+												<span class="subject">
+													<input type="checkbox" id="listSub0201" name="" class="chekTypeOther" checked="checked">
+													<label for="listSub0201">
+														<div class="title">
+															<span class="accName">
+															자유입출금통장<span class="acctNum">000-1234-1234-11</span>
+															</span>
+														</div>
+														<div class="totalAmnt"><strong class="dataValue">1,000,000,000,000</strong><em class="won">원</em></div>
+													</label>
+													<button type="button" class="BookmarkBtn"><span class="listBookmark active"><span class="blind">자유입출금통장 즐겨찾기 활성화</span></button>
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="assetSelectGroup">
+												<span class="subject">
+													<input type="checkbox" id="listSub0202" name="" class="chekTypeOther">
+													<label for="listSub0202">
+														<div class="title">
+															<span class="accName">
+															외화입출금통장<span class="acctNum">000-1234-1234-11</span>
+															</span>
+														</div>
+														<div class="totalAmnt"><strong class="dataValue">1,000,000,000,000</strong><em class="won">원</em></div>
+													</label>
+													<button type="button" class="BookmarkBtn"><span class="listBookmark"><span class="blind">외화입출금통장 즐겨찾기 비활성화</span></button>
+												</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<!-- // -->
+							<li class="toggleWrap">
+								<div class="assetSelectGroup">
+									<span class="subject pr10">
+										<input type="checkbox" id="listSub03" name="" class="chekTypeOther" >
+										<label for="listSub03">
+											<span class="imgWrap">
+												<img src="../../images/logos/AAER0000.png" alt="신한은행 로고" class="imgLogo">
+											</span>
+											신한은행<span class="pointColor ml10">1</span>
+										</label>
+									</span>
+									<a href="javascript:;" class="toggleBtn" role="button" aria-expanded="false"><span class="blind">기관명 자산목록</span></a>
+								</div>
+								<div class="toggleCont" style="display: none">
+									<ul class="psAssetList">
+										<li>
+											<div class="assetSelectGroup">
+												<span class="subject">
+													<input type="checkbox" id="listSub0301" name="" class="chekTypeOther" checked="checked">
+													<label for="listSub0301">
+														<div class="title">
+															<span class="accName">
+															자유입출금통장<span class="acctNum">000-1234-1234-11</span>
+															</span>
+														</div>
+														<div class="totalAmnt"><strong class="dataValue">1,000,000,000,000</strong><em class="won">원</em></div>
+													</label>
+													<button type="button" class="BookmarkBtn"><span class="listBookmark"><span class="blind">자유입출금통장 즐겨찾기 비활성화</span></button>
+												</span>
+											</div>
+										</li>
+									</ul>
+
+								</div>
+							</li>
+							<!-- // -->
+							<li class="toggleWrap">
+								<div class="assetSelectGroup">
+									<span class="subject pr10">
+										<input type="checkbox" id="listSub04" name="" class="chekTypeOther" >
+										<label for="listSub04">
+											<span class="imgWrap">
+												<img src="../../images/logos/AAHJ0000.png" alt=" 카카오뱅크 로고" class="imgLogo">
+											</span>
+											카카오뱅크<span class="pointColor ml10">1</span>
+										</label>
+									</span>
+									<a href="javascript:;" class="toggleBtn" role="button" aria-expanded="false"><span class="blind">기관명 자산목록</span></a>
+								</div>
+								<div class="toggleCont" style="display: none">
+									<ul class="psAssetList">
+										<li>
+											<div class="assetSelectGroup">
+												<span class="subject">
+													<input type="checkbox" id="listSub0401" name="" class="chekTypeOther" checked="checked">
+													<label for="listSub0401">
+														<div class="title">
+															<span class="accName">
+															자유입출금통장<span class="acctNum">000-1234-1234-11</span>
+															</span>
+														</div>
+														<div class="totalAmnt"><strong class="dataValue">1,000,000,000,000</strong><em class="won">원</em></div>
+													</label>
+													<button type="button" class="BookmarkBtn"><span class="listBookmark"><span class="blind">자유입출금통장 즐겨찾기 비활성화</span></button>
+												</span>
+											</div>
+										</li>
+									</ul>
+
+								</div>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+				</div>
+
+				<!-- 카드 -->
+				<div class="inoutListWrap pt0" anchor-cont="dem02">
+					<div class="assetSelectLlistWrap">
+						<h2 class="togTit fo16">카드</h2>
+						<ul class="assetSelectLlist shadowType mt10">
+							<!-- // -->
+							<li class="toggleWrap">
+								<div class="assetSelectGroup">
+									<span class="subject pr10">
+										<input type="checkbox" id="listSub05" name="" class="chekTypeOther" >
+										<label for="listSub05">
+											<span class="imgWrap">
+												<img src="../../images/logos/AABG0000.png" alt=" 카카오뱅크 로고" class="imgLogo">
+											</span>
+											농협카드<span class="pointColor ml10">1</span>
+										</label>
+									</span>
+									<a href="javascript:;" class="toggleBtn" role="button" aria-expanded="false"><span class="blind">기관명 자산목록</span></a>
+								</div>
+								<div class="toggleCont" style="display: none">
+									<ul class="psAssetList">
+										<li>
+											<div class="assetSelectGroup">
+												<span class="subject">
+													<input type="checkbox" id="listSub0001" name="" class="chekTypeOther">
+													<label for="listSub0001">
+														<div class="title">
+															<span class="accName">
+																올바른MYPICK카드<span class="acctNum">000123******1234</span>
+															</span>
+														</div>
+													</label>
+												</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<!-- // -->
+							<li class="toggleWrap">
+								<div class="assetSelectGroup">
+									<span class="subject pr10">
+										<input type="checkbox" id="listSub06" name="" class="chekTypeOther" >
+										<label for="listSub06">
+											<span class="imgWrap">
+												<img src="../../images/logos/AAFO0000.png" alt=" 카카오뱅크 로고" class="imgLogo">
+											</span>
+											현대카드<span class="pointColor ml10">1</span></label>
+										<span class="tag bgGray">만료예정</span>
+									</span>
+									<a href="javascript:;" class="toggleBtn" role="button" aria-expanded="false"><span class="blind">기관명 자산목록</span></a>
+								</div>
+								<div class="toggleCont" style="display: none">
+									<ul class="psAssetList">
+										<li>
+											<div class="assetSelectGroup">
+												<span class="subject">
+													<input type="checkbox" id="listSub0002" name="" class="chekTypeOther">
+													<label for="listSub0002">
+														<div class="title">
+															<span class="accName">
+																올바른MYPICK카드<span class="acctNum">000123******1234</span>
+															</span>
+														</div>
+													</label>
+												</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+				</div>
+
+				<!-- 증권 -->
+				<div class="inoutListWrap pt0" anchor-cont="dem03">
+					<div class="assetSelectLlistWrap">
+						<h2 class="togTit fo16">증권</h2>
+						<ul class="assetSelectLlist shadowType mt10">
+							<li class="toggleWrap">
+								<div class="assetSelectGroup">
+									<span class="subject pr10">
+										<input type="checkbox" id="listSub07" name="" class="chekTypeOther" >
+										<label for="listSub07">
+											<span class="imgWrap">
+												<img src="../../images/logos/AADF0000.png" alt=" 신한금융투자 로고" class="imgLogo">
+											</span>
+											신한금융투자<span class="pointColor ml10">1</span>
+										</label>
+									</span>
+									<a href="javascript:;" class="toggleBtn" role="button" aria-expanded="false"><span class="blind">기관명 자산목록</span></a>
+								</div>
+								<div class="toggleCont" style="display: none">
+									<ul class="psAssetList">
+										<li>
+											<div class="assetSelectGroup">
+												<span class="subject">
+													<input type="checkbox" id="listSub0701" name="" class="chekTypeOther">
+													<label for="listSub0701">
+														<div class="title">
+															<span class="accName">
+																CMA쑥쑥통장<span class="acctNum">0001234123411</span>
+															</span>
+														</div>
+														<div class="totalAmnt"><strong class="dataValue">1,000,000,000,000</strong><em class="won">원</em></div>
+													</label>
+												</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- 보험 -->
+				<div class="inoutListWrap pt0" anchor-cont="dem04">
+					<div class="assetSelectLlistWrap">
+						<h2 class="togTit fo16">보험</h2>
+						<ul class="assetSelectLlist shadowType mt10">
+							<li class="toggleWrap">
+								<div class="assetSelectGroup">
+									<span class="subject pr10">
+										<input type="checkbox" id="listSub08" name="" class="chekTypeOther" >
+										<label for="listSub08">
+											<span class="imgWrap">
+												<img src="../../images/logos/AAAL0000.png" alt=" 현대해상화재보험 로고" class="imgLogo">
+											</span>
+											현대해상화재보험<span class="pointColor ml10">1</span>
+										</label>
+									</span>
+									<a href="javascript:;" class="toggleBtn" role="button" aria-expanded="false"><span class="blind">기관명 자산목록</span></a>
+								</div>
+								<div class="toggleCont" style="display: none">
+									<ul class="psAssetList">
+										<li>
+											<div class="assetSelectGroup">
+												<span class="subject">
+													<input type="checkbox" id="listSub0801" name="" class="chekTypeOther">
+													<label for="listSub0801">
+														<div class="title">
+															<span class="accName">
+																CMA쑥쑥통장<span class="acctNum">0001234123411</span>
+															</span>
+														</div>
+														<div class="totalAmnt"><strong class="dataValue">1,000,000,000,000</strong><em class="won">원</em></div>
+													</label>
+												</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- 전자금융 -->
+				<div class="inoutListWrap pt0" anchor-cont="dem05">
+					<div class="assetSelectLlistWrap">
+						<h2 class="togTit fo16">전자금융</h2>
+						<ul class="assetSelectLlist shadowType mt10">
+							<li class="toggleWrap">
+								<div class="assetSelectGroup">
+									<span class="subject pr10">
+										<input type="checkbox" id="listSub09" name="" class="chekTypeOther" >
+										<label for="listSub09">
+											<span class="imgWrap">
+												<img src="../../images/logos/AAGU0000.png" alt=" 카카오페이 로고" class="imgLogo">
+											</span>
+											카카오페이<span class="pointColor ml10">1</span>
+										</label>
+									</span>
+									<a href="javascript:;" class="toggleBtn" role="button" aria-expanded="false"><span class="blind">기관명 자산목록</span></a>
+								</div>
+								<div class="toggleCont" style="display: none">
+									<ul class="psAssetList">
+										<li>
+											<div class="assetSelectGroup">
+												<span class="subject">
+													<input type="checkbox" id="listSub0901" name="" class="chekTypeOther">
+													<label for="listSub0901">
+														<div class="title">
+															<span class="accName">
+																CMA쑥쑥통장<span class="acctNum">0001234123411</span>
+															</span>
+														</div>
+														<div class="totalAmnt"><strong class="dataValue">1,000,000,000,000</strong><em class="won">원</em></div>
+													</label>
+												</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- 할부금융 -->
+				<div class="inoutListWrap pt0" anchor-cont="dem06">
+					<div class="assetSelectLlistWrap">
+						<h2 class="togTit fo16">할부금융</h2>
+						<ul class="assetSelectLlist shadowType mt10">
+							<li class="toggleWrap">
+								<div class="assetSelectGroup">
+									<span class="subject pr10">
+										<input type="checkbox" id="listSub0101" name="" class="chekTypeOther" >
+										<label for="listSub0101">
+											<span class="imgWrap">
+												<img src="../../images/logos/AAGU0000.png" alt=" 농협카드 로고" class="imgLogo">
+											</span>
+											농협카드<span class="pointColor ml10">1</span>
+										</label>
+									</span>
+									<a href="javascript:;" class="toggleBtn" role="button" aria-expanded="false"><span class="blind">기관명 자산목록</span></a>
+								</div>
+								<div class="toggleCont" style="display: none">
+									<ul class="psAssetList">
+										<li>
+											<div class="assetSelectGroup">
+												<span class="subject">
+													<input type="checkbox" id="listSub0003" name="" class="chekTypeOther">
+													<label for="listSub0003">
+														<div class="title">
+															<span class="accName">
+																CMA쑥쑥통장<span class="acctNum">0001234123411</span>
+															</span>
+														</div>
+														<div class="totalAmnt"><strong class="dataValue">1,000,000,000,000</strong><em class="won">원</em></div>
+													</label>
+												</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- 통신 -->
+				<div class="inoutListWrap pt0" anchor-cont="dem07">
+					<div class="assetSelectLlistWrap">
+						<h2 class="togTit fo16">통신</h2>
+						<ul class="assetSelectLlist shadowType mt10">
+							<li class="toggleWrap">
+								<div class="assetSelectGroup">
+									<span class="subject pr10">
+										<input type="checkbox" id="listSub0102" name="" class="chekTypeOther" >
+										<label for="listSub0102">
+											<span class="imgWrap">
+												<img src="../../images/logos/AADG0000.png" alt=" KT 로고" class="imgLogo">
+											</span>
+											KT<span class="pointColor ml10">1</span>
+										</label>
+									</span>
+									<a href="javascript:;" class="toggleBtn" role="button" aria-expanded="false"><span class="blind">기관명 자산목록</span></a>
+								</div>
+								<div class="toggleCont" style="display: none">
+									<ul class="psAssetList">
+										<li>
+											<div class="assetSelectGroup">
+												<span class="subject">
+													<input type="checkbox" id="listSub0004" name="" class="chekTypeOther">
+													<label for="listSub0004">
+														<div class="title">
+															<span class="accName">
+																CMA쑥쑥통장<span class="acctNum">0001234123411</span>
+															</span>
+														</div>
+														<div class="totalAmnt"><strong class="dataValue">1,000,000,000,000</strong><em class="won">원</em></div>
+													</label>
+												</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- 기타 -->
+				<div class="inoutListWrap pt0" anchor-cont="dem08">
+					<div class="assetSelectLlistWrap">
+						<h2 class="togTit fo16">기타</h2>
+						<ul class="assetSelectLlist shadowType mt10">
+							<li class="toggleWrap">
+								<div class="assetSelectGroup">
+									<span class="subject pr10">
+										<input type="checkbox" id="listSub0103" name="" class="chekTypeOther" >
+										<label for="listSub0103">
+											<div class="imgWrap">
+												<span class="img"><img src="../../images/category/icoCate113.png" alt="기타"></span>
+											</div>
+											금융플래너<span class="pointColor ml10">1</span>
+										</label>
+									</span>
+									<a href="javascript:;" class="toggleBtn" role="button" aria-expanded="false"><span class="blind">기관명 자산목록</span></a>
+								</div>
+								<div class="toggleCont" style="display: none">
+									<ul class="psAssetList">
+										<li>
+											<div class="assetSelectGroup">
+												<span class="subject">
+													<input type="checkbox" id="listSub0005" name="" class="chekTypeOther">
+													<label for="listSub0005">
+														<div class="title">
+															<span class="accName">
+																CMA쑥쑥통장<span class="acctNum">0001234123411</span>
+															</span>
+														</div>
+														<div class="totalAmnt"><strong class="dataValue">1,000,000,000,000</strong><em class="won">원</em></div>
+													</label>
+												</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- // -->
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [바로가기] -->
+		<!-- -------------------------------------- -->
+		<div class="areaBodyBtnFull psbtn2">
+			<a href="javascript:;" class="btnBodyLine" role="button">신규기관추가</a>
+			<a href="javascript:;" class="btnBodyLine" role="button">연결자산관리</a>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- -------------------------------------- -->
+		<div class="areaBtnDefault half">
+			<a href="javascript:;" class="btnPressPoint" role="button">확인</a> <!-- 비활성화시 class="disabled"  aria-disabled="true" 추가 -->
+		</div>
+		<!-- -------------------------------------- -->
+	</div>
+	<!-- ###################################### -->
+</div>
+
+<!-- ###################################### -->
+<!-- ### [샘플] 스크립트 ### -->
+<!-- ###################################### -->
+<script>
+var $headerHeight = $('.header').outerHeight();
+var $thisTop = $('.billLisMenu').offset().top;
+var clickedNum = 0;
+$(window).on('scroll',function(){
+	var scrollTop = $('html,body').scrollTop();
+	var $scrollMoveTop = $thisTop - $headerHeight;
+
+	if (scrollTop > $scrollMoveTop) {
+		$('.billLisMenu').addClass('likeSticky');
+	}else{
+		$('.billLisMenu').removeClass('likeSticky');
+	}
+
+	$(".billListCont .inoutListWrap").each(function(i){
+		if ($('html,body').scrollTop() >= $(".billListCont .inoutListWrap").eq(i).offset().top - ( $('.header').outerHeight() + $(".billLisMenu").height()+ parseInt($(".pr10").css("padding-right"))+100)) {
+			$(".billMenu > li").removeClass("selected");
+			$(".billMenu > li").eq(i).addClass("selected");
+			$('.billLisMenu').stop().animate({
+				scrollLeft : $(".billMenu > li").eq(i).position().left
+			},400);
+		}
+	})
+
+	if($(window).scrollTop() >= $(document).height() - $(window).height()){
+		$(".billMenu > li").removeClass("selected");
+		$(".billMenu > li:last-child").addClass("selected");
+	}
+});
+
+$(document).off("click", ".billMenu > li a").on("click", ".billMenu > li a", function(){
+	eventController($(this).closest("li").index());
+});
+
+function eventController(idxNum){
+	$('.assetSelectLlistWrap h2').attr('tabindex','0');
+	clickedNum = idxNum;
+	$('.billLisMenu').stop().animate({
+		scrollLeft : $(".billMenu > li").eq(idxNum).position().left
+	},400,function(){
+		$(".billMenu > li").removeClass("selected");
+		$(".billMenu > li").eq(idxNum).addClass("selected");
+	});
+	$('html, body').stop().animate({
+		scrollTop:$(".billListCont .inoutListWrap").eq(idxNum).offset().top - ( $('.header').outerHeight() + $(".billLisMenu").height()+ parseInt($(".pr10").css("padding-right")))
+	},400);
+	$(".billListCont .inoutListWrap").eq(idxNum).find(".togTit").focus();
+}
+</script>
+<!-- ###################################### -->
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 목표</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack" role="button"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">목표수정</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+
+			<div class="boxTypeWrap addchallType"><!--s:boxTypeWrap-->
+				<div class="toptourText">
+					<p><strong>나 홀로 유럽일주<span><span class="pointColor">7</span>일남음</span></strong></p>
+					<span class="toptourImg">
+						<img src="../../images/category/ob/ico_cate_ob02_02.png" alt="여행가기 아이콘"> <!-- [2022-12-19] 아이콘 변경 -->
+					</span>
+				</div>
+				<hr class="divLine" aria-hidden="true">
+				<div class="formWrap">
+					<ul>
+						<li class="pt0">
+							<strong class="formTit">목표명</strong>
+							<div class="inputList error"> <!-- error일때 클래스 error 추가 -->
+								<input type="text" title="목표명" value="유럽 배낭여행 가기" placeholder="목표명을 입력해 주세요.">
+								<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+							</div>
+							<p class="errorTxt">특수문자는 !@#$*()-=|;:,./ 만 입력 가능합니다.</p>
+							<!-- <p class="errorTxt">15자(30byte) 이내로 입력해주세요.</p> -->
+							<!-- <a href="javascript:;" class="link arrGreen">해외여행경비 계산</a> -->  <!-- [2021-11-03] 한은정 : 위치 변경-->
+						</li>
+						<li>
+							<strong class="formTit">
+								목표 금액
+								<em class="inputVal">(100억 1110만원)</em> <!-- [2021-09-02] 한은정 : 추가 -->
+							</strong>
+							<div class="inputList unitMan">
+								<input type="tel" title="목표 금액" value="1,020" placeholder="1만원 이상 입력해 주세요.">
+								<span class="unit">만원</span>
+								<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+							</div>
+							<div class="roundBtnWrap">
+								<a href="javascript:;" role="button" title="1만원 추가">+1만</a>
+								<a href="javascript:;" role="button" title="10만원 추가">+10만</a>
+								<a href="javascript:;" role="button" title="100만원 추가">+100만</a>
+								<a href="javascript:;" role="button" title="1000만원 추가">+1,000만</a>
+								<a href="javascript:;" role="button" title="1억원 추가">+1억</a>
+							</div>
+							<p class="errorTxt">1부터 9,999,999만원까지 입력 가능합니다.</p> <!-- [2021-09-14] 한은정 : 문구수정 -->
+						</li>
+						<li class="pb0">
+							<strong class="formTit">목표 기간
+								<div class="tooltipWrap">
+									<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">목표 기간 안내툴팁</span></button>
+									<div class="tooltipCont">
+										<p>목표 설정 기간은 1개월~10년입니다.</p> <!-- case1 -->
+										<p>추천목표의 기간은 6개월 이며, 수정 가능합니다. (1개월~10년) </p> <!-- case2 : 추천목표 등록일 경우-->
+										<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+									</div>
+								</div>
+								<!-- <span class="subTxt"><span class="pointColor">+20일 경과</span></span> -->
+							</strong>
+							<div class="inputList unitMan">
+								<input type="tel" title="목표 기간" value="" placeholder="목표기간을 입력해 주세요.">
+								<span class="unit">개월</span>
+								<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+							</div>
+							<div class="roundBtnWrap">
+								<a href="javascript:;" role="button" title="1개월 추가">+1개월</a>
+								<a href="javascript:;" role="button" title="3개월 추가">+3개월</a>
+								<a href="javascript:;" role="button" title="6개월 추가">+6개월</a>
+								<a href="javascript:;" role="button" title="1년 추가">+1년</a>
+								<a href="javascript:;" role="button" title="3년 추가">+3년</a>
+							</div>
+							<div class="obChk mt20 fr">
+								<input type="checkbox" id="listAll" class="chekTypeOther" name=""><label for="listAll">목표달성일 지정하기</label>
+							</div>
+							<!-- <p class="infoTxt">입력 가능한 기간은 최대 <span>120</span> 개월 입니다.</p> -->
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--e:boxTypeWrap-->
+
+			<div class="boxTypeWrap pt0 pb28"><!--s:boxTypeWrap-->
+				<div class="totalTitWrap typeob visualSubWrap dsfWrap">
+					<h3 class="visualSub type01">연결계좌</h3>
+				</div>
+				<!-- 연결계좌 -->
+				<div class="formWrap btndelType mt0">
+					<div class="noResultWrap"><p>연결된 계좌가 없습니다.<!--<br />계좌를 연결해주세요 10.11 문구삭제.--></p></div>
+				</div>
+				<!-- //연결계좌 -->
+
+				<div class="areaBodyBtnFull mt50">
+					<a href="javascript:;" class="btnBodyLine" role="button">계좌 연결하기</a>
+				</div>
+			</div>
+
+			<div class="areaBtnDefault">
+				<a href="javascript:;" class="btnPressDefault" role="button">취소</a>
+				<a href="javascript:;" class="btnPressPoint" role="button">저장</a>
+			</div>
+		</div>
+		<!-- //container -->
+
+	</div>
+
+</body>
+</html>

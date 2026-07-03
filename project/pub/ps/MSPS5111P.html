@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>popup</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script type="text/javascript">
+$(function(){
+    slidePopConfirm();
+});
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>조회설정</h1>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<p class="tit lev1">popup</p>
+		<p class="tit lev2">slidePopConfirm</p>
+		<div class="btnWrap page">
+			<a href="javascript:;" onclick="slidePopConfirm();return false;" aria-haspopup="true" role="button" class="btn">slidePopOption</a>
+		</div>
+	</div>
+</div>
+
+<!-- 조회조건 설정 팝업 -->
+<div class="nhasset popWrap slidePopConfirm">
+    <div class="dim"></div>
+    <div class="popInner">
+        <h1>조회설정</h1>
+        <div class="popCont">    
+            <div class="transfer">
+                <div class="formWrap">
+                    <ul class="searchFormWrap">
+                        <li>
+                            <div class="calendarForm">
+                                <div class="cal">
+                                    <div class="inputList">
+                                        <input type="tel" value="2021-10-01" title="조회 시작일" placeholder="시작일선택" readonly="readonly">
+                                        <a href="javascript:;" class="btnCalendar" title="시작일 날짜선택" role="button"><span class="blind">날짜선택</span></a>
+                                    </div>
+                                </div>
+                                <span class="symbol">-</span>
+                                <div class="cal">
+                                    <div class="inputList">
+                                        <input type="tel" value="2021-10-08" title="조회 종료일" placeholder="종료일선택" readonly="readonly">
+                                        <a href="javascript:;" class="btnCalendar" title="종료일 날짜선택" role="button"><span class="blind">날짜선택</span></a>
+                                    </div>
+                                </div>
+                            </div>
+							<div class="roundChkWrap mt15">
+								<!-- 2022-09-16 조회 기간 수정 -->
+								<ul>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample20" id="sample21">
+											<label for="sample21">1개월</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample20" id="sample22">
+											<label for="sample22">3개월</label>
+										</span>
+									</li>
+									<li>
+										<span class="roundChk">
+											<input type="radio" name="sample20" id="sample23" checked>
+											<label for="sample23">6개월</label>
+										</span>
+                                    </li>
+                                    <li>
+										<span class="roundChk">
+											<input type="radio" name="sample20" id="sample24" checked>
+											<label for="sample24">1년</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+                        </li>
+                    </ul>
+                    <p class="subTxt2">조회기간은 최대 1년 까지만 설정 가능합니다.</p>
+                </div>
+                
+            </div>                
+        </div>
+
+        <div class="popBtnWrap">
+            <div class="popBtn">
+                <a href="javascript:;" class="confirmBtn">조회</a>
+            </div>
+            <a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다."><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+        </div>
+    </div>
+</div>
+<!-- // 조회조건 설정 팝업 -->
+</body>
+</html>

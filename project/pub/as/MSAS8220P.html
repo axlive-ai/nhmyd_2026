@@ -1,0 +1,99 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산등록</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function() {
+		fullLayerPop();
+	});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<h1><a href="javascript:;" role="text">은행직접 등록</a></h1>
+			<a href="javascript:;" class="btnEtc">나가기</a>
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+	
+		</div>
+		<!-- //container -->
+
+		<!-- 팝업시작 -->
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>부동산 선택</h1>
+				<div class="popCont">
+					<!-- [2021 1차 한은정 : 05-14] 전체 수정 -->
+					<h2 class="defSubTit2 mt25">시세조회를 위해 부동산을 검색해 주세요.</h2>
+					<div class="addrSrch">
+						<div class="formWrap mt15">
+							<ul>
+								<li>
+									<div class="inputList">                    
+										<input type="text" title="아파트명" value="" placeholder="포일동 푸르지오">
+										<!-- 2022-12-07 버튼 위치변경 -->
+										<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+										<button class="btnSearch"><span class="blind">찾기</span></button>
+										<!-- //2022-12-07 버튼 위치변경 -->
+									</div>
+								</li>
+							</ul>
+							
+						</div>
+					</div>
+					<div class="infoBox2 fontSmall mt15">
+						아파트/오피스텔명 또는 동을 2자 이상 입력해 주세요.
+					</div>				
+					
+					<p class="totalCnt fs15">검색결과 <strong>3</strong>건</p>
+					<!-- //[2021 1차 한은정 : 05-14] 전체 수정 -->
+					<div class="srchResult ty01">
+						<ul>
+							<li><a href="javascript:;" role="button">의왕시 포일동 동부새롬</a></li>
+							<li><a href="javascript:;" role="button">의왕시 포일동 동아에코빌</a></li>
+							<li><a href="javascript:;" role="button">의왕시 포일동 두산위브호수마을 1단지</a></li>
+						</ul>
+					</div>
+					<!-- 리스트 없을 경우 -->
+					<p class="totalCnt fs15">검색결과 <strong>0</strong>건</p>
+					<div class="noResultWrap"> <!-- [2023-01-28] 클래스 수정 -->
+						<p>검색결과가 없습니다.</p>
+						<a href="javascript:;" class="contBtn02 green mt20">기타 부동산 등록하기</a>
+					</div>
+					<!-- // 리스트 없을 경우 -->
+				</div>
+
+				<div class="popBtnWrap">
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- // 팝업 끝 -->
+	</div>
+	
+	<script>
+		
+	</script>
+</body>
+</html>

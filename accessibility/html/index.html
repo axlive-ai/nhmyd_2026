@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Septem UI/UX accessibility</title>
+	<link rel="stylesheet" href="../css/a11y_com.css">
+	<link rel="stylesheet" href="../css/prism.css">
+	<script src="../js/prism.js"></script>
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/a11y_com.js"></script>
+</head>
+<body>
+	<!-- skip -->
+<div id="skipNav">
+	<a href="#">본문 바로가기</a>
+	<a href="#">메뉴 바로가기</a>
+</div>
+<!-- //skip -->
+<div id="wrap">
+	<!-- header -->
+	<header>
+		셉템 접근성
+		<nav>메뉴</nav>
+	</header>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<nav class="sidebar">
+		</nav>
+		<!-- content -->
+		<main class="content">
+			<h1>접근성이란?</h1>
+			<div>
+				<p>접근성이란 가능한 많은 사람들이 웹사이트를 사용할 수 있도록 하는 방법입니다.</p>
+				<p>모든 사람을 똑같이 대우하고, 동등한 기회를 주는 것입니다. 휠체어에 타고 있기 때문에 건물에 못 들어오게 하는 것이 잘못된 것이며 건물은 휠체어 경사로 또는 엘리베이터를 설치해 주어야합니다. 시각 장애가 있기 때문에 웹 사이트에서 누군가를 제외하는 것은 옳지 않습니다.</p>
+				<p>웹은 사람들의 하드웨어, 소프트웨어, 언어, 문화, 장소, 혹은 신체적 물리적 능력과 관계없이 모든 사람을 위해 작동하도록 설계되었습니다.<br>웹이 이 목표를 달성할 때, 다양한 범위의 청각, 움직임, 시각, 그리고 인지 능력을 가진 사람들이 웹에 접근할 수 있습니다.</p>
+				<p>접근성을 준수한 사이트를 구축하면</p>
+				<ul class="listDot">
+					<li>의미론적 마크업(Semantic Markup)은 SEO를 개선하여 사이트를 더 쉽게 찾을 수 있습니다.</li>
+					<li>접근성에 대한 배려는 좋은 윤리와 도덕을 보여 주며, 이는 공공의 이미지를 향상시킵니다.</li>
+					<li>휴대 전화 사용자 또는 낮은 네트워크 속도와 같은 다른 그룹에서 사이트를 더 많이 사용할 수 있게 합니다.</li>
+					<li>국가정보화기본법, 장애인차별금지법(장차법)등 법을 준수할 수 있습니다.</li>
+				</ul>
+				
+			</div>
+
+			<h2>장애 유형에 따른 접근성 </h2>
+			<h3>시각장애인</h3>
+			<div>
+				<p>시각 장애가 있는 사람은 실명, 저시력자, 색각 이상(색맹, 색약)이 있는 자를 포함합니다.</p>
+				<p>시각 장애가 있는 많은 사람들은 물리적 돋보기 또는 소프트웨어 줌 기능인 화면 돋보기를 사용합니다. 요즘 대부분의 브라우저와 운영 체제에는 줌 기능이 있습니다. 일부 사용자는 디지털 텍스트를 소리 내어 읽는 소프트웨어인 화면 판독기에 의존합니다.</p>
+				<p>저시력자에 대응하기 위해 전경색과 배경색의 광도 간 관계인 색상과 대비를 맞출 필요가 있다. 색상이 서로 유사하면 명암비가 낮고 색상 차이가 크게 날수록 명암비가 높아진다. 모든 텍스트에 대해 AA(최소) 명암비인 4.5:1 이상이어야한다. 다만 폰트가 두껍거나 클 경우(14pt 이상 bold)와 매우 큰 텍스트(18pt 이상)의 경우 또는 텍스트 확대가 되는 경우 명암비를 3:1까지 낮출 수 있다.</p>
+				<p>콘텐츠에서 제공하는 모든 정보는 특정한 색을 구별할 수 없는 사용자, 흑백 디스플레이 사용자, 흑백 인쇄물을 보는 사용자 및 고대비 모드 사용자가 인식할 수 있도록 제공한다. 이 문제는 active, link, chart 같은 경우 빈번하게 발생한다. 이 경우 아이콘, 두께, 밑줄, 이미지 무늬 등의 차이를 추가로 제공한다.</p>
+				<ul class="listDot">
+					<li>PC 화면 낭독프로그램 : 윈도우 센스리더 최신버전 또는 죠스, NVDA 등 최신버전</li>
+					<li>모바일 스크린리더 : iOS VoiceOver, Android Talk Back</li>
+					<li>화면 확대, 반전, 고대비 기능 사용</li>
+				</ul>
+				
+			</div>
+			<h3>청각장애인</h3>
+			<div>
+				<p>청각 장애가 있는 사람은 보조기기를 많이 사용하지 않습니다. 동영상 등의 오디오 콘텐츠에는 자막을 사용해야 하며, 청각장애인은 언어 발달 수준이 떨어지는 경우가 많기 때문에 텍스트의 단순화를 고려해야합니다.</p>
+				<ul class="listDot">
+					<li>오디오 콘텐츠의 단순화된 자막 제공</li>
+				</ul>
+			</div>
+			<h3>지체장애인</h3>
+			<div>
+				<p>지체장애인은 손을 못 쓰는 사람일 수도 있으며, 마우스로 정확한 움직임을 사용할 수 있는 사람일 수도 있습니다. 그것은 외상이 아닌 노화의 결과일 수도 있고 하드웨어적인 문제로 인해 발생할 수도 있습니다.</p>
+				<ul class="listDot">
+					<li>마우스를 사용하지 않고 키보드만 사용하여 사용 가능해야함</li>
+				</ul>
+			</div>
+			<h3>인지장애인</h3>
+			<div>
+				<p>인지 장애는 지적 장애인부터 고령까지 광범위한 장애를 말하며, 정신 질환을 가진 사람을 포함, 우울증, 정신 분열증 등 또한 난독증, 주의력 결핍 과잉행동장애(ADHD)와 같은 학습 장애가 있는 사람들을 포함합니다.
+				그들은 작업 완료 방법을 이해하고 이전에 수행했던 작업을 수행하는 방법을 기억하는데 어려움이 있습니다. 또한 혼란스러운 워크플로우 또는 일관성 없는 레이아웃/네비게이션/기타 페이지 기능에 대한 불만이 큽니다.</p>
+				<ul class="listDot">
+					<li>페이지는 일관성이 있어야합니다. - 네비게이션, 헤더, 푸터 및 기본 콘텐츠는 항상 같은 위치에 있어야 합니다.</li>
+					<li>잘 설계되어 사용하기 쉬워야합니다.</li>
+					<li>다단계 프로세스는 논리적인 단계로 분류되며, 적절한 경우 프로세스를 얼마나 완료해야 하는지, 프로세스 완료까지 얼마나 남았는지 정기적으로 알려줍니다.</li>
+					<li>워크플로우는 논리적이고 간단해야하며, 완료하는데 필요한 상호 작용 횟수가 최대한 적어야합니다. 예를 들어 회원가입하고 로그인하는 것은 종종 불필요하게 복잡합니다.</li>
+					<li>한 페이지 안에 있는 정보는 지나치게 길거나 밀도가 높지 않아야 합니다.</li>
+					<li>페이지에 사용되는 언어는 가능한 평범하고 알기 쉬우며 불필요한 전문 용어나 은어로 가득 차 있지 않아야 합니다.</li>
+					<li>중요한 콘텐츠는 어떤 방법으로든 강조되어야 합니다.</li>
+					<li>사용자 오류가 명확하게 강조 표시되며 해결 방법을 제안하는 도움말 메시지를 표시해야합니다.</li>
+				</ul>
+				<p>이러한 기술은 "접근성 기술"이 아닙니다 - 그들은 좋은 설계 관행입니다. 사이트를 사용하는 모든 사람에게 혜택을 주며 작업의 표준 부분이 되어야 합니다.</p>
+			</div>
+
+			<h2>심사 장애 유형 및 특성</h2>
+			<div>
+				<table class="tb_type01">
+					<caption>
+						<strong>심사 장애 유형 및 특성</strong>
+						<p>심사 장애 유형, 구분에 따른 환경 및 특성에 대하여 설명합니다.</p>
+					</caption>
+					<colgroup>
+						<col style="width:20%;">
+						<col style="width:12%;">
+						<col style="width:25%;">
+						<col style="width:auto;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">장애유형</th>
+							<th scope="col">구분</th>
+							<th scope="col">환경 및 특성</th>
+							<th scope="col">비  고</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row" rowspan="2">전맹 시각장애</th>
+							<td>PC 웹</td>
+							<td class="ta_left">PC화면 낭독프로그램 사용,키보드만 사용</td>
+							<td class="ta_left">본 가이드에서 정한 2가지 화면낭독기 중 중 하나이상 성공해야 인정</td>
+						</tr>
+						<tr>
+							<td>모바일웹</td>
+							<td class="ta_left">모바일 스크린리더 사용,모든 손가락 사용</td>
+							<td class="ta_left"> Voiceover, Talkback 등으로 임의터치방식 진행</td>
+						</tr>
+						<tr>
+							<th scope="row" rowspan="2">저시력 시각장애</th>
+							<td>PC 웹</td>
+							<td class="ta_left">확대 및 고대비 기능 사용,마우스, 키보드 사용</td>
+							<td class="ta_left">화면 확대, 반전, 고대비 등 사용</td>
+						</tr>
+						<tr>
+							<td>모바일 웹</td>
+							<td class="ta_left">확대 및 고대비 기능 사용,모든 손가락 사용</td>
+							<td class="ta_left">화면 확대, 반전, 고대비 등 사용</td>
+						</tr>
+						<tr>
+							<th scope="row" rowspan="2">지체(상지) 또는 뇌병변 장애</th>
+							<td>PC 웹</td>
+							<td class="ta_left">키보드만 사용</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>모바일웹</td>
+							<td class="ta_left">하나의 터치수단 사용<br>(예: 한 손가락만 사용)</td>
+							<td class="ta_left">터치방식으로 진행 또는 화면낭독기 환경에서 대체 수단 인정</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<h2>심사기관</h2>
+			<table>
+				<caption></caption>
+				<thead>
+					<tr>
+						<th>업체명</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>한국웹접근성인증평가원 (사단법인 한국장애인단체총연합회)</td>
+						<td>http://www.wa.or.kr/index.asp</td>
+					</tr>
+					<tr>
+						<td>주식회사 웹와치</td>
+						<td>http://www.webwatch.or.kr/</td>
+					</tr>
+					<tr>
+						<td>사단법인 한국시각장애인연합회 (한국웹접근성평가센터)</td>
+						<td>http://www.kbuwel.or.kr/</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<pre>
+				<code class="language-markup">
+					<script type="prism-html-markup">
+						<h1 class="foo">h1. Heading 1</h1>
+							<h2>h2. Heading 2</h2>
+							<h3>h3. Heading 3</h3>
+							<h4>h4. Heading 4</h4>
+							<h5>h5. Heading 5</h5>
+						<h6>h6. Heading 6</h6>
+						<ul role="tablist">
+							<li role="presentation"><a href="javascript:;" role="tab" title="" aria-selected="false">현황</a></li>
+							<li role="presentation"><a href="javascript:;" role="tab" class="on" title="" aria-selected="true">통계</a></li>
+						</ul>
+					</script>
+				</code>
+			</pre>
+		</main>
+		<!-- //content -->
+	</div>
+	<!-- //container -->
+	<!-- footer -->
+	<footer>푸터 영역</footer>
+	<!-- //footer -->
+	
+</body>
+</html>

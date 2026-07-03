@@ -1,0 +1,10 @@
+<?php
+    $fileName = $_SERVER["SCRIPT_NAME"];
+    $fileName=substr($fileName, strrpos($fileName, "/project/")+9);
+    $fileName=substr($fileName, 0, strpos($fileName, "/index.html"));
+    $fileName=substr($fileName, strpos($fileName, "/")+1);
+    
+    $listName = $_SERVER["SCRIPT_NAME"];
+    $listName=substr($listName, strrpos($listName, "/")+1);
+	$listName=substr($listName, 0, strpos($listName, "."));
+?>

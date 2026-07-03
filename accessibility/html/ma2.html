@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Septem UI/UX accessibility</title>
+	<link rel="stylesheet" href="../css/a11y_com.css">
+	<link rel="stylesheet" href="../css/prism.css">
+	<script src="../js/prism.js"></script>
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/a11y_com.js"></script>
+</head>
+<body>
+	<!-- skip -->
+<div id="skipNav">
+	<a href="#">본문 바로가기</a>
+	<a href="#">메뉴 바로가기</a>
+</div>
+<!-- //skip -->
+<div id="wrap">
+	<!-- header -->
+	<header>
+	</header>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<nav>
+		</nav>
+		<!-- content -->
+		<main>
+			<h1>2. 운용의 용이성</h1>
+			<h2>2.1 초점</h2>
+			<blockquote><p>(초점) 의미나 기능을 갖는 모든 사용자 인터페이스 컴포넌트에는 초점(focus)이 적용되고, 초점은 논리적인 순서로 이동되어야 한다.</p></blockquote>
+			<ol>
+				<li>a) 초점은 사용자가 예측할 수 있도록 논리적인 순서로 이동해야 한다.</li>
+				<li>b) 초점은 화면에서 보이지 않거나 논리적으로 의미를 갖지 않는 사용자 인터페이스 컴포넌트로 이동하지 않도록 해야 한다.</li>
+				<li>c) 표시되는 초점의 영역은 콘텐츠의 위치와 크기가 맞도록 제공해야 한다.</li>
+			</ol>
+			<pre>
+				<code class="language-css">
+					*:focus {outline:1px solid blue}
+				</code>
+			</pre>
+			<h4>모바일 팝업의 초점 이동<a href="ma_popup.html" role="button" target="_blank" class="btnA">팝업 예시 새창보기&#xE001;</a></h4>
+			<p>
+				<strong>팝업 초점 이동 순서</strong><br>
+				팝업을 여는 버튼 → 팝업의 제목(a로 쌓여야함) → 팝업의 컨텐츠 → 팝업의 닫기 버튼 → 팝업을 여는(열었던) 버튼<br>
+				<ul>
+					<li>팝업이 열리는 버튼은 role="button" title="OO팝업열림"을 통해 알려준다.</li>
+					<li>팝업의 첫번째 제목은 포커스가 갈 수 있도록 a를 준다.</li>
+					<li>팝업이 열린 동안 팝업을 제외한 바닥페이지는 aria-hidden="true"를 주어 포커스가 가지 않도록 한다.</li>
+					<li>팝업을 닫고 난 후 포커스는 팝업이 열리는 버튼으로 돌아가야한다.</li>
+				</ul>
+			</p>
+
+			<h4>탭의 초점 이동<a href="tab.html" role="button" target="_blank" class="btnA">탭 예시 새창보기&#xE001;</a></h4>
+			<p>
+				<strong>탭 초점 이동 순서1</strong><br>
+				탭 제목1 → 탭 컨텐츠1  → 탭 제목2  → 탭 제목3
+				<ul>
+					<li>tabindex를 1부터 증가하게 사용하여 포커스의 순서를 맞춰준다.</li>
+				</ul>
+			</p>
+			<p>	
+				<strong>탭 초점 이동 순서2</strong><br>
+				탭 제목1 → 탭 제목2… → 선택된 탭 컨텐츠<br>
+				탭 제목과 컨텐츠 사이에 거리가 있기 대문에 aria-aria-labelledby로 제목과 연동해준다.
+				<ul>
+					<li>탭 제목의 목록은 role="tablist"를 포함한다.</li>
+					<li>탭 제목 a는 role="tab"과 aria-selected="true/false"를 포함단다.</li>
+					<li>탭 컨텐츠는 role="tabpanel"과 tabindex="0"을 포함하며, aria-labelledby="제목"으로 제목a와 엮어준다.<br>
+						- role="tabpanel"은 ui이에 사용할 수 없다.</li>
+					<li>탭 제목과 컨텐츠간의 거리가 먼 경우 탭 제목에 aria-controls="컨텐츠아이디"를 삽입한다.</li>
+				</ul>
+			</p>
+			<pre>
+				<code class="language-markup">
+					<script type="prism-html-markup">
+						<ul class="tablist" role="tablist">
+							<li><a href="#tab1" class="active" role="tab" aria-selected="true"><span>탭 제목1</span></a></li>
+							<li><a href="#tab2" role="tab" aria-selected="false"><span>탭 제목2</span></a></li>
+							<li><a href="#tab3" role="tab" aria-selected="false"><span>탭 제목3</span></a></li>
+							<li><a href="#tab4" role="tab" aria-selected="false"><span>탭 제목4</span></a></li>
+						</ul>
+						<ul class="tabcon">
+							<li id="tab1" tabindex="0" aria-labelledby="탭 제목1" role="tabpanel" style="display:block;">탭 제목1 콘텐츠</li>
+							<li id="tab2" tabindex="0" aria-labelledby="탭 제목2" role="tabpanel" style="display:none">탭 제목22 콘텐츠</li>
+							<li id="tab3" tabindex="0" aria-labelledby="탭 제목3" role="tabpanel" style="display:none">탭 제목333 콘텐츠</li>
+							<li id="tab4" tabindex="0" aria-labelledby="탭 제목4" role="tabpanel" style="display:none">탭 제목4444 콘텐츠</li>
+						</ul>
+					</script>
+				</code>
+			</pre>
+
+			<strong>팝업 포커스 스크립트</strong>
+			<pre>
+				<code class="language-js">
+					$(function(){		
+						var tabM = $(".tablist a");
+						var tabCont = $(".tabcon > li");
+						tabM.click(function(){
+							var tabIdx = $(this).parent("li").index();
+							tabM.removeClass('active');
+							tabM.attr('aria-selected','false');
+							$(this).addClass('active');
+							$(this).attr('aria-selected','true');
+							tabCont.hide();
+							tabCont.each(function () {		
+								tabCont.eq(tabIdx).show();
+							});
+						});
+					});
+				</code>
+			</pre>
+
+			<h4>스와이프 베너의 초점 이동</h4>
+			<p>
+				<strong>swiper.js</strong>
+				<ul>
+					<li>swiper js는 접근성 요소가 기본으로 포함되어 있다.</li>
+					<li>prev버튼과 next버튼으로 슬라이드를 제어할 수 있어야 하며, 이 버튼은 tabindex="0" role="button" aria-label="Next slide/Previous slide"를 포함해야 한다.</li>
+					<li>pagination에도 tabindex="0" role="button" aria-label="Go to slide 1"을 포함한다.</li>
+				</ul>
+			</p>
+
+			<h2>2.2 누르기 동작 지원</h2>
+			<blockquote><p>(누르기 동작 지원) 터치(touch) 기반 모바일 기기의 모든 컨트롤은 누르기 동작으로 제어할 수 있어야 한다.</p></blockquote>
+			<p>두 개 이상의 손가락을 동시에 이용해야 하는 다중 누르기(multi-touch) 동작, 팬(pan), 끌기와 놓기(drag and drop) 등의 복잡한 누르기 동작은 단순한 누르기 동작을 함께 제공해야 한다.</p>
+
+			<h2>2.3 응답 시간 조절</h2>
+			<blockquote><p>(누르기 동작 지원) 터치(touch) 기반 모바일 기기의 모든 컨트롤은 누르기 동작으로 제어할 수 있어야 한다.</p></blockquote>
+			<ol>
+				<li>a) 시간 제한이 있는 경우에는 제한 시간 연장 또는 이를 제어할 수 있는 수단을 함께 제공해야 한다.</li>
+				<li>b) 불가피한 사유(보안, 게임)로 a)의 기능을 제공할 수 없는 경우에는 사용자에게 시간 제한이 있다는 것을 미리 알려주고, 종료되었을 경우에도 이를 알려주어야 한다.</li>
+			</ol>
+
+			<h2>2.4 정지 기능 제공</h2>
+			<blockquote><p>(응답 시간 조절) 자동으로 변경되는 콘텐츠는 움직임을 제어할 수 있어야 한다.</p></blockquote>
+			<p>
+				<strong>이동하거나 스크롤 되는 콘텐츠 사용 배제</strong>
+				<strong>이동하거나 스크롤되는 콘텐츠 - 베너 등</strong>: 콘텐츠를 선택할 수 있는 컨트롤(예 : ‘앞으로 이동', ‘ 뒤로 이동’, ‘정지’ 등)을 제공해야 한다.
+			</p>
+
+			<h2>2.5 컨트롤의 크기와 간격</h2>
+			<blockquote><p>(컨트롤의 크기와 간격) 컨트롤은 충분한 크기와 간격으로 제공되어야 한다.</p></blockquote>
+			<ol>
+				<li>a) 컨트롤 간에 외곽선을 표시하지 않는 경우 컨트롤 간의 중심 간 간격을 충분히 제공해야 한다.</li>
+				<li>b) 모바일 기기의 화면크기에 관계없이 컨트롤의 가로와 세로 크기는 각각 9 mm 이상으로 제공하는것이 바람직하다.</li>
+			</ol>
+		</main>
+		<!-- //content -->
+	</div>
+	<!-- //container -->
+	<!-- footer -->
+	<footer>푸터 영역</footer>
+	<!-- //footer -->
+	
+</body>
+</html>

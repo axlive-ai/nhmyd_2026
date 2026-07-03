@@ -1,0 +1,714 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>UI Guide [레이아웃]</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="nhasset guide_wrapper">
+	<header class="guide_header">
+		<h1>UI GUIDE <span>레이아웃</span></h1>
+		<nav data-toggle="wrap">
+			<button type="button" class="guide_btn" data-toggle="btn" aria-expanded="false">전체메뉴</button>
+			<div data-toggle="cont">
+				<a href="txt_sample.html">타이틀/텍스트</a>
+				<a href="mes_sample.html">메세지</a>
+				<a href="button_sample.html">버튼</a>
+				<a href="form_sample.html">폼</a>
+				<a href="list_sample.html">리스트</a>
+				<a href="info_sample.html">정보</a>
+				<a href="table_sample.html">테이블</a>
+				<a href="bbs_sample.html">게시판</a>
+				<a href="banner_sample.html">배너</a>
+				<a href="chart_sample.html">차트</a>
+				<a href="etc_sample.html">기타</a>
+			</div>
+		</nav>
+	</header>
+
+	<!-- ###################################### -->
+	<!-- ### UI Guide [레이아웃] ### -->
+	<!-- ###################################### -->
+	<div class="guide_container">
+		<nav class="guide_menu">
+			<a href="#GCONTENT1" class="active">바닥페이지</a>
+			<a href="#GCONTENT2">팝업</a>
+		</nav>
+		<!-- ################################# -->
+		<!-- ### 바닥페이지 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT1">
+			<h2 class="guide_title">바닥페이지</h2>
+			<!-- --------------------------------- -->
+			<!-- ### 올원뱅크 분기 ### -->
+			<!-- --------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">올원뱅크 분기 : .nhd_allone</h3>
+				<ul class="guide_txt">
+					<li>header와 footer의 UI가 다르기 때문에 상위 클래스로 지정하여 스타일 변경됨</li>
+					<li>ms_allone.css파일에서 작업됨</li>
+				</ul>
+
+				<div class="guide_wrap">
+					<!-- ### 스마트뱅킹 ### -->
+					<div class="guide_phone">
+						<article class="wrapper nhasset">
+							<div class="header">
+								<a href="javascript:;" class="btnBack" role="button"><span class="blind">이전화면으로</span></a> <!-- [2020-11-16] role="button" 추가 -->
+								<h1><a href="javascript:;" role="text">스마트뱅킹</a></h1>
+								<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+								<a href="javascript:;" class="btnNav" role="button"><span class="blind">전체메뉴</span></a> <!-- [2021-01-11] 전체메뉴 추가 --> <!-- [2020-11-16] 전체메뉴 삭제 -->
+							</div>
+							<div class="container">
+								<div class="mainAssetConnBtn">
+									<a href="javascript:;" title="자산연결">자산</a>
+								</div>
+							</div>
+							<div class="footer sb">
+								<ul class="footerNav">
+									<li><a href="javascript:;" class="home">홈</a></li>
+									<li><a href="javascript:;" class="mydata on">마이데이터</a></li>
+									<li><a href="javascript:;" class="mall">금융상품몰</a></li>
+									<li><a href="javascript:;" class="talk">상담톡</a></li>
+								</ul>
+							</div>
+						</article>
+					</div>
+
+					<!-- ### 올원뱅크 ### -->
+					<div class="guide_phone nhd_allone">
+						<article class="wrapper nhasset">
+							<div class="header">
+								<a href="javascript:;" class="btnBack" role="button"><span class="blind">이전화면으로</span></a> <!-- [2020-11-16] role="button" 추가 -->
+								<h1><a href="javascript:;" role="text">올원뱅크</a></h1>
+								<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+								<a href="javascript:;" class="btnNav" role="button"><span class="blind">전체메뉴</span></a> <!-- [2021-01-11] 전체메뉴 추가 --> <!-- [2020-11-16] 전체메뉴 삭제 -->
+							</div>
+							<div class="container">
+								<div class="mainAssetConnBtn">
+									<a href="javascript:;" title="자산연결">자산</a>
+								</div>
+							</div>
+							<div class="linked-bottom-menu">
+								<a href="javascript:void(0);" class="linked-finance">NH금융</a>
+								<a href="javascript:void(0);" class="linked-mall">상품몰</a>
+								<a href="javascript:void(0);" class="linked-mydata">마이데이터</a>
+								<a href="javascript:void(0);" class="linked-life">생활+</a>
+							</div>
+						</article>
+					</div>
+					<!-- ### // ### -->
+				</div>
+				<div class="guide_wrap">
+					<!-- ### 스마트뱅킹 ### -->
+					<div class="guide_phone">
+						<article class="wrapper nhasset">
+							<div class="header">
+								<a href="javascript:;" class="btnBack" role="button"><span class="blind">이전화면으로</span></a> <!-- [2020-11-16] role="button" 추가 -->
+								<h1><a href="javascript:;" role="text">스마트뱅킹</a></h1>
+								<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+								<a href="javascript:;" class="btnNav" role="button"><span class="blind">전체메뉴</span></a> <!-- [2021-01-11] 전체메뉴 추가 --> <!-- [2020-11-16] 전체메뉴 삭제 -->
+							</div>
+							<div class="container">
+								<div class="areaBtnDefault">
+									<a href="javascript:;" class="btnPressPoint" role="button">서비스 가입하기</a> <!-- [2023-01-17] 버튼명 수정 -->
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<!-- ### 올원뱅크 ### -->
+					<div class="guide_phone nhd_allone">
+						<article class="wrapper nhasset">
+							<div class="header">
+								<a href="javascript:;" class="btnBack" role="button"><span class="blind">이전화면으로</span></a> <!-- [2020-11-16] role="button" 추가 -->
+								<h1><a href="javascript:;" role="text">올원뱅크</a></h1>
+								<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+								<a href="javascript:;" class="btnNav" role="button"><span class="blind">전체메뉴</span></a> <!-- [2021-01-11] 전체메뉴 추가 --> <!-- [2020-11-16] 전체메뉴 삭제 -->
+							</div>
+							<div class="container">
+								<div class="areaBtnDefault">
+									<a href="javascript:;" class="btnPressPoint" role="button">서비스 가입하기</a> <!-- [2023-01-17] 버튼명 수정 -->
+								</div>
+							</div>
+						</article>
+					</div>
+					<!-- ### // ### -->
+				</div>
+			</div>
+
+			<!-- --------------------------------- -->
+			<!-- ### 통합메인 ### -->
+			<!-- --------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">통합메인 : .nhassetMain .hasGnb</h3>
+				<!-- [MSCO9210] -->
+				<div class="guide_phone nhassetMain">
+					<article class="wrapper nhasset">
+						<div class="header">
+							<h1><a href="javascript:;" role="text"><span class="mainTopLogo">NH마이데이터</span></a></h1>
+							<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+							<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>
+						</div>
+						<div class="container hasGnb nhassetMain">
+							<span class="mainBg"></span>
+							<div class="gnb">
+								<ul>
+									<li><a href="javascript:;">자산</a></li>
+									<li><a href="javascript:;">소비</a></li>
+									<li class="menuStar"><a href="javascript:;"><span class="menuStarInner"><span class="blind">별별서비스</span></span></a></li>
+									<li><a href="javascript:;">전체</a></li>
+								</ul>
+							</div>
+							<div class="boxTypeWrap"><p class="guide_empty">컨텐츠가 노출됩니다.</p></div>
+							<div class="boxTypeWrap"><p class="guide_empty">컨텐츠가 노출됩니다.</p></div>
+							<div class="mainAssetConnBtn">
+								<a href="javascript:;" title="자산연결">자산</a>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+
+			<!-- --------------------------------- -->
+			<!-- ### 서브메인 ### -->
+			<!-- --------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">서브메인</h3>
+				<div class="guide_wrap">
+					<!-- ### GNB 있음 ### -->
+					<div class="guide_phone">
+						<article class="wrapper nhasset">
+							<div class="header">
+								<h1><a href="javascript:;" role="text"><img src="../../images/logoMydata2.png" alt="금융과 일상을 연결하다 NH마이데이터"></a></h1>
+								<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+								<a href="javascript:;" class="btnNav" role="button" title="선택됨"><span>전체메뉴</span></a>
+							</div>
+							<div class="container hasGnb">
+								<span class="mainBg"></span>
+								<div class="gnb">
+									<ul>
+										<li><a href="javascript:;">자산</a></li>
+										<li><a href="javascript:;">소비</a></li>
+										<li class="menuStar"><a href="javascript:;"><span class="menuStarInner"><span class="blind">별별서비스</span></span></a></li> <!-- [접근성_2024] 메뉴명 변경 -->
+										<li><a href="javascript:;" class="active" title=" 선택됨">전체</a></li>
+									</ul>
+								</div>
+								<div class="boxTypeWrap"><p class="guide_empty">컨텐츠가 노출됩니다.</p></div>
+								<button type="button" class="goTopBtn"><span class="blind">최상단으로 이동</span></button>
+							</div>
+						</article>
+					</div>
+
+					<!-- ### GNB 없음 ### -->
+					<div class="guide_phone">
+						<article class="wrapper nhasset">
+							<div class="header">
+								<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+								<h1><a href="javascript:;" role="text"><img src="../../images/logoMydata2.png" alt="금융과 일상을 연결하다 NH마이데이터"></a></h1>
+								<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+								<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>
+							</div>
+							<div class="container">
+								<div class="boxTypeWrap"><p class="guide_empty">컨텐츠가 노출됩니다.</p></div>
+								<button type="button" class="goTopBtn"><span class="blind">최상단으로 이동</span></button>
+							</div>
+						</article>
+					</div>
+					<!-- ### // ### -->
+				</div>
+			</div>
+
+			<!-- --------------------------------- -->
+			<!-- ### 서브페이지 ### -->
+			<!-- --------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">서브페이지</h3>
+				<h4 class="guide_title3">기본 : 전체메뉴 + 홈</h4>
+				<div class="guide_wrap">
+					<!-- ### // ### -->
+					<div class="guide_phone">
+						<article class="wrapper nhasset">
+							<div class="header">
+								<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+								<h1><a href="javascript:;" role="text">타이틀</a></h1>
+								<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+								<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>
+							</div>
+							<div class="container">
+								<div class="boxTypeWrap"><p class="guide_empty">컨텐츠가 노출됩니다.</p></div>
+							</div>
+						</article>
+					</div>
+					<!-- ### // ### -->
+					<div class="guide_phone">
+						<article class="wrapper nhasset">
+							<div class="header">
+								<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+								<h1><a href="javascript:;" role="text">타이틀</a></h1>
+								<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+								<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>
+							</div>
+							<div class="container bgWhite">
+								<p class="guide_empty">컨텐츠가 노출됩니다.</p>
+								<div class="areaBtnDefault">
+									<a href="javascript:;" class="btnPressPoint" role="button">확인</a>
+								</div>
+							</div>
+						</article>
+					</div>
+					<!-- ### // ### -->
+					<div class="guide_phone">
+						<article class="wrapper nhasset">
+							<div class="header">
+								<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+								<h1><a href="javascript:;" role="text">타이틀</a></h1>
+								<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+								<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>
+							</div>
+							<div class="container">
+								<div class="tabNavi">
+									<ul>
+										<li><a href="javascript:;" aria-current="page">버튼</a></li> <!-- [D] 활성화 : aria-current="page" -->
+										<li><a href="javascript:;">버튼</a></li>
+										<li><a href="javascript:;">버튼</a></li>
+										<li><a href="javascript:;">버튼</a></li>
+									</ul>
+								</div>
+								<div class="boxTypeWrap"><p class="guide_empty">컨텐츠가 노출됩니다.</p></div>
+							</div>
+						</article>
+					</div>
+					<!-- ### // ### -->
+				</div>
+
+				<h4 class="guide_title3">상세내역</h4>
+				<div class="guide_wrap">
+					<!-- ### // ### -->
+					<div class="guide_phone">
+						<article class="wrapper nhasset">
+							<div class="header">
+								<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+								<h1><a href="javascript:;" role="text">타이틀</a></h1>
+								<a href="javascript:;" class="btnAcAdmin"><span class="blind">관리</span></a>
+							</div>
+							<div class="container">
+								<div class="boxTypeWrap"><p class="guide_empty">컨텐츠가 노출됩니다.</p></div>
+							</div>
+						</article>
+					</div>
+					<!-- ### // ### -->
+					<div class="guide_phone">
+						<article class="wrapper nhasset">
+							<div class="header">
+								<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+								<h1><a href="javascript:;" role="text">타이틀</a></h1>
+								<a href="javascript:;" class="btnAcAdmin"><span class="blind">관리</span></a>
+							</div>
+							<div class="container bgWhite">
+								<p class="guide_empty">컨텐츠가 노출됩니다.</p>
+								<div class="areaBtnDefault">
+									<a href="javascript:;" class="btnPressPoint" role="button">확인</a>
+								</div>
+							</div>
+						</article>
+					</div>
+					<!-- ### // ### -->
+					<div class="guide_phone">
+						<article class="wrapper nhasset">
+							<div class="header">
+								<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+								<h1><a href="javascript:;" role="text">타이틀</a></h1>
+								<a href="javascript:;" class="hide">숨기기</a>
+							</div>
+							<div class="container">
+								<div class="boxTypeWrap"><p class="guide_empty">컨텐츠가 노출됩니다.</p></div>
+								<div class="areaBtnDefault">
+									<a href="javascript:;" class="btnPressPoint" role="button">확인</a>
+								</div>
+							</div>
+						</article>
+					</div>
+					<!-- ### // ### -->
+					<div class="guide_phone">
+						<article class="wrapper nhasset">
+							<div class="header">
+								<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+								<h1><a href="javascript:;" role="text">타이틀</a></h1>
+								<a href="javascript:;" class="delt"><span class="blind">삭제</span></a>
+							</div>
+							<div class="container">
+								<div class="boxTypeWrap"><p class="guide_empty">컨텐츠가 노출됩니다.</p></div>
+								<div class="areaBtnDefault">
+									<a href="javascript:;" class="btnPressPoint" role="button">확인</a>
+								</div>
+							</div>
+						</article>
+					</div>
+					<!-- ### // ### -->
+					<div class="guide_phone">
+						<article class="wrapper nhasset">
+							<div class="header">
+								<a href="javascript:;" class="btnBack" role="button"><span class="blind">이전화면으로</span></a>
+								<h1><a href="javascript:;" role="text">타이틀</a></h1>
+								<a href="javascript:;" class="btnHeaderAdd"><span class="blind">현금내역추가</span></a>
+							</div>
+							<div class="container">
+								<div class="boxTypeWrap"><p class="guide_empty">컨텐츠가 노출됩니다.</p></div>
+							</div>
+						</article>
+					</div>
+					<!-- ### // ### -->
+				</div>
+
+				<h4 class="guide_title3">진행형(STEP)</h4>
+				<div class="guide_wrap">
+					<!-- ### // ### -->
+					<div class="guide_phone">
+						<article class="wrapper nhasset">
+							<div class="header">
+								<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+								<h1><a href="javascript:;" role="text">타이틀</a></h1>
+								<a href="javascript:;" class="btnEtc">나가기</a>
+							</div>
+							<div class="container">
+								<div class="boxTypeWrap"><p class="guide_empty">컨텐츠가 노출됩니다.</p></div>
+							</div>
+						</article>
+					</div>
+					<!-- ### // ### -->
+					<div class="guide_phone">
+						<article class="wrapper nhasset">
+							<div class="header">
+								<h1><a href="javascript:;" role="text">타이틀</a></h1>
+								<a href="javascript:;" class="btnEtc">나가기</a>
+							</div>
+							<div class="container">					
+								<div class="boxTypeWrap"><p class="guide_empty">컨텐츠가 노출됩니다.</p></div>
+								<div class="areaBtnDefault">
+									<a href="javascript:;" class="btnPressDefault" onclick="slidePopConfirm();" role="button">버튼명</a>
+									<a href="javascript:;" class="btnPressPoint"  onclick="slidePopConfirm();" role="button">버튼명</a>
+								</div>
+							</div>
+						</article>
+					</div>
+					<!-- ### // ### -->
+					<div class="guide_phone">
+						<article class="wrapper nhasset">
+							<div class="header">
+								<h1><a href="javascript:;" role="text">타이틀</a></h1>
+								<a href="javascript:;" class="btnEtc">나가기</a>
+							</div>
+							<div class="container bgWhite">
+								<div class="stepWrap">
+									<ol role="img" aria-label="총 4단계 중 1번째 단계">
+										<li class="active"><span>1</span></li>
+										<li><span>2</span></li>
+										<li><span>3</span></li>
+										<li><span>4</span></li>				
+									</ol>
+								</div>
+								<p class="guide_empty">컨텐츠가 노출됩니다.</p>
+								<div class="areaBtnDefault">
+									<a href="javascript:;" class="btnPressPoint" role="button">확인</a>
+								</div>
+							</div>
+						</article>
+					</div>
+					<!-- ### // ### -->
+					<div class="guide_phone">
+						<article class="wrapper nhasset">
+							<div class="header">
+								<h1><a href="javascript:;" role="text">타이틀</a></h1>
+								<a href="javascript:;" class="btnEtc">나가기</a>
+							</div>
+							<div class="container">
+								<div class="infoStep1">
+									<ol>
+										<li aria-current="step"> <!-- [D] 현재 스텝 li : aria-current="step" 노출 -->
+											<i aria-hidden="true">1</i>
+											<span>기본정보</span>
+										</li>
+										<li>
+											<i aria-hidden="true">2</i>
+											<span>은퇴준비자금</span>
+										</li>
+										<li>
+											<i aria-hidden="true">3</i>
+											<span>은퇴목표</span>
+										</li>
+										<li>
+											<i aria-hidden="true">4</i>
+											<span>기대수익률</span>
+										</li>
+									</ol>
+								</div>
+								<div class="boxTypeWrap"><p class="guide_empty">컨텐츠가 노출됩니다.</p></div>
+							</div>
+						</article>
+					</div>
+					<!-- ### // ### -->
+					<div class="guide_phone">
+						<article class="wrapper nhasset">
+							<div class="header">
+								<h1><a href="javascript:;" role="text">타이틀(완료)</a></h1>
+								<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+								<a href="javascript:;" class="btnNav" role="button"><span class="blind">전체메뉴</span></a>
+							</div>
+							<div class="container">
+								<div class="boxTypeWrap"><p class="guide_empty">컨텐츠가 노출됩니다.</p></div>
+								<div class="areaBtnDefault">
+									<a href="javascript:;" class="btnPressPoint" role="button">확인</a>
+								</div>
+							</div>
+						</article>
+					</div>
+					<!-- ### // ### -->
+				</div>
+			</div>
+			<!-- --------------------------------- -->
+		</section>
+
+		<!-- ################################# -->
+		<!-- ### 팝업 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT2">
+			<h2 class="guide_title">팝업</h2>
+			<!-- --------------------------------- -->
+			<!-- ### 풀팝업 ### -->
+			<!-- --------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">풀팝업 : .fullLayerPop</h3>
+				<p class="guide_txt">팝업호출함수(퍼블용) : fullLayerPop();</p>
+				<div class="guide_wrap">
+					<!-- ### // ### -->
+					<div class="guide_phone">
+						<article class="nhasset popWrap fullLayerPop" style="display:block;">
+							<div class="popInner">
+								<h1>타이틀</h1>
+								<div class="popCont" style="height:355px">
+									<p class="guide_empty">컨텐츠가 노출됩니다.</p>
+								</div>
+								<div class="popBtnWrap">
+									<div class="popBtn">
+										<a href="javascript:;" role="button">버튼명</a>
+										<a href="javascript:;" class="confirmBtn" role="button">버튼명</a>
+									</div>
+									<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+								</div>
+							</div>
+						</article>
+					</div>
+					<!-- ### // ### -->
+					<div class="guide_phone">
+						<article class="nhasset popWrap fullLayerPop" style="display:block;">
+							<div class="popInner">
+								<h1>타이틀</h1>
+								<div class="popCont grayPop" style="height:355px">
+									<div class="boxTypeWrap"><p class="guide_empty">컨텐츠가 노출됩니다.</p></div>
+								</div>
+								<div class="popBtnWrap">
+									<div class="popBtn">
+										<a href="javascript:;" role="button">버튼명</a>
+										<a href="javascript:;" class="confirmBtn" role="button">버튼명</a>
+									</div>
+									<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+								</div>
+							</div>
+						</article>
+					</div>
+					<!-- ### // ### -->
+				</div>
+			</div>
+
+			<!-- --------------------------------- -->
+			<!-- ### 레이어팝업 ### -->
+			<!-- --------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">레이어팝업</h3>
+				<h4 class="guide_title3">센터형 : .centerLayer</h4>
+				<p class="guide_txt">팝업호출함수(퍼블용) : popCenter();</p>
+				<div class="guide_wrap">
+					<!-- ### // ### -->
+					<div class="guide_phone">
+						<article class="nhasset popWrap centerLayer" style="display:block;">
+							<div class="dim"></div>
+							<div class="dimCloseArea" onclick="popClose(this);return false;">터치 시 해당 창을 닫습니다.</div>
+						
+							<div class="popInner" style="top:50%;transform:translateY(-50%);">
+								<h1 class="ac"><img src="../../images/popTitle.png" alt="NH 스마트뱅킹"></h1>
+								<div class="popCont">
+									<div class="confirmMsg type02">
+										<p class="guide_empty">컨텐츠가 노출됩니다.</p>
+									</div>
+								</div>
+						
+								<div class="popBtnWrap">
+									<div class="popBtn">
+										<a href="javascript:;" role="button">버튼명</a>
+										<a href="javascript:;" class="confirmBtn" role="button">버튼명</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+					<!-- ### // ### -->
+					<div class="guide_phone">
+						<article class="nhasset popWrap centerLayer" style="display:block;">
+							<div class="dim"></div>
+							<div class="dimCloseArea" onclick="popClose(this);return false;">터치 시 해당 창을 닫습니다.</div>
+						
+							<div class="popInner" style="top:50%;transform:translateY(-50%);">
+								<h1 class="ac"><img src="../../images/popTitle.png" alt="NH마이데이터"></h1>
+								<div class="popCont">
+									컨텐츠가 노출됩니다.<br>
+									컨텐츠가 노출됩니다.
+								</div>
+						
+								<div class="popBtnWrap">
+									<div class="popBtn">
+										<a href="javascript:;" role="button">버튼명</a>
+										<a href="javascript:;" class="confirmBtn" role="button">버튼명</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+					<!-- ### // ### -->
+					<div class="guide_phone">
+						<article class="nhasset popWrap centerLayer" style="display:block;">
+							<div class="dim"></div>
+							<div class="dimCloseArea" onclick="popClose(this);return false;">터치 시 해당 창을 닫습니다.</div>
+						
+							<div class="popInner" style="top:50%;transform:translateY(-50%);">
+								<h1>타이틀</h1>
+								<div class="popCont">
+									컨텐츠가 노출됩니다.<br>
+									컨텐츠가 노출됩니다.
+								</div>
+						
+								<div class="popBtnWrap">
+									<div class="popBtn">
+										<a href="javascript:;" role="button">버튼명</a>
+										<a href="javascript:;" class="confirmBtn" role="button">버튼명</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+					<!-- ### // ### -->
+					<div class="guide_phone">
+						<article class="nhasset popWrap centerLayer" style="display:block;">
+							<div class="dim"></div>
+							<div class="dimCloseArea" onclick="popClose(this);return false;">터치 시 해당 창을 닫습니다.</div>
+						
+							<div class="popInner popInnerNotice" tabindex="0"  style="top:50%;transform:translateY(-50%);">
+								<div class="popCont">
+									<div class="popNoticeWrap">
+										<div class="popNoticeCont">							
+											<!-- 통이미지로 게시할 경우 -->
+											<div class="oneImg">
+												<a href="javascript:;"><img src="../../images/notice/img_event_join01.png" alt="“NH자산+ 가입 감사. 선착순 100% 당첨 이벤트 응모하러 가볼까요? 이벤트 응모하기"></a>
+											</div>
+										</div>
+									</div>
+								</div>		
+								<div class="popBtnWrap popNoticeBtnWrap">
+									<div class="popBtn">
+										<div class="checkList">
+											<input type="checkbox" id="chk12" name="cc" />
+											<label for="chk12">3일동안 보이지 않기</label>
+										</div>
+									</div>
+									<a href="javascript:;" onclick="popClose(this);return false;" class="openAccClose">닫기</a>
+								</div>
+							</div>
+						</article>
+					</div>
+					<!-- ### // ### -->
+				</div>
+
+				<h4 class="guide_title3">슬라이드형 : .slidePopOption</h4>
+				<ul class="guide_txt">
+					<li>팝업호출함수 : slidePopOption();</li>
+					<li>컨텐츠의 스크롤이 필요한 경우 사용함</li>
+				</ul>
+				<div class="guide_wrap">
+					<!-- ### // ### -->
+					<div class="guide_phone">
+						<article class="nhasset popWrap slidePopOption" style="display:block;">
+							<div class="dim" style="display:block;"></div>
+							<div class="popInner" style="height:335px">
+								<h1>타이틀</h1>
+								<div class="popCont" style="height:200px">
+									<p class="guide_empty">컨텐츠가 노출됩니다.</p>
+								</div>
+								<div class="popBtnWrap">
+									<div class="popBtn">
+										<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">확인</a>
+									</div>
+									<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다."><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+
+
+				<h4 class="guide_title3">슬라이드형 : .slidePopConfirm</h4>
+				<ul class="guide_txt">
+					<li>팝업호출함수 : slidePopConfirm();</li>
+					<li>컨텐츠가 짧을 경우 사용함</li>
+				</ul>
+				<div class="guide_wrap">
+					<!-- ### // ### -->
+					<div class="guide_phone">
+						<article class="nhasset popWrap slidePopConfirm" style="display:block;">
+							<div class="dim" style="display:block;"></div>
+							<div class="popInner" style="height:235px">
+								<h1>타이틀</h1>
+								<div class="popCont" style="height:100px">
+									<p class="guide_empty">컨텐츠가 노출됩니다.</p>
+								</div>
+								<div class="popBtnWrap">
+									<div class="popBtn">
+										<a href="javascript:;" onclick="popClose(this);return false;" role="button">버튼명</a>
+										<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">버튼명</a>
+									</div>
+									<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다."><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- ################################# -->
+	</div>
+	<!-- ###################################### -->
+</div>
+
+<script>
+	$(window).on('load',function(){
+		$('body').removeClass('nhassetMain');
+		$('.wrapper.nhasset').removeClass('bgWhite');
+		if($('.container').hasClass('bgWhite')) $('.container.bgWhite').parents('.wrapper.nhasset').addClass('bgWhite');
+	})
+</script>
+</body>
+</html>

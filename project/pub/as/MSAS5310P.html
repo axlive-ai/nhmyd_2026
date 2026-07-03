@@ -1,0 +1,153 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 가상자산 상세</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function() {
+		fullLayerPop();
+	});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<h1><a href="javascript:;" role="text">가상자산 등록</a></h1>
+			<a href="javascript:;" class="btnEtc">나가기</a>
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+		</div>
+		<!-- //container -->
+
+		<!-- fullLayerPop -->
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>가상자산 상세</h1>
+				<div class="popCont">
+					<div class="accTopInfo widthLogo"> <!-- [2022-11-24] 사보현 : class accTopInfo 추가, tit 삭제 (로고 공통 이미지로 변경)  -->
+						<h2 class="accName">이더리움 클래식
+							<span class="blind">업비트</span>
+							<img src="../../images/logos/ABAA0000.png" alt="이더리움 클래식 로고" class="imgLogo"> <!-- [2022-11-24] 사보현 : 로고 공통 이미지로 변경 -->
+						</h2>
+					</div>
+					
+					<!--10.05 위치 변경 및 라인 삭제 변경 디자인 적용-->
+					<div class="formWrap">
+						<ul>
+							<li>
+								<strong class="formTit dsf">보유수량 </strong>
+								<div class="inputList unitMan">
+									<input type="tel" title="보유수량 입력" name="" id="" placeholder="보유수량을 입력해 주세요">
+									<span class="unit">ETH</span>
+									<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+								</div>
+							</li>
+						</ul>
+						<p class="formaddTxt">
+							<span>원화환산금액 :700,000원</span><!--12.06  문구 수정-->
+						</p>
+					</div>
+
+					<div class="formWrap">
+						<ul>
+							<li>
+								<strong class="formTit">1코인당 평균 매입금액</strong>
+								<div class="inputList">
+									<input type="tel" title="1코인당 평균 매입금액" name="" id="" value="" placeholder="금액을 입력해주세요.">
+									<span class="unit">원</span>
+									<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+								</div>
+								<div class="roundBtnWrap">
+									<a href="javascript:;" role="button" title="1,000만원 추가">+1,000만</a>
+									<a href="javascript:;" role="button" title="100만원 추가">+100만</a>
+									<a href="javascript:;" role="button" title="10만원 추가">+10만</a>
+									<a href="javascript:;" role="button" title="1만원 추가">+1만</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="infoBox virtuInfo">
+						<ul class="detailList">
+							<li>
+								<span class="tit">시세기준</span>
+								<span class="value">
+									<div>1 ETH = 20,000</div>
+									<div>(2022.05.17 15:33:27)</div>
+								</span>
+							</li>
+							<li>
+								<span class="tit">정보제공</span>
+								<span class="value">빗썸</span>
+							</li>
+							<!-- 가상자산 수정시 노출 -->
+							<li>
+								<span class="tit">최초등록일</span>
+								<span class="value">2020.07.11</span>
+							</li>
+							<!-- //가상자산 수정시 노출 -->
+						</ul>
+					</div>
+
+					<hr class="divLineH3 m35" aria-hidden="true">
+					<!--//10.05 위치 변경 및 라인 삭제 변경 디자인 적용-->
+					<div class="formWrap">
+						<ul>
+							<li>
+								<strong class="formTit">별명 설정</strong>
+								<p class="exTxt">자산 목록에서 별명으로 보여요.</p>
+								<div class="inputList">
+									<input type="text" title="별명 설정" name="" id="" value="이더리움 클래식" placeholder="별명 설정 입력">
+									<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="virAsset">
+						<div class="tit">
+							<h2>순자산에 금액 포함</h2>
+							<span>금액엔 제외되지만 자산 목록에는 보여요.</span>
+						</div>
+						<div class="tgWarp">
+							<span class="tgBtnType2">
+								<input type="checkbox" id="toggle10" checked="checked">
+								<label for="toggle10"><span class="blind">&gt;농협은행 계좌 설정</span></label>
+							</span>
+						</div>	
+					</div>
+				</div>
+
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<a href="javascript:;" class="" onclick="popClose(this);return false;" role="button">삭제</a>
+						<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">확인</a>
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- //fullLayerPop -->
+	</div>
+	
+</body>
+</html>

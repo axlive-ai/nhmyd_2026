@@ -1,0 +1,73 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>[P] 여유자금 저축기간 | 조기은퇴진단 | 컨설팅</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function(){
+		slidePopOption();
+	})  
+</script>
+</head>
+<body>
+<div class="wrapper nhasset"><!-- 바닥페이지 --></div>
+<!-- ###################################### -->
+<!-- ### [팝업] 여유자금 저축기간 ### -->
+<!-- ###################################### -->
+<div class="nhasset popWrap slidePopOption">
+	<div class="dim"></div>
+	<div class="popInner">
+		<h1>저축기간</h1>
+		<div class="popCont">                    
+			<ul class="selectList">
+				<li><button type="button" aria-selected="false">8년</button></li>
+				<li><button type="button" aria-selected="false">7년</button></li>
+				<li><button type="button" aria-selected="false">6년</button></li>
+				<li><button type="button" aria-selected="false">5년</button></li>
+				<li><button type="button" aria-selected="false">4년</button></li>
+				<li class="active"><button type="button" aria-selected="true" title="선택됨">3년</button></li> <!-- [D] 선택됨 : li.active / button aria-selected="true" -->
+				<li><button type="button" aria-selected="false">2년</button></li>
+				<li><button type="button" aria-selected="false">1년</button></li>
+			</ul>
+		</div>
+
+		<div class="popBtnWrap">
+			<!-- 
+			<div class="popBtn">
+				<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">확인</a>
+			</div>
+			-->
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다."><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+		</div>
+	</div>
+</div>
+
+<!-- ###################################### -->
+<!-- ### [샘플] 스크립트 ### -->
+<!-- ###################################### -->
+<script type="text/javascript">
+	$(document).ready(function(){
+		//샘플 : 팝업 오픈 시 선택된 값 위치로 스크롤
+		var _top = $('.selectList .active').position().top;
+		var _header = $('.nhasset.popWrap .popInner h1').outerHeight();
+		setTimeout(function(){$('.popCont').scrollTop(_top - _header)}, 100);
+	});
+</script>
+<!-- ###################################### -->
+</body>
+</html>

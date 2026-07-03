@@ -1,0 +1,93 @@
+
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>[P] 조회조건설정 | 머니 캘린더</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function(){
+		slidePopConfirm();
+	})  
+</script>
+</head>
+<body>
+<div class="wrapper nhasset"><!-- 바닥페이지 --></div>
+
+<!-- ###################################### -->
+<!-- ### [팝업] 조회조건설정 ### -->
+<!-- ###################################### -->
+<div class="nhasset popWrap slidePopConfirm">
+	<div class="dim"></div>
+	<div class="popInner">
+		<h1>조회조건 설정</h1>
+		<div class="popCont">
+			<div class="popSelWrap">
+				
+				<strong class="formTit bdNone mt0 ">거래구분</strong>
+				<div class="addrSelectWrap">
+					<!-- <ul class="no2">
+						<li class="active"><a href="javascript:;" role="radio">신용카드</a></li>
+						<li><a href="javascript:;" role="radio">체크계좌</a></li>
+						<li><a href="javascript:;" role="radio">계좌</a></li>
+						<li><a href="javascript:;" role="radio">현금</a></li>
+					</ul> -->
+					<div class="boxCheck"><!--10.21 체크박스로 수정-->
+						<div class="boxChkInn">
+							<input name="chksel" id="chk1" type="checkbox" checked="checked">
+							<label for="chk1">신용카드</label> 
+						</div>
+						<div class="boxChkInn">
+							<input name="chksel" id="chk2" type="checkbox" checked="checked">
+							<label for="chk2">체크카드</label>
+						</div>
+
+						<!-- [2023 NH마이데이터 서비스 고도화] 추가 -->
+						<div class="boxChkInn">
+							<input name="chksel" id="chk6" type="checkbox" checked="checked">
+							<label for="chk6">페이결제</label>
+						</div>
+						<!--  // [2023 NH마이데이터 서비스 고도화] 추가 -->
+
+						<div class="boxChkInn">
+							<input name="chksel" id="chk3" type="checkbox" checked="checked">
+							<label for="chk3">선불카드</label>
+						</div>
+						<div class="boxChkInn">
+							<input name="chksel" id="chk4" type="checkbox" checked="checked">
+							<label for="chk4">계좌</label> 
+						</div>
+						<div class="boxChkInn">
+							<input name="chksel" id="chk5" type="checkbox" checked="checked">
+							<label for="chk5">현금</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>				
+
+		<div class="popBtnWrap">
+			<div class="popBtn">
+				<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">조회</a>
+			</div>
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+		</div>
+	</div>
+</div>
+<!-- ###################################### -->
+</body>
+</html>

@@ -1,0 +1,91 @@
+
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>연령·성별 선택</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function(){
+		slidePopConfirm();
+		addrSelectFnc();
+	})  
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">연령·성별 선택</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+			
+
+		</div>
+		<!-- //container -->
+		
+		<!-- 세부 카테고리 팝업 -->
+		<div class="nhasset popWrap slidePopConfirm">
+			<div class="dim"></div>
+			<div class="popInner">
+				<h1>연령·성별 선택</h1>
+				<div class="popCont">
+					<div class="popSelWrap">
+                        <div class="titWrap mt0 mb10">
+							<h2 class="defSubTit2 bdNone">연령대 선택</h2>
+                        </div>
+                        <div class="addrSelectWrap">
+							<ul class="no2">
+								<li class="active"><a href="javascript:;">20대</a></li>
+								<li><a href="javascript:;" role="radio">30대</a></li>
+                                <li><a href="javascript:;" role="radio">40대</a></li>
+                                <li><a href="javascript:;" role="radio">50대</a></li>
+								<li><a href="javascript:;" role="radio">60대 이상</a></li>
+							</ul>
+                        </div>
+                        <div class="titWrap mb10">
+							<h2 class="defSubTit2 bdNone">성별 선택</h2>
+                        </div>
+                        <div class="addrSelectWrap">
+							<ul class="no2">
+								<li class="active"><a href="javascript:;" role="radio" aria-checked="true">남성</a></li>
+								<li><a href="javascript:;" role="radio">여성</a></li>
+							</ul>
+                        </div>
+					</div>
+				</div>				
+
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">조회</a>
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- // 세부 카테고리 팝업 -->
+	</div>
+
+</body>
+</html>

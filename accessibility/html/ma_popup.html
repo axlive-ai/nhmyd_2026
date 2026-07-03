@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Septem UI/UX accessibility</title>
+	<link rel="stylesheet" href="../css/a11y_com.css">
+	<link rel="stylesheet" href="../css/prism.css">
+	<script src="../js/prism.js"></script>
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/a11y_com.js"></script>
+</head>
+<body>
+	<style>
+		*:focus {outline:1px dotted red}
+		body {padding:20px}
+		.syntaxhighlighter, .syntaxhighlighter .line.alt2, .syntaxhighlighter .line.alt1 {background-color: #f7f7f7 !important}
+		.popup {z-index:1000;position:fixed;top:50%;left:50%}
+		.popupWrap {position:fixed;z-index:2000;background:#fff;transform: translate(-50%, -50%);}
+		.popupWrap h1 {padding:5px 20px;background:#efefef;border-bottom:#ddd}
+		.dimmed{position:fixed !important;top:0;left:0;width:100% !important;height:100%;background:rgba(0,0,0,0.8) !important;z-index:998 !important}
+	</style>
+
+	<div id="contents" class="contents">
+		<a href="#sear_guide" onclick="popupOpen(this);return false;" title="레이어 팝업">팝업열기</a>
+
+		<div class="mt40">
+			<strong>모바일 팝업 연 후</strong>
+			<pre>
+				<code class="language-markup">
+					<script type="prism-html-markup">
+						<div id="contents" class="contents" aria-hidden="true">//aria-hidden="true"를 줘 팝업 내에서만 포커스가 돌도록 한다.
+						<a href="#" onclick="popupOpen()" role="button" title="OO팝업열기" class="popupOpen popup1">
+						팝업을 여는 버튼</a>
+						</div>
+
+						<div class="popup" style="display:block;">
+							<div class="dimmed"></div>
+							<div class="popupWrap">
+								<h1><a href="#" role="text">팝업제목</a></h1> <!-- 현재 포커스 여기 -->
+								<!-- iOS에서는 tabindex로 focus 안가는 이슈 있었음 a필수 -->
+								<div class="popupCon"></div>
+								<a href="#" onclick="popupClose('popup1')" role="button" title="팝업닫기">X</a>
+							</div>
+						</div>
+									</pre>
+
+									<strong>모바일 팝업 닫힌 후</strong>
+									<pre name="code" class="brush:html  highlight:[2, 3]">
+						<div id="contents" class="contents" aria-hidden="false">
+							<a href="#" onclick="popupOpen()" role="button" title="OO팝업열기" class="popupOpen popup1">팝업을 여는 버튼</a>  <!-- 현재 포커스 여기 -->
+						</div>
+
+						<div class="popup" style="display:none;">
+							<div class="dimmed"></div>
+							<div class="popupWrap">
+								<h1><a href="#" role="text">팝업제목</a></h1>
+								<!-- iOS에서는 tabindex로 focus 안가는 이슈 있었음 a필수 -->
+								<div class="popupCon">
+									<span>1번</span><span>2번</span><span>3번</span><span>4번</span>
+								</div>
+								<a href="#" onclick="popupClose('popup1')" role="button" title="팝업닫기">X</a>
+							</div>
+						</div>
+					</script>
+				</code>
+			</pre>
+		
+
+			<strong>모바일 팝업 포커스 스크립트</strong>
+			<pre>
+				<code class="language-js">
+					var $popup = $('.popup');
+					var $content = $('#contents');
+
+					function popupOpen(){
+						$popup.show();
+						$popup.find('.popupWrap h1 > a').focus();
+						$content.attr('aria-hidden','true');
+					}
+
+					function popupClose(name){
+						var $name = $('.'+name);
+						$popup.hide();
+						$content.attr('aria-hidden','false');
+						$name.focus();
+					}
+				</code>
+			</pre>
+
+		</div>
+
+	</div>
+	
+<!-- 실제팝업 // -->
+	<div class="popup" style="display:none;">
+		<div class="dimmed" aria-hidden="true"></div>
+		<div class="popupWrap">
+			<h1><a href="#" role="heading">팝업제목</a></h1>
+			<!-- iOS에서는 tabindex로 focus 안가는 이슈 있었음 a필수 -->
+			<div class="popupCon">
+				<span>1번</span><span>2번</span><span>3번</span><span>4번</span>
+			</div>
+			<button onclick="popupClose('popup1')">닫기X</button>
+		</div>
+	</div>
+	
+	<script>
+		var $popup = $('.popup');
+		var $content = $('#contents');
+
+		function popupOpen(){
+			$popup.show();
+			$popup.find('.popupWrap h1 > a').focus();
+			$content.attr('aria-hidden','true');
+		}
+		
+		function popupClose(name){
+			var $name = $('.'+name);
+			$popup.hide();
+			$content.attr('aria-hidden','false');
+			$name.focus();
+		}
+	</script>
+<!-- // 실제팝업 -->
+
+</body>
+</html>

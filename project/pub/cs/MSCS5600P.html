@@ -1,0 +1,430 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>[P] 정기지출 선택 | 정기지출관리 | 소비C</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function(){
+		fullLayerPop();
+	})
+</script>
+</head>
+<body>
+<div class="wrapper nhasset"><!-- 바닥페이지 --></div>
+
+<!-- ###################################### -->
+<!-- ### [팝업] 정기지출 선택 ### -->
+<!-- ###################################### -->
+<div class="nhasset popWrap fullLayerPop">
+	<div class="popInner">
+		<h1>정기지출 선택</h1>
+		<div class="popCont fullH">
+			<p class="defTit t1">
+				<strong>추가할 내역을 선택해주세요</strong>
+				<span>동일 가맹점의 소비 금액이 합산되어 등록됩니다.</span>
+			</p>
+
+			<!-- -------------------------------------- -->
+			<!-- [목록영역] 정기지출내역 : 내역있음 -->
+			<!-- -------------------------------------- -->
+			<!-- [CASE1] 가맹점기준 : 2개 이상일 경우 : 토글 : 디폴트(닫힘) -->
+			<div class="infoData2" data-toggle="wrap">
+				<!-- // -->
+				<dl>
+					<dt class="summary">
+						<label>
+							<input type="checkbox" class="chekTypeOther" aria-label="가맹점명 3개 000,000,000원">
+							<em class="tit" aria-hidden="true"><span>가맹점명</span><span>3개</span></em>
+							<span class="data1" aria-hidden="true">
+								<strong class="dataValue">000,000,000</strong>
+								<span class="won">원</span>
+							</span>
+						</label>
+						<button type="button" data-toggle="btn" aria-expanded="false" aria-label="가맹점명 3개 000,000,000원 상세보기">상세보기</button>
+					</dt>
+					<dd data-toggle="con">
+						<ul>
+							<!-- // -->
+							<li>
+								<span class="data3">10월 30일 월요일</span>
+								<em class="tit">한솥도시락한솥도시락한솥도시락한솥도시락한솥도시락한솥도시락</em>
+								<span class="data1">
+									<strong class="dataValue">00,000</strong>
+									<span class="won">원</span>
+								</span>
+								<span class="data2">
+									<span>00:00</span>
+									<span>결제수단</span>
+								</span>
+							</li>
+							<!-- // -->
+							<li>
+								<span class="data3">10월 22일 일요일</span>
+								<em class="tit">한솥도시락</em>
+								<span class="data1">
+									<strong class="dataValue">15,000</strong>
+									<span class="won">원</span>
+								</span>
+								<span class="data2">
+									<span>18:00</span>
+									<span>현대카드ZERO Edition2(할인형)</span>
+								</span>
+							</li>
+							<!-- // -->
+							<li>
+								<span class="data3">10월 21일 토요일</span>
+								<em class="tit">한솥도시락</em>
+								<span class="data1">
+									<strong class="dataValue">12,000</strong>
+									<span class="won">원</span>
+								</span>
+								<span class="data2">
+									<span>18:00</span>
+									<span>네이버네이버네이버네이버네이버네이버네이버네이버네이버네이버네이버네이버네이버네이버</span>
+								</span>
+							</li>
+							<!-- // -->
+						</ul>
+					</dd>
+				</dl>
+				<!-- // -->
+				<dl>
+					<dt class="summary">
+						<label>
+							<input type="checkbox" class="chekTypeOther" aria-label="가맹점명 3개 000,000,000원">
+							<em class="tit" aria-hidden="true"><span>가맹점명</span><span>3개</span></em>
+							<span class="data1" aria-hidden="true">
+								<strong class="dataValue">000,000,000</strong>
+								<span class="won">원</span>
+							</span>
+						</label>
+						<button type="button" data-toggle="btn" aria-expanded="false"  aria-label="가맹점명 3개 000,000,000원 상세보기">상세보기</button>
+					</dt>
+					<dd data-toggle="con">
+						<ul>
+							<!-- // -->
+							<li>
+								<span class="data3">10월 30일 월요일</span>
+								<em class="tit">한솥도시락한솥도시락한솥도시락한솥도시락한솥도시락한솥도시락</em>
+								<span class="data1">
+									<strong class="dataValue">00,000</strong>
+									<span class="won">원</span>
+								</span>
+								<span class="data2">
+									<span>00:00</span>
+									<span>결제수단</span>
+								</span>
+							</li>
+							<!-- // -->
+							<li>
+								<span class="data3">10월 22일 일요일</span>
+								<em class="tit">한솥도시락</em>
+								<span class="data1">
+									<strong class="dataValue">15,000</strong>
+									<span class="won">원</span>
+								</span>
+								<span class="data2">
+									<span>18:00</span>
+									<span>현대카드ZERO Edition2(할인형)</span>
+								</span>
+							</li>
+							<!-- // -->
+							<li>
+								<span class="data3">10월 21일 토요일</span>
+								<em class="tit">한솥도시락</em>
+								<span class="data1">
+									<strong class="dataValue">12,000</strong>
+									<span class="won">원</span>
+								</span>
+								<span class="data2">
+									<span>18:00</span>
+									<span>네이버네이버네이버네이버네이버네이버네이버네이버네이버네이버네이버네이버네이버네이버</span>
+								</span>
+							</li>
+							<!-- // -->
+						</ul>
+					</dd>
+				</dl>
+				<!-- // -->
+				<dl>
+					<dt class="summary">
+						<label>
+							<input type="checkbox" class="chekTypeOther" aria-label="가맹점명가맹점명가맹점명 100개 000,000,000원">
+							<em class="tit" aria-hidden="true"><span>가맹점명가맹점명가맹점명</span><span>100개</span></em>
+							<span class="data1" aria-hidden="true">
+								<strong class="dataValue">000,000,000</strong>
+								<span class="won">원</span>
+							</span>
+						</label>
+						<button type="button" data-toggle="btn" aria-expanded="false" aria-label="가맹점명가맹점명가맹점명 100개 000,000,000원 상세보기">상세보기</button>
+					</dt>
+					<dd data-toggle="con">
+						<ul>
+							<!-- // -->
+							<li>
+								<span class="data3">10월 30일 월요일</span>
+								<em class="tit">한솥도시락한솥도시락한솥도시락한솥도시락한솥도시락한솥도시락</em>
+								<span class="data1">
+									<strong class="dataValue">00,000</strong>
+									<span class="won">원</span>
+								</span>
+								<span class="data2">
+									<span>00:00</span>
+									<span>결제수단</span>
+								</span>
+							</li>
+							<!-- // -->
+							<li>
+								<span class="data3">10월 22일 일요일</span>
+								<em class="tit">한솥도시락</em>
+								<span class="data1">
+									<strong class="dataValue">15,000</strong>
+									<span class="won">원</span>
+								</span>
+								<span class="data2">
+									<span>18:00</span>
+									<span>현대카드ZERO Edition2(할인형)</span>
+								</span>
+							</li>
+							<!-- // -->
+							<li>
+								<span class="data3">10월 21일 토요일</span>
+								<em class="tit">한솥도시락</em>
+								<span class="data1">
+									<strong class="dataValue">12,000</strong>
+									<span class="won">원</span>
+								</span>
+								<span class="data2">
+									<span>18:00</span>
+									<span>네이버네이버네이버네이버네이버네이버네이버네이버네이버네이버네이버네이버네이버네이버</span>
+								</span>
+							</li>
+							<!-- // -->
+						</ul>
+					</dd>
+				</dl>
+				<!-- // -->
+				<dl>
+					<dt class="summary">
+						<label>
+							<input type="checkbox" class="chekTypeOther" aria-label="가맹점명 3개 000,000,000원">
+							<em class="tit" aria-hidden="true"><span>가맹점명</span><span>3개</span></em>
+							<span class="data1"  aria-hidden="true">
+								<strong class="dataValue">000,000,000</strong>
+								<span class="won">원</span>
+							</span>
+						</label>
+						<button type="button" data-toggle="btn" aria-expanded="false" aria-label="가맹점명 3개 000,000,000원 상세보기">상세보기</button>
+					</dt>
+					<dd data-toggle="con">
+						<ul>
+							<!-- // -->
+							<li>
+								<span class="data3">10월 30일 월요일</span>
+								<em class="tit">한솥도시락한솥도시락한솥도시락한솥도시락한솥도시락한솥도시락</em>
+								<span class="data1">
+									<strong class="dataValue">00,000</strong>
+									<span class="won">원</span>
+								</span>
+								<span class="data2">
+									<span>00:00</span>
+									<span>결제수단</span>
+								</span>
+							</li>
+							<!-- // -->
+							<li>
+								<span class="data3">10월 22일 일요일</span>
+								<em class="tit">한솥도시락</em>
+								<span class="data1">
+									<strong class="dataValue">15,000</strong>
+									<span class="won">원</span>
+								</span>
+								<span class="data2">
+									<span>18:00</span>
+									<span>현대카드ZERO Edition2(할인형)</span>
+								</span>
+							</li>
+							<!-- // -->
+							<li>
+								<span class="data3">10월 21일 토요일</span>
+								<em class="tit">한솥도시락</em>
+								<span class="data1">
+									<strong class="dataValue">12,000</strong>
+									<span class="won">원</span>
+								</span>
+								<span class="data2">
+									<span>18:00</span>
+									<span>네이버네이버네이버네이버네이버네이버네이버네이버네이버네이버네이버네이버네이버네이버</span>
+								</span>
+							</li>
+							<!-- // -->
+						</ul>
+					</dd>
+				</dl>
+				<!-- // -->
+				<dl>
+					<dt class="summary">
+						<label>
+							<input type="checkbox" class="chekTypeOther" aria-label="가맹점명 3개 000,000,000원">
+							<em class="tit" aria-hidden="true"><span>가맹점명</span><span>3개</span></em>
+							<span class="data1" aria-hidden="true">
+								<strong class="dataValue">000,000,000</strong>
+								<span class="won">원</span>
+							</span>
+						</label>
+						<button type="button" data-toggle="btn" aria-expanded="false" aria-label="가맹점명 3개 000,000,000원 상세보기">상세보기</button>
+					</dt>
+					<dd data-toggle="con">
+						<ul>
+							<!-- // -->
+							<li>
+								<span class="data3">10월 30일 월요일</span>
+								<em class="tit">한솥도시락한솥도시락한솥도시락한솥도시락한솥도시락한솥도시락</em>
+								<span class="data1">
+									<strong class="dataValue">00,000</strong>
+									<span class="won">원</span>
+								</span>
+								<span class="data2">
+									<span>00:00</span>
+									<span>결제수단</span>
+								</span>
+							</li>
+							<!-- // -->
+							<li>
+								<span class="data3">10월 22일 일요일</span>
+								<em class="tit">한솥도시락</em>
+								<span class="data1">
+									<strong class="dataValue">15,000</strong>
+									<span class="won">원</span>
+								</span>
+								<span class="data2">
+									<span>18:00</span>
+									<span>현대카드ZERO Edition2(할인형)</span>
+								</span>
+							</li>
+							<!-- // -->
+							<li>
+								<span class="data3">10월 21일 토요일</span>
+								<em class="tit">한솥도시락</em>
+								<span class="data1">
+									<strong class="dataValue">12,000</strong>
+									<span class="won">원</span>
+								</span>
+								<span class="data2">
+									<span>18:00</span>
+									<span>네이버네이버네이버네이버네이버네이버네이버네이버네이버네이버네이버네이버네이버네이버</span>
+								</span>
+							</li>
+							<!-- // -->
+						</ul>
+					</dd>
+				</dl>
+				<!-- // -->
+			</div>
+
+			<!-- [CASE2] 날짜기준 : 단일 선택 -->
+			<div class="infoData2">
+				<!-- [날짜반복] -->
+				<dl>
+					<dt class="summary">10월 25일 수요일</dt>
+					<dd>
+						<!-- // -->
+						<label>
+							<input type="checkbox" class="chekTypeOther" aria-label="가맹점명 000,000,000원 00:00 결제수단">
+							<em class="tit" aria-hidden="true">가맹점명</em>
+							<span class="data1" aria-hidden="true">
+								<strong class="dataValue">000,000,000</strong>
+								<span class="won">원</span>
+							</span>
+							<span class="data2" aria-hidden="true">
+								<span>00:00</span>
+								<span>결제수단</span>
+							</span>
+						</label>
+						<!-- // -->
+						<label>
+							<input type="checkbox" class="chekTypeOther" aria-label="G마켓 8,500원 00:00 신한카드 The LADY BEST">
+							<em class="tit" aria-hidden="true">G마켓</em>
+							<span class="data1" aria-hidden="true">
+								<strong class="dataValue">8,500</strong>
+								<span class="won">원</span>
+							</span>
+							<span class="data2" aria-hidden="true">
+								<span>00:00</span>
+								<span>신한카드 The LADY BEST</span>
+							</span>
+						</label>
+						<!-- // -->
+					</dd>
+				</dl>
+				<!-- [날짜반복] -->
+				<dl>
+					<dt class="summary">10월 24일 화요일</dt>
+					<dd>
+						<!-- // -->
+						<label>
+							<input type="checkbox" class="chekTypeOther" aria-label="가맹점명 000,000,000원 00:00 결제수단">
+							<em class="tit" aria-hidden="true">가맹점명</em>
+							<span class="data1" aria-hidden="true">
+								<strong class="dataValue">000,000,000</strong>
+								<span class="won">원</span>
+							</span>
+							<span class="data2" aria-hidden="true">
+								<span>00:00</span>
+								<span>결제수단</span>
+							</span>
+						</label>
+						<!-- // -->
+						<label>
+							<input type="checkbox" class="chekTypeOther" aria-label="APPLE.COM(US) USD 00.00 00:00 신한카드 The LADY BEST">
+							<em class="tit" aria-hidden="true">APPLE.COM(US)</em>
+							<span class="data1" aria-hidden="true">
+								<strong class="dataValue">USD 00.00</strong>
+							</span>
+							<span class="data2" aria-hidden="true">
+								<span>00:00</span>
+								<span>신한카드 The LADY BEST</span>
+							</span>
+						</label>
+						<!-- // -->
+					</dd>
+				</dl>
+				<!-- [//] -->
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [목록영역] 정기지출내역 : 내역없음 -->
+			<!-- -------------------------------------- -->
+			<div class="nolistBox">
+				<div class="noResultWrap"><p>최근 거래내역이 없어요.</p></div>
+			</div>
+			<!-- -------------------------------------- -->
+		</div>
+
+		<div class="popBtnWrap">
+			<div class="popBtn">
+				<!-- <a href="javascript:;" class="confirmBtn disabled" role="button" aria-disabled="true">확인</a> [D] 비활성화 : 클래스명(disabled) / aria-disabled="true" 추가 -->
+				<a href="javascript:;" class="confirmBtn" role="button">확인</a>
+			</div>
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+		</div>
+	</div>
+</div>
+<!-- ###################################### -->
+</body>
+</html>

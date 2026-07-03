@@ -1,0 +1,168 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>상세내역</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">상세내역</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+            <div class="boxTypeWrap pt0">
+				<div class="outgoingsSubject">
+					<div class="logoArea">
+						<!-- <span class="imgWrap F1AAAU0000"><em class="blind">에스케이텔레콤</em></span> -->
+						<span class="imgWrap"> <!-- [2022-11-21] 사보현 : 로고 공통 이미지로 변경 -->
+							<img src="../../images/logos/AAAU0000.png" alt="에스케이텔레콤 로고" class="imgLogo">
+						</span>
+					</div>
+					<strong class="title">SKT 통신비</strong>
+					<div class="summary">
+						<span>5일 예상</span><span>생활지출</span>
+					</div>
+				</div>
+				<div class="infoBox2" style="position: relative;">
+					<ul class="detailList">
+						<li>
+							<span class="tit">결제금액
+								<div class="tooltipWrap">
+									<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">원화환산 안내툴팁</span></button>
+									<div class="tooltipCont"><!--10.14  style="left:0"삭제-->
+										<p>전일 매매기준율로 환산하여 원화 환산금액을 제공합니다.</p>
+										<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+									</div>
+								</div>
+							</span>
+							<span class="value"><strong>59,600원</strong></span>
+                        </li>
+                        <li>
+							<span class="tit">결제금액(USD)</span>
+							<span class="value pointColor9">1,500</span>
+						</li>
+						<li>
+							<span class="tit">결제수단</span>
+							<span class="value pointColor9">카카오뱅크 롯데카드(MASTER)</span>
+						</li>
+					</ul>
+				</div>
+
+				<div class="areaBodyBtnFull mt20">
+					<a href="javascript:;" class="btnBodyLine" role="button">정기지출 아니라면 숨기기</a>
+				</div>
+			</div>
+            <div class="boxTypeWrap pt0">
+                <div class="cstitBox">
+					<img src="../../images/ico_chk01.png" />최근 결제내역을 보여드려요
+                </div>
+                <hr class="divLine">
+                <div class="cardSpendList mt0">
+					<div class="inoutListWrap">
+						<div class="inoutListInn">
+							<ul class="inoutList">
+								<li class="pt0">
+                                    <a href="javascript:;" class="link">
+										<div class="isCategory">
+											<div class="imgWrap icoCate">
+												<!-- <span class="imgWrap F1AAAU0000"><em class="blind">에스케이텔레콤</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 사보현 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AAAU0000.png" alt="에스케이텔레콤 로고" class="imgLogo">
+												</span>
+											</div>
+											<div class="textWrap">
+												<div class="inoutTit">
+													<span class="use">통신요금(01012345678SKT)</span>
+													<span class="amount"><strong class="dataValue">USD 8.90</strong><em class="won"></em></span>
+                                                </div>
+                                                <div class="inoutCont">
+													<div class="timeWrap">
+														<span class="time">3월 5일 토요일</span>
+													</div>
+													<span class="totalAmount">롯데카드</span>
+												</div>
+											</div>
+										</div>
+									</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="link">
+										<div class="isCategory">
+											<div class="imgWrap icoCate">
+												<!-- <span class="imgWrap F1AAAU0000"><em class="blind">에스케이텔레콤</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 사보현 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AAAU0000.png" alt="에스케이텔레콤 로고" class="imgLogo">
+												</span>
+											</div>
+											<div class="textWrap">
+												<div class="inoutTit">
+													<span class="use">통신요금(01012345678SKT)</span>
+													<span class="amount"><strong class="dataValue">USD 8.90</strong><em class="won"></em></span>
+                                                </div>
+                                                <div class="inoutCont">
+													<div class="timeWrap">
+														<span class="time">3월 5일 토요일</span>
+													</div>
+													<span class="totalAmount">롯데카드</span>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="pb0">
+									<a href="javascript:;" class="link">
+										<div class="isCategory">
+											<div class="imgWrap icoCate">
+												<!-- <span class="imgWrap F1AAAU0000"><em class="blind">에스케이텔레콤</em></span> -->
+												<span class="imgWrap"> <!-- [2022-11-21] 사보현 : 로고 공통 이미지로 변경 -->
+													<img src="../../images/logos/AAAU0000.png" alt="에스케이텔레콤 로고" class="imgLogo">
+												</span>
+											</div>
+											<div class="textWrap">
+												<div class="inoutTit">
+													<span class="use">통신요금(01012345678SKT)</span>
+													<span class="amount"><strong class="dataValue">USD 8.90</strong><em class="won"></em></span>
+                                                </div>
+                                                <div class="inoutCont">
+													<div class="timeWrap">
+														<span class="time">3월 5일 토요일</span>
+													</div>
+													<span class="totalAmount">롯데카드</span>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+		<!-- //container -->
+	</div>
+
+</body>
+</html>

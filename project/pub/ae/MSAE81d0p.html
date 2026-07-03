@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>컨설팅 > 세금계산기</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		fullLayerPop();
+		categorySwipe()
+	})
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack" role="button"><span class="blind">이전화면으로</span></a> <!-- [2020-11-16] role="button" 추가 -->
+			<h1><a href="javascript:;" role="text">세액공제 세부사항</a></h1>
+			<a href="javascript:;" class="btnEtc">나가기</a>
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+		</div>
+		<!-- //container -->
+
+		<!-- 팝업시작 -->
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>세액공제 세부사항</h1>
+				<div class="popCont grayPop">
+                    <div class="formWrap">
+                        <div class="ar"><a href="javascript:;" class="contBtn02">불러오기</a></div>
+                        <h3 class="defSubTit2 bdNone mt5">자녀 세액공제 입력</h3>
+                        <div class="boxTypeWrap mt0">
+                            <div class="titListBox">
+                                <ul>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 사이즈 변경 -->
+                                            <strong>자녀공제</strong>
+                                        </div>
+                                        <div class="flexRBox">
+                                            <div class="deductBtnWrap">
+                                                <button type="button" class="minusBtn"><span class="blind">자녀공제 빼기</span></button>
+                                                <span class="deductNum"><em>0</em></span>
+                                                <button type="button" class="plusBtn"><span class="blind">자녀공제 더하기</span></button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- [2022-11-08] 항목변경// -->
+                                    <li>
+                                        <div class="inputList">
+                                            <a href="javascript:;" title="자녀공제 선택" aria-haspopup="true" onclick="slidePopOption();return false;">
+                                                <span class="selectValue">선택</span>
+                                                <span class="selectBtn"></span>
+                                            </a>
+                                            <select name="" title="선택해주세요">
+                                                <option value=""></option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <!-- //[2022-11-08] 항목변경 -->
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3 class="defSubTit2 bdNone">연금계좌 세액공제</h3>
+                        <div class="boxTypeWrap mt0">
+                            <div class="titListBox">
+                                <ul>
+                                    <li>
+                                        <div class="formTitN"><strong>거주자 본인의 나이</strong></div> <!-- [2022-11-08] 타이틀 사이즈 변경 -->
+                                        <div class="boxRadio">
+                                            <div class="boxRadioInn">
+                                                <span>
+                                                    <input name="rdo01" id="rdo001" type="radio" checked="checked">
+                                                    <label for="rdo001">50세 미만</label>
+                                                </span>
+                                            </div>
+                                            <div class="boxRadioInn">
+                                                <span>
+                                                    <input name="rdo01" id="rdo002" type="radio">
+                                                    <label for="rdo002">50세 이상</label>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <hr class="divLine3" aria-hidden="true">
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 사이즈 변경 -->
+                                            <strong>연금저축계좌 불입액</strong>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="연금저축계좌 불입액" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 사이즈 변경 -->
+                                            <strong>과학기술인공제 불입액</strong>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="과학기술인공제 불입액" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 사이즈 변경 -->
+                                            <strong>퇴직연금계좌 불입액</strong>
+                                            <span class="supExp">(DC형, IRP)</span> <!-- [2022-11-08] 수정 -->
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="퇴직연금계좌 불입액 (DC형, IRP)" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3 class="defSubTit2 bdNone">보험료 세액공제</h3>
+                        <div class="boxTypeWrap mt0">
+                            <div class="titListBox">
+                                <ul>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 사이즈 변경 -->
+                                            <strong>일반 보장성보험</strong>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="일반 보장성보험" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 사이즈 변경 -->
+                                            <strong>장애인전용 보장성보험</strong>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="장애인전용 보장성보험" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3 class="defSubTit2 bdNone">의료비 세액공제</h3>
+                        <div class="boxTypeWrap mt0">
+                            <div class="titListBox">
+                                <ul>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 사이즈 변경 -->
+                                            <strong>의료비 지불액</strong>
+                                            <span class="supExp">(본인/65세/장애인)</span>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="의료비 지불액(본인/65세/장애인)" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 사이즈 변경 -->
+                                            <strong>난임시술비</strong>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="난임시술비" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 사이즈 변경 -->
+                                            <strong>그외 공제대상자 의료비</strong>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="그외 공제대상자 의료비" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3 class="defSubTit2 bdNone">교육비 세액공제</h3>
+                        <div class="boxTypeWrap mt0">
+                            <div class="titListBox">
+                                <ul>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 사이즈 변경 -->
+                                            <strong>본인교육비</strong>
+                                            <span class="supExp">(한도없음)</span>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="본인교육비(한도없음)" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 사이즈 변경 -->
+                                            <strong>장애인특수교육비</strong>
+                                            <span class="supExp">(한도없음)</span>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="장애인특수교육비(한도없음)" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 사이즈 변경 -->
+                                            <strong>미취학아동 교육비</strong>
+                                            <span class="supExp">(1인당 300만원 한도)</span>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="미취학아동 교육비(1인당 300만원 한도)" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 사이즈 변경 -->
+                                            <strong>초중고 교육비</strong>
+                                            <span class="supExp">(1인당 300만원 한도)</span>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="초중고 교육비(1인당 300만원 한도)" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 사이즈 변경 -->
+                                            <strong>대학생 교육비</strong>
+                                            <span class="supExp">(1인당 900만원 한도)</span>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="대학생 교육비(1인당 900만원 한도)" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3 class="defSubTit2 bdNone">기부금 세액공제</h3>
+                        <div class="boxTypeWrap mt0">
+                            <div class="titListBox">
+                                <ul>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 사이즈 변경 -->
+                                            <strong>정치자금기부금</strong>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="정치자금기부금" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 사이즈 변경 -->
+                                            <strong>법정기부금</strong>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="법정기부금" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 사이즈 변경 -->
+                                            <strong>우리사주조합기부금</strong>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="우리사주조합기부금" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 사이즈 변경 -->
+                                            <strong>지정기부금</strong>
+                                            <span class="supExp">(종교단체)</span>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="지정기부금(종교단체)" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 사이즈 변경 -->
+                                            <strong>지정기부금</strong>
+                                            <span class="supExp">(일반)</span>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="지정기부금" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <h3 class="defSubTit2 bdNone">월세액 세액공제</h3>
+                        <div class="boxTypeWrap mt0">
+                            <div class="titListBox">
+                                <ul>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 사이즈 변경 -->
+                                            <strong>월세액 세액공제</strong>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="월세액 세액공제" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3 class="defSubTit2 bdNone">기타 세액공제/세액감면</h3>
+                        <div class="boxTypeWrap mt0">
+                            <div class="titListBox">
+                                <ul>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 사이즈 변경 -->
+                                            <strong>기타세액공제 추가</strong>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="기타 세액공제/세액감면" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="formTitN"> <!-- [2022-11-08] 타이틀 사이즈 변경 -->
+                                            <strong>기타세액감면 추가</strong>
+                                        </div>
+                                        <div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+                                            <input type="tel" title="기타세액감면" name="" id="" value="2,000,000" placeholder="숫자만 입력">
+                                            <span class="unit">원</span>
+                                            <a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<!-- <a href="javascript:;" onclick="popClose(this);return false;" role="button">취소</a> -->
+						<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">확인</a>
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- 팝업끝 -->
+
+	</div>
+
+</body>
+</html>

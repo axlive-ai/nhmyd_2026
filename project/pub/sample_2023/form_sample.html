@@ -1,0 +1,3277 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>UI Guide [폼]</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="nhasset guide_wrapper">
+	<header class="guide_header">
+		<h1>UI GUIDE <span>폼</span></h1>
+		<nav data-toggle="wrap">
+			<button type="button" class="guide_btn" data-toggle="btn" aria-expanded="false">전체메뉴</button>
+			<div data-toggle="cont">
+				<a href="txt_sample.html">타이틀/텍스트</a>
+				<a href="mes_sample.html">메세지</a>
+				<a href="button_sample.html">버튼</a>
+				<a href="form_sample.html" aria-current="page">폼</a>
+				<a href="list_sample.html">리스트</a>
+				<a href="info_sample.html">정보</a>
+				<a href="table_sample.html">테이블</a>
+				<a href="bbs_sample.html">게시판</a>
+				<a href="banner_sample.html">배너</a>
+				<a href="chart_sample.html">차트</a>
+				<a href="etc_sample.html">기타</a>
+			</div>
+		</nav>
+	</header>
+
+	<!-- ###################################### -->
+	<!-- ### UI Guide [버튼] ### -->
+	<!-- ###################################### -->
+	<div class="guide_container">
+		<nav class="guide_menu">
+			<a href="#GCONTENT1" class="active">폼영역</a>
+			<a href="#GCONTENT2">검색영역</a>
+			<a href="#GCONTENT3">조회영역</a>
+			<a href="#GCONTENT4">약관동의</a>
+		</nav>
+
+		<div class="guide_box">
+			<h2>2022/2023 가이드 정의</h2>
+			<ul>
+				<li>공통적으로 사용한 클래스 네이밍에 한하여 정리되었으며, 일부 페이지에서만 사용할 수 있는 클래스 네이밍은 가이드에서 제외함.<br><strong>예시) .yeartexForm(연말정산)</strong></li>
+				<li>2023년 고도화 작업시 추가된 스타일 정의에 대해선 다음과 같이 표기함.<i class="guide_tag">2023고도화</i></li>
+			</ul>
+		</div>
+
+		<!-- ################################# -->
+		<!-- ### 폼영역 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT1">
+			<h2 class="guide_title">폼영역</h2>
+
+			<!-- -------------------------------------- -->
+			<!-- [입력폼] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">입력폼 : .formWrap</h3>
+
+				<!-- ### 유형1 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">유형1 <span class="sub">[F:15px]</span></h4>
+<div class="guide_code" data-label="기본구조">
+<pre>
+&lt;div class="formWrap"&gt;
+	&lt;ul&gt;
+		&lt;li&gt;
+			&lt;div class="formTit"&gt;&lt;strong&gt;항목명&lt;/strong&gt;&lt;/div&gt;
+			&lt;div class="inputList"&gt;입력폼영역&lt;/div&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;hr class="divLine" aria-hidden="true"&gt; &lt;!-- 라인이 필요할 경우 추가 --&gt;
+			&lt;div class="formTit"&gt;&lt;strong&gt;항목명&lt;/strong&gt;&lt;/div&gt;
+			&lt;div class="inputList"&gt;입력폼영역&lt;/div&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+</div>
+					<ul class="guide_txt">
+						<li>항목명(타이틀)의 폰트 사이즈가 15px일 경우 사용함.</li>
+						<li>기본적으로 라인이 없으며, 라인이 필요할 경우 <code>&lt;hr class="divLine" aria-hidden="true"&gt;</code>사용함.</li>
+					</ul>
+					<h5 class="guide_title4">기본</h5>
+					<div class="boxTypeWrap pt0">
+						<div class="formWrap">
+							<ul>
+								<li>
+									<div class="formTit"><strong>항목명</strong><span class="supExp">(부가설명)</span></div>
+									<div class="inputList">
+										<input type="text" title="대체텍스트" placeholder="대체텍스트">
+										<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+									</div>
+								</li>
+								<li>
+									<div class="formTit"><strong>오류</strong><span class="supExp">(.inputList.error)</span></div>
+									<div class="inputList error">
+										<input type="tel" title="대체텍스트" value="123" placeholder="대체텍스트">
+										<span class="unit">원</span>
+										<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+									</div>
+									<p class="errorTxt" aria-live="assertive">에러 메시지 출력</p>
+								</li>
+								<li>
+									<div class="formTit"><strong>비활성화</strong><span class="supExp">(부가설명)</span></div>
+									<div class="inputList">
+										<input type="text" title="대체텍스트" placeholder="대체텍스트" readonly="readonly">
+										<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+									</div>
+								</li>
+								<li>
+									<div class="formTit">
+										<strong>툴팁추가</strong>
+										<div class="tooltipWrap w96">
+											<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">{대체텍스트}툴팁 열기</span></button>
+											<div class="tooltipCont">
+												<p>내용이 노출됩니다.</p>
+												<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+											</div>
+										</div>
+									</div>
+									<div class="inputList">
+										<input type="text" title="대체텍스트" placeholder="대체텍스트">
+										<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+									</div>
+								</li>
+							</ul>
+						</div>	
+					</div>
+
+					<h5 class="guide_title4">금액</h5>
+					<div class="boxTypeWrap pt0">
+						<div class="formWrap">
+							<ul>
+								<li>
+									<div class="formTit"><strong>금액</strong></div>
+									<div class="inputList unitMan">
+										<input type="tel" title="대체텍스트" placeholder="대체텍스트">
+										<span class="unit">원</span>
+										<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+									</div>
+								</li>
+								<li>
+									<div class="formTit">
+										<strong>금액</strong>
+										<em class="inputVal"  aria-live="assertive">(7억 5천만원)</em>
+									</div>
+									<div class="inputList unitMan">
+										<input type="tel" title="대체텍스트" placeholder="대체텍스트">
+										<span class="unit">원</span>
+										<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+									</div>
+									<div class="roundBtnWrap">
+										<a href="javascript:;" role="button" title="100만원 추가">+100만</a>
+										<a href="javascript:;" role="button" title="1,000만원 추가">+1,000만</a>
+										<a href="javascript:;" role="button" title="1억 추가">+1억</a>
+										<a href="javascript:;" role="button" title="10억 추가">+10억</a>
+									</div>
+								</li>
+								<li>
+									<div class="formTit">
+										<strong>금액</strong>
+										<button type="button" class="contBtn02">불러오기</button>
+									</div>
+									<div class="inputVal" aria-live="assertive">(1억원)</div>
+									<div class="inputList unitMan">
+										<input type="tel" title="대체텍스트" placeholder="대체텍스트">
+										<span class="unit">원</span>
+										<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+									</div>
+									<div class="roundBtnWrap">
+										<a href="javascript:;" role="button" title="10만원 추가">+10만</a><!-- 활성화일 경우 class="active" 추가-->
+										<a href="javascript:;" role="button" title="50만원 추가">+50만</a>
+										<a href="javascript:;" role="button" title="100만원 추가">+100만</a>
+										<a href="javascript:;" role="button" title="300만원 추가">+300만</a>
+									</div>
+								</li>
+								<li>
+									<strong class="formTit">한달 용돈(생활비)은 얼마나 생각하나요?</strong>
+									<div class="inputList">
+										<input type="tel" title="용돈" placeholder="용돈을 입력해 주세요.">
+										<span class="unit">만원</span>
+										<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+									</div>
+									<div class="infoTxt pointColor11">* 대학생 월 평균 생활비 : 64만 6166원
+										<div class="tooltipWrap">
+											<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">생활비 안내툴팁</span></button>
+											<div class="tooltipCont" style="width: 380px; display: none;">
+												<p>선택한 지원 기간(1개월/12개월/48개월) * 한달 용돈(생활비) 금액
+												</p>
+												<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<h5 class="guide_title4">날짜</h5>
+					<div class="boxTypeWrap pt0">
+						<div class="formWrap">
+							<ul>
+								<li>
+									<div class="formTit"><strong>날짜선택</strong></div>
+									<div class="cal">
+										<div class="inputList ">
+											<input type="text" title="대체텍스트" placeholder="대체텍스트" readonly="readonly">
+											<a href="javascript:;" class="btnCalendar" title="날짜선택" role="button"><span class="blind">날짜선택</span></a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="formTit"><strong>날짜선택</strong></div>
+									<div class="cal">
+										<div class="inputList">
+											<input type="text" value="2023.12.01" title="대체텍스트" placeholder="대체텍스트" readonly="readonly">
+											<a href="javascript:;" class="btnCalendar" title="날짜선택" role="button"><span class="blind">날짜선택</span></a>
+										</div>
+									</div>
+									<p class="subTxt2">상담은 3영업일 이후 부터 15영업일 까지 가능합니다.</p>
+								</li>
+								<li>
+									<strong class="formTit">월세 납입일(선택)</strong>
+									<div class="iptDayWrap">
+										<div class="inputList unitMan2 standUse">
+											<span class="stand">매월</span>
+											<input type="tel" title="대체텍스트" placeholder="납입일">
+											<span class="unit">일</span>
+											<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+										</div>
+										<button type="button" class="btnDay">말일</button>
+									</div>
+									<div class="mt10">
+										<input type="checkbox" id="listAll" class="chekTypeOther" name=""><label for="listAll">금융플래너에서 월세 납입일을 알려드려요.</label>
+									</div>
+								</li>
+								<li>
+									<div class="formTit"><strong>기간선택</strong></div>
+									<div class="calendarForm">
+										<div class="cal">
+											<div class="inputList">
+												<input type="text" value="2020.09.03" title="거래기간 시작일" readonly="readonly">
+												<a href="javascript:;" class="btnCalendar" title="거래기간 시작일 날짜선택" role="button"><span class="blind">날짜선택</span></a>
+											</div>
+										</div>
+										<span class="symbol">-</span>
+										<div class="cal">
+											<div class="inputList">
+												<input type="text" value="2020.09.03" title="거래기간 종료일" readonly="readonly">
+												<a href="javascript:;" class="btnCalendar" title="거래기간 종료일 날짜선택" role="button"><span class="blind">날짜선택</span></a>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="formTit">
+										<strong>계약기간(선택)</strong>
+										<button type="button" class="contBtn01">초기화</button>
+									</div>
+									<div class="calendarForm">
+										<div class="cal">
+											<div class="inputList disabled">
+												<input type="text" value="2020.09.03" title="조회 시작일" placeholder="시작일선택" readonly="readonly">
+												<a href="javascript:;" class="btnCalendar" title="시작일 날짜선택" role="button"><span class="blind">날짜선택</span></a>
+											</div>
+										</div>
+										<span class="symbol">-</span>
+										<div class="cal">
+											<div class="inputList disabled">
+												<input type="text" title="조회 종료일" placeholder="종료일선택" readonly="readonly">
+												<a href="javascript:;" class="btnCalendar" title="종료일 날짜선택" role="button"><span class="blind">날짜선택</span></a>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<strong class="formTit">목표 기간
+										<div class="tooltipWrap">
+											<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">목표 기간 안내툴팁</span></button>
+											<div class="tooltipCont">
+												<p>목표 설정 기간은 1개월~10년입니다.</p>
+												<p>추천목표의 기간은 6개월 이며, 수정 가능합니다. (1개월~10년)</p>
+												<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+											</div>
+										</div>
+									</strong>
+									<div class="inputList unitMan readonly readonlyWhite disabled">
+										<input type="tel" title="목표 기간" value="6" placeholder="목표기간을 입력해주세요" readonly="">
+										<span class="unit">개월</span>
+									</div>
+									<div class="inputList unitMan">
+										<input type="tel" title="목표 기간" placeholder="목표기간을 입력해주세요">
+										<span class="unit">개월</span>
+										<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+									</div>
+		
+									<div class="inputList unitMan inputSm2  readonly readonlyWhite disabled">
+										<input type="tel" title="목표 기간" value="1" placeholder="개월" readonly="">
+										<span class="unit">개월</span>
+										<input type="tel" title="목표 기간" value="30" placeholder="일" readonly="">
+										<span class="unit">일</span>
+										<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+									</div>
+									<div class="roundBtnWrap">
+										<a href="javascript:;" role="button" title="1개월 추가">+1개월</a>
+										<a href="javascript:;" role="button" title="3개월 추가">+3개월</a>
+										<a href="javascript:;" role="button" title="6개월 추가">+6개월</a>
+										<a href="javascript:;" role="button" title="1년 추가">+1년</a>
+										<a href="javascript:;" role="button" title="3년 추가">+3년</a>
+									</div>
+									<p class="infoTxt pointColor11">입력 가능한 기간은 최대 <span>120</span> 개월 입니다.</p>
+									<div class="obChk mt20 fr">
+										<input type="checkbox" id="listAll" class="chekTypeOther" name=""><label for="listAll">목표달성일 지정하기</label>
+									</div>
+								</li>
+								<li>
+									<li>
+										<div class="formTit"><strong>일정종료일</strong></div>
+										<div class="inputList">
+											<input type="text" title="일정종료일" value="YYYY.MM.DD" readonly>
+										</div>
+										<!--매주 선택 케이스-->
+										<div class="inputList">
+											<a href="javascript:;" title="반복설정 매주 선택" aria-haspopup="true">
+												<span class="selectValue">2023.03.10</span>
+												<span class="selectBtn"></span>
+											</a>
+											<select name="" title="선택해주세요">
+												<option></option>
+											</select>
+										</div>
+										<!--//매주 선택 케이스-->
+										<p class="listDash">일정은 최대 5년까지 등록됩니다.</p>
+										<div class="wrapFormTooltip mt25">
+											<div class="formHolder check">
+												<input type="checkbox" id="type_all01" checked class="chekTypeOther">
+												<label class="check" for="type_all01">출금계좌 연결</label>
+											</div>
+											<!-- tootip -->
+											<div class="tooltipWrap">
+												<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">출금계좌 연결 툴팁 열기</span></button>
+												<div class="tooltipCont">
+													<p>출금계좌를 연결하시면 금융일정 전에 잔액 부족 여부를 안내해 드립니다.</p>
+													<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+												</div>
+											</div>
+											<!-- //tootip -->
+										</div>
+									</li>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<h5 class="guide_title4">인증</h5>
+					<div class="boxTypeWrap pt0">
+						<div class="formWrap">
+							<ul>
+								<li class="addrSrch">
+									<div class="formTit"><strong>주민등록번호</strong></div>
+									<div class="inputList juminNum error"> <!-- 에러일 경우 class="error" 추가 -->
+										<input type="tel" title="주민등록번호" placeholder="생년월일 6자리 ">
+										<span class="daesh">-</span>
+										<input type="tel" title="주민등록 뒷 첫째자리" maxlength="1" placeholder="&nbsp;">
+									</div>
+									<p class="errorTxt">주민등록번호를 다시 입력하세요.</p> <!-- 에러일 경우 추가 -->
+								</li>
+								<li>
+									<strong class="formTit">생년월일(8자리)</strong>
+									<div class="inputList">
+										<input type="tel" class="al" title="생년월일(8자리) 입력" placeholder="19800101">
+										<a href="javascript:" class="btnReset" role="button" >입력내용삭제</a>
+									</div>
+								</li>
+								<li>
+									<div class="formTit"><strong>휴대폰번호</strong></div>
+									<div class="inputList">
+										<input type="tel" title="휴대폰번호(번호만 입력)" placeholder="'-' 없이 번호만 입력해 주세요.">
+										<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+									</div>
+								</li>
+								<li>
+									<div class="formTit"><strong>휴대전화번호</strong></div>
+									<div class="inputList">
+										<a href="javascript:;" title="통신사 선택" aria-haspopup="true">
+											<span class="selectValue">통신사 선택</span>
+											<span class="selectBtn"></span>
+										</a>
+										<select name="" title="선택해주세요">
+											<option></option>
+										</select>
+									</div>
+									<div class="inputList">
+										<input type="tel" class="al" title="휴대전화 번호 입력" placeholder="‘-’없이 숫자만 입력하세요.">
+										<a href="javascript:" class="btnReset" role="button" >입력내용삭제</a>
+									</div>
+								</li>
+								<li>
+									<div class="formTit"><strong>휴대전화번호</strong></div>
+									<div class="inputList">
+										<input type="tel" class="al" title="휴대전화 번호 입력" placeholder="‘-’없이 숫자만 입력하세요.">
+										<a href="javascript:" class="btnReset" role="button" >입력내용삭제</a>
+									</div>
+									<div class="areaBodyBtnFull mt20">
+										<a href="javascript:;" class="btnBodyLine" role="button">인증번호 요청</a>
+									</div>
+									<ul class="listBul disc mt10">
+										<li>통신사 확인 후 본인 명의가 아닌 경우에는 인증번호가 전송되지 않습니다.</li>
+									</ul>
+								</li>
+								<li>
+									<div class="formTit"><strong>인증번호</strong></div>
+									<div class="cerNumBox">
+										<div class="inputList"> <!-- 에러일 경우 class="error" 추가 -->
+											<input type="text" title="인증번호 입력" placeholder="인증번호 입력">
+											<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+											<span class="time">05:00</span>
+										</div>
+										<a href="javascript:;" class="btnCerti" role="button">인증</a>
+									</div>
+									<!-- <p class="errorTxt">인증번호를 다시 입력하세요.</p> --> <!-- 에러일 경우 추가 -->
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<h5 class="guide_title4">체크박스/라디오버튼</h5>
+					<div class="boxTypeWrap pt0">
+						<div class="formWrap">
+							<ul>
+								<li>
+									<div class="fomrTit"><strong>라디오버튼 : .chkRadio</strong></div>
+									<div class="formArray mt20">
+										<span class="chkRadio">
+											<input type="radio" id="sample003" name="sample010" checked>
+											<label for="sample003">항목명</label>
+										</span>
+										<span class="chkRadio">
+											<input type="radio" id="sample004" name="sample010">
+											<label for="sample004">항목명</label>
+										</span>
+									</div>
+								</li>
+								<li>
+									<div class="formTit"><strong>라디오버튼 : .boxRadio</strong></div>
+<div class="guide_code"  data-label="접근성">
+<pre>
+//[접근성 공통 오류] 순차 탐색시 서식과 label에 중복 접근되며, 임의 탐색시 label에만 접근되어 서식에는 접근할 수 없음.
+//[접근성 해결 방안] 서식에 aria-label로 대체텍스트 추가하고, label에 aria-hidden="true"를 적용하여 읽히지 않게 함.
+&lt;input type="radio" id="formRadio" aria-label="대체텍스트"&gt;
+&lt;label for="formRadio01" aria-hidden="true"&gt;항목명1&lt;/label&gt;
+</pre>
+</div>
+									<div class="boxRadio">
+										<div class="boxRadioInn">
+											<span>
+												<input type="radio" name="formRadio0" id="formRadio01" aria-label="항목명1" checked>
+												<label for="formRadio01" aria-hidden="true">항목명1</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input type="radio" name="formRadio0" id="formRadio02" aria-label="항목명2">
+												<label for="formRadio02" aria-hidden="true">항목명2</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input type="radio" name="formRadio0" id="formRadio03" aria-label="항목명3">
+												<label for="formRadio03" aria-hidden="true">항목명3</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input type="radio" name="formRadio0" id="formRadio04" aria-label="항목명4">
+												<label for="formRadio04" aria-hidden="true">항목명4</label>
+											</span>
+										</div>
+									</div>
+
+									<div class="mes3 mt40 mb10">2단구성 : +.wrapType </div>
+									<div class="boxRadio wrapType">
+										<div class="boxRadioInn">
+											<span>
+												<input type="radio" name="formRadio1" id="formRadio11" aria-label="항목명1" checked>
+												<label for="formRadio11" aria-hidden="true">항목명1</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input type="radio" name="formRadio1" id="formRadio12" aria-label="항목명2">
+												<label for="formRadio12" aria-hidden="true">항목명2</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input type="radio" name="formRadio1" id="formRadio13" aria-label="항목명3">
+												<label for="formRadio13" aria-hidden="true">항목명3</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input type="radio" name="formRadio1" id="formRadio14" aria-label="항목명4">
+												<label for="formRadio14" aria-hidden="true">항목명4</label>
+											</span>
+										</div>
+									</div>
+
+									<div class="mes3 mt40 mb10">1단구성 : +.rowType </div>
+									<div class="boxRadio rowType">
+										<div class="boxRadioInn">
+											<span>
+												<input type="radio" name="formRadio4" id="formRadio41" aria-label="항목명1" checked>
+												<label for="formRadio41" aria-hidden="true">항목명1</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input type="radio" name="formRadio4" id="formRadio42" aria-label="항목명2">
+												<label for="formRadio42" aria-hidden="true">항목명2</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input type="radio" name="formRadio4" id="formRadio43" aria-label="항목명3">
+												<label for="formRadio43" aria-hidden="true">항목명3</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input type="radio" name="formRadio4" id="formRadio44" aria-label="항목명4">
+												<label for="formRadio44" aria-hidden="true">항목명4</label>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="formTit"><strong>라디오버튼 : .roundChk</strong></div>
+									<span class="roundChk">
+										<input type="radio" name="roundChk" id="roundChk1" aria-label="항목명1" checked>
+										<label for="roundChk1" aria-hidden="true">항목명1</label>
+									</span>
+									<span class="roundChk">
+										<input type="radio" name="roundChk" id="roundChk2" aria-label="항목명2">
+										<label for="roundChk2" aria-hidden="true">항목명2</label>
+									</span>
+									<hr class="guide_line">
+									<span class="roundChk t1">
+										<input type="radio" name="roundChk1" id="roundChk11" aria-label="항목명3" checked>
+										<label for="roundChk11" aria-hidden="true">항목명3</label>
+									</span>
+									<span class="roundChk t1">
+										<input type="radio" name="roundChk1" id="roundChk12" aria-label="항목명4">
+										<label for="roundChk12" aria-hidden="true">항목명4</label>
+									</span>
+								</li>
+								<li>
+									<div class="formTit"><strong>라디오버튼 : .menuRadio</strong></div>
+									<div class="menuRadio">
+										<div class="menuRadioInn">
+											<span>
+												<input name="MSAR4100" id="MSAR41001" type="radio" class="rdoAll" aria-label="전체" checked>
+												<label for="MSAR41001" aria-hidden="true">전체</label>
+											</span>
+										</div>
+										<div class="menuRadioInn">
+											<span>
+												<input name="MSAR4100" id="MSAR41002" type="radio" class="rdoAsset" aria-label="자산">
+												<label for="MSAR41002" aria-hidden="true">자산</label>
+											</span>
+										</div>
+										<div class="menuRadioInn">
+											<span>
+												<input name="MSAR4100" id="MSAR41003" type="radio" class="rdoSpend" aria-label="소비">
+												<label for="MSAR41003" aria-hidden="true">소비</label>
+											</span>
+										</div>
+										<div class="menuRadioInn">
+											<span>
+												<input name="MSAR4100" id="MSAR41004" type="radio" class="rdoCons" aria-label="컨설팅">
+												<label for="MSAR41004" aria-hidden="true">컨설팅</label>
+											</span>
+										</div>
+										<div class="menuRadioInn">
+											<span>
+												<input name="MSAR4100" id="MSAR41005" type="radio" class="rdoGoal" aria-label="목표">
+												<label for="MSAR41005" aria-hidden="true">목표</label>
+											</span>
+										</div>
+										<div class="menuRadioInn">
+											<span>
+												<input name="MSAR4100" id="MSAR41006" type="radio" class="rdoEvent" aria-label="안내 이벤트">
+												<label for="MSAR41006" aria-hidden="true">안내&middot;이벤트</label>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<hr class="divLine mt40">
+									<div class="formTit mt40">
+										<strong>체크박스 : .check</strong>
+									</div>
+									<div class="check">
+										<input type="checkbox" id="type01" checked>
+										<label class="check" for="type01">항목명3</label>
+									</div>
+
+									<div class="mes3 mt40 mb10">박스형 : input.chekTypeOther </div>
+									<div class="check">
+										<input type="checkbox" id="type_all01" checked class="chekTypeOther">
+										<label class="check" for="type_all01">항목명1</label>
+									</div>
+									<div class="check">
+										<input type="checkbox" id="type_all012" class="chekTypeOther">
+										<label class="check" for="type_all012">항목명2</label>
+									</div>
+								</li>
+								<li>
+									<div class="formTit">
+										<strong>체크박스 : .chkBox</strong>
+									</div>
+<div class="guide_code"  data-label="접근성">
+<pre>
+//[접근성 공통 오류] 순차 탐색시 서식과 label에 중복 접근되며, 임의 탐색시 label에만 접근되어 서식에는 접근할 수 없음.
+//[접근성 해결 방안] 서식에 aria-label로 대체텍스트 추가하고, label에 aria-hidden="true"를 적용하여 읽히지 않게 함.
+&lt;input type="checkbox" id="sample22" aria-label="대체텍스트"&gt;
+&lt;label for="sample22" aria-hidden="true"&gt;항목명1&lt;/label&gt;
+</pre>
+</div>
+									<div class="chkBox">
+										<input type="checkbox" id="sample22" class="desgChk" aria-label="항목명1">
+										<label for="sample22" aria-hidden="true">항목명1</label>
+									</div>
+									<div class="chkBox mt10">
+										<input type="checkbox" id="sample23" class="desgChk" aria-label="항목명2">
+										<label for="sample23" aria-hidden="true">항목명2</label>
+									</div>
+									<div class="chkBox mt10">
+										<input type="checkbox" id="sample24" class="desgChk" aria-label="항목명3">
+										<label for="sample24" aria-hidden="true">항목명3</label>
+									</div>
+									<div class="chkBox mt10">
+										<input type="checkbox" id="sample25" class="desgChk" aria-label="항목명4">
+										<label for="sample25" aria-hidden="true">항목명4</label>
+									</div>
+									<div class="chkBox mt10">
+										<input type="checkbox" id="sample26" class="desgChk" aria-label="항목명5">
+										<label for="sample26" aria-hidden="true">항목명5</label>
+									</div>
+								</li>
+								<li>
+									<hr class="divLine mt40">
+									<div class="formTit mt40"><strong>카테고리</strong> .selectCerti</div>
+									<ul class="selectCerti">
+										<li>
+											<input type="checkbox" id="selCerti01" aria-label="건강">
+											<label for="selCerti01" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/category/ob/ico_cate_ob01_01.png" alt="건강 아이콘"></div>
+												<div class="title">건강</div>
+											</label>
+										</li>
+										<li>
+											<input type="checkbox" id="selCerti02" aria-label="결혼">
+											<label for="selCerti02" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/category/ob/ico_cate_ob01_02.png" alt="결혼 아이콘"></div>
+												<div class="title">결혼</div>
+											</label>
+										</li>
+										<li>
+											<input type="checkbox" id="selCerti03" aria-label="공연">
+											<label for="selCerti03" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/category/ob/ico_cate_ob01_03.png" alt="공연 아이콘"></div>
+												<div class="title">공연</div>
+											</label>
+										</li>
+										<li>
+											<input type="checkbox" id="selCerti04" aria-label="교육">
+											<label for="selCerti04" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/category/ob/ico_cate_ob01_04.png" alt="교육 아이콘"></div>
+												<div class="title">교육</div>
+											</label>
+										</li>
+										<li>
+											<input type="checkbox" id="selCerti05" aria-label="맛집">
+											<label for="selCerti05" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/category/ob/ico_cate_ob01_05.png" alt="맛집 아이콘"></div>
+												<div class="title">맛집</div>
+											</label>
+										</li>
+										<li>
+											<input type="checkbox" id="selCerti06" aria-label="부동산">
+											<label for="selCerti06" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/category/ob/ico_cate_ob01_06.png" alt="부동산 아이콘"></div>
+												<div class="title">부동산</div>
+											</label>
+										</li>
+										<li>
+											<input type="checkbox" id="selCerti07" aria-label="쇼핑">
+											<label for="selCerti07" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/category/ob/ico_cate_ob01_07.png" alt="쇼핑 아이콘"></div>
+												<div class="title">쇼핑</div>
+											</label>
+										</li>
+										<li>
+											<input type="checkbox" id="selCerti08" aria-label="스포츠">
+											<label for="selCerti08" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/category/ob/ico_cate_ob01_08.png" alt="스포츠 아이콘"></div>
+												<div class="title">스포츠</div>
+											</label>
+										</li>
+										<li>
+											<input type="checkbox" id="selCerti09" aria-label="여행">
+											<label for="selCerti09" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/category/ob/ico_cate_ob01_09.png" alt="여행 아이콘"></div>
+												<div class="title">여행</div>
+											</label>
+										</li>
+										<li>
+											<input type="checkbox" id="selCerti10" aria-label="자격증">
+											<label for="selCerti10" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/category/ob/ico_cate_ob01_10.png" alt="자격증 아이콘"></div>
+												<div class="title">자격증</div>
+											</label>
+										</li>
+										<li>
+											<input type="checkbox" id="selCerti11" aria-label="자동차">
+											<label for="selCerti11" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/category/ob/ico_cate_ob01_11.png" alt="자동차 아이콘"></div>
+												<div class="title">자동차</div>
+											</label>
+										</li>
+										<li>
+											<input type="checkbox" id="selCerti12" aria-label="재테크">
+											<label for="selCerti12" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/category/ob/ico_cate_ob01_12.png" alt="재테크 아이콘"></div>
+												<div class="title">재테크</div>
+											</label>
+										</li>
+									</ul>
+
+									<div class="mes3 mt40 mb10">이체</div>
+									<ul class="selectCerti">
+										<li>
+											<input type="radio" id="MSCSC720PA1" name="MSCSC720PA" aria-label="출금이체">
+											<label for="MSCSC720PA1" aria-hidden="true">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs82.png" alt="출금이체">
+												</div>
+												<div class="title">출금이체</div>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="MSCSC720PA2" name="MSCSC720PA" aria-label="저축">
+											<label for="MSCSC720PA2" aria-hidden="true">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs83.png" alt="저축">
+												</div>
+												<div class="title">저축</div>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="MSCSC720PA3" name="MSCSC720PA" aria-label="현금">
+											<label for="MSCSC720PA3" aria-hidden="true">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs84.png" alt="현금">
+												</div>
+												<div class="title">현금</div>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="MSCSC720PA4" name="MSCSC720PA" aria-label="이체 기타">
+											<label for="MSCSC720PA4" aria-hidden="true">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs85.png" alt="이체 기타">
+												</div>
+												<div class="title">이체 기타</div>
+											</label>
+										</li>
+									</ul>
+
+									<div class="mes3 mt40 mb10">소비 : 서브카테고리선택 포함</div>
+									<ul class="selectCerti">
+										<li class="e">
+											<input type="radio" id="MSCSC720PB1" name="MSCSC720PB" aria-label="외식">
+											<label for="MSCSC720PB1" aria-hidden="true">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs01.png" alt="외식">
+												</div>
+												<div class="title">외식</div>
+											</label>
+										</li>
+										<li class="e">
+											<input type="radio" id="MSCSC720PB2" name="MSCSC720PB" aria-label="카페/간식">
+											<label for="MSCSC720PB2" aria-hidden="true">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs02.png" alt="카페·간식">
+												</div>
+												<div class="title">카페/간식</div>
+											</label>
+										</li>
+										<li class="e">
+											<input type="radio" id="MSCSC720PB3" name="MSCSC720PB" aria-label="술/유흥">
+											<label for="MSCSC720PB3" aria-hidden="true">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs03.png" alt="술·유흥">
+												</div>
+												<div class="title">술/유흥</div>
+											</label>
+										</li>
+									</ul>
+									<div class="cate_SubWrap cate_01 overseaType" data-id="MSCSC720PB1">
+										<strong class="formTit mt0">세부 카테고리 선택</strong>
+										<div class="boxRadio">
+											<div class="boxRadioInn">
+												<span>
+													<input name="MSCSC720PB1S" id="MSCSC720PB1S1" type="radio" aria-label="한식">
+													<label for="MSCSC720PB1S1" aria-hidden="true">한식</label>
+												</span>
+											</div>
+											<div class="boxRadioInn">
+												<span>
+													<input name="MSCSC720PB1S" id="MSCSC720PB1S2" type="radio" aria-label="중식">
+													<label for="MSCSC720PB1S2" aria-hidden="true">중식</label>
+												</span>
+											</div>
+											<div class="boxRadioInn">
+												<span>
+													<input name="MSCSC720PB1S" id="MSCSC720PB1S3" type="radio" aria-label="일식">
+													<label for="MSCSC720PB1S3" aria-hidden="true">일식</label>
+												</span>
+											</div>
+											<div class="boxRadioInn">
+												<span>
+													<input name="MSCSC720PB1S" id="MSCSC720PB1S4" type="radio" aria-label="양식/뷔페">
+													<label for="MSCSC720PB1S4" aria-hidden="true">양식/뷔페</label>
+												</span>
+											</div>
+											<div class="boxRadioInn">
+												<span>
+													<input name="MSCSC720PB1S" id="MSCSC720PB1S5" type="radio" aria-label="페스트푸드">
+													<label for="MSCSC720PB1S5" aria-hidden="true">페스트푸드</label>
+												</span>
+											</div>
+											<div class="boxRadioInn">
+												<span>
+													<input name="MSCSC720PB1S" id="MSCSC720PB1S6" type="radio" aria-label="배달">
+													<label for="MSCSC720PB1S6" aria-hidden="true">배달</label>
+												</span>
+											</div>
+											<div class="boxRadioInn">
+												<span>
+													<input name="MSCSC720PB1S" id="MSCSC720PB1S7" type="radio" aria-label="외식 기타">
+													<label for="MSCSC720PB1S7" aria-hidden="true">외식 기타</label>
+												</span>
+											</div>
+										</div>
+									</div>
+									<ul class="selectCerti">
+										<li>
+											<input type="radio" id="MSCSC720PB4" name="MSCSC720PB" aria-label="쇼핑">
+											<label for="MSCSC720PB4" aria-hidden="true">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs04.png" alt=" 쇼핑">
+												</div>
+												<div class="title">쇼핑</div>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="MSCSC720PB5" name="MSCSC720PB" aria-label="온라인쇼핑">
+											<label for="MSCSC720PB5" aria-hidden="true">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs05.png" alt="온라인쇼핑">
+												</div>
+												<div class="title">온라인쇼핑</div>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="MSCSC720PB6" name="MSCSC720PB" aria-label="생활/마트">
+											<label for="MSCSC720PB6" aria-hidden="true">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs06.png" alt="생활·마트">
+												</div>
+												<div class="title">생활/마트</div>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="MSCSC720PB7" name="MSCSC720PB" aria-label="주거/통신">
+											<label for="MSCSC720PB7" aria-hidden="true">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs07.png" alt="주거·통신">
+												</div>
+												<div class="title">주거/통신</div>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="MSCSC720PB8" name="MSCSC720PB" aria-label="의료/건강">
+											<label for="MSCSC720PB8" aria-hidden="true">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs08.png" alt="의료·건강">
+												</div>
+												<div class="title">의료/건강</div>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="MSCSC720PB9" name="MSCSC720PB" aria-label="교육/자녀">
+											<label for="MSCSC720PB9" aria-hidden="true">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs09.png" alt=" 교육·자녀">
+												</div>
+												<div class="title">교육/자녀</div>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="MSCSC720PB10" name="MSCSC720PB" aria-label="뷰티/미용">
+											<label for="MSCSC720PB10" aria-hidden="true">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs10.png" alt="뷰티·미용">
+												</div>
+												<div class="title">뷰티/미용</div>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="MSCSC720PB11" name="MSCSC720PB" aria-label="자동차/주유">
+											<label for="MSCSC720PB11" aria-hidden="true">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs11.png" alt="자동차·주유">
+												</div>
+												<div class="title">자동차/주유</div>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="MSCSC720PB12" name="MSCSC720PB" aria-label="교통">
+											<label for="MSCSC720PB12" aria-hidden="true">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs12.png" alt="교통">
+												</div>
+												<div class="title">교통</div>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="MSCSC720PB13" name="MSCSC720PB" aria-label="문화/여가">
+											<label for="MSCSC720PB13" aria-hidden="true">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs13.png" alt=" 문화·여가">
+												</div>
+												<div class="title">문화/여가</div>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="MSCSC720PB14" name="MSCSC720PB" aria-label="여행/숙박">
+											<label for="MSCSC720PB14" aria-hidden="true">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs14.png" alt=" 여행·숙박">
+												</div>
+												<div class="title">여행/숙박</div>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="MSCSC720PB15" name="MSCSC720PB" aria-label="금융">
+											<label for="MSCSC720PB15" aria-hidden="true">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs15.png" alt="금융">
+												</div>
+												<div class="title">금융</div>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="MSCSC720PB16" name="MSCSC720PB" aria-label="경조사/선물">
+											<label for="MSCSC720PB16" aria-hidden="true">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs16.png" alt="경조사 선물">
+												</div>
+												<div class="title">경조사/선물</div>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="MSCSC720PB17" name="MSCSC720PB" aria-label="반려동물">
+											<label for="MSCSC720PB17" aria-hidden="true">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs17.png" alt=" 반려동물">
+												</div>
+												<div class="title">반려동물</div>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="MSCSC720PB18" name="MSCSC720PB" aria-label="소비 기타">
+											<label for="MSCSC720PB18" aria-hidden="true">
+												<div class="logoArea">
+													<img src="../../images/category/cs/ico_cate_cs18.png" alt="소비기타">
+												</div>
+												<div class="title">소비 기타</div>
+											</label>
+										</li>
+									</ul>
+									<script type="text/javascript">
+										$('.nhasset .selectCerti  li.e input[type="radio"]').each(function(i,obj){
+											var $this = $(this);
+											$this.on('change',function(){
+												var _checked = $this.is(':checked');
+												var _conid = $this.attr('id');
+												if (_checked) {
+													$('.cate_SubWrap').hide();
+													$('.cate_SubWrap[data-id='+ _conid +']').slideDown(300).find('.formTit').attr('tabindex','-1').focus();
+												}
+											})
+										});
+									</script>
+
+									<div class="mes3 mt40 mb10">본인인증</div>
+									<ul class="selectCerti">
+										<li>
+											<input type="radio" id="MSPS12001" name="MSPS1200" aria-label="네이버">
+											<label for="MSPS12001" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/logo_certi_naver_big.png" alt="네이버"></div>
+												<div class="title">네이버</div>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="MSPS12002" name="MSPS1200" aria-label="카카오톡">
+											<label for="MSPS12002" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/logo_certi_kakao_big.png" alt="카카오톡"></div>
+												<div class="title">카카오톡</div>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="MSPS12003" name="MSPS1200" aria-label="페이코">
+											<label for="MSPS12003" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/logo_certi_payco_big.png" alt="NHN페이코"></div>
+												<div class="title">페이코</div>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="MSPS12004" name="MSPS1200" aria-label="통신사 PASS">
+											<label for="MSPS12004" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/logo_certi_pass_big.png" alt="통신사 Pass"></div>
+												<div class="title">통신사 PASS</div>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="MSPS12005" name="MSPS1200" aria-label="삼성 PASS">
+											<label for="MSPS12005" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/logo_certi_samsung_big.png" alt="삼성 Pass"></div>
+												<div class="title">삼성 PASS</div>
+											</label>
+										</li>
+									</ul>
+
+									<div class="mes3 mt40 mb10">신청 대출 구분</div>
+									<ul class="selectCerti flex">
+										<li class="selectCerti01">
+											<input type="radio" id="selCerti010" name="selCerti00" aria-label="신용대출" checked>
+											<label for="selCerti010" aria-hidden="true">신용대출</label>
+										</li>
+										<li class="selectCerti02">
+											<input type="radio" id="selectCerti020" name="selCerti00" aria-label="주택담보대출">
+											<label for="selectCerti020" aria-hidden="true">주택담보대출</label>
+										</li>
+									</ul>
+
+									<div class="mes3 mt40 mb10">건물 종류 선택</div>
+									<ul class="as selectCerti flex">
+										<li class="w50p">
+											<input type="radio" id="MSAS82101" name="MSAS8210" aria-label="아파트" checked>
+											<label for="MSAS82101" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/ico_as_apt.png" alt="아파트" style="width:70px"></div>
+												<div class="title">아파트</div>
+											</label>
+										</li>
+										<li class="w50p">
+											<input type="radio" id="MSAS82102" name="MSAS8210" aria-label="오피스텔">
+											<label for="MSAS82102" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/ico_as_opi.png" alt="오피스텔" style="width:52px;margin-left:10px"></div>
+												<div class="title">오피스텔</div>
+											</label>
+										</li>
+									</ul>
+
+									<div class="mes3 mt40 mb10">실물 종류 선택</div>
+									<ul class="as selectCerti mt20">
+										<li class="car w100p">
+											<input type="radio" id="MSAS91101" name="MSAS9110" aria-label="자동차" checked>
+											<label for="MSAS91101" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/ico_as_car.png" alt="자동차" style="width:143px;"></div>
+												<div class="title">자동차</div>
+											</label>
+										</li>
+									</ul>
+									<ul class="as selectCerti mt20">
+										<li class="w50p">
+											<input type="radio" id="MSAS91102" name="MSAS9110" aria-label="금">
+											<label for="MSAS91102" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/ico_as_gold.png" alt="금" style="width:96px"></div>
+												<div class="title">금</div>
+											</label>
+										</li>
+										<li class="w50p">
+											<input type="radio" id="MSAS91103" name="MSAS9110" aria-label="외화">
+											<label for="MSAS91103" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/ico_as_coin.png" alt="외화" style="width:88px;min-height:65px"></div>
+												<div class="title">외화</div>
+											</label>
+										</li>
+									</ul>
+
+									<div class="mes3 mt40 mb10">목표 선택</div>
+									<ul class="ob selectCerti">
+										<li>
+											<input type="radio" id="MSOB21001" name="MSOB2100" aria-label="목돈마련 다른사람 평균 목표금액 1억 2,000만원">
+											<label for="MSOB21001" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/category/ob/ico_cate_ob02_01.png" alt="목돈마련 아이콘"></div>
+												<div class="title">목돈마련</div>
+												<div class="titleTit">다른사람 평균 목표금액</div>
+												<div class="subTit">1억 2,000만원</div>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="MSOB21002" name="MSOB2100" aria-label="여행가기 다른사람 평균 목표금액 1,298만원">
+											<label for="MSOB21002" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/category/ob/ico_cate_ob02_02.png" alt="여행가기 아이콘"></div>
+												<div class="title">여행가기</div>
+												<div class="titleTit">다른사람 평균 목표금액</div>
+												<div class="subTit">1,298만원</div>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="MSOB21003" name="MSOB2100" aria-label="대출줄이기 다른사람 평균 목표금액 1억 2,000만원">
+											<label for="MSOB21003" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/category/ob/ico_cate_ob02_03.png" alt="대출줄이기 아이콘"></div>
+												<div class="title">대출줄이기</div>
+												<div class="titleTit">다른사람 평균 목표금액</div>
+												<div class="subTit">1억 2,000만원</div>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="MSOB21004" name="MSOB2100" aria-label="자동차 구매 다른사람 평균 목표금액 1,298만원">
+											<label for="MSOB21004" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/category/ob/ico_cate_ob02_04.png" alt="자동차 구매 아이콘"></div>
+												<div class="title">자동차 구매</div>
+												<div class="titleTit">다른사람 평균 목표금액</div>
+												<div class="subTit">1,298만원</div>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="MSOB21005" name="MSOB2100" aria-label="내집마련 다른사람 평균 목표금액 33억 2,280만원">
+											<label for="MSOB21005" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/category/ob/ico_cate_ob02_05.png" alt="내집마련 아이콘"></div>
+												<div class="title">내집마련</div>
+												<div class="titleTit">다른사람 평균 목표금액</div>
+												<div class="subTit">33억 2,280만원</div>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="MSOB21006" name="MSOB2100" aria-label="내가 만든 목표 나만의 DIY 목표 시작!">
+											<label for="MSOB21006" aria-hidden="true">
+												<div class="logoArea"><img src="../../images/category/ob/ico_cate_ob02_06.png" alt="내가 만든 목표 아이콘"></div>
+												<div class="title">내가 만든 목표</div>
+												<div class="titleTit type02">나만의<br />DIY 목표 시작!</div>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<div class="formTit"><strong>카테고리 : .cateListHori</strong></div>
+									<div class="cateListHori">
+										<div class="categoryWrap" style="display:block;">
+											<ul>
+												<li>
+													<div class="item">
+														<input type="radio" name="MSCSC610P" id="MSCSC610P1" aria-label="외식" checked>
+														<label for="MSCSC610P1" aria-hidden="true">
+															<img src="../../images/category/cs/ico_cate_cs01.png" alt="외식">
+															외식
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="item">
+														<input type="radio" name="MSCSC610P" id="MSCSC610P2" aria-label="카페/간식">
+														<label for="MSCSC610P2" aria-hidden="true">
+															<img src="../../images/category/cs/ico_cate_cs02.png" alt="카페·간식">
+															카페/간식
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="item">
+														<input type="radio" name="MSCSC610P" id="MSCSC610P3" aria-label="술/유흥">
+														<label for="MSCSC610P3" aria-hidden="true">
+															<img src="../../images/category/cs/ico_cate_cs03.png" alt="술·유흥">
+															술/유흥
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="item">
+														<input type="radio" name="MSCSC610P" id="MSCSC610P4" aria-label="쇼핑">
+														<label for="MSCSC610P4" aria-hidden="true">
+															<img src="../../images/category/cs/ico_cate_cs04.png" alt=" 쇼핑">
+															쇼핑
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="item">
+														<input type="radio" name="MSCSC610P" id="MSCSC610P5" aria-label="온라인쇼핑">
+														<label for="MSCSC610P5" aria-hidden="true">
+															<img src="../../images/category/cs/ico_cate_cs05.png" alt="온라인쇼핑">
+															온라인쇼핑
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="item">
+														<input type="radio" name="MSCSC610P" id="MSCSC610P6" aria-label="생활/마트">
+														<label for="MSCSC610P6" aria-hidden="true">
+															<img src="../../images/category/cs/ico_cate_cs06.png" alt="생활·마트">
+															생활/마트
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="item">
+														<input type="radio" name="MSCSC610P" id="MSCSC610P7" aria-label="주거/통신">
+														<label for="MSCSC610P7" aria-hidden="true">
+															<img src="../../images/category/cs/ico_cate_cs07.png" alt="주거·통신">
+															주거/통신
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="item">
+														<input type="radio" name="MSCSC610P" id="MSCSC610P8" aria-label="의료/건강">
+														<label for="MSCSC610P8" aria-hidden="true">
+															<img src="../../images/category/cs/ico_cate_cs08.png" alt="의료·건강">
+															의료/건강
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="item">
+														<input type="radio" name="MSCSC610P" id="MSCSC610P9" aria-label="교육/자녀">
+														<label for="MSCSC610P9" aria-hidden="true">
+															<img src="../../images/category/cs/ico_cate_cs09.png" alt=" 교육·자녀">
+															교육/자녀
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="item">
+														<input type="radio" name="MSCSC610P" id="MSCSC610P11" aria-label="뷰티/미용">
+														<label for="MSCSC610P11" aria-hidden="true">
+															<img src="../../images/category/cs/ico_cate_cs10.png" alt="뷰티·미용">
+															뷰티/미용
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="item">
+														<input type="radio" name="MSCSC610P" id="MSCSC610P22" aria-label="자동차/주유">
+														<label for="MSCSC610P22" aria-hidden="true">
+															<img src="../../images/category/cs/ico_cate_cs11.png" alt="자동차·주유">
+															자동차/주유
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="item">
+														<input type="radio" name="MSCSC610P" id="MSCSC610P33" aria-label="교통">
+														<label for="MSCSC610P33" aria-hidden="true">
+															<img src="../../images/category/cs/ico_cate_cs12.png" alt="교통">
+															교통
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="item">
+														<input type="radio" name="MSCSC610P" id="MSCSC610P44" aria-label="문화/여가">
+														<label for="MSCSC610P44" aria-hidden="true">
+															<img src="../../images/category/cs/ico_cate_cs13.png" alt=" 문화·여가">
+															문화/여가
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="item">
+														<input type="radio" name="MSCSC610P" id="MSCSC610P55" aria-label="여행/숙박">
+														<label for="MSCSC610P55" aria-hidden="true">
+															<img src="../../images/category/cs/ico_cate_cs14.png" alt=" 여행·숙박">
+															여행/숙박
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="item">
+														<input type="radio" name="MSCSC610P" id="MSCSC610P6" aria-label="금융">
+														<label for="MSCSC610P6" aria-hidden="true">
+															<img src="../../images/category/cs/ico_cate_cs15.png" alt="금융">
+															금융
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="item">
+														<input type="radio" name="MSCSC610P" id="MSCSC610P77" aria-label="경조사/선물">
+														<label for="MSCSC610P77" aria-hidden="true">
+															<img src="../../images/category/cs/ico_cate_cs16.png" alt="경조사 선물">
+															경조사/선물
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="item">
+														<input type="radio" name="MSCSC610P" id="MSCSC610P88" aria-label="반려동물">
+														<label for="MSCSC610P88" aria-hidden="true">
+															<img src="../../images/category/cs/ico_cate_cs17.png" alt=" 반려동물">
+															반려동물
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="item">
+														<input type="radio" name="MSCSC610P" id="MSCSC610P99" aria-label="소비기타">
+														<label for="MSCSC610P99" aria-hidden="true">
+															<img src="../../images/category/cs/ico_cate_cs18.png" alt="소비기타">
+															소비 기타
+														</label>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li>
+									<hr class="divLine mt40">
+									<div class="formTit mt40"><strong>라운드유형 : .roundChkWrap</strong></div>
+									<div class="mes3 mt40 mb10">라디오버튼[type="radio"]</div>
+									<div class="roundChkWrap">
+										<ul>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="roundChkSample" id="roundChkSample1" aria-label="항목명1" checked>
+													<label for="roundChkSample1" aria-hidden="true">항목명1</label>
+												</span>
+											</li>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="roundChkSample" id="roundChkSample2" aria-label="항목명2">
+													<label for="roundChkSample2" aria-hidden="true">항목명2</label>
+												</span>
+											</li>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="roundChkSample" id="roundChkSample3" aria-label="항목명3">
+													<label for="roundChkSample3" aria-hidden="true">항목명3</label>
+												</span>
+											</li>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="roundChkSample" id="roundChkSample4" aria-label="항목명4">
+													<label for="roundChkSample4" aria-hidden="true">항목명4</label>
+												</span>
+											</li>
+										</ul>
+									</div>
+
+									<div class="mes3 mt40 mb10">체크박스[type="checkbox"]</div>
+									<div class="roundChkWrap flexType">
+										<ul>
+											<li>
+												<span class="roundChk">
+													<input type="checkbox" name="MSHC5100" id="MSHC51001" aria-label="항목명1" checked>
+													<label for="MSHC51001" aria-hidden="true">항목명1</label>
+												</span>
+											</li>
+											<li>
+												<span class="roundChk">
+													<input type="checkbox" name="MSHC5100" id="MSHC51002" aria-label="항목명2" checked>
+													<label for="MSHC51002" aria-hidden="true">항목명2</label>
+												</span>
+											</li>
+											<li>
+												<span class="roundChk">
+													<input type="checkbox" name="MSHC5100" id="MSHC51003" aria-label="항목명3">
+													<label for="MSHC51003" aria-hidden="true">항목명3</label>
+												</span>
+											</li>
+											<li>
+												<span class="roundChk">
+													<input type="checkbox" name="MSHC5100" id="MSHC51004" aria-label="항목명4">
+													<label for="MSHC51004" aria-hidden="true">항목명4</label>
+												</span>
+											</li>
+										</ul>
+									</div>
+
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<h5 class="guide_title4">셀렉트박스</h5>
+					<div class="boxTypeWrap pt0">
+						<div class="formWrap">
+							<ul>
+								<li>
+									<div class="formTit"><strong>박스형 : .inputList</strong></div>
+									<div class="inputList">
+										<a href="javascript:;" title="대체텍스트" aria-haspopup="true" onclick="slidePopOption();return false;">
+											<span class="selectValue">DEFUALT</span>
+											<span class="selectBtn"></span>
+										</a>
+										<select name="" title="선택해주세요">
+											<option></option>
+										</select>
+									</div>
+									<div class="inputList disabled">
+										<a href="javascript:;" title="대체텍스트" aria-disabled="true">
+											<span class="selectValue">DISABLED</span>
+											<span class="selectBtn"></span>
+										</a>
+										<select name="" title="선택해주세요" disabled>
+											<option></option>
+										</select>
+									</div>
+								</li>
+								<li>
+									<hr class="divLine mt40">
+									<div class="formTit mt40"><strong>라인형 : .stList</strong></div>
+									<div class="stList">
+										<a href="javascript:;" title="관련대출 선택" aria-haspopup="true">
+											<span class="selectValue placeholder">선택해주세요</span>
+											<span class="selectBtn"></span>
+										</a>
+										<select name="" title="선택해주세요">
+											<option></option>
+										</select>
+									</div>
+
+									<div class="mes3 mt40 mb10">border 변경 : .stList.boxType</div>
+									<div class="stList boxType">
+										<a href="javascript:;" title="소비날짜 선택" aria-haspopup="true">
+											<span class="selectValue">2020.08.01</span>
+											<span class="selectBtn"></span>
+										</a>
+										<select name="" title="선택해주세요">
+											<option></option>
+										</select>
+									</div>
+								</li>
+								<li>
+									<hr class="divLine mt40">
+									<div class="formTit mt40 mb10"><strong>셀렉트박스 2단 : .selectDivision_5_5</strong></div>
+									<ul class="selectDivision_5_5">
+										<li class="pr5">
+											<div class="inputList">
+												<a href="javascript:;" title="대체텍스트" aria-haspopup="true" onclick="slidePopOption();return false;">
+													<span class="selectValue">선택</span>
+													<span class="selectBtn"></span>
+												</a>
+												<select name="" title="선택해주세요">
+													<option></option>
+												</select>
+											</div>
+										</li>
+										<li class="pl5">
+											<div class="inputList">
+												<a href="javascript:;" title="대체텍스트" aria-haspopup="true" onclick="slidePopOption();return false;">
+													<span class="selectValue">선택</span>
+													<span class="selectBtn"></span>
+												</a>
+												<select name="" title="선택해주세요">
+													<option></option>
+												</select>
+											</div>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<h5 class="guide_title4">토글유형</h5>
+					<div class="boxTypeWrap pt0">
+						<div class="formWrap">
+							<ul>
+								<li>
+									<div class="formTit"><strong>H32px : .tgBtnType2</strong></div>
+									<div class="tgWarp ty01">
+										<span class="tgTxt">항목명</span>
+										<span class="tgBtnType2">
+											<input type="checkbox" id="MSAE42001" checked>
+											<label for="MSAE42001"><span>항목명</span></label>
+										</span>
+									</div>
+									<div class="flexBothArea mt30">
+										<div>
+											<strong class="formTit">항목명</strong>
+											<p class="subTxt5">부가설명</p>
+										</div>
+										<div>
+											<span class="tgBtnType2">
+												<input type="checkbox" id="toggle1">
+												<label for="toggle1"><span class="blind">항목명</span></label>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<hr class="divLine mt40">
+									<div class="formTit mt40"><strong>H24px : .tgBtnType2.small24</strong></div>
+									<span class="tgBtnType2 small24">
+										<input type="checkbox" id="MSST41201" checked title="항목명">
+										<label for="MSST41201" aria-hidden="true"></label>
+									</span>
+								</li>
+								<li>
+									<hr class="divLine mt40">
+									<div class="formTit mt40"><strong>H19px : .tgBtnType2.small</strong></div>
+									<span class="tgBtnType2 small">
+										<input type="checkbox" id="toggle0">
+										<label for="toggle0"><span class="blind">항목명</span></label>
+									</span>
+									<div class="tgBtnWrap">
+										<span class="cs tgTxt">항목명</span>
+										<span class="cs tgBtnType2">
+											<input type="checkbox" id="MSCS40001" checked>
+											<label for="MSCS40001"><span class="blind">항목명</span></label>
+										</span>
+									</div>
+								</li>
+								<li>
+									<hr class="divLine mt40">
+									<div class="formTit mt40"><strong>텍스트노출 : .tgBtn</strong></div>
+									<span class="tgBtn">
+										<input type="checkbox" id="tgBtnForm1" checked title="순자산 보이기/숨기기">
+										<label for="tgBtnForm1">금액</label>
+									</span>
+									<hr class="guide_line mt20">
+									<span class="tgBtn2">
+										<input type="checkbox" id="tgBtnForm2" checked title="순자산 보이기/숨기기">
+										<label for="tgBtnForm2">금액</label>
+									</span>
+									<hr class="guide_line mt20">
+									<span class="tgBtn3">
+										<input type="checkbox" id="tgBtnForm3" checked title="순자산 보이기/숨기기">
+										<label for="tgBtnForm3">금액</label>
+									</span>
+
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<h5 class="guide_title4">기타</h5>
+					<div class="boxTypeWrap pt0">
+						<div class="formWrap">
+							<ul>
+								<li>
+									<strong class="formTit">나이</strong>
+									<div class="inputList unitMan">
+										<span class="unitType02">만</span>
+										<input type="tel"  title="대체텍스트" placeholder="대체텍스트">
+										<span class="unit">세</span>
+										<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+									</div>
+								</li>
+								<li>
+									<div class="formTit"><strong>부동산 선택</strong></div>
+									<div class="boxRadio">
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo13" id="rdo16" type="radio" checked>
+												<label for="rdo16">아파트</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo13" id="rdo17" type="radio">
+												<label for="rdo17">오피스텔</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo13" id="rdo18" type="radio">
+												<label for="rdo18">기타부동산</label>
+											</span>
+										</div>
+									</div>
+									<div class="infoBox bdNone">
+										<div class="infotitWrap">
+											<p class="tit">인덕원 푸르지오엘센트로</p><span class="aptTag">아파트</span>
+										</div>
+										<p class="subTxt3 pointColor11">경기 의왕시 포일동 638</p>
+										<ul class="detailList">
+											<li>
+												<span class="tit">면적</span>
+												<span class="value">61.99㎡</span>
+											</li>
+											<li>
+												<span class="tit">시세</span>
+												<span class="value">16억 8000만원</span>
+											</li>
+										</ul>
+									</div>
+									<div class="areaBodyBtnFull mt20">
+										<a href="javascript:;" class="btnBodyLine" role="button">다시 선택하기</a>
+									</div>
+								</li>
+								<li>
+									<div class="formTit"><strong>주소</strong></div>
+									<div class="grayBox mb20">
+										<div class="partWrap">
+											<div class="name">
+												<p class="tit">인덕원 푸르지오엘센트로</p>
+												<a href="javascript:;" class="contBtn01">삭제</a>
+											</div>
+											<div class="address">
+												<p>서울특별시 강남구 논현동 241-7</p>
+												<p>인덕원 푸르지오 엘센트로 101동 1201호</p>
+											</div>
+											<div class="etc"><span>아파트</span><span>143.68㎡</span></div>
+										</div>
+									</div>
+									<div class="areaBodyBtnFull mt20">
+										<a href="javascript:;" class="btnBodyLine" role="button">직접 주소 검색</a>
+									</div>
+								</li>
+								<li>
+									<div class="formTit"><strong>보유수량 </strong></div>
+									<div class="inputList unitMan">
+										<input type="tel" title="보유수량 입력" placeholder="보유수량을 입력해 주세요">
+										<span class="unit">ETH</span>
+										<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+									</div>
+									<p class="formaddTxt">
+										<span>원화환산금액 :700,000원</span>
+									</p>
+								</li>
+								<li>
+									<div class="formTit"><strong>나의 지분율(선택) </strong></div>
+									<div class="inputList">
+										<input type="tel" title="매수금 금액" placeholder="공동명의일 경우 지분율을 입력해주세요.">
+										<span class="unit">%</span>
+										<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+									</div>
+									<p class="infoTxt">나의 자산금액 : 675,000,000원 (매매가 시세)</p>
+								</li>
+								<li class="addrSrch">
+									<div class="formTit"><strong>검색</strong></div>
+									<div class="inputList">
+										<input type="text" title="도로명 주소 찾기">
+										<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+										<button class="btnSearch"><span class="blind">찾기</span></button>
+									</div>
+								</li>
+								<li>
+									<strong class="formTit">메모(선택)</strong>
+									<textarea placeholder="메모를 입력해주세요. (최대30자)"></textarea>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<h5 class="guide_title4">일부 스타일 추가 <i class="guide_tag">2023고도화</i></h5>
+					<div class="boxTypeWrap pt0">
+						<div class="formWrap">
+							<ul>
+								<li>
+									<div class="formTit"><strong>검색버튼 : .btnSearch[data-label]</strong></div>
+									<div class="inputList">
+										<button class="btnSearch" data-label="이름(사번)을 입력해주세요."><span class="blind">권유직원 찾기</span></button>
+									</div>
+								</li>
+								<li>
+									<div class="formTit"><strong>읽기전용 : .inputList &gt; data </strong></div>
+									<div class="inputList">
+										<data><span>안양남지점</span><span>김*원(11111****)</span></data>
+									</div>
+								</li>
+								<li>
+									<div class="formTit"><strong>텍스트유형 : .formTxt</strong></div>
+									<div class="formTxt">.formTxt:부가설명이 노출됩니다.</div>
+									<div class="formTxt">
+										<em>부가설명이 노출됩니다.</em>
+										<span>(부가설명이 노출됩니다.)</span>
+									</div>
+									<div class="inputList unitMan">
+										<input type="tel" title="금액을 입력하세요" placeholder="금액을 입력하세요">
+										<span class="unit">원</span>
+										<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+									</div>
+								</li>
+								<li>
+									<div class="formTit"><strong>메세지유형 .mes**</strong></div>
+									<div class="inputList">
+										<a href="javascript:;" title="대체텍스트" aria-haspopup="true" onclick="slidePopOption();return false;">
+											<span class="selectValue">선택</span>
+											<span class="selectBtn"></span>
+										</a>
+										<select name="" title="선택해주세요">
+											<option></option>
+										</select>
+									</div>
+									<div class="mes1">.mes1 : 메세지가 노출됩니다.</div>
+									<div class="mes2">.mes2 : 메세지가 노출됩니다.</div>
+								</li>
+								<li class="form1">
+									<div class="formTit"><strong>좌우배치 : li.form1 </strong></div>
+									<div class="inputText1">
+										<input type="tel" value="123" maxlength="3" title="@대체텍스트" placeholder="DEFUALT">
+										<span class="unit">세</span>
+										<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+									</div>
+								</li>
+								<li>
+									<div class="formTit">
+										<strong>슬라이더 :  .inputRange1</strong>
+										<div class="inputVal t1" data-range-id="uiRangeInput2"></div>
+									</div>
+									<div class="inputRange1" id="uiRangeInput2" data-form-mode="range" data-output="1" data-datalist="0%,15%">
+										<div class="area">
+											<input type="range" title="대체텍스트" min="0" max="15" step="0.5" value="3">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="formTit"><strong>서브폼 : .area</strong></div>
+									<div class="area">
+										<dl class="form">
+											<dt>힝목명</dt>
+											<dd class="inputList"><input type="text" title="대체텍스트" placeholder="대체텍스트" ></dd>
+										</dl>
+										<dl class="form">
+											<dt>힝목명</dt>
+											<dd class="inputList"><input type="text" title="대체텍스트" placeholder="대체텍스트" ></dd>
+										</dl>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<h5 class="guide_title4">입력서식 라인형 : .inputText1 <i class="guide_tag">2023고도화</i></h5>
+					<div class="boxTypeWrap">
+						<div class="guide_tbl">
+							<table>
+								<caption>입력폼 유형1</caption>
+								<colgroup>
+									<col style="width:20%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">구분</th>
+										<th scope="col">내용</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>DEFUALT</td>
+										<td><input type="text" class="inputText1" title="@대체텍스트" placeholder="DEFUALT"></td>
+									</tr>
+									<tr>
+										<td>FOCUS</td>
+										<td><input type="text" class="inputText1 focus" value="FOCUS" title="@대체텍스트" placeholder="FOCUS"></td>
+									</tr>
+									<tr>
+										<td>DISABLED</td>
+										<td><input type="text" class="inputText1" title="@대체텍스트" placeholder="DISABLED" disabled></td>
+									</tr>
+									<tr>
+										<td>REQUIRED.error</td>
+										<td><input type="text" class="inputText1 error" value="REQUIRED"  title="@대체텍스트" placeholder="REQUIRED"></td>
+									</tr>
+									<tr>
+										<td>삭제버튼추가</td>
+										<td>
+											<div class="inputText1">
+												<input type="tel" value="123" title="@대체텍스트" placeholder="DEFUALT">
+												<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+											</div>
+											<div class="inputText1">
+												<input type="tel" value="123" title="@대체텍스트" placeholder="DISABLED" disabled>
+												<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+											</div>
+											<div class="inputText1 error">
+												<input type="tel" value="123" title="@대체텍스트" placeholder="REQUIRED">
+												<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>텍스트추가</td>
+										<td>
+											<div class="inputText1">
+												<input type="tel" value="123" title="@대체텍스트" placeholder="DEFUALT">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+											</div>
+											<div class="inputText1">
+												<input type="tel" value="123" title="@대체텍스트" placeholder="DISABLED" disabled>
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+											</div>
+											<div class="inputText1 error">
+												<input type="tel" value="123" title="@대체텍스트" placeholder="REQUIRED">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>스타일변경 : .t1</td>
+										<td>
+											<div class="inputText1 t1">
+												<input type="tel" value="123" title="@대체텍스트" placeholder="DEFUALT">
+												<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+											</div>
+											<div class="inputText1 t1">
+												<input type="tel" value="123" title="@대체텍스트" placeholder="DISABLED" disabled>
+												<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+											</div>
+											<div class="inputText1 t1 error">
+												<input type="tel" value="123" title="@대체텍스트" placeholder="REQUIRED">
+												<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<!-- ### 유형2 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">유형2 : + .formListBox</h4>
+<div class="guide_code" data-label="기본구조">
+<pre>
+&lt;div class="formWrap formListBox"&gt;
+	&lt;ul&gt;
+		&lt;li&gt;
+			&lt;div class="formTit"&gt;&lt;strong&gt;항목명&lt;/strong&gt;&lt;/div&gt;
+			&lt;div class="inputList"&gt;입력폼영역&lt;/div&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;div class="formTit"&gt;&lt;strong&gt;항목명&lt;/strong&gt;&lt;/div&gt;
+			&lt;div class="inputList"&gt;입력폼영역&lt;/div&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+</div>
+					<ul class="guide_txt">
+						<li>li을 라운드 박스 형태로 구분이 될 경우 사용함.</li>
+					</ul>
+					<div class="formWrap formListBox">
+						<ul>
+							<li>
+								<div class="formTit"><strong>항목명</strong></div>
+								<div class="inputList">
+									<input type="text" title="대체텍스트" placeholder="대체텍스트">
+									<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+								</div>
+							</li>
+							<li>
+								<div class="formTit">
+									<strong>툴팁추가</strong>
+									<div class="tooltipWrap w96">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">{대체텍스트}툴팁 열기</span></button>
+										<div class="tooltipCont">
+											<p>내용이 노출됩니다.</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="inputList">
+									<input type="text" title="대체텍스트" placeholder="대체텍스트">
+									<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+								</div>
+							</li>
+							<li>
+								<div class="formTit"><strong>금액</strong></div>
+								<div class="inputList unitMan">
+									<input type="tel" title="대체텍스트" placeholder="대체텍스트">
+									<span class="unit">원</span>
+									<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- ### 유형3 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">유형3 : &gt; div.titListBox<span class="sub">[F:16px]</span></h4>
+<div class="guide_code" data-label="기본구조">
+<pre>
+&lt;div class="formWrap"&gt;
+	&lt;div class="titListBox"&gt;
+		&lt;ul&gt; &lt;!-- 라인이 필요할 경우 : ul class="lineType" --&gt;
+			&lt;li&gt;
+				&lt;div class="formTitN"&gt;&lt;strong&gt;항목명&lt;/strong&gt;&lt;/div&gt;
+				&lt;div class="inputList"&gt;입력폼영역&lt;/div&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;div class="formTitN"&gt;&lt;strong&gt;항목명&lt;/strong&gt;&lt;/div&gt;
+				&lt;div class="inputList"&gt;입력폼영역&lt;/div&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+					<ul class="guide_txt">
+						<li>항목명(타이틀)의 폰트사이즈가 16px일 경우 사용함.</li>
+						<li>기본적으로 라인이 없으며, 모든 구분에 라인이 필요할 경우 <code>&lt;ul class="lineType"&gt;</code> 클래스를 추가함.</li>
+					</ul>
+
+					<h5 class="guide_title4">라인없음</h5>
+					<div class="formWrap boxTypeWrap">
+						<div class="titListBox">
+							<ul>
+								<li>
+									<div class="formTitN"><strong>항목명</strong></div>
+									<div class="inputList">
+										<input type="text" title="대체텍스트" placeholder="대체텍스트">
+										<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+									</div>
+								</li>
+								<li>
+									<div class="formTitN">
+										<strong>툴팁추가</strong>
+										<div class="tooltipWrap w96">
+											<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">{대체텍스트}툴팁 열기</span></button>
+											<div class="tooltipCont">
+												<p>내용이 노출됩니다.</p>
+												<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+											</div>
+										</div>
+									</div>
+									<div class="inputList">
+										<input type="text" title="대체텍스트" placeholder="대체텍스트">
+										<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+									</div>
+								</li>
+								<li>
+									<div class="formTitN"><strong>금액</strong></div>
+									<div class="inputList unitMan">
+										<input type="tel" title="대체텍스트" placeholder="대체텍스트">
+										<span class="unit">원</span>
+										<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+									</div>
+								</li>
+								<li>
+									<hr class="divLine3" aria-hidden="true">
+									<div class="formTitN">
+										<strong>증가/감소</strong>
+										<span class="supExp">(부가설명)</span>
+									</div>
+									<div class="flexRBox">
+										<div class="deductBtnWrap">
+											<button type="button" class="minusBtn"><span class="blind">부모님 공제(70세 이상 부양가족 수) 빼기</span></button>
+											<span class="deductNum"><em>0</em></span>
+											<button type="button" class="plusBtn"><span class="blind">부모님 공제(70세 이상 부양가족 수) 더하기</span></button>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="formTitN"><strong>이메일주소</strong></div>
+									<div class="emailWrap">
+										<div class="email">
+											<div class="inputB01">
+												<div class="inputList">
+													<input type="text" id="" name="" title="이메일 계정" placeholder="이메일 입력">
+												</div>
+											</div>
+											<div class="inputDash">@</div>
+											<div class="inputB01 inputList">
+												<a href="javascript:;" title="이메일 도메인 선택" aria-haspopup="true">
+													<span class="selectValue">선택하세요.</span>
+													<span class="selectBtn"></span>
+												</a>
+												<select name="" title="선택해주세요" >
+													<option></option>
+												</select>
+											</div>
+										</div>
+										<!-- 직접입력 선택시 활성화 -->
+										<div class="inputList">
+											<input type="text" title="이메일 주소 직접입력" placeholder="이메일 주소 입력">
+											<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+										</div>
+										<!--// 직접입력 선택시 활성화 -->
+									</div>
+								</li>
+								<li>
+									<div class="formTit"><strong>주소</strong></div>
+									<div class="boxRadio">
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo2" id="rdo21" type="radio" checked>
+												<label for="rdo21">자택</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo2" id="rdo22" type="radio">
+												<label for="rdo22">직장</label>
+											</span>
+										</div>
+									</div>
+									<div class="inputBoth01 addWrap">
+										<div class="inputB01 inputList">
+											<input type="text" title="우편번호" readonly>
+											<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+										</div>
+										<div class="areaInpBtn">
+											<button class="btnInpLine">주소검색</button>
+										</div>
+									</div>
+									<div class="inputList">
+										<input type="text" id="" name="" title="주소" readonly>
+									</div>
+									<div class="inputList">
+										<input type="text" id="" name="" title="상세 주소" placeholder="상세 주소 입력">
+									</div>
+								</li>
+								<li>
+									<div class="formTitN"><strong>기타유형 : 서브 폼</strong></div>
+									<div class="grayBox mb0">
+										<ul>
+											<li>
+												<div class="formTitN"><strong>단지</strong></div>
+												<div class="inputList">
+													<a href="javascript:;" title="단지" aria-haspopup="true" onclick="slidePopOption();return false;">
+														<span class="selectValue">선택</span>
+														<span class="selectBtn"></span>
+													</a>
+													<select name="" title="선택해주세요">
+														<option></option>
+													</select>
+												</div>
+											</li>
+											<li class="mt20">
+												<div class="formTitN"><strong>동</strong></div>
+												<div class="inputList">
+													<a href="javascript:;" title="동" aria-haspopup="true" onclick="slidePopOption();return false;">
+														<span class="selectValue">선택</span>
+														<span class="selectBtn"></span>
+													</a>
+													<select name="" title="선택해주세요">
+														<option></option>
+													</select>
+												</div>
+											</li>
+											<li class="mt20">
+												<div class="formTitN"><strong>호</strong></div>
+												<div class="inputList">
+													<a href="javascript:;" title="호" aria-haspopup="true" onclick="slidePopOption();return false;">
+														<span class="selectValue">선택</span>
+														<span class="selectBtn"></span>
+													</a>
+													<select name="" title="선택해주세요">
+														<option></option>
+													</select>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<h5 class="guide_title4 mt40">라인있음 : ul.lineType</h5>
+					<div class="formWrap boxTypeWrap">
+						<div class="titListBox">
+							<ul class="lineType">
+								<li>
+									<div class="formTitN"><strong>항목명</strong></div>
+									<div class="inputList">
+										<input type="text" title="대체텍스트" placeholder="대체텍스트">
+										<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+									</div>
+								</li>
+								<li>
+									<div class="formTitN">
+										<strong>툴팁추가</strong>
+										<div class="tooltipWrap w96">
+											<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">{대체텍스트}툴팁 열기</span></button>
+											<div class="tooltipCont">
+												<p>내용이 노출됩니다.</p>
+												<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+											</div>
+										</div>
+									</div>
+									<div class="inputList">
+										<input type="text" title="대체텍스트" placeholder="대체텍스트">
+										<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+									</div>
+								</li>
+								<li>
+									<div class="formTitN"><strong>금액</strong></div>
+									<div class="inputList unitMan">
+										<input type="tel" title="대체텍스트" placeholder="대체텍스트">
+										<span class="unit">원</span>
+										<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+									</div>
+								</li>
+								<li>
+									<div class="formTitN">
+										<strong>공적연금</strong>
+										<button type="button" class="contBtn02">불러오기</button>
+									</div>
+									<div class="formTxt">연결된 자산에서 가져온 공적연금 정보입니다.<br>금액이 조회되지 않거나, 차이가 있는 경우 직접 입력해주세요.</div>
+									<div class="inputList">
+										<a href="javascript:;" title="대체텍스트" aria-haspopup="true" onclick="slidePopOption();return false;">
+											<span class="selectValue">선택</span>
+											<span class="selectBtn"></span>
+										</a>
+										<select name="" title="선택해주세요">
+											<option></option>
+										</select>
+									</div>
+									<div class="inputVal mt10" aria-live="assertive">(1억원)</div>
+									<div class="inputList unitMan">
+										<input type="tel" title="대체텍스트" placeholder="대체텍스트">
+										<span class="unit">원</span>
+										<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+									</div>
+								</li>
+								<li>
+									<div class="formTitN">
+										<strong>실물자산</strong>
+									</div>
+									<div class="formTxt">등록한 실물자산이 있어요. <br>은퇴준비자금에 포함할까요?</div>
+									<div class="boxRadio">
+										<div class="boxRadioInn">
+											<span>
+												<input type="radio" name="formRadio99" id="formRadio991" checked>
+												<label for="formRadio991">항목명1</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input type="radio" name="formRadio99" id="formRadio992">
+												<label for="formRadio992">항목명2</label>
+											</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- ### 유형4 ### -->
+				<div class="guide_area mt40">
+					<h4 class="guide_title3">유형4 : formArea1 <i class="guide_tag">2023고도화</i></h4>
+					<div class="formArea1">
+						<span>
+							<input type="checkbox" id="formChk11" class="chekTypeOther">
+							<label for="formChk11">항목명</label>
+						</span>
+						<span>
+							<input type="checkbox" id="formChk12" class="chekTypeOther" checked>
+							<label for="formChk12">항목명</label>
+						</span>
+					</div>
+	
+					<div class="formArea1">
+						<p class="side">텍스트 노출</p>
+						<span>
+							<input type="checkbox" id="formChk21">
+							<label for="formChk21">항목명</label>
+						</span>
+						<span>
+							<input type="checkbox" id="formChk22" checked>
+							<label for="formChk22">항목명</label>
+						</span>
+					</div>
+	
+					<div class="formArea1">
+						<div class="formArray">
+							<span class="chkRadio">
+								<input type="radio" id="sample001" name="sample01">
+								<label for="sample001">항목명</label>
+							</span>
+							<span class="chkRadio">
+								<input type="radio" id="sample002" name="sample01" checked="">
+								<label for="sample002">항목명</label>
+							</span>
+						</div>
+						<p class="side">텍스트 노출</p>
+					</div>
+				</div>
+
+				<!-- ### 유형5 ### -->
+				<div class="guide_area mt40">
+					<h4 class="guide_title3">유형5 : formArea2 <i class="guide_tag">2023고도화</i></h4>
+					<h5 class="guide_title4">기본</h5>
+					<div class="formArea2">
+						<dl class="form">
+							<dt>항목명</dt>
+							<dd><input type="tel" class="inputText1 t1" value="123" title="@대체텍스트" placeholder="DEFUALT"></dd>
+						</dl>
+						<dl class="form">
+							<dt>항목명</dt>
+							<dd><input type="tel" class="inputText1 t1" value="123" title="@대체텍스트" placeholder="DEFUALT"></dd>
+						</dl>
+						<!-- <p class="errorTxt">에러메세지</p> -->
+					</div>
+
+					<h5 class="guide_title4">오류 .form.error</h5>
+					<div class="formArea2">
+						<dl class="form error">
+							<dt>항목명</dt>
+							<dd><input type="tel" class="inputText1 t1" value="123" title="@대체텍스트" placeholder="DEFUALT"></dd>
+						</dl>
+						<dl class="form">
+							<dt>항목명</dt>
+							<dd><input type="tel" class="inputText1 t1" value="123" title="@대체텍스트" placeholder="DEFUALT"></dd>
+						</dl>
+						<p class="errorTxt">ALERT 메시지 출력영역</p>
+					</div>
+				</div>
+				<!-- ### // ### -->
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [선택형] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">선택형</h3>
+
+				<!-- ### 유형1 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">유형1 :.pickList </h4>
+					<h5 class="guide_title4">기본 항목명 선택 </h5>
+					<div class="boxTypeWrap">
+						<div class="boxRadio rowType msaeType">
+							<ul class="icohc pickList">
+								<li>	
+									<input type="checkbox" name="MSAE1241P" id="MSAE1241P1" checked aria-label="입출금 (마이너스 대출은 제외)">	
+									<label for="MSAE1241P1" class="rdoCheck" aria-hidden="true">항목명1</label>
+								</li>
+								<li>	
+									<input type="checkbox" name="MSAE1241P" id="MSAE1241P2" checked aria-label="예적금">	
+									<label for="MSAE1241P2" class="rdoCheck" aria-hidden="true"> 항목명2 </label>
+								</li>
+								<li>	
+									<input type="checkbox" name="MSAE1241P" id="MSAE1241P3"  aria-label="투자">	
+									<label for="MSAE1241P3" class="rdoCheck" aria-hidden="true"> 항목명3 </label>
+								</li>
+							</ul>
+						</div>
+					</div>
+	
+					<h5 class="guide_title4">아이콘유형 </h5>
+					<div class="guide_area">
+						<ul class="icohc pickList">
+							<li>	
+								<input type="checkbox" name="MSHC5200" id="MSHC52001" checked aria-label="식품 : 건강식품의 다양한 효능">
+								<label for="MSHC52001" class="rdoCheck" aria-hidden="true">
+									<span class="imgWrap">
+										<span class="img">
+											<img src="../../images/category/hc/ico_cate_hc01.png" alt="식품 아이콘">
+										</span>
+									</span>
+									<div>
+										<strong class="pickTit">식품</strong>
+										<p class="pickTxt">건강식품의 다양한 효능</p>
+									</div>
+								</label>
+							</li>
+							<li>	
+								<input type="checkbox" name="MSHC5200" id="MSHC52002" checked aria-label="비만 : 살이 찌면 생기는 합병증">	
+								<label for="MSHC52002" class="rdoCheck" aria-hidden="true">
+									<span class="imgWrap">
+										<span class="img">
+											<img src="../../images/category/hc/ico_cate_hc02.png" alt="비만 아이콘">
+										</span>
+									</span>
+									<div>
+										<strong class="pickTit">비만</strong>
+										<p class="pickTxt">살이 찌면 생기는 합병증</p>
+									</div>
+								</label>
+							</li>
+							<li>	
+								<input type="checkbox" name="MSHC5200" id="MSHC52003" checked aria-label="피부 : 꿀피부를 위한 한걸음">	
+								<label for="MSHC52003" class="rdoCheck" aria-hidden="true">
+									<span class="imgWrap">
+										<span class="img">
+											<img src="../../images/category/hc/ico_cate_hc03.png" alt="피부 아이콘">
+										</span>
+									</span>
+									<div>
+										<strong class="pickTit">피부</strong>
+										<p class="pickTxt">꿀피부를 위한 한걸음</p>
+									</div>
+								</label>
+							</li>
+							<li>	
+								<input type="checkbox" name="MSHC5200" id="MSHC52004" aria-label="정신건강 : 보이지 않는 병 정신건강">	
+								<label for="MSHC52004" class="rdoCheck" aria-hidden="true">
+									<span class="imgWrap">
+										<span class="img">
+											<img src="../../images/category/hc/ico_cate_hc04.png" alt="정신건강 아이콘">
+										</span>
+									</span>
+									<div>
+										<strong class="pickTit">정신건강</strong>
+										<p class="pickTxt">보이지 않는 병 정신건강</p>
+									</div>
+								</label>
+							</li>
+							<li>	
+								<input type="checkbox" name="MSHC5200" id="MSHC52005" aria-label="치아건강 : 건강한 치아를 위한 습관">	
+								<label for="MSHC52005" class="rdoCheck" aria-hidden="true">
+									<span class="imgWrap">
+										<span class="img">
+											<img src="../../images/category/hc/ico_cate_hc05.png" alt="치아건강 아이콘">
+										</span>
+									</span>
+									<div>
+										<strong class="pickTit">치아건강</strong>
+										<p class="pickTxt">건강한 치아를 위한 습관</p>
+									</div>
+								</label>
+							</li>
+							<li>	
+								<input type="checkbox" name="MSHC5200" id="MSHC52006" aria-label="수면건강 : 좋은 수면을 위한 지식">	
+								<label for="MSHC52006" class="rdoCheck" aria-hidden="true">
+									<span class="imgWrap">
+										<span class="img">
+											<img src="../../images/category/hc/ico_cate_hc06.png" alt="수면건강 아이콘">
+										</span>
+									</span>
+									<div>
+										<strong class="pickTit">수면건강</strong>
+										<p class="pickTxt">좋은 수면을 위한 지식</p>
+									</div>
+								</label>
+							</li>
+							<li>	
+								<input type="checkbox" name="MSHC5200" id="MSHC52007" aria-label="기타 : 다양한 의학지식">	
+								<label for="MSHC52007" class="rdoCheck" aria-hidden="true">
+									<span class="imgWrap">
+										<span class="img">
+											<img src="../../images/category/hc/ico_cate_hc07.png" alt="기타 아이콘">
+										</span>
+									</span>
+									<div>
+										<strong class="pickTit">기타</strong>
+										<p class="pickTxt">다양한 의학지식</p>
+									</div>
+								</label>
+							</li>
+						</ul>
+						<hr class="guide_line">
+						<ul class="pickList">
+							<li>	
+								<input type="radio" name="MSLF2150" id="MSLF21501" checked aria-label="자동 등록:주민등록등본 정보를 통해 자동으로 입력합니다.">	
+								<label for="MSLF21501" class="rdoCheck" aria-hidden="true">
+									<span class="lf_bg pickCate"><img src="../../images/ico_lf01.gif" alt=""></span>
+									<span class="txt">
+										<em class="tit">자동 등록</em>
+										<em class="sub">주민등록등본 정보를 통해<br />자동으로 입력합니다.</em>
+									</span>
+								</label>
+							</li>
+							<li>
+								<input type="radio" name="MSLF2150" id="MSLF21502" class="desgChk" aria-label="직접 등록:직접 가족정보를 입력합니다.">
+								<label for="MSLF21502" class="rdoCheck">
+									<span class="lf_bg pickCate"><img src="../../images/ico_lf02.gif" alt=""></span>
+									<span class="txt">
+										<em class="tit">직접 등록</em>
+										<em class="sub">직접 가족정보를 입력합니다.</em>
+									</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+	
+					<h5 class="guide_title4">계좌명 선택</h5>
+					<div class="formWrap msaeType boxTypeWrap">
+						<div class="boxRadio rowType msaeType">
+							<ul class="icohc pickList">
+								<li>	
+									<input type="checkbox" name="MSFP4120P" id="MSFP4120P1" checked aria-label="항목명1 (0000000000 계좌명)">	
+									<label for="MSFP4120P1" class="rdoCheck" aria-hidden="true">
+										<div class="withdrawList">
+											<span class="title">항목명1</span>
+											<span class="accNum">0000000000 계좌명</span>
+										</div>
+									</label>
+								</li>
+								<li>	
+									<input type="checkbox" name="MSFP4120P" id="MSFP4120P2" aria-label="항목명2 (0000000000 계좌명)">	
+									<label for="MSFP4120P2" class="rdoCheck" aria-hidden="true"> 
+										<div class="withdrawList">
+											<span class="title">항목명2</span>
+											<span class="accNum">0000000000 계좌명</span>
+										</div>
+									</label>
+								</li>
+								<li>	
+									<input type="checkbox" name="MSFP4120P" id="MSFP4120P3" aria-label="항목명3 (0000000000 계좌명)">	
+									<label for="MSFP4120P3" class="rdoCheck" aria-hidden="true">
+										<div class="withdrawList">
+											<span class="title">항목명3</span>
+											<span class="accNum">0000000000 계좌명</span>
+										</div>
+									</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+	
+					<h5 class="guide_title4">희망금액선택 + 직접입력</h5>
+					<div class="formWrap msaeType boxTypeWrap">
+						<div class="boxRadio rowType msaeType">
+							<ul class="icohc pickList psHopeRdo">
+								<li>	
+									<input type="radio" name="MSAE2351P" id="MSAE2351P1" checked aria-label="절약하며 118만원">	
+									<label for="MSAE2351P1" class="rdoCheck" aria-hidden="true"><span>절약하며 </span><span class="value">118만원</span></label>
+								</li>
+								<li>	
+									<input type="radio" name="MSAE2351P" id="MSAE2351P2"  aria-label="적정하게 167만원">	
+									<label for="MSAE2351P2" class="rdoCheck" aria-hidden="true"><span>적정하게 </span><span class="value">167만원</span></label>
+								</li>
+								<li>	
+									<input type="radio" name="MSAE2351P" id="MSAE2351P3"  aria-label="여유롭게">	
+									<label for="MSAE2351P3" class="rdoCheck" aria-hidden="true"> <span>여유롭게 </span><span class="value">329만원</span> </label>
+								</li>
+								<li class="inptType">	
+									<div class="inputList unitMan"> 
+										<input type="tel" title="대체텍스트" placeholder="직접입력">
+										<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+									</div>
+								</li>
+								<li class="inptType">	
+									<div class="inputList unitMan"> 
+										<input type="tel" title="대체텍스트" placeholder="직접입력" value="123">
+										<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+	
+					<h5 class="guide_title4">희망금액선택 + 직접입력 <i class="guide_tag">2023고도화</i></h5>
+					<p class="guide_txt">직접입력 유형 변경</p>
+					<div class="formWrap msaeType boxTypeWrap">
+						<div class="boxRadio rowType msaeType">
+							<ul class="icohc pickList psHopeRdo">
+								<li>	
+									<input type="radio" name="MSAEa400" id="MSAEa4001" checked aria-label="절약하며">	
+									<label for="MSAEa4001" class="rdoCheck" aria-hidden="true"><span>절약하며 </span><span class="value">118만원</span></label>
+								</li>
+								<li>	
+									<input type="radio" name="MSAEa400" id="MSAEa4002"  aria-label="적정하게">	
+									<label for="MSAEa4002" class="rdoCheck" aria-hidden="true"><span>적정하게 </span><span class="value">167만원</span></label>
+								</li>
+								<li>	
+									<input type="radio" name="MSAEa400" id="MSAEa4003"  aria-label="여유롭게">	
+									<label for="MSAEa4003" class="rdoCheck" aria-hidden="true"> <span>여유롭게 </span><span class="value">329만원</span> </label>
+								</li>
+								<li class="inptType">
+									<div class="inputList unitMan3">
+										<span class="unitType02">직접입력</span>
+										<input type="tel" title="대체텍스트" placeholder="직접입력">
+										<span class="unit">만원</span>
+										<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+									</div>
+								</li>
+								<li class="inptType">
+									<div class="inputList unitMan3 error">
+										<span class="unitType02">직접입력</span>
+										<input type="tel" title="직접입력" value="300" placeholder="직접입력">
+										<span class="unit">만원</span>
+										<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+									</div>
+									<p class="errorTxt" aria-live="assertive">에러 메시지 출력</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- ### 유형2 ### -->
+				<div class="popCont">
+					<h4 class="guide_title3">유형2(선택팝업) :.selectList </h4>
+				
+					<h5 class="guide_title4">A 태그</h5>
+					<div class="guide_area3">
+						<ul class="selectList">
+							<li class="active"><a href="javascript:;" role="button" title="선택됨">항목명1</a></li>
+							<li><a href="javascript:;" role="button">항목명2</a></li>
+							<li><a href="javascript:;" role="button">항목명3</a></li>
+						</ul>
+					</div>
+
+					<h5 class="guide_title4">BUTTON 태그  <i class="guide_tag">2023고도화</i></h5>
+					<div class="guide_area3">
+						<ul class="selectList">
+							<li class="active"><button type="button" aria-selected="true" title="선택됨">항목명1</button></li>
+							<li><button type="button" aria-selected="false">항목명2</button></li>
+							<li><button type="button" aria-selected="false">항목명3</button></li>
+						</ul>
+					</div>
+
+
+					<h5 class="guide_title4">계좌선택1</h5>
+					<div class="guide_area3">
+						<ul class="selectList">
+							<li class="active">
+								<a href="javascript:;" role="button" title="선택됨" aria-selected="true">
+									[신한은행] e편한전세대출
+									<ul class="listItem">
+										<li>
+											<span class="tit">잔액 : </span><span class="value"> 1,100,000<em class="won">원</em></span>
+											<span class="tit ml10">신규일 : </span><span class="value"> 2022.09.01</span>
+										</li>
+									</ul>
+								</a>
+							</li>
+							<li><a href="javascript:;" role="button">
+								[농협은행] 직장인대출
+									<ul class="listItem">
+										<li>
+											<span class="tit">잔액 : </span><span class="value"> 1,100,000<em class="won">원</em></span>
+											<span class="tit ml10">신규일 : </span><span class="value"> 2022.09.01</span>
+										</li>
+									</ul>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button">
+									<strong class="fwN">[NH농협]마이너스 대출</strong>
+									<div class="divingTxt fcGray"><span>잔액 1,100,000,000원</span><span>신규일자 2020.07.31</span></div>
+								</a>
+							</li>
+							<li class="active">
+								<a href="javascript:;" title="선택됨" aria-selected="true">
+									NH1934우대통장
+									<ul class="listItem">
+										<li>
+											<span class="mr5">농협은행 </span><span class="value"> 3510620888812</span>
+										</li>
+									</ul>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<h5 class="guide_title4">계좌선택2</h5>
+					<div class="guide_area3">
+						<ul class="selectList">
+							<li class="active">
+								<span class="imgWrap">
+									<img src="../../images/logos/AABG0000.png" alt="농협카드 로고" class="imgLogo">
+								</span>
+								<a href="javascript:;" role="button" title="선택됨">
+									<strong class="fwN">[신한은행]입출금통장</strong>
+									<div class="ob divingTxt fcGray"><span>0000</span></div>
+									<div class="accInfo">
+										<span class="accValue"><strong class="dataValue">1,000,000,000</strong><em class="won">원</em></span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<span class="imgWrap">
+									<img src="../../images/logos/AABG0000.png" alt="농협카드 로고" class="imgLogo">
+								</span>
+								<a href="javascript:;" role="button">
+									<strong class="fwN">두드림통장</strong>
+									<div class="ob divingTxt fcGray"><span>1111</span></div>
+									<div class="accInfo">
+										<span class="accValue"><strong class="dataValue">1,000,000,000</strong><em class="won">원</em></span>
+									</div>
+								</a>
+							</li>
+							<li class="select">
+								<span class="imgWrap">
+									<img src="../../images/logos/AABG0000.png" alt="농협카드 로고" class="imgLogo">
+								</span>
+								<a href="javascript:;" role="button">
+									<strong class="fwN">주식상품명</strong>
+									<div class="ob divingTxt fcGray"><span>2222</span></div>
+									<div class="accInfo">
+										<div class="wrapTag"><span class="type02">연결중</span></div>
+										<span class="accValue"><strong class="dataValue">1,000,000,000</strong><em class="won">원</em></span>
+									</div>
+								</a>
+							</li>
+							<li class="disabled">
+								<span class="imgWrap">
+									<img src="../../images/logos/AABG0000.png" alt="농협카드 로고" class="imgLogo">
+								</span>
+								<a href="javascript:;" role="button" aria-disabled="true">
+									<strong class="fwN">[하나은행]마이너스 대출</strong>
+									<div class="ob divingTxt fcGray"><span>대출잔액 1,100,000,000원</span><span>만기일 2020.07.31</span></div>
+									<div class="accInfo">
+										<div class="wrapTag"><span class="type05">1만원 미만</span><span class="type05">1개월 미만</span></div>
+										<span class="accValue"><strong class="dataValue">1,000,000,000</strong><em class="won">원</em></span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<h5 class="guide_title4">카드선택</h5>
+					<div class="guide_area3">
+						<ul class="selectList">
+							<li class="active" role="button">
+								<span class="imgWrap">
+									<img src="../../images/logos/AABG0000.png" alt="농협카드 로고" class="imgLogo">
+								</span>
+								<a href="javascript:;" title="선택됨">NH농협 Asiana Club(아시아나클럽)적립형 카드</a>
+							</li>
+							<li role="button">
+								<span class="imgWrap">
+									<img src="../../images/logos/AAFO0000.png" alt="현대카드 로고" class="imgLogo">
+								</span>
+								<a href="javascript:;">
+									현대카드 ZERO MOBILE Edition2 (할인형)
+								</a>
+							</li>
+						</ul>
+					</div>
+
+
+					<h5 class="guide_title4">날짜선택 : .selectList + .selMonth</h5>
+					<div class="guide_area3">
+						<ul class="selectList selMonth">
+							<li class="cs active">
+								<a href="javascript:;" role="button"><em class="year">2022년</em>7월<span class="titT">(07.05~08.04)</span></a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button"><em class="year">2022년</em>6월<span class="titT">(06.05~07.04)</span></a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button"><em class="year">2022년</em>5월<span class="titT">(05.05~06.04)</span></a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button"><em class="year">2022년</em>4월<span class="titT">(05.05~06.04)</span></a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button"><em class="year">2022년</em>3월<span class="titT">(03.05~04.04)</span></a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button"><em class="year">2022년</em>2월<span class="titT">(02.05~03.04)</span></a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button"><em class="year">2022년</em>1월<span class="titT">(01.05~02.04)</span></a>
+							</li>
+						</ul>
+						<ul class="selectList selMonth">
+							<li class="cs active">
+								<a href="javascript:;" role="button"><em class="year">2022년</em>7월</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button"><em class="year">2022년</em>6월</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button"><em class="year">2022년</em>5월</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button"><em class="year">2022년</em>4월</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button"><em class="year">2022년</em>3월</a>
+							</li>
+						</ul>
+						<ul class="selectList selMonth">
+							<li class="cs active">
+								<a href="javascript:;" role="button"><em class="year">2일</em></a>
+							</li>
+							<li class="">
+								<a href="javascript:;" role="button"><em class="year">3일</em></a>
+							</li>
+							<li class="">
+								<a href="javascript:;" role="button"><em class="year">4일</em></a>
+							</li>
+							<li class="">
+								<a href="javascript:;" role="button"><em class="year">5일</em></a>
+							</li>
+							<li class="">
+								<a href="javascript:;" role="button"><em class="year">6일</em></a>
+							</li>
+							<li class="">
+								<a href="javascript:;" role="button"><em class="year">7일</em></a>
+							</li>
+							<li class="">
+								<a href="javascript:;" role="button"><em class="year">8일</em></a>
+							</li>
+						</ul>
+					</div>
+
+
+					<h5 class="guide_title4 mb40">박스유형 : .selectList + .accList + .isBorder</h5>
+					<div class="guide_area3" style="padding:40px 17px; margin-top:-40px;">
+						<ul class="selectList accList isBorder">
+							<li class="dsfNone">
+								<a href="javascript:;">
+									<div class="accTit">
+										<span class="imgWrap"><img src="../../images/logos/AAAZ0000.png" alt="NH농협은행 로고" class="imgLogo"></span>
+										<div class="accInfoWrap">
+											<p class="accTit">NH농협은행</p>
+											<div class="accInfo">
+												<span class="accNum">301******</span>
+											</div>
+										</div>
+									</div>
+									 <ul class="detailList">
+										 <li>
+											 <span class="tit">충전조건</span>
+											 <span class="value">매월 15일</span>
+										 </li>
+										 <li>
+											<span class="tit">충전금액</span>
+											<span class="value">300,000<em class="won">원</em></span>
+										</li>
+									 </ul>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="guide_area3" style="padding:40px 17px; margin-top:-40px;">
+						<ul class="selectList accList isBorder">
+							<li>
+								<a href="javascript:;">
+									<span class="imgWrap">
+										<img src="../../images/logo_bookmark.png" alt="" class="imgLogo">
+									</span>
+									<div class="accInfoWrap">
+										<p class="accTit">즐겨찾기&middot;숨기기</p>
+										<div class="accInfo">
+											<span class="accNum">자산을 즐겨찾기에 등록하거나 숨길 수 있어요.</span>
+										</div>
+									 </div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<span class="imgWrap">
+										<img src="../../images/logo_asset.png" alt="" class="imgLogo">
+									</span>
+									<div class="accInfoWrap">
+										<p class="accTit">순자산 금액 설정</p>
+										<div class="accInfo">
+											<span class="accNum">순자산에 포함하고 싶은 금액을 설정해요.</span>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="guide_area3" style="padding:40px 17px; margin-top:-40px;">
+						<ul class="selectList accList isBorder">
+							<li class="active">
+								<a href="javascript:;" role="button" title="카드선택">
+									<span class="imgWrap">
+										<img src="../../images/logos/AABG0000.png" alt="농협카드 로고" class="imgLogo">
+									</span>
+									<div class="accInfoWrap">
+										<p class="accTit">NH농협카드1</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button" title="카드선택">
+									<span class="imgWrap">
+										<img src="../../images/logos/AABG0000.png" alt="농협카드 로고" class="imgLogo">
+									</span>
+									<div class="accInfoWrap">
+										<p class="accTit">NH농협카드2</p>
+									</div>
+								</a>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+
+				<!-- ### 유형3 ### -->
+				<div class="guide_area">
+					<h4 class="guide_title3">유형3 :.listPsion</h4>
+					<ul class="listPsion">
+						<li>
+							<button type="button" title="선택됨" class="active">
+								<strong class="title">국민연금</strong>
+							</button>
+						</li>
+						<li>
+							<button type="button">
+								<strong class="title">공무원연금<span>(재직기간 10년 이상)</span></strong>
+								<span class="sub">재직기간이 10년 이상인 경우만 조회가 가능합니다.</span>
+							</button>
+						</li>
+						<li>
+							<button type="button">
+								<strong class="title">사학연금</strong>
+							</button>
+						</li>
+						<li>
+							<button type="button">
+								<strong class="title">기타 공적연금(군인연금, 별정우체국연금 등)</strong>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- -------------------------------------- -->
+		</section>
+
+		<!-- ################################# -->
+		<!-- ### 검색 영역 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT2">
+			<h2 class="guide_title">검색 영역</h2>
+			<!-- -------------------------------------- -->
+			<!-- [유형1] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형1</h3>
+				<div class="guide_area">
+					<h4 class="guide_title3">영업점검색</h4>
+					<div class="formWrap mt10">
+						<ul class="bdt_none">
+							<li>
+								<div class="inputList">
+									<a href="javascript:;" title="영업점 검색" aria-haspopup="true">
+										<span class="selectValue">영업점명</span>
+										<span class="selectBtn"></span>
+									</a>
+									<select name="" title="선택해주세요">
+										<option value=""></option>
+									</select>
+								</div>
+							</li>
+							<li class="addrSrch">
+								<div class="inputList">
+									<input type="text" title="검색어 입력" value="" placeholder="2자 이상 입력해 주세요.">
+									<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+									<button class="btnSearch"><span class="blind">찾기</span></button>
+								</div>
+								<div class="inputList error">
+									<input type="text" title="검색어" value="가" placeholder="2자 이상 입력해 주세요.">
+									<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+									<button class="btnSearch"><span class="blind">찾기</span></button>
+								</div>
+								<p class="errorTxt">검색어를 2자이상 입력해 주세요.</p>
+								<p class="infoTxt mt5">영업점명, 지하철역명을 선택하고 검색어를 입력하시고 검색버튼을 선택하면 검색할 수 있습니다.</p> 
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="guide_area2">
+					<h4 class="guide_title3">주소검색</h4>
+					<div class="formWrap boxTypeWrap">
+						<div class="titListBox">
+							<ul>
+								<li class="addrSrch">
+									<div class="formTitN"><strong>주소를 검색해주세요.</strong></div>
+									<div class="inputList">
+										<input type="text" title="지역명+단지명 또는 지번주소 입력" value="" placeholder="지역명+단지명 또는 지번주소 입력">
+										<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+										<button class="btnSearch"><span class="blind">찾기</span></button>
+									</div>
+									<div class="infoGrayBox">
+										오피스텔은 주택분 재산세 과세대상으로 가정하여 재산세 및 종합부동산세가 계산됩니다.
+									</div>
+									<hr class="divLine3" aria-hidden="true">
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_area">
+					<h4 class="guide_title3">주소찾기</h4>
+					<div class="formWrap">
+						<div class="titListBox">
+							<ul>
+								<li class="addrSrch">
+									<div class="txtt2 mb15"><strong>도로명 주소 찾기</strong></div>
+									<div class="inputList">
+										<input type="text" title="도로명 주소 찾기" value="" placeholder="">
+										<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+										<button class="btnSearch"><span class="blind">찾기</span></button>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="searchResultWrap type02">
+						<ul class="searchResultList">
+							<li>
+								<a href="javascript:;" role="button">
+									<span class="title">경기도 의왕시 청계동 657
+										경기도 의왕시 성고개로 59 (포일동)</span>
+									<span class="subTxt">16006 (16006)</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button">
+									<span class="title">경기도 의왕시 청계동 657
+										경기도 의왕시 성고개로 59 (포일동)</span>
+									<span class="subTxt">16006 (16006)</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button">
+									<span class="title">경기도 의왕시 청계동 657
+										경기도 의왕시 성고개로 59 (포일동)</span>
+									<span class="subTxt">16006 (16006)</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [유형2] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형2</h3>
+				<div class="guide_area2">
+					<h4 class="guide_title3">적요검색 : .filterSearchWrap</h4>
+					<div class="boxTypeWrap">
+						<div class="filterSearchWrap">
+							<!-- 날짜 선택 및 정렬 -->
+							<div class="filterWrap">
+								<button type="button" class="btnSearch2"><span class="blind">적요검색 열기</span></button>
+								<span class="sortValue">2020.09.01 ~ 2020.09.30</span>
+								<span class="sortValue">전체</span>
+								<button type="button" class="sortBtn"><span class="blind">조회조건 선택 설정하기</span></button>
+							</div>
+							<!-- // 날짜 선택 및 정렬 -->
+							
+							<div class="filterSearch" aria-label="적요검색" style="display:none">
+								<div class="inputList ty01">
+									<input type="text" title="적요 검색 (2자 이상)" value="" placeholder="적요 검색 (2자 이상)">
+									<button class="btnSearch"><span class="blind">검색</span></button>
+									<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+								</div>
+								<button class="btnSearDel"><span class="blind">적요검색 닫기</span></button>
+								<div class="filterSearchRes" style="display:none">‘길동’ 검색결과 총 1건</div>
+							</div>
+						</div>
+					</div>
+					<script type="text/javascript">
+						$('.filterSearchWrap .btnSearch2').click(function(){
+							var $this = $(this);
+							var $parent = $this.closest('.filterSearchWrap');
+							if (!$this.hasClass('searchAfter')){
+								$parent.find('.filterSearch').show().find('.inputList').show().find('input:text').focus();
+								$parent.find('.filterSearchRes').hide();
+								$parent.find('.filterSearch').find('.btnSearDel').show().removeClass('mt0');
+							}else{
+								$parent.find('.filterSearch').hide();
+								$this.removeClass('searchAfter').find('.blind').text('적요검색 열기');
+							}
+						});
+						$('.filterSearchWrap .btnSearch').click(function(){
+							var $this = $(this);
+							$this.closest('.filterSearch').find('.filterSearchRes').show();
+							$this.closest('.inputList').hide();
+							$this.closest('.inputList').siblings('.btnSearDel').addClass('mt0');
+						});
+	
+						$('.btnSearDel').click(function(){
+							var $this = $(this);
+							$this.closest('.filterSearch').hide();
+						});
+					</script>
+				</div>
+			</div>
+			<!-- -------------------------------------- -->
+		</section>
+
+		<!-- ################################# -->
+		<!-- ### 조회 영역 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT3">
+			<h2 class="guide_title">조회 영역</h2>
+			<!-- -------------------------------------- -->
+			<!-- [조회조건 설정] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">조회조건 설정 : .searchFormWrap</h3>
+				<div class="guide_area">
+					<div class="formWrap">
+						<ul class="searchFormWrap">
+							<li>
+								<strong class="formTit">조회기간</strong>
+								<div class="calendarForm">
+									<div class="cal">
+										<div class="inputList">
+											<input type="tel" value="2021-10-01" title="조회 시작일" placeholder="시작일선택" readonly="readonly">
+											<a href="javascript:;" class="btnCalendar" title="시작일 날짜선택" role="button"><span class="blind">날짜선택</span></a>
+										</div>
+									</div>
+									<span class="symbol">-</span>
+									<div class="cal">
+										<div class="inputList">
+											<input type="tel" value="2021-10-08" title="조회 종료일" placeholder="종료일선택" readonly="readonly">
+											<a href="javascript:;" class="btnCalendar" title="종료일 날짜선택" role="button"><span class="blind">날짜선택</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="roundChkWrap mt15">
+									<ul>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="sample20" id="sample21" aria-label="조회기간(1주일)">
+												<label for="sample21" aria-hidden="true">1주일</label>
+											</span>
+										</li>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="sample20" id="sample22" aria-label="조회기간(1개월)">
+												<label for="sample22" aria-hidden="true">1개월</label>
+											</span>
+										</li>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="sample20" id="sample23" aria-label="조회기간(3개월)" checked>
+												<label for="sample23" aria-hidden="true">3개월</label>
+											</span>
+										</li>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="sample20" id="sample24" aria-label="조회기간(6개월)">
+												<label for="sample24" aria-hidden="true">6개월</label>
+											</span>
+										</li>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="sample20" id="sample25" aria-label="조회기간(1년)">
+												<label for="sample25" aria-hidden="true">1년</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+								<p class="subTxt2">조회기간은 최대 1년 까지만 설정 가능합니다.</p>
+							</li>
+							<li>
+								<strong class="formTit">입출금 유형</strong>
+								<div class="boxRadio ">
+									<div class="boxRadioInn">
+										<span>
+											<input name="rdo00" id="rdo01" type="radio" aria-label="입출금 유형(전체)" checked>
+											<label for="rdo01" aria-hidden="true">전체</label>
+										</span>
+									</div>
+									<div class="boxRadioInn">
+										<span>
+											<input name="rdo00" id="rdo02" type="radio" aria-label="입출금 유형(입금)">
+											<label for="rdo02" aria-hidden="true">입금</label>
+										</span>
+									</div>
+									<div class="boxRadioInn">
+										<span>
+											<input name="rdo00" id="rdo03" type="radio" aria-label="입출금 유형(출금)">
+											<label for="rdo03" aria-hidden="true">출금</label>
+										</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<strong class="formTit">거래 유형</strong>
+								<div class="roundChkWrap mt15">
+									<ul>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="MSASC232PB" id="MSASC232PB1" aria-label="거래 유형(전체)" checked>
+												<label for="MSASC232PB1" aria-hidden="true">전체</label>
+											</span>
+										</li>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="MSASC232PB" id="MSASC232PB2" aria-label="거래 유형(충전)">
+												<label for="MSASC232PB2" aria-hidden="true">충전</label>
+											</span>
+										</li>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="MSASC232PB" id="MSASC232PB3" aria-label="거래 유형(적립)">
+												<label for="MSASC232PB3" aria-hidden="true">적립</label>
+											</span>
+										</li>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="MSASC232PB" id="MSASC232PB4" aria-label="거래 유형(결제)">
+												<label for="MSASC232PB4" aria-hidden="true">결제</label>
+											</span>
+										</li>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="MSASC232PB" id="MSASC232PB5" aria-label="거래 유형(송금)">
+												<label for="MSASC232PB5" aria-hidden="true">송금</label>
+											</span>
+										</li>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="MSASC232PB" id="MSASC232PB6" aria-label="거래 유형(기타)">
+												<label for="MSASC232PB6" aria-hidden="true">기타</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</li>
+							 <li>
+								<strong class="formTit">정렬기준</strong>
+								<div class="boxRadio ">
+									<div class="boxRadioInn">
+										<span>
+											<input name="rdo10" id="rdo11" type="radio" aria-label="정렬기준(최근 거래순)" checked>
+											<label for="rdo11" aria-hidden="true">최근 거래순</label>
+										</span>
+									</div>
+									<div class="boxRadioInn">
+										<span>
+											<input name="rdo10" id="rdo12" type="radio" aria-label="정렬기준(과거 거래순)">
+											<label for="rdo12" aria-hidden="true">과거 거래순</label>
+										</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [거래구분] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">거래구분 : .addrSelectWrap</h3>
+				<div class="guide_area">
+					<strong class="formTit bdNone mt0 ">거래구분</strong>
+					<div class="addrSelectWrap">
+						<div class="boxCheck">
+							<div class="boxChkInn">
+								<input name="MSCS2500P" id="MSCS2500P01" type="checkbox" aria-label="거래구분(신용카드)" checked>
+								<label for="MSCS2500P01" aria-hidden="true">신용카드</label> 
+							</div>
+							<div class="boxChkInn">
+								<input name="MSCS2500P" id="MSCS2500P02" type="checkbox" aria-label="거래구분(체크카드)" checked>
+								<label for="MSCS2500P02" aria-hidden="true">체크카드</label>
+							</div>
+							<div class="boxChkInn">
+								<input name="MSCS2500P" id="MSCS2500P03" type="checkbox" aria-label="거래구분(페이결제)" checked>
+								<label for="MSCS2500P03" aria-hidden="true">페이결제</label>
+							</div>
+							<div class="boxChkInn">
+								<input name="MSCS2500P" id="MSCS2500P04" type="checkbox" aria-label="거래구분(선불카드)" checked>
+								<label for="MSCS2500P04" aria-hidden="true">선불카드</label>
+							</div>
+							<div class="boxChkInn">
+								<input name="MSCS2500P" id="MSCS2500P05" type="checkbox" aria-label="거래구분(계좌)" checked>
+								<label for="MSCS2500P05" aria-hidden="true">계좌</label> 
+							</div>
+							<div class="boxChkInn">
+								<input name="MSCS2500P" id="MSCS2500P06" type="checkbox" aria-label="거래구분(현금)" checked>
+								<label for="MSCS2500P06" aria-hidden="true">현금</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- -------------------------------------- -->
+		</section>
+
+		<!-- ################################# -->
+		<!-- ### 약관동의 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT4">
+			<h2 class="guide_title">약관동의</h2>
+			<div class="guide_cont">
+				<h3 class="guide_title2">기본 : .formWrap.selectAll</h3>
+				<div class="formWrap selectAll">
+					<div class="total">
+						<div class="formHolder check">
+							<input type="checkbox" id="FORMSELALL" checked class="chekTypeOther">
+							<label class="check" for="FORMSELALL">전체동의</label>
+						</div>
+					</div>
+					<div class="cont">
+						<div class="formHolder check">
+							<input type="checkbox" id="FORMSELEL1" checked>
+							<label class="check" for="FORMSELEL1"><em>[필수]</em> 약관명</label>
+							<a href="javascript:;" class="btnView" role="button" title="[필수] 약관명"><span class="blind">약관보기</span></a>
+						</div>
+						<div class="agreeSubcont">
+							<div class="agreeSubTitle">
+								<strong>상품 서비스 안내 방법</strong>
+								<span class="formHolder check">
+									<input type="checkbox" id="FORMSELALL2" class="chekTypeOther">
+									<label class="check" for="FORMSELALL2"> 전체</label>
+								</span>
+							</div>
+							<div class="boxRadio">
+								<div class="boxRadioInn">
+									<span>
+										<input id="FORMSELEL11" type="checkbox" aria-label="상품 서비스 안내 방법(전화)">
+										<label class="radio" for="FORMSELEL11" aria-hidden="true">전화</label>
+									</span>
+								</div>
+								<div class="boxRadioInn">
+									<span>
+										<input id="FORMSELEL12" type="checkbox"  aria-label="상품 서비스 안내 방법(문자메시지)">
+										<label class="radio" for="FORMSELEL12" aria-hidden="true">문자메시지</label>
+									</span>
+								</div>
+							</div>
+							<div class="boxRadio">
+								<div class="boxRadioInn">
+									<span>
+										<input id="FORMSELEL13" type="checkbox" aria-label="상품 서비스 안내 방법(우편물)">
+										<label class="radio" for="FORMSELEL13" aria-hidden="true">우편물</label>
+									</span>
+								</div>
+								<div class="boxRadioInn">
+									<span>
+										<input id="FORMSELEL14" type="checkbox" aria-label="상품 서비스 안내 방법(이메일)">
+										<label class="radio" for="FORMSELEL14" aria-hidden="true">이메일</label>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="formHolder check">
+							<input type="checkbox" id="FORMSELEL2" checked>
+							<label class="check" for="FORMSELEL2"><em>[필수]</em> 항목명2</label>
+							<a href="javascript:;" class="btnView" role="button" title="[필수] 항목명2"><span class="blind">약관보기</span></a>
+						</div>
+					</div>
+					<div class="total">
+						<div class="formHolder check">
+							<input type="checkbox" id="FORMSELEL3" checked class="chekTypeOther">
+							<label class="check" for="FORMSELEL3"><em>[필수]</em>항목명3</label>
+							<a href="javascript:;" class="btnView" role="button" title="[필수] 항목명3"><span class="blind">약관보기</span></a>
+						</div>
+					</div>
+					<div class="mt20"><a href="javascript:;" class="linkType1" onclick="mssb1000r.openPrivateStpPopup(this)" name="private">개인정보 처리방침</a></div>
+				</div>
+			</div>
+		</section>
+		<!-- ################################# -->
+	</div>
+	<!-- ###################################### -->
+</div>
+</body>
+</html>

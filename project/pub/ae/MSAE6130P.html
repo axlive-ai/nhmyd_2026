@@ -1,0 +1,157 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>계산결과 자세히 보기</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function() {
+		fullLayerPop();
+	});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">계산결과 자세히 보기</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+	
+		</div>
+		<!-- //container -->
+
+		<!-- 팝업시작 -->
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>계산결과 자세히 보기</h1><!--08.18 수정-->
+				<div class="popCont ">
+					<h2 class="defTit">
+						<strong>2022년</strong> 13월의 월급은<br><strong><span class="dataValue">11,970,000원 </span></strong>환급이 예상돼요!
+						<!-- [2023-01-17] 툴팁추가 -->
+						<div class="tooltipWrap">
+							<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">계산기준 안내 툴팁 열기</span><!-- [접근성_2024] blind 수정 --></button>
+							<div class="tooltipCont">
+								<ul class="popBul">
+									<li>계산된 금액은 실제 연말정산 시 환급금액과는 다를 수 있습니다.</li>
+									<li>올해 납부 예상 세액은 $금년-1$년 기납부 예상세액을 의미합니다.</li>
+									<li>농어촌특별세액은 제외됩니다.</li>
+								</ul>
+								<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+							</div>
+						</div>
+						<!-- //[2023-01-17] 툴팁추가 -->
+					</h2><!--08.31 class tc삭제-->
+					<div class="garphitemWrap ty01"><!--s:garphitemWrap-->
+						<div class="item pt10"><!--s:item-->
+							<ul class="detailList">
+								<li>
+									<span class="tit">총 급여액</span>
+									<span class="value dataValue">4,000,000원</span>
+								</li>
+								<li>
+									<span class="tit">- 근로소득공제</span>
+									<span class="value dataValue">4,500,000원</span>
+								</li>
+							</ul>
+						</div>
+						<!--//e:item-->
+						<div class="item"><!--s:item-->
+							<ul class="detailList">
+								<li>
+									<span class="tit">근로소득금액</span>
+									<span class="value dataValue">1,589,055원</span>
+								</li>
+								<li>
+									<span class="tit">- 소득공제</span>
+									<span class="value dataValue">1,589,055원</span>
+								</li>
+								<li>
+									<span class="tit">- 인적공제</span>
+									<span class="value dataValue">1,589,055원</span>
+								</li>
+							</ul>
+						</div>
+						<!--//e:item-->
+
+						<div class="item"><!--s:item-->
+							<ul class="detailList">
+								<li>
+									<span class="tit">과세표준</span>
+									<span class="value dataValue">1,589,055원</span>
+								</li>
+								<li>
+									<span class="tit">기본세율</span>
+									<span class="value dataValue">6% ~ 45%</span>
+								</li>
+							</ul>
+						</div>
+						<!--//e:item-->
+						<div class="item"><!--s:item-->
+							<ul class="detailList">
+								<li>
+									<span class="tit">산출세액</span>
+									<span class="value dataValue">1,589,055원</span>
+								</li>
+								<li>
+									<span class="tit">- 세액공제 등</span>
+									<span class="value dataValue">1,589,055원</span>
+								</li>
+							</ul>
+						</div>
+						<!--//e:item-->
+						<div class="item"><!--s:item-->
+							<ul class="detailList">
+								<li>
+									<span class="tit">결정세액</span>
+									<span class="value dataValue">1,589,055원</span>
+								</li>
+								<li>
+									<span class="tit">- 납부예상세액 등</span>
+									<span class="value dataValue">1,589,055원</span>
+								</li>
+							</ul>
+						</div>
+						<!--//e:item-->
+						<div class="grayBox yaType">
+							<span class="statusTit">환급예상액</span>
+							<span class="dataValue statusVal pointColor">11,970,000<em class="won">원</em></span>
+						</div>
+					</div>
+				</div>
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<a href="javascript:;" class="confirmBtn" role="button">다시 계산하기</a><!--08.23 버튼명 수정-->
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>	
+	</div>
+		<!-- // 팝업 끝 -->
+	<script>
+		
+	</script>
+</body>
+</html>

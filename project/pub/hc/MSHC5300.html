@@ -1,0 +1,107 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 가상자산 검색</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		fullLayerPop();
+	})
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<h1><a href="javascript:;" role="text">검색</a></h1>
+			<a href="javascript:;" class="btnEtc">나가기</a>
+		</div>
+		<!-- //header -->
+	
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>검색</h1>
+				<div class="popCont">
+					<div class="addrSrch">
+						<div class="formWrap mt40">
+							<ul>
+								<li>
+									<div class="inputList"><!--검색 오류일 경우 error on 추가 -->
+										<input type="text" title="검색어" value="" placeholder="검색어를 입력해주세요.">
+										<!-- 2022-12-07 버튼 위치변경 -->
+										<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+										<button class="btnSearch"><span class="blind">찾기</span></button>
+										<!-- //2022-12-07 버튼 위치변경 -->
+									</div>
+									<!-- <p class="errorTxt">검색어를 2자이상 입력해 주세요.</p> --><!--에러인 에러메시지 경우 출력-->
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<h2 class="totalCntTit">추천 검색어</h2>
+					<div class="srchResult typeNor">
+						<ul>
+							<li>
+								<a href="javascript:;" role="button">
+									<span class="name">식품</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button">
+									<span class="name">비만</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button">
+									<span class="name">피부</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button">
+									<span class="name">정신건강</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button">
+									<span class="name">치아건강</span>
+								</a>
+							</li>
+							<li>
+								
+								<a href="javascript:;" role="button">
+									<span class="name">수면건강</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button">
+									<span class="name">기타</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="popBtnWrap">
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

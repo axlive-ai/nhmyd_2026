@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>이벤트</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">이벤트</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+            <div class="defTit icoEvent01">
+				<strong>이벤트 응모를 위해</strong><br>
+				<strong>개인정보</strong>를 입력해주세요
+			</div>
+			<div class="formWrap mt0">
+				<div class="boxTypeWrap">
+					<div class="titListBox termBox">
+						<ul>
+							<li>
+								<div class="txtb1">
+									<strong>이름</strong>
+								</div>
+								<div class="inputList"> <!-- 에러인 경우 .error 추가-->
+									<input type="text" title="이름" name="" id="" value="김농협" placeholder="dddd" disabled="">
+									<!-- <a href="javascript:" class="btnReset" role="button">입력내용삭제</a> --> <!-- disabled일 경우 삭제 -->
+								</div>
+							</li>
+							<li>
+								<div class="txtb1">
+									<strong>휴대폰번호</strong>
+								</div>
+								<div class="inputList"> <!-- 에러인 경우 .error 추가-->
+									<input type="tel" title="휴대폰번호" name="" id="" value="" placeholder="'-' 없이 입력해주세요.">
+									<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+								</div>
+							</li>
+							<!-- [2022-12-01] 수정 -->
+							<li>
+								<div class="formWrap selectAll">
+									<div class="total">
+										<div class="formHolder check">
+											<input type="checkbox" id="type_chk01" checked="" class="chekTypeOther">
+											<label class="check" for="type_chk01">개인정보 수집 및 이용에 동의합니다. (필수)</label>
+										</div>
+									</div>
+								</div>
+								<div class="grayBox">
+									<strong class="subTit">농협은행 주식회사 귀중</strong>
+									<p class="subTxt2">귀 행이 이벤트 진행을 위하여 본인의 개인정보를 수집·이용하는 경우에는 「 개인정보 보호법 」 제 15조 등 관련법령에 따라 본인의 동의가 필요합니다.</p>
+								</div>
+							</li>
+							<!-- //[2022-12-01] 수정 -->
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="areaBtnDefault">
+                <a href="javascript:;" class="btnPressDefault" role="button">취소</a>
+				<a href="javascript:;" class="btnPressPoint" role="button">응모하기</a>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>

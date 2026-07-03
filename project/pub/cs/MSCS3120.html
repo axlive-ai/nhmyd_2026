@@ -1,0 +1,111 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>소비패턴</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">소비패턴</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container --> <!-- [2022-10-14] 전체수정 -->
+		<div class="container">
+            <div class="boxTypeWrap pt0">
+                <div class="filterArea">
+                    <div class="filterSelect"><button type="button" title="월 선택 팝업열기">10월<span class="pointColor9 fs13">(10.05~11.04)</span></button></div>
+                </div>
+                <h2 class="defTit mt15"><strong>이번 달 소비가 없어서<br>최근 3개월 소비패턴을 분석했어요</strong></h2>
+                <p class="subTxt pointColor06">2022.04.05~2022.07.04</p>
+                <div class="graphWrap mt20" style="height:135px;background:#f6f6f6;" tabindex="0" role="img" aria-label="">
+                    <p style="text-align:center;padding-top:50px;">그래프 영역</p>
+                </div>
+                <ul class="legendList">
+                    <li>
+                        <span class="legendTit type30"><strong>어디에 썼을까?</strong></span>
+                        <span class="legendAmnt"><strong class="value">40,000,000</strong><strong class="won">원</strong></span>
+                    </li>
+                    <li>
+                        <span class="legendTit type36"><strong>외식</strong></span>
+                        <span class="legendAmnt"><strong class="value">4,000,000</strong><strong class="won">원</strong></span>
+                    </li>
+                    <li>
+                        <span class="legendTit type31"><strong>술/유흥</strong></span>
+                        <span class="legendAmnt"><strong class="value">100,000</strong><strong class="won">원</strong></span>
+                    </li>
+                    <li>
+                        <span class="legendTit type37"><strong>쇼핑</strong></span>
+                        <span class="legendAmnt"><strong class="value">90,000</strong><strong class="won">원</strong></span>
+                    </li>
+                    <li>
+                        <span class="legendTit type38"><strong>온라인쇼핑</strong></span>
+                        <span class="legendAmnt"><strong class="value">80,000</strong><strong class="won">원</strong></span>
+                    </li>
+                    <li>
+                        <span class="legendTit type39"><strong>생활/마트</strong></span>
+                        <span class="legendAmnt"><strong class="value">50,000</strong><strong class="won">원</strong></span>
+                    </li>
+                    <li>
+                        <span class="legendTit type32"><strong>주거/통신</strong></span> <!-- [2022-10-21] type32으로 수정 -->
+                        <span class="legendAmnt"><strong class="value">20,000</strong><strong class="won">원</strong></span>
+                    </li>
+                    <li>
+                        <span class="legendTit type33"><strong>의료/건강</strong></span> <!-- [2022-10-21] type33으로 수정 -->
+                        <span class="legendAmnt"><strong class="value">20,000</strong><strong class="won">원</strong></span>
+                    </li>
+                    <li>
+                        <span class="legendTit type47"><strong>기타</strong></span>
+                        <span class="legendAmnt"><strong class="value">20,000</strong><strong class="won">원</strong></span>
+                    </li>
+                </ul>
+            </div>
+            <!-- <div class="cs CardBannerWarp Card02">
+                <a href="javascript:;">
+                    <h2 class="defSubTit2 fs13">더 꼼꼼하게 소비패턴을 확인하려면?</h2>
+                    <span class="greenLink">자세한 소비내용 불러오기</span>
+                </a>
+            </div> -->
+            <!-- [2022-10-18] 마크업 수정 -->
+            <div class="boxTypeWrap totalBalance">
+                <h2 class="defSubTit2 mt0"><strong>3개월 소비를 분석한 추천카드는?</strong></h2>
+                <hr class="divLine3 mt15">
+                <a href="javascript:;" title="금융상품몰 사이트로 이동" role="button" class="cardLinkBox">
+                    <div class="cardImgWrap">
+                        <p class="defSubTit3"><strong>NH1961카드</strong></p>
+                        <img src="../../images/img_card_ver.png" alt="" class="cardImg">
+                        <img src="../../images/img_card_all100.png" alt="" class="cardImg">
+                        <div class="hashWrap">
+                            <span class="hashTag">#교육/자녀</span>
+                            <span class="hashTag">#직장인</span>
+                        </div>
+                    </div>
+                    <p class="subTxt2">준법감시인 심의필 2022-2835(2022.06.15~2023.12.31)</p> <!-- [2022-10-18] 수정 -->
+                </a>
+            </div>
+            <!-- //[2022-10-18] 마크업 수정 -->
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>

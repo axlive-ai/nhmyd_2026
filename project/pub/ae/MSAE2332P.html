@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>컨설팅-연금진단</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(function () {
+		slidePopOption();
+	})
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text"></a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+
+		</div>
+		<!-- //container -->
+	</div>
+
+	<!-- 라이프사이클 -->
+	<div class="nhasset popWrap slidePopOption">
+		<div class="dim"></div>
+		<div class="popInner">
+			<h1>국민연금 간편계산기</h1>
+			<div class="popCont">
+				<div class="pensionCalc">
+                    <div class="formWrap psFrom">
+                        <ul>
+                            <li>
+                                <strong class="formTit">언제부터 일을 시작하셨나요?</strong> 
+                                <span class="fwN">국민연금 납입은 최대 60세까지이며 일한 기간은 10년이 넘어야 합니다.</span>  
+                                <div class="inputList unitMan2 standUse">
+                                    <span class="unitType02">만</span>
+                                    <input type="tel" title="은퇴희망나이" value="" placeholder="18~50세"> 
+                                    <span class="unit">세 부터</span>
+                                    <a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+                                </div>
+                                <!-- <p class="errorTxt">만 18세부터 50세까지 입력 가능합니다.</p>  -->
+                            </li>
+                            <li>
+                                <strong class="formTit">국민연금 가입기간 중<br> 월 평균 소득이 얼마인가요?</strong> 
+                                <span class="fwN">정확하지 않아도 괜찮아요.</span>  
+                                <div class="inputList unitMan2">
+                                    <input type="tel" title="월 평균 소득" value="" placeholder="최소 30만원 이상"> 
+                                    <span class="unit">만원</span>
+                                    <a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+                                </div>
+                                <div class="roundBtnWrap">
+                                    <a href="javascript:;" role="button" title="10만원 추가">+10만</a>
+                                    <a href="javascript:;" role="button" title="50만원 추가">+50만</a>
+                                    <a href="javascript:;" role="button" title="100만원 추가">+100만</a>
+                                    <a href="javascript:;" role="button" title="500만원 추가">+500만</a>
+                                </div>
+                                <!-- <p class="errorTxt">30부터 9,999만원까지 입력 가능합니다.</p>  -->
+                            </li>
+                        </ul>
+                        <div class="retireBtnWrap">
+                            <a href="javascript:;" class="btnBodyLine" role="button">계산하기</a>
+                        </div>
+                        <div class="retireTotal">
+                            <span class="title">월 예상수령액</span>
+                            <span class="cont">
+                                <span class="dataValue">0</span><em class="won">원</em>
+                            </span>
+                        </div>
+                    </div>
+
+                    <p class="infoTxt info_area mt20"><!--11.15 수정-->
+                        <ul class="listBul disc">
+                            <li>국민연금공단 예상 연금월액표를 기준으로 계산한 금액입니다. 
+                                실제 수령액과 차이가 있을 수 있습니다.</li>
+                            <li> 간편계산 시 국민연금 예상수령액만 계산됩니다. </li>
+                            <li>국민연금 적립액이 산출되지 않으므로 공적연금 합계액에는
+                                포함되지 않습니다.</li>
+                        </ul>
+                    </p>
+                
+                </div>
+                <!-- //pensionCalc -->
+			
+			</div>
+	
+			<div class="popBtnWrap">
+				<div class="popBtn">
+					<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">확인</a>
+				</div>
+				<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다."><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+			</div>
+			
+		</div>
+	</div>
+	<!-- //라이프사이클 -->
+
+</body>
+</html>

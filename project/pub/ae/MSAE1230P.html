@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>컨설팅 - 자산진단</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		fullLayerPop();
+	})
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text"></a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+
+		</div>
+		<!-- //container -->
+
+		<!-- 팝업시작 -->
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>투자수익률</h1>
+				<div class="popCont grayPop">
+                    <div class="msaeAreaWrap">
+    
+                        <div class="productMenu">
+                            <a href="javascript:;" class="linkbtn le" role="button">자산편중상태</a>
+                            <a href="javascript:;" class="linkbtn ri" role="button">여유자금</a>
+                        </div>
+                        
+                        <div class="msaeCont">
+
+                            <div class="boxTypeWrap ovNone bgTy01"> <!--s:boxTypeWrap-->
+                                <div class="totalBalanceNow">
+                                    <div class="msaeAseet">
+                                        <strong>김농협</strong>님 투자수익은 <br>
+                                        상위 <strong class="pointColor">7%</strong>에요
+                                        <div class="tooltipWrap">
+                                            <button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">투자수익률 안내 툴팁 열기</span><!-- [접근성_2024] blind 수정 --></button>
+                                            <div class="tooltipCont">
+                                                <div class="msaeTool">
+                                                    <ul class="popBul">
+                                                        <li>나와 투자고수의 자산별(국내주식, 해외주식, 펀드) 투자수익률과 가장 많이 보유한 Top3 종목(상품) 비교에요.</li>
+                                                        <li>투자고수의 수익률, 평가금액, 보유종목수, 보유수량은 상위 20% 투자고수의 평균이에요.</li>
+                                                    </ul><!--01.19 문구 수정-->
+                                                </div>  
+                                                <button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="boxTypeWrap ovNone bgTy02"> <!--s:boxTypeWrap-->
+                                <div class="totalBalanceNow">
+                                    <div class="msaeAseet">
+                                        <strong>김농협</strong>님 투자수익은 <br>
+                                        상위 <strong class="pointColor">7%</strong>에요
+                                        <div class="tooltipWrap">
+                                            <button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">투자수익률 안내 툴팁 열기</span><!-- [접근성_2024] blind 수정 --></button>
+                                            <div class="tooltipCont">
+                                                <div class="msaeTool">
+                                                    <ul class="popBul">
+                                                        <li>나와 투자고수의 자산별(국내주식, 해외주식, 펀드) 투자수익률과 가장 많이 보유한 Top3 종목(상품) 비교에요.</li>
+                                                        <li>투자고수의 수익률, 평가금액, 보유종목수, 보유수량은 상위 20% 투자고수의 평균이에요.</li>
+                                                    </ul><!--01.19 문구 수정-->
+                                                </div>  
+                                                <button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boxTypeWrap ovNone bgTy03"> <!--s:boxTypeWrap-->
+                                <div class="totalBalanceNow">
+                                    <div class="msaeAseet">
+                                        <strong>김농협</strong>님 투자수익은 <br>
+                                        상위 <strong class="pointColor">7%</strong>에요
+                                        <div class="tooltipWrap">
+                                            <button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">투자수익률 안내 툴팁 열기</span><!-- [접근성_2024] blind 수정 --></button>
+                                            <div class="tooltipCont">
+                                                <div class="msaeTool">
+                                                    <ul class="popBul">
+                                                        <li>나와 투자고수의 자산별(국내주식, 해외주식, 펀드) 투자수익률과 가장 많이 보유한 Top3 종목(상품) 비교에요.</li>
+                                                        <li>투자고수의 수익률, 평가금액, 보유종목수, 보유수량은 상위 20% 투자고수의 평균이에요.</li>
+                                                    </ul><!--01.19 문구 수정-->
+                                                </div>  
+                                                <button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--투자성향이 없는 경우-->
+                            <div class="boxTypeWrap ovNone"> <!--s:boxTypeWrap-->
+                                <div class="totalBalanceNow">
+                                    <div class="msaeAseet">
+                                        투자성향이 등록되지 않았어요
+                                    </div>
+                                    <p class="pointColor03 mt10">투자성향을 분석하시면 더 자세히 볼 수 있어요!</p>
+                                </div>
+                            </div>
+                             <!--//투자성향이 없는 경우-->
+
+                            <div class="boxTypeWrap msaeInvestWrap">
+                                <h3 class="tit">해외 주식 투자수익률은?</h3>
+                                <div class="msaeInvestItem">
+                                    <ul class="investTop">
+                                        <li>
+                                            <span class="investLeft">나</span>
+                                            <span class="investCom">VS</span>
+                                            <span class="investRight">투자고수</span>
+                                        </li>
+                                    </ul>
+                                    <ul class="investCont">
+                                        <li>
+                                            <span class="investTit">수익률</span>
+                                            <div class="investItem">
+                                                <span class="investLeft">37%</span>
+                                                <span class="investRight">39%</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="investTit">보유종목수</span>
+                                            <div class="investItem">
+                                                <span class="investLeft">2개</span>
+                                                <span class="investRight">5개</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="investTit">평가금액</span>
+                                            <div class="investItem">
+                                                <span class="investLeft">2,345,678<em class="won">원</em></span>
+                                                <span class="investRight">1,002,345,678<em class="won">원</em>%</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="investLanking3">
+                                        <h3 class="investLankingTit">TOP 3</h3>
+                                        <div class="investLankingArea">
+                                            <div class="left pt40">
+                                                <ul>
+                                                    <li>
+                                                        <span>삼성전자</span>
+                                                        <div class="moreCot">
+                                                            <span>320주</span>
+                                                            <span>3,657,567,100<em class="won">원</em></span>
+                                                            <span class="perDown">-11.6%</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <span>삼성전자</span>
+                                                        <div class="moreCot">
+                                                            <span>320주</span>
+                                                            <span>3,657,567,100<em class="won">원</em></span>
+                                                            <span class="perDown">-11.6%</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="right pt40">
+                                                <ul>
+                                                    <li>
+                                                        <span>카카오</span>
+                                                        <div class="moreCot">
+                                                            <span>320주</span>
+                                                            <span>6,657,567,100원<em class="won">원</em></span>
+                                                            <span class="perUp">31.6%</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <span>네이버</span>
+                                                        <div class="moreCot">
+                                                            <span>320주</span>
+                                                            <span>3,657,567,100<em class="won">원</em></span>
+                                                            <span class="perUp">24.6%</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <span>삼성전자</span>
+                                                        <div class="moreCot">
+                                                            <span>320주</span>
+                                                            <span>3,657,567,100<em class="won">원</em></span>
+                                                            <span class="perUp">24.6%</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                      
+                                    </div>
+                                   
+                                </div>
+                            </div>
+
+                            <div class="boxTypeWrap msaeInvestWrap">
+                                <h3 class="tit">국내 주식 투자수익률은?</h3>
+                                <div class="msaeInvestItem">
+                                    <ul class="investTop">
+                                        <li>
+                                            <span class="investLeft">나</span>
+                                            <span class="investCom">VS</span>
+                                            <span class="investRight">투자고수</span>
+                                        </li>
+                                    </ul>
+                                    <ul class="investCont">
+                                        <li>
+                                            <span class="investTit">수익률</span>
+                                            <div class="investItem">
+                                                <span class="investLeft">37%</span>
+                                                <span class="investRight">39%</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="investTit">보유종목수</span>
+                                            <div class="investItem">
+                                                <span class="investLeft">2개</span>
+                                                <span class="investRight">5개</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="investTit">평가금액</span>
+                                            <div class="investItem">
+                                                <span class="investLeft">2,345,678<em class="won">원</em></span>
+                                                <span class="investRight">1,002,345,678<em class="won">원</em>%</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="investLanking3">
+                                        <h3 class="investLankingTit">TOP 3</h3>
+                                        <div class="investLankingArea">
+                                            <div class="left pt40">
+                                                <ul>
+                                                    <li>
+                                                        <span>삼성전자</span>
+                                                        <div class="moreCot">
+                                                            <span>320주</span>
+                                                            <span>3,657,567,100<em class="won">원</em></span>
+                                                            <span class="perUp">41.6%</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <span>삼성전자</span>
+                                                        <div class="moreCot">
+                                                            <span>320주</span>
+                                                            <span>3,657,567,100<em class="won">원</em></span>
+                                                            <span class="perUp">11.6%</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <span>카카오</span>
+                                                        <div class="moreCot">
+                                                            <span>320주</span>
+                                                            <span>3,657,567,100<em class="won">원</em></span>
+                                                            <span class="perUp">11.6%</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="right pt40">
+                                                <ul>
+                                                    <li>
+                                                        <span>카카오</span>
+                                                        <div class="moreCot">
+                                                            <span>320주</span>
+                                                            <span>6,657,567,100원<em class="won">원</em></span>
+                                                            <span class="perUp">31.6%</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <span>네이버</span>
+                                                        <div class="moreCot">
+                                                            <span>320주</span>
+                                                            <span>3,657,567,100<em class="won">원</em></span>
+                                                            <span class="perUp">24.6%</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <span>삼성전자</span>
+                                                        <div class="moreCot">
+                                                            <span>320주</span>
+                                                            <span>3,657,567,100<em class="won">원</em></span>
+                                                            <span class="perUp">24.6%</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                      
+                                    </div>
+                                   
+                                </div>
+                            </div>
+
+                            <div class="boxTypeWrap msaeInvestWrap">
+                                <h3 class="tit">펀드 투자수익률은?</h3>
+                                <div class="msaeInvestItem">
+                                    <ul class="investTop">
+                                        <li>
+                                            <span class="investLeft">나</span>
+                                            <span class="investCom">VS</span>
+                                            <span class="investRight">투자고수</span>
+                                        </li>
+                                    </ul>
+                                    <ul class="investCont">
+                                        <li>
+                                            <span class="investTit">수익률</span>
+                                            <div class="investItem">
+                                                <span class="investLeft">37%</span>
+                                                <span class="investRight">39%</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="investTit">보유종목수</span>
+                                            <div class="investItem">
+                                                <span class="investLeft">2개</span>
+                                                <span class="investRight">5개</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="investTit">평가금액</span>
+                                            <div class="investItem">
+                                                <span class="investLeft">2,345,678<em class="won">원</em></span>
+                                                <span class="investRight">1,002,345,678<em class="won">원</em>%</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                   
+                                </div>
+
+                                <div class="top3Wrap">
+                                    <div class="titFlags">
+                                        <span>나의 Top3</span>
+                                    </div>
+                                    <div class="bannerWarpPrd swCardCompWrap"><!--s:bannerWarpPrd -->
+                                        <div class="swiper-container bannerSwiperPrd widWide">
+                                            <div class="swiper-wrapper widTy">
+                                                <div class="swiper-slide"> <!--12.14 케이스 추가-->
+                                                    <div class="msaeBoxline">
+                                                        <h3 class="logDsp">AB셀렉트미국증권투자신탁
+                                                            [주식-재간접형] ClassAe 
+                                                            <span class="imgWrap">
+                                                                <img src="../../images/logos/AAAI0000.png" alt="교보생명 로고" class="imgLogo">
+                                                            </span>
+                                                        </h3>
+                                                       
+                                                        <div class="dataValueWrap">
+                                                            <p class="valTit">평가금액</p>
+                                                            <span class="dataValue">123,456,789<em class="won"></em>원</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="msaeBoxline">
+                                                        <h3>한국투자EMP글로벌자산배분증권자투자
+                                                            신탁ClassAe </h3>
+                                                        <div class="txtBox01">
+                                                            <p>수수료선취-온라인<br>
+                                                                국외[글로벌펀드]</p>
+                                                            <em class="tag red">다소높은위험</em>
+                                                        </div>
+                                                        <ul class="txtBox02">
+                                                            <li>
+                                                                <span>3개월</span>
+                                                                <p>2.38%</p>
+                                                            </li>
+                                                            <li>
+                                                                <span>3개월</span>
+                                                                <p>2.38%</p>
+                                                            </li>
+                                                            <li>
+                                                                <span>3개월</span>
+                                                                <p>2.38%</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="msaeBoxline">
+                                                        <h3>한국투자EMP글로벌자산배분증권자투자
+                                                            신탁ClassAe </h3>
+                                                        <div class="txtBox01">
+                                                            <p>수수료선취-온라인<br>
+                                                                국외[글로벌펀드]</p>
+                                                            <em class="tag red">다소높은위험</em>
+                                                        </div>
+                                                        <ul class="txtBox02">
+                                                            <li>
+                                                                <span>3개월</span>
+                                                                <p>2.38%</p>
+                                                            </li>
+                                                            <li>
+                                                                <span>3개월</span>
+                                                                <p>2.38%</p>
+                                                            </li>
+                                                            <li>
+                                                                <span>3개월</span>
+                                                                <p>2.38%</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="msaeBoxline">
+                                                        <h3>한국투자EMP글로벌자산배분증권자투자
+                                                            신탁ClassAe </h3>
+                                                        <div class="txtBox01">
+                                                            <p>수수료선취-온라인<br>
+                                                                국외[글로벌펀드]</p>
+                                                            <em class="tag red">다소높은위험</em>
+                                                        </div>
+                                                        <ul class="txtBox02">
+                                                            <li>
+                                                                <span>3개월</span>
+                                                                <p>2.38%</p>
+                                                            </li>
+                                                            <li>
+                                                                <span>3개월</span>
+                                                                <p>2.38%</p>
+                                                            </li>
+                                                            <li>
+                                                                <span>3개월</span>
+                                                                <p>2.38%</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-control">
+                                                <div class="swiper-pagination"></div>
+                                                <div class="swiper-autoBtn playing">
+                                                    <a href="javascript:;" class="stopBtn" title="자동재생중 두번 터치시 멈춤"></a>
+                                                    <a href="javascript:;" class="playBtn" title="자동재생 멈춤 두번 터치시 자동재생시작"></a>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-button-prev blind"></div>
+                                            <div class="swiper-button-next blind"></div>
+                                        </div>
+                                        <script>
+                                            $(function () {
+                                                var swiper = new Swiper('.bannerSwiperPrd', {
+                                                    slidesPerView: "auto",
+                                                    spaceBetween: 10,
+                                                    loop: true,
+                                                    centerSlides:true,
+                                                    observer:true,
+                                                    observeParents : true,
+                                                    autoplay: {
+                                                        delay: 2500,
+                                                        disableOnInteraction: true,
+                                                        pauseOnMouseEnter: true,
+                                                    },
+                    
+                                                    pagination: {
+                                                        el: '.swiper-pagination',
+                                                        type: 'bullets',
+                                                        clickable: true,
+                                                    },
+                                                    on: {
+                                                        transitionEnd: function () {
+                                                            $('.swiper-slide').attr('aria-hidden', 'true')
+                                                            $('.swiper-slide-active').attr('aria-hidden', 'false')
+                                                        }
+                                                    }
+                                                });
+                                                $('.bannerSwiperPrd').find('.stopBtn').on('click', function () {
+                                                    $('.swiper-autoBtn').removeClass('playing');
+                                                    swiper.autoplay.stop();
+                                                    console.log('자동재생 멈춤');
+                                                })
+                                                $('.bannerSwiperPrd').find('.playBtn').on('click', function () {
+                                                    $('.swiper-autoBtn').addClass('playing');
+                    
+                                                    swiper.autoplay.start();
+                                                    console.log('자동재생 시작');
+                                                })
+                                            })
+                                        </script>
+                                    </div>
+                                    <!--e:bannerWarpPrd -->
+
+                                    <div class="msaeBoxEx f11"><!--12.28 텍스트 추가-->
+                                        <ul>
+                                            <li>집합투자증권은 예금자보호법에 따라 예금보험공사가 보호하지 않습니다.</li>
+                                            <li>투자자는 집합투자증권에 대하여 당행으로부터 충분한 설명을 받을 권리가 있으며, 투자 전 (간이)투자설명서 및 집합투자 규약을 반드시 읽어보시기 바랍니다.</li>
+                                            <li>집합투자증권은 자산가격변동, 환율변동, 신용등급 하락 등에 따라 투자원금의 손실(0~100%)이 발생할 수 있으며 그 손실은 투자자에게 귀속됩니다.</li>
+                                            <li>증권거래 비용, 기타 비용이 추가로 발생할 수 있습니다.</li><!-- 23.01.25 class폰트 컬러 txtRed삭제 -->
+                                            <li>과거의 운용실적이 미래의 수익률을 보장하는 것은 아닙니다.</li><!-- 23.01.25 class폰트 컬러 txtRed삭제 -->
+                                            <li>과세기준 및 과세방법은 향후 세법개정 등에 따라 변동될 수 있습니다.</li>
+                                            <li>해외증권에 투자하는 펀드는 환율 변동에 따라 외화자산의 투자 가치가 변동되거나 투자대상 국가의 시장, 정치 및 경제상황에 따른 위험으로 자산가치 손실이 발생할 수 있습니다.</li>       
+                                            <li>레버리지형펀드는 투자원금 손실이 크게 확대 될 수 있습니다.</li>       
+                                            <li>금융소비자는 금융소비자보호법 제19조 제1항에 따라 해당 상품에 대해 설명을 받을 권리가 있습니다.</li>       
+                                            <li>기타 자세한 내용은 상품설명서를 참조하시거나 가까운 농협은행 영업점 또는 고객센터(1522-3000, 1661-3000)로 문의바랍니다.</li>       
+							                <li>준법감시인심의필 2023-1190(2023.01.20~2024.01.20)</li><!-- 23.01.25 문구추가 -->
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="top3Wrap">
+                                    <div class="titFlags gray">
+                                        <span>투자고수 TOP3</span>
+                                    </div>
+
+                                    <!-- [2023-02-16] 스와이프 나오는 케이스 추가 -->
+                                    <div class="slide_case">
+                                        <h2 class="titGray">
+                                            투자고수가 가장 많이 보유한 펀드 <storng>TOP3</storng>
+                                            <p class="subGryTxt">고객님의 <storng class="pointColor">위험중립형</storng>에 적합한 상품이 노출됩니다.</p> <!-- [2023-02-14] 문구추가 -->
+                                        </h2>
+                                        <div class="bannerWarpPrd swCardCompWrap"><!--s:bannerWarpPrd -->
+                                            <div class="swiper-container bannerSwiperPrd2 widWide"> <!-- bannerSwiperPrd2로 -->
+                                                <div class="swiper-wrapper widTy">
+                                                    <div class="swiper-slide"> <!--12.14 케이스 추가-->
+                                                        <div class="msaeBoxline">
+                                                            <h3 class="logDsp">AB셀렉트미국증권투자신탁
+                                                                [주식-재간접형] ClassAe 
+                                                                <span class="imgWrap">
+                                                                    <img src="../../images/logos/AAAI0000.png" alt="교보생명 로고" class="imgLogo">
+                                                                </span>
+                                                            </h3>
+                                                           
+                                                            <div class="dataValueWrap">
+                                                                <p class="valTit">평가금액</p>
+                                                                <span class="dataValue">123,456,789<em class="won"></em>원</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="msaeBoxline">
+                                                            <h3>한국투자EMP글로벌자산배분증권자투자
+                                                                신탁ClassAe </h3>
+                                                            <div class="txtBox01">
+                                                                <p>수수료선취-온라인<br>
+                                                                    국외[글로벌펀드]</p>
+                                                                <em class="tag red">다소높은위험</em>
+                                                            </div>
+                                                            <ul class="txtBox02">
+                                                                <li>
+                                                                    <span>3개월</span>
+                                                                    <p>2.38%</p>
+                                                                </li>
+                                                                <li>
+                                                                    <span>3개월</span>
+                                                                    <p>2.38%</p>
+                                                                </li>
+                                                                <li>
+                                                                    <span>3개월</span>
+                                                                    <p>2.38%</p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="msaeBoxline">
+                                                            <h3>한국투자EMP글로벌자산배분증권자투자
+                                                                신탁ClassAe </h3>
+                                                            <div class="txtBox01">
+                                                                <p>수수료선취-온라인<br>
+                                                                    국외[글로벌펀드]</p>
+                                                                <em class="tag red">다소높은위험</em>
+                                                            </div>
+                                                            <ul class="txtBox02">
+                                                                <li>
+                                                                    <span>3개월</span>
+                                                                    <p>2.38%</p>
+                                                                </li>
+                                                                <li>
+                                                                    <span>3개월</span>
+                                                                    <p>2.38%</p>
+                                                                </li>
+                                                                <li>
+                                                                    <span>3개월</span>
+                                                                    <p>2.38%</p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="msaeBoxline">
+                                                            <h3>한국투자EMP글로벌자산배분증권자투자
+                                                                신탁ClassAe </h3>
+                                                            <div class="txtBox01">
+                                                                <p>수수료선취-온라인<br>
+                                                                    국외[글로벌펀드]</p>
+                                                                <em class="tag red">다소높은위험</em>
+                                                            </div>
+                                                            <ul class="txtBox02">
+                                                                <li>
+                                                                    <span>3개월</span>
+                                                                    <p>2.38%</p>
+                                                                </li>
+                                                                <li>
+                                                                    <span>3개월</span>
+                                                                    <p>2.38%</p>
+                                                                </li>
+                                                                <li>
+                                                                    <span>3개월</span>
+                                                                    <p>2.38%</p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-control">
+                                                    <div class="swiper-pagination"></div>
+                                                    <div class="swiper-autoBtn playing">
+                                                        <a href="javascript:;" class="stopBtn" title="자동재생중 두번 터치시 멈춤"></a>
+                                                        <a href="javascript:;" class="playBtn" title="자동재생 멈춤 두번 터치시 자동재생시작"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-button-prev blind"></div>
+                                                <div class="swiper-button-next blind"></div>
+                                            </div>
+                                            <script>
+                                                $(function () {
+                                                    var swiper = new Swiper('.bannerSwiperPrd2', {
+                                                        slidesPerView: "auto",
+                                                        spaceBetween: 10,
+                                                        loop: true,
+                                                        centerSlides:true,
+                                                        observer:true,
+                                                        observeParents : true,
+                                                        autoplay: {
+                                                            delay: 2500,
+                                                            disableOnInteraction: true,
+                                                            pauseOnMouseEnter: true,
+                                                        },
+                        
+                                                        pagination: {
+                                                            el: '.swiper-pagination',
+                                                            type: 'bullets',
+                                                            clickable: true,
+                                                        },
+                                                        on: {
+                                                            transitionEnd: function () {
+                                                                $('.swiper-slide').attr('aria-hidden', 'true')
+                                                                $('.swiper-slide-active').attr('aria-hidden', 'false')
+                                                            }
+                                                        }
+                                                    });
+                                                    $('.bannerSwiperPrd').find('.stopBtn').on('click', function () {
+                                                        $('.swiper-autoBtn').removeClass('playing');
+                                                        swiper.autoplay.stop();
+                                                        console.log('자동재생 멈춤');
+                                                    })
+                                                    $('.bannerSwiperPrd').find('.playBtn').on('click', function () {
+                                                        $('.swiper-autoBtn').addClass('playing');
+                        
+                                                        swiper.autoplay.start();
+                                                        console.log('자동재생 시작');
+                                                    })
+                                                })
+                                            </script>
+                                        </div>
+                                        <!--e:bannerWarpPrd -->
+                                    </div>
+
+                                    <div class="img_mase_nodata">
+                                        <h2 class="titGray">
+                                            투자고수가 가장 많이 보유한 펀드 <storng>TOP3</storng>
+                                            <p class="subGryTxt">고객님의 <storng class="pointColor">위험중립형</storng>에 적합한 상품이 노출됩니다.</p> <!-- [2023-02-14] 문구추가 -->
+                                        </h2>
+                                        <p>고객님의 투자성향분석이 없습니다. <br>
+                                            지금 투자성향분석을 하시면 적합한 상품을 안내해드려요.
+                                            </p>
+                                        <a href="javascript:;" class="linkTxt">분석하러 가기</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="msaeBoxEx">
+                                <h2>투자고수는?</h2>
+                                <ul>
+                                    <li>최근 30일 간 마이데이터에 접속한 고객 중 투자자산 (국내주식/해외주식/펀드)의 수익률이 높은 상위 20% 고객을 말해요.</li><!--12.29 문구수정--> <!-- [2023-01-04] 문구수정 -->
+                                    <li>투자성향이 없거나 나와 투자성향이 다른 고객이 포함될 수 있어요.</li>
+                                </ul>
+                            </div>
+
+                            <div class="msaeBannerWrap">
+                                <p class="tit">투자고수는 어떻게 <br>
+                                    투자하는지 살펴볼까요?</p>
+                              <a href="javascript:;" class="linkTxt">투자고수 보러가기</a>
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>	
+            
+            <div class="popBtnWrap">
+                <a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+            </div>	
+        </div>
+    </div>
+    <!-- 팝업끝 -->
+</div>
+
+
+</body>
+</html>

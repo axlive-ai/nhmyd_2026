@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>카드혜택비교</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">카드혜택비교</a></h1><!-- 20022-09-16 메뉴명 수정 -->
+		<!-- <a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>  -->
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="cardComparedTitle">
+			<div class="inner"><strong>내가 쓰는</strong> <button type="button" title="카드 선택"><span>카카오 BC카드</span></button> 를</div>
+			<div class="inner2"><strong><span class="pointColor">NH농협카드</span>로 바꾸면?
+			</strong></div>
+		</div>
+
+		<div class="boxTypeWrap mt0">
+			<div class="bannerWarpPrd swCardCompWrap">
+				<div class="swiper-container bannerSwiperPrd">
+					<div class="swiper-wrapper">
+						<!--  [2023 NH마이데이터 서비스 고도화] 이미지영역 삭제
+						<div class="swiper-slide">
+							<div class="swCardComp">
+								<div class="titleArea"><strong>연<span class="dataValue">33,000</span>원</strong> <span class="benepitTxt"> 혜택</span>
+									<div class="tooltipWrap">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">카드추천 툴팁 열기</span></button>
+										<div class="tooltipCont boxInTooltip" style="z-index:10">
+											<p>타사카드 최근 1년 사용내역을 NH농협카드로 이용했을 시 받을 수 있는 할인/적립 금액으로, 타사카드와 비교해보세요.</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="mt15"><span class="cardBenefitFlag">혜택 1위 카드</span></div>
+								<div class="cardDifImgWrap">
+									<img src="../../images/img_cardh_streaming.png" alt="멤버십/스트리밍 할인에 간편 결제 할인까지 zgm.streaming 카드 #멤버십 #11대페이 (준법감시인 심의필 : 2022-4936(2022.11.24~2023.12.31.))">
+								</div>
+								<div class="areaBodyBtnFull mt25">
+									<div class="inner">
+										<ul>
+											<li><a href="javascript:;" class="btnBodyLine green" role="button">혜택상세</a></li>
+											<li><a href="javascript:;" class="btnBodyLine green" role="button">카드상세</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="swCardComp">
+								<div class="titleArea"><strong>연<span class="dataValue">33,000</span>원</strong> <span class="benepitTxt"> 혜택</span>
+									<div class="tooltipWrap">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">카드추천 툴팁 열기</span></button>
+										<div class="tooltipCont boxInTooltip" style="z-index:10">
+											<p>타사카드 최근 1년 사용내역을 NH농협카드로 이용했을 시 받을 수 있는 할인/적립 금액으로, 타사카드와 비교해보세요.</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="mt15"><span class="cardBenefitFlag">혜택 1위 카드</span></div>
+								<div class="cardDifImgWrap">
+									<img src="../../images/img_cardh_thepay.png" alt="전 가맹점 할인에 각종 간편결제 할인까지 zgm.the pay 카드 #전가맹점 #11대페이 (준법감시인 심의필 : 2022-4936(2022.11.24~2023.12.31.))">
+								</div>
+								<div class="areaBodyBtnFull mt25">
+									<div class="inner">
+										<ul>
+											<li><a href="javascript:;" class="btnBodyLine green" role="button">혜택상세</a></li>
+											<li><a href="javascript:;" class="btnBodyLine green" role="button">카드상세</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="swCardComp">
+								<div class="titleArea"><strong>연<span class="dataValue">33,000</span>원</strong> <span class="benepitTxt"> 혜택</span>
+									<div class="tooltipWrap">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">카드추천 툴팁 열기</span></button>
+										<div class="tooltipCont boxInTooltip" style="z-index:10">
+											<p>타사카드 최근 1년 사용내역을 NH농협카드로 이용했을 시 받을 수 있는 할인/적립 금액으로, 타사카드와 비교해보세요.</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="mt15"><span class="cardBenefitFlag">혜택 1위 카드</span></div>
+								<div class="cardDifImgWrap">
+									<img src="../../images/img_cardh_1961.png" alt="전 가맹점 적립에 라이프 추가적립까지 NH1961 카드 #전가맹점 #라이프적립 (준법감시인 심의필 : 2022-4272(2022.09.30~2023.12.31.))">
+								</div>
+								<div class="areaBodyBtnFull mt25">
+									<div class="inner">
+										<ul>
+											<li><a href="javascript:;" class="btnBodyLine green" role="button">혜택상세</a></li>
+											<li><a href="javascript:;" class="btnBodyLine green" role="button">카드상세</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="swCardComp">
+								<div class="titleArea"><strong>연<span class="dataValue">33,000</span>원</strong> <span class="benepitTxt"> 혜택</span>
+									<div class="tooltipWrap">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">카드추천 툴팁 열기</span></button>
+										<div class="tooltipCont boxInTooltip" style="z-index:10">
+											<p>타사카드 사용내역을 NH농협카드로 이용했을 시 받을 수 있는 할인/적립 금액으로, 타사카드와 비교해보세요.</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="mt15"><span class="cardBenefitFlag">혜택 2위 카드</span></div>
+								<div class="cardDifImgWrap">
+									<img src="../../images/img_cardh_nh20.png" alt="생활 할인에 더하여 여행과 놀이까지 NH20 해봄 카드 #공항라운지 #놀이공원(준법감시인 심의필 : 2022-4272(2022.09.30~2023.12.31.))">
+								</div>
+								<div class="areaBodyBtnFull mt25">
+									<a href="javascript:;" class="btnBodyLine green" role="button">카드상세 바로가기</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="swCardComp">
+								<div class="titleArea"><strong>연<span class="dataValue">33,000</span>원</strong> <span class="benepitTxt"> 혜택</span>
+									<div class="tooltipWrap">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">카드추천 툴팁 열기</span></button>
+										<div class="tooltipCont boxInTooltip" style="z-index:10">
+											<p>타사카드 사용내역을 NH농협카드로 이용했을 시 받을 수 있는 할인/적립 금액으로, 타사카드와 비교해보세요.</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="mt15"><span class="cardBenefitFlag">혜택 3위 카드</span></div>
+								<div class="cardDifImgWrap">
+									<img src="../../images/img_cardh_cok.png" alt="내게 꼭! 필요한 혜택을 콕! 집어주는 NH농협 콕카드 #농협판매장 #생활할인(준법감시인 심의필 : 2022-4272(2022.09.30~2023.12.31.))">
+								</div>
+								<div class="areaBodyBtnFull mt25">
+									<a href="javascript:;" class="btnBodyLine green" role="button">카드상세 바로가기</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="swCardComp">
+								<div class="titleArea"><strong>연<span class="dataValue">33,000</span>원</strong> <span class="benepitTxt"> 혜택</span></div>
+								<div class="mt15"><span class="cardBenefitFlag">혜택 1위 카드</span></div>
+								<div class="cardDifImgWrap">
+									<img src="../../images/img_cardh_allone11.png" alt="11번가에서 최대 22% 할인받는 NH올원 쇼핑&11번가 카드 #쇼핑특가 #11번가(준법감시인 심의필 : 2022-4272(2022.09.30~2023.12.31.))">
+								</div>
+								<div class="areaBodyBtnFull mt25">
+									<a href="javascript:;" class="btnBodyLine green" role="button">카드상세 바로가기</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="swCardComp">
+								<div class="titleArea"><strong>연<span class="dataValue">33,000</span>원</strong> <span class="benepitTxt"> 혜택</span></div>
+								<div class="mt15"><span class="cardBenefitFlag">혜택 1위 카드</span></div>
+								<div class="cardDifImgWrap">
+									<img src="../../images/img_cardh_amore.png" alt="할인받으면서 아름다워지는 NH올원 쇼핑&아모레 카드 #뷰티특화 #아모레퍼시픽(준법감시인 심의필 : 2022-4272(2022.09.30~2023.12.31.))">
+								</div>
+								<div class="areaBodyBtnFull mt25">
+									<a href="javascript:;" class="btnBodyLine green" role="button">카드상세 바로가기</a>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="swiper-slide">
+							<div class="swCardComp">
+								<div class="titleArea"><strong>연<span class="dataValue">33,000</span>원</strong> <span class="benepitTxt"> 혜택</span></div>
+								<div class="mt15"><span class="cardBenefitFlag">혜택 1위 카드</span></div>
+								<div class="cardDifImgWrap">
+									<img src="../../images/img_cardh_all100.png" alt="카드 하나로 생활 곳곳에서 적립 받는 NH올원 올백(All100) 카드 #생활특화 #10%적립 (준법감시인 심의필 : 2022-4272(2022.09.30~2023.12.31.))">
+								</div>
+								<div class="areaBodyBtnFull mt25">
+									<a href="javascript:;" class="btnBodyLine green" role="button">카드상세 바로가기</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="swCardComp">
+								<div class="titleArea"><strong>연<span class="dataValue">33,000</span>원</strong> <span class="benepitTxt"> 혜택</span></div>
+								<div class="mt15"><span class="cardBenefitFlag">혜택 1위 카드</span></div>
+								<div class="cardDifImgWrap">
+									<img src="../../images/img_cardh_bdj.png" alt="기본할인과 더블할인, 생활할인까지 별별혜택 별다줄카드 #온라인할인 #생활활인(준법감시인 심의필 : 2022-4272(2022.09.30~2023.12.31.))">
+								</div>
+								<div class="areaBodyBtnFull mt25">
+									<a href="javascript:;" class="btnBodyLine green" role="button">카드상세 바로가기</a>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="swiper-slide">
+							<div class="swCardComp">
+								<div class="titleArea"><strong>연<span class="dataValue">33,000</span>원</strong> <span class="benepitTxt"> 혜택</span></div>
+								<div class="mt15"><span class="cardBenefitFlag">혜택 1위 카드</span></div>
+								<div class="cardDifImgWrap">
+									<img src="../../images/img_cardh_solsol.png" alt="생활 곳곳에서 최대 12% 할인받는 혜택이 쏠쏠카드 #생활할인 #12대업종(준법감시인 심의필 : 2022-4272(2022.09.30~2023.12.31.))">
+								</div>
+								<div class="areaBodyBtnFull mt25">
+									<a href="javascript:;" class="btnBodyLine green" role="button">카드상세 바로가기</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="swCardComp">
+								<div class="titleArea"><strong>연<span class="dataValue">33,000</span>원</strong> <span class="benepitTxt"> 혜택</span></div>
+								<div class="mt15"><span class="cardBenefitFlag">혜택 1위 카드</span></div>
+								<div class="cardDifImgWrap">
+									<img src="../../images/img_cardh_allflex.png" alt="모든 일상에서 혜택을 FLEX하는 올바른 FLEX 카드 #구독서비스 #교통/통신(준법감시인 심의필 : 2022-4272(2022.09.30~2023.12.31.))">
+								</div>
+								<div class="areaBodyBtnFull mt25">
+									<a href="javascript:;" class="btnBodyLine green" role="button">카드상세 바로가기</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="swCardComp">
+								<div class="titleArea"><strong>연<span class="dataValue">33,000</span>원</strong> <span class="benepitTxt"> 혜택</span></div>
+								<div class="mt15"><span class="cardBenefitFlag">혜택 1위 카드</span></div>
+								<div class="cardDifImgWrap">
+									<img src="../../images/img_cardh_mypick.png" alt="필요한 혜택을 내맘대로 픽!하는 MYPICK 카드 #내맘대로  #맞춤혜택(준법감시인 심의필 : 2022-4272(2022.09.30~2023.12.31.))">
+								</div>
+								<div class="areaBodyBtnFull mt25">
+									<a href="javascript:;" class="btnBodyLine green" role="button">카드상세 바로가기</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="swCardComp">
+								<div class="titleArea"><strong>연<span class="dataValue">33,000</span>원</strong> <span class="benepitTxt"> 혜택</span></div>
+								<div class="mt15"><span class="cardBenefitFlag">혜택 1위 카드</span></div>
+								<div class="cardDifImgWrap">
+									<img src="../../images/img_cardh_alloilpass.png" alt="주유와 교통을 위한 올바른 선택 올바른 OIL&PASS 카드 #주유소/충전소 #대중교통(준법감시인 심의필 : 2022-4272(2022.09.30~2023.12.31.))">
+								</div>
+								<div class="areaBodyBtnFull mt25">
+									<a href="javascript:;" class="btnBodyLine green" role="button">카드상세 바로가기</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="swCardComp">
+								<div class="titleArea"><strong>연<span class="dataValue">33,000</span>원</strong> <span class="benepitTxt"> 혜택</span></div>
+								<div class="mt15"><span class="cardBenefitFlag">혜택 1위 카드</span></div>
+								<div class="cardDifImgWrap">
+									<img src="../../images/img_cardh_allgive.png" alt="카드 이용으로 혜택과 기부를 동시에 올바른 기브 카드 #러브포인트 #생활할인(준법감시인 심의필 : 2022-4272(2022.09.30~2023.12.31.))">
+								</div>
+								<div class="areaBodyBtnFull mt25">
+									<a href="javascript:;" class="btnBodyLine green" role="button">카드상세 바로가기</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="swCardComp">
+								<div class="titleArea"><strong>연<span class="dataValue">33,000</span>원</strong> <span class="benepitTxt"> 혜택</span></div>
+								<div class="mt15"><span class="cardBenefitFlag">혜택 1위 카드</span></div>
+								<div class="cardDifImgWrap">
+									<img src="../../images/img_cardh_alledu.png" alt="내 아이의 올바른 교육을 위한 선택올바른 에듀 카드 #학원비 #교육비(준법감시인 심의필 : 2022-4272(2022.09.30~2023.12.31.))">
+								</div>
+								<div class="areaBodyBtnFull mt25">
+									<a href="javascript:;" class="btnBodyLine green" role="button">카드상세 바로가기</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="swCardComp">
+								<div class="titleArea"><strong>연<span class="dataValue">33,000</span>원</strong> <span class="benepitTxt"> 혜택</span></div>
+								<div class="mt15"><span class="cardBenefitFlag">혜택 1위 카드</span></div>
+								<div class="cardDifImgWrap">
+									<img src="../../images/img_cardh_allpoint.png" alt="전 가맹점에서 조건없는 무제한 적립 올바른 포인트업 카드 #전가맹점 #무제한(준법감시인 심의필 : 2022-4272(2022.09.30~2023.12.31.))">
+								</div>
+								<div class="areaBodyBtnFull mt25">
+									<a href="javascript:;" class="btnBodyLine green" role="button">카드상세 바로가기</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="swCardComp">
+								<div class="titleArea"><strong>연<span class="dataValue">33,000</span>원</strong> <span class="benepitTxt"> 혜택</span></div>
+								<div class="mt15"><span class="cardBenefitFlag">혜택 1위 카드</span></div>
+								<div class="cardDifImgWrap">
+									<img src="../../images/img_cardh_allhana.png" alt="농협 판매장에서 추가 적립받는 올바른 하나로 카드 #농협판매장 #NH포인트(준법감시인 심의필 : 2022-4272(2022.09.30~2023.12.31.))">
+								</div>
+								<div class="areaBodyBtnFull mt25">
+									<a href="javascript:;" class="btnBodyLine green" role="button">카드상세 바로가기</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="swCardComp">
+								<div class="titleArea"><strong>연<span class="dataValue">33,000</span>원</strong> <span class="benepitTxt"> 혜택</span></div>
+								<div class="mt15"><span class="cardBenefitFlag">혜택 1위 카드</span></div>
+								<div class="cardDifImgWrap">
+									<img src="../../images/img_cardh_home.png" alt="생활 가까이에서 혜택받는 올바른 HOMETOWN 카드 #쇼핑/교통 #병원/약국(준법감시인 심의필 : 2022-4272(2022.09.30~2023.12.31.))">
+								</div>
+								<div class="areaBodyBtnFull mt25">
+									<a href="javascript:;" class="btnBodyLine green" role="button">카드상세 바로가기</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="swCardComp">
+								<div class="titleArea"><strong>연<span class="dataValue">33,000</span>원</strong> <span class="benepitTxt"> 혜택</span></div>
+								<div class="mt15"><span class="cardBenefitFlag">혜택 1위 카드</span></div>
+								<div class="cardDifImgWrap">
+									<img src="../../images/img_cardh_shop.png" alt="쇼핑 하면서 최대 10% 적립받는 채움 쇼핑세이브 카드 #백화점/대형마트 #온라인쇼핑 (준법감시인 심의필 : 2022-4272(2022.09.30~2023.12.31.))">
+								</div>
+								<div class="areaBodyBtnFull mt25">
+									<a href="javascript:;" class="btnBodyLine green" role="button">카드상세 바로가기</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="swCardComp">
+								<div class="titleArea"><strong>연<span class="dataValue">33,000</span>원</strong> <span class="benepitTxt"> 혜택</span></div>
+								<div class="mt15"><span class="cardBenefitFlag">혜택 1위 카드</span></div>
+								<div class="cardDifImgWrap">
+									<img src="../../images/img_cardh_pet.png" alt="반려동물의 생활부터 건강까지 책입지는 펫블리(PETvely) 카드 #반려동물 #병원/보험(준법감시인 심의필 : 2022-4272(2022.09.30~2023.12.31.))">
+								</div>
+								<div class="areaBodyBtnFull mt25">
+									<a href="javascript:;" class="btnBodyLine green" role="button">카드상세 바로가기</a>
+								</div>
+							</div>
+						</div>
+						-->
+
+						<!--  [2023 NH마이데이터 서비스 고도화] : 2022-09-29 카드 코딩으로 작업  -->
+						<div class="swiper-slide">
+							<div class="swCardComp t1">
+								<div class="titleArea"><strong>연<span class="dataValue">33,000</span>원</strong> <span class="benepitTxt"> 혜택</span>
+									<div class="tooltipWrap">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">카드추천 툴팁 열기</span></button>
+										<div class="tooltipCont boxInTooltip" style="z-index:10">
+											<p>타사카드 최근 3개월 사용내역을 NH농협카드로 이용했을 시 받을 수 있는 할인/적립 금액으로, 타사카드와 비교해보세요.</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="mt15"><span class="cardBenefitFlag">혜택 1위 카드</span></div>
+								<div class="cardInfoWrap">
+									<div class="cardInfoArea"><strong>조건없는 기본적립에 추가할인까지 <span class="pointColor">NH1934카드</span></strong></div>
+									<span class="cardImgArea" aria-hidden="true"><img src="../../images/temp/temp_card_img.png"></span>
+								</div>
+								<div class="cardHashtag"><span>#온라인쇼핑</span><span>#온라인쇼핑</span></div>
+								<div class="cardReview">준법감시인 심의필 정보노출</div>
+								<div class="areaBodyBtnFull mt25">
+									<a href="javascript:;" class="btnBodyLine green" role="button">카드상세 바로가기</a>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="swCardComp t1">
+								<div class="titleArea"><strong>연<span class="dataValue">33,000</span>원</strong> <span class="benepitTxt"> 혜택</span></div>
+								<div class="mt15"><span class="cardBenefitFlag">혜택 2위 카드</span></div>
+								<div class="cardInfoWrap">
+									<div class="cardInfoArea"><strong>조건없는 기본적립에 추가할인까지 <span class="pointColor">NH1934카드</span></strong></div>
+									<span class="cardImgArea" aria-hidden="true"><img src="../../images/temp/temp_card_img.png"></span>
+								</div>
+								<div class="cardHashtag"><span>#온라인쇼핑</span><span>#온라인쇼핑</span></div>
+								<div class="cardReview">준법감시인 심의필 정보노출</div>
+								<div class="areaBodyBtnFull mt25">
+									<a href="javascript:;" class="btnBodyLine green" role="button">카드상세 바로가기</a>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="swCardComp t1">
+								<div class="titleArea"><strong>연<span class="dataValue">33,000</span>원</strong> <span class="benepitTxt"> 혜택</span></div>
+								<div class="mt15"><span class="cardBenefitFlag">혜택 3위 카드</span></div>
+								<div class="cardInfoWrap">
+									<div class="cardInfoArea"><strong>조건없는 기본적립에 추가할인까지 <span class="pointColor">NH1934카드</span></strong></div>
+									<span class="cardImgArea" aria-hidden="true"><img src="../../images/temp/temp_card_img.png"></span>
+								</div>
+								<div class="cardHashtag"><span>#온라인쇼핑</span><span>#온라인쇼핑</span></div>
+								<div class="cardReview">준법감시인 심의필 정보노출</div>
+								<div class="areaBodyBtnFull mt25">
+									<a href="javascript:;" class="btnBodyLine green" role="button">카드상세 바로가기</a>
+								</div>
+							</div>
+						</div> 
+						<!-- //[2023 NH마이데이터 서비스 고도화] : 2022-09-29 카드 코딩으로 작업  -->
+					</div>
+					<div class="swiper-control">
+						<div class="swiper-pagination"></div>
+						<div class="swiper-autoBtn playing">
+							<a href="javascript:;" class="stopBtn" title="자동재생중 두번 터치시 멈춤"></a>
+							<a href="javascript:;" class="playBtn" title="자동재생 멈춤 두번 터치시 자동재생시작"></a>
+						</div>
+					</div>
+					<div class="swiper-button-prev blind"></div>
+					<div class="swiper-button-next blind"></div>
+				</div>
+				<script>
+					$(function () {
+						var swiper = new Swiper('.bannerSwiperPrd', {
+							slidesPerView: 1,
+							spaceBetween: 10,
+							loop: true,
+							observer:true,
+							observeParents : true,
+							autoplay: {
+								delay: 2500,
+								disableOnInteraction: true,
+								pauseOnMouseEnter: true,
+							},
+
+							pagination: {
+								el: '.swiper-pagination',
+								type: 'bullets',
+								clickable: true,
+							},
+							on: {
+								transitionEnd: function () {
+									$('.swiper-slide').attr('aria-hidden', 'true')
+									$('.swiper-slide-active').attr('aria-hidden', 'false')
+								}
+							}
+						});
+						$('.bannerSwiperPrd').find('.stopBtn').on('click', function () {
+							$('.swiper-autoBtn').removeClass('playing');
+							swiper.autoplay.stop();
+							console.log('자동재생 멈춤');
+						})
+						$('.bannerSwiperPrd').find('.playBtn').on('click', function () {
+							$('.swiper-autoBtn').addClass('playing');
+
+							swiper.autoplay.start();
+							console.log('자동재생 시작');
+						})
+					})
+				</script>
+			</div>
+		</div>
+		<!-- 2022-10-26 추가 -->
+		<style type="text/css">
+			.nhasset .cardOrderList > li .num{flex:0 0 auto;}
+		</style>
+		<!-- //2022-10-26 추가 -->
+
+		<div class="boxTypeWrap">
+			<h2 class="defSubTit2 mt0">NH마이데이터 고객이<br> 가장 많이 보유한 카드는?</h2>
+			<div class="tabWrap type07 mt25">
+				<ul role="tablist">
+					<li><a href="javascript:;" class="active">NH농협카드</a></li>
+					<li><a href="javascript:;">타사카드</a></li>
+				</ul>
+			</div>
+			<div class="tabContWrap type07 mt20">
+				<div class="tabCont01" aria-label="NH농협카드 탭">
+					<ol class="cardOrderList nhCard">
+						<li>
+							<a href="javascript" title="NH농협카드 사이트로 이동"> <!-- [2023-01-15] 접근성 수정 -->
+								<span class="num">1위</span>
+								<span class="cardImgArea"><img src="../../images/img_card_allone11.png" alt="올바른 베이직카드"></span>
+								<span class="cardTitle">올바른 베이직카드베이직카드</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript" title="NH농협카드 사이트로 이동"> <!-- [2023-01-15] 접근성 수정 -->
+								<span class="num">2위</span>
+								<span class="cardImgArea"><img src="../../images/img_card_allone11.png" alt="올바른 베이직카드"></span>
+								<span class="cardTitle">올바른 베이직카드</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript" title="NH농협카드 사이트로 이동"> <!-- [2023-01-15] 접근성 수정 -->
+								<span class="num">3위</span>
+								<span class="cardImgArea"><img src="../../images/img_card_allone11.png" alt="올바른 베이직카드"></span>
+								<span class="cardTitle">올바른 베이직카드</span>
+							</a>
+						</li>
+					</ol>
+				</div>
+				<div class="tabCont02" aria-label="타사카드 탭" style="display:none">
+					<ol class="cardOrderList">
+						<li>
+							<span class="num">1위</span>
+							<!-- <span class="imgWrap A1AABG0000">BC 시발카드</span> -->
+							<span class="imgWrap"> <!-- [2022-11-21] 사보현 : 로고 공통 이미지로 변경 -->
+								<img src="../../images/logos/AABG0000.png" alt="NH농협카드" class="imgLogo"><!-- [접근성_2024] 기관명 변경 --><span>BC 시발카드</span>
+							</span>
+						</li>
+						<li>
+							<span class="num">2위</span>
+							<!-- <span class="imgWrap A1AABG0000">BC 시발카드</span> -->
+							<span class="imgWrap"> <!-- [2022-11-21] 사보현 : 로고 공통 이미지로 변경 -->
+								<img src="../../images/logos/AABG0000.png" alt="NH농협카드" class="imgLogo"><span>BC 시발카드</span>
+							</span>
+						</li>
+						<li>
+							<span class="num">3위</span>
+							<!-- <span class="imgWrap A1AABG0000">BC 시발카드</span> -->
+							<span class="imgWrap"> <!-- [2022-11-21] 사보현 : 로고 공통 이미지로 변경 -->
+								<img src="../../images/logos/AABG0000.png" alt="NH농협카드" class="imgLogo"><span>BC 시발카드</span>
+							</span>
+						</li>
+					</ol>
+				</div>
+				
+			</div>
+
+		</div>
+
+		<!-- 2022-09-20 추가 -->
+		<div class="info_area">
+			<strong class="info_area_title">알아두세요</strong>
+			<ul class="listBul disc">
+				<li>혜택 금액은 타사카드 최근 3개월 사용내역으로 계산한 추정 금액으로 실제 금액과 차이가 발생할 수 있습니다.</li> <!-- [2023 NH마이데이터 서비스 고도화] 문구 수정 -->
+				<!-- 2022-10-13 문구 추가 -->
+				<li>추천 카드별 세부 내용은 카드상세 페이지를 참고하시기 바랍니다.</li>
+				<!-- //2022-10-13 문구 추가 -->
+			</ul>
+		</div>
+		<!-- //2022-09-20 추가 -->
+
+	</div>
+	<!-- //container -->
+</div>
+</body>
+</html>

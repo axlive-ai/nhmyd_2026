@@ -1,0 +1,1043 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>별별서비스</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		tostpop();//토스트 팝업 호출
+	})
+
+	function tostpop(){
+		//var $tostCont = '<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg">서비스 가입이 완료 되었습니다.</div></div>'
+
+		//부정형 일때 추가(2022-08-12)
+		var $tostCont = '<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg error">잠시후 다시 시도해주세요.</div></div>'
+		$('.container').after($tostCont);
+		setTimeout(function(){
+			$('.tostpopupWrap').remove();
+		},4000)
+	}
+</script>
+</head>
+<body>
+<div class="wrapper nhasset hasGnb" id="wrap">
+	<!-- header -->
+	<div class="header">
+		<!-- <a href="javascript:;" class="btnBack" role="button"><span>이전화면으로</span></a> -->
+		<h1><a href="javascript:;" role="text"><img src="../../images/logoMydata2.png" alt="금융과 일상을 연결하다 NH마이데이터"></a></h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>전체메뉴</span></a>
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 별페이지 ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<!-- 메뉴 --><!-- 2022-11-17 GNB 변경 -->
+		<div class="gnb">
+			<ul>
+				<li><a href="javascript:;">자산</a></li>
+				<li><a href="javascript:;">소비</a></li>
+				<li class="menuStar"><a href="javascript:;" class="active" title="선택됨"><span class="menuStarInner"><span class="blind">별별서비스</span></span></a></li> <!-- [접근성_2024] 메뉴명 변경 -->
+				<li><a href="javascript:;">전체</a></li>
+			</ul>
+		</div>
+		<!-- //메뉴 -->
+
+		<!-- 2022-10-25 업데이트바 공통수정 -->
+		<div class="pageRefreshWrap">
+			<div class="pageRefresInner">
+				<span>
+					<span class="date">08.05 10:45</span>
+					<button type="button" class="btnUpdate"><span class="blind">업데이트</span></button>
+				</span>
+				<button type="button" class="btnAlrt new" aria-expanded="false"><span class="blind">알림</span></button>
+			</div>
+			<div class="pageAlertWrap">
+				<ul>
+					<li class="alertNotice">
+						<a href="javascript:;" role="button">
+							<dl>
+								<dt>연결중인 자산 확인이 필요해요</dt>
+								<dd>OOO에서 전송 중단 또는 거절이 있었습니다.<br/>연결관리 화면에서 확인해주세요. </dd>
+							</dl>
+						</a>
+					</li>
+					<li class="alertError">
+						<a href="javascript:;" role="button">
+							<dl>
+								<dt>정보 확인이 필요해요</dt>
+								<dd><span>$연말정산$</span> 정보수집 중 오류가 있었습니다.<br/><span>$연말정산$</span> 설정 화면에서 확인해주세요. </dd>
+							</dl>
+						</a>
+					</li>
+					<li class="alertError">
+						<a href="javascript:;" role="button">
+							<dl>
+								<dt>업데이트한지 <span>N</span>일이 지났어요</dt>
+								<dd><span>$연말정산$</span> 정보 업데이트가 필요합니다.<br/>인증관리 화면에서 확인해주세요.</dd>
+							</dl>
+						</a>
+					</li>
+					<li class="alertError">
+						<a href="javascript:;" role="button">
+							<dl>
+								<dt>정보수집이 필요해요</dt>
+								<dd><span>$연말정산$</span> 서비스 이용을 위해 정보수집이 필요합니다. 인증관리 화면에서 확인해주세요.</dd>
+							</dl>
+						</a>
+					</li>
+
+				</ul>
+				<div class="pageAlertNoData">
+					<p>업데이트 알림 내역이 없습니다.</p>
+				</div>
+				<button type="button" aria-expanded="true" class="pageAlertClose"><span>닫기</span></button>
+			</div>
+		</div>
+		<!-- //2022-10-25 업데이트바 공통수정 -->
+
+		<!-- SPOT성 배너 -->
+		<div class="yaTopBanner Ty01 bgTy01">
+			<a href="javascript:;" class="link yalinkBtn" role="button">
+				<span>연결만료된 N개 기관이 있어요</span>
+				<p>재연결하고 환급금액 확인하기</p>
+			</a>
+			<button type="button" class="btnClose"><span class="blind">닫기</span></button>
+		</div>
+
+		<div class="yaTopBanner Ty01 bgTy02">
+			<a href="javascript:;" class="link yalinkBtn" role="button">
+				<span>만료예정인 N개 기관이 있어요</span>
+				<p>재연결하고 환급금액 확인하기</p>
+			</a>
+			<button type="button" class="btnClose"><span class="blind">닫기</span></button>
+		</div>
+
+		<div class="yaTopBanner Ty01 bgTy03">
+			<a href="javascript:;" class="link yalinkBtn" role="button">
+				<span>환급금액을 위해 자산연결이 필요해요!</span>
+				<p>지금바로 자산연결하기</p>
+			</a>
+			<button type="button" class="btnClose"><span class="blind">닫기</span></button>
+		</div>
+		<!-- SPOT성 배너 -->
+
+		<!-- -------------------------------------- -->
+		<!-- [배너영역] -->
+		<!-- [2023 NH마이데이터 서비스 고도화] 배너추가 -->
+		<!-- -------------------------------------- -->
+		<!-- [배너1 : 신용점수] -->
+		<div class="areaBanner8">
+			<!-- [CASE1] 이력없음 -->
+			<a href="javascript:;" class="img1">
+				<span class="txt1">지금 나의 NICE 신용점수는?</span>
+				<span class="txt2"><strong data-num-action="???">???점</strong></span>
+				<span class="txt3">신용점수 확인하고 점수 올리기</span>
+			</a>
+
+			<!-- [CASE2] 이력있음 -->
+			<a href="javascript:;" class="img1">
+				<span class="txt1">지금 나의 NICE 신용점수는?</span>
+				<span class="txt2" data-mode="ani"><strong data-num-action="981">981점</strong><i>에서</i><strong>???점</strong></span> <!-- [D] 숫자 모션 하단 스크립트 참고 : data-num-action -->
+				<span class="txt3">쉽고 간편하게 신용점수 올리기</span>
+			</a>
+		</div>
+
+		<!-- [배너2 : NH트렌드+] -->
+		<div class="listData1">
+			<a href="javascript:;" role="button" title="상세화면으로 이동" style="background-image:url('../../images/temp/@bg_trd_obj02.png');"> <!-- [D] 관리자등록이미지 : background-image -->
+				<div class="tit">
+					<span>관심사 제목</span>
+					<strong>카드 제목</strong>
+				</div>
+				<div class="tagWrap">
+					<span class="tag text">해시태그</span>
+					<span class="tag text">해시태그</span>
+				</div>
+			</a>
+		</div>
+		<!-- -------------------------------------- -->
+
+		<!-- 혜택 플러스 (남은 미션 있음) -->
+		<!-- [2023-01-04] 배너 인터렉션 추가 -->
+		<div class="boxTypeWrap starBenefitType01">
+			<a href="javascript:;" role="button" class="starBenefitLink">
+				<div class="starBenefitCont">
+					<div class="flag">MISSION</div>
+					<div class="chgCont type1">
+						<div class="title">
+							<p>천리길도 한걸음부터</p>
+							<p>222222222222222222222222222222222222222222222222222222222222</p>
+						</div>
+					</div>
+					<div class="starBenefitBadge type1">
+						<img src="../../images/contents/ico_badge01.png" alt="배지명01">  
+						<img src="../../images/contents/ico_badge02.png" alt="배지명02">  
+					</div>
+					<div class="para"><span class="linkTxt2">아직 획득할 수 있는 배지가 있어요!</span></div>
+				</div>
+			</a>
+		</div>
+		<script>
+			var classNum = 1;
+			var loopTest = setInterval(function(){
+				$(".chgCont .title p").fadeOut();
+				$(".starBenefitBadge img").fadeOut();
+				$(".chgCont.type1 .title p").eq(classNum).fadeIn();
+				$(".starBenefitBadge img").eq(classNum).fadeIn();
+	
+				classNum += 1;
+				if(classNum >= $(".title p").length){
+					classNum = 0;
+				}
+				//console.log(classNum);
+			},2500);
+		</script>
+		<!-- //[2023-01-04] 배너 인터렉션 추가 -->
+		
+		<!-- //혜택 플러스 (남은 미션 있음) -->
+
+		<!-- 혜택 플러스 (남은 미션 없음) -->
+		<div class="boxTypeWrap starBenefitType01">
+			<a href="javascript:;" role="button" class="starBenefitLink complate">
+				<div class="starBenefitCont">
+					<div class="flag">MISSION</div>
+					<div class="title imgType"><img src="../../images/contents/img_text_complete.png" alt="COMPLATE"></div>
+					<div class="para"><span class="linkTxt2">대단해요, 모든 배지를 다 모았어요</span></div>
+				</div>
+			</a>
+		</div>
+		<!-- //혜택 플러스 (남은 미션 없음) -->
+
+		<!-- 혜택 플러스 (멤버스 미가입자) -->
+		<div class="boxTypeWrap starBenefitType02">
+			<a href="javascript:;" role="button" class="starBenefitLink">
+				<div class="starBenefitCont">
+					<div class="flag">MISSION</div>
+					<div class="title noneType"><span class="pointColor">궁</span><span class="pointColor">금</span><span>하면</span> <span class="pointColor">클</span><span class="pointColor">릭</span><span>해보세요!</span></div>
+					<div class="para"><span class="linkTxt2">배지를 모아서 NH포인트 받는 방법?</span></div>
+				</div>
+			</a>
+		</div>
+		<!-- //혜택 플러스 (멤버스 미가입자) -->
+
+		<!-- 헬스케어 (건강검진 결과 연결 안했을 때) -->
+		<div class="boxTypeWrap starHealthType">
+			<a href="javascript:;" role="button" class="starHealthLink">
+				<div class="title">당신의 건강나이는?</div>
+				<!-- 최근일자 추가 -->
+				<div class="date"><span class="dateTitle">최근 검진일 기준 : </span><span class="dateValue">2022.10.23</span></div>
+				<!-- //최근일자 추가 -->
+				<div class="compareWrap">
+					<div class="standard">
+						<span class="dataValueWrap">
+							<strong class="dataValue">43</strong><em class="se">세</em>
+						</span>
+						<span class="tit people">실제나이</span>
+					</div>
+					<div class="icoEqual type03" role="img" aria-label="실제나이보다 건강나이가 더 어려요"></div>
+					<div class="me">
+						<span class="dataValueWrap">
+							<strong class="dataValue"><em>??</em></strong><em class="se">세</em>
+						</span>
+						<span class="tit heart">건강나이</span>
+					</div>
+				</div>
+				<div class="starHealthAge"><span class="linkTxt2">건강나이를 알아보러갈까요?</span></div>
+			</a>
+		</div>
+		<!-- //헬스케어 (건강검진 결과 연결 안했을 때) -->
+
+		<!-- 헬스케어 (건강검진 결과 있을 때 ) -->
+		<div class="boxTypeWrap starHealthType">
+			<a href="javascript:;" role="button" class="starHealthLink">
+				<div class="title">당신의 건강나이는?</div>
+				<div class="compareWrap">
+					<div class="standard">
+						<span class="dataValueWrap">
+							<strong class="dataValue">43</strong><em class="se">세</em>
+						</span>
+						<span class="tit people">실제나이</span>
+					</div>
+					<div class="icoEqual type03" role="img" aria-label="실제나이보다 건강나이가 더 어려요"></div>
+					<div class="me">
+						<span class="dataValueWrap">
+							<strong class="dataValue"><em class="healthAge">41</em></strong><em class="se">세</em>
+						</span>
+						<span class="tit heart">건강나이</span>
+					</div>
+				</div>
+				<div class="starHealthAge"><span class="linkTxt2">젊음은 맘껏 자랑해도 좋아요, 응애~</span></div>
+			</a>
+		</div>
+		<!-- //헬스케어 (건강검진 결과 있을 때 ) -->
+
+		<!-- 헬스케어 (건강검진결과 연결했고 조회결과가 있을 때) -->
+		<div class="boxTypeWrap starHealthType type02">
+			<a href="javascript:;" role="button" class="starHealthLink">
+				<div class="starHealthInfoWrap">
+					<div class="starHealthInfo">
+						<div class="tit">검진결과</div>
+						<strong class="txtt2"><strong class="pointColor13">주의 2건</strong>,<br> <strong class="pointColor02">질환의심 1건</strong>이 있네요</strong>
+						<ul class="legendList">
+							<li>
+								<span class="legendTit type10">정상</span>
+							</li>
+							<li>
+								<span class="legendTit type33">주의</span>
+							</li>
+							<li>
+								<span class="legendTit type34">질환의심</span>
+							</li>
+						</ul>
+					</div>
+					<div class="graphArea">
+						<div class="graphWrap" style="height:110px;" tabindex="0" role="img" aria-label="2021년 정상 15건 주의 1건">
+							<p style="text-align:center;padding-top:50px;">그래프 영역</p>
+						</div>
+
+					</div>
+				</div>
+				<div class="starHealthAge"><span class="linkTxt2">건강검진결과 자세히 보기</span></div>
+			</a>
+		</div>
+		<!-- //헬스케어 (건강검진결과 연결했고 조회결과가 있을 때) -->
+
+		<!-- 헬스케어 (건강검진결과는 연결했지만 조회결과가 없을 때) -->
+		<div class="htSubMainBanner">
+			<div class="yabannerArea">
+				<a href="javascript:;" title="">
+					<div class="yabanner" style="background-image:url('../../images/banner/bg_ht_obj01.png');"> <!-- [2023-01-03] 배너 이미지 현행화 -->
+						<span class="subTxt"><strong>식품</strong></span>
+						<p class="subTit"><strong>술마시고 얼굴색이<br>변하는 이유는?</strong></p>
+						<div class="tagWrap"><span class="tag text">#음주</span><span class="tag text">#혈색</span></div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<!-- //헬스케어 (건강검진결과는 연결했지만 조회결과가 없을 때) -->
+
+		<!-- 연말정산 (결과값 없는 경우) -->
+		<!-- [2023-01-05] 배너 삭제 -->
+		<!-- <div class="starYaWrap starYadataNone">
+			<div class="yabannerArea">
+				<div class="yabanner bgSkyblue bgType01">
+					<strong>22년12월31일</strong> <span>까지 소비한 금액으로 <span><br>연말정산을 한다면 공제금액은?</span></span>
+				</div>
+			</div>
+			<div class="formWrap addShoow">
+				<div class="yanowWrap bdR10">
+					<ul class="yalistBox">
+						<li class="mt5">
+							<span class="list_title">인적공제</span>
+							<span class="list_item"><span class="dataValue">?</span>원</span>
+						</li> 
+						<li>
+							<span class="list_title">소득공제</span>
+							<span class="list_item"><span class="dataValue">?</span>원</span>
+						</li> 
+						<li>
+							<span class="list_title">세액공제</span>
+							<span class="list_item"><span class="dataValue">?</span>원</span>
+						</li>
+					</ul>
+					<div class="mt20">
+						<a href="javascript:;" class="linkTxt2" role="button">얼마나 공제받을까요?</a>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		<!-- //[2023-01-05] 배너 삭제 -->
+
+		<div class="starYaWrap starYadataNone">
+			<div class="yabannerArea">
+				<div class="yabanner bgSkyblue bgType02">
+					<strong>당신의 절세액이 <br>궁금하세요?</strong>
+				</div>
+			</div>
+			<div class="formWrap addShoow">
+				<div class="yanowWrap bdR10">
+					<ul class="yalistBox">
+						<li class="mt5 sum">
+							<span class="list_title">2021년 환금액</span>
+							<span class="list_item pointColor"><span class="dataValue">?</span>원 환급</span>
+						</li> 
+						<li>
+							<span class="list_title">최대환급가능액</span>
+							<span class="list_item"><span class="dataValue">?</span>원</span>
+						</li> 
+						<li>
+							<span class="list_title">추가환급가능액
+								<div class="tooltipWrap">
+									<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">추가환급가능액 툴팁 열기</span></button>
+									<div class="tooltipCont addBul lf0">
+											<ul class="bulList">
+											<li>정산결과 리뷰는 소비(신용,체크,현금영수증), 추가소비(전통시장), 추가소비(대중교통), 추가소비(도서/문화), 퇴직연금/연금저축, 주택청약, 보장성보험이 대상입니다.</li>
+										</ul>
+										<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+									</div>
+								</div>
+							</span>
+							<span class="list_item"><span class="dataValue">?</span>원</span>
+						</li>
+					</ul>
+					<div class="mt20">
+						<a href="javascript:;" class="linkTxt2" role="button">얼마나 공제받을까요?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<a href="javascript:;" role="button" title="" class="starYaWrap starYadataNone"> <!-- [2023-01-03] 마크업 수정 -->
+			<div class="yabannerArea">
+				<div class="yabanner bgSkyblue bgType03 pb20">
+					<strong>2022년</strong> 13월의 월급은<br>
+					<p class="starBigTxt"><strong><span class="dataValue">?,???,???</span>원</strong> 환급</p> <!-- [2023-01-05] 마크업 수정 -->
+					<div class="mt10">
+						<span class="linkTxt2">얼마나 환급받을까요?</span> <!-- [2023-01-03] 마크업 수정 -->
+					</div>
+				</div>
+			</div>
+		</a>
+		
+		<!-- [2023-01-05] 배너 삭제 -->
+		<!-- <a href="javascript:;" role="button" title="" class="starYaWrap starYadataNone">
+			<div class="yabannerArea">
+				<div class="yabanner bgSkyblue bgType04 pb20">
+					<strong>2022년</strong> 13월의 월급은<br>
+					<p class="starBigTxt"><strong><span class="dataValue">?,???,???</span>원</strong> 환급</p>
+					<div class="mt10">
+						<span class="linkTxt2">얼마나 환급받을까요?</span>
+					</div>
+				</div>
+			</div>
+		</a> -->
+		<!-- //[2023-01-05] 배너 삭제 -->
+
+		<!-- 연말정산 (결과값 없는 경우) -->
+
+		<!-- 연말정산 (결과값 있는 경우) -->
+		<!-- [2023-01-05] 배너 삭제 -->
+		<!-- <div class="starYaWrap">
+			<div class="yabannerArea">
+				<div class="yabanner bgSkyblue bgType01">
+					<strong>22년12월31일</strong> <span>까지 소비한 금액으로 <span><br>연말정산을 한다면 공제금액은?</span></span>
+				</div>
+			</div>
+			<div class="formWrap addShoow">
+				<div class="yanowWrap bdR10">
+					<ul class="yalistBox">
+						<li class="mt5">
+							<span class="list_title">인적공제</span>
+							<span class="list_item"><span class="dataValue">11,055</span>원</span>
+						</li> 
+						<li>
+							<span class="list_title">소득공제</span>
+							<span class="list_item"><span class="dataValue">11,055</span>원</span>
+						</li> 
+						<li>
+							<span class="list_title">세액공제</span>
+							<span class="list_item"><span class="dataValue">23,162,745</span>원</span>
+						</li>
+					</ul>
+					<div class="mt20">
+						<a href="javascript:;" class="linkTxt2" role="button">어떻게 계산했는지 궁금하세요?</a>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		<!-- //[2023-01-05] 배너 삭제 -->
+
+		<div class="starYaWrap">
+			<div class="yabannerArea">
+				<div class="yabanner bgSkyblue bgType02">
+					<strong>2022년</strong> 추가로 <strong><span class="dataValue">1,320,000</span>원</strong><br>더 절세할 수 있어요!~
+				</div>
+			</div>
+			<div class="formWrap addShoow">
+				<div class="yanowWrap bdR10">
+					<ul class="yalistBox">
+						<li class="mt5 sum">
+							<span class="list_title">2021년 환금액</span>
+							<span class="list_item pointColor"><span class="dataValue">4,596,410</span>원 환급</span>
+						</li> 
+						<li>
+							<span class="list_title">최대환급가능액</span>
+							<span class="list_item"><span class="dataValue">5,916,410</span>원</span>
+						</li> 
+						<li>
+							<span class="list_title">추가환급가능액
+								<div class="tooltipWrap">
+									<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">추가환급가능액 툴팁 열기</span></button>
+									<div class="tooltipCont addBul lf0">
+											<ul class="bulList">
+											<li>정산결과 리뷰는 소비(신용,체크,현금영수증), 추가소비(전통시장), 추가소비(대중교통), 추가소비(도서/문화), 퇴직연금/연금저축, 주택청약, 보장성보험이 대상입니다.</li>
+										</ul>
+										<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+									</div>
+								</div>
+							</span>
+							<span class="list_item"><span class="dataValue">1,320,000</span>원</span>
+						</li>
+					</ul>
+					<div class="mt20">
+						<a href="javascript:;" class="linkTxt2" role="button">어떻게 계산했는지 궁금하세요?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<a href="javascript:;" role="button" title="" class="starYaWrap"> <!-- [2023-01-05] 마크업 수정 -->
+			<div class="yabannerArea">
+				<div class="yabanner bgSkyblue bgType03 pb20">
+					<strong>2022년</strong> 13월의 월급은<br>
+					<p class="starBigTxt"><strong><span class="dataValue">1,620,380</span>원</strong> 환급</p> <!-- [2023-01-05] 마크업 수정 -->
+					<div class="mt10">
+						<span class="linkTxt2">어떻게 계산했는지 궁금하세요?</span> <!-- [2023-01-05] 마크업, 텍스트 수정 -->
+					</div>
+				</div>
+			</div>
+		</a>
+		<!-- [2023-01-05] 배너 삭제 -->
+		<!-- <a href="javascript:;" role="button" title="" class="starYaWrap"> 
+			<div class="yabannerArea">
+				<div class="yabanner bgSkyblue bgType04 pb20">
+					<strong>2022년</strong> 13월의 월급은<br>
+					<p class="starBigTxt"><strong><span class="dataValue">1,620,380</span>원</strong> 환급</p>
+					<div class="mt10">
+						<span class="linkTxt2">어떻게 계산했는지 궁금하세요?</span>
+					</div>
+				</div>
+			</div>
+		</a> -->
+		<!-- //[2023-01-05] 배너 삭제 -->
+		<!-- [2023-01-05] 배너 추가 -->
+		<a href="javascript:;" role="button" title="" class="starYaWrap">
+			<div class="yabannerArea">
+				<div class="yabanner bgSkyblue bgType04 pb20">
+					<strong>2022년</strong> 13월의 월급은<br>
+					<p class="starBigTxt"><strong><span class="dataValue">1,620,380</span>원</strong> 추가납부</p>
+					<div class="mt10">
+						<span class="linkTxt2">어떻게 계산했는지 궁금하세요?</span>
+					</div>
+				</div>
+			</div>
+		</a>
+		<a href="javascript:;" role="button" title="" class="starYaWrap">
+			<div class="yabannerArea">
+				<div class="yabanner bgSkyblue bgType05 pb20">
+					<strong>2022년</strong> 13월의 월급은<br>없을 것으로 예상돼요!</p>
+					<div class="mt10">
+						<span class="linkTxt2">어떻게 계산했는지 궁금하세요?</span>
+					</div>
+				</div>
+			</div>
+		</a>
+		<!-- //[2023-01-05] 배너 추가 -->
+
+		<!-- 연말정산 (결과값 있는 경우) -->
+
+		<!-- 절세팁 (결과가 없는 경우) -->
+		<a href="javascript:;" role="button" title="" class="starTaxReduction ty03 starTaxDataNone"> <!-- [2023-01-05] 마크업 수정 -->
+			<div class="yabannerArea">
+				<div class="titImgBanner ty03">
+					<div class="swiper starTaxSlide">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><strong>양도소득세 (해외주식)</strong></div>
+							<div class="swiper-slide"><strong>종합소득세</strong></div>
+							<div class="swiper-slide"><strong>건강보험료</strong></div>
+						</div>
+					</div>
+					<!-- <strong>양도소득세 (해외주식)</strong> -->
+					<!-- <a href="javascript:;" class="btnClose"><span class="blind">양도소득세 해외주식 삭제</span></a> --> <!-- [2023-01-05] 버튼 삭제 -->
+				</div>
+			</div>
+			<div class="formWrap addShoow"><!--s:formWrap-->
+				<div class="yanowWrap bdR10">
+					<div class="taxInfoWrap">
+						<div class="priceTitWrap"><strong class="priceTit"><strong class="dataValue">?,???,???</strong> <em>원</em></strong></div>
+					</div>
+					<div class="mt5">
+						<span class="linkTxt2">세금이 얼마나 나올지 걱정되나요?</span> <!-- [2023-01-05] 마크업 수정 -->
+					</div>
+				</div>
+			</div>
+		</a>
+		<!-- //절세팁 (결과가 없는 경우) -->
+
+		<script type="text/javascript">
+			//절세팁 결과 없는 경우 제목 슬라이드
+			var swiper = new Swiper('.starTaxSlide',{
+				direction:"vertical",
+				spaceBetween: 0,
+				touchRatio: 0,	//touch move 비활성
+				autoplay: {
+						delay: 2500,
+						disableOnInteraction: false, //터치 후 멈춤 설정
+						pauseOnMouseEnter: false,
+					},
+				loop:true,
+				watchOverflow:true,
+				on: {
+					init: function(){
+						$('.starTaxSlide .swiper-slide').attr('aria-hidden','true');
+						$('.starTaxSlide .swiper-slide-active').attr('aria-hidden','false');
+					},
+					slideChangeTransitionEnd : function(){
+						$('.swiper-slide').attr('aria-hidden','true');
+						$('.swiper-slide-active').attr('aria-hidden','false');
+					}
+				}
+			});
+		</script>
+
+		<!-- 절세팁 (종합소득세) -->
+		<a href="javascript:;" role="button" title="" class="starTaxReduction ty01"> <!-- [2023-01-05] 마크업 수정 -->
+			<div class="yabannerArea">
+				<div class="titImgBanner ty01">
+					<strong>종합소득세</strong>
+					<!-- <a href="javascript:;" class="btnClose"><span class="blind">종합소득세 삭제</span></a> --> <!-- [2023-01-05] 버튼 삭제 -->
+				</div>
+			</div>
+			<div class="formWrap addShoow"><!--s:formWrap-->
+				<div class="yanowWrap bdR10">
+					<div class="taxInfoWrap">
+						<div class="priceTitWrap"><strong class="priceTit"><strong class="dataValue">2,500,000</strong> <em>원</em></strong></div>
+						<p class="subTxt">마지막으로 계산한 종합소득세 예상금액</p>
+						
+						<ul class="yalistBox">
+							<li>
+								<span class="list_title">나의 이자</span>
+								<span class="list_item">1,000,000원</span>
+							</li>
+							<li>
+								<span class="list_title">배당 소득</span>
+								<span class="list_item">1,000,000원</span>
+							</li>
+						</ul>
+						<div class="taxComWrap">
+							<div class="equalBox">
+								<p class="txt txtReli">종합소득세<span class="txtAbs">실현수익</span></p>
+								<div class="icoEqual type01"><span class="blind">작음</span></div>
+								<!-- <div class="icoEqual type02"><span class="blind">작거나 같음</span></div> -->
+								<!-- <div class="icoEqual type03"><span class="blind">같음</span></div> -->
+								<!-- <div class="icoEqual type04"><span class="blind">크거나 같음</span></div> -->
+								<!-- <div class="icoEqual type05"><span class="blind">큼</span></div> -->
+								<p class="txt">2천만원</p>
+							</div>
+						</div>
+					</div>
+					<div class="mt20">
+						<span class="linkTxt2">세금이 얼마나 나올지 걱정되나요?</span> <!-- [2023-01-05] 마크업 수정 -->
+					</div>
+				</div>
+			</div>
+		</a>
+		<!-- //절세팁 (종합소득세) -->
+
+		<!-- 절세팁 (양도소득세) -->
+		<a href="javascript:;" role="button" title="" class="starTaxReduction ty02"> <!-- [2023-01-05] 마크업 수정 -->
+			<div class="yabannerArea">
+				<div class="titImgBanner ty02">
+					<strong>양도소득세</strong>
+					<!-- <a href="javascript:;" class="btnClose"><span class="blind">양도소득세 삭제</span></a> --> <!-- [2023-01-05] 버튼 삭제 -->
+				</div>
+			</div>
+			<div class="formWrap addShoow"><!--s:formWrap-->
+				<div class="yanowWrap bdR10">
+					<div class="taxInfoWrap">
+						<div class="priceTitWrap"><strong class="priceTit"><em>약 </em><strong class="dataValue">2,500,000</strong> <em>원</em></strong></div>
+						<p class="subTxt">마지막으로 계산한 양도소득세 예상금액</p>
+					</div>
+					<div class="mt20">
+						<span class="linkTxt2">세금이 얼마나 나올지 걱정되나요?</span> <!-- [2023-01-05] 마크업 수정 -->
+					</div>
+				</div>
+			</div>
+		</a>
+		<!-- //절세팁 (양도소득세) -->
+
+		<!-- 절세팁 (양도소득세 해외주식) -->
+		<a href="javascript:;" role="button" title="" class="starTaxReduction ty03"> <!-- [2023-01-05] 마크업 수정 -->
+			<div class="yabannerArea">
+				<div class="titImgBanner ty03">
+					<strong>양도소득세 (해외주식)</strong>
+					<!-- <a href="javascript:;" class="btnClose"><span class="blind">양도소득세 해외주식 삭제</span></a> --> <!-- [2023-01-05] 버튼 삭제 -->
+				</div>
+			</div>
+			<div class="formWrap addShoow"><!--s:formWrap-->
+				<div class="yanowWrap bdR10">
+					<div class="taxInfoWrap">
+						<div class="priceTitWrap"><strong class="priceTit"><strong class="dataValue">2,500,000</strong> <em>원</em></strong></div>
+						<p class="subTxt">마지막으로 계산한 양도소득세 (해외주식) 예상금액</p>
+
+					</div>
+					<div class="mt20">
+						<span class="linkTxt2">세금이 얼마나 나올지 걱정되나요?</span> <!-- [2023-01-05] 마크업 수정 -->
+					</div>
+				</div>
+			</div>
+		</a>
+		<!-- //절세팁 (양도소득세 해외주식) -->
+
+		<!-- 절세팁 (증여세) -->
+		<a href="javascript:;" role="button" title="" class="starTaxReduction ty06"> <!-- [2023-01-05] 마크업 수정 -->
+			<div class="yabannerArea">
+				<div class="titImgBanner ty06">
+					<strong>증여세</strong>
+					<!-- <a href="javascript:;" class="btnClose"><span class="blind">증여세 삭제</span></a> --> <!-- [2023-01-05] 버튼 삭제 -->
+				</div>
+			</div>
+			<div class="formWrap addShoow"><!--s:formWrap-->
+				<div class="yanowWrap bdR10">
+					<div class="taxInfoWrap">
+						<div class="priceTitWrap"><strong class="priceTit"><em>약 </em><strong class="dataValue">2,500,000</strong> <em>원</em></strong></div>
+						<p class="subTxt">마지막으로 계산한 양도소득세 예상금액</p>
+					</div>
+					<div class="mt20">
+						<span class="linkTxt2">세금이 얼마나 나올지 걱정되나요?</span> <!-- [2023-01-05] 마크업 수정 -->
+					</div>
+				</div>
+			</div>
+		</a>
+		<!-- //절세팁 (증여세) -->
+
+		<!-- 절세팁 (재산세/종합부동산세) -->
+		<a href="javascript:;" role="button" title="" class="starTaxReduction ty04"> <!-- [2023-01-05] 마크업 수정 -->
+			<div class="yabannerArea">
+				<div class="titImgBanner ty04">
+					<strong>재산세/종합부동산세</strong>
+					<!-- <a href="javascript:;" class="btnClose"><span class="blind">재산세/종합부동산세 삭제</span></a> --> <!-- [2023-01-05] 버튼 삭제 -->
+				</div>
+			</div>
+			<div class="formWrap addShoow"><!--s:formWrap-->
+				<div class="yanowWrap bdR10">
+					<div class="taxInfoWrap">
+						<div class="priceTitWrap"><strong class="priceTit"><em>약 </em><strong class="dataValue">2,500,000</strong> <em>원</em></strong></div>
+						<p class="subTxt">마지막으로 계산한 재산세/종합부동산세 예상금액</p>
+					</div>
+					<div class="mt20">
+						<span class="linkTxt2">세금이 얼마나 나올지 걱정되나요?</span> <!-- [2023-01-05] 마크업 수정 -->
+					</div>
+				</div>
+			</div>
+		</a>
+		<!-- //절세팁 (재산세/종합부동산세) -->
+
+		<!-- 절세팁 (취득세) -->
+		<a href="javascript:;" role="button" title="" class="starTaxReduction ty05"> <!-- [2023-01-05] 마크업 수정 -->
+			<div class="yabannerArea">
+				<div class="titImgBanner ty05">
+					<strong>취득세</strong>
+					<!-- <a href="javascript:;" class="btnClose"><span class="blind">취득세 삭제</span></a> --> <!-- [2023-01-05] 버튼 삭제 -->
+				</div>
+			</div>
+			<div class="formWrap addShoow"><!--s:formWrap-->
+				<div class="yanowWrap bdR10">
+					<div class="taxInfoWrap">
+						<div class="priceTitWrap"><strong class="priceTit"><em>약 </em><strong class="dataValue">2,500,000</strong> <em>원</em></strong></div>
+						<p class="subTxt">마지막으로 계산한 취득세 예상금액</p>
+					</div>
+					<div class="mt20">
+						<span class="linkTxt2">세금이 얼마나 나올지 걱정되나요?</span> <!-- [2023-01-05] 마크업 수정 -->
+					</div>
+				</div>
+			</div>
+		</a>
+		<!-- //절세팁 (취득세) -->
+
+		<!-- 절세팁 (상속세) -->
+		<a href="javascript:;" role="button" title="" class="starTaxReduction ty07"> <!-- [2023-01-03] 마크업 수정 -->
+			<div class="yabannerArea">
+				<div class="titImgBanner ty07">
+					<strong>상속세</strong>
+					<!-- <a href="javascript:;" class="btnClose"><span class="blind">상속세 삭제</span></a> --> <!-- [2023-01-03] 버튼 삭제 -->
+				</div>
+			</div>
+			<div class="formWrap addShoow"><!--s:formWrap-->
+				<div class="yanowWrap bdR10">
+					<div class="taxInfoWrap">
+						<div class="priceTitWrap"><strong class="priceTit"><em>약 </em><strong class="dataValue">1,500,000</strong> <em>원</em></strong></div>
+						<p class="subTxt">마지막으로 계산한 상속세 예상금액</p>
+					</div>
+					<div class="mt20">
+						<span class="linkTxt2">세금이 얼마나 나올지 걱정되나요?</span> <!-- [2023-01-05] 마크업 수정 -->
+					</div>
+				</div>
+			</div>
+		</a>
+		<!-- //절세팁 (상속세) -->
+
+		<!-- 절세팁 (건강보험료) -->
+		<a href="javascript:;" role="button" title="" class="starTaxReduction ty08"> <!-- [2023-01-03] 마크업 수정 -->
+			<div class="yabannerArea">
+				<div class="titImgBanner ty08">
+					<strong>건강보험료</strong>
+					<!-- <a href="javascript:;" class="btnClose"><span class="blind">건강보험료 삭제</span></a> --> <!-- [2023-01-03] 버튼 삭제 -->
+				</div>
+			</div>
+			<div class="formWrap addShoow"><!--s:formWrap-->
+				<div class="yanowWrap bdR10">
+					<div class="taxInfoWrap">
+						<div class="priceTitWrap"><strong class="priceTit"><em>약 </em><strong class="dataValue">500,000</strong> <em>원</em></strong></div>
+						<p class="subTxt">올해 나의 건강보험료 예상액은?</p>
+					</div>
+					<div class="mt20">
+						<span class="linkTxt2">세금이 얼마나 나올지 걱정되나요?</span> <!-- [2023-01-03] 마크업 수정 -->
+					</div>
+				</div>
+			</div>
+		</a>
+		<!-- //절세팁 (상속세) -->
+
+		<!-- 배너 -->
+		<div class="maybeBanner">
+			<a href="javascript:;" role="button">
+				<div class="title">만약 그 때 그랬다면?</div>
+				<p class="para">시뮬레이션 시작하기</p>
+			</a>
+		</div>
+		<!-- //배너 -->
+
+		<button type="button" class="goTopBtn"><span class="blind">최상단으로 이동</span></button>
+	</div>
+	<!-- ###################################### -->
+
+	<!-- 큰글모드 테스트용 반영X// -->
+	<div class="pubUtileWrap">
+		<div class="pubToggleWrap">
+			<button type="button" class="btnToggle"><span class="blind">열/닫</span></button>
+		</div>
+		<ul>
+			<li><button type="button" class="btnPubFontBig" >글자크게</button></li> <!-- $('html').addClass('fontBig') -->
+			<li><button type="button" class="btnPubFontNormal" >글자작게</button></li> <!-- $('html').removeClass('fontBig') -->
+		</ul>
+	</div>
+	<!-- //큰글모드 테스트용 반영X -->
+	<!-- //container -->
+</div>
+
+<!-- ###################################### -->
+<!-- ### [샘플] 스크립트 ### -->
+<!-- ###################################### -->
+<script type="text/javascript">
+$(document).ready(function(){
+
+	//healthAge()//헬스케어 나이증가
+	//yaNum()//연말정산 금액증가
+	//texNum()//절세팁 금액증가
+
+	uiNumMotion();//샘플 [2023 NH마이데이터 서비스 고도화]
+});
+
+var flagHealthAge = 0;
+var flagYanum = 0;
+var flagTaxNum = 0;
+
+$(window).scroll(function(){
+	$('.starHealthType').each(function(){
+		var $this = $(this);
+		var $thisPos = Math.floor($this.offset().top);
+		var $thisHeight = $this.outerHeight();
+		var $winHeight = $(window).height() ;
+		var $winScTop = $(window).scrollTop();
+		var $thisBottom = $thisPos + $thisHeight - $winHeight - $winScTop;
+		if ($thisBottom < 0) {
+			if (flagHealthAge == 0) {
+				healthAge()
+				flagHealthAge = 1;	
+			}
+		}
+	});
+	$('.starYaWrap').each(function(){
+		var $this = $(this);
+		var $thisPos = Math.floor($this.offset().top);
+		var $thisHeight = $this.outerHeight();
+		var $winHeight = $(window).height() ;
+		var $winScTop = $(window).scrollTop();
+		var $thisBottom = $thisPos + $thisHeight - $winHeight - $winScTop;
+		if ($thisBottom < 0) {
+			if (flagYanum == 0) {
+				yaNum()
+				flagYanum = 1;	
+			}
+		}
+	});
+	$('.starTaxReduction').each(function(){
+		var $this = $(this);
+		var $thisPos = Math.floor($this.offset().top);
+		var $thisHeight = $this.outerHeight();
+		var $winHeight = $(window).height() ;
+		var $winScTop = $(window).scrollTop();
+		var $thisBottom = $thisPos + $thisHeight - $winHeight - $winScTop;
+		if ($thisBottom < 0) {
+			if (flagTaxNum == 0) {
+				taxNum()
+				flagTaxNum = 1;	
+			}
+		}
+	});
+})
+
+//샘플 : 신용관리 점수 숫자 모션
+function uiNumMotion() {
+	$('[data-num-action]').each(function(){
+		var $thisCost = $(this);
+		var memberCountContText;
+
+		if($thisCost.data('num-action') == "???") memberCountContText = 999;
+		else memberCountContText = $thisCost.data('num-action');
+
+		$({ val : 0}).animate({ val : memberCountContText}, {
+			duration: 2000,
+			step: function(){
+				var num = numberWithCommas(Math.floor(this.val));
+				$thisCost.text(num+'점');
+			},
+			complete: function(){
+				var num;
+				if($thisCost.data('num-action') == "???") num = '???';
+				else num = numberWithCommas(Math.floor(this.val));
+				$thisCost.text(num+'점');
+			}
+		});
+		function numberWithCommas(x){
+			return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		}
+	});
+}
+
+//헬스케어 나이증가
+function healthAge() {
+	$('.healthAge').each(function(){
+		var $thisCost = $(this);
+		var memberCountContText = $thisCost.text().replace(/,/g,'');
+		$({ val : 0}).animate({ val : memberCountContText}, {
+			duration: 2000, // [2023-01-03] 속도 수정
+			step: function(){
+				var num = numberWithCommas(Math.floor(this.val));
+				$thisCost.text(num);
+			},
+			complete: function(){
+				var num = numberWithCommas(Math.floor(this.val));
+				$thisCost.text(num);
+			}
+		});
+		function numberWithCommas(x){
+			return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		}
+	});
+}
+
+//연말정산 금액증가
+function yaNum() {
+	$('.starYaWrap').each(function(){
+		var $this = $(this);
+		if ($this.hasClass('starYadataNone')) {
+			var $thisCost = $this.find('.dataValue');
+			$thisCost.each(function(){
+				var $thisCost = $(this);
+				var $thisCostOld = $thisCost.text()
+				var memberCountContText = 1500000;
+				$({ val : 0}).animate({ val : memberCountContText}, {
+					duration: 2000, // [2023-01-03] 속도 수정
+					step: function(){
+						var num = numberWithCommas(Math.floor(this.val));
+						$thisCost.text(num);
+					},
+					complete: function(){
+						var num = numberWithCommas(Math.floor(this.val));
+						$thisCost.text($thisCostOld);
+					}
+				});
+				
+			});
+		} else {
+			var $thisCost = $this.find('.dataValue');
+			$thisCost.each(function(){
+				var $thisCost = $(this);
+				var memberCountContText = $thisCost.text().replace(/,/g,'');
+				$({ val : 0}).animate({ val : memberCountContText}, {
+					duration: 2000, // [2023-01-03] 속도 수정
+					step: function(){
+						var num = numberWithCommas(Math.floor(this.val));
+						$thisCost.text(num);
+					},
+					complete: function(){
+						var num = numberWithCommas(Math.floor(this.val));
+						$thisCost.text(num);
+					}
+				});
+				
+			});
+		}
+		function numberWithCommas(x){
+			return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		}	
+	});
+}
+
+function taxNum() {
+	$('.starTaxReduction').each(function(){
+		var $this = $(this);
+		if ($this.hasClass('starTaxDataNone')) {
+			var $thisCost = $this.find('.dataValue');
+			var memberCountContText = 1500000;
+			$({ val : 0}).animate({ val : memberCountContText}, {
+				duration: 2000, // [2023-01-03] 속도 수정
+				step: function(){
+					var num = numberWithCommas(Math.floor(this.val));
+					$thisCost.text(num);
+				},
+				complete: function(){
+					var num = numberWithCommas(Math.floor(this.val));
+					$thisCost.text("?,???,???");
+				}
+			});
+		} else {
+			var $thisCost = $this.find('.dataValue');
+			$thisCost.each(function(){
+				var $thisCost = $(this);
+				var memberCountContText = $thisCost.text().replace(/,/g,'');
+				$({ val : 0}).animate({ val : memberCountContText}, {
+					duration: 2000, // [2023-01-03] 속도 수정
+					step: function(){
+						var num = numberWithCommas(Math.floor(this.val));
+						$thisCost.text(num);
+					},
+					complete: function(){
+						var num = numberWithCommas(Math.floor(this.val));
+						$thisCost.text(num);
+					}
+				});
+				
+			});
+		}
+		function numberWithCommas(x){
+			return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		}	
+	});
+}
+
+</script>
+<!-- ###################################### -->
+</body>
+</html>

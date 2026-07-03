@@ -1,0 +1,179 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>결제 예정 내역</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">결제 예정 내역</a></h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 결제 예정 내역 ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<div class="boxTypeWrap e1 overUnset">
+			<!-- -------------------------------------- -->
+			<!-- [상단영역] 결제예정금액정보 -->
+			<!-- -------------------------------------- -->
+			<div class="accTopInfo">
+				<!-- [2023 NH마이데이터 서비스 고도화] 로고 공통 이미지로 변경 -->
+				<h2 class="accName">현대카드
+					<img src="../../images/logos/AAFO0000.png" alt="" class="imgLogo">
+				</h2>
+				<!-- // [2023 NH마이데이터 서비스 고도화] -->
+
+				<dl class="totalBalance bigSize2">
+					<dt>MM월 DD일 결제예정금액
+						<div class="tooltipWrap">
+							<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">총 잔액 툴팁 열기</span></button>
+							<div class="tooltipCont">
+								<p>청구서가 발행되기 전 결제예정금액으로 실제 청구금액과 다를 수 있습니다.<br>
+									일시불, 할부, 현금서비스, 리볼빙, 카드론, 연회비 및 기타의 이용금액이 포함되어 있습니다.
+								</p>
+								<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+							</div>
+						</div>
+					</dt>
+					<dd><strong class="dataValue">2,098,694</strong><strong class="won">원</strong></dd>
+				</dl>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [목록영역] 결제예정내역 -->
+			<!-- -------------------------------------- -->
+			<div class="billListWrap">
+				<div class="billListCont">
+					<div class="inoutListWrap">
+						<div class="totalBox">
+							<span class="totalTit">일시불</span>
+							<span class="totalVal"><span class="dataValue">1,000,000</span>원</span>
+						</div>
+					</div>
+					<div class="inoutListWrap">
+						<div class="totalBox">
+							<span class="totalTit">할부</span>
+							<span class="totalVal"><span class="dataValue">1,000,000</span>원</span>
+						</div>
+					</div>
+					<div class="inoutListWrap">
+						<div class="totalBox">
+							<span class="totalTit">현금서비스</span>
+							<span class="totalVal"><span class="dataValue">1,000,000</span>원</span>
+						</div>
+					</div>
+					<div class="inoutListWrap">
+						<div class="totalBox">
+							<span class="totalTit">카드론</span>
+							<span class="totalVal"><span class="dataValue">1,000,000</span>원</span>
+						</div>
+					</div>
+					<div class="inoutListWrap">
+						<div class="totalBox">
+							<span class="totalTit">연회비·기타</span>
+							<span class="totalVal"><span class="dataValue">1,000,000</span>원</span>
+						</div>
+					</div>
+					
+					<!-- [2022-10-21] 리볼빙 수정-->
+					<div class="inoutListWrap">
+						<div class="totalBox">
+							<span class="totalTit">리볼빙</span>
+							<span class="totalVal"><span class="dataValue">1,000,000</span>원</span>
+						</div>
+					</div>
+					<!-- <div class="inoutListWrap toggleWrap">
+						<a href="javascript:;" class="totalBox toggleBtn" role="button" title="" aria-expanded="false">
+							<span class="totalTit">리볼빙</span>
+							<span class="totalVal"><span class="dataValue">1,000,000</span>원</span>
+						</a>
+						<div class="totalCont toggleCont" style="display:none;">
+							<ul>
+								<li>
+									<dl class="listTitArea">
+										<dt>약정기간</dt>
+										<dd>2022.01.01~2022.06.01</dd>
+									</dl>
+									<ul class="detailList">
+										<li>
+											<strong class="tit">약정결제비율</strong>
+											<strong class="value">10%</strong>
+										</li>
+										<li>
+											<strong class="tit">약정결제금액</strong>
+											<strong class="value">50,000원</strong>
+										</li>
+										<li>
+											<strong class="tit">리볼빙 이월잔액</strong>
+											<strong class="value">1,300,000원</strong>
+										</li>
+										<li>
+											<strong class="tit">최소결제비율</strong>
+											<strong class="value">10%</strong>
+										</li>
+										<li>
+											<strong class="tit">최소결제금액</strong>
+											<strong class="value">500,000원</strong>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<dl class="listTitArea">
+										<dt>약정기간</dt>
+										<dd>2022.01.01~2022.06.01</dd>
+									</dl>
+									<ul class="detailList">
+										<li>
+											<strong class="tit">해지일자</strong>
+											<strong class="value">2022.06.01</strong>
+										</li>
+										<li>
+											<strong class="tit">리볼빙 이월잔액</strong>
+											<strong class="value">1,300,000원</strong>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div> -->
+				</div>
+			</div> 
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [2023 NH마이데이터 서비스 고도화] 배너영역 추가 -->
+		<!-- -------------------------------------- -->
+		<div class="areaBanner2 t1">
+			<a href="javascript:;" class="img11">
+				<span>제일 많이 사용한 <span class="data1">현대카드</span></span> <!-- [2023 NH마이데이터 서비스 고도화] 문구수정 -->
+				<span>카드상세내역 지금 확인하기</span>
+			</a>
+		</div>
+		<!-- -------------------------------------- -->
+	</div>
+	<!-- ###################################### -->
+</div>
+</body>
+</html>

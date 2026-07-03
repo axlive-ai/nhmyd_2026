@@ -1,0 +1,230 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산현황</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header --><!--11.22 수정-->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">부동산 상세</a></h1> <!-- [2021] 타이틀 변경 -->
+			<!-- <a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>  -->
+			<a href="javascript:;" class="btnAcAdmin"><span class="blind">관리</span></a>
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="layerMsgWrap ty02"><!--10.24 추가-->
+				<p>순자산 금액에 포함 안된 자산이에요.</p>
+				<button type="button" class="layerMsgClose"><span class="blind">닫기</span></button>
+			</div>
+			
+			<!-- <div class="boxTypeWrap pt0 pb0">
+				<div class="formWrap btndelType mt0">
+					<ul>
+						<li>
+							<div class="listIs">
+								<ul class="accList">
+									<li class="posR">
+										<span class="imgWrap A1AABG0000"><em class="blind">농협은행</em></span>
+										<div class="accInfoWrap">
+											<div class="accTit pr17">순자산 금액에 포함 안된 자산이에요.</div>
+										</div>
+										<button type="button" class="btnAccDel top30"><span class="blind">삭제하기</span></button>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="boxTypeWrap pt0 pb0 mt10">
+				<div class="formWrap btndelType mt0">
+					<ul>
+						<li>
+							<div class="listIs">
+								<ul class="accList">
+									<li class="posR">
+										<span class="imgWrap A1AABG0000"><em class="blind">농협은행</em></span>
+										<div class="accInfoWrap">
+											<div class="accTit pr17">매매가 시세 변동이 있어요!</div>
+										</div>
+										<button type="button" class="btnAccDel top30"><span class="blind">삭제하기</span></button>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div> -->
+			<div class="boxTypeWrap">
+				<!-- 상단 계좌정보 영역 -->
+				<div class="accTopInfo">
+					<h2 class="accName">
+						강남파라곤
+						<img src="../../images/logos/AABG0000.png" alt="강남파라곤 로고" class="imgLogo"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+					</h2>
+					<dl class="totalBalance">
+						<dt>나의 부동산</dt> <!-- [2021] 한은정 : 텍스트 변경 -->
+						<dd><strong>675,000,000</strong>원
+							<!-- [2021] 한은정 : 추가 -->
+							<div class="wrapTag">
+								<span class="tag green">전세</span><!--<span class="txt">월세임대 (지분율 50%)</span>-->
+							</div>
+							<!-- // [2021] 한은정 : 추가 -->
+						</dd>
+					</dl>
+				</div>
+				<!-- // 상단 계좌정보 영역 -->
+
+				<hr class="divLine">
+
+				<!-- 계좌정보 상세 -->
+				<!-- [2021] 한은정 : 리스트 디자인 변경 -->
+				<div class="accInfoDetail">
+					<ul class="detailList mb10">
+						<li>
+							<span class="tit">전세가 시세</span>
+							<span class="value"><strong>13</strong>억 <strong>5000</strong>만원</span>
+						</li>
+						<!-- <li>
+							<span class="tit">지난주 대비</span>
+							<span class="value"><span class="arrowUp"><em class="blind">증가</em></span>
+							<span class="amount inColor"><strong>2억 5000만</strong>원</span></span>
+						</li>
+						<li>
+							<span class="tit">시세차익</span>
+							<span class="value"><span class="arrowUp"><em class="blind">증가</em></span> 
+							<span class="amount inColor"><strong>2억 5000만</strong>원</span></span>
+						</li>
+						<li>
+							<span class="tit">월세 시세</span>
+							<span class="value"><strong>13</strong>억 <strong>5000</strong>만원</span>
+						</li> -->
+						<li>
+							<span class="tit">업데이트</span>
+							<span class="value">2021.01.12</span>
+						</li>
+					</ul>
+					<div class="totalLink">
+						<a href="javascript:;" class="linkTxt">부동산 정보 더보기</a> <!-- [2021-08-25] 한은정 : 문구 수정 -->
+					</div>
+				</div>
+				<!-- // 상단 계좌정보 영역 -->
+
+				<hr class="divLine">
+
+				<!-- 계좌정보 상세 -->
+				<!-- [2021] 한은정 : 리스트 디자인 변경 -->
+				<div class="moreInfoWrap mt0">
+					<div class="moreInfo">
+						<ul class="detailList mt0">
+							<li>
+								<span class="tit">부동산 정보</span>
+								<span class="value">
+									<div class="estateInfo">
+										<span>서울</span> <span>아파트</span> <span>143.68㎡</span>
+									</div>
+									<button type="button" class="linkTxt">단지정보 보기</button> <!-- [2021] 한은정 : 추가 -->
+								</span>
+							</li>
+							<!-- <li>
+								<span class="tit">매수금</span>
+								<span class="value"><strong class="dataValue">7억</strong><em class="won">원</em></span> 
+							</li>
+							<li>
+								<span class="tit">매수일</span>
+								<span class="value">2020.09.07</span>
+							</li>
+							<li>
+								<span class="tit">월세 보증금</span>
+								<span class="value">10억원</span>
+							</li> -->
+							<li>
+								<span class="tit">계약기간</span>
+								<span class="value">2020.07.31 ~ 2020.07.31</span>
+							</li>
+							<li>
+								<span class="tit">등록일</span>
+								<span class="value">2020.07.31</span>
+							</li>
+							<li>
+								<span class="tit">메모</span>
+								<span class="value">메모</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- // 계좌정보 상세 -->
+			</div>
+
+			
+
+			<div class="boxTypeWrap pt0">
+				<div class="accListWrap mt0">
+					<p class="totalCnt totalTitWrap typeB ">관련대출 총 <strong>3</strong>개</p>
+					<ul class="accList">
+						<li>
+							<!-- <span class="imgWrap A1AAEQ0000"><em class="blind">기업은행</em></span> -->
+							<div class="accInfoWrap">
+								<span class="accTit">[농협은행] 주택담보대출</span>
+								<div class="accInfo">
+									<span class="accNum">123-45-67-8900</span>
+									<span class="accValue"><strong class="dataValue">10,000,000,000</strong><em class="won">원</em></span>
+								</div>
+								<!-- [2021-08-09] 에러케이스 삭제 -->
+								<!-- <p class="errorTxt mt10">다시 불러오기 필요</p>
+								<p class="errorTxt mt10">기관 재등록 필요</p> -->
+							</div>
+						</li>
+						<li>
+							<!-- <span class="imgWrap A1AAHJ0000"><em class="blind">카카오뱅크</em></span> -->
+							<div class="accInfoWrap">
+								<span class="accTit">[농협은행] 주택담보대출</span>
+								<div class="accInfo">
+									<span class="accNum">123-45-67-8900</span>
+									<!-- <span class="accValue"><span class="tag red">해지 예상</span></span> --> <!-- [2021] 한은정 : 케이스 삭제  -->
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="listMoreBtn">
+					<a href="javascript:;" title="항목 더보기">더보기</a>
+				</div>
+			</div>
+
+			
+
+		</div>
+		<!-- //container -->
+
+	</div>
+
+	<script type="text/javascript">
+		$('.layerMsgClose').click(function(){
+			$(this).closest('.layerMsgWrap').hide();
+		});
+	</script>
+</body>
+</html>

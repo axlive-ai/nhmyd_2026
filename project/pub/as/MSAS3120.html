@@ -1,0 +1,221 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>대출상세 | 보험업권 | 자산</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">대출 상세</a></h1>
+		<a href="javascript:;" class="btnAcAdmin"><span class="blind">관리</span></a>
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 대출상세 ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<!-- -------------------------------------- -->
+		<!-- [레이어팝업] 메세지 -->
+		<!-- -------------------------------------- -->
+		<div class="layerMsgWrap">
+			<p>순자산 금액에 포함 안된 자산이에요.</p>
+			<button type="button" class="layerMsgClose"><span class="blind">닫기</span></button>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [상단영역] 대출정보 -->
+		<!-- -------------------------------------- -->
+		<div class="boxWrapShadow">
+			<!-- ### [계좌정보] 기본내용 ### -->
+			<div class="boxTypeWrap delShadow">
+				<!-- // -->
+				<div class="accTopInfo mt0">
+					<h2 class="accName">보험계약대출
+						<img src="../../images/logos/AAEW0000.png" alt="삼성화재해상보험주식회사 로고" class="imgLogo">
+					</h2>
+					<dl class="totalBalance">
+						<dt>대출잔액</dt>
+						<dd><strong>400,000,000</strong>원</dd>
+					</dl>
+				</div>
+				<!-- // -->
+				<hr class="divLine">
+				<!-- // -->
+				<div class="accInfoDetail">
+					<ul class="detailList">
+						<li>
+							<span class="tit">유형</span>
+							<span class="value">담보대출&gt;보험계약대출</span>
+						</li>
+						<li>
+							<span class="tit">상품명</span>
+							<span class="value">보험계약대출</span>
+						</li>
+					</ul>
+				</div>
+				<!-- // -->
+			</div>
+
+			<!-- ### [토글영역] 상세정보 ### -->
+			<div class="moreInfoArea">
+				<!-- // -->
+				<div class="moreInfoWrap toggleWrap">
+					<div class="moreInfo toggleCont" style="display:none">
+						<hr class="divLine2" aria-hidden="true">
+						<ul class="detailList">
+							<li>
+								<span class="tit">계좌번호</span>
+								<span class="value">03580204123456 <button type="button" class="contBtn01" title="계좌번호 복사">복사</button></span>
+							</li>
+							<li>
+								<span class="tit">보험 증권번호</span>
+								<span class="value">03580204123456 <button type="button" class="contBtn01" title="계좌번호 복사">복사</button></span>
+							</li>
+							<li>
+								<span class="tit">보험 상품명</span>
+								<span class="value">어린이보험</span>
+							</li>
+							<li>
+								<span class="tit">대출일자</span>
+								<span class="value">2020.07.21</span>
+							</li>
+							<li>
+								<span class="tit">만기일자</span>
+								<span class="value">2020.07.21</span>
+							</li>
+							<li>
+								<span class="tit">상환방식</span>
+								<span class="value">거치식-원리금균등분할상환</span>
+							</li>
+							<li>
+								<span class="tit">대출원금</span>
+								<span class="value"><strong class="dataValue">500,000,000</strong><em class="won">원</em></span>
+							</li>
+							<li>
+								<span class="tit">다음 이자 상환일</span>
+								<span class="value">2020.09.07</span>
+							</li>
+							<!-- [2023 NH마이데이터 서비스 고도화] -->
+							<li>
+								<span class="tit">자동이체기관</span>
+								<span class="value">NH농협</span>
+							</li>
+							<li>
+								<span class="tit">자동이체계좌</span>
+								<span class="value">125485472258</span>
+							</li>
+							<li>
+								<span class="tit">월상환일</span>
+								<span class="value">25일</span>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+					<button type="button" class="moreOpenBtn toggleBtn"><span class="toggleTxt07">상세정보 보기</span></button>
+				</div>
+				<!-- // -->
+			</div>
+			<!-- ### // ### -->
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [목록영역] 거래내역 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap pt0">
+			<!-- ### [CASE] 리스트 있을 경우 ### -->
+			<div class="inoutListWrap longTit">
+				<!-- [항목하나] -->
+				<div class="inoutListInn">
+					<p class="date bdtNone">2020년 7월 31일</p>
+					<ul class="inoutList">
+						<li>
+							<div class="inoutTit dsfSpace">
+								<span class="use">상환</span>
+								<div class="amount outColor"><strong class="dataValue">580,000</strong><em class="won">원</em></div>
+							</div>
+							<div class="inoutCont">
+								<div class="timeWrap">
+									<span class="time">18:35</span>
+								</div>
+								<div class="exchange">원금 <em>300,000</em>원</div>
+							</div>
+							<div class="exchange">이자 <em>300,000</em>원</div>
+						</li>
+					</ul>
+				</div>
+				<!-- [항목하나] -->
+				<div class="inoutListInn">
+					<p class="date">2020년 7월 31일</p>
+					<ul class="inoutList">
+						<li>
+							<div class="inoutTit dsfSpace">
+								<span class="use">상환</span>
+								<div class="amount outColor"><strong class="dataValue">580,000</strong><em class="won">원</em></div>
+							</div>
+							<div class="inoutCont">
+								<div class="timeWrap">
+									<span class="time">18:35</span>
+								</div>
+								<div class="exchange">원금 <em>300,000</em>원</div>
+							</div>
+							<div class="exchange">이자 <em>300,000</em>원</div>
+						</li>
+						<li>
+							<div class="inoutTit dsfSpace">
+								<span class="use">상환</span>
+								<div class="amount outColor"><strong class="dataValue">580,000</strong><em class="won">원</em></div>
+							</div>
+							<div class="inoutCont">
+								<div class="timeWrap">
+									<span class="time">18:35</span>
+								</div>
+								<div class="exchange">원금 <em>300,000</em>원</div>
+							</div>
+							<div class="exchange">이자 <em>300,000</em>원</div>
+						</li>
+					</ul>
+				</div>
+				<!-- [//] -->
+			</div>
+			<!-- // -->
+			<div class="listMoreBtn"><a href="javascript:;" title="항목 더보기">더보기</a></div>
+
+			<!-- ### [CASE] 리스트 없을 경우 ### -->
+			<div class="noResultWrap"><p>거래내역이 없습니다.</p></div>
+			<!-- ### // ### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</div>
+	<!-- ###################################### -->
+</div>
+
+<!-- ###################################### -->
+<!-- ### [샘플] 스크립트 ### -->
+<!-- ###################################### -->
+<script type="text/javascript">
+	$('.layerMsgClose').click(function(){
+		$(this).closest('.layerMsgWrap').hide();
+	});
+</script>
+<!-- ###################################### -->
+</body>
+</html>

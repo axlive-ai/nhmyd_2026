@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>비교상품상세</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">이상지질혈증</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="boxTypeWrap healthBox"> <!-- [2023-02-23] healthBox 클래스 추가 -->
+				<h2 class="defSubTit2"><strong class="bold">이상지질혈증이란?</strong></h2>
+				<p class="subTxt">콜레스테롤, 중성지방 등 지질 대사가 제대로 이루어지지 않아 혈액 중에 지질이 많아진 상태로서, 뇌혈관 질환 관상동맥 질환의 원인 중 하나</p>
+				<hr class="divLine3">
+				<h2 class="defSubTit2 containTooltip"><strong class="bold">내 검진결과 비교</strong>
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">그래프 구간안내 설명 툴팁</span></button>
+						<div class="tooltipCont">
+							<p>최근 검사일 기준 직전년도 결과 비교 제공</p>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+				</h2>
+				<div class="tabWrap type06">
+					<div class="scAreaWrap">
+						<ul role="tablist">
+							<li><a href="javascript:;" type="button" class="active">총콜레스테롤</a></li>
+							<li><a href="javascript:;" type="button">LDL콜레스테롤</a></li>
+							<li><a href="javascript:;" type="button">HDL콜레스테롤</a></li>
+							<li><a href="javascript:;" type="button">중성지방</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="tabContWrap type06">
+					<div class="tabCont01" aria-label="총콜레스테롤 탭">
+						<div class="graphWrap" style="height:160px;background:#f6f6f6;" tabindex="0" role="img" aria-label="총콜레스테롤 그래프 2013년 234mg/dL, 2016년 238mg/dL, 2021년 201mg/dL">
+							<p style="text-align:center;">총콜레스테롤 그래프 영역</p>
+						</div>
+					</div>
+					<div class="tabCont02" aria-label="LDL콜레스테롤 탭" style="display:none">
+						<div class="graphWrap" style="height:160px;background:#f6f6f6;" tabindex="0" role="img" aria-label="LDL콜레스테롤 그래프 2013년 151mg/dL, 2016년 148mg/dL, 2021년 119mg/dL">
+							<p style="text-align:center;">LDL콜레스테롤 그래프 영역</p>
+						</div>
+					</div>
+					<div class="tabCont03" aria-label="HDL콜레스테롤 탭" style="display:none;">
+						<div class="graphWrap" style="height:160px;background:#f6f6f6;" tabindex="0" role="img" aria-label="HDL콜레스테롤 그래프 2013년 49mg/dL, 2016년 56mg/dL, 2021년 60mg/dL">
+							<p style="text-align:center;">HDL콜레스테롤 그래프 영역</p>
+						</div>
+					</div>
+					<div class="tabCont04" aria-label="중성지방 탭" style="display:none;">
+						<div class="graphWrap" style="height:160px;background:#f6f6f6;" tabindex="0" role="img" aria-label="중성지방 그래프 2013년 170mg/dL, 2016년 169mg/dL, 2021년 110mg/dL">
+							<p style="text-align:center;">중성지방 그래프 영역</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="formWrap healthBox"> <!-- [2023-02-23] healthBox 클래스 추가 -->
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn">
+							<strong class="tit">총콜레스테롤 기준수치</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="detailList">
+							<li>
+								<strong class="tit">질환의심</strong>
+								<strong class="value" aria-label="240 이상">≥ 240</strong>
+							</li>
+							<li>
+								<strong class="tit">경계치</strong>
+								<strong class="value">200~239</strong>
+							</li>
+							<li>
+								<strong class="tit">정상</strong>
+								<strong class="value" aria-label="200 미만">< 200</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn">
+							<strong class="tit">LDL콜레스테롤 기준수치</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="detailList">
+							<li>
+								<strong class="tit">질환의심</strong>
+								<strong class="value" aria-label="160 이상">≥ 160</strong>
+							</li>
+							<li>
+								<strong class="tit">경계치</strong>
+								<strong class="value">130~159</strong>
+							</li>
+							<li>
+								<strong class="tit">정상</strong>
+								<strong class="value">100~129</strong>
+							</li>
+							<li>
+								<strong class="tit">걱정</strong>
+								<strong class="value" aria-label="100 미만">< 100</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn">
+							<strong class="tit">HDL콜레스테롤 기준수치</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="detailList">
+							<li>
+								<strong class="tit">질환의심</strong>
+								<strong class="value" aria-label="40 이하">≤ 40</strong>
+							</li>
+							<li>
+								<strong class="tit">경계치</strong>
+								<strong class="value">40~59</strong>
+							</li>
+							<li>
+								<strong class="tit">정상</strong>
+								<strong class="value" aria-label="60 이상">≥ 60</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn">
+							<strong class="tit">중성지방(트리글리세라이드) 기준수치</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="detailList">
+							<li>
+								<strong class="tit">질환의심</strong>
+								<strong class="value" aria-label="200 이상">≥ 200</strong>
+							</li>
+							<li>
+								<strong class="tit">경계치</strong>
+								<strong class="value">150~199</strong>
+							</li>
+							<li>
+								<strong class="tit">정상</strong>
+								<strong class="value" aria-label="150 미만">< 150</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<p class="infoTxt">※ 한국지질동맥경화학회 2009년 &lt;mg/dL : 밀리그램 퍼 데시리터&gt;</p>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn">
+							<strong class="tit">검진항목 설명</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<strong class="listTitSimple mt0">콜레스테롤</strong>
+						<ul class="listDot">
+							<li>새우, 내장, 오징어 류, 달걀노른자, 고기의 기름에 많은 지방과 같은 물질</li>
+							<li>총 콜레스테롤이 높으면 동맥 벽에 지방이 쌓여 동맥이 좁아져 혈액의 흐림이 나빠짐</li>
+						</ul>
+						<strong class="listTitSimple">지질단백</strong>
+						<ul class="listDot">
+							<li>체액을 통해 조직 안팎으로 콜레스테롤을 운반하는 지질과 단백의 복합체</li>
+							<li>고밀도 지질단백 : 동맥 벽에 붙은 저밀도 지질단백을 제거하여 동맥경화 방지</li>
+							<li>저밀도 지질단백 : 동맥 벽에 붙어 동맥경화를 일으킴</li>
+						</ul>
+						<strong class="listTitSimple">중성지방(트리글레세라이드)</strong>
+						<ul class="listDot">
+							<li>에너지 원으로 쓰이며, 남으면 모두 피하지방으로 쌓임</li>
+							<li>모든 장기의 에너지 원으로 쓰이며, 많으면 동맥경화성 질환을 일으킴</li>
+						</ul>
+					</div>
+				</div>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn">
+							<strong class="tit">식사요법</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="listDot">
+							<li>고기의 기름진 부위, 내장 및 곱창, 가공육(햄, 베이커, 소시지 등)을 피하고 살코기와 생선 먹기</li>
+							<li>콜레스테롤이 많은 음식을 자주 먹지 않고, 튀김 대신 찜, 구이, 조림 먹기</li>
+							<li>채소는 충분히 먹고, 저지방 우유나 두유 마시기</li>
+						</ul>
+					</div>
+				</div>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn">
+							<strong class="tit">운동요법</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="listDot">
+							<li>운동시간을 서서히 늘려가며 9~12개월 이상 꾸준히 유산소 운동</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- <div class="areaBtnDefault">
+				<a href="javascript:;" class="btnPressPoint" role="button">확인</a>
+			</div> -->
+		</div>
+		<!-- //container -->
+	</div>
+
+	<script type="text/javascript">
+		$('.scAreaWrap a.active').each(function(){
+			var $this = $(this);
+			var $thisPos = $this.offset().left;
+			var $wrap = $this.closest('.scAreaWrap').scrollLeft();
+			$this.closest('.scAreaWrap').stop().animate({scrollLeft:$wrap + $thisPos - 36 },300);
+		});
+		$('.scAreaWrap a').on('click focus',function(e){
+			var $this = $(this);
+			var $thisPos = $this.offset().left;
+			var $wrap = $this.closest('.scAreaWrap').scrollLeft();
+			$this.closest('.scAreaWrap').stop().animate({scrollLeft:$wrap + $thisPos - 36 },300);	
+		});
+
+		$('.maybeWishList > li > a').click(function(){
+			$(this).closest('.maybeWishList').find('a').removeClass('active');
+			$(this).addClass('active');
+		});
+	</script>
+	
+</body>
+</html>

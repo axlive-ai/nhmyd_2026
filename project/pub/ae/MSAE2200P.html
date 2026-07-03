@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>연금진단 맞춤정보 | 연금진단 | 컨설팅</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">연금진단 맞춤정보</a></h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 연금진단 맞춤정보 ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<h2 class="defTit">
+			나의 연금진단을 위해<br>
+			<strong>맞춤정보를 입력</strong>해주세요.
+		</h2>
+		<div class="boxTypeWrap addchallType">
+			<div class="formWrap formListBox overseaType">
+				<ul>
+					<!-- -------------------------------------- -->
+					<!-- [맞춤정보1] -->
+					<!-- -------------------------------------- -->
+					<li>
+						<strong class="formTit"><strong>김농협</strong>님 공적연금이 있습니까?
+							<div class="tooltipWrap">
+								<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">공적연금 안내툴팁</span><!-- [접근성_2024] blind 수정 --></button>
+								<div class="tooltipCont">
+									<p>공적연금은 하나만 선택이 가능하고 해당 공적연금
+										정보만 표시됩니다 </p>
+									<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+								</div>
+							</div>
+						</strong>
+						<div class="boxRadio mt10">
+							<div class="boxRadioInn">
+								<span class="mb0">
+									<input name="rdo13" id="rdo30" type="radio" checked="checked">
+									<label for="rdo30">예</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span class="mb0">
+									<input name="rdo13" id="rdo31" type="radio">
+									<label for="rdo31">아니오 </label>
+								</span>
+							</div>
+						</div>
+
+						<!--case A :공적연금이 없을 경우_국민연금 선택 시 확장화면-->
+						<div class="psIngWrapArea mt20">
+							<h2><strong>국민연금</strong> 정보를 불러오세요.</h2>
+							<div class="psIngWrap">
+								<div class="psMe active">
+									내가 모은 연금,<br>
+									개시나이 불러오기
+								</div>
+								<div class="icoIngdot" role="img" aria-label=" 예상연금액 개시나이 불러오기 "></div>
+								<div class="psFuture">
+									예상연금액<br>직접 입력하기
+								</div>
+							</div>
+							<p class="ar"><a href="javascript:;" class="linkTxt3" role="button">직접 입력하기</a></p>
+							<button type="button" class="btnClose"><span class="blind">닫기</span></button>
+							<div class="psAddex">
+								<ul class="bulList">
+									<li>
+										현재 공적연금을 수령중인 경우 X버튼을 누른 후
+										공적연금 선택화면에서  [수령중]을 선택하세요.
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!--//case A :공적연금이 없을 경우_국민연금 선택 시 확장화면-->
+
+						<!--case A :공적연금이 없을 경우_국민연금 선택 시 확장화면_02-->
+						<div class="psIngWrapArea mt20">
+							<h2><strong>다음 단계</strong>를 진행해주세요.</h2>
+							<div class="psIngWrap">
+								<div class="psMe">
+									내가 모은 연금<br>
+									불러오기
+								</div>
+								<div class="icoIngdot" role="img" aria-label=" 예상연금액 개시나이 불러오기 "></div>
+								<div class="psFuture active">
+									예상연금액,<br>
+									불러오기
+								</div>
+							</div>
+							<p class="ar"><a href="javascript:;" class="linkTxt3" role="button">직접 입력하기</a></p>
+							<button type="button" class="btnClose"><span class="blind">닫기</span></button>
+							<div class="psAddex">
+								<ul class="bulList">
+									<li>
+										현재 공적연금을 수령중인 경우 X버튼을 누른 후
+										공적연금 선택화면에서  [수령중]을 선택하세요.
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!--//case A :공적연금이 없을 경우_국민연금 선택 시 확장화면_02-->
+
+						<!--case A :공적연금이 없을 경우_공무원연금 선택 시 확장화면-->
+						<div class="psIngWrapArea mt20">
+							<h2><strong>공무원연금</strong> 정보를 불러오세요.</h2>
+							<div class="psIngWrap">
+								<div class="psMe active"> <!-- [D] 접근성 : 버튼일 경우 role="button" tabindex="0" 추가 -->
+									내가 모은 연금,<br>
+									개시나이 불러오기
+								</div>
+								<div class="icoIngdot" role="img" aria-label=" 예상연금액 개시나이 불러오기 "></div>
+								<div class="psFuture"> <!-- [D] 접근성 : 버튼일 경우 role="button" tabindex="0" 추가 -->
+									예상연금액<br>직접 입력하기
+									<!-- 예상연금액<br>불러오기  [2023 NH마이데이터 서비스 고도화] 문구수정 -->
+								</div>
+							</div>
+							<button type="button" class="btnClose"><span class="blind">닫기</span></button>
+							<div class="psAddex">
+								<ul class="bulList">
+									<li>
+										현재 공적연금을 수령중인 경우 X버튼을 누른 후
+										공적연금 선택화면에서  [수령중]을 선택하세요.
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!--//case A :공적연금이 없을 경우_공무원연금 선택 시 확장화면-->
+
+						<!--case A :공적연금이 없을 경우_공무원연금 선택 시 확장화면_02// -->
+						<div class="psIngWrapArea mt20">
+							<h2><strong>다음 단계</strong>를 진행해주세요.</h2>
+							<div class="psIngWrap"> 
+								<div class="psMe"> <!-- [D] 접근성 : 버튼일 경우 role="button" tabindex="0" 추가 -->
+									내가 모은 연금,<br>개시나이 불러오기
+								</div>
+								<div class="icoIngdot" role="img" aria-label=" 예상연금액 개시나이 불러오기 "></div>
+								<div class="psFuture active"> <!-- [D] 접근성 : 버튼일 경우 role="button" tabindex="0" 추가 -->
+									예상연금액<br>직접 입력하기
+									<!-- 예상연금액<br>불러오기  [2023 NH마이데이터 서비스 고도화] 문구수정 -->
+								</div>
+							</div>
+							<!-- <p class="ar"><a href="javascript:;" class="linkTxt3" role="button">직접 입력하기</a></p>   [2023 NH마이데이터 서비스 고도화] 버튼추가 -->
+							<button type="button" class="btnClose"><span class="blind">닫기</span></button>
+							<div class="psAddex">
+								<ul class="bulList">
+									<li>
+										현재 공적연금을 수령중인 경우 X버튼을 누른 후
+										공적연금 선택화면에서  [수령중]을 선택하세요.
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!--//case A :공적연금이 없을 경우_공무원연금 선택 시 확장화면_02 -->
+
+						<!--case A :공적연금이 없을 경우_사학연금 선택 시 확장화면-->
+						<div class="psIngWrapArea mt20">
+							<h2><strong>사학연금</strong> 정보를 불러오세요.</h2>
+							<div class="cal mt12">
+								<div class="inputList disabled">
+									<input type="text" value="" title="예상퇴직일" placeholder="예상퇴직일은 언제인가요?" readonly="readonly">
+									<a href="javascript:;" class="btnCalendar" title="날짜선택" role="button"><span class="blind">날짜선택</span></a>
+								</div>
+							</div>
+							<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+								<input type="tel" title="예상보수인상율을 입력하세요." name="" id="" value="" placeholder="예상보수인상율을 입력하세요.">
+								<span class="unit">%</span>
+								<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+							</div>
+							<p class="ar mt10">
+								<a href="javascript:;" class="contBtn01">불러오기</a>
+								<!-- <a href="javascript:;" class="contBtn01 active">불러오기</a> --> <!--12.02 활성화 버튼 추가 green 추가-->
+							</p>
+							<!-- <p class="ar"><a href="javascript:;" class="linkTxt3" role="button">직접 입력하기</a></p> -->
+							<button type="button" class="btnClose"><span class="blind">닫기</span></button>
+							<div class="psAddex">
+								<ul class="bulList">
+									<li>
+										현재 공적연금을 수령중인 경우 X버튼을 누른 후
+										공적연금 선택화면에서  [수령중]을 선택하세요.
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!--//case A :공적연금이 없을 경우_사학연금 선택 시 확장화면-->
+					</li>
+					<!-- -------------------------------------- -->
+					<!-- [맞춤정보2] -->
+					<!-- -------------------------------------- -->
+					<li>
+						<strong class="formTit"><strong>몇 세 부터 </strong>국민연금을 받고 싶나요?
+							<div class="tooltipWrap">
+								<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">국민연금 안내툴팁</span><!-- [접근성_2024] blind 수정 --></button>
+								<div class="tooltipCont">
+									<p>국민연금 수령조정</p>
+									<ul class="popBul">
+										<li>조기연금(최대 5년) : 1년 앞당겨 받을 때마다 6%씩 덜 받아요.</li>
+										<li>연기연금(최대 5년) : 1년 늦춰 받을 때마다 7.2%씩 더 받아요.</li>
+									</ul>
+									<p class="mt5">공무원/사학연금 수령조정</p>
+									<ul class="popBul">
+										<li>조기연금(최대 5년) : 1년 앞당겨 받을 때마다 5%씩 덜 받아요.</li>
+										<li>연기연금은 없어요.</li>
+									</ul>
+									<p>※수령나이 65세 기준</p>
+									<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+								</div>
+							</div>
+						</strong>
+						<div class="boxRadio mt10">
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo80" id="rdo81" type="radio">
+									<label for="rdo81">만 60세</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo80" id="rdo82" type="radio">
+									<label for="rdo82">만 65세</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo80" id="rdo83" type="radio" >
+									<label for="rdo83">만 70세</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo80" id="rdo84" type="radio" checked="checked">
+									<label for="rdo84">직접입력</label>
+								</span>
+							</div>
+						</div>
+						<p class="addexplain mt0"><span class="pointColor">국민연금</span>을 <span class="pointColor">70세</span>부터 <span class="pointColor">136만원 </span>받을 수 있습니다. </p>
+
+						<!-- [2023 NH마이데이터 서비스 고도화] 직접입력 선택시 노출 -->
+						<!-- [CASE1] 입력 전 -->
+						<div class="inputList unitMan2 mt10">
+							<input type="tel" placeholder="$00$ ~ $00$" title="공적연금 희망 수령 나이 직접입력 ($00$세부터 $00$세까지 입력 가능)" maxlength="2"> <!-- [D] placeholder 및 title의 $00$ 변경 부탁드립니다. -->
+							<span class="unit">세 부터</span>
+							<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+						</div>
+
+						<!-- [CASE1] 입력 후 : 오류 -->
+						<div class="inputList unitMan2 mt10 error">
+							<input type="tel" placeholder="$00$ ~ $00$" value="76" title="공적연금 희망 수령 나이 직접입력 ($00$세부터 $00$세까지 입력 가능)" maxlength="2">
+							<span class="unit">세 부터</span>
+							<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+						</div>
+						<p class="errorTxt" aria-live="assertive">만 $00$부터 $00$세까지 입력 가능합니다.</p>
+						<!--  // [2023 NH마이데이터 서비스 고도화] -->
+
+						<!--caseB : 공적연금이 있는 경우-->
+						<div class="msaeAnalysisTxt mt20">
+							<ul class="bulList">
+								<li class="mt0">공적연금의 적립액, 예상연금액, 연금 개시나이는
+									각 연금공단 최근 업데이트일 기준 정보로 변경됩니다</li>
+							</ul>
+						</div>
+						<!--caseB : 공적연금이 있는 경우-->
+					</li>
+					<!-- -------------------------------------- -->
+					<!-- [맞춤정보3] -->
+					<!-- -------------------------------------- -->
+					<li>
+						<strong class="formTit"><strong>몇 세 부터 </strong>개인연금을 받고 싶나요?</strong>
+						<div class="boxRadio mt10 rdo3">
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo90" id="rdo91" type="radio" checked="checked">
+									<label for="rdo91">만 55세</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo90" id="rdo92" type="radio" >
+									<label for="rdo92">만 60세</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo90" id="rdo93" type="radio" >
+									<label for="rdo93">만 65세</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo90" id="rdo94" type="radio" >
+									<label for="rdo94">만 70세</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo90" id="rdo95" type="radio" disabled="">
+									<label for="rdo95">만 75세</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo90" id="rdo96" type="radio" >
+									<label for="rdo96">직접입력</label>
+								</span>
+							</div>
+						</div>
+						<div class="inputList unitMan2  error">
+							<input type="tel" title="" value="76" placeholder="입력해주세요">
+							<span class="unit">세 부터</span>
+							<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+						</div>
+						<p class="errorTxt">만 00세부터 75세까지 입력 가능합니다.</p>
+					</li>
+					<!-- -------------------------------------- -->
+					<!-- [맞춤정보4] -->
+					<!-- -------------------------------------- -->
+					<li>
+						<strong class="formTit">현재 <strong>국민연금</strong>을 받고 있어요</strong>
+						<div class="MsPenstionBox">
+							<p><strong class="pointColor dataValue">65세</strong> 현재 <strong class="pointColor dataValue">100만원</strong>을 받고 있어요.</p><!--12.07 띄어쓰기 수정-->
+						</div>
+					</li>
+					<li>
+						<div class="MsPenstionBox">
+							<p><strong class="pointColor dataValue">공무원연금</strong>을 <strong class="pointColor dataValue">65세</strong>부터 <strong class="pointColor dataValue">100만원</strong>
+								<br>받을 수 있어요.</p>
+						</div>
+					</li>
+					<!-- -------------------------------------- -->
+					<!-- [맞춤정보5] -->
+					<!-- -------------------------------------- -->
+					<li>
+						<strong class="formTit"><strong>수령기간</strong>을 선택하세요</strong>
+						<p class="pointColor9">만 <span class="pointColor">85세</span>까지 연금을 수령합니다.</p>
+						<div class="boxRadio mt20 rdo3">
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo60" id="rdo61" type="radio">
+									<label for="rdo61">5년 동안</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo60" id="rdo62" type="radio">
+									<label for="rdo62">10년 동안</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo60" id="rdo63" type="radio">
+									<label for="rdo63">15년 동안</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo60" id="rdo64" type="radio">
+									<label for="rdo64">20년 동안</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo60" id="rdo65" type="radio">
+									<label for="rdo65">25년 동안</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo60" id="rdo66" type="radio" checked="checked">
+									<label for="rdo66">30년 동안</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo60" id="rdo67" type="radio" disabled="">
+									<label for="rdo67">35년 동안</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo60" id="rdo68" type="radio" disabled="">
+									<label for="rdo68">40년 동안</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo60" id="rdo60" type="radio">
+									<label for="rdo69">직접입력</label>
+								</span>
+							</div>
+						</div>
+						<div class="inputList unitMan2"><!-- 에러가 있을 경우 error 추가 -->
+							<input type="tel" title="" value="" placeholder="5~45">
+							<span class="unit">년 동안</span>
+							<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+						</div>
+					</li>
+					<!-- -------------------------------------- -->
+					<!-- [맞춤정보6] -->
+					<!-- -------------------------------------- -->
+					<li>
+						<strong class="formTit"><strong>노후생활에 필요한 희망생활비</strong>를 입력하세요 </strong>
+						<p class="pointColor9">개인 적정 노후생활비는 월 <strong class="pointColor">167만원 </strong>입니다.</p>
+						<p class="addexplain02">(국민연금관리공단 및 통계청 가계동향조사 기준)</p>
+						<div class="boxRadio mt20">
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo20" id="rdo40" type="radio">
+									<label for="rdo40">절약하며 118만원</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo20" id="rdo41" type="radio" checked="checked">
+									<label for="rdo41">적정하게 167만원 </label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo20" id="rdo42" type="radio">
+									<label for="rdo42">여유롭게 329만원 </label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo20" id="rdo43" type="radio">
+									<label for="rdo43">직접입력</label>
+								</span>
+							</div>
+						</div>
+						<div class="inputList unitMan2">
+							<input type="tel" title="" value="" placeholder="1~1,000">
+							<span class="unit">만원</span>
+							<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+						</div>
+					</li>
+					<!-- -------------------------------------- -->
+					<!-- [맞춤정보7] -->
+					<!-- -------------------------------------- -->
+					<li>
+						<strong class="formTit"><strong>81세부터 희망생활비</strong>를 감소시킬 수 있어요</strong>
+						<div class="boxRadio mt10">
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo70" id="rdo70" type="radio" checked="checked">
+									<label for="rdo70">감소 적용</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo70" id="rdo71" type="radio">
+									<label for="rdo71">미적용 </label>
+								</span>
+							</div>
+						</div>
+						<p class="addexplain mt0">81세 이후에는 희망생활비의 70%인 <span class="pointColor">117만원</span>이 적용됩니
+							다.</p>
+					</li>
+					<!-- -------------------------------------- -->
+				</ul>
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- -------------------------------------- -->
+		<div class="areaBtnDefault">
+			<a href="javascript:;" class="btnPressPoint" role="button">확인</a>
+		</div>
+		<!-- -------------------------------------- -->
+	</div>
+	<!-- ###################################### -->
+</div>
+</body>
+</html>

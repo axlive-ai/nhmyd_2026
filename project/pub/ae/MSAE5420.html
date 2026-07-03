@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>컨설팅 > DSR 계산기</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		//tostpop();//토스트 팝업 호출 
+	})
+
+	function tostpop(){
+		var $tostCont = '<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg">업데이트를 완료했습니다.</div></div>'
+		$('.container').after($tostCont);
+		setTimeout(function(){
+			$('.tostpopupWrap').remove();
+		},4000)
+	}
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>DSR 계산기</h1>
+		<!-- <a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a> -->
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<!-- [2022-10-21] 수정 -->
+		<div class="boxTypeWrap dsrResult">
+			<h2 class="defTit"><strong>입력하신 정보</strong>로 확인한<br><strong class="highLight"><span>DSR 계산결과</span></strong> 입니다</h2>
+			<hr class="divLine3 mb15">
+			<span class="subTxt2">조회기준일: 2022.08.11</span>
+			<div class="dsrRangeWrap">
+				<div class="graphWrap" style="height:110px;background:#f6f6f6;" tabindex="0" role="img" aria-label="">
+					<div class="unitWrap">
+						<p class="unit">40%</p>
+					</div>
+				</div>
+				<ul class="legendList">
+					<li>
+                        <span class="legendTit type31"><strong>현재 DSR</strong></span>
+                        <span class="legendAmnt"><strong class="value pointColor15">28.77%</strong></span>
+                    </li>
+                    <li>
+                        <span class="legendTit type30"><strong>신청금액 포함 DSR</strong></span>
+                        <span class="legendAmnt"><strong class="value pointColor14">31.77%</strong></span>
+                    </li>
+					<!-- <li>
+                        <span class="legendTit type34"><strong>신청금액 포함 DSR</strong></span>
+                        <span class="legendAmnt"><strong class="value pointColor09">45.14%</strong></span>
+                    </li> -->
+                </ul>
+			</div>
+			<div class="greenBox2 ac">
+				<strong class="pointColor">DSR 규제 대상에 해당하지 않습니다.</strong><br>영업점 및 NH스마트뱅킹에서<br>자세한 상담을 받아보세요.
+			</div>
+			<ul class="listBul disc">
+				<li>총 대출 1억 초과 시 DSR 40% 이내에서만 대출이 가능합니다.</li>
+				<li>정확한 대출 가능 여부 및 한도 확인은 NH농협은행 영업점과 NH스마트뱅킹에서 실제 대출 심사를 통해 확인하실 수 있습니다.</li>
+			</ul>
+		</div>
+
+		<div class="boxTypeWrap dsrCondition">
+			<h2 class="defSubTit2">계산 적용 대출조건</h2>
+			<div class="grayBox">
+				<ul class="detailList">
+					<li>
+						<span class="tit">선택 대출</span>
+						<span class="value">신용대출</span>
+					</li>
+					<li>
+						<span class="tit">연소득</span>
+						<span class="value">80,000,000원</span>
+					</li>
+					<li>
+						<span class="tit">신청금액</span>
+						<span class="value">10,000,000원</span>
+					</li>
+					<li>
+						<span class="tit">금리</span>
+						<span class="value">4.50%</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- [2022-11-25] 1.91 베너수정 - MSHT4450과 마크업 통일  -->
+		<div class="boxTypeWrap bgType04 addShadow"> <!-- [2022-12-12] 수정 -->
+			<div class="visualSubWrap">
+				<h3 class="prodListTit img06">혹시 대출이 <br>필요하신가요?</h3>
+				<!-- <p class="subTxt4 mb0">상품가입 시 실제 금리와 다를 수 있습니다.</p> -->   <!-- [2022-12-12] 삭제 -->
+			</div>
+			<ul class="prodListWrap">
+				<li>
+					<div class="mb5"><span class="tag mint02">신용</span></div>
+					<a href="javascript:;" role="button">
+						<div class="prodRecomWrap mb10">
+							<strong class="prodTit">직장인을 위한 신용대출</strong>
+							<em class="prodRecommInfo">고객님의 소중한 시간 SAVE!<br>1분이면 한도조회 OK!</em>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="areaBtnDefault">
+			<a href="javascript:;" class="btnPressDefault" role="button">다시 계산하기</a> <!-- [2022-10-21] 문구수정 -->
+			<a href="javascript:;" class="btnPressPoint" role="button">확인</a>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>컨설팅 > DSR 계산기</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		//tostpop();//토스트 팝업 호출 
+	})
+
+	function tostpop(){
+		var $tostCont = '<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg">업데이트를 완료했습니다.</div></div>'
+		$('.container').after($tostCont);
+		setTimeout(function(){
+			$('.tostpopupWrap').remove();
+		},4000)
+	}
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>DSR 계산기</h1>
+		<!-- <a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a> -->
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<!-- [2022-10-21] 수정 -->
+		<div class="boxTypeWrap dsrResult">
+			<h2 class="defTit"><strong>입력하신 정보</strong>로 확인한<br><strong class="highLight"><span>DSR 계산결과</span></strong> 입니다</h2>
+			<hr class="divLine3 mb15">
+			<span class="subTxt2">조회기준일: 2022.08.11</span>
+			<div class="graphWrap" style="height:110px;background:#f6f6f6;" tabindex="0" role="img" aria-label="">
+				<div class="unitWrap">
+					<p class="unit">40%</p>
+				</div>
+			</div>
+			<ul class="legendList">
+				<li>
+					<span class="legendTit type31"><strong>현재 DSR</strong></span>
+					<span class="legendAmnt"><strong class="value pointColor15">28.77%</strong></span>
+				</li>
+				<!-- <li>
+					<span class="legendTit type30"><strong>신청금액 포함 DSR</strong></span>
+					<span class="legendAmnt"><strong class="value pointColor14">31.77%</strong></span>
+				</li> -->
+				<li>
+					<span class="legendTit type34"><strong>신청금액 포함 DSR</strong></span>
+					<span class="legendAmnt"><strong class="value pointColor09">2400.00%</strong></span>
+				</li>
+			</ul>
+			<div class="greenBox2 ac">
+				DSR 기준을 <strong class="error">초과</strong>합니다.<br>조건을 다시 설정해보세요.
+			</div>
+			<ul class="listBul disc">
+				<li>총 대출 1억 초과 시 DSR 40% 이내에서만 대출이 가능합니다.</li>
+				<li>정확한 대출 가능 여부 및 한도 확인은 NH농협은행 영업점과 NH스마트뱅킹에서 실제 대출 심사를 통해 확인하실 수 있습니다.</li>
+			</ul>
+		</div>
+
+		<div class="boxTypeWrap dsrCondition">
+			<h2 class="defSubTit2">계산 적용 대출조건</h2>
+			<div class="grayBox">
+				<ul class="detailList">
+					<li>
+						<span class="tit">선택 대출</span>
+						<span class="value">주택담보대출</span>
+					</li>
+					<li>
+						<span class="tit">연소득</span>
+						<span class="value">80,000,000원</span>
+					</li>
+					<li>
+						<span class="tit">신청금액</span>
+						<span class="value">1,000,000,000원</span>
+					</li>
+					<li>
+						<span class="tit">대출기간</span>
+						<span class="value">40년</span>
+					</li>
+					<li>
+						<span class="tit">금리</span>
+						<span class="value">4.50%</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 상품추천 MSASC160P 참고 -->
+		<!-- [2022-12-07] 배너 수정 -->
+		<div class="boxTypeWrap bgType03 pt0">
+			<h2 class="prodListTit img06">
+				혹시 대출이<br>필요하신가요?
+			</h2>
+			<p class="subTxt4">상품 가입 시 실제 금리와 다를 수 있습니다.</p>
+			<ul class="prodListWrap">
+				<li>
+					<a href="javascript:;">
+						<div class="prodRecomWrap">
+							<span class="tag mint">담보</span>
+							<strong class="prodTit">NH모바일 아파트 대출 2.0</strong>
+							<em class="prodRecommInfo">은행 방문없이 휴대폰 하나로 가능한<br>아파트 담보대출</em>
+							<!-- <div class="prodRecomVal dsf">
+								<span class="dataValueWrap">
+									<strong class="dataValue">0.31</strong><em class="per down">% p</em>
+								</span>
+								<div class="prodVal ty01">
+									최저<span class="dataValue">1.67</span><em class="per">%</em>(연)
+								</div>
+							</div> -->
+						</div>
+						<!-- <div class="prodInfoWrap">
+							<span class="prodValue">나의 우대금리 적용 항목</span>
+							<span class="prodValue">급여이체, 자동이체 3건, 카드이용실적 등</span>
+						</div> -->
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- //[2022-12-07] 배너 수정 -->
+
+		<div class="areaBtnDefault">
+			<a href="javascript:;" class="btnPressDefault" role="button">다시 계산하기</a> <!-- [2022-10-21] 문구수정 -->
+			<a href="javascript:;" class="btnPressPoint" role="button">확인</a>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

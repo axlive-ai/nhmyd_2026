@@ -1,0 +1,87 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 이용안내</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(function() {
+		slidePopConfirm();
+	});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><span class="pfmLogo">NH자산<em>+</em></span></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+			
+		</div>
+		<!-- //container -->
+			
+		<div class="nhasset popWrap slidePopConfirm">
+			<div class="dim"></div>
+			<div class="popInner">
+				<div class="popCont notiSlidePop template05 hasCheck"> <!-- [2022-12-28] .hasCheck 추가 -->
+					<div class="notiSlide">
+						<div class="notiCont">
+							<strong class="name">시스템 점검으로 인한</strong>
+							<p class="tit">NH마이데이터 서비스 안내</p>
+							<p class="period">기간 : 2022.08.01 00:00 ~ 2022.08.31 00:00</p> <!-- [2022-11-25] v1.5 문구수정 -->
+							<a href="javascript:;" class="link">자세히 보기</a>
+						</div>        
+					</div>
+					<ul class="notiSlideBtns"> <!-- [2022-12-28] 위치변경 -->
+						<li>
+							<span class="chkbtnWrap">
+								<input type="checkbox" id="todayClose" class="chekTypeOther" name="" title="하루동안 팝업 닫힘">
+								<label for="todayClose">하루동안 보지 않기</label>
+							</span>
+						</li>
+						<li><a href="javascript:;" onclick="popClose(this);return false;" class="under" title="해당 창을 닫습니다.">자세히보기</a></li>
+					</ul>
+                </div>
+                
+                <!-- <div class="popBtnWrap">
+                    <div class="popBtn">
+                        <ul class="notiSlideBtns">
+                            <li>
+                                <span class="chkbtnWrap">
+                                    <input type="checkbox" id="todayClose" class="chekTypeOther" name="" title="하루동안 팝업 닫힘">
+                                    <label for="todayClose">하루동안 보지 않기</label>
+                                </span>
+                            </li>
+							<li><a href="javascript:;" onclick="popClose(this);return false;" class=""  title="해당 창을 닫습니다.">닫기</a></li>
+                        </ul>
+                    </div>
+                </div>     -->
+			</div>
+		</div>	
+	</div>
+
+</body>
+
+</html>

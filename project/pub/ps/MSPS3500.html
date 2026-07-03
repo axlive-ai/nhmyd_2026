@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>자산연결</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset bgWhite">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">자산연결</a></h1>
+		<a href="javascript:;" class="btnEtc">나가기</a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<div class="stepWrap">
+			<ol role="img" aria-label="총 4단계 중 3번째 단계"> <!--  aria-label= -> aria-label 오타수정 -->
+				<li><span>1</span></li>
+				<li><span>2</span></li>
+				<li class="active"><span>3</span></li>
+				<li><span>4</span></li>				
+			</ol>
+		</div>
+		<h2 class="defTit">자산목록을 조회 했습니다<br><strong>연결할 자산을 선택</strong>해주세요</h2>
+		<p class="subTxt"><span>4개</span> 기관의 데이터를 불러왔습니다.<br> 보유한 자산이 있는 기관만 표시 됩니다. </p>
+
+		<div class="assetSelectLlistWrap">
+			<div class="assetSelectLlistAll">
+				<span><input type="checkbox" id="listAll" class="chekTypeOther" name="" checked><label for="listAll">전체선택</label></span>
+			</div>
+			<ul class="assetSelectLlist">
+				<li class="toggleWrap">
+					<div class="assetSelectGroup">
+						<span class="subject">
+							<input type="checkbox" checked id="listSub00" name="" class="chekTypeOther" >
+							<label for="listSub00"><!--[2022-11-29]  class="A1AABG0000" 삭제-->
+								<span class="imgWrap"> <!-- [2022-11-29] 윤규송 : 로고 공통 이미지로 변경 -->
+									<img src="../../images/logos/AABG0000.png" alt="농협은행 로고" class="imgLogo">
+								</span>기관명
+							</label>
+						</span>
+						<a href="javascript:;" class="toggleBtn active"><span class="blind">기관명 자산목록</span></a>
+					</div>
+					<ul class="assetSelectSub toggleCont">
+						<li>
+							<span class="accountInfo">
+								<input type="checkbox" checked id="listSub01" name="">
+								<label for="listSub01">
+									<div class="title">상품명 넘치는 경우 줄바꿈처리 상품명 넘치는 경우 줄바꿈처리 상품명 넘치는 경우 줄바꿈처리 </div>
+									<div class="subCont">계좌번호(회차), 상태</div>
+								</label>
+							</span>
+						</li>
+						<li>
+							<span class="accountInfo">
+								<input type="checkbox" checked id="listSub02" name="">
+								<label for="listSub02">
+									<div class="title">상품명 넘치는 경우 줄바꿈처리</div>
+									<div class="subCont">계좌번호(회차), 상태</div>
+								</label>
+							</span>
+						</li>
+					</ul>
+				</li>
+				<li class="toggleWrap">
+					<div class="assetSelectGroup">
+						<span class="subject">
+							<input type="checkbox" disabled id="listSub10" name="" class="chekTypeOther" >
+							<label for="listSub10"><!--[2022-11-29]   class="A1AABG0000"  삭제-->
+								<span class="imgWrap"> <!-- [2022-11-29] 윤규송 : 로고 공통 이미지로 변경 -->
+									<img src="../../images/logos/AABG0000.png" alt="농협은행 로고" class="imgLogo">
+								</span>기관명
+							</label>
+						</span>
+						<a href="javascript:;" class="toggleBtn active"><span class="blind">기관명 자산목록</span></a>
+					</div>
+					<ul class="assetSelectSub toggleCont">
+						<li>
+							<span class="accountInfo">
+								<input type="checkbox" disabled id="listSub11" name="">
+								<label for="listSub11">
+									<div class="title">상품명 넘치는 경우 줄바꿈처리 상품명 넘치는 경우 줄바꿈처리 상품명 넘치는 경우 줄바꿈처리 </div>
+									<div class="subCont">계좌번호(회차), 상태</div>
+								</label>
+							</span>
+							<span class="assetSelectFlag"><span class="tag bgGray">연결중</span></span>
+						</li>
+						<li>
+							<span class="accountInfo">
+								<input type="checkbox" disabled id="listSub12" name="">
+								<label for="listSub12">
+									<div class="title">상품명 넘치는 경우 줄바꿈처리</div>
+									<div class="subCont">계좌번호(회차), 상태</div>
+								</label>
+							</span>
+							<span class="assetSelectFlag"><span class="tag bgGray">연결중</span></span>
+						</li>
+					</ul>
+				</li>
+				<li class="toggleWrap">
+					<div class="assetSelectGroup">
+						<span class="subject">
+							<input type="checkbox" checked id="listSub20" name="" class="chekTypeOther" >
+							<label for="listSub10"><!--[2022-11-29]   class="A1AABG0000"  삭제-->
+								<span class="imgWrap"> <!-- [2022-11-29] 윤규송 : 로고 공통 이미지로 변경 -->
+									<img src="../../images/logos/AABG0000.png" alt="농협은행 로고" class="imgLogo">
+								</span>기관명
+							</label>
+						</span>
+						<a href="javascript:;" class="toggleBtn active"><span class="blind">기관명 자산목록</span></a>
+					</div>
+					<ul class="assetSelectSub toggleCont">
+						<li>
+							<span class="accountInfo">
+								<input type="checkbox" disabled id="listSub21" name="">
+								<label for="listSub21">
+									<div class="title">상품명 넘치는 경우 줄바꿈처리 상품명 넘치는 경우 줄바꿈처리 상품명 넘치는 경우 줄바꿈처리 </div>
+									<div class="subCont">계좌번호(회차), 상태</div>
+								</label>
+							</span>
+							<span class="assetSelectFlag"><span class="tag bgGray">연결중</span></span>
+						</li>
+						<li>
+							<span class="accountInfo">
+								<input type="checkbox" checked id="listSub22" name="">
+								<label for="listSub22">
+									<div class="title">상품명 넘치는 경우 줄바꿈처리</div>
+									<div class="subCont">계좌번호(회차), 상태</div>
+								</label>
+							</span>
+						</li>
+					</ul>
+				</li>
+				<li class="toggleWrap">
+					<div class="assetSelectGroup">
+						<span class="subject">
+							<input type="checkbox" checked id="listSub30" name="" class="chekTypeOther" >
+							<label for="listSub10"><!--[2022-11-29]  class="D1AAFO0000"  삭제-->
+								<span class="imgWrap"> <!-- [2022-11-29] 윤규송 : 로고 공통 이미지로 변경 -->
+									<img src="../../images/logos/AAFO0000.png" alt="농협은행 로고" class="imgLogo">
+								</span>	현대카드
+							</label>
+						</span>
+						<a href="javascript:;" class="toggleBtn active"><span class="blind">현대카드 자산목록</span></a>
+					</div>
+					<ul class="assetSelectSub toggleCont">
+						<li>
+							<span class="accountInfo">
+								<input type="checkbox" checked id="listSub31" name="">
+								<label for="listSub31">
+									<div class="title">M3 BOOST</div>
+									<div class="subCont">123456******1234</div>
+								</label>
+							</span>
+						</li>
+						<li>
+							<span class="accountInfo">
+								<input type="checkbox" checked id="listSub32" name="">
+								<label for="listSub32">
+									<div class="title">M1 BOOST</div>
+									<div class="subCont">23456******1234, 가족</div>
+								</label>
+							</span>
+						</li>
+						<li>
+							<span class="accountInfo">
+								<input type="checkbox" checked id="listSub33" name="">
+								<label for="listSub33">
+									<div class="title">포인트 정보</div>
+								</label>
+							</span>
+						</li>
+						<li>
+							<span class="accountInfo">
+								<input type="checkbox" checked id="listSub34" name="">
+								<label for="listSub34">
+									<div class="title">청구 및 결제 정보</div>
+								</label>
+							</span>
+						</li>
+						<li>
+							<span class="accountInfo">
+								<input type="checkbox" checked id="listSub35" name="">
+								<label for="listSub35">
+									<div class="title">대출상품 정보</div>
+								</label>
+							</span>
+						</li>
+					</ul>
+				</li>
+				<!-- 2022-08-23 공공기관 정보 표시 추가 [2022-10 오픈 버전] -->
+				<li class="toggleWrap">
+					<div class="assetSelectGroup">
+						<span class="subject">
+							<input type="checkbox" checked id="listSub40" name="" class="chekTypeOther" >
+							<label for="listSub40"><!--[2022-11-29]  class="D1AAFO0000"  삭제-->
+								<span class="imgWrap"> <!-- [2022-11-29] 윤규송 : 로고 공통 이미지로 변경 -->
+									<img src="../../images/logos/Institution000.png" alt="농협은행 로고" class="imgLogo">
+								</span>	국민건강보험공단
+							</label>
+						</span>
+						<a href="javascript:;" class="toggleBtn active"><span class="blind">국민건강보험공단 자산목록</span></a>
+					</div>
+					<ul class="assetSelectSub toggleCont">
+						<li>
+							<span class="accountInfo">
+								<input type="checkbox" checked id="listSub41" name="">
+								<label for="listSub41">
+									<div class="title">건강·장기 요양보험료 납부확인서<br>(직장가입자)</div>
+								</label>
+							</span>
+						</li>
+					</ul>
+				</li>
+				<li class="toggleWrap">
+					<div class="assetSelectGroup">
+						<span class="subject">
+							<input type="checkbox" checked id="listSub50" name="" class="chekTypeOther" >
+							<label for="listSub50"><!--[2022-11-29]  class="D1AAFO0000"  삭제-->
+								<span class="imgWrap"> <!-- [2022-11-29] 윤규송 : 로고 공통 이미지로 변경 -->
+								<img src="../../images/logos/Institution000.png" alt="농협은행 로고" class="imgLogo">
+							</span>	국민연금공단</label>
+						</span>
+						<a href="javascript:;" class="toggleBtn active"><span class="blind">국민연금공단 자산목록</span></a>
+					</div>
+					<ul class="assetSelectSub toggleCont">
+						<li>
+							<span class="accountInfo">
+								<input type="checkbox" checked id="listSub51" name="">
+								<label for="listSub51">
+									<div class="title">연금산정용 가입내역 확인서</div>
+								</label>
+							</span>
+						</li>
+					</ul>
+				</li>
+				<li class="toggleWrap">
+					<div class="assetSelectGroup">
+						<span class="subject">
+							<input type="checkbox" checked id="listSub60" name="" class="chekTypeOther" >
+							<label for="listSub60"><!--[2022-11-29]  class="D1AAFO0000"  삭제-->
+								<span class="imgWrap"> <!-- [2022-11-29] 윤규송 : 로고 공통 이미지로 변경 -->
+									<img src="../../images/logos/Institution000.png" alt="농협은행 로고" class="imgLogo">
+								</span>공무원연금공단
+							</label>
+						</span>
+						<a href="javascript:;" class="toggleBtn active"><span class="blind">공무원연금공단 자산목록</span></a>
+					</div>
+					<ul class="assetSelectSub toggleCont">
+						<li>
+							<span class="accountInfo">
+								<input type="checkbox" checked id="listSub61" name="">
+								<label for="listSub61">
+									<div class="title">공무원연금내역서</div>
+								</label>
+							</span>
+						</li>
+					</ul>
+				</li>
+				<!-- //2022-08-23 공공기관 정보 표시 추가 [2022-10 오픈 버전] -->
+			</ul>
+		</div>
+		<div class="areaBtnDefault">
+			<a href="javascript:;" class="btnPressPoint disabled" role="button" aria-disabled="true">확인</a> <!-- [2023-01-16] 접근성 수정 -->
+		</div>
+		<!-- <div class="areaBtnDefault">
+			<button type="button" class="btnPressPoint" disabled>확인</button>
+		</div> -->
+	</div>
+</div>
+</body>
+</html>

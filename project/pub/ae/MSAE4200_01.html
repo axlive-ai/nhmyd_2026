@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>보고서 서브메인</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>보고서</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+        <!-- <div class="reptTit">
+            <a href="javascript:;">알림 설정</a>
+            <button type="button" class="assetSet" onclick="slidePopOption();"><span class="blind">보고서 설정하기</span></button>
+        </div> --><!--11.22 삭제-->
+       
+        <div class="boxTypeWrap">
+            <div class="reptTopInfoTit">
+                <h2><strong>김농협</strong>님의 $N$월 보고서</h2><!--11.22 텍스트 수정-->
+            </div>
+            <div class="reptTopInfo">
+                <div class="item">
+                    <div class="itemTit">
+                        <div class="left"> 
+                            <span class="ico"><img src="../../images/category/icoCate100.png" alt="순자산 현황 아이콘"></span>
+                            <span class="tit">순자산 현황</span>
+                        </div>
+                        <span class="value">234,222,000<em class="won">원</em></span>
+                    </div>
+                    <div class=itemCont>
+                        <span>6월보다 <span class="pointUP">1,123,456원 증가</span>했어요!</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="itemTit">
+                        <div class="left"> 
+                            <span class="ico"><img src="../../images/category/icoCate46.png" alt="소비 현황 아이콘"></span>
+                            <span class="tit">소비 현황</span><!--12.07 띄어쓰기 수정-->
+                        </div>
+                        <span class="value">234,222,000<em class="won">원</em></span>
+                    </div>
+                    <div class=itemCont>
+                        <span>6월보다 <span class="pointDown">1,123,456원 증가</span>했어요!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <h2 class="defTxt fs16 mt30">내 자산 최근 흐름</h2> <!--12.02 추가--> 
+        <div class="boxTypeWrap">
+            <div class="reptflow">
+                <h3>자산 리포트</h3>
+                <div class="txt"><strong>김농협</strong>님의 자산 데이터가 아직 부족해요.</div>
+                <p class="addTxt">자산연결  3개월 후부터 자산 리포트를
+                    이용하실 수 있으니 조금만 기다려주세요.</p>
+            </div>
+        </div>
+        <!--12.02 추가--> 
+
+        <h2 class="defTxt ty02 fs16 mt30">
+            <span>내 자산 최근 흐름</span>
+        </h2> 
+		<div class="boxWrapShadow">
+			<div class="boxTypeWrap delShadow">
+                <div class="reptArea">
+                    <h2 class="tit">자산 리포트 <span class="date">기간 2022년 4월 1일 ~ 8월 31일</span></h2> <!--11.22 텍스트 수정-->
+                    <p class="dsf">최근 5개월 기준 자산이<span class="pointColor12">&nbsp;증가</span>하고 있어요.<!--12.07 띄어쓰기 수정-->
+                        <span class="emojiWrap"><img src="../../images/ico_emoji13.png" alt=""></span>
+                    </p>
+                </div>
+                <hr class="divLine" aria-hidden="true">
+				<div class="reptGraphArea"><!--s:reptGraphArea-->
+                    <div class="graphItem01">
+                        <h3 class="tit">자산총액 추세</h3><!--11.22 텍스트 수정-->
+                        <div class="graphWrap mt35" role="img" aria-label="">
+                            <img src="../../images/temp/assets_graph_dumy04.png">
+                        </div>
+                    </div>
+                    <hr class="divLine ty01" aria-hidden="true">
+                    <div class="graphItem01">
+                        <h3 class="tit">자산 카테고리별 비중 추세</h3>
+                        <div class="graphWrap mt35" role="img" aria-label="">
+                            <img src="../../images/temp/assets_graph_dumy03.png">
+                        </div>
+                        <ul class="legendList tyrd mt25">
+							<li>
+								<span class="legendTit type41">계좌</span>
+							</li>
+							<li>
+								<span class="legendTit type42">투자</span>
+							</li>
+							<li>
+								<span class="legendTit type43">연금</span>
+							</li>
+							<li>
+								<span class="legendTit type44">가상자산</span>
+							</li>
+							<li>
+								<span class="legendTit type45">부채</span>
+							</li>
+						</ul>
+                    </div>
+                </div>
+                <!--e:reptGraphArea-->
+            </div>
+            
+            <div class="moreInfoArea reportArea"><!--12.02 펼침 추가 및 버튼 위치 boxWrapShadowd 안쪽으로 수정-->
+                <!-- 추가정보 열/닫 -->
+                <div class="moreInfoWrap toggleWrap">
+                    <div class="moreInfo toggleCont" style="display:none">
+                        <div class="reportGraph">
+                            <h3>8월 자산 카테고리별 비중</h3>
+                                <ul class="legendList">
+                                    <li>
+                                        <span class="legendTit type41"><strong>계좌</strong>25.2%</span>
+                                        <span class="legendAmnt"><em class="value">1,234,567</em>원</span>
+                                    </li>
+                                    <li>
+                                        <span class="legendTit type42"><strong>투자</strong>22.5%</span>
+                                        <span class="legendAmnt"><em class="value">1,234,567</em>원</span>
+                                    </li>
+                                    <li>
+                                        <span class="legendTit type43"><strong>연금</strong>20.5%</span>
+                                        <span class="legendAmnt"><em class="value">1,234,567</em>원</span>
+                                    </li>
+                                    <li>
+                                        <span class="legendTit type44"><strong>가상자산</strong>17.4%</span>
+                                        <span class="legendAmnt"><em class="value">4,500,000</em>원</span>
+                                    </li>
+                                    <li>
+                                        <span class="legendTit type45"><strong>부채</strong>17.4%</span>
+                                        <span class="legendAmnt"><em class="value">4,500,000</em>원</span>
+                                    </li>
+                                </ul>
+                        </div>
+                        
+                    </div>
+                    <button type="button" class="moreOpenBtn toggleBtn"><span class="toggleTxt11">더보기</span></button> <!--09.21 toggleTxt07 수정-->
+                </div>
+                <!-- // 추가정보 열/닫 -->
+            </div>
+            <!--e:moreInfoArea--> 
+        </div>
+        <!--e:boxWrapShadow-->
+        
+        <h2 class="defTxt ty02 fs16 mt30">
+            <span>내 소비 최근 흐름</span>
+            <div class="tgWarp ty01">
+                <span class="tgTxt">나의 한달로 보기</span>
+                <span class="tgBtnType2">
+                    <input type="checkbox" id="toggle10" checked="checked">
+                    <label for="toggle10"><span>나의 한달로 보기</span></label>
+                </span>
+            </div>
+        </h2> 
+		<div class="boxWrapShadow">
+			<div class="boxTypeWrap delShadow">
+                <div class="reptArea">
+                    <h2 class="tit">소비 리포트 <span class="date">기간 2022년 4월 1일 ~ 8월 31일</span></h2> 
+                    <p>최근 5개월 간 월 평균 <span class="point">3,120,500<em class="won">원</em></span>을 <br>
+                        소비하고 있어요.</p>
+                </div>
+                <hr class="divLine" aria-hidden="true">
+				<div class="reptGraphArea"><!--s:reptGraphArea-->
+                    <div class="graphItem01">
+                        <h3 class="tit">소비 총액 추세</h3>
+                        <div class="graphWrap mt35" role="img" aria-label="">
+                            <img src="../../images/temp/assets_graph_dumy02.png">
+                        </div>
+                    </div>
+                    <hr class="divLine ty01" aria-hidden="true">
+                    <div class="graphItem01">
+                        <h3 class="tit">소비 카테고리별 비중 추세</h3><!--11.22 텍스트 수정-->
+                        <div class="graphWrap mt35" role="img" aria-label="">
+                            <img src="../../images/temp/assets_graph_dumy03.png">
+                        </div>
+                        <ul class="legendList tyrd mt25">
+							<li>
+								<span class="legendTit type41">외식</span>
+							</li>
+							<li>
+								<span class="legendTit type42">생활/마트</span>
+							</li>
+							<li>
+								<span class="legendTit type43">주거/통신</span>
+							</li>
+							<li>
+								<span class="legendTit type44">문화</span>
+							</li>
+							<li>
+								<span class="legendTit type45">그외</span>
+							</li>
+						</ul>
+                    </div>
+                </div>
+                <!--e:reptGraphArea-->
+            </div>
+            
+            <div class="moreInfoArea reportArea"><!--12.02 펼침 추가 및 버튼 위치 boxWrapShadowd 안쪽으로 수정-->
+                <!-- 추가정보 열/닫 -->
+                <div class="moreInfoWrap toggleWrap">
+                    <div class="moreInfo toggleCont" style="display:none">
+                        <div class="reportGraph">
+                            <h3>8월 소비 카테고리별 비중</h3>
+                                <ul class="legendList">
+                                    <li>
+                                        <span class="legendTit type41"><strong>외식</strong>25.2%</span>
+                                        <span class="legendAmnt"><em class="value">1,234,567</em>원</span>
+                                    </li>
+                                    <li>
+                                        <span class="legendTit type42"><strong>생활/마트</strong>22.5%</span>
+                                        <span class="legendAmnt"><em class="value">1,234,567</em>원</span>
+                                    </li>
+                                    <li>
+                                        <span class="legendTit type43"><strong>주거/통신</strong>20.5%</span>
+                                        <span class="legendAmnt"><em class="value">1,234,567</em>원</span>
+                                    </li>
+                                    <li>
+                                        <span class="legendTit type44"><strong>문화</strong>17.4%</span>
+                                        <span class="legendAmnt"><em class="value">4,500,000</em>원</span>
+                                    </li>
+                                    <li>
+                                        <span class="legendTit type45"><strong>그외</strong>17.4%</span>
+                                        <span class="legendAmnt"><em class="value">4,500,000</em>원</span>
+                                    </li>
+                                </ul>
+                        </div>
+                        
+                    </div>
+                    <button type="button" class="moreOpenBtn toggleBtn"><span class="toggleTxt11">더보기</span></button> <!--09.21 toggleTxt07 수정-->
+                </div>
+                <!-- // 추가정보 열/닫 -->
+            </div>
+            <!--e:moreInfoArea--> 
+
+		</div>
+
+		<div class="yabannerArea">
+			<div class="retitImgBanner ty01">
+                <button type="button" class="contBtn05">목돈마련</button>
+                <p>자산관리 맞춤가이드</p>    
+			</div>
+		</div>
+        <div class="formWrap addShoow"><!--s:formWrap-->
+			<div class="yanowWrap bdR10">
+                <div class="reptGuideArea">
+                    <h3>내게 맞는 맞춤가이드 보기</h3>
+                    <p>자산진단 및 연금진단을 받으시면 김농협님을 위한 맞춤가이드를 보실 수 있어요.</p>
+                    <ul class="reptBtnWrap">
+                        <li>
+                            <a href="javascript:;" class="linkTxt"> 자산진단 받기</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="linkTxt"> 연금진단 받기</a>
+                        </li>
+                    </ul>   
+                </div>
+
+                <div class="reptBoxArea arr">
+                    <h2>안전자산 비중을 조금 높여보세요</h2>
+                    <p>김농협님의 투자스타일을 고려했을 때 위험자산 비중이 조금 높아요.</p>
+                    <span> <a href="javascript:;" class="linkTxt"> 자산진단 상세보기</a></span>
+                </div>
+                <div class="reptBoxArea arr">
+                    <h2>연금은 조금 더 모아야 해요</h2>
+                    <p>희망하는 생활비보다 연금이 모자라요. </p>
+                    <span> <a href="javascript:;" class="linkTxt"> 연금진단 상세보기</a></span>
+                </div>
+                
+                
+                <hr class="divLine2 mt30" aria-hidden="true">
+                
+                <div class="reptSumBox">
+                    매달 총 <span class="pointColor"><strong>302,800</strong>원</span>을<br>모을 수 있는 방법을 찾았어요
+                    <img src="../../images/ico_rept01.png" alt="건강한 집밥과 도시락을 적극 권장합니다.">
+                </div>
+                <div class="briefItem ty01">
+                    <h3 class="briefTit rept">
+                        <div class="imgWrap icoCate">
+                            <span class="img"><img src="../../images/category/cs/ico_cate_cs01.png" alt="건강한 집밥과 도시락을 적극 권장합니다."></span> <!--12.14 아이콘 변경-->
+                        </div>
+                        건강한 집밥과 도시락을 적극 권장합니다.
+                    </h3>
+                    <div class="reptTxt">
+                        <p> 김농협님은 최근 5개월간 외식에 <a href="javascript:;" class="underLine">월 평균 25회, </a>&nbsp;&nbsp;<a href="javascript:;" class="underLine">회당 평균 57,000원 </a>을 소비했어요.</p>
+                        <p> 월평균 <a href="javascript:;" class="underLine">50% </a>를 줄인다면 <span class="point">100,000원</span>을 모을 수 있어요.</p>
+                    </div>
+                    <!-- <div class="briefGraph">
+                        <div class="graphWrap" style="height:220px;background:#fff;" tabindex="0" role="img" aria-label="월 예산 00원 중에서 00원을 지출하셨고, 00원 남았습니다.">
+                            <p style="text-align:center;padding-top:50px;">그래프 영역</p>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="reptBox txtbg ty01">
+                    <h3>요알못이라구요?</h3>
+                    <p class="txt">그럼 외식할 때 혜택은 꼭 챙기세요!</p>
+                </div>
+
+                <div class="reptCardBox">
+                    <div class="left">
+                        <h3><span class="img"><img src="../../images/ico_chum.png" alt="채움CI"></span>
+                            올바른MYPICK 카드
+                        </h3> <!--11.22 텍스트 수정-->
+                        <p>
+                            나에게 필요한 Pack 서비스를 <br>
+                            내맘대로 Pick!
+                        </p>
+                    </div>
+                    <div class="imgWrap">
+                        <span class="img"><img src="../../images/img_card_chu.png" alt="올바른MYPCK 카드이미지">
+                    </div>
+                </div>
+
+                <hr class="divLine ty02" aria-hidden="true">
+
+                <div class="briefItem ty01">
+                    <h3 class="briefTit rept">
+                        <div class="imgWrap icoCate">
+                            <span class="img"><img src="../../images/category/cs/ico_cate_cs06.png" alt="지름신은 잠깐 멀리하는게 좋겠어요"></span>
+                        </div>
+                        지름신은 잠깐 멀리하는게 좋겠어요
+                    </h3>
+                    <div class="reptTxt">
+                        <p> 김농협님은 최근 5개월간 외식에 <a href="javascript:;" class="underLine">온라인쇼핑</a>에 월 평균<a href="javascript:;" class="underLine">25회, 회당 평균 46,000원</a>을 소비했어요.</p>
+                        <p> 월평균 <a href="javascript:;" class="underLine">50% </a>를 줄인다면 <span class="point">100,000원</span>을 모을 수 있어요.</p>
+                    </div>
+                    <!-- <div class="briefGraph">
+                        <div class="graphWrap" style="height:220px;background:#fff;" tabindex="0" role="img" aria-label="월 예산 00원 중에서 00원을 지출하셨고, 00원 남았습니다.">
+                            <p style="text-align:center;padding-top:50px;">그래프 영역</p>
+                        </div>
+                    </div> -->
+                </div>
+
+                <hr class="divLine ty02" aria-hidden="true">
+
+                <div class="briefItem ty01">
+                    <h3 class="briefTit rept">
+                        <div class="imgWrap icoCate">
+                            <span class="img"><img src="../../images/category/cs/ico_cate_cs05.png" alt="정기 지출도 절약해볼까요?"></span>
+                        </div>
+                        정기 지출도 절약해볼까요?
+                    </h3>
+                    <div class="reptTxt">
+                        <p> <a href="javascript:;" class="underLine">티빙, 유투브 프리미엄, 디즈니 플러스</a> 중 <br>
+                            잘 이용하지 않는 <a href="javascript:;" class="underLine">구독서비스</a>는 정리해보세요.</p>
+                        <p><a href="javascript:;" class="underLine">티빙</a>만 남기고 나머지를 정리하면<br>월 평균 <span class="point">100,000원</span>을 모을 수 있어요.</p>
+                    </div><!--11.22 텍스트 수정-->
+                    <!-- <div class="briefGraph">
+                        <div class="graphWrap" style="height:220px;background:#fff;" tabindex="0" role="img" aria-label="월 예산 00원 중에서 00원을 지출하셨고, 00원 남았습니다.">
+                            <p style="text-align:center;padding-top:50px;">그래프 영역</p>
+                        </div>
+                    </div> -->
+                </div>
+
+                <hr class="divLine ty02" aria-hidden="true">
+
+                <div class="reptSumBox">
+                    <span>1년 동안 모을수 있는 금액은? <img src="../../images/ico_report_coin.png" alt="건강한 집밥과 도시락을 적극 권장합니다."></span>
+                    <p>총<span class="pointColor"><strong>100,000,000</strong>원</span>입니다.</p>
+                </div>
+                
+            </div>
+		</div>
+        <!--e:formWrap-->
+
+        <div class="reptBannerBox rptBg01">
+            <a href="javascript:;" title="">
+				<div class="yabanner ty15">
+					<h3>작심삼일이 걱정이라면?</h3>
+                    <p class="subTxt">월 예산 설정하고 한달 살기 도전해 보세요!</p>
+                    <p><span class="link arrGreen">월 예산 설정하기</span></p>
+				</div>
+			</a>
+        </div>
+
+        <div class="boxTypeWrap">
+            <h2 class=reptDownTit>보고서 다운로드</h2>
+            <div class="reptDownBox mt20">
+                <p>월간 보고서를 다운로드 받으세요.</p>
+                <span>
+                    <a href="javascript:;" class="linkType1 pointColor">월간 보고서 다운로드</a>
+                </span>
+            </div>
+            <hr class="divLine3" aria-hidden="true">
+            <div class="reptDownBox">
+                <p>자산현황 자료가 필요하신가요?</p>
+                <span>
+                    <a href="javascript:;" class="linkType1 pointColor">자산현황 다운로드</a>
+                </span>
+            </div>
+
+        </div>
+
+        <div class="reptBannerBox rptBg02">
+            <a href="javascript:;" title="">
+				<div class="yabanner ty15">
+					<h3>데이터 정기전송에 동의하고 보고서를<br>
+                        최신데이터로 유지하세요.</h3>
+                    <p><span class="linkTxt">정기전송 동의하기</span></p>
+				</div>
+			</a>
+        </div>
+
+        <div class="reptBannerBox rptBg03">
+            <a href="javascript:;" title="">
+				<div class="yabanner ty15">
+					<h3>나에게 꼭 맞춘 월간 보고서를<br>
+                        바로 확인할 수 있도록 알려드려요.</h3>
+                    <p><span class="linkTxt">알림 설정하기</span></p>
+				</div>
+			</a>
+        </div>
+
+    </div>
+    <!-- //e:container -->
+</div>
+<script>
+
+$('.moreOpenBtn').click(function(e){
+		if(!$(this).hasClass('active')){
+            $(this).parents('.moreInfoWrap').parents('.moreInfoArea').parents('.boxWrapShadow').find(".tyrd").addClass('disNone')
+		}else{
+            $(this).parents('.moreInfoWrap').parents('.moreInfoArea').parents('.boxWrapShadow').find(".tyrd").removeClass('disNone')
+		}
+    })
+    
+</script>
+
+<style>
+</style>
+</body>
+</html>

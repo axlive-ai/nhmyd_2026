@@ -1,0 +1,188 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>보험상세(자동차보험) | 보험업권 | 자산</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<!--
+#####################################################
+	[2023 NH마이데이터 서비스 고도화] 수정내역
+	[추천과제명] : 농협자산 실시간 거래내역 및 API 2.0 추가 항목 반영
+#####################################################
+	1) 항목 추가
+		ㄴ 자동이체기관 / 자동이체계좌
+#####################################################
+-->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">보험 상세</a></h1>
+		<a href="javascript:;" class="btnAcAdmin"><span class="blind">관리</span></a>
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 보험상세 ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<!-- -------------------------------------- -->
+		<!-- [상단영역] 보험정보 -->
+		<!-- -------------------------------------- -->
+		<div class="boxWrapShadow">
+			<!-- ### [계좌정보] 기본내용 ### -->
+			<div class="boxTypeWrap delShadow">
+				<!-- // -->
+				<div class="accTopInfo">
+					<h2 class="accName">애니카 다이렉트 자동차보험
+						<img src="../../images/logos/AAAJ0000.png" alt="오케이캐피탈㈜ 로고" class="imgLogo">
+					</h2>
+					<div class="etcInfo ty01">
+						<span class="carNum">123가1234</span> | <span class="carName">G4 렉스턴</span>
+					</div>
+				</div>
+				<!-- // -->
+				<hr class="divLine">
+				<!-- // -->
+				<div class="accInfoDetail">
+					<ul class="detailList">
+						<li>
+							<span class="tit">유형</span>
+							<span class="value">
+								자동차보험&gt;종합보장보험
+							</span>
+						</li>
+						<li>
+							<span class="tit">상품명</span>
+							<span class="value">애니카 다이렉트 자동차보험</span>
+						</li>
+						<li>
+							<span class="tit">보장내역</span>
+							<span class="value">10건
+								<button type="button" class="contBtnArrow" title="보장내역 더보기">더보기</button>
+							</span>
+						</li>
+					</ul>
+				</div>
+				<!-- // -->
+			</div>
+
+			<!-- ### [토글영역] 상세정보 ### -->
+			<div class="moreInfoArea">
+				<div class="moreInfoWrap toggleWrap">
+					<div class="moreInfo toggleCont" style="display:none">
+						<hr class="divLine2" aria-hidden="true">
+						<ul class="detailList">
+							<li>
+								<span class="tit">증권번호</span>
+								<span class="value">03580204123456 <button type="button" class="contBtn01" title="계좌번호 복사">복사</button></span></span>
+							</li>
+							<li>
+								<span class="tit">보험기간</span>
+								<span class="value">2017.01.01~2027.12.31</span>
+							</li>
+							<li>
+								<span class="tit">연령특약</span>
+								<span class="value">만35세 이상</span>
+							</li>
+							<li>
+								<span class="tit">운전자한정특약</span>
+								<span class="value">기피보험자 1인</span>
+							</li>
+							<li>
+								<span class="tit">자기차량손해</span>
+								<span class="value">가입</span>
+							</li>
+							<li>
+								<span class="tit">자기부담금(20%)</span>
+								<span class="value">최소 <strong class="dataValue">700,000</strong><em class="won">원</em></span>
+							</li>
+							<li>
+								<span class="tit">보험료</span>
+								<span class="value"><strong class="dataValue">1,700,000</strong><em class="won">원</em></span>
+							</li>
+							<!-- [2023 NH마이데이터 서비스 고도화] -->
+							<li>
+								<span class="tit">자동이체기관</span>
+								<span class="value">NH농협</span>
+							</li>
+							<li>
+								<span class="tit">자동이체계좌</span>
+								<span class="value">12015545887</span>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+					<button type="button" class="moreOpenBtn toggleBtn"><span class="toggleTxt07">상세정보 보기</span></button>
+				</div>
+			</div>
+			<!-- ### // ### -->
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [목록영역] 거래내역 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap pt0">
+			<div class="inoutListWrap">
+				<!-- [항목하나] -->
+				<div class="inoutListInn">
+					<p class="date bdtNone">2020년 07월 31일</p>
+					<ul class="inoutList">
+						<li>
+							<p class="inoutTit">
+								4회차
+								<span class="amount"><strong class="dataValue">30,000,000</strong><em class="won">원</em></span>
+							</p>
+							<div class="inoutCont">
+								<div class="timeWrap">
+									<span class="time">자동이체</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- [항목하나] -->
+				<div class="inoutListInn">
+					<p class="date">2020년 07월 30일</p>
+					<ul class="inoutList">
+						<li>
+							<p class="inoutTit">
+								3회차
+								<span class="amount"><strong class="dataValue">30,000,000</strong><em class="won">원</em></span>
+							</p>
+							<div class="inoutCont">
+								<div class="timeWrap">
+									<span class="time">자동이체</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- [//] -->
+			</div>
+			<!-- // -->
+			<div class="listMoreBtn"><a href="javascript:;" title="항목 더보기">더보기</a></div>
+			<!-- // -->
+		</div>
+		<!-- -------------------------------------- -->
+	</div>
+	<!-- ###################################### -->
+</div>
+</body>
+</html>

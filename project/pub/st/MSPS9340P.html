@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>공지사항 상세</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script type="text/javascript">
+$(function(){
+    fullLayerPop();
+});
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">공지사항</a></h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<div class="btnWrap page">
+			<a href="javascript:;" onclick="fullLayerPop();return false;" aria-haspopup="true" role="button" class="btn">fullLayerPop</a>
+		</div>
+	</div>
+</div>
+
+<div class="nhasset popWrap fullLayerPop">
+	<div class="popInner">
+		<h1>공지사항</h1>
+		<div class="popCont">
+			<div class="eventViewTitie">
+				<span class="title">금융기관 표준규격 변경에 따른 자산연결 안내</span>
+				<div class="date">2021.08.04</div>
+			</div>
+			<div class="eventViewCont">
+				<div class="eventImg template04">
+                    <h2 class="nhLogo"><span class="blind">농협은행</span></h2>
+                    <div class="titArea">
+                        <span class="name">금융기관 표준규격 변경으로 인한</span>
+                        <span class="txt">자산연결 안내</span>
+                    </div>
+				</div>
+				<p class="alarmDate">
+					금융기관 표준규격 API가 변경되었습니다.<br>
+					새로운 정보 수집을 위해 자산을 다시 연결 해주세요.
+				</p>
+				<p>
+					- 대상업권 : 은행, 금융투자, 보험<br>
+					- 추가 수집 가능한 정보<br>
+					1….<br>
+					2…<br>
+					:
+				</p>
+			</div>
+			<div class="areaBodyBtnFull">
+				<a href="javascript:;" class="btnBodyLine" role="button">자산 연결하러 가기</a>
+			</div>
+		</div>
+		
+		<div class="popBtnWrap">
+			<div class="popBtn">
+				<a href="javascript:;" class="confirmBtn" role="button">확인</a>
+			</div>
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

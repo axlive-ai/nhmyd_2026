@@ -1,0 +1,331 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산현황</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">계좌 상세</a></h1>  <!-- [2021-05-07] 문구 수정 -->
+			<!-- <a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>  -->
+			<a href="javascript:;" class="btnAcAdmin"><span class="blind">관리</span></a>
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="layerMsgWrap">
+				<p>순자산 금액에 포함 안된 자산이에요.</p>
+				<button type="button" class="layerMsgClose"><span class="blind">닫기</span></button>
+			</div>
+
+			<div class="boxWrapShadow"><!--09.02 boxWrapShadow 추가 s:boxWrapShadow-->
+				<div class="boxTypeWrap delShadow"><!--09.02 delShadow 추가 s:delShadow-->
+					<!-- 상단 계좌정보 영역 -->
+					<div class="accTopInfo mt0">
+						<h2 class="accName">Multi-one 외화적금
+							<img src="../../images/logos/AABG0000.png" alt="농협은행 로고" class="imgLogo"> <!-- [2022-11-21] 한은정 : 공통 로고 수정 -->
+						</h2>
+						<dl class="totalBalance">
+							<dt>총 잔액
+								<div class="tooltipWrap">
+									<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">총 잔액 툴팁 열기</span></button>
+									<div class="tooltipCont">
+										<p>전일 환율을 반영하여, 당시 환율을 반영한 거래내역과 다를 수 있습니다.</p>
+										<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+									</div>
+								</div>
+								<!-- // 툴팁 -->
+							</dt>
+							<dd><strong>2,098,694</strong>원</dd>
+						</dl>
+						<div class="etcInfo">만기일 <em>D-1,234</em></div>
+					</div>
+					<!-- // 상단 계좌정보 영역 -->
+					<hr class="divLine">
+
+					<!-- 계좌정보 상세 -->
+					<div class="accInfoDetail">
+						<ul class="detailList">
+							<li>
+								<span class="tit">유형</span>
+								<span class="value">외화&gt;적금</span>
+							</li>
+							<li>
+								<span class="tit">상품명</span>
+								<!-- <span class="value"><a href="javascript:;" class="underline">미입력</a></span> -->
+								<span class="value">Multi-one 외화적금<!--<button type="button" class="contBtn01" title="별칭 미입력">미입력</button>--></span>
+							</li>
+							<li><!--09.21 위치 수정 및 아이콘 수정-->
+								<span class="tit">회차정보</span>
+								<span class="value">10건 
+									<button type="button" class="contBtnArrow" title="회차정보 더보기">더보기</button><!--09.21 수정-->
+								</span>
+							</li>
+						</ul>	
+					</div>
+					<!-- // 계좌정보 상세 -->
+				</div>
+				<!--e:delShadow-->
+
+				<div class="moreInfoArea"><!--09.02 div moreInfoArea 추가  및 이동 s:moreInfoArea-->
+					<!-- 추가정보 열/닫 -->
+					<div class="moreInfoWrap toggleWrap">
+							
+						<div class="moreInfo toggleCont" style="display:none">
+							<hr class="divLine2" aria-hidden="true">
+							<ul class="detailList">
+								<li>
+									<span class="tit">계좌번호</span>
+									<span class="value">03580204123456  <button type="button" class="contBtn01" title="계좌번호 복사">복사</button></span>
+								</li>
+								<li>
+									<span class="tit">개설일</span>
+									<span class="value">2020.07.21</span>
+								</li>
+								<li>
+									<span class="tit">신규일자</span>
+									<span class="value">2020.07.21</span>
+								</li>
+								<li>
+									<span class="tit">만기일자</span>
+									<span class="value">2020.07.21</span>
+								</li>
+								<li>
+									<span class="tit">저축방법</span>
+									<span class="value">거치식</span>
+								</li>
+								<li>
+									<span class="tit">금리</span>
+									<span class="value"><strong class="dataValue">0.70</strong><em class="won">%</em></span>
+								</li>
+								<li>
+									<span class="tit">잔액(USD)</span>
+									<span class="value">2,099</span>
+								</li>
+								<li>
+									<span class="tit">적용환율</span>
+									<span class="value">1USD=<strong class="dataValue">1234.12</strong><em class="won">원</em></span><!--09.21 수정-->
+								</li>
+								<!-- <li>
+									<span class="tit">신규일자(EUR)</span>
+									<span class="value">2020.07.21</span>
+								</li>
+								<li>
+									<span class="tit">만기일자(EUR)</span>
+									<span class="value">2020.07.21</span>
+								</li> -->
+								<!-- <li class="bdtDeco">
+									<span class="tit">저축방법(EUR)</span>
+									<span class="value">거치식</span>
+								</li>
+								<li>
+									<span class="tit">금리(EUR)</span>
+									<span class="value"><strong class="dataValue">0.70</strong><em class="won">%</em></span>
+								</li>
+								<li>
+									<span class="tit">잔액(EUR)</span>
+									<span class="value">2,099</span>
+								</li>
+								<li>
+									<span class="tit">적용환율(EUR)</span>
+									<span class="value">1USD=<strong class="dataValue">1234.12</strong><em class="won">원</em></span>
+								</li> -->
+							</ul>
+						</div>
+						<button type="button" class="moreOpenBtn toggleBtn"><span class="toggleTxt07">상세정보 보기</span></button> <!--09.26 toggleTxt07 추가-->
+					</div>
+					<!-- // 추가정보 열/닫 -->
+				</div>
+				<!--e:moreInfoArea-->
+			</div>
+			<!--e:boxWrapShadow-->
+
+			<!-- <div class="noDataBox">
+				<div class="tooltipWrap">
+					<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">총 잔액 툴팁 열기</span></button>
+					<div class="tooltipCont">
+						<p>인증토큰 만료, 전송 중단 등의 경우에는 적용되지 않습니다.</p>
+						<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+					</div>
+				</div>
+				<p class="pointColorwh">적요 제공에 동의하지 않았어요. </p>
+				<a href="javascript:;" class="link">지금 동의하고 더 자세한 거래내역 보기</a>
+			</div> -->
+
+			<div class="boxTypeWrap pt0">
+				<div class="filterSearchWrap">
+					<!-- 날짜 선택 및 정렬 -->
+					<div class="filterWrap">
+						<button type="button" class="btnSearch2"><span class="blind">적요검색 열기</span></button>
+						<span class="sortValue">2020.09.01 ~ 2020.09.30</span>
+						<span class="sortValue">전체</span>
+						<button type="button" class="sortBtn"><span class="blind">조회조건 선택 설정하기</span></button>
+					</div>
+					<!-- // 날짜 선택 및 정렬 -->
+
+					<div class="filterSearch" aria-label="적요검색" style="display:none">
+						<div class="inputList ty01"><!--09.02 ty01추가-->
+							<input type="text" title="적요 검색 (2자 이상)" value="" placeholder="적요 검색 (2자 이상)"><!-- 2022-12-07 title placeholder 수정 -->
+							<button class="btnSearch"><span class="blind">검색</span></button>
+							<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+						</div>
+						<button class="btnSearDel"><span class="blind">적요검색 닫기</span></button><!--09.02 추가-->
+						<div class="filterSearchRes" style="display:none">‘길동’ 검색결과 총 1건</div>
+					</div>
+				</div>
+
+				<hr class="divLine mt0 mb0" aria-hidden="true"> <!-- [2022-12-28] 수정 -->
+				
+				<script type="text/javascript">
+					$('.filterSearchWrap .btnSearch2').click(function(){
+						var $this = $(this);
+						var $parent = $this.closest('.filterSearchWrap');
+						if (!$this.hasClass('searchAfter')){
+							$parent.find('.filterSearch').show().find('.inputList').show().find('input:text').focus();
+							$parent.find('.filterSearchRes').hide();
+							$parent.find('.filterSearch').find('.btnSearDel').show().removeClass('mt0');
+							//$this.addClass('searchAfter').find('.blind').text('적요검색 닫기');
+						}else{
+								$parent.find('.filterSearch').hide();
+								$this.removeClass('searchAfter').find('.blind').text('적요검색 열기');
+							}
+					});
+					$('.filterSearchWrap .btnSearch').click(function(){
+						var $this = $(this);
+						$this.closest('.filterSearch').find('.filterSearchRes').show();
+						$this.closest('.inputList').hide();
+						$this.closest('.inputList').siblings('.btnSearDel').addClass('mt0');
+						//$this.closest('.filterSearchWrap').find('.btnSearch2').removeClass('searchAfter').find('.blind').text('적요검색 열기');
+					});
+
+					$('.btnSearDel').click(function(){
+						var $this = $(this);
+						$this.closest('.filterSearch').hide();
+					});
+				</script>
+
+				<div class="inoutListWrap longTit">
+					<!-- [2021-09-08] 한은정 : 미동의 케이스 추가// -->
+					<div class="inoutListInn">
+						<p class="date">2020년 8월 01일</p>
+						<ul class="inoutList">
+							<li>
+								<p class="inoutTit noAgree">출금(적요 제공에 동의하지 않은 거래)</p>
+								<div class="inoutCont">
+									<div class="timeWrap">
+										<span class="time">18:35</span>
+									</div>
+									<span class="amount outColor"><strong class="dataValue">-EUR 5,000</strong></span>
+								</div>
+								<div class="exchange">적용환율 <em>1,320</em>원</div>
+								<div class="totalAmount"><span class="txt">잔액</span> <strong class="dataValue">2,101,194</strong><em class="won">원</em></div>
+							</li>
+						</ul>
+					</div>
+					<!-- //[2021-09-08] 한은정 : 미동의 케이스 추가 -->
+					<div class="inoutListInn">
+						<p class="date">2020년 7월 31일</p>
+						<ul class="inoutList">
+							<li>
+								<!-- <label class="inoutChkWrap" for="chk01"> -->  <!-- [2021] 한은정 : label 삭제 -->
+									<p class="inoutTit">홍길동</p>
+									<div class="inoutCont">
+										<div class="timeWrap">
+											<span class="time">18:35</span><span class="num">4회차</span> <!-- [2021-08-11] 한은정 : 회차 추가-->
+										</div>
+										<span class="amount inColor">+<strong class="dataValue">EUR 5,000</strong></span> <!-- [2021-08-11] 한은정 : + inColor case 추가-->
+									</div>
+									<div class="exchange">적용환율 <em>1,320.12</em>원</div>
+									<div class="totalAmount"><span class="txt">잔액</span> <strong class="dataValue">30,000,000</strong><em class="won">원</em></div>
+								<!-- </label> -->
+							</li>
+							<li>
+								<!-- <label class="inoutChkWrap" for="chk02"> --> 
+									<p class="inoutTit">홍길동</p>
+									<div class="inoutCont">
+										<div class="timeWrap">
+											<span class="time">18:35</span><span class="num">3회차</span> <!-- [2021-08-11] 한은정 : 회차 추가-->
+										</div>
+										<span class="amount outColor">-<strong class="dataValue">EUR 3,000</strong></span> <!-- [2021-08-11] 한은정 : - 추가-->
+									</div>
+									<div class="exchange">적용환율 <em>1,320.12</em>원</div>
+									<div class="totalAmount"><span class="txt">잔액</span> <strong class="dataValue">30,000,000</strong><em class="won">원</em></div>
+								<!-- </label> -->
+							</li>
+						</ul>
+					</div>
+
+					<div class="inoutListInn">
+						<p class="date">2020년 7월 30일</p>
+						<ul class="inoutList">
+							<li>
+								<!-- <label class="inoutChkWrap" for="chk01"> -->  <!-- [2021] 한은정 : label 삭제 -->
+									<p class="inoutTit">홍길동</p>
+									<div class="inoutCont">
+										<div class="timeWrap">
+											<span class="time">18:35</span><span class="num">2회차</span> <!-- [2021-08-11] 한은정 : 회차 추가-->
+										</div>
+										<span class="amount inColor">+<strong class="dataValue">EUR 5,000</strong></span> <!-- [2021-08-11] 한은정 : + inColor case 추가-->
+									</div>
+									<div class="exchange">적용환율 <em>1,320.12</em>원</div>
+									<div class="totalAmount"><span class="txt">잔액</span> <strong class="dataValue">30,000,000</strong><em class="won">원</em></div>
+								<!-- </label> -->
+							</li>
+							<li>
+								<!-- <label class="inoutChkWrap" for="chk02"> --> 
+									<p class="inoutTit">홍길동</p>
+									<div class="inoutCont">
+										<div class="timeWrap">
+											<span class="time">18:35</span><span class="num">1회차</span> <!-- [2021-08-11] 한은정 : 회차 추가-->
+										</div>
+										<span class="amount outColor">-<strong class="dataValue">EUR 3,000</strong></span> <!-- [2021-08-11] 한은정 : - 추가-->
+									</div>
+									<div class="exchange">적용환율 <em>1,320.12</em>원</div>
+									<div class="totalAmount"><span class="txt">잔액</span> <strong class="dataValue">30,000,000</strong><em class="won">원</em></div>
+								<!-- </label> -->
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="listMoreBtn">
+					<a href="javascript:;" title="항목 더보기">더보기</a>
+				</div>
+
+				<!-- 리스트 없을 경우 -->
+				<div class="noResultWrap"> <!-- [2023-01-28] 클래스 수정 -->
+					<p>거래내역이 없습니다.</p> <!-- [한은정 : 2021-05-07] 문구수정 -->
+				</div>
+				<!-- // 리스트 없을 경우 -->
+			</div>
+
+		</div>
+		<!-- //container -->
+
+	</div>
+<script type="text/javascript">
+	$('.layerMsgClose').click(function(){
+		$(this).closest('.layerMsgWrap').hide();
+	});
+</script>
+</body>
+</html>

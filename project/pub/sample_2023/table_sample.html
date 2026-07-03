@@ -1,0 +1,427 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>UI Guide [테이블]</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="nhasset guide_wrapper">
+	<header class="guide_header">
+		<h1>UI GUIDE <span>테이블</span></h1>
+		<nav data-toggle="wrap">
+			<button type="button" class="guide_btn" data-toggle="btn" aria-expanded="false">전체메뉴</button>
+			<div data-toggle="cont">
+				<a href="txt_sample.html">타이틀/텍스트</a>
+				<a href="mes_sample.html">메세지</a>
+				<a href="button_sample.html">버튼</a>
+				<a href="form_sample.html">폼</a>
+				<a href="list_sample.html">리스트</a>
+				<a href="info_sample.html">정보</a>
+				<a href="table_sample.html" aria-current="page">테이블</a>
+				<a href="bbs_sample.html">게시판</a>
+				<a href="banner_sample.html">배너</a>
+				<a href="chart_sample.html">차트</a>
+				<a href="etc_sample.html">기타</a>
+			</div>
+		</nav>
+	</header>
+
+	<!-- ###################################### -->
+	<!-- ### UI Guide [테이블] ### -->
+	<!-- ###################################### -->
+	<div class="guide_container">
+		<nav class="guide_menu">
+			<a href="#GCONTENT1" class="active">기본유형</a>
+		</nav>
+
+		<div class="guide_box">
+			<h2>2022/2023 가이드 정의</h2>
+			<ul>
+				<li>공통적으로 사용한 클래스 네이밍에 한하여 정리되었으며, 일부 페이지에서만 사용할 수 있는 클래스 네이밍은 가이드에서 제외함.<br><strong>예시) .yeartexForm(연말정산)</strong></li>
+				<li>2023년 고도화 작업시 추가된 스타일 정의에 대해선 다음과 같이 표기함.<i class="guide_tag">2023고도화</i></li>
+			</ul>
+		</div>
+
+		<!-- ################################# -->
+		<!-- ### 기본유형 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT1">
+			<!-- -------------------------------------- -->
+			<!-- [테이블 구조] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">테이블 구조</h3>
+<div class="guide_code"><pre>
+&lt;div class="wrapTblDefault"&gt;
+	&lt;table&gt;
+		&lt;caption&gt;테이블제목(th명, th명, th명)&lt;/caption&gt;
+		&lt;colgroup&gt;
+			&lt;col style="width:**"&gt;
+		&lt;/colgroup&gt;
+		&lt;thead&gt;
+			&lt;tr&gt;
+				&lt;th scope="col"&gt;항목명&lt;/th&gt;
+				&lt;th scope="col"&gt;항목명&lt;/th&gt;
+			&lt;/tr&gt;
+		&lt;/thead&gt;
+		&lt;tbody&gt;
+			&lt;tr&gt;
+				&lt;th scope="row"&gt;항목명&lt;/th&gt;
+				&lt;td&gt;내용&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;th scope="row"&gt;항목명&lt;/th&gt;
+				&lt;td&gt;내용&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/tbody&gt;
+	&lt;/table&gt;
+&lt;/div&gt;
+</pre></div>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [기본형] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">기본형 : .wrapTblDefault &gt; table</h3>
+				<div class="guide_area">
+					<!-- // -->
+					<div class="wrapTblDefault">
+						<table>
+							<caption>테이블제목(항목명, 항목명, 항목명)</caption>
+							<colgroup>
+								<col style="width:30%">
+								<col style="width:auto">
+								<col style="width:30%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">항목명</th>
+									<th scope="col">항목명</th>
+									<th scope="col">항목명</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">항목명</th>
+									<td>내용</td>
+									<td>내용</td>
+								</tr>
+								<tr>
+									<th scope="row">항목명</th>
+									<td>내용</td>
+									<td>내용</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- // -->
+					<div class="wrapTblDefault">
+						<table>
+							<caption>테이블제목(항목명, 항목명, 항목명)</caption>
+							<colgroup>
+								<col style="width:30%">
+								<col style="width:auto">
+								<col style="width:30%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">항목명</th>
+									<th scope="col">항목명</th>
+									<th scope="col">항목명</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>내용</td>
+									<td>내용</td>
+									<td>내용</td>
+								</tr>
+								<tr>
+									<td>내용</td>
+									<td>내용</td>
+									<td>내용</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- // -->
+					<div class="wrapTblDefault">
+						<table>
+							<caption>테이블제목</caption>
+							<colgroup>
+								<col style="width:30%">
+								<col style="width:auto">
+								<col style="width:30%">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">항목명</th>
+									<td>내용</td>
+									<td>내용</td>
+								</tr>
+								<tr>
+									<th scope="row">항목명</th>
+									<td>내용</td>
+									<td>내용</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- // -->
+	
+					<h4 class="guide_title4">제목 센터형 : .thCenter</h4>
+					<div class="wrapTblDefault">
+						<table class="thCenter">
+							<caption>테이블제목(항목명, 항목명, 항목명)</caption>
+							<colgroup>
+								<col style="width:30%">
+								<col style="width:auto">
+								<col style="width:30%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">항목명</th>
+									<th scope="col">항목명</th>
+									<th scope="col">항목명</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">항목명</th>
+									<td>내용</td>
+									<td>내용</td>
+								</tr>
+								<tr>
+									<th scope="row">항목명</th>
+									<td>내용</td>
+									<td>내용</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+	
+					<h4 class="guide_title4">제목 + 내용 센터형 : .thCenter + .tdCenter</h4>
+					<div class="wrapTblDefault">
+						<table class="thCenter tdCenter">
+							<caption>테이블제목(항목명, 항목명, 항목명)</caption>
+							<colgroup>
+								<col style="width:30%">
+								<col style="width:auto">
+								<col style="width:30%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">항목명</th>
+									<th scope="col">항목명</th>
+									<th scope="col">항목명</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">항목명</th>
+									<td>내용</td>
+									<td>내용</td>
+								</tr>
+								<tr>
+									<th scope="row">항목명</th>
+									<td>내용</td>
+									<td>내용</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [활용] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">활용</h3>
+
+				<div class="guide_area2">
+					<h4 class="guide_title4">활용) 약관상세</h4>
+					<div class="wrapTblDefault blue">
+						<table>
+							<caption>수집이용 내용 표</caption>
+							<colgroup>
+								<col style="width:30%"/>
+								<col style="width:auto"/>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">수집&middot;이용 목적</th>
+									<td>
+										<ul class="fs14">
+											<li>￭ (금융)거래관계의 설정·유지·이행·관리</li>
+											<li>￭ 금융사고 조사, 분쟁 해결, 민원 처리</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" rowspan="2">보유 및<br>이용기간</th>
+									<td><span class="pointColor fs14"><strong>￭ (금융)거래 종료일로부터 5년까지 보유·이용</strong></span></td>
+								</tr>
+								<tr>
+									<td class="bgBlue"> <!-- [2023-01-06] 텍스트 수정 -->
+										위 보유 기간에서의 (금융)거래 종료일이란 “상담서비스 처리가 종료된 날”을 말합니다.<br>
+										※ (금융)거래 종료일 후에는 금융사고 조사, 분쟁 해결, 민원 처리, 법령상 의무이행을  위한 목적으로만 보유·이용됩니다.
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">거부 권리 및  불이익</th>
+									<td>
+										귀하는 동의를 거부하실수 있습니다. 다만, 위 개인(신용)정보 수집·이용에 관한 동의는 “VIP금융컨설팅 비대면 상담을 위한” 필수적 사항이므로, 위 사항에 동의하셔야만 (금융)거래관계의 설정 및 유지가 가능합니다.
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="guide_area">
+					<h4 class="guide_title4">활용) 금융컨설팅</h4>
+					<div class="wrapTblDefault">
+						<table cellpadding="0" cellspacing="0" class="thCenter">
+							<caption>이름, 휴대폰번호, 신청영업점, 상담희망일, 상담항목, 상담내용 항목으로 구성된 VIP금융컨설팅 정보테이블</caption>
+							<colgroup>
+								<col style="width:35%">
+								<col style="width:auto">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">이름</th>
+									<td>홍길동 고객님</td>
+								</tr>
+								<!-- [2021-09-02] 한은정 : 추가 -->
+								<tr>
+									<th scope="row">투자성향등급</th>
+									<td>위험중립형(21.08.08 까지)</td> <!-- [2021-12-15] 한은정 : 개선사항 반영 -->
+								</tr>
+								<!-- [2022-05-03] 윤지현:추가 -->
+								<tr>
+									<th scope="row">상담 유형</th>
+									<td>$모바일 화상상담OR영업점방문$</td>
+								</tr>
+								<!-- //[2022-05-03] 윤지현:추가 -->
+								<tr>
+									<th scope="row">은퇴 희망나이</th>
+									<td>만 55세</td> 
+								</tr>
+								<!-- //[2021-09-02] 한은정 -->
+								<tr>
+									<th scope="row">휴대폰번호</th>
+									<td>010 - 1234 - ****</td>
+								</tr>
+								<tr>
+									<th scope="row">신청영업점</th>
+									<td>본점영업부</td>
+								</tr>
+								<tr>
+									<th scope="row">상담희망일</th>
+									<td>2020년 09월 01일 10:00</td>
+								</tr>
+								<tr>
+									<th scope="row">상담항목</th>
+									<td>자산관리</td>
+								</tr>
+								<tr>
+									<th scope="row">상담내용</th>
+									<td>자산관리 상담내용</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="guide_area">
+					<h4 class="guide_title4">활용) 목표등록</h4>
+					<div class="wrapTblDefault">
+						<table class="thCenter">
+							<caption>결혼준비(실속있는 결혼, 평균적인 결혼, 화련한 결혼)</caption>
+							<colgroup>
+								<col width="*">
+								<col width="*">
+								<col width="*">
+								<col width="*">
+							</colgroup>
+							<thead>
+								<tr>
+									<th></th>
+									<th scope="col">실속있는<br />결혼</th>
+									<th scope="col">평균적인<br />결혼</th>
+									<th scope="col">화려한<br />결혼</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th class="bgNone" scope="row">총예산</th>
+									<td>2,000만원</td>
+									<td>4,800만원</td>
+									<td>10,600만원</td>
+								</tr>
+								<tr>
+									<th class="bgNone" scope="row">웨딩홀</th>
+									<td>450만원</td>
+									<td>1,000만원</td>
+									<td>1,500만원</td>
+								</tr>
+								<tr>
+									<th class="bgNone" scope="row">웨딩패키지</th>
+									<td>200만원</td>
+									<td>300만원</td>
+									<td>700만원</td>
+								</tr>
+								<tr>
+									<th class="bgNone" scope="row">예물/예단</th>
+									<td>300만원</td>
+									<td>1,500만원</td>
+									<td>4,000만원</td>
+								</tr>
+								<tr>
+									<th class="bgNone" scope="row">이바지</th>
+									<td>50만원</td>
+									<td>100만원</td>
+									<td>200만원</td>
+								</tr>
+								<tr>
+									<th class="bgNone" scope="row">혼수</th>
+									<td>800만원</td>
+									<td>1,400만원</td>
+									<td>3,000만원</td>
+								</tr>
+								<tr>
+									<th class="bgNone" scope="row">신혼여행</th>
+									<td>200만원</td>
+									<td>500만원</td>
+									<td>1,200만원</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- -------------------------------------- -->
+		</section>
+		<!-- ################################# -->
+	</div>
+	<!-- ###################################### -->
+</div>
+</body>
+</html>

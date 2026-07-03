@@ -1,0 +1,137 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산현황</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function() {
+		fullLayerPop();
+	});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">자산</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container"></div>
+		<!-- //container -->
+
+		<!-- 팝업시작 -->
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner fixbanner">
+				<h1>나의 보유자산</h1>
+				<div class="popCont grayPop">
+					<div class="remainWrap">
+						<div class="totalBalance mt0">
+							<!-- <strong>김농협</strong>님의 보유자산  -->
+							<div class="bigTxt mt15 disInline">
+								<!-- case1 : 1개 비중이 가장 높을 경우 -->
+								<p class="defTxt ">실물자산의 비중이<br><em>25.5%</em>로 가장 높아요.</p>
+								<!-- case2 : 2개 비중이 가장 높을 경우 -->
+								<p class="defTxt">계좌와 실물자산의<br>비중이<em>42.2%</em>로 가장 높아요.</p>
+								<p class="defTxt">부채와 연금의<br>비중이 <em>42.2%</em>로 가장 높아요.</p>
+								<!-- case3 : 3개 이상 비중이 가장 높거나 같을 경우 -->
+								<p class="defTxt">비중이 <em>42.2%</em>인 자산이 많아요.<br>자산 순위를 확인해보세요!
+								<!-- case4 : 3개 미만 모든 비중이 같을 경우 -->
+								<p class="defTxt">계좌와 실물자산의<br>비중이 <em>50.0%</em>로 동일해요.</p>
+								<!-- case5 : 단일 자산일 경우 -->
+								<p class="defTxt">계좌의 비중이 <em>100%</em>에요.<br>다른 자산도 더 키워보면 어떨까요?</p>
+							</div>
+
+							<div class="tooltipWrap">
+								<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">유형 툴팁 열기</span></button>
+								<!-- [2021-10-19] 윤지현:문구수정 -->
+								<div class="tooltipCont">
+									<p>· 계좌 : 계좌, 선불페이<br>
+									· 실물자산 : 부동산, 자동차, 금, 외화, 기타<br>
+									· 투자<br>
+									· 부채<br>
+									· 연금<br>
+									· 가상자산<br>
+									</p>
+									<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+								</div>
+								<!-- //[2021-10-19] 윤지현:문구수정 -->
+							</div>						
+						</div>
+
+						<div class="graphWrap mt35" role="img" aria-label="">
+						<img src="../../images/temp/assets_graph_dumy01.png">
+					</div>
+
+						<ul class="legendList mt25">
+							<li>
+								<span class="legendTit type30"><strong>실물자산</strong>25.2%<!--<span class="legendOne" aria-label="1등"></span>--></span>
+								<span class="legendAmnt"><em class="value">1,234,567</em>원</span>
+							</li>
+							<li>
+								<span class="legendTit type32"><strong>부채</strong>22.5%</span>
+								<span class="legendAmnt"><em class="value">1,234,567</em>원</span>
+							</li>
+							<li>
+								<span class="legendTit type32"><strong>계좌</strong>20.5%</span>
+								<span class="legendAmnt"><em class="value">1,234,567</em>원</span>
+							</li>
+							<li>
+								<span class="legendTit type33"><strong>투자</strong>17.4%</span>
+								<span class="legendAmnt"><em class="value">4,500,000</em>원</span>
+							</li>
+							<li>
+								<span class="legendTit type34"><strong>연금</strong>17.4%</span>
+								<span class="legendAmnt"><em class="value">4,500,000</em>원</span>
+							</li>
+							<li>
+								<span class="legendTit type35"><strong>가상자산</strong>1.5%</span>
+								<span class="legendAmnt"><em class="value">1,000,000</em>원</span>
+							</li>
+						</ul>
+
+						<div class="fixBannerWarp">
+							<a href="javascript:;" role="button" tabindex="0" title="자산분석 페이지 이동"><!-- [접근성_2024] role="button" tabindex="0" title 추가 -->
+								<div class="inBanner shadowBox bg19"> <!--09.23  수정-->
+									<p>
+										<span class="fo12">1분이면 OK!</span>
+										<span class="bnTit">간단정보 입력하고 <br>자산진단 받기</span>
+									</p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="popBtnWrap">
+					<!-- <div class="popBtn">
+						<a href="javascript:;" class="" role="button">이전</a>
+						<a href="javascript:;" class="confirmBtn" role="button">저장</a>
+					</div> -->
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- // 팝업 끝 -->
+	</div>
+
+</body>
+</html>

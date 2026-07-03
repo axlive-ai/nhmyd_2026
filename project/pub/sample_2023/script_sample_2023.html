@@ -1,0 +1,2324 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>UI Guide [스크립트]</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="nhasset guide_wrapper">
+	<header class="guide_header">
+		<h1>UI GUIDE <span>스크립트</span></h1>
+		<nav data-toggle="wrap">
+			<button type="button" class="guide_btn" data-toggle="btn" aria-expanded="false">전체메뉴</button>
+			<div data-toggle="cont">
+				<a href="txt_sample.html">타이틀/텍스트</a>
+				<a href="mes_sample.html">메세지</a>
+				<a href="button_sample.html">버튼</a>
+				<a href="form_sample.html">폼</a>
+				<a href="list_sample.html">리스트</a>
+				<a href="info_sample.html">정보</a>
+				<a href="table_sample.html">테이블</a>
+				<a href="bbs_sample.html">게시판</a>
+				<a href="banner_sample.html">배너</a>
+				<a href="chart_sample.html">차트</a>
+				<a href="etc_sample.html">기타</a>
+			</div>
+		</nav>
+	</header>
+
+	<!-- ###################################### -->
+	<!-- ### UI Guide [스크립트] ### -->
+	<!-- ###################################### -->
+	<div class="guide_container">
+		<nav class="guide_menu">
+			<a href="#GCONTENT1" class="active">슬라이드</a>
+			<a href="#GCONTENT2">토글</a>
+			<a href="#GCONTENT3">툴팁</a>
+			<a href="#GCONTENT4">토스트팝업</a>
+			<a href="#GCONTENT5">기타</a>
+		</nav>
+
+		<div class="guide_box">
+			<h2>2022/2023 가이드 정의</h2>
+			<ul>
+				<li>공통적으로 사용한 클래스 네이밍에 한하여 정리되었으며, 일부 페이지에서만 사용할 수 있는 클래스 네이밍은 가이드에서 제외함.<br><strong>예시) .yeartexForm(연말정산)</strong></li>
+				<li>2023년 고도화 작업시 추가된 스타일 정의에 대해선 다음과 같이 표기함.<i class="guide_tag">2023고도화</i></li>
+			</ul>
+		</div>
+
+		<!-- ################################# -->
+		<!-- ### 슬라이드 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT1">
+			<h2 class="guide_title">슬라이드</h2>
+			<!-- -------------------------------------- -->
+			<!-- [TO-BE] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">TO-BE : [data-swiper-type] <i class="guide_tag">2023고도화</i></h3>
+				<!-- ### 기본구조 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">기본구조</h4>
+					<ul class="guide_txt">
+						<li>swiper-name : 스타일 변경을 위한 클래스명</li>
+						<li>data-swiper-type : swiper 스크립트 호출용</li>
+						<li>swiper함수 호출은 nhasset-ui-myd.js에서 공통으로 사용함.</li>
+					</ul>
+<div class="guide_code" data-label="기본 HTML">
+<pre>
+&lt;div class="swiper-name" data-swiper-type="타입명"&gt;
+	|-- 슬라이드 내용 --|
+	&lt;div class="swiper-wrapper"&gt;
+		&lt;div class="swiper-slide"&gt;Slide 1 내용&lt;/div&gt;
+		&lt;div class="swiper-slide"&gt;Slide 2 내용&lt;/div&gt;
+		&lt;div class="swiper-slide"&gt;Slide 3 내용&lt;/div&gt;
+		...
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+
+<div class="guide_code" data-label="스크립트 적용된 HTML">
+<pre>
+&lt;div class="swiper-name" data-swiper-type="타입명" id="uiAccessibility0000000"&gt;
+	|-- 컨트롤 버튼 --|
+	&lt;div class="swiper-control"&gt;
+		&lt;div class="swiper-pagination"&gt;&lt;/div&gt;
+		&lt;div class="swiper-autoBtn playing"&gt;
+			&lt;a href="javascript:;" class="stopBtn" title="자동재생중 두번 터치시 멈춤"&gt;&lt;/a&gt;
+			&lt;a href="javascript:;" class="playBtn" title="자동재생 멈춤 두번 터치시 자동재생시작"&gt;&lt;/a&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	|-- 슬라이드 내용 --|
+	&lt;div class="swiper-wrapper" id="swiper-wrapper-0000000000000" aria-live="polite"&gt;
+		&lt;div class="swiper-slide swiper-slide-active" aria-hidden="false" role="group" aria-label="총 3개 중 1번째 슬라이드 입니다." tabindex="0" aria-labelledby="uiAccessibility00000000000001"&gt;
+			&lt;id="uiAccessibility00000000000001"&gt;Slide 1 내용&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="swiper-slide swiper-slide-next" aria-hidden="true" role="group" aria-label="총 3개 중 2번째 슬라이드 입니다." tabindex="-1" aria-labelledby="uiAccessibility00000000000002"&gt;
+			&lt;id="uiAccessibility00000000000002"&gt;Slide 2 내용&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="swiper-slide" aria-hidden="true" role="group" aria-label="총 3개 중 3번째 슬라이드 입니다." tabindex="-1" aria-labelledby="uiAccessibility00000000000003"&gt;
+			&lt;id="uiAccessibility00000000000003"&gt;Slide 3 내용&lt;/div&gt;
+		&lt;/div&gt;
+		...
+	&lt;/div&gt;
+
+	|-- 인디게이터영역 --|
+	&lt;div class="swiper-pagination"&gt;&lt;/div&gt;
+
+	|-- 좌우버튼 --|
+	&lt;div class="swiper-button-prev blind swiper-button-disabled" tabindex="-1" role="button" aria-label="이전 슬라이드" aria-controls="swiper-wrapper-7c3bb378879311101" aria-disabled="true"&gt;&lt;/div&gt;
+	&lt;div class="swiper-button-next blind" tabindex="0" role="button" aria-label="다음 슬라이드" aria-controls="swiper-wrapper-7c3bb378879311101" aria-disabled="false"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+				</div>
+
+				<!-- ### 옵션 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">옵션(data 정의)</h4>
+					<div class="guide_tbl">
+						<table>
+							<caption>옵션 정의</caption>
+							<thead>
+								<tr>
+									<th scope="col">옵션</th>
+									<th scope="col">타입</th>
+									<th scope="col">기본값</th>
+									<th scope="col">설명</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>data-swiper-type</th>
+									<td>string</td>
+									<td>null</td>
+									<td>스와이프 타입 : 해당 속성이 있을 경우 함수 호출 가능</td>
+								</tr>
+								<tr>
+									<th>data-swiper-autoplay</th>
+									<td>boolean</td>
+									<td>false</td>
+									<td>자동플레이 설정</td>
+								</tr>
+								<tr>
+									<th>data-swiper-slidesperview</th>
+									<td>number | 'auto'</td>
+									<td>1</td>
+									<td>동시에 표시되는(보여지는) 슬라이드 수</td>
+								</tr>
+								<tr>
+									<th>data-swiper-space</th>
+									<td>number</td>
+									<td>10</td>
+									<td>슬라이드 여백</td>
+								</tr>
+								<tr>
+									<th>data-swiper-pagination</th>
+									<td>'progressbar' | 'bullets' | 'fraction' | 'custom'</td>
+									<td>'bullets'</td>
+									<td>페이징 타입 정의</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- ### 활용 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">활용</h4>
+					<h5 class="guide_title4 t1">활용) 자동이체상세</h5>
+					<ul class="guide_txt">
+						<li>data-swiper-type="list1"</li>
+						<li>data-swiper-space="20"</li>
+					</ul>
+					<div class="infoData3" data-swiper-type="list1" data-swiper-space="20">
+						<ul>
+							<li>
+								<dl class="dataInfo1">
+									<dt>자동이체 출금계좌 은행</dt>
+									<dd>
+										<span class="imgWrap"><img src="../../images/logos/AAER0000.png" alt="" class="imgLogo"></span>
+										<strong>신한은행</strong>
+									</dd>
+									<dt>자동이체 입금계좌 은행</dt>
+									<dd>
+										<span class="imgWrap"><img src="../../images/logos/AAEM0000.png" alt="" class="imgLogo"></span>
+										<strong>우리은행</strong>
+									</dd>
+								</dl>
+								<div class="areaBanner6">
+									<a href="javascript:;" class="img1"><span>배너내용이 노출됩니다.</span></a>
+								</div>
+								<ul class="detailList">
+									<li>
+										<span class="tit">항목명</span>
+										<span class="value">내용</span>
+									</li>
+									<li>
+										<span class="tit">항목명</span>
+										<span class="value">내용</span>
+									</li>
+									<li>
+										<span class="tit">항목명</span>
+										<span class="value">내용이노출됩니다.길게노출될경우개행처리됩니다.</span>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<dl class="dataInfo1">
+									<dt>자동이체 출금계좌 은행</dt>
+									<dd>
+										<span class="imgWrap"><img src="../../images/logos/AAER0000.png" alt="" class="imgLogo"></span>
+										<strong>신한은행</strong>
+									</dd>
+									<dt>자동이체 입금계좌 은행</dt>
+									<dd>
+										<span class="imgWrap"><img src="../../images/logos/AAEM0000.png" alt="" class="imgLogo"></span>
+										<strong>우리은행</strong>
+									</dd>
+								</dl>
+								<div class="areaBanner6">
+									<a href="javascript:;" class="img1"><span>배너내용이 노출됩니다.</span></a>
+								</div>
+								<ul class="detailList">
+									<li>
+										<span class="tit">항목명</span>
+										<span class="value">내용</span>
+									</li>
+									<li>
+										<span class="tit">항목명</span>
+										<span class="value">내용</span>
+									</li>
+									<li>
+										<span class="tit">항목명</span>
+										<span class="value">내용이노출됩니다.길게노출될경우개행처리됩니다.</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+
+					<h5 class="guide_title4 t1">활용) 트렌드+ 목록</h5>
+					<ul class="guide_txt">
+						<li>data-swiper-type="list1"</li>
+						<li>data-swiper-autoplay="true"</li>
+						<li>data-swiper-space="20"</li>
+					</ul>
+					<div class="listData1" data-swiper-type="list1" data-swiper-autoplay="true" data-swiper-space="20">
+						<ul>
+							<li>
+								<a href="javascript:;" role="button" title="상세화면으로 이동" style="background-image:url('../../images/temp/@bg_trd_obj04.png');">
+									<span class="new">새로운 글</span>
+									<div class="tit">
+										<span>관심사 제목</span>
+										<strong>카드 제목 최대 30글자 카드 제목 최대 30글자 카드 제목 최대 30글자</strong>
+									</div>
+									<div class="tagWrap">
+										<span class="tag text">최대태그7글자</span>
+										<span class="tag text">최대태그7글자</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button" title="상세화면으로 이동" style="background-image:url('../../images/temp/@bg_trd_obj01.png');">
+									<div class="tit">
+										<span>패스트푸드 편</span>
+										<strong>패스트푸드가 위험한 이유</strong>
+									</div>
+									<div class="tagWrap">
+										<span class="tag text">다이어트</span>
+										<span class="tag text">비만</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button" title="상세화면으로 이동" style="background-image:url('../../images/temp/@bg_trd_obj02.png');">
+									<div class="tit">
+										<span>골프장 편</span>
+										<strong>골프장 이용하기 트렌드</strong>
+									</div>
+									<div class="tagWrap">
+										<span class="tag text">국내골프장</span>
+										<span class="tag text">트렌드</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button" title="상세화면으로 이동" style="background-image:url('../../images/temp/@bg_trd_obj03.png');">
+									<div class="tit">
+										<span>추석 선물세트 편</span>
+										<strong>추석 선물세트 트렌드</strong>
+									</div>
+									<div class="tagWrap">
+										<span class="tag text">추석</span>
+										<span class="tag text">선물</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button" title="상세화면으로 이동" style="background-image:url('../../images/temp/@bg_trd_obj03.png');">
+									<div class="tit">
+										<span>추석 선물세트 편</span>
+										<strong>추석 선물세트 트렌드</strong>
+									</div>
+									<div class="tagWrap">
+										<span class="tag text">추석</span>
+										<span class="tag text">선물</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<h5 class="guide_title4 t1">활용) 조기은퇴진단결과</h5>
+					<ul class="guide_txt">
+						<li>data-swiper-type="list1"</li>
+						<li>data-swiper-space="12"</li>
+						<li>data-swiper-slidesperview="auto"</li>
+					</ul>
+					<div class="listCont1" data-random="2" data-swiper-type="list1" data-swiper-space="12" data-swiper-slidesperview="auto">
+						<ul>
+							<li class="img1" style="--el-background:#ffffff;">
+								<strong class="tit">나도 파이어족이<br>될 수 있을까?</strong>
+								<span class="con">파이어족이란, 이른 은퇴를 목표로 지출을 줄이고 소득의 70 %이상 저축해 은퇴자산을 만들어 가는 사람을 이야기 합니다.</span>
+							</li>
+							<li style="--el-background:#d5f2f5;">
+								<strong class="tit">단기적금으로<br>소비를 다스린다</strong>
+								<span class="con">단기 적금상품에 가입해 꾸준히 모아보세요.<br>충동 소비 보다 계획 소비를 하게되고, 카드 할부 이용도 줄어들 수 있습니다.</span>
+							</li>
+							<li style="--el-background:#d6f1ea;">
+								<strong class="tit">필요한 것이 아니라 <br>‘필수’한 것에 소비하기</strong>
+								<span class="con">당장 사지 않으면 큰 문제가 생기는 ‘필수적인 것’만 구매할 수 있도록 합니다.<br>안사도 괜찮은 물건이 생각보다 많을꺼에요.</span>
+							</li>
+						</ul>
+					</div>
+
+					<h5 class="guide_title4 t1">활용) 트렌드+ 상세</h5>
+					<ul class="guide_txt">
+						<li>data-swiper-type="list1"</li>
+						<li>data-swiper-pagination="fraction"</li>
+					</ul>
+					<div class="areaImg1" data-swiper-type="list1" data-swiper-pagination="fraction">
+						<ul>
+							<li><img src="../../images/temp/@img_trend04_01.png" alt="NH트렌드+ 사람들은 어떤 과일을 좋아할까요? 22년 ~ 23년 NH멤버스 회원 소비 데이터 분석 : NH농협은행"></li>
+							<li><img src="../../images/temp/@img_trend04_02.png" alt="01. 꾸준히 늘어나는 과일 소비 : 맛있고, 우리 몸에도 좋은 과일, 모두들 좋아하시죠? 그래서 인지 1인당 과일 소비량도 매년 늘고 있어요. (1인당 과일 소비량 20년 32.3kg 에서 22년 37.9kg으로 5.6kg 증가) NH멤버스 고객 2,989만명 중에서 과일을 구매한 784만명을 분석한 결과 실제로 22년 대비 23년 과일 소비금액이 15.5% 증가했고 과일 구매건수도 7.3%증가 했네요."></li>
+							<li><img src="../../images/temp/@img_trend04_03.png" alt="대체텍스트"></li>
+							<li><img src="../../images/temp/@img_trend04_04.png" alt="대체텍스트"></li>
+							<li><img src="../../images/temp/@img_trend04_05.png" alt="대체텍스트"></li>
+							<li><img src="../../images/temp/@img_trend04_06.png" alt="대체텍스트"></li>
+							<li><img src="../../images/temp/@img_trend04_07.png" alt="대체텍스트"></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [AS-IS] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">AS-IS</h3>
+
+				<!-- ### 기본구조 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">기본구조</h4>
+					<ul class="guide_txt">
+						<li>swiper-name : 스타일 변경을 위한 클래스명</li>
+						<li>각 페이지에서 swiper함수 호출함.</li>
+					</ul>
+<div class="guide_code" data-label="기본 HTML">
+<pre>
+&lt;div class="swiper-name"&gt;
+	&lt;div class="swiper-wrapper"&gt;
+		&lt;div class="swiper-slide"&gt;Slide 1 내용&lt;/div&gt;
+		&lt;div class="swiper-slide"&gt;Slide 2 내용&lt;/div&gt;
+		&lt;div class="swiper-slide"&gt;Slide 3 내용&lt;/div&gt;
+		...
+	&lt;/div&gt;
+
+	|-- 스와이퍼 버튼 --|
+	&lt;div class="swiper-control"&gt;
+		&lt;div class="swiper-pagination"&gt;&lt;/div&gt;
+		&lt;div class="swiper-autoBtn playing"&gt;
+			&lt;a href="javascript:;" class="stopBtn" title="자동재생중 두번 터치시 멈춤"&gt;&lt;/a&gt;
+			&lt;a href="javascript:;" class="playBtn" title="자동재생 멈춤 두번 터치시 자동재생시작"&gt;&lt;/a&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;a href="javascript:;" role="button" class="swiper-button-prev blind"&gt;이전슬라이드&lt;/a&gt;
+	&lt;a href="javascript:;" role="button" class="swiper-button-next blind"&gt;다음슬라이드&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+</div>
+					<h4 class="guide_title3">옵션 설정</h4>
+<div class="guide_code">
+<pre>
+&lt;script&gt;
+	var swiper = new Swiper(".swiper-name", {
+		slidesPerView : 'auto'
+		spaceBetween: 30,
+		loop : false,
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+			type: 'bullets',
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+&lt;/script&gt;
+</pre>
+</div>
+
+					<h5 class="guide_title4">기본 옵션</h5>
+					<div class="guide_tbl">
+						<table>
+							<caption>슬라이드 기본 옵션 정의</caption>
+							<colgroup>
+								<col width="15%">
+								<col width="15%">
+								<col width="10%">
+								<col width="auto">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">옵션</th>
+									<th scope="col">타입</th>
+									<th scope="col">기본값</th>
+									<th scope="col">설명</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>slidesPerView</th>
+									<td>number | 'auto'</td>
+									<td>1</td>
+									<td>한 슬라이드에 보여줄 갯수</td>
+								</tr>
+								<tr>
+									<th>spaceBetween</th>
+									<td>string | number</td>
+									<td>0</td>
+									<td>슬라이드 사이 여백</td>
+								</tr>
+								<tr>
+									<th>loop</th>
+									<td>boolean</td>
+									<td>false</td>
+									<td>슬라이드 반복 여부</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="guide_tbl">
+						<table>
+							<caption>슬라이드 기본 옵션 정의</caption>
+							<colgroup>
+								<col width="15%">
+								<col width="15%">
+								<col width="15%">
+								<col width="10%">
+								<col width="auto">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col" rowspan="2">옵션</th>
+									<th scope="col">하위 매개변수</th>
+									<th scope="col">타입</th>
+									<th scope="col">기본값</th>
+									<th scope="col">설명</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th rowspan="2">autoplay</th>
+									<td>delay</td>
+									<td>number</td>
+									<td>3000</td>
+									<td>자동 재생 시간</td>
+								</tr>
+								<tr>
+									<td>disableOnInteraction</td>
+									<td>boolean</td>
+									<td>true</td>
+									<td>[false] : 수동 전환 후에도 자동 재생 활성화</td>
+								</tr>
+								<tr>
+									<th rowspan="3">pagination</th>
+									<td>el</td>
+									<td>any</td>
+									<td>null</td>
+									<td>페이징 버튼 담을 태그 설정</td>
+								</tr>
+								<tr>
+									<td>clickable</td>
+									<td>boolean</td>
+									<td>false</td>
+									<td>버튼 클릭 여부</td>
+								</tr>
+								<tr>
+									<td>type</td>
+									<td>'progressbar'<br>'bullets'<br>'fraction'<br>'custom'</td>
+									<td>'bullets'</td>
+									<td>버튼 모양 선택</td>
+								</tr>
+								<tr>
+									<th rowspan="2">navigation</th>
+									<td>nextEl</td>
+									<td>any</td>
+									<td>null</td>
+									<td>다음 버튼</td>
+								</tr>
+								<tr>
+									<td>prevEl</td>
+									<td>any</td>
+									<td>null</td>
+									<td>이전 버튼</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<h5 class="guide_title4">추가 옵션</h5>
+					<div class="guide_tbl">
+						<table>
+							<caption>슬라이드 추가 옵션 정의</caption>
+							<colgroup>
+								<col width="15%">
+								<col width="15%">
+								<col width="10%">
+								<col width="auto">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">옵션</th>
+									<th scope="col">타입</th>
+									<th scope="col">기본값</th>
+									<th scope="col">설명</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>direction</th>
+									<td>'horizontal'<br>'vertical'</td>
+									<td>'horizontal'</td>
+									<td>슬라이드 방향</td>
+								</tr>
+								<tr>
+									<th>freeMode</th>
+									<td>boolean</td>
+									<td>false</td>
+									<td>슬라이드 넘길 때 위치 고정 여부</td>
+								</tr>
+								<tr>
+									<th>autoHeight</th>
+									<td>boolean</td>
+									<td>false</td>
+									<td>[true] : 현재 활성 슬라이드 높이 맞게 높이 조정</td>
+								</tr>
+								<tr>
+									<th>a11y</th>
+									<td>boolean</td>
+									<td>false</td>
+									<td>접근성 매개변수(접근성 관련 대체 텍스트 설정이 가능)</td>
+								</tr>
+								<tr>
+									<th>allowTouchMove</th>
+									<td>boolean</td>
+									<td>true</td>
+									<td>[false] : 버튼으로만 슬라이드 전환 가능</td>
+								</tr>
+								<tr>
+									<th>watchOverflow</th>
+									<td>boolean</td>
+									<td>true</td>
+									<td>슬라이드가 1개 일 때 pager, button 숨김 여부 설정</td>
+								</tr>
+								<tr>
+									<th>observer</th>
+									<td>boolean</td>
+									<td>false</td>
+									<td>[true] : 스타일을 변경(숨기기/표시)하거나<br>하위 요소를 수정(슬라이드 추가/제거)할 때마다 업데이트(재초기화)</td>
+								</tr>
+								<tr>
+									<th>observeParents</th>
+									<td>boolean</td>
+									<td>false</td>
+									<td>[true] : Swiper 부모요소의 변화에따라 업데이트(재초기화)</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- ### 활용 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">활용</h4>
+
+					<h5 class="guide_title4 t1">활용) 공지사항</h5>
+					<div class="swiper mainNoticeSwiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><div class="mainNotice"><p>일부 금융기관 시스템 점검 안내 일부 금융기관 시스템 점검 안내(2/15~26)</p></div></div>
+							<div class="swiper-slide"><div class="mainNotice"><p>일부 금융기관 시스템 점검 안내(2/15~26)</p></div></div>
+							<div class="swiper-slide"><div class="mainNotice"><p>일부 금융기관 시스템 점검 안내(2/15~26)</p></div></div>
+						</div>
+						<div class="swiper-pagination"></div>
+						<div class="swiper-button-prev blind"></div>
+						<div class="swiper-button-next blind"></div>
+					</div>
+					<script>mainNoticeSwiper();</script>
+
+					<h5 class="guide_title4 t1">활용) 이벤트배너</h5>
+					<div class="swiper-container bannerSwiperImgtype ent01 mt15">
+						<div class="swiper-wrapper ">
+							<div class="swiper-slide bannerPrd1 pr0 pl0">
+								<a href="javascript:;">
+									<img src="../../images/temp/temp_main_event_banner.png" alt="대체택스트 들어갑니다." class="bannerImgType" />
+								</a>
+							</div>
+							<div class="swiper-slide bannerPrd1 pr0 pl0">
+								<a href="javascript:;">
+									<img src="../../images/temp/temp_main_event_banner.png" alt="대체택스트 들어갑니다." class="bannerImgType" />
+								</a>
+							</div>
+							<div class="swiper-slide bannerPrd1 pr0 pl0">
+								<a href="javascript:;">
+									<img src="../../images/temp/temp_main_event_banner.png" alt="대체택스트 들어갑니다." class="bannerImgType" />
+								</a>
+							</div>
+						</div>
+						<div class="auto_page_btnps mt5">
+							<div class="swiper-pagination pageCarDriveBanner"></div>
+							<div class="btnPSWrap">
+								<button type="button" class="stop"><span class="blind">자동재생 정지</span></button>
+							</div>
+						</div>
+					</div>
+					<script>mainEventImgSwiper();</script>
+
+					<h5 class="guide_title4 t1">활용) 제목 슬라이드</h5>
+					<div class="starTaxReduction ty03 starTaxDataNone">
+						<div class="yabannerArea">
+							<div class="titImgBanner ty03">
+								<div class="swiper starTaxSlide">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide"><strong>양도소득세 (해외주식)</strong></div>
+										<div class="swiper-slide"><strong>종합소득세</strong></div>
+										<div class="swiper-slide"><strong>건강보험료</strong></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="formWrap addShoow">
+							<div class="yanowWrap bdR10">
+								<div class="taxInfoWrap">
+									<div class="priceTitWrap"><strong class="priceTit"><strong class="dataValue">?,???,???</strong> <em>원</em></strong></div>
+								</div>
+								<div class="mt5">
+									<span class="linkTxt2">세금이 얼마나 나올지 걱정되나요?</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<script>
+						var starTaxSlide = new Swiper('.starTaxSlide',{
+							direction:"vertical",
+							spaceBetween: 0,
+							touchRatio: 0,
+							autoplay: {
+								delay: 2500,
+								disableOnInteraction: false,
+								pauseOnMouseEnter: false,
+							},
+							loop:true,
+							watchOverflow:true,
+							on: {
+								init: function(){
+									$('.starTaxSlide .swiper-slide').attr('aria-hidden','true');
+									$('.starTaxSlide .swiper-slide-active').attr('aria-hidden','false');
+								},
+								slideChangeTransitionEnd : function(){
+									$('.swiper-slide').attr('aria-hidden','true');
+									$('.swiper-slide-active').attr('aria-hidden','false');
+								}
+							}
+						});
+					</script>
+
+					<h5 class="guide_title4 t1">활용) 탭 + 슬라이드</h5>
+					<div class="productSwiperWrap boxTypeWrap">
+						<!-- -------------------------------------- -->
+						<!-- [탭메뉴] -->
+						<!-- -------------------------------------- -->
+						<div class="productSwiperContainer">
+							<div thumbsSlider=""  class="productSwiperMenuWrap">
+								<div class="productSwiperMenu">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<a href="javascript:;">전체</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="javascript:;">건강</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="javascript:;">여행/레저</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="javascript:;">운전자</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="javascript:;">화재</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="javascript:;">연금/저축</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="javascript:;">어린이/교육</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="javascript:;">상해</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="javascript:;">종신/정기</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<a href="javascript:;" class="swiper-button-next" role="button" aria-disabled="false">다음</a>
+							<a href="javascript:;" class="swiper-button-prev" role="button" aria-disabled="false">이전</a>
+						</div>
+						<hr class="hrTypeProduct" aria-hidden="true" />
+
+						<!-- -------------------------------------- -->
+						<!-- [탭컨텐츠] -->
+						<!-- -------------------------------------- -->
+						<div class="swiper productSwiperCont">
+							<div class="swiper-wrapper">
+								<!-- [전체] -->
+								<div class="swiper-slide">
+									<ul class="productSwiperList">
+										<li>
+											<a href="javascript:;">
+												<strong class="title">NH일년 든든생활N레저보험(SELF 가입)NH일년 든든생활N레저보험</strong>
+												<div class="productLogo"><img src="../../images/logo_nhcard.png" alt="NH농협카드"></div>
+												<p class="productInfo">1회 납입으로 1년간 든든한 레저생활!<br>일상생활 중 재해도 보장합니다.</p>
+												<div class="wrapTag hashTag mt20">
+													<em class="tag bg01">#24시간 보장</em><em class="tag bg02">#운전중사고도대비</em>
+												</div>
+												<div class="productEtc">손해보험협회 심의필 제12345호/2021.00.00</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<!-- [건강] -->
+								<div class="swiper-slide">
+									<ul class="productSwiperList">
+										<li>
+											<a href="javascript:;">
+												<strong class="title">NH일년 든든생활N레저보험(SELF 가입)NH일년 든든생활N레저보험</strong>
+												<div class="productLogo"><img src="../../images/logo_nh_insur.png" alt="NH농협손해보험"></div>
+												<p class="productInfo">1회 납입으로 1년간 든든한 레저생활!<br>일상생활 중 재해도 보장합니다.</p>
+												<div class="wrapTag hashTag mt20">
+													<em class="tag bg01">#24시간 보장</em><em class="tag bg02">#운전중사고도대비</em>
+												</div>
+												<div class="productEtc">손해보험협회 심의필 제12345호/2021.00.00</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<!-- [여행/레저] -->
+								<div class="swiper-slide">
+									<div class="productEmpty">
+										<p> 준비된 상품이 없습니다.</p>
+									</div>
+								</div>
+								<!-- [운전자] -->
+								<div class="swiper-slide">
+									<div class="productEmpty">
+										<p> 준비된 상품이 없습니다.</p>
+									</div>
+								</div>
+								<!-- [화재] -->
+								<div class="swiper-slide">
+									<div class="productEmpty">
+										<p> 준비된 상품이 없습니다.</p>
+									</div>
+								</div>
+								<!-- [연금/저축] -->
+								<div class="swiper-slide">
+									<div class="productEmpty">
+										<p> 준비된 상품이 없습니다.</p>
+									</div>
+								</div>
+								<!-- [어린이/교육] -->
+								<div class="swiper-slide">
+									<div class="productEmpty">
+										<p> 준비된 상품이 없습니다.</p>
+									</div>
+								</div>
+								<!-- [상해] -->
+								<div class="swiper-slide">
+									<div class="productEmpty">
+										<p> 준비된 상품이 없습니다.</p>
+									</div>
+								</div>
+								<!-- [종신/정기] -->
+								<div class="swiper-slide">
+									<div class="productEmpty">
+										<p> 준비된 상품이 없습니다.</p>
+									</div>
+								</div>
+								<!-- // -->
+							</div>
+						</div>
+						<!-- ---------------------------------------->
+					</div>
+					<script>
+						//탭메뉴
+						var swiper = new Swiper(".productSwiperMenu", {
+							spaceBetween: 4,
+							slidesPerView: "auto",
+							freeMode: true,
+							watchSlidesProgress: true,
+							observer: true,
+							observeParents: true,
+						});
+						//탭컨텐츠
+						var swiper2 = new Swiper(".productSwiperCont", {
+							autoHeight : true,
+							spaceBetween: 40,
+							observer: true,
+							observeParents: true,
+							pagination:false,
+							navigation: {
+								nextEl: ".swiper-button-next",
+								prevEl: ".swiper-button-prev",
+							},
+							thumbs: {
+								swiper: swiper,
+							},
+						});
+					</script>
+					<hr class="guide_line mt12 mb12">
+					<div class="guide_area">
+						<div class="swiper-container listSwiperPension">
+							<div class="totalSort"></div>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<ul class="accList">
+										<li>
+											<a href="javascript:;" role="button">
+												<span class="imgWrap">
+													<img src="../../images/logos/AABD0000.png" alt="아이비케이연금보험㈜ 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">개인형IRP</span></div>
+													<div class="accInfo">
+														<span class="accValue"><strong class="dataValue">10,000,000</strong><em class="won">원</em></span>
+													</div>
+													<div class="mainAmount">
+														<span class="arrowDown" role="img" aria-label="감소"><em class="blind">감소</em></span>
+														<span class="amount inColor"><strong>56,897</strong>원 (-<strong class="dataValue">1.53</strong><em class="won">%</em>)</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<span class="imgWrap">
+													<img src="../../images/logos/AABD0000.png" alt="아이비케이연금보험㈜ 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">연금저축펀드(금투업권)</span></div>
+													<div class="accInfo">
+														<span class="accValue"><strong class="dataValue">0</strong><em class="won">원</em></span>
+													</div>
+													<div class="mainAmount">
+														<span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span>
+														<span class="amount inColor"><strong>56,897</strong>원 (+<strong class="dataValue">1.53</strong><em class="won">%</em>)</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<span class="imgWrap">
+													<img src="../../images/logos/AABD0000.png" alt="아이비케이연금보험㈜ 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">개인형IRP</span></div>
+													<div class="accInfo">
+														<span class="accLabel">
+															<em class="tag gray">만료</em>
+														</span>
+														<span class="accValue"><button href="javascript:;" class="linkType1 pointColor">연결확인</button></span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<span class="imgWrap">
+													<img src="../../images/logos/AABD0000.png" alt="아이비케이연금보험㈜ 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">연금저축펀드(금투업권)</span></div>
+													<div class="accInfo">
+														<span class="accLabel">
+															<em class="tag gray">만료예정</em>
+														</span>
+														<span class="accValue"><strong class="dataValue">0</strong><em class="won">원</em></span>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="swiper-slide">
+									<ul class="accList">
+										<li>
+											<a href="javascript:;" role="button">
+												<span class="imgWrap">
+													<img src="../../images/logos/AABD0000.png" alt="아이비케이연금보험㈜ 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">개인형IRP</span></div>
+													<div class="accInfo">
+														<span class="accValue"><strong class="dataValue">10,000,000</strong><em class="won">원</em></span>
+													</div>
+													<div class="mainAmount">
+														<span class="arrowDown" role="img" aria-label="감소"><em class="blind">감소</em></span>
+														<span class="amount inColor"><strong>56,897</strong>원 (-<strong class="dataValue">1.53</strong><em class="won">%</em>)</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<span class="imgWrap">
+													<img src="../../images/logos/AABD0000.png" alt="아이비케이연금보험㈜ 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">연금저축펀드(금투업권)</span></div>
+													<div class="accInfo">
+														<span class="accValue"><strong class="dataValue">0</strong><em class="won">원</em></span>
+													</div>
+													<div class="mainAmount">
+														<span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span>
+														<span class="amount inColor"><strong>56,897</strong>원 (+<strong class="dataValue">1.53</strong><em class="won">%</em>)</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<span class="imgWrap">
+													<img src="../../images/logos/AABD0000.png" alt="아이비케이연금보험㈜ 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">개인형IRP</span></div>
+													<div class="accInfo">
+														<span class="accLabel">
+															<em class="tag gray">만료</em>
+														</span>
+														<span class="accValue"><button href="javascript:;" class="linkType1 pointColor">연결확인</button></span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" role="button">
+												<span class="imgWrap">
+													<img src="../../images/logos/AABD0000.png" alt="아이비케이연금보험㈜ 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="titArea"><span class="accTit">연금저축펀드(금투업권)</span></div>
+													<div class="accInfo">
+														<span class="accLabel">
+															<em class="tag gray">만료예정</em>
+														</span>
+														<span class="accValue"><strong class="dataValue">0</strong><em class="won">원</em></span>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<script>listSwiperPension();</script>
+					</div>
+
+					<h5 class="guide_title4 t1">활용) slidesPerView:auto</h5>
+					<div class="swiper-container peoplePick">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide">
+								<div class="peopleWrap bgblue">
+									<h2 class="callTit"><img src="../../images/category/ob/ico_cate_ob01_09.png" alt="">여행</h2>
+									<p class="exTxt">나 홀로 유럽여행</p>
+								</div>
+							</li>
+							<li class="swiper-slide">
+								<div class="peopleWrap bggreen">
+									<h2 class="callTit"><img src="../../images/category/ob/ico_cate_ob01_02.png" alt="">결혼</h2>
+									<p class="exTxt">프로포즈링</p>
+								</div>
+							</li>
+							<li class="swiper-slide">
+								<div class="peopleWrap bgmildblue">
+									<h2 class="callTit"><img src="../../images/category/ob/ico_cate_ob01_12.png" alt="">재테크</h2>
+									<p class="exTxt">나 홀로 유럽여행</p>
+								</div>
+							</li>
+						</ul>
+						<div class="swiper-pagination peoplePickPage"></div>
+					</div>
+					<script>
+						// 유형2
+						function peoplePick(){
+							var swiper = new Swiper('.peoplePick',{
+								slidesPerView: "auto",
+								spaceBetween:7,
+								loop: true,
+								centerSlides:true,
+								pagination: {
+									el:'.peoplePickPage',
+									clickable:true,
+									bulletElement:'a'
+								},
+								on:{
+									init:function(){
+										$('.peoplePick .swiper-slide').attr({'aria-hidden':true, 'role':'button'});
+										$('.peoplePick .swiper-slide-active').attr('aria-hidden',false);
+									},
+									slideChangeTransitionEnd: function(){
+										var $mainBannerBtn = $(".peoplePickPage");
+										$mainBannerBtn.find("a").attr('title','');
+										$mainBannerBtn.find("a").eq(this.activeIndex).attr('title','선택됨');
+										$('.peoplePick .swiper-slide').attr('aria-hidden',true);
+										$(".peoplePick .swiper-slide-active").attr('aria-hidden',false);
+									}
+								}
+							});
+							$('.swiper-pagination-bullet-active').attr('title','선택됨');
+						};
+						peoplePick();
+					</script>
+
+					<h5 class="guide_title4 t1">활용) 달력 슬라이드</h5>
+					<div class="wrapCalender">
+						<div class="boxTypeWrap calenderBox">
+							<div class="swiper calenderInfoWrap">
+								<a href="javascript:;" class="btn-month-prev" role="button" tabindex="0" aria-label="이전달"><span class="blind">이전달</span></a>
+								<a href="javascript:;" class="btn-month-next" role="button" tabindex="0" aria-label="다음달"><span class="blind">다음달</span></a>
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="filterArea mt0">
+											<div class="filterSelect">
+												<div class="monthSelectArea">
+													<strong class="">7월</strong>
+												</div>
+												<div class="thisMonthRange">(06.05~07.04)</div>
+											</div>
+											<div class="fillter_money_list">
+												<dl>
+													<dt>총 소비</dt>
+													<dd><span class="dataValue">3,456</span>원</dd>
+												</dl>
+												<dl>
+													<dt>총 수입</dt>
+													<dd class="pointColor"><span class="dataValue">3,456,789</span>원</dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="filterArea mt0">
+											<div class="filterSelect">
+												<div class="monthSelectArea">
+													<strong class="">8월</strong>
+												</div>
+												<div class="thisMonthRange">(06.05~07.04)</div>
+											</div>
+											<div class="fillter_money_list">
+												<dl>
+													<dt>총 소비</dt>
+													<dd><span class="dataValue">56,789</span>원</dd>
+												</dl>
+												<dl>
+													<dt>총 수입</dt>
+													<dd class="pointColor"><span class="dataValue">56,789</span>원</dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="cms calenderArea">
+								<div class="weekItem">
+									<span>일</span>
+									<span>월</span>
+									<span>화</span>
+									<span>수</span>
+									<span>목</span>
+									<span>금</span>
+									<span>토</span>
+								</div>
+
+								<div class="swiper dateItemWrap">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="dateItem">
+												<span class="date bgNone"></span>
+												<span class="date bgNone"></span>
+												<button type="button" class="date" data-day-select="20220705" title="2022년 7월 5일 화요일 상세 내역으로 이동">
+													<span class="day">5</span>
+													<div class="daySummary">
+														<span>-110,000</span>
+														<span class="pointColor">+88,888,888</span>
+													</div>
+												</button>
+												<button type="button" class="date" data-day-select="20220705" title="2022년 7월 6일 수요일 상세 내역으로 이동">
+													<span class="day">6</span>
+													<div class="daySummary">
+														<span>-110,000</span>
+														<span class="pointColor">+88,888,888</span>
+													</div>
+												</button>
+												<button type="button" class="date" disabled title="2022년 7월 7일 목요일 상세 내역으로 이동">
+													<span class="day">7</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date today" disabled title="선택됨 2022년 7월 8일 금요일 상세 내역으로 이동">
+													<span class="day">8</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled  title="2022년 7월 9일 토요일 상세 내역으로 이동">
+													<span class="day">9</span>
+													<div class="daySummary"></div>
+												</button>
+
+												<button type="button" data-day-select="20220710" class="date" title="2022년 7월 10일 일요일 상세 내역으로 이동">
+													<span class="day">10</span>
+													<div class="daySummary">
+														<span>-110,000</span>
+														<span class="pointColor">+88,888,888</span>
+													</div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">11</span>
+													<div class="daySummary">
+														<span>-110,000</span>
+														<span class="pointColor">+88,888,888</span>
+													</div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">12</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">13</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">14</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">15</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">16</span>
+													<div class="daySummary"></div>
+												</button>
+
+												<button type="button" class="date" disabled>
+													<span class="day">17</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">18</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">19</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">20</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">21</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">22</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">23</span>
+													<div class="daySummary"></div>
+												</button>
+
+												<button type="button" class="date" disabled>
+													<span class="day">24</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">25</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">26</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">27</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">28</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">29</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">30</span>
+													<div class="daySummary"></div>
+												</button>
+
+												<button type="button" class="date" disabled>
+													<span class="day">31</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">1</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">2</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">3</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date">
+													<span class="day">4</span>
+													<div class="daySummary">
+														<span>-110,000</span>
+														<span class="pointColor">+88,888,888</span>
+													</div>
+												</button>
+											</div>
+										</div><!-- //.swiper-slide -->
+
+										<div class="swiper-slide">
+											<div class="dateItem">
+												<span class="date bgNone"></span>
+												<span class="date bgNone"></span>
+												<button type="button" class="date" data-day-select="20220705" title="2022년 7월 5일 상세 내역으로 이동" disabled>
+													<span class="day">5</span>
+													<div class="daySummary">
+														<span>-110,000</span>
+														<span class="pointColor">+88,888,888</span>
+													</div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">6</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">7</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">8</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">9</span>
+													<div class="daySummary"></div>
+												</button>
+
+												<button type="button" data-day-select="20220710" class="date" title="2022년 7월 10일 상세 내역으로 이동">
+													<span class="day">10</span>
+													<div class="daySummary">
+														<span>-110,000</span>
+														<span class="pointColor">+88,888,888</span>
+													</div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">11</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">12</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">13</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">14</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">15</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">16</span>
+													<div class="daySummary"></div>
+												</button>
+
+												<button type="button" class="date" disabled>
+													<span class="day">17</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">18</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">19</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">20</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">21</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">22</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">23</span>
+													<div class="daySummary"></div>
+												</button>
+
+												<button type="button" class="date" disabled>
+													<span class="day">24</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">25</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">26</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">27</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">28</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">29</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">30</span>
+													<div class="daySummary"></div>
+												</button>
+
+												<button type="button" class="date" disabled>
+													<span class="day">31</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">1</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">2</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date" disabled>
+													<span class="day">3</span>
+													<div class="daySummary"></div>
+												</button>
+												<button type="button" class="date">
+													<span class="day">4</span>
+													<div class="daySummary">
+														<span>-110,000</span>
+														<span class="pointColor">+88,888,888</span>
+													</div>
+												</button>
+											</div>
+										</div><!-- //.swiper-slide -->
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="carandarFoldingArea"><button type="button" class="carandarFolding active" aria-expanded="true"><span>달력 접기</span></button></div>
+					</div>
+					<script>
+						//달력 스와이프
+						var calenderInfoWrap = new Swiper(".calenderInfoWrap", {
+							spaceBetween: 10,
+							slidesPerView: 1,
+							observer: true,
+							observeParents: true,
+							a11y : false,
+							effect: "fade",
+							touchRatio: 0,	//touch move 비활성
+							freeMode: true,
+							watchSlidesProgress: true,
+							on: {
+								init: function () {
+									$('.calenderInfoWrap .swiper-slide').attr('aria-hidden', 'true')
+									$('.calenderInfoWrap .swiper-slide-active').attr('aria-hidden', 'false')
+								},
+								transitionEnd: function () {
+									$('.calenderInfoWrap .swiper-slide').attr('aria-hidden', 'true')
+									$('.calenderInfoWrap .swiper-slide-active').attr('aria-hidden', 'false')
+								}
+							}
+						});
+						var dateItemWrap = new Swiper(".dateItemWrap", {
+							initialSlide :0, //시작슬라이드 번호 0부터 시작
+							spaceBetween: 10,
+							observer: true,
+							observeParents: true,
+							autoHeight : true,
+							a11y : false,
+							pagination: {
+								el: ".swiper-pagination",
+							},
+							//pagination:false,
+							navigation: {
+								nextEl: ".btn-month-next",
+								prevEl: ".btn-month-prev",
+							},
+							thumbs: {
+								swiper: swiper,
+							},
+							on: {
+								init: function () {
+									$('.dateItemWrap .swiper-slide').attr('aria-hidden', 'true')
+									$('.dateItemWrap .swiper-slide-active').attr('aria-hidden', 'false')
+								},
+								transitionEnd: function () {
+									$('.dateItemWrap .swiper-slide').attr('aria-hidden', 'true')
+									$('.dateItemWrap .swiper-slide-active').attr('aria-hidden', 'false')
+								}
+							}
+						});
+						//달력 폴딩
+						$('.carandarFolding').click(function(){
+							var  $this = $(this);
+							var $target = $this.closest('.wrapCalender').find('.calenderArea');
+							$this.toggleClass('active');
+							$(".wrapCalender").find('.btn-month-prev span').text('이전달');
+							$(".wrapCalender").find('.btn-month-next span').text('다음달');
+							if ($this.hasClass('active')) {
+								$target.slideDown();
+								$this.children('span').text('달력 접기');
+								$this.attr('aria-expanded','true');
+								$('.weekItem span:first-child').focus();
+							}else{
+								$target.slideUp();
+								$this.children('span').text('달력 열기');
+								$this.attr('aria-expanded','false');
+							}
+						});
+						//내역으로 이동
+						$('.date').click(function(){
+							var $this = $(this);
+							var $thisDate = $this.attr('data-day-select');
+							console.log($thisDate)
+							$('.dataDayDetail').each(function(){
+								var $thisTarget = $(this);
+								var $targetPo = $(this).offset().top;
+								if ($(this).attr('data-day-detail') == $thisDate) {
+									$('html, body').stop().animate({scrollTop:$targetPo - 50},400,function(){
+										$thisTarget.focus()
+									});
+								}
+							});
+						});
+						//전체 달수 체크
+						$('.btn-month-prev').click(function(){
+							console.log($('.cms.calenderArea').find('.swiper-slide').length)
+						});
+					</script>
+
+					<h5 class="guide_title4 t1">활용) 헬스케어 상세</h5>
+					<div class="htNewsBanner">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="javascript:;" title="">
+										<div class="cardBgWrap">
+											<img src="../../images/banner/bg_htCardNews_sample01.jpg" alt="대체 텍스트 본문 내용과 똑같이 입력 필요">
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="javascript:;" title="">
+										<div class="cardBgWrap">
+											<img src="../../images/banner/bg_htCardNews_sample02.jpg" alt="대체 텍스트 본문 내용과 똑같이 입력 필요">
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="javascript:;" title="">
+										<div class="cardBgWrap">
+											<img src="../../images/banner/bg_htCardNews_sample03.jpg" alt="대체 텍스트 본문 내용과 똑같이 입력 필요">
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="javascript:;" title="">
+										<div class="cardBgWrap">
+											<img src="../../images/banner/bg_htCardNews_sample04.jpg" alt="대체 텍스트 본문 내용과 똑같이 입력 필요">
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="javascript:;" title="">
+										<div class="cardBgWrap">
+											<img src="../../images/banner/bg_htCardNews_sample05.jpg" alt="대체 텍스트 본문 내용과 똑같이 입력 필요">
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="swiper-control">
+								<div class="swiper-pagination"></div>
+							</div>
+							<a href="javascript:;" role="button" class="swiper-button-prev blind">이전슬라이드</a>
+							<a href="javascript:;" role="button" class="swiper-button-next blind">다음슬라이드</a>
+						</div>
+					</div>
+					<script>
+						var htNewsBanner = new Swiper('.htNewsBanner .swiper-container', {
+							spaceBetween: 16,
+							pagination: {
+								el: '.swiper-pagination',
+								type: 'fraction',
+								clickable: true,
+								bulletElement: 'a',
+							},
+							on: {
+								init: function(){
+									$('.htNewsBanner .swiper-slide').attr('aria-hidden','true');
+									$('.htNewsBanner .swiper-slide-active').attr('aria-hidden','false');
+								},
+								slideChangeTransitionEnd : function(){
+									var $shareBannerBtn = $(".htNewsBanner .swiper-pagination");
+									$shareBannerBtn.find("a").attr('title','');
+									$shareBannerBtn.find("a").eq(this.activeIndex).attr('title','선택됨');
+									$('.swiper-slide').attr('aria-hidden','true');
+									$('.swiper-slide-active').attr('aria-hidden','false');
+								}
+							}
+						});
+
+					</script>
+
+					<h5 class="guide_title4 t1">활용) 배지</h5>
+					<div class="bedgeSwiper swiper-container" style="margin-left:-16px; margin-right:-16px;">
+						<ol class="swiper-wrapper">
+							<!--
+								.now 현재미션 중앙정렬되는 클래스
+								.gift 선물이 있는 경우
+								.empty 선물을 이미 받은 경우
+								.complete 완료된 미션 - 스트립트로 자동 추가됨
+							-->
+							<li class="swiper-slide"></li>
+							<li class="swiper-slide empty"></li>
+							<li class="swiper-slide"></li>
+							<li class="swiper-slide gift"></li>
+							<li class="swiper-slide"></li>
+							<li class="swiper-slide now gift"></li>
+							<li class="swiper-slide"></li>
+							<li class="swiper-slide gift"></li>
+							<li class="swiper-slide"></li>
+							<li class="swiper-slide"></li>
+						</ol>
+					</div>
+					<script>
+						var fBedgeSwiper = function(){
+							var $bedgeIndex = $('.bedgeSwiper').find('.now').index();
+							$('.bedgeSwiper').find('.now').prevAll().addClass('complete');
+							var swiper1 = new Swiper(".bedgeSwiper", {
+								slidesPerView: "auto",
+								centeredSlides: true,
+								initialSlide: $bedgeIndex, //현재 슬라이드 번호
+								pagination: {
+									el: ".swiper-pagination",
+									clickable:true,
+								},
+								pagination:false,
+								navigation: {
+									nextEl: ".swiper-button-next",
+									prevEl: ".swiper-button-prev",
+								},
+							});
+							$('.bedgeSwiper').find('.swiper-slide').each(function (index) {
+								$(this).text(index+1);
+								var $aria = index+1+'단계 ';
+								if($(this).hasClass('now')){
+									$aria += '현재단계';
+								}
+								if($(this).hasClass('complete')){
+									$aria += '완료된단계';
+								}
+								if($(this).hasClass('gift')){
+									$aria += '보상있음';
+								}
+								if($(this).hasClass('empty')){
+									$aria += '보상받음';
+								}
+								$(this).attr('aria-label',$aria);
+							});
+						}
+						fBedgeSwiper();
+					</script>
+				</div>
+			</div>
+			<!-- -------------------------------------- -->
+		</section>
+
+		<!-- ################################# -->
+		<!-- ### 토글 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT2">
+			<h2 class="guide_title">토글</h2>
+			<!-- -------------------------------------- -->
+			<!-- [유형1] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형1 : .toggleWrap</h3>
+				<!-- ### 기본구조 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">기본구조</h4>
+					<p class="guide_txt">아래 소스 기반으로 각 컴포넌트에 따라 개별 스타일 적용</p>
+<div class="guide_code">
+<pre>
+&lt;div class="toggleWrap"&gt;
+	&lt;button type="button" class="toggleBtn"&gt;토글버튼&lt;/button&gt;
+	&lt;div class="toggleCont"&gt;토글컨텐츠&lt;/div&gt;
+&lt;/div&gt;
+
+|-- 스크립트 적용 소스 --|
+&lt;div class="toggleWrap"&gt;
+	&lt;button type="button" class="toggleBtn" role="button" aria-expanded="false"&gt;토글버튼&lt;/button&gt;
+	&lt;div class="toggleCont"&gt;토글컨텐츠&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="toggleWrap"&gt;
+	&lt;button type="button" class="toggleBtn active less" role="button" aria-expanded="true"&gt;토글버튼&lt;/button&gt;
+	&lt;div class="toggleCont"&gt;토글컨텐츠&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+					<div class="toggleWrap">
+						<button type="button" class="toggleBtn">토글버튼</button>
+						<div class="toggleCont" style="display:none;">토글컨텐츠</div>
+					</div>
+				</div>
+
+				<!-- ### 활용 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">활용) .boxTypeToggle</h4>
+					<h5 class="guide_title4 t1">기본 <span class="sub">[H74]</span></h5>
+					<div class="toggleWrap boxTypeToggle">
+						<div class="boxTitWrap">
+							<a href="javascript:;" class="toggleBtn">
+								<strong class="tit">타이틀</strong>
+							</a> 
+						</div>
+						<div class="toggleCont" style="display:none">
+							<div class="guide_empty">토글 컨텐츠 영역</div>
+						</div>
+					</div>
+
+					<hr class="guide_line">
+
+					<h5 class="guide_title4 t1">높이 변경 : .t1 <i class="guide_tag">2023고도화</i> <span class="sub">[H70]</span></h5>
+					<div class="toggleWrap boxTypeToggle t1">
+						<div class="boxTitWrap">
+							<a href="javascript:;" class="toggleBtn">
+								<strong class="tit">타이틀</strong>
+								<span class="iconTxt2 grade0">산출불가</span>
+								<span class="sub"><strong class="dataValue">00</strong><span>%</span></span>
+							</a> 
+						</div>
+						<div class="toggleCont" style="display:none">
+							<div class="guide_empty">토글 컨텐츠 영역</div>
+						</div>
+					</div>
+	
+					<div class="toggleWrap boxTypeToggle t1">
+						<div class="boxTitWrap">
+							<a href="javascript:;" class="toggleBtn">
+								<span class="tit">
+									<span class="imgWrap"><img src="../../images/logos/AAAZ0000.png" alt="기관명" class="imgLogo"></span>
+									<strong>개설회사명</strong>
+								</span>
+								<span class="sub"><strong class="dataValue">00</strong><span class="won">원</span></span>
+							</a> 
+						</div>
+						<div class="toggleCont" style="display:none">
+							<ul class="detailList">
+								<li>
+									<span class="tit">항목명</span>
+									<span class="value"><strong class="dataValue">00</strong><span class="won">원</span></span>
+								</li>
+								<li>
+									<span class="tit">항목명</span>
+									<span class="value"><strong class="dataValue">00</strong><span class="won">원</span></span>
+								</li>
+							</ul>
+							<dl class="info1">
+								<dt>항목명</dt>
+								<dd>
+									<span class="data1"><strong class="dataValue">00</strong><span>%</span></span>
+									<span class="data1 c1"><strong class="dataValue">00</strong><span>%</span></span>
+									<span class="data1 c2"><strong class="dataValue">00</strong><span>%</span></span>
+									<div class="areaChart2 t2 c1">
+										<div class="chart"><span style="width:50%;"></span></div>
+										<ul class="item1">
+											<li>총 신용한도 <span class="dataValue">000,000,000</span><em class="won">원</em></li>
+											<li>총 이용금액 <span class="dataValue">000,000,000</span><em class="won">원</em></li>
+										</ul>
+									</div>
+									<div class="grayBgLine">
+										<ul class="detailList">
+											<li>
+												<span class="tit">항목명</span>
+												<span class="value"><strong class="dataValue">00</strong><span class="won">원</span></span>
+											</li>
+											<li>
+												<span class="tit">항목명</span>
+												<span class="value"><strong class="dataValue">00</strong><span class="won">원</span></span>
+											</li>
+											<li>
+												<span class="tit">항목명</span>
+												<span class="value">0000.00.00</span>
+											</li>
+										</ul>
+									</div>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<!-- ### // ### -->
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [유형2] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형2 : [data-toggle]  <i class="guide_tag">2023고도화</i></h3>
+				<!-- ### 기본구조 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">기본구조</h4>
+<div class="guide_code">
+<pre>
+&lt;div class="className" data-toggle="wrap"&gt;
+	&lt;button type="button" data-toggle="btn" aria-expanded="false"&gt;토글버튼&lt;/button&gt;
+	&lt;div data-toggle="con"&gt;토글컨텐츠&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+					<h4 class="guide_title4">button 구조</h4>
+					<div data-toggle="wrap">
+						<button type="button" data-toggle="btn" aria-expanded="false">토글버튼</button>
+						<div data-toggle="con" style="display:none"><p class="guide_empty">토글컨텐츠</p></div>
+					</div>
+
+					<h4 class="guide_title4">dl 구조</h4>
+					<div data-toggle="wrap">
+						<dl>
+							<dt role="button" data-toggle="btn" aria-expanded="false">토글버튼</dt>
+							<dd data-toggle="con" style="display:none"><p class="guide_empty">토글컨텐츠</p></dd>
+						</dl>
+					</div>
+
+					<h4 class="guide_title4">ul 구조</h4>
+					<div data-toggle="wrap">
+						<ul>
+							<li>
+								<button type="button" data-toggle="btn" aria-expanded="false">토글버튼</button>
+								<div data-toggle="con" style="display:none"><p class="guide_empty">토글컨텐츠</p></div>
+							</li>
+						</ul>
+					</div>
+
+					<h4 class="guide_title4">그룹형 : [data-toggle-mode="group"]</h4>
+					<ul class="guide_txt">
+						<li>목록에서 1개만 오픈되어야 할 경우 해당함.</li>
+						<li>그룹의 기준은 data-toggle="wrap" 영역 안에서만 해당함.</li>
+					</ul>
+					<div data-toggle="wrap" data-toggle-mode="group">
+						<ul>
+							<li>
+								<button type="button" data-toggle="btn" aria-expanded="false">토글버튼</button>
+								<div data-toggle="con" style="display:none"><p class="guide_empty">토글컨텐츠</p></div>
+							</li>
+							<li>
+								<button type="button" data-toggle="btn" aria-expanded="false">토글버튼</button>
+								<div data-toggle="con" style="display:none"><p class="guide_empty">토글컨텐츠</p></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- ### 활용 ### -->
+				<div class="guide_area">
+					<h4 class="guide_title3">활용</h4>
+					<h5 class="guide_title4">활용1) :.areaToggle1</h5>
+					<div class="areaToggle1" data-toggle="wrap">
+						<button type="button" data-toggle="btn" aria-expanded="false">대체텍스트 보기</button>
+						<div data-toggle="con">
+							<ul class="detailList">
+								<li>
+									<span class="tit">항목명</span>
+									<span class="value"><strong class="dataValue">000,000,000</strong><em class="won">원</em></span>
+								</li>
+								<li>
+									<span class="tit">항목명</span>
+									<span class="value"><strong class="dataValue">000,000,000</strong><em class="won">원</em></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<h5 class="guide_title4">활용2) :.areaToggle2</h5>
+					<div class="areaToggle2" data-toggle="wrap">
+						<dl>
+							<dt class="summary" role="button" data-toggle="btn" aria-expanded="false">
+								<span>항목명</span>
+								<span><strong class="dataValue">000,000,000</strong><em class="won">원</em></span>
+							</dt>
+							<dd data-toggle="con">
+								<ul class="detailList">
+									<li>
+										<span class="tit">항목명</span>
+										<span class="value"><strong class="dataValue">000,000,000</strong><em class="won">원</em></span>
+									</li>
+									<li>
+										<span class="tit">항목명</span>
+										<span class="value"><strong class="dataValue">000,000,000</strong><em class="won">원</em></span>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<!-- ### // ### -->
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [유형3] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형3 : .moreInfoArea</h3>
+
+				<div class="guide_area2">
+					<h4 class="guide_title3">토글 버튼명 정의</h4>
+					<div class="guide_tbl">
+						<table>
+							<caption>토글 버튼 정의</caption>
+							<colgroup>
+								<col style="width:40%">
+								<col style="width:30%">
+								<col style="width:30%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">클래스명</th>
+									<th scope="col">열기</th>
+									<th scope="col">닫기</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>.toggleTxt</td>
+									<td>보기</td>
+									<td>닫기</td>
+								</tr>
+								<tr>
+									<td>.toggleTxt02</td>
+									<td>기관별 보기</td>
+									<td>접기</td>
+								</tr>
+								<tr>
+									<td>.toggleTxt03</td>
+									<td>더 보기</td>
+									<td>접기</td>
+								</tr>
+								<tr>
+									<td>.toggleTxt04</td>
+									<td>청구서 더보기</td>
+									<td>접기</td>
+								</tr>
+								<tr>
+									<td>.toggleTxt05</td>
+									<td>추가정보 보기</td>
+									<td>추가정보 닫기</td>
+								</tr>
+								<tr>
+									<td>.toggleTxt06</td>
+									<td>전체보기</td>
+									<td>접기</td>
+								</tr>
+								<tr>
+									<td>.toggleTxt07</td>
+									<td>상세정보 보기</td>
+									<td>접기</td>
+								</tr>
+								<tr>
+									<td>.toggleTxt08</td>
+									<td>자세히 보기</td>
+									<td>접기</td>
+								</tr>
+								<tr>
+									<td>.toggleTxt09</td>
+									<td>상세 보기</td>
+									<td>닫기</td>
+								</tr>
+								<tr>
+									<td>.toggleTxt12</td>
+									<td>지난 카드 청구서 보기</td>
+									<td>지난 카드 청구서 닫기</td>
+								</tr>
+								<tr>
+									<td>.toggleTxt13</td>
+									<td>펼치기</td>
+									<td>접기</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="guide_area2">
+					<h4 class="guide_title3">기본구조</h4>
+<div class="guide_code">
+<pre>
+&lt;div class="moreInfoArea"&gt;
+	&lt;div class="toggleWrap moreInfoWrap"&gt;
+		&lt;div class="toggleCont moreInfo" style="display:none"&gt;
+			&lt;hr class="divLine3 mt0" aria-hidden="true"&gt;
+			|-- 컨텐츠 내용 --|
+		&lt;/div&gt;
+		&lt;button type="button" class="moreOpenBtn toggleBtn"&gt;&lt;span&gt;자세히 보기&lt;/span&gt;&lt;/button&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+				</div>
+
+				<div class="guide_area2">
+					<h4 class="guide_title3">활용</h4>
+
+					<h5 class="guide_title4">활용) .boxWrapShadow + .moreInfoArea</h5>
+					<div class="boxWrapShadow">
+						<div class="boxTypeWrap delShadow">
+							<div class="guide_empty">컨텐츠 영역</div>
+						</div>
+					</div>
+					<div class="moreInfoArea">
+						<div class="toggleWrap moreInfoWrap">
+							<div class="toggleCont moreInfo pb20" style="display:none;">
+								<hr class="divLine3 mt0" aria-hidden="true">
+								<div class="guide_empty">토글 컨텐츠 영역</div>
+							</div>
+							<button type="button" class="moreOpenBtn toggleBtn toggleTxt07"><span>자세히 보기</span></button>
+						</div>
+					</div>
+
+					<h5 class="guide_title4">활용) BG색상변경 : .boxWrapShadow + .moreInfoArea &gt; .moreInfoWrap + .bgWhite</h5>
+					<div class="boxWrapShadow">
+						<div class="boxTypeWrap delShadow">
+							<div class="guide_empty">컨텐츠 영역</div>
+						</div>
+					</div>
+					<div class="moreInfoArea">
+						<div class="toggleWrap moreInfoWrap bgWhite">
+							<div class="toggleCont moreInfo pb20" style="display:none;">
+								<hr class="divLine3 mt0" aria-hidden="true">
+								<div class="guide_empty">토글 컨텐츠 영역</div>
+							</div>
+							<button type="button" class="moreOpenBtn toggleBtn"><span>자세히 보기</span></button>
+						</div>
+					</div>
+
+					<h5 class="guide_title4">활용) .boxTypeWrap &gt; .moreInfoArea</h5>
+					<div class="boxTypeWrap">
+						<div class="guide_empty">컨텐츠 영역</div>
+						<div class="toggleWrap">
+							<div class="toggleCont" style="display:none;">
+								<hr class="divLine3 mt0" aria-hidden="true">
+								<div class="guide_empty">토글 컨텐츠 영역</div>
+							</div>
+							<button type="button" class="btnMore toggleBtn toggleTxt08"><span>자세히 보기</span></button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- -------------------------------------- -->
+		</section>
+
+		<!-- ################################# -->
+		<!-- ### 툴팁 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT3">
+			<h2 class="guide_title">툴팁</h2>
+			<div class="guide_cont">
+				<h3 class="guide_title2">기본구조</h3>
+				<p class="guide_txt">툴팁간격등 케이스에 따라 안맞는 경우 다중클래스 사용</p>
+<div class="guide_code" data-label="CSS">
+<pre>
+.nhasset .tooltipWrap.w96 .tooltipCont{width:calc(100% - 40px) !important;}
+.nhasset .tooltipWrap.w92 .tooltipCont{width:calc(100% - 72px) !important;}
+.nhasset .tooltipWrap .tooltipCont.lf0{left:0 !important;}
+.nhasset .tooltipWrap .tooltipCont.lf16{left:16px !important;}
+.nhasset .tooltipWrap .tooltipCont.lf20{left:20px !important;}
+.nhasset .tooltipWrap .tooltipCont.lf36{left:36px !important;}
+.nhasset .overUnset{overflow:unset !important;}
+</pre>
+</div>
+<div class="guide_code" data-label="HTML">
+<pre>
+&lt;div class="tooltipWrap"&gt;
+	&lt;button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"&gt;&lt;span class="blind"&gt;{대체텍스트} 툴팁 열기&lt;/span&gt;&lt;/button&gt;
+	&lt;div class="tooltipCont"&gt;
+		|-- 단순 텍스트 유형 --|
+		&lt;p&gt;툴팁 내용 노출 영역&lt;/p&gt;
+
+		|-- 블릿 텍스트 유형 --|
+		&lt;div class="msaeTool"&gt;
+			&lt;ul class="popBul"&gt;
+				&lt;li&gt;툴팁 내용 노출 영역&lt;/li&gt;
+				&lt;li&gt;툴팁 내용 노출 영역&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;
+
+		&lt;button type="button" class="close" onclick="tooltipClose($(this))"&gt;&lt;span class="blind"&gt;툴팁 닫기&lt;/span&gt;&lt;/button&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+				<div class="guide_area2">
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">툴팁 열기</span></button>
+						<div class="tooltipCont">
+							<p>툴팁 내용 노출 영역</p>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="guide_cont">
+				<h3 class="guide_title2">툴팁 컨텐츠 유형</h3>
+				<style type="text/css">
+					.guide_tooltip .tooltipCont {width:calc(100% - 32px) !important;display:block !important;}
+				</style>
+				<div style="height:100px;" class="guide_tooltip">
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">툴팁 열기</span></button>
+						<div class="tooltipCont">
+							<p>툴팁 내용 노출 영역</p>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+				</div>
+				<hr class="guide_line">
+				<div style="height:150px;" class="guide_tooltip">
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">툴팁 열기</span></button>
+						<div class="tooltipCont">
+							<div class="msaeTool">
+								<ul class="popBul">
+									<li>툴팁 내용 노출 영역</li>
+									<li>툴팁 내용 노출 영역</li>
+								</ul>
+							</div>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+				</div>
+				<hr class="guide_line">
+				<div style="height:200px;" class="guide_tooltip">
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">툴팁 열기</span></button>
+						<div class="tooltipCont">
+							<div class="msaeTool">
+								<ul class="popBul">
+									<li>툴팁 내용 노출 영역</li>
+									<li>툴팁 내용 노출 영역
+										<ul class="listDash">
+											<li>툴팁 세부 내용 노출 영역</li>
+											<li>툴팁 세부 내용 노출 영역</li>
+										 </ul>
+									</li>
+								</ul>
+							</div>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<!-- -------------------------------------- -->
+		</section>
+
+		<!-- ################################# -->
+		<!-- ### 토스트팝업 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT4" style="min-height:calc(100vh - 135px)">
+			<h2 class="guide_title">토스트팝업</h2>
+<div class="guide_code" data-label="HTML">
+<pre>
+&lt;div class="tostpopupWrap" aria-live="assertive"&gt;&lt;div class="tostMsg"&gt;메세지가 노출됩니다.&lt;/div&gt;&lt;/div&gt;
+</pre>
+</div>
+<div class="guide_code" data-label="스크립트호출">
+<pre>
+tostpop(); //토스트 팝업 호출 
+function tostpop(){
+	var $tostCont = '&lt;div class="tostpopupWrap" aria-live="assertive"&gt;&lt;div class="tostMsg"&gt;메세지가 노출됩니다.&lt;/div&gt;&lt;/div&gt;'
+	$('.container').after($tostCont);
+	setTimeout(function(){
+		$('.tostpopupWrap').remove();
+	},4000);
+}
+</pre>
+</div>
+			<div style="margin:0 -16px;height:150px;transform:translateZ(0);">
+				<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg">메세지가 노출됩니다.</div></div>
+			</div>
+			<div style="margin:0 -16px;height:150px;transform:translateZ(0);">
+				<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg error">메세지가 노출됩니다.</div></div>
+			</div>
+			<!-- -------------------------------------- -->
+		</section>
+
+		<!-- ################################# -->
+		<!-- ### 기타 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT5">
+			<h2 class="guide_title">기타</h2>
+			<!-- -------------------------------------- -->
+			<!-- [RANGE SLIDE] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">RANGE SLIDE</h3>
+
+				<!-- ### 기본구조 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">기본구조</h4>
+<div class="guide_code">
+<pre>
+|-- 싱글 --|
+&lt;div class="inputRange1" data-form-mode="range"&gt;
+	&lt;div class="area"&gt;
+		&lt;input type="range" title="대체텍스트" min="0" max="100" step="1" value=""&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+|-- 멀티 --|
+&lt;div class="inputRange1" data-form-mode="range"&gt;
+	&lt;div class="area"&gt;
+		&lt;input type="range" title="대체텍스트" min="0" max="100" step="1" value=""&gt;
+		&lt;input type="range" title="대체텍스트" min="0" max="100" step="1" value=""&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+					<ul class="guide_txt">
+						<li>min : 최소 값</li>
+						<li>max : 최대 값</li>
+						<li>step : 변경되는 값 범위</li>
+					</ul>
+				</div>
+
+				<!-- ### 옵션 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">옵션(data 정의)</h4>
+					<div class="guide_tbl">
+						<table>
+							<caption>옵션 정의</caption>
+							<thead>
+								<tr>
+									<th scope="col">옵션</th>
+									<th scope="col">타입</th>
+									<th scope="col">기본값</th>
+									<th scope="col">설명</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>data-output</th>
+									<td>number</td>
+									<td>null</td>
+									<td>현재 값(output) : 갯 수 만큼 노출</td>
+								</tr>
+								<tr>
+									<th>data-datalist</th>
+									<td>number</td>
+									<td>null</td>
+									<td>label 숫자 지정: 갯 수 만큼 노출</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- ### 활용 ### -->
+				<div class="guide_area">
+					<h4 class="guide_title3">활용</h4>
+					<h5 class="guide_title4">싱글</h5>
+					<div class="inputRange1" data-form-mode="range">
+						<div class="area">
+							<input type="range" title="대체텍스트" min="0" max="100" step="1" value="50">
+						</div>
+					</div>
+
+					<hr class="guide_line mt40 mb40">
+
+					<h5 class="guide_title4">멀티</h5>
+					<div class="inputRange1" data-form-mode="range">
+						<div class="area">
+							<input type="range" title="대체텍스트" min="0" max="100" step="1" value="30">
+							<input type="range" title="대체텍스트" min="0" max="100" step="1" value="60">
+						</div>
+					</div>
+
+					<hr class="guide_line mt40 mb40">
+
+					<h5 class="guide_title4">옵션 (현재값) :  [data-output="num"]</h5>
+					<div class="inputRange1" data-form-mode="range" data-output="2">
+						<div class="area">
+							<input type="range" title="대체텍스트" min="0" max="10" step="0.5" value="3.5">
+							<input type="range" title="대체텍스트" min="0" max="10" step="0.5" value="6">
+						</div>
+					</div>
+
+					<hr class="guide_line mt40 mb40">
+
+					<h5 class="guide_title4">옵션 (Label) :  [data-datalist="num,num.num"]</h5>
+					<div class="inputRange1" data-form-mode="range" data-datalist="0,5,10">
+						<div class="area">
+							<input type="range" title="대체텍스트" min="0" max="10" step="0.5" value="2.5">
+						</div>
+					</div>
+
+					<hr class="guide_line mt40 mb40">
+
+					<h5 class="guide_title4">옵션 (현재값 + Label) :  [data-range-option="datalist"]</h5>
+					<div class="inputRange1" data-form-mode="range" data-output="2" data-datalist="0,20,40,60,80,100">
+						<div class="area">
+							<input type="range" title="대체텍스트" min="0" max="100" step="1" value="30">
+							<input type="range" title="대체텍스트" min="0" max="100" step="1" value="60">
+						</div>
+					</div>
+
+					<hr class="guide_line mt40 mb40">
+
+					<h5 class="guide_title4 t1">샘플) 조기은퇴진단</h5>
+					<ul class="guide_txt">
+						<li>외부영역에서 range의 값을 받아 와야 할 경우</li>
+						<li>외부영역에 data-range-id="ID"값과 .inputRange1의 id="ID"값을 동일하게 적용함.</li>
+					</ul>
+					<div class="formWrap line">
+						<div class="formTitN">
+							<strong>연간 기대수익률</strong>
+							<div class="inputVal t1" data-range-id="uiRangeInput2"></div>
+						</div>
+						<div class="inputRange1" id="uiRangeInput2" data-form-mode="range" data-output="1" data-datalist="1%,15%">  <!-- [D] data-datalist="min%, max%" : 범례값  -->
+							<div class="area">
+								<input type="range" title="연간 기대수익률" min="0" max="15" step="0.5" value="3">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- -------------------------------------- -->
+		</section>
+		<!-- ################################# -->
+	</div>
+	<!-- ###################################### -->
+</div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>기본정보</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		//tostpop();//토스트 팝업 호출 
+	})
+
+	function tostpop(){
+		var $tostCont = '<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg">업데이트를 완료했습니다.</div></div>'
+		$('.container').after($tostCont);
+		setTimeout(function(){
+			$('.tostpopupWrap').remove();
+		},4000)
+	}
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>DSR 계산기</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<!-- [2022-10-21] 문구수정 -->
+		<h2 class="defTit">
+			<strong>DSR 계산</strong>을 위해 <strong>새로 신청할</strong><br>
+			<strong>대출 정보</strong>를 입력해주세요
+		</h2>
+		<!-- //[2022-10-21] 문구수정 -->
+		<div class="boxTypeWrap">
+			<p class="txtt2"><strong>신청 대출구분</strong></p>
+			<ul class="selectCerti flex">
+				<li class="selectCerti01">
+					<input type="radio" id="selCerti01" name="selCerti00">
+					<label for="selCerti01">신용대출</label>
+				</li>
+				<li class="selectCerti02">
+					<input type="radio" id="selCerti02" name="selCerti00" checked>
+					<label for="selCerti02">주택담보대출</label>
+				</li>
+			</ul>
+		</div>
+
+		<div class="formWrap boxTypeWrap">
+			<div class="yeartexForm mt0">
+				<strong class="formTit disInline">대출신청금액</strong>
+				<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+					<input type="tel" title="대출신청금액" name="" id="" value="" placeholder="대출신청금액 입력">
+					<span class="unit">만원</span>
+					<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+				</div>
+				<div class="roundBtnWrap">
+					<a href="javascript:;" role="button" title="100만원 추가">+100만</a>
+					<a href="javascript:;" role="button" title="500만원 추가">+500만</a>
+					<a href="javascript:;" role="button" title="1,000만원 추가">+1,000만</a>
+					<a href="javascript:;" role="button" title="11억원 추가">+1억</a>
+				</div>
+				<!-- <p class="errorTxt">1원 이상 입력해주세요</p> --> <!-- 에러인 경우 -->
+			</div>
+			<hr class="divLine mr0 ml0">
+			<div class="justifyBox">
+				<!-- 24.02.28  NH마이데이터 DSR계산기 화면 개발 요청 관련 퍼블리싱 작업 검토 건  -->
+				<span class="txtt2 mb0"><strong>상환방식</strong></span>
+				<!-- // 24.02.28  NH마이데이터 DSR계산기 화면 개발 요청 관련 퍼블리싱 작업 검토 건  -->
+				<span class="txtb1"><strong class="pointColor">원리금균등상환</strong></span>
+			</div>
+			<hr class="divLine mr0 ml0">
+			<div class="yeartexForm">
+				<strong class="formTit disInline">대출기간</strong>
+				<div class="inputList">
+					<a href="javascript:;" title="대출기간" aria-haspopup="true">
+						<span class="selectValue">40년</span>
+						<span class="selectBtn"></span>
+					</a>
+					<select name="" title="선택해주세요">
+						<option value=""></option>
+					</select>
+				</div>
+			</div>
+			<hr class="divLine mr0 ml0">
+			<div class="yeartexForm">
+				<strong class="formTit disInline">대출이율</strong>
+				<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+					<input type="tel" title="대출이율" name="" id="" value="" placeholder="">
+					<span class="unit">%</span>
+					<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+				</div>
+				<!-- <p class="errorTxt">1원 이상 입력해주세요</p> --> <!-- 에러인 경우 -->
+			</div>
+			<div class="info_area mt10">
+				<!-- 24.02.28  NH마이데이터 DSR계산기 화면 개발 요청 관련 퍼블리싱 작업 검토 건  -->
+				<strong class="info_area_title">알아두세요</strong>
+				<ul class="listBul disc">
+					<!-- <li>제시된 대출 이율은 NH모바일아파트대출 2.0(월중신규 COFIX 6개월 변동) 기준 최저 이율 적용예시 입니다.  고객님께서 직접 입력 및 수정 가능합니다.</li> -->
+					<li>'24. 2. 26일부터 은행권의 변동금리형 주택 및 오피스텔의 DSR 산정 시 스트레스 금리*가 적용됩니다. 스트레스 금리를 반영하여 이율을 입력하시기 바랍니다.
+						<ul class="listNoDash">
+							<li>* 스트레스 금리 : 과거 5년 중 예금은행 가계대출 신규취급 가중평균금리의 최고금리와 현재금리의 차이 및 시기별 가중치를 기준으로 매년 6, 12월 변경 ('24. 6월까지는 0%~0.38% 적용)</li>
+							<li class="mt0">예시) 예상 대출 금리(4%) + 스트레스 금리(0.38%) = DSR 적용금리(4.38%)</li>
+						</ul>
+					</li>
+				</ul>
+				<!-- // 24.02.28  NH마이데이터 DSR계산기 화면 개발 요청 관련 퍼블리싱 작업 검토 건  -->
+			</div>
+		</div>
+
+		<!-- [2022-10-21] 수정 -->
+		<div class="formWrap boxTypeWrap">
+			<div class="txtt2"><strong>기존 대출상환 여부 선택</strong>
+				<div class="tooltipWrap w92"> <!-- [2022-11-10] 툴팁위치 수정 -->
+					<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">대출잔액 툴팁 열기</span></button>
+					<div class="tooltipCont lf36"> <!-- [2022-11-10] 툴팁위치 수정 -->
+						<p>기존 대출 상환 후 새로운 대출로 갈아타는 경우, 상환할 기존 대출을 제외하여 DSR을 계산합니다.</p>
+						<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+					</div>
+				</div>
+			</div>
+			<div class="boxRadio">
+				<div class="boxRadioInn">
+					<span>
+						<input name="rdo03" id="rdo06" type="radio" checked="checked">
+						<label for="rdo06">상환 예정</label>
+					</span>
+				</div>
+				<div class="boxRadioInn">
+					<span>
+						<input name="rdo03" id="rdo07" type="radio">
+						<label for="rdo07">전부 유지 예정</label>
+					</span>
+				</div>
+			</div>
+		</div>
+		<!-- //[2022-10-21] 수정 -->
+
+		<div class="areaBtnDefault">
+			<a href="javascript:;" class="btnPressDefault" role="button">취소</a>
+			<a href="javascript:;" class="btnPressPoint" role="button">DSR 계산하기</a> <!--활성화 class btnPressPoint --->
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

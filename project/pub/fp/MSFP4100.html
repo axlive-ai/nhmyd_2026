@@ -1,0 +1,114 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>금융플래너 - 출금예정 관리</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">출금예정 관리</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">			
+            <h2 class="defTit"><strong>출금계좌에 출금 항목을 연결하고<br> 출금 예정 안내를 받아보세요.</strong></h2><!--12.28 문구 수정-->
+            <!-- <p class="subTxt">출금계좌에 출금 항목을 연결하고 출금예정 안내를 받아보세요.</p> -->
+            <div class="boxTypeWrap accTopItemList">
+                <h2>출금계좌</h2>
+                <div class="cont">
+                    <span class="imgWrap">
+                        <img src="../../images/logos/AAAZ0000.png" alt="농협중앙회 로고" class="imgLogo">
+                    </span>
+                    <div class="accTxt">
+                        <span>NH주거래우대통장 (비대면 실명확인) </span>   
+                        <span class="addTxt">NH농협은행 302-1722-8890</span>
+                    </div>
+                </div>
+               
+            </div> 
+            
+            <div class="boxTypeWrap accontfpWrap">
+                <h2>연결 완료된 출금항목</h2>
+                <ul class="accontfpList">
+                    <li>
+                        <span class="left">
+                            <span class="title">[직접등록]</span>
+                            <!-- <span class="accountName">$직접등록일정명$</span> --> <!--12.30 삭제-->
+                        </span>
+                        <button type="button" class="contBtn01 green" title="연결해제 선택">연결해제</button>
+                    </li>
+                    <li>
+                        <span class="left">
+                            <span class="title">[지방세] 주민세</span>
+                            <span class="accountName">7979352222</span>
+                        </span>
+                        <button type="button" class="contBtn01 green" title="연결해제 선택">연결해제</button>
+                    </li>
+                    <li>
+                        <span class="left">
+                            <span class="title">[기관명] 카드대금결제</span>
+                        </span>
+                        <button type="button" class="contBtn01 gray" title="연결해제 선택">연결해제</button>
+                    </li>
+                    <li>
+                        <span class="left">
+                            <span class="title">[SK텔레콤] 휴대폰</span>
+                            <span class="accountName">010*95**1****</span>
+                        </span>
+                        <button type="button" class="contBtn01 gray" title="연결해제 선택">연결해제</button>
+                    </li>
+                    <li>
+                        <span class="left">
+                            <span class="title">[농협생명보험] 실속만점</span>
+                            <span class="accountName">1234567890123</span>
+                        </span>
+                        <button type="button" class="contBtn01 gray" title="연결해제 선택">연결해제</button>
+                    </li>
+                    <li>
+                        <span class="left">
+                            <span class="title">[기관명] 계좌명</span>
+                            <span class="accountName">계좌번호</span>
+                        </span>
+                        <button type="button" class="contBtn01 gray" title="연결해제 선택">연결해제</button>
+                    </li>
+                </ul>
+                <div class="mb5">
+                    <a href="javascript:;" class="btnBodyLine" role="button" title="출금 항목 연결하기로 이동하기">출금 항목 연결하기</a>
+                </div>
+               
+            </div>
+            <div class="info_area">
+                <ul class="listBul disc">
+                    <li>[연결해제]  버튼을 누르면 출금항목 연결이 해제됩니다.</li>
+                    <li>자동 연동 출금항목은 연결해제가 불가능합니다. </li>
+                </ul>
+            </div>
+            <div class="areaBtnDefault">
+                <a href="javascript:;" class="btnPressPoint" role="button">저장</a>
+            </div>
+		</div>
+	</div>
+
+</body>
+</html>

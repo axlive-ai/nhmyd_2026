@@ -1,0 +1,118 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>범칙금 고지내역</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script type="text/javascript">
+$(function(){
+    fullLayerPop();
+	//popCenter();
+});
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>범칙금 고지내역</h1>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<div class="content">
+			<div class="btnWrap page">
+				<a href="javascript:;" onclick="fullLayerPop();return false;" aria-haspopup="true" role="button" class="btn">fullLayerPop</a>
+			</div>
+		</div>
+	</div>
+</div>
+ 
+
+<div class="nhasset popWrap fullLayerPop" role="dialog">
+	<div class="popInner">
+		<h1>범칙금 고지내역</h1>
+		<div class="popCont grayPop">
+			<div class="boxTypeWrap">
+				<ul class="listTypeTable">
+					<li class="pt0 pb10">
+						<h3 class="defSubTit2 borderNone">기본정보</h3>
+						<div class="innerBoxWrap">
+							<dl>
+								<dt>고지서번호</dt>
+								<dd>111914564756432</dd>
+							</dl>
+							<dl>
+								<dt>차량번호</dt>
+								<dd>01가0101</dd>
+							</dl>
+							<dl>
+								<dt>위반일시</dt>
+								<dd>2021.01.01 11:22</dd>
+							</dl>
+							<dl>
+								<dt>위반장소</dt>
+								<dd>동해선 44.2km (울산)</dd>
+							</dl>
+							<dl>
+								<dt>위반내용</dt>
+								<dd>속도위반(20km/H이하)</dd>
+							</dl>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="boxTypeWrap">
+				<ul class="listTypeTable">
+					<li class="pt0 pb10">
+						<h3 class="defSubTit2 borderNone">납부정보</h3>
+						<div class="innerBoxWrap">
+							<dl>
+								<dt>납부금액</dt>
+								<dd>365,000원</dd>
+							</dl>
+							<dl>
+								<dt>납부기한</dt>
+								<dd>2021.02.01</dd>
+							</dl>
+							<dl>
+								<dt>납부계좌</dt>
+								<dd>123456789</dd>
+							</dl>
+							<dl>
+								<dt>관할관서</dt>
+								<dd>울산지방경찰청</dd>
+							</dl>
+							<dl>
+								<dt>간편납부번호</dt>
+								<dd><span>561-989-123456789</span><br><a href="javascript:;" role="button" title="간편납부번호 복사" class="contBtn01 mt5">복사</a></dd>
+							</dl>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class="popBtnWrap">
+			<div class="popBtn">
+				<a href="javascript:;" class="confirmBtn" role="button">납부하기</a>
+			</div>
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

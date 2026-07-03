@@ -1,0 +1,417 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>[P]지역선택 | 주말약국찾기 | 헬스케어</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function() {
+		fullLayerPop();
+	});
+</script>
+</head>
+<body>
+<div class="wrapper nhasset"><!-- 바닥페이지 --></div>
+
+<!-- ###################################### -->
+<!-- ### [팝업] 지역 선택 팝업 ### -->
+<!-- ###################################### -->
+<div class="nhasset popWrap fullLayerPop">
+	<div class="popInner">
+		<h1>지역 선택</h1>
+		<div class="popCont pb0">
+			<div class="areaTabWrap">
+				<div class="tabWrap type06">
+					<ul role="tablist">
+						<li role="presentation"><a href="javascript:;" role="tab" class="active on" aria-label="" aria-selected="true">서울</a></li>
+						<li role="presentation"><a href="javascript:;" role="tab" class="" aria-label="" aria-selected="false">부산</a></li>
+						<li role="presentation"><a href="javascript:;" role="tab" class="" aria-label="" aria-selected="false">대구</a></li>
+						<li role="presentation"><a href="javascript:;" role="tab" class="" aria-label="" aria-selected="false">인천</a></li>
+						<li role="presentation"><a href="javascript:;" role="tab" class="" aria-label="" aria-selected="false">광주</a></li>
+						<li role="presentation"><a href="javascript:;" role="tab" class="" aria-label="" aria-selected="false">대전</a></li>
+						<li role="presentation"><a href="javascript:;" role="tab" class="" aria-label="" aria-selected="false">울산</a></li>
+						<li role="presentation"><a href="javascript:;" role="tab" class="" aria-label="" aria-selected="false">세종</a></li>
+						<li role="presentation"><a href="javascript:;" role="tab" class="" aria-label="" aria-selected="false">경기</a></li>
+						<li role="presentation"><a href="javascript:;" role="tab" class="" aria-label="" aria-selected="false">강원</a></li>
+						<li role="presentation"><a href="javascript:;" role="tab" class="" aria-label="" aria-selected="false">충북</a></li>
+						<li role="presentation"><a href="javascript:;" role="tab" class="" aria-label="" aria-selected="false">충남</a></li>
+						<li role="presentation"><a href="javascript:;" role="tab" class="" aria-label="" aria-selected="false">전북</a></li>
+						<li role="presentation"><a href="javascript:;" role="tab" class="" aria-label="" aria-selected="false">전남</a></li>
+						<li role="presentation"><a href="javascript:;" role="tab" class="" aria-label="" aria-selected="false">경북</a></li>
+						<li role="presentation"><a href="javascript:;" role="tab" class="" aria-label="" aria-selected="false">경남</a></li>
+						<li role="presentation"><a href="javascript:;" role="tab" class="" aria-label="" aria-selected="false">제주</a></li>
+					</ul>
+				</div>
+				<div class="tabContWrap type06">
+					<div class="tabCont01" aria-label="서울 탭" style="display:block;">
+						<div class="selChkBox">
+							<ul>
+								<!-- [반복] -->
+								<li>
+									<span>
+										<input type="radio" id="seoul01" name="rdo" aria-label="서울특별시_강남구"> <!-- [접근성_2024] aria-label 추가 : 개발소스 확인해 보니 id와 동일한 값을 aria-label에도 적용해 주시면 될 것 같습니다. -->
+										<label for="seoul01" aria-hidden="true">강남구</label> <!-- [접근성_2024] aria-hidden="true" 추가 -->
+									</span>
+								</li>
+								<!-- // -->
+								<li>
+									<span>
+										<input type="radio" id="seoul02" name="rdo" aria-label="서울특별시_강동구">
+										<label for="seoul02" aria-hidden="true">강동구</label>
+									</span>
+								</li>
+								<li>
+									<span>
+										<input type="radio" id="seoul03" name="rdo" aria-label="서울특별시_강북구">
+										<label for="seoul03" aria-hidden="true">강북구</label>
+									</span>
+								</li>
+								<li>
+									<span>
+										<input type="radio" id="seoul04" name="rdo" aria-label="서울특별시_강서구">
+										<label for="seoul04" aria-hidden="true">강서구</label>
+									</span>
+								</li>
+								<li>
+									<span>
+										<input type="radio" id="seoul05" name="rdo" aria-label="서울특별시_관악구">
+										<label for="seoul05" aria-hidden="true">관악구</label>
+									</span>
+								</li>
+								<li>
+									<span>
+										<input type="radio" id="seoul06" name="rdo" aria-label="서울특별시_광진구">
+										<label for="seoul06" aria-hidden="true">광진구</label>
+									</span>
+								</li>
+								<li>
+									<span>
+										<input type="radio" id="seoul07" name="rdo" aria-label="서울특별시_구로구">
+										<label for="seoul07" aria-hidden="true">구로구</label>
+									</span>
+								</li>
+								<li>
+									<span>
+										<input type="radio" id="seoul08" name="rdo" aria-label="서울특별시_금천구">
+										<label for="seoul08" aria-hidden="true">금천구</label>
+									</span>
+								</li>
+								<li>
+									<span>
+										<input type="radio" id="seoul09" name="rdo" aria-label="서울특별시_노원구">
+										<label for="seoul09" aria-hidden="true">노원구</label>
+									</span>
+								</li>
+								<li>
+									<span>
+										<input type="radio" id="seoul10" name="rdo" aria-label="서울특별시_도봉구">
+										<label for="seoul10" aria-hidden="true">도봉구</label>
+									</span>
+								</li>
+								<li>
+									<span>
+										<input type="radio" id="seoul11" name="rdo" aria-label="서울특별시_동대문구">
+										<label for="seoul11" aria-hidden="true">동대문구</label>
+									</span>
+								</li>
+								<li>
+									<span>
+										<input type="radio" id="seoul12" name="rdo" aria-label="서울특별시_동작구">
+										<label for="seoul12" aria-hidden="true">동작구</label>
+									</span>
+								</li>
+								<li>
+									<span>
+										<input type="radio" id="seoul13" name="rdo" aria-label="서울특별시_마포구">
+										<label for="seoul13" aria-hidden="true">마포구</label>
+									</span>
+								</li>
+								<li>
+									<span>
+										<input type="radio" id="seoul14" name="rdo" aria-label="서울특별시_서대문구">
+										<label for="seoul14" aria-hidden="true">서대문구</label>
+									</span>
+								</li>
+								<li>
+									<span>
+										<input type="radio" id="seoul15" name="rdo" aria-label="서울특별시_서초구">
+										<label for="seoul15" aria-hidden="true">서초구</label>
+									</span>
+								</li>
+								<li>
+									<span>
+										<input type="radio" id="seoul16" name="rdo" aria-label="서울특별시_성동구">
+										<label for="seoul16" aria-hidden="true">성동구</label>
+									</span>
+								</li>
+								<li>
+									<span>
+										<input type="radio" id="seoul17" name="rdo" aria-label="서울특별시_성북구">
+										<label for="seoul17" aria-hidden="true">성북구</label>
+									</span>
+								</li>
+								<li>
+									<span>
+										<input type="radio" id="seoul18" name="rdo" aria-label="서울특별시_송파구">
+										<label for="seoul18" aria-hidden="true">송파구</label>
+									</span>
+								</li>
+								<li>
+									<span>
+										<input type="radio" id="seoul19" name="rdo" aria-label="서울특별시_양천구">
+										<label for="seoul19" aria-hidden="true">양천구</label>
+									</span>
+								</li>
+								<li>
+									<span>
+										<input type="radio" id="seoul20" name="rdo" aria-label="서울특별시_영등포구">
+										<label for="seoul20" aria-hidden="true">영등포구</label>
+									</span>
+								</li>
+								<li>
+									<span>
+										<input type="radio" id="seoul21" name="rdo" aria-label="서울특별시_은평구">
+										<label for="seoul21" aria-hidden="true">은평구</label>
+									</span>
+								</li>
+								<li>
+									<span>
+										<input type="radio" id="seoul22" name="rdo" aria-label="서울특별시_종로구">
+										<label for="seoul22" aria-hidden="true">종로구</label>
+									</span>
+								</li>
+								<li>
+									<span>
+										<input type="radio" id="seoul23" name="rdo" aria-label="서울특별시_중구">
+										<label for="seoul23" aria-hidden="true">중구</label>
+									</span>
+								</li>
+								<li>
+									<span>
+										<input type="radio" id="seoul24" name="rdo" aria-label="서울특별시_중랑구">
+										<label for="seoul24" aria-hidden="true">중랑구</label>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tabCont02" aria-label="부산 탭" style="display:none;">
+						<div class="selChkBox">
+							<ul>
+								<li>
+									<span>
+										<input type="radio" id="busan01" name="rdo" aria-label="시_구">
+										<label for="busan01" aria-hidden="true">구 이름</label>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tabCont03" aria-label="대구 탭" style="display:none;">
+						<div class="selChkBox">
+							<ul>
+								<li>
+									<span>
+										<input type="radio" id="daegu01" name="rdo" aria-label="시_구">
+										<label for="daegu01" aria-hidden="true">구 이름</label>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tabCont04" aria-label="인천 탭" style="display:none;">
+						<div class="selChkBox">
+							<ul>
+								<li>
+									<span>
+										<input type="radio" id="incheon01" name="rdo" aria-label="시_구">
+										<label for="incheon01" aria-hidden="true">구 이름</label>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tabCont05" aria-label="광주 탭" style="display:none;">
+						<div class="selChkBox">
+							<ul>
+								<li>
+									<span>
+										<input type="radio" id="gwangju01" name="rdo" aria-label="시_구">
+										<label for="gwangju01" aria-hidden="true">구 이름</label>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tabCont06" aria-label="대전 탭" style="display:none;">
+						<div class="selChkBox">
+							<ul>
+								<li>
+									<span>
+										<input type="radio" id="daejeon01" name="rdo" aria-label="시_구">
+										<label for="daejeon01" aria-hidden="true">구 이름</label>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tabCont07" aria-label="울산 탭" style="display:none;">
+						<div class="selChkBox">
+							<ul>
+								<li>
+									<span>
+										<input type="radio" id="ulsan01" name="rdo" aria-label="시_구">
+										<label for="ulsan01" aria-hidden="true">구 이름</label>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tabCont08" aria-label="세종 탭" style="display:none;">
+						<div class="selChkBox">
+							<ul>
+								<li>
+									<span>
+										<input type="radio" id="sejong01" name="rdo" aria-label="시_구">
+										<label for="sejong01" aria-hidden="true">구 이름</label>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tabCont09" aria-label="경기 탭" style="display:none;">
+						<div class="selChkBox">
+							<ul>
+								<li>
+									<span>
+										<input type="radio" id="gyeonggi01" name="rdo" aria-label="시_구">
+										<label for="gyeonggi01" aria-hidden="true">구 이름</label>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tabCont010" aria-label="강원 탭" style="display:none;">
+						<div class="selChkBox">
+							<ul>
+								<li>
+									<span>
+										<input type="radio" id="gangwon01" name="rdo" aria-label="시_구">
+										<label for="gangwon01" aria-hidden="true">구 이름</label>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tabCont011" aria-label="충북 탭" style="display:none;">
+						<div class="selChkBox">
+							<ul>
+								<li>
+									<span>
+										<input type="radio" id="chungbuk01" name="rdo" aria-label="시_구">
+										<label for="chungbuk01" aria-hidden="true">구 이름</label>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tabCont012" aria-label="충남 탭" style="display:none;">
+						<div class="selChkBox">
+							<ul>
+								<li>
+									<span>
+										<input type="radio" id="chungnam01" name="rdo" aria-label="시_구">
+										<label for="chungnam01" aria-hidden="true">구 이름</label>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tabCont013" aria-label="전북 탭" style="display:none;">
+						<div class="selChkBox">
+							<ul>
+								<li>
+									<span>
+										<input type="radio" id="jeonbuk01" name="rdo" aria-label="시_구">
+										<label for="jeonbuk01" aria-hidden="true">구 이름</label>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tabCont014" aria-label="전남 탭" style="display:none;">
+						<div class="selChkBox">
+							<ul>
+								<li>
+									<span>
+										<input type="radio" id="jeonnam01" name="rdo" aria-label="시_구">
+										<label for="jeonnam01" aria-hidden="true">구 이름</label>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tabCont015" aria-label="경북 탭" style="display:none;">
+						<div class="selChkBox">
+							<ul>
+								<li>
+									<span>
+										<input type="radio" id="gyeongbuk01" name="rdo" aria-label="시_구">
+										<label for="gyeongbuk01" aria-hidden="true">구 이름</label>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tabCont016" aria-label="경남 탭" style="display:none;">
+						<div class="selChkBox">
+							<ul>
+								<li>
+									<span>
+										<input type="radio" id="gyeongnam01" name="rdo" aria-label="시_구">
+										<label for="gyeongnam01" aria-hidden="true">구 이름</label>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tabCont017" aria-label="제주 탭" style="display:none;">
+						<div class="selChkBox">
+							<ul>
+								<li>
+									<span>
+										<input type="radio" id="jeju01" name="rdo" aria-label="시_구">
+										<label for="jeju01" aria-hidden="true">구 이름</label>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="popBtnWrap">
+			<div class="popBtn">
+				<a href="javascript:;" class="confirmBtn" role="button">적용하기</a>
+			</div>
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" aria-label="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+		</div>
+	</div>
+</div>
+<!-- ###################################### -->
+</body>
+</html>

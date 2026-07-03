@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>자산연결</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset bgWhite">
+	<!-- header -->
+	<div class="header">
+		<!-- <a href="javascript:;" class="btnBack" role="button"><span class="blind">이전화면으로</span></a> -->
+		<h1><a href="javascript:;" role="text">자산연결</a></h1>
+		<a href="javascript:;" class="btnEtc">나가기</a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+
+		<div class="stepWrap">
+			<ol role="img" aria-label="총 4단계 중 1번째 단계"> <!--  aria-label= -> aria-label 오타수정 -->
+				<li class="active"><span>1</span></li>
+				<li><span>2</span></li>
+				<li><span>3</span></li>
+				<li><span>4</span></li>				
+			</ol>
+		</div>
+
+		<div class="tabWrap type01 mt10">
+			<ul>
+				<li><a href="javascript:;" aria-selected="true" class="active on">추천기관으로 연결</a></li>
+				<li><a href="javascript:;">연결기관 직접선택</a></li>
+			</ul>
+		</div>
+		<div class="tabContWrap type01">
+			<div class="tabCont01" aria-label="추천기관으로 연결 탭">
+				<div class="recommendGroupWrap">
+					<ul>
+						<li>
+							<span class="title">은행 (16개)</span>
+							<div class="recommendGroup">농축협, 카카오뱅크, 신한은행, 국민은행, 하나은행, 우리은행, 케이뱅크, 기업은행, 신협, 토스뱅크, 새마을금고, SC제일은행, 우체국, 부산은행, 대구은행, 광주은행</div>
+						</li>
+						<li>
+							<span class="title">카드 (8개)</span>
+							<div class="recommendGroup">신한카드, 삼성카드, 현대카드, 국민카드, 카카오뱅크, 롯데카드, 하나카드, 우리카드</div>
+						</li>
+						<li>
+							<span class="title">보험 (10개)</span>
+							<div class="recommendGroup">삼성화재, 농협생명보험, DB손해보험, KB손해보험, 현대해상화재보험, 농협손해보험, 삼성생명보험, 메리츠화재해상보험, 신한라이프생명보험, 한화생명보험</div>
+						</li>
+						<li>
+							<span class="title">전자금융 (3개)</span>
+							<div class="recommendGroup">카카오페이, 카카오, 네이버파이낸셜</div>
+						</li>
+						<li>
+							<span class="title">증권 (7개)</span>
+							<div class="recommendGroup">NH투자증권, 한국투자증권, 미래에셋증권, 키움증권, 삼성증권, KB증권, 신한금융투자</div>
+						</li>
+						<li>
+							<span class="title">통신 (3개)</span>
+							<div class="recommendGroup">SK텔레콤, KT, LG유플러스</div>
+						</li>
+						<li>
+							<span class="title">공공기관 (3개)</span>
+							<div class="recommendGroup">국민건강보험공단, 국민연금공단, 공무원연금공단</div>
+						</li>
+					</ul>
+				</div>
+				<div class="areaBtnDefault">
+					<a href="javascript:;" class="btnPressPoint" role="button">추천기관 50개 연결하기</a>
+				</div>
+			</div><!-- //.tabCont01 -->
+
+			<div class="tabCont02" aria-label="연결기관 직접선택 탭" style="display:none">
+			연결기관 직접선택</div><!-- //.tabCont02 -->
+		</div><!-- //.tabContWrap -->
+	</div>	
+</div>
+
+<script type="text/javascript">
+
+//업권선택 검색영역
+function anchorSearch_return() {
+	$('.anchorListdWrap').removeClass('anchorSearch');
+	$('html, body').scrollTop(0)
+}
+
+$(document).ready(function(){
+	$('.anchorSearchArea input[type="text"]').click(function(){
+		$('.anchorListdWrap').addClass('anchorSearch');
+		//$('html, body').scrollTop(60)
+	});
+
+	//퍼블 확인용 스크립트 
+	$('.anchorSubject a').each(function(){
+		var $this = $(this);
+		var $thisAttr = $this.attr('anchor-title');
+		$('.wrap_bank_check').each(function(){
+			var $thisTarget = $(this);
+			var $thisLength = $thisTarget.find('li').length;
+			if ($(this).attr('anchor-cont') == $thisAttr ) {
+				$this.children('.count').text($thisLength);
+			}
+		});
+	});
+
+	//기관로고 변경 퍼블확인용
+	$('.wrap_bank_check ul li img').each(function(){
+		var $this = $(this).attr('src').split('/');
+		var $thisLangth = $this[$this.length-1];
+		var $thisLangth_num = $thisLangth.length;
+		var $refilename = $thisLangth.substring(2,10);
+		if ($thisLangth_num == 14) {
+			$(this).attr('src','../../images/logos/' + $refilename + '.png')
+		}
+	});
+
+	$('.wrap_bank_check ul li img').error(function(){
+		$(this).attr('src','../../images/logos/logo_null.png');
+	});
+
+	//기관선택 수 제한
+	$('.anchorListdWrap input[type="checkbox"]').each(function(){
+		var $this = $(this);
+		$this.on('change',function(){
+			var $chek_count = $('.anchorListdWrap input[type="checkbox"]:checked').length;
+			if ($chek_count > 3) {
+				alert('3개 기관을 초과 하였습니다.')
+				$this.prop('checked',false)
+			}
+		});
+	});
+	anchorWrap()
+});
+
+//업권선택 앵커이동
+function anchorWrap() {
+	$('.anchorListdWrap').each(function(){
+		$('.anchorListdWrap h3.tit').attr('tabindex','-1');
+		var $winHeight = $(window).outerHeight();
+		var $heightHeader = $('.header').outerHeight();
+		var $heightTab = $('.anchorSubject').outerHeight();
+		var $heightTab = $('.anchorListd').outerHeight();
+		$('.anchorContWrap .wrap_bank_check:last-child').css('min-height',$winHeight - ($heightHeader + $heightTab + 140));
+	});
+
+	$('.anchorSubject a').click(function(){
+		var $this = $(this);
+		var $thisAttr = $this.attr('anchor-title');
+		$('.wrap_bank_check').each(function(){
+			var $thisTarget = $(this);
+			var $targetPo = $(this).offset().top;
+			var $heightHeader = $('.header').outerHeight();
+			var $heightTab = $('.anchorSubject').outerHeight();
+			var $hightM = $heightHeader + $heightTab;
+			if ($(this).attr('anchor-cont') == $thisAttr ) {
+				$(this).addClass('active');
+				$('html, body').stop().animate({scrollTop:$targetPo - $hightM + 10},400,function(){
+					$('.anchorSubject > li').removeClass('selected');
+					$this.parent('li').addClass('selected');
+					$thisTarget.find('h3.tit').focus();
+				});
+			}
+		});
+	});
+
+	$('.anchorListdWrap').each(function(){	
+		$(window).on('scroll',function(){
+			$('.wrap_bank_check').each(function(){
+				var $targetPo = $(this).offset().top;
+				var $heightHeader = $('.header').outerHeight();
+				var $heightTab = $('.anchorSubject').outerHeight();
+				var $hightM = $heightHeader + $heightTab;
+				var $thisCur = $targetPo - $hightM ;
+				var $scrollTop = $('html, body').scrollTop();
+				var $thisAttr = $(this).attr('anchor-cont');
+				var $targetAttr = $('anchorSubject a').attr('anchor-title');
+				var $ulListNum = $('.anchorSubject > li').length -1;
+				if ($thisCur <= $scrollTop ) {
+					$('.anchorSubject > li > a').each(function(){
+						if ($(this).attr('anchor-title') == $thisAttr ) {
+							$('.anchorSubject > li').removeClass('selected');
+							$('.anchorSubject > li a').attr('aria-selected','false');
+							$(this).parent('li').addClass('selected');
+							$(this).attr('aria-selected','true');
+							$('.anchorSubject > li.selected').each(function(){
+								var $thisIndex = $(this).index();
+								if ($ulListNum > $thisIndex) {
+									var $thispo_left = $(this).position().left;
+									$('.anchorSubjectWrap').scrollLeft($thispo_left)
+								}else{
+									var $thisWidth = $(this).outerWidth();
+									var $thispo_left = $(this).position().left;
+									$('.anchorSubjectWrap').scrollLeft($thispo_left + $thisWidth)
+								}
+							});
+						}
+					});
+				}
+			});
+		});
+	});
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>금융플래너 - 금융일정등록</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">금융일정등록</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">			
+			<div class="boxTypeWrap">
+				<div class="tabWrap type08">
+					<ul role="tablist">
+						<li role="presentation"><a href="javascript:;" >직접등록</a></li>
+						<li role="presentation"><a href="javascript:;"  class="active on">공과금</a></li>
+					</ul>
+				</div>
+				<div class="tabContWrap type08">
+					<div class="tabCont01" aria-label="직접등록 탭" style="display: none;">
+						<h2 class="defTit">금융일정을 직접 등록해보세요.</h2>
+						<div class="formWrap">
+							<div class="titListBox">
+								<ul class="lineType">
+									<li>
+										<div class="defSubTit2">
+											<strong>날짜</strong>
+										</div>
+										<div class="calendarForm">
+											<div class="cal">
+												<div class="inputList">
+													<input type="text" value="2020.09.03" title="금융일정 등록 날짜선택" placeholder="" readonly="readonly">
+													<a href="javascript:;" class="btnCalendar" title="금융일정 등록 날짜선택" role="button"><span class="blind">날짜선택</span></a>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="defSubTit2">
+											<strong>내용</strong>
+										</div>
+										<div class="inputList"> <!-- 에러인 경우 .error 추가-->
+											<input type="text" title="내용입력" name="" id="" value="" placeholder="내용을 입력하세요 (최대 25자)">
+											<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+										</div>
+										<div class="roundBtnWrap">
+											<a href="javascript:;" role="button">모임회비</a>
+											<a href="javascript:;" role="button">학원비</a>
+											<a href="javascript:;" role="button">용돈</a>
+											<a href="javascript:;" role="button">월세</a>
+											<a href="javascript:;" role="button">공과금</a>
+										</div>
+									</li>
+									<li>
+										<div class="defSubTit2">
+											<strong>금액</strong>
+										</div>
+										<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+											<input type="tel" title="양도가액" name="" id="" value="" placeholder="1~ 999,999,999원">
+											<span class="unit">원</span>
+											<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+										</div>
+										<div class="roundBtnWrap">
+											<a href="javascript:;" role="button" title="10만원 추가">+1만</a>
+											<a href="javascript:;" role="button" title="50만원 추가">+5만</a>
+											<a href="javascript:;" role="button" title="100만원 추가">+10만</a>
+											<a href="javascript:;" role="button" title="100만원 추가">+50만</a>
+											<a href="javascript:;" role="button" title="300만원 추가">+100만</a>
+										</div>
+									</li>
+									<li>
+										<div class="defSubTit2">
+											<strong>반복설정</strong>
+										</div>
+										<div class="boxRadio">
+											<div class="boxRadioInn">
+												<span>
+													<input name="rdo00" id="rdo001" type="radio" checked="checked">
+													<label for="rdo001">반복안함</label>
+												</span>
+											</div>
+											<div class="boxRadioInn">
+												<span>
+													<input name="rdo00" id="rdo002" type="radio" >
+													<label for="rdo002">매주</label>
+												</span>
+											</div>
+											<div class="boxRadioInn">
+												<span>
+													<input name="rdo00" id="rdo003" type="radio" >
+													<label for="rdo003">매월</label>
+												</span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="defSubTit2">
+											<strong>일정종료일</strong>
+										</div>
+										<div class="inputList">
+											<input type="text" title="일정종료일" name="" id="" value="YYYY.MM.DD" readonly="">
+                                        </div>
+                                        <!--매주 선택 케이스-->
+                                        <div class="inputList">
+											<a href="javascript:;" title="반복설정 매주 선택" aria-haspopup="true">
+												<span class="selectValue">2023.03.10</span>
+												<span class="selectBtn"></span>
+											</a>
+											<select name="" title="선택해주세요">
+												<option value=""></option>
+											</select>
+                                        </div>
+                                         <!--//매주 선택 케이스-->
+										<p class="listDash">일정은 최대 5년까지 등록됩니다.</p>
+										<div class="wrapFormTooltip mt25">
+											<div class="formHolder check">
+						                        <input type="checkbox" id="type_all01" checked="" class="chekTypeOther">
+						                        <label class="check" for="type_all01">출금계좌 연결</label>
+						                    </div>
+						                    <!-- tootip -->
+											<div class="tooltipWrap">
+												<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">출금계좌 연결 툴팁 열기</span></button>
+												<div class="tooltipCont">
+													<p>출금계좌를 연결하시면 금융일정 전에 잔액 부족 여부를 안내해 드립니다.</p>
+													<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+												</div>
+											</div>
+											<!-- //tootip -->
+					                    </div>
+                                    </li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="tabCont02" aria-label="공과금 탭" style="display:block">
+						<div class="formWrap">
+							<div class="titListBox">
+								<ul class="lineType">
+									<li>
+										<div class="defSubTit2">
+											<strong>공과금 종류</strong>
+										</div>
+										<div class="inputList">
+											<a href="javascript:;" title="공과금 종류 선택" aria-haspopup="true">
+												<span class="selectValue">지로</span>
+												<span class="selectBtn"></span>
+											</a>
+											<select name="" title="선택해주세요">
+												<option value=""></option>
+											</select>
+										</div>
+									</li>
+									<li>
+										<div class="defSubTit2">
+											<strong>지로번호</strong>
+											<!-- tootip -->
+											<div class="tooltipWrap">
+												<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">지로번호 안내 툴팁 열기</span></button>
+												<div class="tooltipCont">
+													<div class="imgWrap"><img src="../../images/contents/giro_sample.png" alt="지로번호 샘플 이미지"></div>
+													<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+												</div>
+											</div>
+											<!-- //tootip -->
+										</div>
+										<div class="inputList"> <!-- 에러인 경우 .error 추가-->
+											<input type="tel" class="al" title="지로번호 7자리 입력" name="" id="" value="" placeholder="지로번호 7자리를 입력하세요">
+											<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+										</div>
+									</li>
+									<li>
+										<div class="defSubTit2">
+											<strong>전자납부번호</strong>
+											<!-- tootip -->
+											<div class="tooltipWrap">
+												<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">전자납부번호 안내 툴팁 열기</span></button>
+												<div class="tooltipCont">
+													<div class="imgWrap"><img src="../../images/contents/giro_sample2.png" alt="전자납부번호 샘플 이미지"></div>
+													<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+												</div>
+											</div>
+											<!-- //tootip -->
+										</div>
+										<div class="inputList"> <!-- 에러인 경우 .error 추가-->
+											<input type="tel" class="al" title="전자납부번호 7~10자리 입력" name="" id="" value="" placeholder="전자납부번호 7~10자리를 입력하세요">
+											<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+										</div>
+									</li>
+									<li class="listBtnArea">
+										<div class="areaBodyBtnFull mt20">
+											<a href="javascript:;" class="btnBodyLine" role="button">조회</a>
+										</div>
+									</li>
+									<li>
+										<div class="defSubTit2">
+											<strong>공과금 내용</strong>
+										</div>
+										<div class="inputList"> <!-- 에러인 경우 .error 추가-->
+											<input type="text" title="공과금 내용입력" name="" id="" value="" placeholder="내용을 입력하세요 (최대 25자리)">
+											<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+										</div>
+										<div class="wrapFormTooltip mt25">
+											<div class="formHolder check">
+						                        <input type="checkbox" id="type_all01" checked="" class="chekTypeOther">
+						                        <label class="check" for="type_all01">출금계좌 연결</label>
+						                    </div>
+						                    <!-- tootip -->
+											<div class="tooltipWrap">
+												<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">평가손익 툴팁 열기</span></button>
+												<div class="tooltipCont">
+													<p>출금계좌를 연결하시면 금융일정 전에 잔액 부족 여부를 안내해 드립니다.</p>
+													<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+												</div>
+											</div>
+											<!-- //tootip -->
+					                    </div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="areaBtnDefault">
+				<a href="javascript:;" class="btnPressDefault" role="button">취소</a>
+				<a href="javascript:;" class="btnPressPoint" role="button">저장</a>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

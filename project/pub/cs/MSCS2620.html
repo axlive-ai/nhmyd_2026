@@ -1,0 +1,451 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>숨긴 내역</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">숨긴 내역 상세</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+            <div class="boxTypeWrap">
+            	<div class="swiper dateSelWrap">
+					<a href="javascript:;" class="btn-month-prev disabled" role="button" tabindex="0" aria-label="이전달"><span class="blind">이전달</span></a> <!-- disabled 케이스 추가 -->
+					<a href="javascript:;" class="btn-month-next" role="button" tabindex="0" aria-label="다음달"><span class="blind">다음달</span></a>
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="monthSelectArea">
+								<strong class="month">7월</strong> <span class="date">(07.04~07.04)</span>	
+							</div>
+						</div>
+						<!-- <div class="swiper-slide">
+							<div class="monthSelectArea">	
+								<strong class="month">8월</strong> <span  class="date">(06.05~07.04)</span>	
+							</div>
+							
+						</div>
+						<div class="swiper-slide">
+							<div class="monthSelectArea">
+								<strong class="month">12월</strong> <span  class="date">(06.05~07.04)</span>
+							</div>
+							
+						</div> -->
+					</div>
+				</div>
+                <!-- <div class="fullRefreshWrap upadateType hideList">
+					<div class="filterselWrap">	
+                        <div class="filterSelect">
+                            <button type="button" title="월선택">12월<span class="pointColor9 fs13">(12.05~01.04)</span></button>
+                        </div> 
+                    </div>
+				</div> -->
+                <div class="totalBalance mt15">
+                    <div class="defTit mt0">
+						<strong>현대백화점<br /><span class="pointColor">N건</span>의 숨긴 내역이 있어요</strong>
+					</div>
+                </div>
+            </div>
+
+            <!-- swiper가 박스 쉐도우 있는 경우 wrapSwiperH 사용 -->
+            <div class="wrapSwiperH">
+	            <div class="swiper allListWrap">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="boxTypeWrap pt0 pb0"><!-- 2022-11-21 클래스(pb0) 추가 -->
+				                <div class="inoutListWrap bdT">
+				                    <p class="date bdtNone">9월 24일 토요일</p>
+				                </div>
+				                <div class="cardSpendList mt0">
+									<div class="inoutListWrap">
+										<div class="inoutListInn">
+											<ul class="inoutList">
+												<li>
+													<a href="javascript:;" class="link">
+														<div class="isCategory">
+															<div class="imgWrap icoCate">
+																<span class="img">
+																	<img src="../../images/category/cs/ico_cate_cs01.png" alt="외식"><!--12.09 카테고리 아이콘 수정-->
+																</span>
+															</div>
+															<div class="textWrap">
+																<div class="inoutTit">
+																	<span class="use">현대백화점</span>
+																	<span class="amount"><strong class="dataValue">-140,000</strong><em class="won">원</em></span>
+																</div>
+																<div class="inoutCont">
+																	<div class="timeWrap">
+																		<span class="time">20:00<span class="tit">카카오뱅크</span></span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="javascript:;" class="link">
+														<div class="isCategory">
+															<div class="imgWrap icoCate">
+																<span class="img">
+																	<img src="../../images/category/cs/ico_cate_cs01.png" alt="외식"><!--12.09 카테고리 아이콘 수정-->
+																</span>
+															</div>
+															<div class="textWrap">
+																<div class="inoutTit">
+																	<span class="use">현대백화점</span>
+																	<span class="amount"><strong class="dataValue">-140,000</strong><em class="won">원</em></span>
+																</div>
+																<div class="inoutCont">
+																	<div class="timeWrap">
+																		<span class="time">20:00<span class="tit">카카오뱅크</span></span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</a>
+												</li>							
+											</ul>
+										</div>
+									</div>
+								</div>
+				                <div class="inoutListWrap bdT">
+				                    <p class="date bdtNone">9월 24일 토요일</p>
+				                </div>
+				                <div class="cardSpendList mt0">
+									<div class="inoutListWrap">
+										<div class="inoutListInn">
+											<ul class="inoutList">
+												<li>
+													<a href="javascript:;" class="link">
+														<div class="isCategory">
+															<div class="imgWrap icoCate">
+																<span class="img">
+																	<img src="../../images/category/cs/ico_cate_cs01.png" alt="외식"><!--12.09 카테고리 아이콘 수정-->
+																</span>
+															</div>
+															<div class="textWrap">
+																<div class="inoutTit">
+																	<span class="use">현대백화점</span>
+																	<span class="amount"><strong class="dataValue">-140,000</strong><em class="won">원</em></span>
+																</div>
+																<div class="inoutCont">
+																	<div class="timeWrap">
+																		<span class="time">20:00<span class="tit">카카오뱅크</span></span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="javascript:;" class="link">
+														<div class="isCategory">
+															<div class="imgWrap icoCate">
+																<span class="img">
+																	<img src="../../images/category/cs/ico_cate_cs01.png" alt="외식"><!--12.09 카테고리 아이콘 수정-->
+																</span>
+															</div>
+															<div class="textWrap">
+																<div class="inoutTit">
+																	<span class="use">현대백화점</span>
+																	<span class="amount"><strong class="dataValue">-140,000</strong><em class="won">원</em></span>
+																</div>
+																<div class="inoutCont">
+																	<div class="timeWrap">
+																		<span class="time">20:00<span class="tit">카카오뱅크</span></span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</a>
+												</li>							
+											</ul>
+										</div>
+									</div>
+								</div>
+				            </div>
+						</div>
+
+						<!-- <div class="swiper-slide">
+							<div class="boxTypeWrap pt0">
+				                <div class="inoutListWrap bdT">
+				                    <p class="date bdtNone">2020년 7월 31일</p>
+				                </div>
+				                <div class="cardSpendList mt0">
+									<div class="inoutListWrap">
+										<div class="inoutListInn">
+											<ul class="inoutList">
+												<li>
+													<a href="javascript:;" class="link">
+														<div class="isCategory">
+															<div class="imgWrap icoCate">
+																<span class="img"><img src="../../images/category/icoCate77.png" alt="외식"></span>
+															</div>
+															<div class="textWrap">
+																<div class="inoutTit">
+																	<span class="use">현대백화점</span>
+																	<span class="amount"><strong class="dataValue">-140,000</strong><em class="won">원</em></span>
+																</div>
+																<div class="inoutCont">
+																	<div class="timeWrap">
+																		<span class="time">20:00<span class="tit">카카오뱅크</span></span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="javascript:;" class="link">
+														<div class="isCategory">
+															<div class="imgWrap icoCate">
+																<span class="img"><img src="../../images/category/icoCate77.png" alt="외식"></span>
+															</div>
+															<div class="textWrap">
+																<div class="inoutTit">
+																	<span class="use">현대백화점</span>
+																	<span class="amount"><strong class="dataValue">-140,000</strong><em class="won">원</em></span>
+																</div>
+																<div class="inoutCont">
+																	<div class="timeWrap">
+																		<span class="time">20:00<span class="tit">카카오뱅크</span></span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</a>
+												</li>							
+											</ul>
+										</div>
+									</div>
+								</div>
+				                <div class="inoutListWrap bdT">
+				                    <p class="date bdtNone">2020년 7월 31일</p>
+				                </div>
+				                <div class="cardSpendList mt0">
+									<div class="inoutListWrap">
+										<div class="inoutListInn">
+											<ul class="inoutList">
+												<li>
+													<a href="javascript:;" class="link">
+														<div class="isCategory">
+															<div class="imgWrap icoCate">
+																<span class="img"><img src="../../images/category/icoCate77.png" alt="외식"></span>
+															</div>
+															<div class="textWrap">
+																<div class="inoutTit">
+																	<span class="use">현대백화점</span>
+																	<span class="amount"><strong class="dataValue">-140,000</strong><em class="won">원</em></span>
+																</div>
+																<div class="inoutCont">
+																	<div class="timeWrap">
+																		<span class="time">20:00<span class="tit">카카오뱅크</span></span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="javascript:;" class="link">
+														<div class="isCategory">
+															<div class="imgWrap icoCate">
+																<span class="img"><img src="../../images/category/icoCate77.png" alt="외식"></span>
+															</div>
+															<div class="textWrap">
+																<div class="inoutTit">
+																	<span class="use">현대백화점</span>
+																	<span class="amount"><strong class="dataValue">-140,000</strong><em class="won">원</em></span>
+																</div>
+																<div class="inoutCont">
+																	<div class="timeWrap">
+																		<span class="time">20:00<span class="tit">카카오뱅크</span></span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</a>
+												</li>							
+											</ul>
+										</div>
+									</div>
+								</div>
+				            </div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="boxTypeWrap pt0">
+				                <div class="inoutListWrap bdT">
+				                    <p class="date bdtNone">2020년 7월 31일</p>
+				                </div>
+				                <div class="cardSpendList mt0">
+									<div class="inoutListWrap">
+										<div class="inoutListInn">
+											<ul class="inoutList">
+												<li>
+													<a href="javascript:;" class="link">
+														<div class="isCategory">
+															<div class="imgWrap icoCate">
+																<span class="img"><img src="../../images/category/icoCate77.png" alt="외식"></span>
+															</div>
+															<div class="textWrap">
+																<div class="inoutTit">
+																	<span class="use">현대백화점</span>
+																	<span class="amount"><strong class="dataValue">-140,000</strong><em class="won">원</em></span>
+																</div>
+																<div class="inoutCont">
+																	<div class="timeWrap">
+																		<span class="time">20:00<span class="tit">카카오뱅크</span></span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="javascript:;" class="link">
+														<div class="isCategory">
+															<div class="imgWrap icoCate">
+																<span class="img"><img src="../../images/category/icoCate77.png" alt="외식"></span>
+															</div>
+															<div class="textWrap">
+																<div class="inoutTit">
+																	<span class="use">현대백화점</span>
+																	<span class="amount"><strong class="dataValue">-140,000</strong><em class="won">원</em></span>
+																</div>
+																<div class="inoutCont">
+																	<div class="timeWrap">
+																		<span class="time">20:00<span class="tit">카카오뱅크</span></span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</a>
+												</li>							
+											</ul>
+										</div>
+									</div>
+								</div>
+				                <div class="inoutListWrap bdT">
+				                    <p class="date bdtNone">2020년 7월 31일</p>
+				                </div>
+				                <div class="cardSpendList mt0">
+									<div class="inoutListWrap">
+										<div class="inoutListInn">
+											<ul class="inoutList">
+												<li>
+													<a href="javascript:;" class="link">
+														<div class="isCategory">
+															<div class="imgWrap icoCate">
+																<span class="img"><img src="../../images/category/icoCate77.png" alt="외식"></span>
+															</div>
+															<div class="textWrap">
+																<div class="inoutTit">
+																	<span class="use">현대백화점</span>
+																	<span class="amount"><strong class="dataValue">-140,000</strong><em class="won">원</em></span>
+																</div>
+																<div class="inoutCont">
+																	<div class="timeWrap">
+																		<span class="time">20:00<span class="tit">카카오뱅크</span></span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="javascript:;" class="link">
+														<div class="isCategory">
+															<div class="imgWrap icoCate">
+																<span class="img"><img src="../../images/category/icoCate77.png" alt="외식"></span>
+															</div>
+															<div class="textWrap">
+																<div class="inoutTit">
+																	<span class="use">현대백화점</span>
+																	<span class="amount"><strong class="dataValue">-140,000</strong><em class="won">원</em></span>
+																</div>
+																<div class="inoutCont">
+																	<div class="timeWrap">
+																		<span class="time">20:00<span class="tit">카카오뱅크</span></span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</a>
+												</li>							
+											</ul>
+										</div>
+									</div>
+								</div>
+				            </div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+            
+		</div>
+		<!-- //container -->
+        <!-- <div class="areaBtnDefault">11.24 버튼 삭제
+			<a href="javascript:;" class="btnPressPoint" role="button">숨기기 해제</a>
+		</div> -->
+	</div>
+
+<script type="text/javascript">
+	//전체 스와이프
+	// var swiper = new Swiper(".dateSelWrap", {
+	// 	spaceBetween: 10,
+	// 	slidesPerView: 1,
+	// 	observer: true,
+	// 	observeParents: true,
+	// 	effect: "fade",
+	// 	touchRatio: 0,	//touch move 비활성
+	// 	freeMode: true,
+	// 	watchSlidesProgress: true,
+		
+	// });
+	// var swiper2 = new Swiper(".allListWrap", {
+	// 	initialSlide :0, //시작슬라이드 번호 0부터 시작
+	// 	spaceBetween: 20,
+	// 	observer: true,
+	// 	observeParents: true,
+	// 	autoHeight : true,
+	// 	touchRatio: 0,	//touch move 비활성 //2022-10-28 추가
+	// 	pagination: {
+	// 		el: ".swiper-pagination",
+	// 	},
+
+	// 	//pagination:false,
+	// 	navigation: {
+	// 		nextEl: ".btn-month-next",
+	// 		prevEl: ".btn-month-prev",
+	// 	},
+	// 	thumbs: {
+	// 		swiper: swiper,
+	// 	},
+	// });
+</script>
+</body>
+</html>

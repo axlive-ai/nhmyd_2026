@@ -1,0 +1,78 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>[P]직업 대분류 선택 | 고객정보입력 | 고객등록</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function(){
+		slidePopOption();
+	})
+</script>
+</head>
+<body>
+<div class="wrapper nhasset"><!-- 바닥페이지 --></div>
+
+<!-- ###################################### -->
+<!-- ### [팝업] 직업 대분류 선택 ### -->
+<!-- ###################################### -->
+<div class="nhasset popWrap slidePopOption">
+	<div class="dim"></div>
+	<div class="popInner">
+		<h1>직업 대분류 선택</h1>
+		<div class="popCont">
+			<ul class="selectList" role="tablist">
+				<li class="active"><button type="button" aria-selected="true" title="선택됨">기업체 / 단체 소속</button></li> <!-- [D] 선택됨  -->
+				<li><button type="button" aria-selected="false">정부 / 지자체 소속</button></li>
+				<li><button type="button" aria-selected="false">공공기관 /사립교육기관 소속</button></li>
+				<li><button type="button" aria-selected="false">농축임어업인</button></li>
+				<li><button type="button" aria-selected="false">개인사업자</button></li>
+				<li><button type="button" aria-selected="false">이외</button></li>
+			</ul>
+		</div>
+
+		<div class="popBtnWrap">
+			<div class="popBtn">
+				<a href="javascript:;" role="button" class="confirmBtn" >선택하기</a><!--  [D] 비활성화 시 : 클래스명(disabled) 및 aria-disabled="true" 추가 : 하단 샘플 스크립트 참고  -->
+			</div>
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다."><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+		</div>
+	</div>
+</div>
+
+<!-- ###################################### -->
+<!-- ### [샘플] 스크립트 ### -->
+<!-- ###################################### -->
+<script>
+	$(document).ready(function(){
+		//샘플 : 항목 선택된 상태 aria-selected 변경
+		$('.selectList button').on('click',function(){
+			if($(this).attr('aria-selected') == 'true'){
+				$(this).attr('aria-selected', 'false');
+				$(this).parent('li').removeClass('active');
+				$('.confirmBtn').addClass('disabled').attr('aria-disabled', 'true'); //선택하기 버튼 비활성화 샘플
+			}else{
+				$(this).attr('aria-selected', 'true');
+				$(this).parent('li').addClass('active').siblings().removeClass('active').find('>button').attr('aria-selected', 'false');
+				$('.confirmBtn').removeClass('disabled').removeAttr('aria-disabled'); //선택하기 버튼 활성화 샘플
+			}
+		});
+	})
+</script>
+<!-- ###################################### -->
+</body>
+</html>

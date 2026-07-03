@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>자산연결 해제</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" onclick="history.back();" class="btnBack" role="button"><span>Back</span></a>
+		<h1>자산연결관리</h1><!-- 05-21 수정 -->
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+
+		<!-- 2022-09-15 -->
+		<div class="yaTopBanner Ty01 bgTy03">
+			<a href="javascript:;" class="link yalinkBtn" role="button">
+				<span>N개 기관에 신규자산이 있어요</span>
+				<p>새롭게 가입한 상품 연결하기</p>
+			</a>
+			<button type="button" class="btnClose"><span class="blind">닫기</span></button><!-- 2022-10-21 닫기 버튼 추가 -->
+		</div>
+
+		<div class="yaTopBanner Ty01 bgTy01">
+			<a href="javascript:;" class="link yalinkBtn" role="button">
+				<span>연결 만료된 N개 기관이 있어요</span>
+				<p>연결하기</p>
+			</a>
+			<button type="button" class="btnClose"><span class="blind">닫기</span></button><!-- 2022-10-21 닫기 버튼 추가 -->
+		</div>
+		<div class="yaTopBanner Ty01 bgTy02">
+			<a href="javascript:;" class="link yalinkBtn" role="button">
+				<span>만료예정인 N개 기관이 있어요</span>
+				<p>연결하기</p>
+			</a>
+			<button type="button" class="btnClose"><span class="blind">닫기</span></button><!-- 2022-10-21 닫기 버튼 추가 -->
+		</div>
+		<!-- 2022-09-15 -->
+
+		<!-- 202-09-14 클래스 추가 (bgAssetConnAdmin)  -->
+		<h2 class="defTit bgAssetConnAdmin">연결중인 <strong>자산을</strong><br><strong>확인하고 관리</strong>합니다</h2> 
+		<div class="assetSelectLlistWrap">
+			<div class="assetSelectLlistAll typeBetween">
+				<!-- 2022-10-28 전체 선택 디자인 변경 -->
+				<span class="checkBtnType"><input type="checkbox" id="listAll" ><label for="listAll">전체선택</label></span>
+				<!-- //2022-10-28 전체 선택 디자인 변경 -->
+				<!-- 2023-11-03 추가 -->
+				<a href="javascript:;" class="btnBodyLine btnAdd" role="button">신규기관연결</a>
+				<!-- // 2023-11-03 추가 -->
+			</div>
+			<ul class="assetSelectLlist shadowType">
+				<!-- 2022-10-28 농협 카드, 계좌 추가 -->
+				<li class="nhType">
+					<div class="assetSelectGroup">
+						<span class="subject">
+							<span class="imgWrap"> <!-- [2022-11-29] 윤규송 : 로고 공통 이미지로 변경 -->
+								<img src="../../images/logos/AAAZ0000.png" alt="" class="imgLogo">	<!-- [접근성_2024] 빈 alt="" 추가 -->
+							</span>
+							<span class="bankName">NH농협은행<em class="count">1</em></span>
+						</span>
+						<a href="javascript:;" class="linkDetail" role="link" tabindex="0" title="NH농협은행 기관 상세보기 화면으로 이동"><span class="blind">상세보기</span></a> <!-- [접근성_2024] role="link" tabindex="0" title 추가 (등록된 은행명을 title에 추가 부탁드립니다.)   -->
+					</div>
+				</li>
+				<li class="nhType">
+					<div class="assetSelectGroup">
+						<span class="subject">
+							<span class="imgWrap"> <!-- [2022-11-29] 윤규송 : 로고 공통 이미지로 변경 -->
+								<img src="../../images/logos/AAAZ0000.png" alt="" class="imgLogo">
+							</span>
+							<span class="bankName">NH농협은행<em class="count">1</em></span>
+						</span>
+						<a href="javascript:;" class="linkDetail" role="link" tabindex="0" title="NH농협은행 기관 상세보기 화면으로 이동"><span class="blind">s상세보기</span></a>
+					</div>
+				</li>
+				<!-- //2022-10-28 농협 카드, 계좌 추가 -->
+				<li>
+					<div class="assetSelectGroup">
+						<span class="subject">
+							<input type="checkbox" checked id="listSub00" name="" class="chekTypeOther" >
+							<label for="listSub00"><!--[2022-11-29] class="A1AABG0000 삭제-->
+								<span class="imgWrap"> <!-- [2022-11-29] 윤규송 : 로고 공통 이미지로 변경 -->
+									<img src="../../images/logos/AAAZ0000.png" alt="" class="imgLogo">
+								</span>
+								<span class="bankName">NH농협은행<em class="count">1</em></span>
+							</label><!-- 2022-09-14 기관 카운드 변경 -->
+							<span class="tag gray ml10">만료예정</span><!-- 202-09-14 클래스 변경 (bgGray > gray)  -->
+						</span>
+						<a href="javascript:;" class="linkDetail"><span class="blind">기관명 상세보기</span></a>
+					</div>
+				</li>
+				<li>
+					<div class="assetSelectGroup">
+						<span class="subject">
+							<input type="checkbox" disabled id="listSub10" name="" class="chekTypeOther" >
+							<label for="listSub10"><!--[2022-11-29] class="A1AABG0000" 삭제-->
+								<span class="imgWrap"> <!-- [2022-11-29] 윤규송 : 로고 공통 이미지로 변경 -->
+									<img src="../../images/logos/AABG0000.png" alt="" class="imgLogo">
+								</span>
+								<span class="bankName">기관명<em class="count">1</em></span>
+							</label><!-- 2022-09-14 기관 카운드 변경 -->
+							<span class="tag bgGray ml10">해제</span>
+						</span>
+						<a href="javascript:;" class="linkDetail"><span class="blind">기관명 상세보기</span></a>
+					</div>
+				</li>
+				<li>
+					<div class="assetSelectGroup">
+						<span class="subject">
+							<input type="checkbox" id="listSub20" name="" class="chekTypeOther" disabled="" >
+							<label for="listSub10"><!--[2022-11-29] class="A1AABG0000" 삭제-->
+								<span class="imgWrap"> <!-- [2022-11-29] 윤규송 : 로고 공통 이미지로 변경 -->
+									<img src="../../images/logos/AABG0000.png" alt="" class="imgLogo">
+								</span>
+								<span class="bankName">기관명<em class="count">1</em></span>
+							</label><!-- 2022-09-14 기관 카운드 변경 -->
+							<span class="tag gray ml10">만료</span><!-- 202-09-14 클래스 변경 (bgGray > gray)  -->
+						</span>
+						<a href="javascript:;" class="linkDetail"><span class="blind">기관명 상세보기</span></a>
+					</div>
+				</li>
+				<li class="toggleWrap">
+					<div class="assetSelectGroup">
+						<span class="subject">
+							<input type="checkbox" checked id="listSub30" name="" class="chekTypeOther" >
+							<label for="listSub10"><!--[2022-11-29] class="D1AAFO0000" 삭제-->
+								<span class="imgWrap"> <!-- [2022-11-29] 윤규송 : 로고 공통 이미지로 변경 -->
+									<img src="../../images/logos/AAFO0000.png" alt="" class="imgLogo">
+								</span>
+								<span class="bankName">기관명<em class="count">1</em></span>
+							</label><!-- 2022-09-14 기관 카운드 변경 -->
+						</span>
+						<a href="javascript:;" class="linkDetail"><span class="blind">기관명 상세보기</span></a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- 2022-11-02 수정 -->
+		<div class="areaBodyBtnFlex mt20">
+			<button type="button" class="btnBodyLine">변경</button>
+			<button type="button" class="btnBodyLine">기한연장</button>
+		</div>
+		<ul class="btnBoxWrap">
+			<li><button type="button"><span class="iconDel">해제/삭제</span></button></li>
+			<li><button type="button"><span class="iconDataAdmin2">데이터전송관리</span></button></li>
+		</ul>		
+		<!-- // 2022-11-02 수정 -->
+	</div>
+	
+</div>
+
+
+</body>
+</html>

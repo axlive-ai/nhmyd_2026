@@ -1,0 +1,223 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>예산 관리</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">예산 관리</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="cs boxTypeWrap pt0">
+				<div class="filterArea">
+					<div class="filterSelect"><button type="button">10월<span class="pointColor9 fs13">(10.01~10.31)</span></button></div>
+				</div>
+				<!-- 예산미만 -->
+				<div class="totalBalance">
+					<div class="bigTxt success01">
+						예산 <strong class="value">300</strong><em>만원</em>으로<br> 한 달 살기 성공!
+					</div>
+					<p class="imojiTit">남은 예산 1,120,433원
+						<span class="icoImg"><img src="../../images/ico_emoji05.png" alt="스마일 아이콘"></span>
+					</p>
+				</div>
+				<!-- 예산초과 -->
+				<div class="totalBalance">
+					<div class="bigTxt allfail01">
+						예산 <strong class="value">300</strong><em>만원</em>으로<br> 한 달 살기 실패!
+					</div>
+					<p class="imojiTit">예산 초과 1,120,433원
+						<span class="icoImg"><img src="../../images/ico_emoji06.png" alt="눈물 아이콘"></span>
+					</p>
+				</div>
+				<div class="spendChart bdNone pb10 pl0 pr0">
+					<div class="graphTit">
+						<span class="tit">월 예산 <em class="pointColor14">20.0%</em> 사용</span><!-- .pointColor14 예산미만 // .pointColor09 예산초과 -->
+					</div>
+					<div class="spendChart bdNone p0 mt10">
+						
+						<div class="graphWrap" style="height:20px;background:#f6f6f6;" tabindex="0" role="img" aria-label="설정한 예산 대비 소비는 40%">
+							<p style="text-align:center;font-size:9px">그래프 영역</p>
+						</div>
+						<!-- <div class="graphBtm">
+							<span class="tit"></span>
+							<span class="value">예산 3,000,000원</span>
+						</div> -->
+					</div>
+				</div>
+				<div class="ac">
+					<a href="javascript:;" class="linkTxt ac" aria-haspopup="true">나의 한 달 예산 설정하기</a>
+				</div>
+			</div>
+			<div class="boxTypeWrap">
+				<h2 class="defSubTit2 mt0"><strong>소비 카테고리 예산</strong></h2>
+				<div class="compareList">
+					<ul>
+						<li>
+							<div>
+								<strong class="imgWrap icoCate">
+									<span class="img bdNone">
+										<img src="../../images/category/cs/ico_cate_cs05.png" alt="온라인쇼핑 아이콘">
+									</span>
+									온라인쇼핑
+								</strong>
+							</div>
+							<div class="graphTit"> 
+								<span class="up tit">200%</span><!-- 초과 일때 up -->
+								<span class="value"><a href="javascript:;" title="카테고리 상세 팝업">100,000원</a></span>
+							</div>
+							<div class="graphWrap" style="height:16px;background:#f6f6f6;" tabindex="0" role="img" aria-label="설정한 예산 대비 소비 200%">
+								<p style="text-align:center;font-size:9px">그래프 영역</p>
+							</div>
+							<div class="graphBtm">
+								<span class="tit">설정한 예산 50,000원</span>
+								<span class="value">50,000원 초과</span>
+							</div>
+						</li>
+						<li>
+							<div>
+								<strong class="imgWrap icoCate">
+									<span class="img bdNone">
+										<img src="../../images/category/cs/ico_cate_cs12.png" alt="교통 아이콘">
+									</span>
+									<strong class="tit">교통</strong>
+								</strong>
+							</div>
+							<div class="graphTit"> 
+								<span class="up tit">200%</span><!-- 초과 일때 up -->
+								<span class="value"><a href="javascript:;" title="카테고리 상세 팝업">100,000원</a></span>
+							</div>
+							<div class="graphWrap" style="height:16px;background:#f6f6f6;" tabindex="0" role="img" aria-label="설정한 예산 대비 소비 200%">
+								<p style="text-align:center;font-size:9px">그래프 영역</p>
+							</div>
+							<div class="graphBtm">
+								<span class="tit">설정한 예산 50,000원</span>
+								<span class="value">50,000원 초과</span>
+							</div>
+						</li>
+						<li>
+							<div>
+								<strong class="imgWrap icoCate">
+									<span class="img bdNone">
+										<img src="../../images/category/cs/ico_cate_cs13.png" alt="문화/여가 아이콘">
+									</span>
+									문화/여가
+								</strong>
+							</div>
+							<div class="graphTit"> 
+								<span class="down tit">80%</span><!-- 초과 일때 up -->
+								<span class="value"><a href="javascript:;" title="카테고리 상세 팝업">100,000원</a></span>
+							</div>
+							<div class="graphWrap" style="height:16px;background:#f6f6f6;" tabindex="0" role="img" aria-label="설정한 예산 대비 소비는 80%">
+								<p style="text-align:center;font-size:9px">그래프 영역</p>
+							</div>
+							<div class="graphBtm">
+								<span class="tit">설정한 예산 100,000원</span>
+								<span class="value">20,000원 남음</span>
+							</div>
+						</li>
+						<li>
+							<div>
+								<strong class="imgWrap icoCate">
+									<span class="img bdNone">
+										<img src="../../images/category/cs/ico_cate_cs02.png" alt="카페/간식 아이콘">
+									</span>
+									카페/간식
+									
+								</strong>
+							</div>
+							<div class="graphTit"> 
+								<span class="down tit">40%</span><!-- 초과 일때 up -->
+								<span class="value"><a href="javascript:;" title="카테고리 상세 팝업">100,000원</a></span>
+							</div>
+							<div class="graphWrap" style="height:16px;background:#f6f6f6;" tabindex="0" role="img" aria-label="설정한 예산 대비 소비는 40%">
+								<p style="text-align:center;font-size:9px">그래프 영역</p>
+							</div>
+							<div class="graphBtm">
+								<span class="tit">설정한 예산 100,000원</span>
+								<span class="value">60,000원 남음</span>
+							</div>
+						</li>
+						<li>
+							<div>
+								<strong class="imgWrap icoCate">
+									<span class="img bdNone">
+										<img src="../../images/category/cs/ico_cate_cs03.png" alt="술/유흥 아이콘">
+									</span>
+									술/유흥
+									
+								</strong>
+							</div>
+							<div class="graphTit"> 
+								<span class="down tit">40%</span><!-- 초과 일때 up -->
+								<span class="value"><a href="javascript:;" title="카테고리 상세 팝업">80,000원</a></span>
+							</div>
+							<div class="graphWrap" style="height:16px;background:#f6f6f6;" tabindex="0" role="img" aria-label="">
+								<p style="text-align:center;font-size:9px">그래프 영역</p>
+							</div>
+							<div class="graphBtm">
+								<span class="tit">예산 미설정</span>
+							</div>
+						</li>
+						<!-- [2021-09-02] 윤지현:미제공케이스 추가 -->
+						<li>
+							<div class="d-flex mb10"> <!-- [2022-10-18] mb10 클래스 추가 -->
+								<div>
+									<strong class="imgWrap icoCate">
+										<span class="img bdNone">
+											<img src="../../images/category/cs/ico_cate_cs99.png" alt="미동의 아이콘">
+										</span>
+										어디에 썼을까?
+									</strong>
+								</div>
+								<div class="graphTit mt0 mb0"> 
+									<span class="value"><a href="javascript:;" title="카테고리 상세 팝업">80,000원</a></span>
+								</div>
+							</div>
+							<!-- <span class="imgWrap icoCate20"><span class="img"><img src="../../images/category/icoCate_20.png" alt="미제공"></span>미제공</span>
+							<div class="graphTit down">
+								<span class="value"><a href="javascript:;" title="카테고리 상세 팝업">10,000원</a></span>
+							</div> -->
+						</li>
+						<!-- //[2021-09-02] 윤지현:미제공케이스 추가 -->
+					</ul>
+				</div>
+			</div>
+
+			<!-- <div class="cs CardBannerWarp Card01">
+				<a href="javascript:;">
+					<h2 class="defSubTit2">카테고리별 예산을 확인하려면?</h2>
+					<span class="greenLink">자세한 소비내용 불러오기</span>
+				</a>
+			</div> -->
+		</div>
+		<!-- //container -->
+
+	</div>
+
+</body>
+</html>

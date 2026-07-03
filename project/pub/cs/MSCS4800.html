@@ -1,0 +1,469 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>카드 리포트 | 소비</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">카드 리포트</a></h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 카드 리포트 ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<!-- -------------------------------------- -->
+		<!-- [기준 년 월 영역] -->
+		<!-- -------------------------------------- -->
+		<div class="filterArea t1">
+			<div class="filterSelect"><button type="button" title="년 월 선택 팝업열기"><strong>2023년 7월</strong></button></div>
+			<div class="tooltipWrap">
+				<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">조회 기준 안내 툴팁 열기</span></button>
+				<div class="tooltipCont">
+					<div class="msaeTool">
+						<ul class="popBul">
+							<li>기준 월(1일~ 말일까지)의 체크카드, 신용카드 결제내역을 바탕으로 카드 리포트 분석이 제공됩니다.</li>
+							<li>자산 사용 관리 메뉴에서 숨김 처리한 카드는 리포트 내역에서 제외됩니다.</li>
+						</ul>
+					</div>
+					<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+				</div>
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [상단영역] 카드 결제 요약 정보 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap t1">
+			<dl class="totalBalance t1">
+				<dt>결제 요약 정보</dt>
+				<dd>총<strong class="dataValue">9,999,999,999</strong><em class="won">원</em></dd>
+			</dl>
+			<!-- 차트영역 -->
+			<!-- <div class="areaChart1" style="height:48px;"><div class="chart"></div></div> -->
+
+			<!-- 차트 : 클릭 이벤트 하단 스크립트 샘플 참고 -->
+			<div class="areaChart2 t4" data-chart="wrap">
+				<ul>
+					<!-- 일시불(신용) -->
+					<li class="item1" role="button" tabindex="0" aria-expanded="false" style="--el-value:40%">  <!-- [D] 차트 % : --el-value:차트% -->
+						<div class="chart"></div>
+						<div class="info" data-chart="cont">
+							<span>일시불(신용)</span>
+							<span>0,000,000,000원</span>
+						</div>
+					</li>
+					<!-- 일시불(체크) -->
+					<li class="item2" role="button" tabindex="0" aria-expanded="false" style="--el-value:30%">
+						<div class="chart"></div>
+						<div class="info" data-chart="cont">
+							<span>일시불(체크)</span>
+							<span>0,000,000,000원</span>
+						</div>
+					</li>
+					<!-- 할부(신용) -->
+					<li class="item3" role="button" tabindex="0" aria-expanded="false" style="--el-value:20%">
+						<div class="chart"></div>
+						<div class="info" data-chart="cont">
+							<span>할부(신용)</span>
+							<span>0,000,000,000원</span>
+						</div>
+					</li>
+					<!-- 할부(체크) -->
+					<li class="item4" role="button" tabindex="0" aria-expanded="false" style="--el-value:10%">
+						<div class="chart"></div>
+						<div class="info" data-chart="cont">
+							<span>할부(체크)</span>
+							<span>0,000,000,000원</span>
+						</div>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+
+			<!-- 범례 -->
+			<div class="graphAddEx">
+				<ul class="ty01 item2">
+					<li class="bl10">일시불(신용)</li>
+					<li class="bl02">일시불(체크)</li>
+					<li class="bl11">할부(신용)</li>
+					<li class="bl12">할부(체크)</li>
+				</ul>
+			</div>
+			<!-- // -->
+		</div>
+		
+		<!-- [CASE] 0원일 경우 -->
+		<div class="boxTypeWrap t1">
+			<dl class="totalBalance t1">
+				<dt>결제 요약 정보</dt>
+				<dd>총<strong class="dataValue">0</strong><em class="won">원</em></dd>
+			</dl>
+			<div class="areaChart2 t4" data-chart="wrap"></div>
+			<!-- 범례 -->
+			<div class="graphAddEx">
+				<ul class="ty01 item2">
+					<li class="bl10">일시불(신용)</li>
+					<li class="bl02">일시불(체크)</li>
+					<li class="bl11">할부(신용)</li>
+					<li class="bl12">할부(체크)</li>
+				</ul>
+			</div>
+			<!-- // -->
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [배너영역] 자산연결배너 : 카드 결제 내역 0원인 경우 노출 -->
+		<!-- -------------------------------------- -->
+		<div class="areaBanner2 t1">
+			<a href="javascript:;" class="img15">
+				<span>사용 중인 카드 연결하고 정확한 결과 보기</span>
+				<span>카드 자산 연결하기</span>
+			</a>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [배너영역] 가맹점 미동의 배너 [M 2024-03-28]  -->
+		<!-- -------------------------------------- -->
+		<div class="areaBanner2 t1">
+			<a href="javascript:;" class="img9" title="정보수집동의 내역" aria-haspopup="true">
+				<span>더 정확한 분석을 위해</span>
+				<span>가맹점 정보 제공 동의하기</span>
+			</a>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTION] 카드 배너 영역 -->
+		<!-- -------------------------------------- -->
+		<div class="areaBanner1" data-swiper-type="list1" data-swiper-space="12" data-swiper-slidesperview="auto"> <!-- [D] 동적 컨텐츠일 경우 마지막에 uiSetSwiper() 함수 호출 -->
+			<ul>
+				<!-- ### [기본구조] ### -->
+				<li>
+					<!-- 문구작성 -->
+					<div class="tit">
+						<span>문구작성 첫번째 줄</span>
+						<span>문구작성 두번째 줄</span>
+						<span>문구작성 세번째 줄</span>
+					</div>
+					<!-- 관리자등록이미지 -->
+					<div class="img"><img src="../../images/temp/@img_banner01.png" alt=""></div>
+					<!-- 내 카드 결제 문구 -->
+					<div class="con1">
+						<span><span>카테고리명</span>에</span>
+						<span>월 <span class="dataValue">9,999,999,999</span><em class="won">원</em> (<span class="dataValue">99,999</span><em class="won">건</em>) 결제</span>
+					</div>
+					<!-- 또래비교 문구 -->
+					<div class="con2">
+						<strong>또래보다 <span class="dataValue">000,000,000</span><em class="won">만원</em> 더 소비</strong>
+					</div>
+					<!-- // -->
+				</li>
+				<!-- ### [CASE1] 한달 총 금액 현황 및 또래비교 ### -->
+				<li>
+					<div class="tit">
+						<span><strong>122개</strong> 가맹점에서</span>
+						<span><strong>3445번</strong> 긁고</span>
+						<span><strong><span class="dataValue">6,800</span><em class="won">만원</em></strong> 썼어요!</span>
+					</div>
+					<div class="img"><img src="../../images/temp/@img_banner01.png" alt=""></div>
+					<div class="con1">
+						<span>총 소비 <span class="dataValue">9,999,999,999</span><em class="won">원</em> 결제</span>
+					</div>
+					<div class="con2">
+						<strong>또래보다 <span class="dataValue">30</span><em class="won">만원</em> 더 소비</strong>
+					</div>
+				</li>
+				<!-- ### [CASE2] 내 소비가 가장 높은 카테고리 ### -->
+				<li>
+					<div class="tit">
+						<span>제 월급이</span>
+						<span>다 여기로 갔군요</span>
+					</div>
+					<div class="img"><img src="../../images/temp/@img_banner02.png" alt=""></div>
+					<div class="con1">
+						<span><span>온라인쇼핑</span>에</span> 
+						<span>월 <span class="dataValue">9,999,999,999</span><em class="won">원</em> (<span class="dataValue">99,999</span><em class="won">건</em>) 결제</span>
+					</div>
+					<div class="con2">
+						<strong>또래보다 <span class="dataValue">99억9,999</span><em class="won">만원</em> 더 소비</strong>
+					</div>
+				</li>
+				<!-- ### [CASE3] 내 소비가 가장 낮은 카테고리 ### -->
+				<li>
+					<div class="tit">
+						<span>그뤠잇!</span>
+						<span>안쓰면 100% 할인</span>
+					</div>
+					<div class="img"><img src="../../images/temp/@img_banner03.png" alt=""></div>
+					<div class="con1">
+						<span><span>의료/건강</span>에</span> 
+						<span>월 <span class="dataValue">1,000</span><em class="won">원</em> (<span class="dataValue">1</span><em class="won">건</em>) 결제</span>
+					</div>
+					<div class="con2">
+						<strong>또래보다 <span class="dataValue">99억9,999</span><em class="won">만원</em> 절약</strong>
+					</div>
+				</li>
+				<!-- ### [CASE4] 소비가 가장 높은 요일 ### -->
+				<li>
+					<div class="tit">
+						<span>토요일만 되면</span>
+						<span>불타는 내 카드</span>
+					</div>
+					<div class="img"><img src="../../images/temp/@img_banner04.png" alt=""></div>
+					<div class="con1">
+						<span>건당 평균 <span class="dataValue">9,999,999,999</span><em class="won">원</em> 결제</span>
+					</div>
+				</li>
+				<!-- ### [CASE5] 구독 서비스 또래 비교 ### -->
+				<li class="c1"> <!-- [D] 텍스트 색상 #fff로 변경될 경우 추가 -->
+					<div class="tit">
+						<span>네카라쿠배</span>
+						<span>제 카드에도 있죠</span>
+					</div>
+					<div class="img"><img src="../../images/temp/@img_banner05.png" alt=""></div>
+					<div class="con1">
+						<span>구독 서비스에 월 <span class="dataValue">1,234,567</span><em class="won">원</em> 결제</span>
+					</div>
+				</li>
+				<!-- ### // ### -->
+			</ul>
+		</div>
+		
+		<!-- -------------------------------------- -->
+		<!-- [SECTION] 또래비교 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap t1" role="button" tabindex="0" title="또래비교 화면으로 이동">
+			<h2 class="defSubTit1">내 소비로 또래와 비교해봤어요</h2>
+
+			<!-- ### [CASE1] 소득이 있을 경우 ### -->
+			<div class="listData2 t1">
+				<ul>
+					<!-- // -->
+					<li class="case1">
+						<div role="img" aria-label="나는 또래보다">
+							<span>나</span>
+							<span>또래</span>
+						</div>
+						<div class="img"><img src="../../images/category/cs2/ico_cate_cs02.png" alt=""></div>
+						<div class="tit"><span>카페/간식</span>에서</div>
+						<div class="con">
+							<strong class="dataValue">2,000,000</strong><em class="won">원</em>
+							<em class="value">더 소비</em>
+						</div>
+					</li>
+					<!-- // -->
+					<li class="case2">
+						<div role="img" aria-label="또래는 나보다">
+							<span>또래</span>
+							<span>나</span>
+						</div>
+						<div class="img"><img src="../../images/category/cs2/ico_cate_cs14.png" alt=""></div>
+						<div class="tit"><span>여행/숙박</span>에서</div>
+						<div class="con">
+							<strong class="dataValue">9,000,000</strong><em class="won">원</em>
+							<em class="value">절약</em>
+						</div>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+
+			<!-- ### [CASE2] 소득이 없을 경우 ### -->
+			<div class="listData2 t1">
+				<ul>
+					<!-- // -->
+					<li class="case1">
+						<div role="img" aria-label="나는 또래보다">
+							<span>나</span>
+							<span>또래</span>
+						</div>
+						<div class="img"><img src="../../images/category/cs2/ico_cate_cs01.png" alt=""></div>
+						<div class="tit"><span>외식</span>에서</div>
+						<div class="con">
+							<strong class="dataValue">???,???</strong><em class="won">원</em>
+							<em class="value">더 소비</em>
+						</div>
+					</li>
+					<!-- // -->
+					<li class="case2">
+						<div role="img" aria-label="또래는 나보다">
+							<span>또래</span>
+							<span>나</span>
+						</div>
+						<div class="img"><img src="../../images/category/cs2/ico_cate_cs02.png" alt=""></div>
+						<div class="tit"><span>카페/간식</span>에서</div>
+						<div class="con">
+							<strong class="dataValue">???,???</strong><em class="won">원</em>
+							<em class="value">절약</em>
+						</div>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+			<!-- ### // ### -->
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTION] 3개월 이용 금액 비교 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap t1">
+			<h2 class="defSubTit1">내 카드 결제금액을 비교하면</h2>
+			
+			<!-- 차트영역 -->
+			<div class="areaChart1" style="height:200px;"><div class="chart"><div class="guide_empty">차트가 들어갑니다.</div></div></div>
+			<!-- // -->
+
+			<div class="grayBgLine t1">
+				<ul class="detailList">
+					<li>
+						<span class="tit">월 평균 결제금액</span>
+						<span class="value"><strong class="dataValue">1,234,567,890</strong><em class="won">원</em></span>
+					</li>
+					<li>
+						<span class="tit">월 평균 결제 건수</span>
+						<span class="value"><strong class="dataValue">99,999</strong><em class="won">건</em></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTION] 3개월 최고 지출일 현황 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap t1">
+			<h2 class="defSubTit1">월별 가장 크게 결제한 날은</h2>
+
+			<!-- 차트영역 -->
+			<div class="areaChart1" style="height:180px;"><div class="chart"><div class="guide_empty">차트가 들어갑니다.</div></div></div>
+			<!-- // -->
+
+			<div class="grayBgLine t1">
+				<ul class="detailList">
+					<li>
+						<span class="tit">3개월 중 최고 결제일</span>
+						<span class="value">23년 7월 19일</span>
+					</li>
+					<li>
+						<span class="tit">3개월 중 최고 결제금액</span>
+						<span class="value"><strong class="dataValue">1,234,567,890</strong><em class="won">원</em></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTION] 최고 결제 카드 -->
+		<!-- -------------------------------------- -->
+		<!-- [CASE] 타행카드 1개 이상 연결 (결제내역Y) -->
+		<div class="boxTypeWrap t1" role="button" tabindex="0" title="해당 월 승인내역 화면으로 이동">
+			<h2 class="defSubTit1">내 최애 결제 카드는</h2>
+			<div class="dataInfo1">
+				<span class="imgWrap">
+					<img src="../../images/logos/AAAZ0000.png" alt="농협카드" class="imgLogo"> <!-- [접근성_2024] 기관명으로 변경 : 현재 "농협카드"로 되어 있음 -->
+				</span>
+				<strong>카드명</strong>
+			</div>
+			<div class="txtSub1 t1">
+				<!-- [최고 지출 금액] -->
+				<p><strong><span class="dataValue">9,999,999,999</span><em class="won">원</em></strong> 결제</p>
+
+				<!-- [카드지출 차액 문구] (+) 일 경우 -->
+				<p class="subTxt">6월 최애 카드 보다 <strong><span class="dataValue">99억 4,885</span><em class="won">만원</em></strong> 더 소비</p>
+				<!-- [카드지출 차액 문구] (-) 일 경우 -->
+				<p class="subTxt">6월 최애 카드 보다 <strong><span class="dataValue">99억 4,885</span><em class="won">만원</em></strong> 절약</p>
+				<!-- [카드지출 차액 문구] (=)같을 경우  -->
+				<p class="subTxt">6월 최애 카드와 금액이 같아요!</p>
+				<!-- // -->
+			</div>
+		</div>
+
+		<!-- [CASE] (6개월 내 결제 有) 기준월 결제금액 0원 -->
+		<div class="boxTypeWrap t1">
+			<p class="defTit"><strong>결제 내역이 없어서<br>최애 카드를 알 수 없어요!</strong></p>
+
+			<div class="txtSub1 t1">
+				<!-- [카드지출 차액 문구] (-) 일 경우 -->
+				<p>6월 최애 카드 보다 <strong><span class="dataValue">99억 9,999</span><em class="won">만원</em></strong> 절약</p>
+				<!-- [카드지출 차액 문구] (=)같을 경우 -->
+				<p class="subTxt">6월 최애 카드와 금액이 같아요!</p>
+				<!-- // -->
+			</div>
+		</div>
+		<!-- // -->
+
+		<!-- -------------------------------------- -->
+		<!-- [배너 영역] 소비력 분석 연결 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap">
+			<h2 class="defSubTit1">내 신용도로 보는 소비력은?</h2>
+			<div class="banAni1" data-mode="ani">
+				<div><span>김농협</span>님</div>
+				<div><span>30</span>대 평균</div>
+			</div>
+			<button type="button" class="btnBodyLine">소비력 분석보기</button>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [배너 영역] PUSH 배너  -->
+		<!-- -------------------------------------- -->
+		<div class="areaBanner2 t1">
+			<a href="javascript:;" class="img4" title="PUSH 설정화면 바로가기">
+				<span>내 카드 분석을 매달 비교해볼까요?</span>
+				<span>매달 알림 받기</span>
+			</a>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [플로팅 버튼] 최상단 -->
+		<!-- -------------------------------------- -->
+		<button type="button" class="goTopBtn"><span class="blind">최상단으로 이동</span></button>
+		<!-- -------------------------------------- -->
+	</div>
+	<!-- ###################################### -->
+</div>
+
+<!-- ###################################### -->
+<!-- ### [샘플] 스크립트 ### -->
+<!-- ###################################### -->
+<script>
+	//차트 클릭 이벤트 샘플 : 상세정보 노출
+	$(document).off('click.chart').on('click.chart','[data-chart="wrap"] [role="button"]', function(){
+		var _chart_cont = $(this).find('[data-chart="cont"]'); //오픈되는 영역
+		
+		//접근성
+		if($(this).attr('aria-expanded') == 'true') $(this).attr('aria-expanded',false);
+		else $(this).attr('aria-expanded',true).siblings().attr('aria-expanded',false);
+
+		//초기화
+		$(this).siblings().find('[data-chart="cont"]').removeClass('active');
+
+		//오픈
+		if(_chart_cont.hasClass('active')) _chart_cont.removeClass('active');
+		else _chart_cont.addClass('active')
+	})
+</script>
+<!-- ###################################### -->
+</body>
+</html>

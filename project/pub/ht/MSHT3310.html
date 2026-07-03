@@ -1,0 +1,271 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 하나로가족고객</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">하나로가족고객</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="boxTypeWrap myGradeWrap">
+				
+				<h2 class="defSubTit2">
+					<strong>김농협님의 <br> 하나로가족고객 등급</strong>
+					<button type="button" class="toolTipBtn" onclick="popCenter();"><span class="blind">하나로가족고객 등급 안내 열기</span></button>
+				</h2>
+				<div class="wrapInner">
+					<strong class="gradeB1">일반</strong>
+					<!-- <strong class="gradeB2">블루</strong> -->
+					<!-- <strong class="gradeB3">그린</strong> -->
+					<!-- <strong class="gradeB4">로얄</strong> -->
+					<!-- <strong class="gradeB5">골드</strong> -->
+					<!-- <strong class="gradeB6">탑클래스</strong> -->
+				</div>
+
+				<p>(전분기말 기준 : 1800점)</p>
+			</div>
+
+			<div class="boxTypeWrap gradeCountWrap">
+				<h3 class="defSubTit2"><strong>하나로가족고객 점수</strong>
+					<!-- 툴팁 -->
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">하나로가족고객 점수 툴팁 열기</span></button>
+						<div class="tooltipCont">
+							<p>본 점수의 평가 기준일은 전일이며, 일부 항목은 전월말이 적용됩니다.</p>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+					<!-- // 툴팁 -->
+				</h3>
+				<p class="txtSmGray2 mt10">점수기준일 : 2020.09.23</p>
+				<div class="mt10">
+					<a href="javascript:;" class="linkTxt2">하나로가족고객 혜택보기</a>
+				</div>
+				<div class="gradePointWrap">
+					<span class="point"><span class="pointIinner"><strong class="dataValue">15,930</strong>점</span></span>
+					<p>다음 등급 산정기준일은 <strong>20년 2분기 말</strong>이며,<br>현재 점수를 유지 시 <strong>탑클래스</strong> 등급이 예상됩니다.</p>
+					<!-- # 등급별 텍스트 포인트 색상
+						gradeColor1 : 일반 
+						gradeColor2 : 블루 
+						gradeColor3 : 그린 
+						gradeColor4 : 로얄 
+						gradeColor5 : 골드 
+						gradeColor6 : 탑클래스 
+					-->
+				</div>
+
+				<div class="gradeViewWrap">
+					<div class="gradeView">
+						<!-- active 화살표 -->
+						<span class="gradeArrow"></span>
+						<!-- // active 화살표 -->
+						<ul>
+							<li class="">
+								<span class="gradeS1"></span>
+								<div class="gradeInfo">
+									<span class="gradeName">일반</span>
+								</div>
+							</li>
+							<li class="">
+								<span class="gradeS2"></span>
+								<div class="gradeInfo">
+									<span class="gradeName">블루</span>
+									<span class="gradePoint">900점<br>이상</span>
+								</div>
+							</li>
+							<li class="">  <!-- 현재 등급에 activeCur 클래스 사용 -->
+								<span class="gradeS3"></span>
+								<div class="gradeInfo">
+									<span class="gradeName">그린</span>
+									<span class="gradePoint">1200점<br>이상</span>
+								</spa>
+							</li>
+							<li class="activeNew">
+								<span class="gradeS4"></span>
+								<div class="gradeInfo">
+									<span class="gradeName">로얄</span>
+									<span class="gradePoint">3000점<br>이상</span>
+								</div>
+							</li>
+							<li class="">
+								<span class="gradeS5"></span>
+								<div class="gradeInfo">
+									<span class="gradeName">골드</span>
+									<span class="gradePoint">6000점<br>이상</span>
+								</div>
+							</li>
+
+							<li class="activeCur">  <!-- 예상되는 등급에 activeNew 클래스 사용 (기존 등급 유지일 경우 둘다 사용)-->
+								<span class="gradeS6"></span>
+								<div class="gradeInfo">
+									<span class="gradeName">탑클래스</span>
+									<span class="gradePoint">15000점<br>이상</span>
+								</div>
+								<div class="topMsg">
+									<p>탑클래스를 유지하는<br> 최고의 고객님, 대단해요!</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="areaBodyBtnFull mt20">
+					<a href="javascript:;" class="btnBodyLine green" role="button">등급 시뮬레이션</a>
+				</div>
+
+				<script>
+					hanaroArr();
+				</script>
+			</div>
+
+			<div class="boxTypeWrap">
+				<h3 class="defSubTit2">내가 받는 우대서비스</h3>
+
+				<div class="benefitGrade">
+					<p class="gradeS6 mb10">서비스등급 : 탑클래스</p>
+					<span>혜택종료일 : 2020.08.31</span>
+				</div>
+
+				<div class="wrapTblDefault">
+					<table cellpadding="0" cellspacing="0" class="thCenter tdCenter">
+						<caption>구분, 혜택 항목으로 구성된 우대서비스 테이블</cation>
+						<colgroup>
+							<col width="45%">
+							<col width="*">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">구분</th>
+								<th scope="col">혜택</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">텔레·인터넷·모바일뱅킹 수수료</th>
+								<td>면제 (타행 500원/건)</td>
+							</tr>
+							<tr>
+								<th scope="row">CD/ATM이체·출금 수수료</th>
+								<td>면제 (최고 1,000원/건)</td>
+							</tr>
+							<tr>
+								<th scope="row">창구 타행송금수수료</th>
+								<td>면제 (최고 4,000원/건)</td>
+							</tr>
+							<tr>
+								<th scope="row">예금금리우대(큰만족실세예금)</th>
+								<td>영업점장전결금리+0.15%이내</td>
+							</tr>
+							<tr>
+								<th scope="row">외환 환전·송금 환율우대</th>
+								<td>최대 50%<br>(창구거래시 통화별우대율 차등적용)</td>
+							</tr>
+							<tr>
+								<th scope="row">장례용품지원서비스</th>
+								<td>조문객 접대용 장례용품<br>(거래 영업점을 통해 신청)</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- [2021-08-06] 한은정 : infoTxt 디자인 변경 -->
+				<p class="infoTxt">전분기 보다 하나로가족고객 등급이 하향된 고객님께는<br>혜택 종료일까지 이전 등급의 우대서비스를 제공합니다.</p>
+
+				<!-- [2021-09-02] 한은정 : 버튼 삭제 -->
+				<!-- <div class="areaBodyBtnFull">
+					<a href="javascript:;" class="btnBodyLine green" role="button">우대서비스 자세히 보기</a>
+				</div> -->
+			</div>
+		</div>
+		<!-- //container -->
+
+		<!-- 하나로가족고객 등급 안내 팝업 -->
+		<div class="nhasset popWrap centerLayer">
+			<div class="dim"></div>
+			<div class="dimCloseArea" onclick="popClose(this);return false;">터치 시 해당 창을 닫습니다.</div>
+		
+			<div class="popInner">
+				
+				<h1>하나로가족고객이란?</h1>
+				<div class="popCont">
+					<p>고객님의 농협은행 거래실적을 종합하여 하나로가족고객으로 선정하고 각종 우대서비스를 제공해 드리는 고객 우대제도입니다.</p>
+					
+					<div class="gradeView">
+						<ul>
+							<li>
+								<span class="gradeS1"></span>
+								<div class="gradeInfo">
+									<span class="gradeName">일반</span>
+								</div>
+							</li>
+							<li>
+								<span class="gradeS2"></span>
+								<div class="gradeInfo">
+									<span class="gradeName">블루</span>
+								</div>
+							</li>
+							<li>
+								<span class="gradeS3"></span>
+								<div class="gradeInfo">
+									<span class="gradeName">그린</span>
+								</spa>
+							</li>
+							<li>
+								<span class="gradeS4"></span>
+								<div class="gradeInfo">
+									<span class="gradeName">로얄</span>
+								</div>
+							</li>
+							<li>
+								<span class="gradeS5"></span>
+								<div class="gradeInfo">
+									<span class="gradeName">골드</span>
+								</div>
+							</li>
+		
+							<li>
+								<span class="gradeS6"></span>
+								<div class="gradeInfo">
+									<span class="gradeName">탑클래스</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+		
+				<div class="popBtnWrap">
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button">
+						<img src="../../images/common/btn_popClose.png" alt="닫기">
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- // 하나로가족고객 등급 안내 팝업 -->
+	</div>
+
+</body>
+</html>

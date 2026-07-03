@@ -1,0 +1,3142 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>UI Guide [리스트]</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="nhasset guide_wrapper">
+	<header class="guide_header">
+		<h1>UI GUIDE <span>리스트</span></h1>
+		<nav data-toggle="wrap">
+			<button type="button" class="guide_btn" data-toggle="btn" aria-expanded="false">전체메뉴</button>
+			<div data-toggle="cont">
+				<a href="txt_sample.html">타이틀/텍스트</a>
+				<a href="mes_sample.html">메세지</a>
+				<a href="button_sample.html">버튼</a>
+				<a href="form_sample.html">폼</a>
+				<a href="list_sample.html" aria-current="page">리스트</a>
+				<a href="info_sample.html">정보</a>
+				<a href="table_sample.html">테이블</a>
+				<a href="bbs_sample.html">게시판</a>
+				<a href="banner_sample.html">배너</a>
+				<a href="chart_sample.html">차트</a>
+				<a href="etc_sample.html">기타</a>
+			</div>
+		</nav>
+	</header>
+
+	<!-- ###################################### -->
+	<!-- ### UI Guide [리스트] ### -->
+	<!-- ###################################### -->
+	<div class="guide_container">
+		<nav class="guide_menu">
+			<a href="#GCONTENT1" class="active">계좌목록</a>
+			<a href="#GCONTENT2">상품목록</a>
+			<a href="#GCONTENT3">거래내역</a>
+			<a href="#GCONTENT4">상세정보</a>
+			<a href="#GCONTENT5">기타</a>
+		</nav>
+
+		<div class="guide_box">
+			<h2>2022/2023 가이드 정의</h2>
+			<ul>
+				<li>공통적으로 사용한 클래스 네이밍에 한하여 정리되었으며, 일부 페이지에서만 사용할 수 있는 클래스 네이밍은 가이드에서 제외함.<br><strong>예시) .yeartexForm(연말정산)</strong></li>
+				<li>2023년 고도화 작업시 추가된 스타일 정의에 대해선 다음과 같이 표기함.<i class="guide_tag">2023고도화</i></li>
+			</ul>
+		</div>
+
+		<!-- ################################# -->
+		<!-- ### 계좌목록 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT1">
+			<h2 class="guide_title">계좌목록</h2>
+			<!-- -------------------------------------- -->
+			<!-- [유형1] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형1 : .accList</h3>
+
+				<div class="guide_area">
+					<h4 class="guide_title3">기본</h4>
+					<ul class="accList">
+						<li>
+							<div class="accInfoWrap">
+								<span class="accTit">[은행명] 계좌명</span>
+								<div class="accInfo">
+									<span class="accNum">000-00-00-0000</span>
+									<span class="accValue"><strong class="dataValue">000,000,000,000</strong><em class="won">원</em></span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="accInfoWrap">
+								<span class="accTit">[은행명] 계좌명</span>
+								<div class="accInfo">
+									<span class="accNum">000-00-00-0000</span>
+									<span class="accValue"><strong class="dataValue">000,000,000,000</strong><em class="won">원</em></span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="guide_area">
+					<h4 class="guide_title3">기관로고</h4>
+					<ul class="accList">
+						<li>
+							<a href="javascript:;">
+								<span class="imgWrap">
+									<img src="../../images/logos/AABG0000.png" alt="농협은행 로고" class="imgLogo">
+								</span>
+								<div class="accInfoWrap">
+									<div class="titArea">
+										<span class="accTit">$별명$ or $계좌명$</span>
+										<em class="icoNew2"><span class="blind">NEW</span></em>
+										<span class="acBookmark"><span class="blind">즐겨찾기</span></span>
+									</div>
+									<div class="accInfo">
+										<span class="accLabel"><em class="tag green">D-00</em></span>
+										<span class="accValue"><strong class="dataValue">000,000,000,000</strong><em class="won">원</em></span>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<span class="imgWrap">
+									<img src="../../images/logos/AAHJ0000.png" alt="카카오뱅크 로고" class="imgLogo">
+								</span>
+								<div class="accInfoWrap">
+									<div class="titArea"><span class="accTit">$별명$ or $계좌명$이 길어질 경우 한 줄 말줄임 됩니다.</span></div>
+									<div class="accInfo">
+										<span class="accLabel"><em class="tag green">D-00</em></span>
+										<span class="accValue"><strong class="dataValue">000,000,000,000</strong><em class="won">원</em></span>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" role="button">
+								<span class="imgWrap">
+									<img src="../../images/logos/AAER0000.png" alt="신한은행 로고" class="imgLogo">
+								</span>
+								<div class="accInfoWrap">
+									<div class="titArea">
+										<span class="accTit">$별명$ or $계좌명$</span>
+									</div>
+									<div class="accInfo">
+										<span class="accLabel"><em class="tag purple">목표</em><em class="tag gray">만료</em></span>
+										<span class="accValue"><button href="javascript:;" class="linkType1 pointColor">연결확인</button></span>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" role="button">
+								<span class="imgWrap">
+									<img src="../../images/logos/ACRB0000.png" alt="삼성전자 로고" class="imgLogo">
+								</span>
+								<div class="accInfoWrap">
+									<div class="titArea"><span class="accTit">주식명</span></div>
+									<div class="accInfo">
+										<span class="accLabel">
+											<em class="tag blue">주식</em><em class="tag gray">만료예정</em>
+										</span>
+										<span class="accValue">
+											<strong class="dataValue">000,000,000,000</strong><em class="won">원</em>
+										</span>
+									</div>
+									<div class="mainAmount">
+										<span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span>
+										<span class="amount inColor"><strong>000,000,000,000</strong>원 (+<strong class="dataValue">0.00</strong><em class="won">%</em>)</span>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" role="button">
+								<span class="imgWrap">
+									<img src="../../images/logos/ACAA0000.png" alt="테슬라 로고" class="imgLogo">
+								</span>
+								<div class="accInfoWrap">
+									<div class="titArea"><span class="accTit">주식명</span></div>
+									<div class="accInfo">
+										<span class="accValue">
+											<strong class="dataValue">000,000,000,000</strong><em class="won">원</em>
+										</span>
+									</div>
+									<div class="mainAmount">
+										<span class="arrowDown" role="img" aria-label="감소"><em class="blind">감소</em></span>
+										<span class="amount inColor"><strong>000,000,000,000</strong>원 (-<strong class="dataValue">0.00</strong><em class="won">%</em>)</span>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" role="button">
+								<span class="imgWrap">
+									<img src="../../images/logos/AACQ0000.png" alt="NH투자증권 로고" class="imgLogo">
+								</span>
+								<div class="accInfoWrap">
+									<div class="titAreaWrap">
+										<div class="titArea">
+											<span class="accTit">[별칭]대출명</span>
+										</div>	
+									</div>
+									<div class="accInfo">
+										<span class="accLabel wrapTag">
+											<em class="tag skyblue">마이너스</em>
+											<em class="tag red"> 만기경과</em>
+											<em class="tag skyblue">D-Day</em>
+											<em class="tag green">D-45</em>
+											<em class="tag purple">목표</em>
+											<em class="tag gray">만료예정</em>
+											<em class="txt">2021.06.10</em>
+										</span>
+										<span class="accValue">
+											<strong class="dataValue">000,000,000,000</strong><em class="won">원</em>
+											<div class="mainAmount">
+												<span class="amount">연 <strong class="dataValue">00.00</strong><em class="won">%</em></span>
+											</div>
+										</span>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<span class="imgWrap">
+									<img src="../../images/logos/AAAL0000.png" alt="현대해상 로고" class="imgLogo">
+								</span>
+								<div class="accInfoWrap">
+									<div class="titArea"><span class="accTit">[별칭] 자동차 보험명
+									</span></div>
+									<div class="accCar">
+										<div class="divingTxt fcGray"><span>123가1234</span><span>아슬란</span></div>
+									</div>
+									<div class="accInfo">
+										<span class="accLabel">
+											<em class="tag gray">만료예정</em>
+										</span>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="flexAlineCenter">
+								<span class="imgWrap">
+									<img src="../../images/logos/AAFP0000.png" alt="ABL생명 로고" class="imgLogo">
+								</span>
+								<div class="accInfoWrap">
+									<div class="titArea"><span class="accTit">보험명</span></div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" role="button">
+								<span class="imgWrap icoEtcEmpty" aria-hidden="true"></span>
+								<div class="accInfoWrap">
+									<div class="accInfo">
+										<span class="assetAddPara">
+											혹시 보유하신 <br>다른 부동산이 있나요?
+										</span>
+										<span class="accValue"><span class="labelAdd">추가하기</span></span>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="guide_area">
+					<h4 class="guide_title3">계좌삭제</h4>
+					<ul class="accList">
+						<li class="ob posR">
+							<span class="imgWrap">
+								<img src="../../images/logos/AABG0000.png" alt="농협은행 로고" class="imgLogo">
+							</span>
+							<div class="accInfoWrap">
+								<div class="accTit pr17">주식명</div>
+								<div class="accInfo mt0">
+									<span class="accNum">1234567890000</span>
+								</div>
+								<span class="accValue fr"><strong>000,000,000,000</strong><em class="won">원</em></span>
+							</div>
+							<button type="button" class="ob btnAccDel"><span class="blind">해당 계좌 삭제하기</span></button>
+						</li>
+						<li class="ob posR">
+							<span class="imgWrap">
+								<img src="../../images/logos/AABG0000.png" alt="농협은행 로고" class="imgLogo">
+							</span>
+							<div class="accInfoWrap">
+								<div class="accTit pr17">주식명</div>
+								<div class="accInfo mt0">
+									<span class="accNum">1234567890000</span>
+								</div>
+								<span class="accValue fr"><strong>000,000,000,000</strong><em class="won">원</em></span>
+							</div>
+							<button type="button" class="ob btnAccDel"><span class="blind">해당 계좌 삭제하기</span></button>
+						</li>
+					</ul>
+				</div>
+
+				<div class="guide_area">
+					<h4 class="guide_title3">링크표시</h4>
+					<ul class="accList">
+						<li>
+							<a href="javascript:;" class="link" role="button">
+								<div class="accInfoWrap">
+									<div class="accInfo">
+										<img src="../../images/logos/AABG0000.png" alt="농협카드 로고" class="imgLogo">
+										<span class="accTit">카드명</span>
+										<span class="accValue"><strong class="dataValue">000,000,000</strong><em class="won">원</em></span>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="link" role="button">
+								<div class="accInfoWrap">
+									<div class="accInfo">
+										<img src="../../images/logos/AABG0000.png" alt="농협카드 로고" class="imgLogo">
+										<span class="accTit">카드명</span>
+										<span class="accValue"><strong class="dataValue">000,000,000</strong><em class="won">원</em></span>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<h4 class="guide_title3">활용</h4>
+				<div class="guide_area2">
+					<h5 class="guide_title4">.boxTypeWrap &gt; .accList</h5>
+					<div class="boxTypeWrap">
+						<ul class="accList top">
+							<li>
+								<span class="imgWrap"><img src="../../images/logos/AAHJ0000.png" alt="카카오뱅크 로고"></span>
+								<div class="accInfoWrap">
+									<div class="flex">
+										<div class="titArea"><span class="accTit">계좌명</span></div>
+										<span class="accValue"><strong class="dataValue">000,000,000</strong><em class="won">원</em></span>
+									</div>
+									<span class="accNum">000-0000-0000-00</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="guide_area2">
+					<h5 class="guide_title4">.selectList + .accList + .isBorder</h5>
+					<div class="guide_area" style="padding:40px 40px 20px;">
+						<ul class="selectList accList isBorder">
+							<li class="dsfNone">
+								<a href="javascript:;" role="button">
+									<div class="accTit">
+										<span class="imgWrap"><img src="../../images/logos/AAAZ0000.png" alt="NH농협은행 로고" class="imgLogo"></span>
+										<div class="accInfoWrap">
+											<p class="accTit">계좌명</p>
+											<div class="accInfo">
+												<span class="accNum">000******</span>
+											</div>
+										</div>
+									</div>
+									<ul class="detailList">
+										<li>
+											<span class="tit">항목명</span>
+											<span class="value">내용</span>
+										</li>
+										<li>
+											<span class="tit">항목명</span>
+											<span class="value">000,000<em class="won">원</em></span>
+										</li>
+									</ul>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="guide_area2">
+					<h5 class="guide_title4">.boxTypeWrap &gt; .formWrap.btndelType &gt; .listIs  &gt; .accList</h5>
+					<div class="boxTypeWrap pt0 pb28">
+						<div class="totalTitWrap typeob visualSubWrap dsfWrap">
+							<h3 class="visualSub type01">타이틀</h3>
+						</div>
+						<div class="formWrap btndelType mt0">
+							<ul>
+								<li>
+									<div class="listIs">
+										<ul class="accList">
+											<li class="ob posR">
+												<span class="imgWrap">
+													<img src="../../images/logos/AABG0000.png" alt="농협은행 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="accTit pr17">주식명</div>
+													<div class="accInfo mt0">
+														<span class="accNum">1234567890000</span>
+													</div>
+													<span class="accValue fr"><strong>000,000,000</strong><em class="won">원</em></span>
+												</div>
+												<button type="button" class="ob btnAccDel"><span class="blind">해당 계좌 삭제하기</span></button>
+											</li>
+											<li class="ob posR">
+												<span class="imgWrap">
+													<img src="../../images/logos/AABG0000.png" alt="농협은행 로고" class="imgLogo">
+												</span>
+												<div class="accInfoWrap">
+													<div class="accTit pr17">주식명</div>
+													<div class="accInfo mt0">
+														<span class="accNum">1234567890000</span>
+													</div>
+													<span class="accValue fr"><strong>000,000,000</strong><em class="won">원</em></span>
+												</div>
+												<button type="button" class="ob btnAccDel"><span class="blind">해당 계좌 삭제하기</span></button>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="areaBodyBtnFull">
+							<a href="javascript:;" class="btnBodyLine" role="button">버튼명</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [유형2] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형2 : .bankInfoList</h3>
+				<ul class="bankInfoList">
+					<li>
+						<a href="javascript:;" class="bankInfoListBox active" role="checkbox" aria-checked="true">
+							<div class="bankInfo">
+								<div class="logoArea">
+									<img src="../../images/logos/AAES0000.png" alt="하나은행 로고">
+								</div>
+								<div class="outgoingsCont">
+									<strong class="title">계좌명</strong>
+									<div class="detail">
+										<p class="summary">000-0000-00-000</p>
+									</div>
+								</div>
+							</div>
+							<ul class="detailList">
+								<li>
+									<span class="tit">항목명</span>
+									<span class="value">000,000,000원</span>
+								</li>
+								<li>
+									<span class="tit">항목명</span>
+									<span class="value">YYYY.MM.DD</span>
+								</li>
+							</ul>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;" class="bankInfoListBox" role="checkbox" aria-checked="false">
+							<div class="bankInfo">
+								<div class="logoArea">
+									<img src="../../images/logos/AAES0000.png" alt="하나은행 로고">
+								</div>
+								<div class="outgoingsCont">
+									<strong class="title">계좌명</strong>
+									<div class="detail">
+										<p class="summary">000-0000-00-000</p>
+									</div>
+								</div>
+							</div>
+							<ul class="detailList">
+								<li>
+									<span class="tit">항목명</span>
+									<span class="value">000,000,000원</span>
+								</li>
+								<li>
+									<span class="tit">항목명</span>
+									<span class="value">YYYY.MM.DD</span>
+								</li>
+							</ul>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- -------------------------------------- -->
+		</section>
+
+		<!-- ################################# -->
+		<!-- ### 상품목록 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT2">
+			<h2 class="guide_title">상품목록</h2>
+			<!-- -------------------------------------- -->
+			<!-- [추천상품] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">추천상품 : .prodListWrap</h3>
+
+				<!-- ### 목록형 ### -->
+				<div class="guide_area">
+					<h4 class="guide_title3">목록형</h4>
+					<ul class="prodListWrap borderTypeNew">
+						<li>
+							<a href="javascript:;" class="type01">
+								<div class="prodInfoWrap">
+									<div class="titArea">
+										<strong class="prodTit">상품명(예금)</strong>
+										<div class="prodVal">기본 <strong class="dataValue">0.00</strong><em class="per">%</em>
+											<p class="f11">(연/세전, 12개월 가입 시)</p>
+										</div>
+									</div>
+									<div class="prodInfo">
+										<span class="prodValue">예상우대금리(0.00%p)</span>
+										<span class="hashWrap3">
+											<em class="hastag">테그명,</em> <em class="hastag">테그명,</em> <em class="hastag">테그명</em> 등
+										</span>
+									</div>
+								</div>
+								<div class="prodRecomWrap">
+									<em class="prodRecommInfo">조건유지시<br>나의 예상금리</em>
+									<div class="prodRecomVal">
+										<strong class="dataValue">0.00</strong><em class="per">%</em>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="type02">
+								<div class="prodInfoWrap">
+									<div class="titArea">
+										<strong class="prodTit">상품명(적금)</strong>
+										<div class="prodVal">기본 <strong class="dataValue">0.08</strong><em class="per">%</em>
+											<p class="f11">(연/세전, 12개월 가입 시)</p>
+										</div>
+									</div>
+									<div class="prodInfo">
+										<span class="prodValue">예상우대금리(0.00%p)</span>
+										<span class="hashWrap3">
+											<em class="hastag">태그명,</em> <em class="hastag">태그명,</em> <em class="hastag">태그명</em>
+										</span>
+									</div>
+								</div>
+								<div class="prodRecomWrap">
+									<em class="prodRecommInfo">조건유지시<br>나의 예상금리</em>
+									<div class="prodRecomVal">
+										<strong class="dataValue">0.00</strong><em class="per">%</em>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li> 
+							<a href="javascript:;" class="type11">
+								<div class="prodInfoWrap">
+									<div class="titArea">
+										<strong class="prodTit">상품명(예적금)</strong>
+										<p class="prodSub">상품설명</p>
+									</div>
+									<div class="prodInfo">
+										<span class="hashWrap2">
+											<em class="hastag">#태그명</em>
+											<em class="hastag">#태그명</em> <em class="hastag">#태그명</em> 
+										</span>
+										<div class="prodVal">최고(연/세전)<br> <strong class="dataValue">1.00</strong><em class="per">%</em></div>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<!-- ### 카드형 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">카드형</h4>
+					<div class="boxTypeWrap bgType10">
+						<div class="visualSubWrap"></div>
+						<ul class="prodListWrap">
+							<li>
+								<a href="javascript:;" role="button">
+									<div class="prodRecomWrap">
+										<span class="tag mint">태그명</span>
+										<strong class="prodTit">상품명</strong>
+										<em class="prodRecommInfo">상품설명이 노출됩니다.<br>상품설명이 노출됩니다.</em>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button">
+									<div class="prodRecomWrap">
+										<strong class="prodTit">상품명</strong>
+										<em class="prodRecommInfo">상품설명이 노출됩니다.</em>
+									</div>
+									<div class="prodInfoWrap">	
+										<span class="hashWrap">
+											<em class="hastag bg01">#해시태그</em>
+											<em class="hastag bg02">#해시태그</em>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<div class="prodRecomWrap">
+										<strong class="prodTit">상품명</strong>
+										<em class="prodRecommInfo">최고(연/세전)</em>
+										<div class="prodRecomVal dsf">
+											<span class="dataValueWrap">
+												<strong class="dataValue">0.00</strong><em class="per">%</em>
+											</span>
+											<div class="prodVal ty01">
+												상품설명이 노출됩니다.
+											</div>
+										</div>
+										<span class="hashWrap">
+											<em class="hastag bg01">#해시태그</em>
+											<em class="hastag bg02">#해시태그</em>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<div class="prodRecomWrap">
+										<strong class="prodTit">상품명</strong>
+										<em class="prodRecommInfo">최고(연/세전)</em>
+										<div class="prodRecomVal dsf">
+											<span class="dataValueWrap">
+												<strong class="dataValue">0.00</strong><em class="per">%</em>
+											</span>
+											<div class="prodVal ty01">
+												상품설명이 노출됩니다.
+											</div>
+										</div>
+									</div>
+									<div class="prodInfoWrap">
+										<span class="hashWrap">
+											<em class="hastag bg01">#해시태그</em>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<div class="prodRecomWrap">
+										<strong class="prodTit">상품명</strong>
+										<em class="prodRecommInfo">부가설명노출</em>
+										<div class="prodRecomVal dsf">
+											<span class="dataValueWrap">
+												<strong class="dataValue">0.00</strong><em class="per">%</em>
+											</span>
+											<div class="prodVal ty01">
+												기본 <span class="dataValue">0.00</span><em class="per">%</em>(연/세전)
+											</div>
+										</div>
+									</div>
+									<div class="prodInfoWrap">	
+										<span class="prodValue">예상우대금리(0.0%p)</span>
+										<span class="hashWrap3">
+											<em class="hastag">태그명,</em> <em class="hastag">태그명,</em><em class="hastag">태그명</em> 등
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<div class="prodRecomWrap">
+										<span class="tagLabel">태그명</span>
+										<strong class="prodTit">상품명</strong>
+										<em class="prodRecommInfo">상품설명이 노출됩니다.</em>
+										<div class="prodRecomVal dsf">
+											<span class="dataValueWrap">
+												<strong class="dataValue">0.00</strong><em class="per down">% p</em>
+											</span>
+											<div class="prodVal ty01">
+												최저<span class="dataValue">0.00</span><em class="per">%</em>(연)
+											</div>
+										</div>
+									</div>
+									<div class="prodInfoWrap">
+										<span class="prodValue">상품설명이 노출됩니다.</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<h5 class="guide_title4 t1">활용1 : .boxTypeWrap.bgType02</h5>
+					<div class="boxTypeWrap bgType02 oblistbg02 addShadow">
+						<div class="visualSubWrap">
+							<h6 class="visualSub type01">타이틀 [.visualSub.type01]</h6>
+							<p class="visualSubPara">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+						</div>
+						<ul class="prodListWrap">
+							<li>
+								<a href="javascript:;" role="button">
+									<div class="prodRecomWrap">
+										<strong class="prodTit">상품명</strong>
+										<em class="prodRecommInfo">최고(연/세전)</em>
+										<div class="d-flex mt10">
+											<div class="prodRecomVal"><span class="dataValueWrap"><strong class="dataValue">0.00%</strong></span></div>
+											<div class="prodVal">
+												상품설명이 노출됩니다.<br>상품설명이 노출됩니다.
+											</div>
+										</div>
+									</div>
+									<div class="prodInfoWrap totalBalance mt0 p0">
+										<div class="hashWrap">
+											<span class="hashTag">#해시태그</span>
+											<span class="hashTag">#해시태그</span>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<h5 class="guide_title4 t1">활용2 : .boxTypeWrap.bgType03</h5>
+					<div class="boxTypeWrap bgType03 addShadow">
+						<div class="visualSubWrap">
+							<h6 class="prodListTit img06">타이틀<br>[.prodListTit.img06]</h6>
+						</div>
+						<ul class="prodListWrap">
+							<li>
+								<a href="javascript:;">
+									<div class="prodRecomWrap">
+										<span class="tagLabel">태그명</span>
+										<strong class="prodTit">상품명</strong>
+										<em class="prodRecommInfo">상품설명이 노출됩니다.<br>상품설명이 노출됩니다.</em>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="boxTypeWrap bgType03 addShadow">
+						<div class="visualSubWrap">
+							<h6 class="prodListTit img03">타이틀<br>[.prodListTit.img03]</h6>
+							<p class="subTxt4">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+						</div>
+						<ul class="prodListWrap">
+							<li>
+								<a href="javascript:;">
+									<div class="prodRecomWrap">
+										<span class="tagLabel">태그명</span>
+										<strong class="prodTit">상품명</strong>
+										<em class="prodRecommInfo">부가설명</em>
+										<div class="prodRecomVal dsf">
+											<span class="dataValueWrap">
+												<strong class="dataValue">0.00</strong><em class="per down">% p</em>
+											</span>
+											<div class="prodVal ty01">
+												최저<span class="dataValue">0.00</span><em class="per">%</em>(연)
+											</div>
+										</div>
+									</div>
+
+									<div class="prodInfoWrap">
+										<span class="prodValue">나의 우대금리 적용 항목</span>
+										<span class="hashWrap3">
+											<em class="hastag">태그명,</em> <em class="hastag">태그명,</em> <em class="hastag">태그명</em>등
+										</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="boxTypeWrap bgType03">
+						<h2 class="prodListTit img05">타이틀<br>[.prodListTit.img05]</h2>
+						<p class="subTxt4">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+						<ul class="prodListWrap">
+							<li>
+								<a href="javascript:;">
+									<div class="prodRecomWrap">
+										<strong class="prodTit">상품명</strong>
+										<em class="prodRecommInfo">부가설명</em>
+										<div class="prodRecomVal dsf">
+											<span class="dataValueWrap">
+												<strong class="dataValue">0.00</strong><em class="per">%</em>
+											</span>
+											<div class="prodVal ty01">
+												기본<span class="dataValue">0.00</span><em class="per">%</em>(연/세전)
+											</div>
+										</div>
+									</div>
+									<div class="prodInfoWrap">	
+										<span class="prodValue">예상우대금리(0.00%p)</span>
+										<span class="hashWrap3">
+											<em class="hastag">태그명,</em> <em class="hastag">태그명,</em> <em class="hastag">태그명</em>등
+										</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<h5 class="guide_title4 t1">활용3 : .boxTypeWrap.bgType04</h5>
+					<div class="boxTypeWrap bgType04">
+						<h6 class="prodListTit img14">타이틀 [.prodListTit.img14]</h6>
+						<p class="subTxt4">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+						<ul class="prodListWrap">
+							<li>
+								<a href="javascript:;" role="button">
+									<div class="prodRecomWrap">
+										<strong class="prodTit">상품명</strong>
+										<em class="prodRecommInfo">상품설명이 노출됩니다.</em>
+									</div>
+									<div class="prodInfoWrap">	
+										<span class="hashWrap">
+											<em class="hastag bg01">#해시태그</em>
+											<em class="hastag bg02">#해시태그</em>
+										</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="boxTypeWrap bgType04">
+						<h6 class="prodListTit img15">타이틀<br>[.prodListTit.img15]</h6>
+						<p class="subTxt4">소득 및 연령에 따라 다를 수 있습니다.</p>
+						<ul class="prodListWrap mt10">
+							<li>
+								<div class="disagree">
+									<a href="javascript:;" role="button">
+										<p class="disagreeP"><strong>개인형퇴직연금(IRP)</strong>
+											<span class="txt">은퇴 걱정 없는 노후 월급 준비하기</span>
+										</p>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="boxTypeWrap bgType04 addShadow">
+						<div class="visualSubWrap">
+							<h6 class="prodListTit img01">타이틀<br>[.prodListTit.img01]</h6>
+							<p class="subTxt4">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+						</div>
+						<ul class="prodListWrap">
+							<li>
+								<div class="disagree">
+									<a href="javascript:;" role="button">
+										<p class="disagreeP"><strong>나만 알고 싶은 추천상품</strong></p>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="boxTypeWrap bgType04 addShadow">
+						<div class="visualSubWrap">
+							<h6 class="prodListTit img13">타이틀<br>[.prodListTit.img13]</h6>
+							<p class="subTxt4">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+						</div>
+						<ul class="prodListWrap">
+							<li>
+								<a href="javascript:;">
+									<div class="prodRecomWrap">
+										<strong class="prodTit">상품명</strong>
+										<em class="prodRecommInfo">최고(연/세전)</em>
+										<div class="prodRecomVal dsf">
+											<span class="dataValueWrap">
+												<strong class="dataValue">0.00</strong><em class="per">%</em>
+											</span>
+											<div class="prodVal ty01">상품설명이 노출됩니다.</div>
+										</div>
+										<span class="hashWrap">
+											<em class="hastag bg01">#해시태그</em>
+											<em class="hastag bg02">#해시태그</em>
+										</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="boxTypeWrap bgType04 addShadow"> 
+						<div class="visualSubWrap">
+							<h6 class="prodListTit img07">타이틀<br>[.prodListTit.img07]</h6>
+							<p class="subTxt4">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+						</div>
+						<ul class="prodListWrap">
+							<li>
+								<a href="javascript:;">
+									<div class="prodRecomWrap">
+										<strong class="prodTit">상품명</strong>
+										<em class="prodRecommInfo">최고(연/세전)</em>
+										<div class="prodRecomVal dsf">
+											<span class="dataValueWrap">
+												<strong class="dataValue">0.00</strong><em class="per">%</em>
+											</span>
+											<div class="prodVal ty01">상품설명이 노출됩니다.</div>
+										</div>
+										<span class="hashWrap">
+											<em class="hastag bg01">#해시태그</em>
+											<em class="hastag bg02">#해시태그</em>
+										</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="boxTypeWrap bgType04">
+						<h6 class="prodListTit img04">타이틀<br>[.prodListTit.img04]</h6>
+						<p class="subTxt4">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+						<ul class="prodListWrap">
+							<li>
+								<a href="javascript:;">
+									<div class="prodRecomWrap">
+										<strong class="prodTit">상품명</strong>
+										<em class="prodRecommInfo">최고(연/세전)</em>
+										<div class="prodRecomVal dsf">
+											<span class="dataValueWrap">
+												<strong class="dataValue">0.00</strong><em class="per">%</em>
+											</span>
+											<div class="prodVal ty01">상품설명이 노출됩니다.</div>
+										</div>
+										<span class="hashWrap">
+											<em class="hastag bg01">#해시태그</em>
+											<em class="hastag bg02">#해시태그</em>
+										</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<ul class="prodListWrap mt10">
+							<li>
+								<div class="disagree">
+									<a href="javascript:;" role="button">
+										<p class="disagreeP"><strong>나만 알고 싶은 추천상품</strong></p>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="boxTypeWrap bgType04 oblistbg01 addShadow">
+						<div class="visualSubWrap">
+							<h3 class="visualSub type01">타이틀 [.visualSub.type01]</h3>
+							<p class="visualSubPara">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+						</div>
+						<ul class="prodListWrap">
+							<li>
+								<a href="javascript:;">
+									<div class="prodRecomWrap">
+										<strong class="prodTit">상품명</strong>
+										<em class="prodRecommInfo">부가설명</em>
+										<div class="prodRecomVal dsf">
+											<span class="dataValueWrap">
+												<strong class="dataValue">0.00</strong><em class="per">%</em>
+											</span>
+											<div class="prodVal ty01">
+												기본 <span class="dataValue">0.00</span><em class="per">%</em>(연/세전)
+											</div>
+										</div>
+									</div>
+									<div class="prodInfoWrap">	
+										<span class="prodValue">예상우대금리(0.00%p)</span>
+										<span class="hashWrap3">
+											<em class="hastag">태그명,</em> <em class="hastag">태그명,</em> <em class="hastag">태그명</em> 등
+										</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<h5 class="guide_title4 t1">활용4 : .boxTypeWrap.bgType05</h5>
+					<div class="boxTypeWrap bgType05 addShadow">
+						<div class="visualSubWrap">
+							<h6 class="prodListTit img08">타이틀<br>[.prodListTit.img08]</h6>
+							<p class="subTxt4 mb0">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+						</div>
+						<ul class="prodListWrap">
+							<li>
+								<a href="javascript:;">
+									<div class="prodRecomWrap">
+										<strong class="prodTit">상품명</strong>
+										<em class="prodRecommInfo">부가설명</em>
+										<div class="prodRecomVal dsf">
+											<span class="dataValueWrap">
+												<strong class="dataValue">0.00</strong><em class="per">%</em>
+											</span>
+											<div class="prodVal ty01">
+												기본 <span class="dataValue">0.00</span><em class="per">%</em>(연/세전)
+											</div>
+										</div>
+									</div>
+									<div class="prodInfoWrap">	
+										<span class="prodValue">예상우대금리(0.00%p)</span>
+										<span class="hashWrap3">
+											<em class="hastag">태그명,</em> <em class="hastag">태그명,</em> <em class="hastag">태그명</em> 등
+										</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<h5 class="guide_title4 t1">활용5 : .boxTypeWrap.bgType06</h5>
+					<div class="boxTypeWrap bgType06 addShadow">
+						<div class="visualSubWrap">
+							<h3 class="prodListTit img09">타이틀<br>[.prodListTit.img09]</h3>
+							<p class="subTxt4 mb0">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+						</div>
+						<ul class="prodListWrap">
+							<li>
+								<div class="disagree">
+									<a href="javascript:;" role="button">
+										<p class="disagreeP bgType01"><strong>나만 투자 안해도 괜찮은걸까?</strong>
+											<span class="addtxt">나에게 맞는 펀드 찾기</span>
+										</p>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<h5 class="guide_title4 t1">활용6 : .boxTypeWrap.bgType08</h5>
+					<div class="boxTypeWrap bgType08 addShadow">
+						<div class="visualSubWrap">
+							<h3 class="prodListTit img10">타이틀<br>[.prodListTit.img10]</h3>
+							<p class="subTxt4 mb0">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+						</div>
+						<ul class="prodListWrap">
+							<li>
+								<a href="javascript:;" role="button">
+									<div class="prodRecomWrap">
+										<strong class="prodTit">상품명</strong>
+										<em class="prodRecommInfo">상품설명이 노출됩니다.</em>
+									</div>
+									<div class="prodInfoWrap">	
+										<span class="hashWrap">
+											<em class="hastag bg03">#해시태그</em>
+											<em class="hastag bg01">#해시태그</em>
+										</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<h5 class="guide_title4 t1">활용7 : .boxTypeWrap.bgType09</h5>
+					<div class="boxTypeWrap bgType09 addShadow">
+						<div class="visualSubWrap">
+							<h3 class="prodListTit img17">타이틀<br>[.prodListTit.img17]</h3>
+							<p class="subTxt4 mb0">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+						</div>
+						<ul class="prodListWrap">
+							<li>
+								<a href="javascript:;">
+									<div class="prodRecomWrap">
+										<strong class="prodTit">상품명</strong>
+										<em class="prodRecommInfo">최고(연/세전)</em>
+										<div class="prodRecomVal dsf">
+											<span class="dataValueWrap">
+												<strong class="dataValue">0.00</strong><em class="per">%</em>
+											</span>
+											<div class="prodVal ty01">상품설명이 노출됩니다.</div>
+										</div>
+										<span class="hashWrap">
+											<em class="hastag bg01">#해시태그</em>
+											<em class="hastag bg02">#해시태그</em>
+										</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<h5 class="guide_title4 t1">활용8 : .boxTypeWrap.bgType10</h5>
+					<div class="boxTypeWrap bgType10">
+						<div class="visualSubWrap">
+							<h3 class="prodListTit img18">타이틀<br>[.prodListTit.img18]</h3>
+							<p class="subTxt4 mb0">상품가입 시 실제 금리와 다를 수 있습니다.</p>
+						</div>
+						<ul class="prodListWrap">
+							<li>
+								<div class="disagree">
+									<a href="javascript:;" role="button">
+										<p class="disagreeP"><strong>나만 알고 싶은 추천상품</strong></p>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- ### // ### -->
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [카드상품] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">카드상품</h3>
+
+				<!-- ### 카드형 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">카드형 : .swCardComp</h4>
+
+					<!-- ### 기본 ### -->
+					<div class="guide_area">
+						<h5 class="guide_title4">기본</h5>
+						<div class="swCardComp">
+							<div class="cardInfoWrap">
+								<div class="cs cardInfoArea"><strong>카드설명 및 카드명</strong></div>
+								<span class="cs cardImgArea" aria-hidden="true"><img src="../../images/img_cs_card04.png" alt=""></span> <!-- [2023-01-05] 카드이미이 수정, alt 추가 -->
+							</div>
+							<div class="cardHashtag"><span>#해시태그</span><span>#해시태그</span></div>
+							<div class="cardReview">준법감시인심의필 2022-2835(2022.06.15~2023.12.31.)</div>
+						</div>
+					</div>
+
+					<!-- ### 이미지 세로형 ### -->
+					<div class="guide_area">
+						<h5 class="guide_title4">이미지 세로형</h5>
+						<div class="swCardComp t1">
+							<div class="titleArea"><strong>연<span class="dataValue">000,000</span>원</strong> <span class="benepitTxt"> 혜택</span>
+								<div class="tooltipWrap">
+									<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">카드추천 툴팁 열기</span></button>
+									<div class="tooltipCont boxInTooltip" style="z-index:10">
+										<p>타사카드 최근 3개월 사용내역을 NH농협카드로 이용했을 시 받을 수 있는 할인/적립 금액으로, 타사카드와 비교해보세요.</p>
+										<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+									</div>
+								</div>
+							</div>
+							<div class="mt15"><span class="cardBenefitFlag">혜택 1위 카드</span></div>
+							<div class="cardInfoWrap">
+								<div class="cardInfoArea"><strong>카드설명 및 <span class="pointColor">카드명</span></strong></div>
+								<span class="cardImgArea" aria-hidden="true"><img src="../../images/temp/temp_card_img.png"></span>
+							</div>
+							<div class="cardHashtag"><span>#해시태그</span><span>#해시태그</span></div>
+							<div class="cardReview">준법감시인 심의필 정보노출</div>
+							<div class="areaBodyBtnFull mt25">
+								<a href="javascript:;" class="btnBodyLine green" role="button">카드상세 바로가기</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- ### 슬라이드 추가 ### -->
+					<div class="guide_area2">
+						<h5 class="guide_title4">슬라이드 추가</h5>
+						<div class="boxTypeWrap mt0">
+							<div class="bannerWarpPrd swCardCompWrap">
+								<div class="swiper-container bannerSwiperPrd">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="swCardComp t1">
+												<div class="titleArea"><strong>연<span class="dataValue">000,000</span>원</strong> <span class="benepitTxt"> 혜택</span>
+													<div class="tooltipWrap">
+														<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">카드추천 툴팁 열기</span></button>
+														<div class="tooltipCont boxInTooltip" style="z-index:10">
+															<p>타사카드 최근 3개월 사용내역을 NH농협카드로 이용했을 시 받을 수 있는 할인/적립 금액으로, 타사카드와 비교해보세요.</p>
+															<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+														</div>
+													</div>
+												</div>
+												<div class="mt15"><span class="cardBenefitFlag">혜택 1위 카드</span></div>
+												<div class="cardInfoWrap">
+													<div class="cardInfoArea"><strong>카드설명 및 <span class="pointColor">카드명</span></strong></div>
+													<span class="cardImgArea" aria-hidden="true"><img src="../../images/temp/temp_card_img.png"></span>
+												</div>
+												<div class="cardHashtag"><span>#해시태그</span><span>#해시태그</span></div>
+												<div class="cardReview">준법감시인 심의필 정보노출</div>
+												<div class="areaBodyBtnFull mt25">
+													<a href="javascript:;" class="btnBodyLine green" role="button">카드상세 바로가기</a>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="swCardComp t1">
+												<div class="titleArea"><strong>연<span class="dataValue">000,000</span>원</strong> <span class="benepitTxt"> 혜택</span>
+													<div class="tooltipWrap">
+														<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">카드추천 툴팁 열기</span></button>
+														<div class="tooltipCont boxInTooltip" style="z-index:10">
+															<p>타사카드 최근 3개월 사용내역을 NH농협카드로 이용했을 시 받을 수 있는 할인/적립 금액으로, 타사카드와 비교해보세요.</p>
+															<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+														</div>
+													</div>
+												</div>
+												<div class="mt15"><span class="cardBenefitFlag">혜택 1위 카드</span></div>
+												<div class="cardInfoWrap">
+													<div class="cardInfoArea"><strong>카드설명 및 카드명</strong></div>
+													<span class="cardImgArea" aria-hidden="true"><img src="../../images/temp/temp_card_img.png"></span>
+												</div>
+												<div class="cardHashtag"><span>#해시태그</span><span>#해시태그</span></div>
+												<div class="cardReview">준법감시인 심의필 정보노출</div>
+												<div class="areaBodyBtnFull mt25">
+													<a href="javascript:;" class="btnBodyLine green" role="button">카드상세 바로가기</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-control">
+										<div class="swiper-pagination"></div>
+										<div class="swiper-autoBtn playing">
+											<a href="javascript:;" class="stopBtn" title="자동재생중 두번 터치시 멈춤"></a>
+											<a href="javascript:;" class="playBtn" title="자동재생 멈춤 두번 터치시 자동재생시작"></a>
+										</div>
+									</div>
+									<div class="swiper-button-prev blind"></div>
+									<div class="swiper-button-next blind"></div>
+								</div>
+							</div>
+						</div>
+						<script>
+							$(function () {
+								var swiper = new Swiper('.bannerSwiperPrd', {
+									slidesPerView: 1,
+									spaceBetween: 10,
+									loop: true,
+									observer:true,
+									observeParents : true,
+									/*
+									autoplay: {
+										delay: 2500,
+										disableOnInteraction: true,
+										pauseOnMouseEnter: true,
+									},
+									*/
+		
+									pagination: {
+										el: '.swiper-pagination',
+										type: 'bullets',
+										clickable: true,
+									},
+									on: {
+										transitionEnd: function () {
+											$('.swiper-slide').attr('aria-hidden', 'true')
+											$('.swiper-slide-active').attr('aria-hidden', 'false')
+										}
+									}
+								});
+								$('.bannerSwiperPrd').find('.stopBtn').on('click', function () {
+									$('.swiper-autoBtn').removeClass('playing');
+									swiper.autoplay.stop();
+									console.log('자동재생 멈춤');
+								})
+								$('.bannerSwiperPrd').find('.playBtn').on('click', function () {
+									$('.swiper-autoBtn').addClass('playing');
+		
+									swiper.autoplay.start();
+									console.log('자동재생 시작');
+								})
+							})
+						</script>
+					</div>
+				</div>
+
+				<!-- ### 목록형 ### -->
+				<div class="guide_area">
+					<h4 class="guide_title3">목록형 : .cardOrderList</h4>
+					<h5 class="guide_title4">기관로고유형</h5>
+					<ol class="cardOrderList">
+						<li>
+							<span class="num">1</span>
+							<span class="imgWrap">
+								<img src="../../images/logos/AABG0000.png" alt="" class="imgLogo"><span>카드명</span>
+							</span>
+						</li>
+						<li>
+							<span class="num">2</span>
+							<span class="imgWrap">
+								<img src="../../images/logos/AABG0000.png" alt="" class="imgLogo"><span>카드명</span>
+							</span>
+						</li>
+						<li>
+							<span class="num">3</span>
+							<span class="imgWrap">
+								<img src="../../images/logos/AABG0000.png" alt="" class="imgLogo"><span>카드명</span>
+							</span>
+						</li>
+					</ol>
+
+					<h5 class="guide_title4">카드이미지유형(농협카드) : + .nhCard</h5>
+					<ol class="cardOrderList nhCard">
+						<li>
+							<a href="javascript" title="NH농협카드 사이트로 이동">
+								<span class="num">1</span>
+								<span class="cardImgArea"><img src="../../images/img_card_allone11.png" alt=""></span>
+								<span class="cardTitle">카드명</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript" title="NH농협카드 사이트로 이동">
+								<span class="num">2</span>
+								<span class="cardImgArea"><img src="../../images/img_card_allone11.png" alt=""></span>
+								<span class="cardTitle">카드명</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript" title="NH농협카드 사이트로 이동">
+								<span class="num">3</span>
+								<span class="cardImgArea"><img src="../../images/img_card_allone11.png" alt=""></span>
+								<span class="cardTitle">카드명</span>
+							</a>
+						</li>
+					</ol>
+				</div>
+				<!-- ### // ### -->
+			</div>
+			<!-- -------------------------------------- -->
+		</section>
+
+		<!-- ################################# -->
+		<!-- ### 거래내역 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT3">
+			<h2 class="guide_title">거래내역</h2>
+			<!-- -------------------------------------- -->
+			<!-- [유형1] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형1 : .inoutListWrap</h3>
+
+				<!-- ### 기본 ### -->
+				<div class="guide_area">
+					<h4 class="guide_title3">기본</h4>
+					<div class="inoutListWrap">
+						<div class="inoutListInn">
+							<ul class="inoutList">
+								<li>
+									<a href="javascript:;" class="link">
+										<div class="isCategory">
+											<div class="w100p">
+												<div class="inoutTit">
+													<span class="use">거래명</span>
+													<span class="amount"><strong class="dataValue">-000,000</strong><em class="won">원</em></span>
+												</div>
+												<div class="inoutCont">
+													<div class="timeWrap">
+														<span class="time">10:30<span class="tit">결제수단</span></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="link">
+										<div class="isCategory">
+											<div class="w100p">
+												<div class="inoutTit">
+													<span class="use">거래명</span>
+													<span class="amount"><em class="won">-USD</em> <strong class="dataValue">00,000.000</strong></span>
+												</div>
+												<div class="inoutCont">
+													<div class="timeWrap">
+														<span class="time">00:00<span class="tit">결제수단</span></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="link">
+										<div class="isCategory">
+											<div class="w100p">
+												<div class="inoutTit">
+													<span href="javascript:;" class="linkTxt3">거래내용이 궁금하다면?</span>
+													<span class="amount"><strong class="dataValue pointColor">+000,000<em class="won">원</em></strong></span>
+												</div>
+												<div class="inoutCont">
+													<div class="timeWrap">
+														<span class="time">00:00<span class="tit">결제수단</span></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- ### 아이콘노출 ### -->
+				<div class="guide_area">
+					<h4 class="guide_title3">아이콘노출</h4>
+
+					<h5 class="guide_title4">승인상세</h5>
+					<div class="inoutListWrap">
+						<div class="inoutListInn">
+							<ul class="inoutList">
+								<li>
+									<a href="javascript:;" class="link">
+										<div class="isCategory">
+											<div class="imgWrap icoCate">
+												<span class="img">
+													<img src="../../images/category/cs/ico_cate_cs82.png" alt="출금이체">
+												</span>
+											</div>
+											<div class="textWrap">
+												<div class="inoutTit">
+													<span class="use">거래명<span class="csDot ml5"><img src="../../images/ico_csdot.png" alt="정기지출 있는 날" /></span></span>
+													<span class="amount pointColor06"><strong class="dataValue">-000,000</strong><em class="won">원</em></span>
+												</div>
+												<div class="inoutCont">
+													<div class="timeWrap">
+														<span class="time">00:00<span class="tit">결제수단</span></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="link">
+										<div class="isCategory">
+											<div class="imgWrap icoCate">
+												<span class="img"><img src="../../images/category/cs/ico_cate_cs81.png" alt="입금이체"></span>
+											</div>
+											<div class="textWrap">
+												<div class="inoutTit">
+													<span class="use">거래명</span>
+													<span class="amount pointColor06"><strong class="dataValue">+000,000</strong><em class="won">원</em></span>
+												</div>
+												<div class="inoutCont">
+													<div class="timeWrap">
+														<span class="time">00:00<span class="tit">결제수단</span></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="link">
+										<div class="isCategory">
+											<div class="imgWrap icoCate">
+												<span class="img"><img src="../../images/category/cs/ico_cate_cs18.png" alt=""></span>
+											</div>
+											<div class="textWrap">
+												<div class="inoutTit">
+													<span class="use">거래명</span>
+													<span class="amount"><strong class="dataValue">-000,000</strong><em class="won">원</em></span>
+												</div>
+												<div class="inoutCont">
+													<div class="timeWrap">
+														<span class="time">00:00<span class="tit">현금(반복등록)</span></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="link">
+										<div class="isCategory">
+											<div class="imgWrap icoCate">
+												<span class="img"><img src="../../images/category/cs/ico_cate_cs71.png" alt=""></span>
+											</div>
+											<div class="textWrap">
+												<div class="inoutTit">
+													<span class="use">거래명</span>
+													<span class="amount pointColor"><strong class="dataValue">+000,000</strong><em class="won">원</em></span>
+												</div>
+												<div class="inoutCont">
+													<div class="timeWrap">
+														<span class="time">00:00<span class="tit">현금(반복등록)</span></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="link" role="button">
+										<div class="isCategory">
+											<div class="imgWrap icoCate">
+												<span class="img">
+													<img src="../../images/category/cs/ico_cate_cs01.png" alt="외식">
+												</span>
+											</div>
+											<div class="textWrap">
+												<div class="inoutTit">
+													<span class="use">거래명</span>
+													<span class="amount cancel"><strong class="dataValue">-000,000</strong><em class="won">원</em></span>
+												</div>
+												<div class="inoutCont">
+													<div class="timeWrap">
+														<span class="time">10:30<span class="tit">결제수단</span></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="link">
+										<div class="isCategory">
+											<div class="imgWrap icoCate">
+												<span class="img"><img src="../../images/category/cs/ico_cate_cs99.png" alt="미동의"></span>
+											</div>
+											<div class="textWrap">
+												<div class="inoutTit">
+													<span class="use noConnData">거래내역이 궁금하다면</span>
+													<span class="amount"><em class="won pr5">-USD</em><strong class="dataValue">000,000</strong></span>
+												</div>
+												<div class="inoutCont">
+													<div class="timeWrap">
+														<span class="time">00:00<span class="tit">결제수단</span></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="link">
+										<div class="isCategory">
+											<div class="imgWrap icoCate">
+												<span class="img"><img src="../../images/category/cs/ico_cate_cs99.png" alt="미동의 아이콘"></span>
+											</div>
+											<div class="textWrap">
+												<div class="inoutTit">
+													<span href="javascript:;" class="linkTxt3">거래내용이 궁금하다면?</span>
+													<span class="amount"><strong class="dataValue pointColor">+2,000<em class="won">원</em></strong></span>
+												</div>
+												<div class="inoutCont">
+													<div class="timeWrap">
+														<span class="time">00:00<span class="tit">결제수단</span></span>
+													</div>
+													<span class="totalAmount">할부 12개월</span>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<h5 class="guide_title4">정기지출상세</h5>
+					<div class="inoutListWrap">
+						<div class="inoutListInn">
+							<ul class="inoutList">
+								<li>
+									<a href="javascript:;" class="link">
+										<div class="isCategory">
+											<div class="imgWrap icoCate">
+												<img src="../../images/icon_sell.png" alt="직접등록">
+											</div>
+											<div class="textWrap">
+												<div class="inoutTit">
+													<span class="use">거래명</span>
+													<span class="amount"><strong class="dataValue">11,000</strong><em class="won">원</em></span>
+												</div>
+												<div class="inoutCont">
+													<div class="timeWrap">
+														<span class="time">0월 0일 0요일</span>
+													</div>
+													<span class="totalAmount">결제수단</span>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="link">
+										<div class="isCategory">
+											<div class="imgWrap icoCate">
+												<span class="img"><img src="../../images/category/fc/ico_cate_fc10_01.png" alt="직접등록"></span>
+											</div>
+											<div class="textWrap">
+												<div class="inoutTit">
+													<span class="use">거래명</span>
+													<span class="amount"><strong class="dataValue">000,000,000</strong><em class="won">원</em></span>
+												</div>
+												<div class="inoutCont">
+													<div class="timeWrap w100p">
+														<span class="time">5일 예상<span class="tit">기관명</span></span>
+														<span class="tag green mr0 fr">직접등록</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="link">
+										<div class="isCategory">
+											<div class="imgWrap icoCate">
+												<span class="img"><img src="../../images/category/fc/ico_cate_fc09_01.png" alt="생활지출"></span>
+											</div>
+											<div class="textWrap">
+												<div class="inoutTit">
+													<span class="use">거래명</span>
+													<span class="amount"><strong class="dataValue">000,000,000</strong><em class="won">원</em></span>
+												</div>
+												<div class="inoutCont">
+													<div class="timeWrap">
+														<span class="time">28일 예상<span class="tit">결제수단</span></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="pb0">
+									<a href="javascript:;" class="link">
+										<div class="isCategory">
+											<div class="imgWrap icoCate">
+												<span class="img"><img src="../../images/category/fc/ico_cate_fc09_01.png" alt="생활지출"></span>
+											</div>
+											<div class="textWrap">
+												<div class="inoutTit">
+													<span class="use">거래명</span>
+													<span class="amount"><strong class="dataValue">000,000,000</strong><em class="won">원</em></span>
+												</div>
+												<div class="inoutCont">
+													<div class="timeWrap w100p">
+														<span class="time">6일<span class="tit">현금(반복등록)</span></span>
+														<span class="tag green mr0 fr">반복등록</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- ### 선택형 ### -->
+				<div class="guide_area">
+					<h4 class="guide_title3">선택형</h4>
+
+					<h5 class="guide_title4">기본</h5>
+					<div class="inoutListWrap">
+						<div class="inoutListInn">
+							<ul class="inoutList">
+								<li>
+									<div class="isCategory">
+										<div class="mr10">
+											<input type="checkbox" id="MSCS26001" class="chekTypeOther" name="" aria-label="거래명 000,000원 00:00 결제수단">
+										</div>
+										<div class="textWrap" aria-hidden="true">
+											<div class="inoutTit">
+												<span class="use">거래명</span>
+												<span class="amount"><strong class="dataValue">000,000</strong><em class="won">원</em></span>
+											</div>
+											<div class="inoutCont">
+												<div class="timeWrap">
+													<span class="time">00:00<span class="tit">결제수단</span></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="isCategory">
+										<div class="mr10">
+											<input type="checkbox" id="listAll" class="chekTypeOther" name=""  aria-label="거래명 000,000원 00:00 결제수단" checked disabled>
+										</div>
+										<div class="textWrap" aria-hidden="true">
+											<div class="inoutTit">
+												<span class="use">거래명</span>
+												<span class="amount"><strong class="dataValue">000,000</strong><em class="won">원</em></span>
+											</div>
+											<div class="inoutCont">
+												<div class="timeWrap">
+													<span class="time">00:00<span class="tit">결제수단</span></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<h5 class="guide_title4">아이콘</h5>
+					<div class="inoutListWrap">
+						<div class="inoutListInn">
+							<ul class="inoutList">
+								<li>
+									<div class="isCategory">
+										<div class="mr10">
+											<input type="checkbox" class="chekTypeOther" name="" aria-label="거래명 000,000원 00일 결제수단" checked>
+										</div>
+										<div class="imgWrap icoCate">
+											<span class="img">
+												<img src="../../images/ico_netflex.png" alt="">
+											</span>
+										</div>
+										<div class="cs textWrap" aria-hidden="true">
+											<div class="inoutTit">
+												<span class="use">거래명</span>
+												<span class="amount"><strong class="dataValue">000,000</strong><em class="won">원</em></span>
+											</div>
+											<div class="inoutCont">
+												<div class="timeWrap">
+													<span class="time">00일<span class="tit">결제수단</span></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="isCategory">
+										<div class="mr10">
+											<input type="checkbox" class="chekTypeOther" name=""  aria-label="거래명 000,000원 00일 결제수단" checked>
+										</div>
+										<div class="imgWrap icoCate">
+											<span class="img">
+												<img src="../../images/category/fc/ico_cate_fc09_01.png" alt="">
+											</span>
+										</div>
+										<div class="cs textWrap" aria-hidden="true">
+											<div class="inoutTit">
+												<span class="use">거래명</span>
+												<span class="amount"><strong class="dataValue">000,000</strong><em class="won">원</em></span>
+											</div>
+											<div class="inoutCont">
+												<div class="timeWrap">
+													<span class="time">00일<span class="tit">결제수단</span></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="isCategory">
+										<div class="mr10">
+											<input type="checkbox" class="chekTypeOther" name=""  aria-label="거래명 000,000원 00일 결제수단" checked>
+										</div>
+										<div class="imgWrap icoCate">
+											<span class="img">
+												<img src="../../images/category/fc/ico_cate_fc09_01.png" alt="">
+											</span>
+										</div>
+										<div class="cs textWrap" aria-hidden="true">
+											<div class="inoutTit">
+												<span class="use">거래명</span>
+												<span class="amount"><strong class="dataValue">000,000</strong><em class="won">원</em></span>
+											</div>
+											<div class="inoutCont">
+												<div class="timeWrap">
+													<span class="time">00일<span class="tit">결제수단</span></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- ### 계좌상세 ### -->
+				<div class="guide_area">
+					<h4 class="guide_title3">계좌상세 : .longTit</h4>
+					<div class="inoutListWrap longTit">
+						<div class="inoutListInn">
+							<ul class="inoutList">
+								<li>
+									<p class="inoutTit">거래명</p>
+									<div class="inoutCont">
+										<div class="timeWrap">
+											<span class="time">00:00</span>
+										</div>
+										<span class="amount inColor"><strong class="dataValue">+000,000,000,000</strong><em class="won">원</em></span>
+									</div>
+									<div class="totalAmount"><span class="txt">잔액</span> <strong class="dataValue">000,000,000,000</strong><em class="won">원</em></div>
+								</li>
+								<li>
+									<p class="inoutTit">거래명</p>
+									<div class="inoutCont">
+										<div class="timeWrap">
+											<span class="time">00:00</span>
+											<em class="tag blue">정기지출</em>
+										</div>
+										<span class="amount outColor"><strong class="dataValue">-000,000,000,000</strong><em class="won">원</em></span>
+									</div>
+									<div class="totalAmount"><span class="txt">잔액</span> <strong class="dataValue">000,000,000,000</strong><em class="won">원</em></div>
+								</li>
+								<li>
+									<p class="inoutTit">거래명</p>
+									<div class="inoutCont">
+										<div class="timeWrap">
+											<span class="time">00:00</span>
+										</div>
+										<span class="amount inColor">+<strong class="dataValue">EUR 000,000</strong></span>
+									</div>
+									<div class="exchange">적용환율 <em>00.00</em>원</div>
+									<div class="totalAmount"><span class="txt">잔액</span> <strong class="dataValue">000,000,000</strong><em class="won">원</em></div>
+								</li>
+								<li>
+									<p class="inoutTit">거래명</p>
+									<div class="inoutCont">
+										<div class="timeWrap">
+											<span class="time">00:00</span><span class="num">0회차</span>
+										</div>
+										<span class="amount outColor">-<strong class="dataValue">EUR 000,000</strong></span>
+									</div>
+									<div class="exchange">적용환율 <em>00.00</em>원</div>
+									<div class="totalAmount"><span class="txt">잔액</span> <strong class="dataValue">000,000,000</strong><em class="won">원</em></div>
+								</li>
+								<li>
+									<div class="inoutTit dsf">
+										<span class="use">상환</span>
+										<div class="amount outColor"><strong class="dataValue">000,000</strong><em class="won">원</em></div>
+									</div>
+									<div class="inoutCont">
+										<div class="timeWrap">
+											<span class="time">00:00</span>
+										</div>
+										<div class="exchange">원금 <em>000,000</em>원</div>
+									</div>
+									<div class="exchange">이자 <em>000,000</em>원</div>
+									<div class="exchange">환출이자 <em>0,000</em>원</div>
+								</li>
+								<li>
+									<p class="inoutTit noAgree">가맹점명 제공에 동의하지 않은 거래</p>
+									<div class="inoutCont">
+										<div class="timeWrap">
+											<span class="time">18:35</span>
+										</div>
+										<span class="amount outColor"><strong class="dataValue">-000,000</strong><em class="won">원</em></span>
+									</div>
+									<div class="amountWrap">
+										<div class="totalAcc">네이버페이 N포인트</div>
+										<span class="category">온라인 결제</span>
+									</div>
+								</li>
+								<li>
+									<p class="inoutTit dsf">
+										000.00월분(00회차)
+										<span class="amount"><strong class="dataValue">000,000</strong><em class="won">원</em></span>
+									</p>
+									<div class="inoutCont">
+										<div class="timeWrap">
+											<span class="time">자동이체</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- ### 종목상세 ### -->
+				<div class="guide_area">
+					<h4 class="guide_title3">종목상세 : .invList</h4>
+					<div class="inoutListWrap invList">
+						<div class="inoutListInn">
+							<ul class="inoutList">
+								<li>
+									<div class="istLogItem">
+										<span class="imgWrap">
+											<img src="../../images/logos/ACRB0000.png" alt="삼성전자 로고" class="imgLogo">
+										</span>
+										<div class="itemTxt">
+											<p class="inoutTit">
+												<span class="listTit">매수 <em class="listSub">(거래수량 00)</em></span>
+												<span class="dataTit">거래금액</span>
+											</p>
+											<div class="inoutCont alc">
+												<div class="timeWrap">
+													<span class="time">00:00</span>
+												</div>
+												<span class="amount outColor"><strong class="dataValue">000,000,000</strong><em class="won">원</em></span>
+											</div>
+											<div class="accContArea">
+												<span class="acctNum">계좌번호 노출</span>
+												<div class="accContNum">
+													<div class="totalAmount">거래단가 <strong class="dataValue">000,000</strong><em class="won">원</em></div>
+													<div class="totalAmount"><span class="txt">정산금액 </span> <strong class="dataValue">000,000,000</strong><em class="won">원</em></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="istLogItem">
+										<span class="imgWrap">
+											<img src="../../images/logos/ACRB0000.png" alt="삼성전자 로고" class="imgLogo">
+										</span>
+										<div class="itemTxt">
+											<p class="inoutTit">
+												<span class="listTit">매수 <em class="listSub">(거래수량 00)</em></span>
+												<span class="dataTit">거래금액</span>
+											</p>
+											<div class="inoutCont alc">
+												<div class="timeWrap">
+													<span class="time">00:00</span>
+												</div>
+												<span class="amount outColor"><strong class="dataValue">USD 00.000</strong></span>
+											</div>
+											<div class="accContArea">
+												<span class="acctNum">계좌번호 노출</span>
+												<div class="accContNum">
+													<div class="totalAmount">거래단가(USD) <strong class="dataValue">000,000</strong><em class="won">원</em></div>
+													<div class="totalAmount"><span class="txt">정산금액(USD) </span> <strong class="dataValue">000,000,000</strong><em class="won">원</em></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="javascript:;" role="button" class="link">
+										<div class="istLogItem">
+											<div class="itemTxt">
+												<p class="inoutTit">
+													<span class="use noConnData">거래내역이 궁금하다면</span>
+													<span class="dataTit">거래금액</span>
+												</p>
+												<div class="inoutCont alc">
+													<div class="timeWrap">
+														<span class="time">00:00</span>
+													</div>
+													<span class="amount outColor"><strong class="dataValue">000,000,000</strong><em class="won">원</em></span>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- ### 학자금대출 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">학자금대출 : .t1 <i class="guide_tag">2023고도화</i></h4>
+					<div class="guide_area" style="padding:0 24px">
+						<div class="inoutListWrap t1">
+							<div class="inoutListInn">
+								<ul class="inoutList">
+									<li>
+										<a href="javascript:;" role="button" title="대출상세">
+											<div class="inoutTit">
+												<span>1학기 취업 후 상환</span>
+												<span>등록금</span>
+											</div>
+											<div class="inoutCont">
+												<div class="amount"><strong class="dataValue">000,000</strong><em class="won">원</em></div>
+												<div class="data1">00.00%갚음</div>
+												<div class="data2">연 00%</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- ### 배너유형 ### -->
+				<div class="guide_area">
+					<h4 class="guide_title3">배너유형</h4>
+					<div class="inoutListWrap">
+						<div class="inoutListInn">
+							<ul class="inoutList">
+								<li>
+									<a href="javascript:;" class="link linkArrow">
+										<div class="isCategory">
+											<div class="imgWrap icoCate">
+												<span class="img"><img src="../../images/category/icoCate43.png" alt="외식"></span>
+											</div>
+											<div class="textWrap">
+												<div class="inoutTit">
+													<span class="use">개인형 퇴직연금(IRP)</span>
+												</div>
+												<div class="inoutCont">
+													<div class="timeWrap">
+														<span class="time">은퇴 걱정 없는 노후 월급 준비하기</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="link linkArrow">
+										<div class="isCategory">
+											<div class="imgWrap icoCate">
+												<span class="img"><img src="../../images/category/icoCate46.png" alt="외식"></span>
+											</div>
+											<div class="textWrap">
+												<div class="inoutTit">
+													<span class="use">퇴직연금 포트폴리오</span>
+												</div>
+												<div class="inoutCont">
+													<div class="timeWrap">
+														<span class="time">나에게 적합한 맞춤형 포트폴리오 알아보기</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="link linkArrow">
+										<div class="isCategory">
+											<div class="imgWrap icoCate">
+												<span class="img"><img src="../../images/category/icoCate47.png" alt="외식"></span>
+											</div>
+											<div class="textWrap">
+												<div class="inoutTit">
+													<span class="use">퇴직연금 펀드</span>
+												</div>
+												<div class="inoutCont">
+													<div class="timeWrap">
+														<span class="time">투자상품으로 실속 있게 관리하기</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="link linkArrow">
+										<div class="isCategory">
+											<div class="imgWrap icoCate">
+												<span class="img"><img src="../../images/category/icoCate48.png" alt="외식"></span>
+											</div>
+											<div class="textWrap">
+												<div class="inoutTit">
+													<span class="use">연금보험</span>
+												</div>
+												<div class="inoutCont">
+													<div class="timeWrap">
+														<span class="time">미리미리 준비하는 은퇴준비</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- ### // ### -->
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [유형2] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형2 : .infoData1<i class="guide_tag">2023고도화</i></h3>
+				<div class="guide_area">
+					<h4 class="guide_title3">년도 노출</h4>
+					<div class="infoData1">
+						<dl>
+							<dt>0000년</dt>
+							<dd>
+								<div class="sub" role="img" aria-label="0000.00.00">00.00</div>
+								<div class="tit"><strong>타이틀</strong></div>
+								<span class="up">000점</span>
+								<div class="data2"><span>000점</span><span>000점</span></div>
+								<div class="data3">
+									팁 배너 문구
+									<span class="emoji"><img src="../../images/emoji/img_emoji_0230.png" alt=""></span>
+								</div>
+							</dd>
+							<dd>
+								<div class="sub" role="img" aria-label="0000.00.00">00.00</div>
+								<div class="tit"><strong>타이틀</strong></div>
+								<span class="down">000점</span>
+								<div class="data2"><span>000점</span><span>000점</span></div>
+								<div class="data3">
+									팁 배너 문구
+									<a href="javascript:;" title="상세화면으로 이동">링크</a>
+									<span class="emoji"><img src="../../images/emoji/img_emoji_0206.png" alt=""></span>
+								</div>
+							</dd>
+							<dd>
+								<div class="sub" role="img" aria-label="2023.9.18">9.18</div>
+								<div class="tit"><strong>타이틀</strong></div>
+								<a href="javascript:;" title="신용평가정보">링크</a> 
+							</dd>
+						</dl>
+						<dl>
+							<dt>0000년</dt>
+							<dd>
+								<div class="sub" role="img" aria-label="0000.00.00">00.00</div>
+								<div class="tit"><strong>타이틀</strong></div>
+								<span class="up">000점</span>
+								<div class="data2"><span>000점</span><span>000점</span></div>
+								<div class="data3">
+									팁 배너 문구
+									<span class="emoji"><img src="../../images/emoji/img_emoji_0230.png" alt=""></span>
+								</div>
+							</dd>
+							<dd>
+								<div class="sub" role="img" aria-label="0000.00.00">00.00</div>
+								<div class="tit"><strong>타이틀</strong></div>
+								<span class="down">000점</span>
+								<div class="data2"><span>000점</span><span>000점</span></div>
+								<div class="data3">
+									팁 배너 문구
+									<a href="javascript:;" title="상세화면으로 이동">링크</a>
+									<span class="emoji"><img src="../../images/emoji/img_emoji_0206.png" alt=""></span>
+								</div>
+							</dd>
+							<dd>
+								<div class="sub" role="img" aria-label="2023.9.18">9.18</div>
+								<div class="tit"><strong>타이틀</strong></div>
+								<a href="javascript:;" title="신용평가정보">링크</a> 
+							</dd>
+						</dl>
+						<div class="btns1"><a href="javascript:;" class="linkTxt">버튼명</a></div>		
+					</div>
+				</div>
+				<div class="guide_area">
+					<h4 class="guide_title3">년도 비노출 : .t1</h4>
+					<div class="infoData1 t1">
+						<dl>
+							<dt>0000년</dt>
+							<dd>
+								<div class="sub" role="img" aria-label="0000.00.00">00.00</div>
+								<div class="tit"><strong>타이틀</strong></div>
+								<span class="up">000점</span>
+								<div class="data2"><span>000점</span><span>000점</span></div>
+								<div class="data3">
+									팁 배너 문구
+									<span class="emoji"><img src="../../images/emoji/img_emoji_0230.png" alt=""></span>
+								</div>
+							</dd>
+							<dd>
+								<div class="sub" role="img" aria-label="0000.00.00">00.00</div>
+								<div class="tit"><strong>타이틀</strong></div>
+								<span class="down">000점</span>
+								<div class="data2"><span>000점</span><span>000점</span></div>
+								<div class="data3">
+									팁 배너 문구
+									<a href="javascript:;" title="상세화면으로 이동">링크</a>
+									<span class="emoji"><img src="../../images/emoji/img_emoji_0206.png" alt=""></span>
+								</div>
+							</dd>
+							<dd>
+								<div class="sub" role="img" aria-label="2023.9.18">9.18</div>
+								<div class="tit"><strong>타이틀</strong></div>
+								<a href="javascript:;" title="신용평가정보">링크</a> 
+							</dd>
+						</dl>
+						<dl>
+							<dt>0000년</dt>
+							<dd>
+								<div class="sub" role="img" aria-label="0000.00.00">00.00</div>
+								<div class="tit"><strong>타이틀</strong></div>
+								<span class="up">000점</span>
+								<div class="data2"><span>000점</span><span>000점</span></div>
+								<div class="data3">
+									팁 배너 문구
+									<span class="emoji"><img src="../../images/emoji/img_emoji_0230.png" alt=""></span>
+								</div>
+							</dd>
+							<dd>
+								<div class="sub" role="img" aria-label="0000.00.00">00.00</div>
+								<div class="tit"><strong>타이틀</strong></div>
+								<span class="down">000점</span>
+								<div class="data2"><span>000점</span><span>000점</span></div>
+								<div class="data3">
+									팁 배너 문구
+									<a href="javascript:;" title="상세화면으로 이동">링크</a>
+									<span class="emoji"><img src="../../images/emoji/img_emoji_0206.png" alt=""></span>
+								</div>
+							</dd>
+							<dd>
+								<div class="sub" role="img" aria-label="2023.9.18">9.18</div>
+								<div class="tit"><strong>타이틀</strong></div>
+								<a href="javascript:;" title="신용평가정보">링크</a> 
+							</dd>
+						</dl>
+						<div class="btns1"><a href="javascript:;" class="linkTxt">버튼명</a></div>		
+					</div>
+				</div>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [유형3] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형3 : .infoData2<i class="guide_tag">2023고도화</i></h3>
+				<!-- ### 날짜기준 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">날짜기준정렬</h4>
+					<div class="infoData2">
+						<dl>
+							<dt class="summary">00월 00일 요일</dt>
+							<dd>
+								<!-- // -->
+								<label>
+									<input type="checkbox" class="chekTypeOther" aria-label="가맹점명 000,000,000원 00:00 결제수단">
+									<em class="tit" aria-hidden="true">가맹점명</em>
+									<span class="data1" aria-hidden="true">
+										<strong class="dataValue">000,000,000</strong>
+										<span class="won">원</span>
+									</span>
+									<span class="data2" aria-hidden="true">
+										<span>00:00</span>
+										<span>결제수단</span>
+									</span>
+								</label>
+								<!-- // -->
+								<label>
+									<input type="checkbox" class="chekTypeOther" aria-label="가맹점명 000,000,000원 00:00 결제수단">
+									<em class="tit" aria-hidden="true">가맹점명</em>
+									<span class="data1" aria-hidden="true">
+										<strong class="dataValue">000,000,000</strong>
+										<span class="won">원</span>
+									</span>
+									<span class="data2" aria-hidden="true">
+										<span>00:00</span>
+										<span>결제수단</span>
+									</span>
+								</label>
+								<!-- // -->
+							</dd>
+						</dl>
+						<dl>
+							<dt class="summary">00월 00일 요일</dt>
+							<dd>
+								<!-- // -->
+								<label>
+									<input type="checkbox" class="chekTypeOther" aria-label="가맹점명 000,000,000원 00:00 결제수단">
+									<em class="tit" aria-hidden="true">가맹점명</em>
+									<span class="data1" aria-hidden="true">
+										<strong class="dataValue">000,000,000</strong>
+										<span class="won">원</span>
+									</span>
+									<span class="data2" aria-hidden="true">
+										<span>00:00</span>
+										<span>결제수단</span>
+									</span>
+								</label>
+								<!-- // -->
+								<label>
+									<input type="checkbox" class="chekTypeOther" aria-label="가맹점명 000,000,000원 00:00 결제수단">
+									<em class="tit" aria-hidden="true">가맹점명</em>
+									<span class="data1" aria-hidden="true">
+										<strong class="dataValue">000,000,000</strong>
+										<span class="won">원</span>
+									</span>
+									<span class="data2" aria-hidden="true">
+										<span>00:00</span>
+										<span>결제수단</span>
+									</span>
+								</label>
+								<!-- // -->
+							</dd>
+						</dl>
+					</div>
+				</div>
+
+				<!-- ### 가맹점기준 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">가맹점명기준정렬(토글)</h4>
+					<div class="infoData2" data-toggle="wrap">
+						<dl>
+							<dt class="summary">
+								<label>
+									<input type="checkbox" class="chekTypeOther" aria-label="가맹점명 3개 000,000,000원">
+									<em class="tit" aria-hidden="true"><span>가맹점명</span><span>3개</span></em>
+									<span class="data1" aria-hidden="true">
+										<strong class="dataValue">000,000,000</strong>
+										<span class="won">원</span>
+									</span>
+								</label>
+								<button type="button" data-toggle="btn" aria-expanded="false" aria-label="가맹점명 3개 000,000,000원 상세보기">상세보기</button>
+							</dt>
+							<dd data-toggle="con">
+								<ul>
+									<!-- // -->
+									<li>
+										<span class="data3">10월 22일 월요일</span>
+										<em class="tit">가맹점명</em>
+										<span class="data1">
+											<strong class="dataValue">000,000,000</strong>
+											<span class="won">원</span>
+										</span>
+										<span class="data2">
+											<span>00:00</span>
+											<span>결제수단</span>
+										</span>
+									</li>
+									<!-- // -->
+									<li>
+										<span class="data3">10월 22일 월요일</span>
+										<em class="tit">가맹점명</em>
+										<span class="data1">
+											<strong class="dataValue">000,000,000</strong>
+											<span class="won">원</span>
+										</span>
+										<span class="data2">
+											<span>00:00</span>
+											<span>결제수단</span>
+										</span>
+									</li>
+									<!-- // -->
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt class="summary">
+								<label>
+									<input type="checkbox" class="chekTypeOther" aria-label="가맹점명 3개 000,000,000원">
+									<em class="tit" aria-hidden="true"><span>가맹점명</span><span>3개</span></em>
+									<span class="data1" aria-hidden="true">
+										<strong class="dataValue">000,000,000</strong>
+										<span class="won">원</span>
+									</span>
+								</label>
+								<button type="button" data-toggle="btn" aria-expanded="false" aria-label="가맹점명 3개 000,000,000원 상세보기">상세보기</button>
+							</dt>
+							<dd data-toggle="con">
+								<ul>
+									<!-- // -->
+									<li>
+										<span class="data3">10월 22일 월요일</span>
+										<em class="tit">가맹점명</em>
+										<span class="data1">
+											<strong class="dataValue">000,000,000</strong>
+											<span class="won">원</span>
+										</span>
+										<span class="data2">
+											<span>00:00</span>
+											<span>결제수단</span>
+										</span>
+									</li>
+									<!-- // -->
+									<li>
+										<span class="data3">10월 22일 월요일</span>
+										<em class="tit">가맹점명</em>
+										<span class="data1">
+											<strong class="dataValue">000,000,000</strong>
+											<span class="won">원</span>
+										</span>
+										<span class="data2">
+											<span>00:00</span>
+											<span>결제수단</span>
+										</span>
+									</li>
+									<!-- // -->
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<!-- ### // ### -->
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [유형4] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">유형4 : .infoData3<i class="guide_tag">2023고도화</i></h3>
+				<div class="guide_area2">
+					<h4 class="guide_title3">기본구조</h4>
+					<div class="infoData3">
+						<ul>
+							<li>
+								<dl class="dataInfo1">
+									<dt>자동이체 출금계좌 은행</dt>
+									<dd>
+										<span class="imgWrap"><img src="../../images/logos/AAER0000.png" alt="" class="imgLogo"></span>
+										<strong>신한은행</strong>
+									</dd>
+									<dt>자동이체 입금계좌 은행</dt>
+									<dd>
+										<span class="imgWrap"><img src="../../images/logos/AAEM0000.png" alt="" class="imgLogo"></span>
+										<strong>우리은행</strong>
+									</dd>
+								</dl>
+								<div class="areaBanner6">
+									<a href="javascript:;" class="img1"><span>배너내용이 노출됩니다.</span></a>
+								</div>
+								<ul class="detailList">
+									<li>
+										<span class="tit">항목명</span>
+										<span class="value">내용</span>
+									</li>
+									<li>
+										<span class="tit">항목명</span>
+										<span class="value">내용</span>
+									</li>
+									<li>
+										<span class="tit">항목명</span>
+										<span class="value">내용이노출됩니다.길게노출될경우개행처리됩니다.</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="guide_area2">
+					<h4 class="guide_title3">슬라이드 추가 : [data-swiper-type]</h4>
+					<div class="infoData3" data-swiper-type="list1" data-swiper-space="20">
+						<ul>
+							<li>
+								<dl class="dataInfo1">
+									<dt>자동이체 출금계좌 은행</dt>
+									<dd>
+										<span class="imgWrap"><img src="../../images/logos/AAER0000.png" alt="" class="imgLogo"></span>
+										<strong>신한은행</strong>
+									</dd>
+									<dt>자동이체 입금계좌 은행</dt>
+									<dd>
+										<span class="imgWrap"><img src="../../images/logos/AAEM0000.png" alt="" class="imgLogo"></span>
+										<strong>우리은행</strong>
+									</dd>
+								</dl>
+								<div class="areaBanner6">
+									<a href="javascript:;" class="img1"><span>배너내용이 노출됩니다.</span></a>
+								</div>
+								<ul class="detailList">
+									<li>
+										<span class="tit">항목명</span>
+										<span class="value">내용</span>
+									</li>
+									<li>
+										<span class="tit">항목명</span>
+										<span class="value">내용</span>
+									</li>
+									<li>
+										<span class="tit">항목명</span>
+										<span class="value">내용이노출됩니다.길게노출될경우개행처리됩니다.</span>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<dl class="dataInfo1">
+									<dt>자동이체 출금계좌 은행</dt>
+									<dd>
+										<span class="imgWrap"><img src="../../images/logos/AAER0000.png" alt="" class="imgLogo"></span>
+										<strong>신한은행</strong>
+									</dd>
+									<dt>자동이체 입금계좌 은행</dt>
+									<dd>
+										<span class="imgWrap"><img src="../../images/logos/AAEM0000.png" alt="" class="imgLogo"></span>
+										<strong>우리은행</strong>
+									</dd>
+								</dl>
+								<div class="areaBanner6">
+									<a href="javascript:;" class="img1"><span>배너내용이 노출됩니다.</span></a>
+								</div>
+								<ul class="detailList">
+									<li>
+										<span class="tit">항목명</span>
+										<span class="value">내용</span>
+									</li>
+									<li>
+										<span class="tit">항목명</span>
+										<span class="value">내용</span>
+									</li>
+									<li>
+										<span class="tit">항목명</span>
+										<span class="value">내용이노출됩니다.길게노출될경우개행처리됩니다.</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- -------------------------------------- -->
+		</section>
+
+		<!-- ################################# -->
+		<!-- ### 상세정보 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT4">
+			<h2 class="guide_title">상세정보</h2>
+			<!-- -------------------------------------- -->
+			<!-- [유형1] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">정보유형 : .detailList</h3>
+				<div class="guide_area">
+					<h4 class="guide_title3">기본 <span class="sub">F:14px</span></h4>
+					<ul class="detailList">
+						<li>
+							<div class="tit">항목명</div>
+							<div class="value">내용</div>
+						</li>
+						<li>
+							<div class="tit">항목명</div>
+							<div class="value bold">내용 value.bold</div>
+						</li>
+						<li class="bold">
+							<div class="tit">항목명 : li.bold</div>
+							<div class="value">내용</div>
+						</li>
+					</ul>
+					<hr class="guide_line">
+					<h5 class="guide_title4">링크</h5>
+					<ul class="detailList">
+						<li>
+							<span class="tit">항목명</span>
+							<span class="date"><button type="button" class="ceb1100 ml10">버튼명</button></span> 
+						</li>
+						<li>
+							<span class="tit">항목명</span>
+							<span class="value"><a href="javascript:;" class="underline">버튼명</a></span>
+						</li>
+						<li>
+							<span class="tit">항목명</span>
+							<span class="value"><a href="javascript:;" class="linkType1 pointColor">버튼명</a></span>
+						</li>
+						<li>
+							<span class="tit">항목명</span>
+							<span class="date"><a href="javascript:;" class="t_send_fail">버튼명</a></span>
+						</li>
+						<li>
+							<span class="tit">항목명</span>
+							<span class="value">내용  <button type="button" class="contBtn01">버튼명</button></span>
+						</li>
+						<li>
+							<span class="tit">힝먹먕</span>
+							<span class="value">00건 
+								<button type="button" class="contBtnArrow" title="회차정보 더보기">더보기</button>
+							</span>
+						</li>
+					</ul>
+				</div>
+
+				<div class="guide_area2">
+					<h4 class="guide_title3">활용</h4>
+					<h5 class="guide_title4">회색박스</h5>
+					<div class="guide_area">
+						<h6 class="guide_title4 t1">유형1 : .grayBox</h6>
+						<div class="grayBox">
+							<ul class="detailList">
+								<li>
+									<span class="tit">항목명</span>
+									<span class="value">내용</span>
+								</li>
+								<li>
+									<span class="tit">항목명</span>
+									<span class="value">내용</span>
+								</li>
+							</ul>
+						</div>
+
+						<h6 class="guide_title4 t1">유형2 : .grayBgLine</h6>
+						<div class="grayBgLine">
+							<ul class="detailList">
+								<li>
+									<span class="tit">매매기준율</span>
+									<span class="value">77,782원/1𝑔<br>(YYYY.MM.DD)</span>
+								</li>
+								<li>
+									<span class="tit">정보제공</span>
+									<span class="value">한국금거래소쓰리엠
+									</span>
+								</li>
+								<li>
+									<span class="tit">등록일</span>
+									<span class="value">2020.07.31</span>
+								</li>
+							</ul>
+						</div>
+						<hr class="guide_line">
+						<i class="guide_tag">2023고도화</i>
+						<div class="grayBgLine t1">
+							<ul class="detailList">
+								<li>
+									<span class="tit">월 평균 결제금액</span>
+									<span class="value"><strong class="dataValue">1,234,567,890</strong><em class="won">원</em></span>
+								</li>
+								<li>
+									<span class="tit">월 평균 결제 건수</span>
+									<span class="value"><strong class="dataValue">99,999</strong><em class="won">건</em></span>
+								</li>
+							</ul>
+						</div>
+
+						<h6 class="guide_title4 t1">유형3 : .infoBox</h6>
+						<div class="infoBox">
+							<ul class="detailList">
+								<li>
+									<span class="tit">항목명</span>
+									<span class="value">내용</span>
+								</li>
+								<li>
+									<span class="tit">항목명</span>
+									<span class="value">000,000원</span>
+								</li>
+								<li>
+									<span class="tit">항목명</span>
+									<span class="value">000,000원</span>
+								</li>
+							</ul>
+						</div>
+						<div class="infoBox2">
+							<ul class="detailList">
+								<li>
+									<span class="tit">항목명</span>
+									<span class="value"><strong>000,000원</strong></span>
+								</li>
+								<li>
+									<span class="tit">항목명</span>
+									<span class="value pointColor9">내용</span>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+
+					<h5 class="guide_title4">목적물상세 : . viewBoxArea &gt; .popIRP.openType &gt; div &gt; .toggleCont &gt; .detailList</h5>
+					<div class="guide_area">
+						<div class="viewBoxArea">
+							<div class="popIRP openType">
+								<!-- 반복 -->
+								<div>
+									<div class="agreeTit">타이틀</div>
+									<div class="toggleCont">
+										<ul class="detailList">
+											<li>
+												<span class="tit">항목명</span>
+												<span class="value">내용이 노출됩니다.</span>
+											</li>
+											<li>
+												<span class="tit">항목명</span>
+												<span class="value">내용이 노출됩니다.</span>
+											</li>
+											<li>
+												<span class="tit">항목명</span>
+												<span class="value"><strong class="dataValue">000,000,000원</strong></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!-- 반복 -->
+								<div>
+									<div class="agreeTit">타이틀</div>
+									<div class="toggleCont">
+										<ul class="detailList">
+											<li>
+												<span class="tit">항목명</span>
+												<span class="value">내용이 노출됩니다.</span>
+											</li>
+											<li>
+												<span class="tit">항목명</span>
+												<span class="value">내용이 노출됩니다.</span>
+											</li>
+											<li>
+												<span class="tit">항목명</span>
+												<span class="value"><strong class="dataValue">000,000,000원</strong></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!-- // -->
+							</div>
+						</div>
+					</div>
+
+					<h5 class="guide_title4">보장내역 : .boxTypeWrap.line &gt; .popIRP.openType &gt; div &gt; .toggleCont &gt; .detailList</h5>
+					<div class="boxTypeWrap line pt0 pb0">
+						<h4 class="moreListTit">타이틀</h4>
+						<div class="popIRP openType">
+							<div>
+								<div class="toggleCont">
+									<ul class="detailList">
+										<li>
+											<span class="tit">항목명</span>
+											<span class="value"><strong class="dataValue">0,000만원</strong></span>
+										</li>
+										<li>
+											<span class="tit">항목명</span>
+											<span class="value"><strong class="dataValue">0억원</strong></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [유형2] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">검색결과 : .srchResult</h3>
+
+				<!-- ### 유형1 ### -->
+				<div class="guide_area">
+					<h4 class="guide_title3">유형1 : .srchResult.typeNor</h4>
+					<div class="srchResult typeNor">
+						<ul>
+							<li>
+								<a href="javascript:;" role="button">
+									<span class="name">검색결과노출</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button">
+									<span class="name">검색결과노출</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button">
+									<span class="name">검색결과노출</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- ### 유형2 ### -->
+				<div class="guide_area">
+					<h4 class="guide_title3">유형2 : .srchResult.ty01</h4>
+					<div class="srchResult ty01">
+						<ul>
+							<li><a href="javascript:;" role="button">검색결과노출</a></li>
+							<li><a href="javascript:;" role="button">검색결과노출</a></li>
+							<li><a href="javascript:;" role="button">검색결과노출</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- ### 유형3 ### -->
+				<div class="guide_area">
+					<h4 class="guide_title3">유형3 : .srchResult.typeCrypto</h4>
+					<div class="srchResult typeCrypto">
+						<ul>
+							<li>
+								<a href="javascript:;" role="button">
+									<span class="imgWrap"><img src="../../images/logos/ABAA0000.png" alt="코인이름 로고" class="imgLogo"></span>
+									<span class="name">항목명</span> <em class="tag GreenBgwh">보유중</em>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button">
+									<span class="imgWrap"><img src="../../images/logos/ABAA0000.png" alt="코인이름 로고" class="imgLogo"></span>
+									<span class="name">항목명</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button">
+									<span class="imgWrap"><img src="../../images/logos/ABAA0000.png" alt="코인이름 로고" class="imgLogo"></span>
+									<span class="name">항목명</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="srchResult typeCrypto bgNone">
+						<ul>
+							<li>
+								<a href="javascript:;" role="button">
+									<span class="imgWrap"><img src="../../images/logos/ABAA0000.png" alt="코인이름 로고" class="imgLogo"></span>
+									<span class="name">항목명</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button">
+									<span class="imgWrap"><img src="../../images/logos/ABAA0000.png" alt="코인이름 로고" class="imgLogo"></span>
+									<span class="name">항목명</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button">
+									<span class="imgWrap"><img src="../../images/logos/ABAA0000.png" alt="코인이름 로고" class="imgLogo"></span>
+									<span class="name">항목명</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- ### // ### -->
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [아이콘 목록] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">아이콘 목록 : .icoList2</h3>
+				<h4 class="guide_title3">포인트 : .icoList2.nhPointWrap</h4>
+				<div class="guide_area">
+					<div class="icoList2 nhPointWrap">
+						<ul>
+							<li>미션에 달성하여 배지를 받으세요!</li>
+							<li>친구 초대하고 포인트도 받으세요!</li>
+							<li>재밌는 퀴즈도 풀어보세요!</li>
+						</ul>
+					</div>
+				</div>
+				
+				<h4 class="guide_title3">기관목록 : .icoList2.nhPointWrap</h4>
+				<div class="guide_area">
+					<div class="icoList2 imgset1">
+						<ul>
+							<li>국민연금 납부증명서</li>
+							<li>건강보험 납부증명서</li>
+							<li>국세청 소득금액증명서</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- -------------------------------------- -->
+		</section>
+
+		<!-- ################################# -->
+		<!-- ### 기타 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT5">
+			<h2 class="guide_title">기타</h2>
+			<!-- -------------------------------------- -->
+			<!-- [데이터유형1] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">데이터유형1 : .listData1 <i class="guide_tag">2023고도화</i></h3>
+				
+				<!-- ### 목록형 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">목록형</h4>
+					<div class="listData1">
+						<ul>
+							<li>
+								<a href="javascript:;" role="button" title="상세화면으로 이동" style="background-image:url('../../images/temp/@bg_trd_obj01.png');">
+									<span class="new">새로운 글</span>
+									<div class="tit">
+										<span>관심사 제목</span>
+										<strong>카드 제목 최대 30글자 카드 제목 최대 30글자 카드 제목 최대 30글자</strong>
+									</div>
+									<div class="tagWrap">
+										<span class="tag text">최대태그7글자</span>
+										<span class="tag text">최대태그7글자</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button" title="상세화면으로 이동" style="background-image:url('../../images/temp/@bg_trd_obj02.png');">
+									<div class="tit">
+										<span>관심사 제목</span>
+										<strong>카드 제목</strong>
+									</div>
+									<div class="tagWrap">
+										<span class="tag text">해시태그</span>
+										<span class="tag text">해시태그</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- ### 단일형 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">단일형</h4>
+					<div class="listData1">
+						<a href="javascript:;" role="button" title="상세화면으로 이동" style="background-image:url('../../images/temp/@bg_trd_obj02.png');">
+							<div class="tit">
+								<span>관심사 제목</span>
+								<strong>카드 제목</strong>
+							</div>
+							<div class="tagWrap">
+								<span class="tag text">해시태그</span>
+								<span class="tag text">해시태그</span>
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<!-- ### 슬라이드 추가 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">슬라이드 추가 : [data-swiper-type="list1"]</h4>
+					<div class="listData1" data-swiper-type="list1" data-swiper-space="20"> <!-- data-swiper-autoplay="true" -->
+						<ul>
+							<li>
+								<a href="javascript:;" role="button" title="상세화면으로 이동" style="background-image:url('../../images/temp/@bg_trd_obj01.png');"> <!-- [D] background-image : 관리자에서 등록한 이미지 -->
+									<span class="new">새로운 글</span>
+									<div class="tit">
+										<span>관심사 제목</span>
+										<strong>카드 제목 최대 30글자 카드 제목 최대 30글자 카드 제목 최대 30글자</strong>
+									</div>
+									<div class="tagWrap">
+										<span class="tag text">최대태그7글자</span>
+										<span class="tag text">최대태그7글자</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" role="button" title="상세화면으로 이동" style="background-image:url('../../images/temp/@bg_trd_obj02.png');">
+									<div class="tit">
+										<span>관심사 제목</span>
+										<strong>카드 제목</strong>
+									</div>
+									<div class="tagWrap">
+										<span class="tag text">해시태그</span>
+										<span class="tag text">해시태그</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- ### // ### -->
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [데이터유형2] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">데이터유형2 : .listData2 <i class="guide_tag">2023고도화</i></h3>
+				
+				<!-- ### 기본 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">기본</h4>
+					<div class="boxTypeWrap t1">
+						<div class="listData2">
+							<ul>
+								<li>
+									<div class="img"><img src="../../images/category/cs2/ico_cate_cs02.png" alt=""></div>
+									<div class="tit"><span>카테고리 이름</span></div>
+									<div class="con">
+										<em class="value">비슷하게 소비</em>
+									</div>
+									<div class="info">
+										<dl>
+											<dt>내 소비</dt>
+											<dd ><strong class="dataValue">0,000,000</strong><em class="won">원</em></dd>
+										</dl>
+										<dl>
+											<dt>또래 소비</dt>
+											<dd><strong class="dataValue">0,000,000</strong><em class="won">원</em></dd>
+										</dl>
+									</div>
+								</li>
+								<li class="case1">
+									<div class="img"><img src="../../images/category/cs2/ico_cate_cs02.png" alt=""></div>
+									<div class="tit"><span>카테고리 이름</span></div>
+									<div class="con">
+										<strong class="dataValue">0,000,000</strong><em class="won">원</em>
+										<em class="value">더 소비</em>
+									</div>
+									<div class="info">
+										<dl>
+											<dt>내 소비</dt>
+											<dd ><strong class="dataValue">0,000,000</strong><em class="won">원</em></dd>
+										</dl>
+										<dl>
+											<dt>또래 소비</dt>
+											<dd><strong class="dataValue">0,000,000</strong><em class="won">원</em></dd>
+										</dl>
+									</div>
+								</li>
+								<li class="case2">
+									<div class="img"><img src="../../images/category/cs2/ico_cate_cs14.png" alt=""></div>
+									<div class="tit"><span>카테고리 이름</span></div>
+									<div class="con">
+										<strong class="dataValue">0,000,000</strong><em class="won">원</em>
+										<em class="value">절약</em>
+									</div>
+									<div class="info">
+										<dl>
+											<dt>내 소비</dt>
+											<dd><strong class="dataValue">0,000,000</strong><em class="won">원</em></dd>
+										</dl>
+										<dl>
+											<dt>또래 소비</dt>
+											<dd><strong class="dataValue">0,000,000</strong><em class="won">원</em></dd>
+										</dl>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- ### 스타일변경 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">스타일변경 : + .t1</h4>
+					<div class="boxTypeWrap t1">
+						<div class="listData2 t1">
+							<ul>
+								<li class="case1">
+									<div role="img" aria-label="나는 또래보다">
+										<span>나</span>
+										<span>또래</span>
+									</div>
+									<div class="img"><img src="../../images/category/cs2/ico_cate_cs02.png" alt=""></div>
+									<div class="tit"><span>카테고리 이름</span>에서</div>
+									<div class="con">
+										<strong class="dataValue">000,000,000</strong><em class="won">원</em>
+										<em class="value">더 소비</em>
+									</div>
+								</li>
+								<li class="case2">
+									<div role="img" aria-label="또래는 나보다">
+										<span>또래</span>
+										<span>나</span>
+									</div>
+									<div class="img"><img src="../../images/category/cs2/ico_cate_cs14.png" alt=""></div>
+									<div class="tit"><span>카테고리 이름</span>에서</div>
+									<div class="con">
+										<strong class="dataValue">000,000,000</strong><em class="won">원</em>
+										<em class="value">더 절약</em>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- ### // ### -->
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [데이터유형3] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">데이터유형3 : .listData3 <i class="guide_tag">2023고도화</i></h3>
+				<div class="listData3">
+					<ul>
+						<li>
+							<div class="dataInfo1">
+								<span class="imgWrap"><img src="../../images/logos/AAFO0000.png" alt="" class="imgLogo"></span>
+								<strong>기관명</strong>
+							</div>
+							<div class="side">업권코드</div>
+						</li>
+						<li>
+							<div class="dataInfo1">
+								<span class="imgWrap"><img src="../../images/logos/AABG0000.png" alt="" class="imgLogo"></span>
+								<strong>NH농협은행</strong>
+							</div>
+							<div class="side">은행</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [컨텐츠유형1] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">컨텐츠유형1 : .listCont1</h3>
+
+				<!-- ### 기본구조 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">기본구조</h4>
+					<h5 class="guide_title4">DL 구조</h5>
+					<div class="listCont1">
+						<dl>
+							<dt class="tit">타이틀</dt>
+							<dd class="con">내용이 노출됩니다.</dd>
+						</dl>
+					</div>
+					<h5 class="guide_title4">UL 구조</h5>
+					<div class="listCont1">
+						<ul>
+							<li>
+								<strong class="tit">타이틀</strong>
+								<span class="con">내용이 노출됩니다.</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- ### 배경이미지 랜덤 노출 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">배경이미지 랜덤 노출 : [data-random="2"]</h4>
+					<ul class="guide_txt">
+						<li>배경 이미지는 랜덤으로 보여지며, li 순서에 따라 달라집니다.</li>
+						<li>배경색은 관리자에서 등록된 색상 코드로 적용되며, CSS변수로 활용 합니다.</li>
+					</ul>
+					<div class="listCont1" data-random="2">
+						<ul>
+							<li class="img1" style="--el-background:#ffffff;">
+								<strong class="tit">타이틀</strong>
+								<span class="con">내용이 노출됩니다.</span>
+							</li>
+							<li style="--el-background:#d5f2f5;">
+								<strong class="tit">타이틀</strong>
+								<span class="con">내용이 노출됩니다.</span>
+							</li>
+							<li style="--el-background:#d6f1ea;">
+								<strong class="tit">타이틀</strong>
+								<span class="con">내용이 노출됩니다.</span>
+							</li>
+							<li style="--el-background:#edfad4;">
+								<strong class="tit">타이틀</strong>
+								<span class="con">내용이 노출됩니다.</span>
+							</li>
+							<li style="--el-background:#f8f6da;">
+								<strong class="tit">타이틀</strong>
+								<span class="con">내용이 노출됩니다.</span>
+							</li>
+							<li style="--el-background:#ffefef;">
+								<strong class="tit">타이틀</strong>
+								<span class="con">내용이 노출됩니다.</span>
+							</li>
+						</ul>
+					</div>
+
+					<h5 class="guide_title4">슬라이드 구조 : [data-swiper-type="list1"]</h5>
+					<div class="listCont1" data-random="2" data-swiper-type="list1" data-swiper-space="12" data-swiper-slidesperview="auto">
+						<ul>
+							<li class="img1" style="--el-background:#ffffff;">
+								<strong class="tit">타이틀</strong>
+								<span class="con">내용이 노출됩니다.</span>
+							</li>
+							<li style="--el-background:#d5f2f5;">
+								<strong class="tit">타이틀</strong>
+								<span class="con">내용이 노출됩니다.</span>
+							</li>
+							<li style="--el-background:#d6f1ea;">
+								<strong class="tit">타이틀</strong>
+								<span class="con">내용이 노출됩니다.</span>
+							</li>
+							<li style="--el-background:#edfad4;">
+								<strong class="tit">타이틀</strong>
+								<span class="con">내용이 노출됩니다.</span>
+							</li>
+							<li style="--el-background:#f8f6da;">
+								<strong class="tit">타이틀</strong>
+								<span class="con">내용이 노출됩니다.</span>
+							</li>
+							<li style="--el-background:#ffefef;">
+								<strong class="tit">타이틀</strong>
+								<span class="con">내용이 노출됩니다.</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- ### // ### -->
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [컨텐츠유형2] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">컨텐츠유형2 : .listCont2</h3>
+				<div class="listCont2">
+					<ul>
+						<li><strong>강조문구</strong> 컨텐츠가 노출됩니다.</li>
+						<li><strong>강조문구</strong> 컨텐츠가 노출됩니다.</li>
+					</ul>
+				</div>
+			</div>
+			<!-- -------------------------------------- -->
+		</section>
+		<!-- ################################# -->
+	</div>
+	<!-- ###################################### -->
+</div>
+</body>
+</html>

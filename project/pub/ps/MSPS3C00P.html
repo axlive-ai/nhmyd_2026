@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>인증방식 선택</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script type="text/javascript">
+$(function(){
+    fullLayerPop();
+	//popCenter();
+});
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>인증방식 선택</h1>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<div class="content">
+			<div class="btnWrap page">
+				<a href="javascript:;" onclick="fullLayerPop();return false;" aria-haspopup="true" role="button" class="btn">fullLayerPop</a>
+			</div>
+		</div>
+	</div>
+</div>
+ 
+
+<div class="nhasset popWrap fullLayerPop" role="dialog">
+	<div class="popInner">
+		<h1>인증방식 선택</h1>
+		<div class="popCont grayPop">
+			<h2 class="defTit">자산연결을 위해<br><strong>본인인증방식을 선택</strong>하세요</h2>
+			<!-- 2022-08-10 공동인증서 있는 경우 -->
+			<ul class="listCerti">
+				<!-- <li>
+					<button type="button" class="nhCerti">
+						<div><strong class="title">NH인증서</strong></div>
+						<div><span class="subTxt">서비스준비중</span></div>
+					</button>
+				</li> -->
+				<li>
+					<button type="button" class="publicCerti">
+						<div><strong class="title">공동인증서</strong> <span class="tag bgSky">있음</span> <span class="tag bgSky">최근사용</span></div>
+					</button>
+				</li>
+				<li>
+					<button type="button" class="financeCerti">
+						<div><strong class="title">금융인증서</strong> <span class="tag bgSky">최근사용</span></div>
+					</button>
+				</li>
+				<li>
+					<button type="button" class="naverCerti">
+						<div><strong class="title">네이버인증서</strong></div>
+					</button>
+				</li>
+				<!-- <li>
+					<button type="button" class="passCerti">
+						<div><strong class="title">모바일 PASS</strong></div>
+						<div><span class="subTxt">서비스준비중</span></div>
+					</button>
+				</li> -->
+				<!-- <li>
+					<button type="button" class="privateCerti">
+						<div><strong class="title">간편인증</strong> 
+							<div class="privateCertist">
+								<span><img src="../../images/logo_certi_naver.png" alt="네이버"></span>
+								<span><img src="../../images/logo_certi_kakao.png" alt="카카오톡"></span>
+								<span><img src="../../images/logo_certi_payco.png" alt="NHN페이코"></span>
+								<span><img src="../../images/logo_certi_pass.png" alt="통신사 Pass"></span>
+								<span><img src="../../images/logo_certi_samsung.png" alt="삼성 Pass"></span>
+							</div>
+						</div>
+					</button>
+				</li> -->
+			</ul>
+			<!-- //2022-08-10 공동인증서 있는 경우 -->
+
+			<!-- 2022-08-10 공동인증서 없는 경우 -->
+			<ul class="listCerti">
+				<li>
+					<button type="button" class="publicCerti">
+						<div><strong class="title">공동인증서</strong> <span class="tag bgOrange">없음</span></div>
+					</button>
+				</li>
+				<li>
+					<button type="button" class="financeCerti">
+						<div><strong class="title">금융인증서</strong></div>
+					</button>
+				</li>
+				<li>
+					<button type="button" class="naverCerti">
+						<div><strong class="title">네이버인증서</strong></div>
+					</button>
+				</li>
+			</ul>
+			<!-- //2022-08-10 공동인증서 없는 경우 -->
+			<div class="mt15"><a href="javascript:;" class="linkTxt2"><span>국민은행</span>에서 인증하기</a></div>
+		</div>
+
+		<div class="popBtnWrap">
+			<!-- <div class="popBtn">
+				<a href="javascript:;" class="confirmBtn" role="button">확인</a>
+			</div> -->
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

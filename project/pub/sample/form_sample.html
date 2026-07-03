@@ -1,0 +1,704 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>form</title>
+<script src="../pub-assets/js/head.js"></script>
+<style>
+	h2.guide{margin:20px 0;padding:5px 0;font-size:20px;font-weight:900;background:rgb(255, 248, 157);text-align:center}
+	.title{margin:20px 0 10px;font-size:15px;font-weight:bold;color:blue}
+	.desc{margin:30px 0 20px;font-size:13px;font-weight:bold;color:#65aee2}
+	.title + .desc{margin-top:10px;}
+</style>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">자산등록</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<h2 class="guide">2021년</h2>
+			<hr class="divLine">
+			
+			<p class="title">checkbox / radio </p>
+			<p class="desc">- checkbox : .formArray > .chkRadio</p>
+			<div class="formArray">
+				<span class="chkRadio">
+					<input type="checkbox" id="sample001" checked="checked">
+					<label for="sample001">카드</label>
+				</span>
+				<span class="chkRadio">
+					<input type="checkbox" id="sample002">
+					<label for="sample002">현금</label>
+				</span>
+			</div>
+			<p class="desc">- radio : .formArray > .chkRadio > .desgChk</p>
+			<div class="formArray">
+				<span class="chkRadio">
+					<input type="radio" id="sample003" name="sample" class="desgChk" checked="checked">
+					<label for="sample003">카드</label>
+				</span>
+				<span class="chkRadio">
+					<input type="radio" id="sample004" name="sample" class="desgChk">
+					<label for="sample004">현금</label>
+				</span>
+			</div>
+
+			<p class="desc">- box형 : .boxRadio > .boxRadioInn</p>
+			<div class="boxRadio">
+				<div class="boxRadioInn">
+					<span>
+						<input name="rdo13" id="rdo16" type="radio" checked="checked">
+						<label for="rdo16">그램(g)</label>
+					</span>
+				</div>
+				<div class="boxRadioInn">
+					<span>
+						<input name="rdo13" id="rdo17" type="radio">
+						<label for="rdo17">돈</label>
+					</span>
+				</div>
+			</div>
+
+			<p class="desc">- round형(균등비율) : .roundChkWrap > ul > li</p>
+			<div class="roundChkWrap">
+				<ul>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample00" id="sample01">
+							<label for="sample01">100만원</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample00" id="sample02">
+							<label for="sample02">200만원</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample00" id="sample03">
+							<label for="sample03">300만원</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample00" id="sample04">
+							<label for="sample04">400만원</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample00" id="sample05">
+							<label for="sample05">500만원</label>
+						</span>
+					</li>
+				</ul>
+			</div>
+
+			<p class="desc">- round형(차등비율) : .roundChkWrap.autoType > ul > li</p>
+			<div class="roundChkWrap autoType">
+				<ul>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample11" id="sample11">
+							<label for="sample11">100만원</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample11" id="sample12">
+							<label for="sample12">10만원</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample11" id="sample13">
+							<label for="sample13">5만원</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample11" id="sample14">
+							<label for="sample14">1만원</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample11" id="sample15">
+							<label for="sample15">1천원</label>
+						</span>
+					</li>
+				</ul>
+			</div>
+
+			<p class="desc">- round형(차등 nowrap) : .roundChkWrap.flexType > ul > li</p>
+			<div class="cateSubList">
+				<div class="roundChkWrap flexType">
+					<ul>
+						<li>
+							<span class="roundChk">
+								<input type="radio" name="sample21" id="sample21">
+								<label for="sample21">한식</label>
+							</span>
+						</li>
+						<li>
+							<span class="roundChk">
+								<input type="radio" name="sample21" id="sample22">
+								<label for="sample22">중식</label>
+							</span>
+						</li>
+						<li>
+							<span class="roundChk">
+								<input type="radio" name="sample21" id="sample23">
+								<label for="sample23">일식</label>
+							</span>
+						</li>
+						<li>
+							<span class="roundChk">
+								<input type="radio" name="sample21" id="sample24">
+								<label for="sample24">양식/뷔페</label>
+							</span>
+						</li>
+						<li>
+							<span class="roundChk">
+								<input type="radio" name="sample21" id="sample25">
+								<label for="sample25">뷔페</label>
+							</span>
+						</li>
+						<li>
+							<span class="roundChk">
+								<input type="radio" name="sample21" id="sample26">
+								<label for="sample26">패스트푸드</label>
+							</span>
+						</li>
+						<li>
+							<span class="roundChk">
+								<input type="radio" name="sample21" id="sample27">
+								<label for="sample27">일식</label>
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<p class="desc">- round형(차등 wrap) : .roundChkWrap.flexType.flexWrap > ul > li</p>
+			<div class="roundChkWrap flexType flexWrap">
+				<ul>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample31" id="sample31">
+							<label for="sample31">모임회비</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample31" id="sample32">
+							<label for="sample32">통신비</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample31" id="sample33">
+							<label for="sample33">학원비</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample31" id="sample34">
+							<label for="sample34">용돈</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample31" id="sample35">
+							<label for="sample35">공과금</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample31" id="sample36">
+							<label for="sample36">재래시장</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample31" id="sample37">
+							<label for="sample37">간식</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample31" id="sample38">
+							<label for="sample38">중고거래</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample31" id="sample39">
+							<label for="sample39">축의금</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample31" id="sample40">
+							<label for="sample40">조의금</label>
+						</span>
+					</li>
+				</ul>
+			</div>
+
+			<hr class="divLine">
+			
+			<p class="title">line형 input[type="text"]</p>
+			<div class="formWrap">
+				<ul>
+					<li>
+						<strong class="formTit">금액 원</strong>
+						<div class="inputList">
+							<input type="tel" title="" value="" disabled placeholder="입력해주세요">
+							<span class="unit">원</span>
+							<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+						</div>
+					</li>
+					<li>
+						<strong class="formTit">금액 만원 .unitMan</strong>
+						<div class="inputList unitMan">
+							<input type="tel" title="" value="" readonly placeholder="입력해주세요">
+							<span class="unit">만원</span>
+							<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+						</div>
+					</li>
+					<li>
+						<strong class="formTit">세글자 단위 .unitMan2</strong>
+						<div class="inputList unitMan2">
+							<input type="tel" title="" value="" placeholder="입력해주세요">
+							<span class="unit">세 부터</span>
+							<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+						</div>
+					</li>
+					<li>
+						<strong class="formTit">인풋 앞에 텍스트 있는 경우 .inputList. > .stand</strong>
+						<div class="inputList unitMan2 standUse">
+							<span class="stand">목돈</span>
+							<input type="tel" title="" value="" readonly placeholder="입력해주세요">
+							<span class="unit">만원</span>
+							<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+						</div>
+					</li>
+					<li>
+						<strong class="formTit">조회기간</strong>
+						<div class="calendarForm">
+							<div class="cal">
+								<div class="inputList">
+									<input type="text" value="2020.09.03" title="조회 시작일" placeholder="시작일선택" readonly="readonly">
+									<a href="javascript:;" class="btnCalendar" title="시작일 날짜선택" role="button"><span class="blind">날짜선택</span></a>
+								</div>
+							</div>
+							<span class="symbol">-</span>
+							<div class="cal">
+								<div class="inputList">
+									<input type="text" value="" title="조회 종료일" placeholder="종료일선택" readonly="readonly">
+									<a href="javascript:;" class="btnCalendar" title="종료일 날짜선택" role="button"><span class="blind">날짜선택</span></a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<strong class="formTit">보유량</strong>
+						<div class="inputList">
+							<input type="tel" title="보유량" value="3.75" placeholder="보유량을 입력해주세요.">
+							<span class="unit">g</span>
+							<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+						</div>
+						<p class="infoTxt">나의 금 시세 : 1,000,000원 (총 1.875g 보유)</p> <!-- [2021] 한은정 : 추가 -->
+						<!-- <p class="infoTxt">5돈 = 18.75g</p> -->
+					</li>
+					<li>
+						<strong class="formTit">관련대출(선택)<button type="button" class="contBtn01 green" title="관련대출 추가">추가</button></strong>
+						<div class="stList">
+							<a href="javascript:;" title="관련대출 선택" aria-haspopup="true" onclick="slidePopOption();return false;">
+								<span class="selectValue placeholder">대출자산을 선택하세요.</span> <!-- 2020-10-29 플레이스홀더 마침표 추가 -->
+								<!-- value 값이 들어오면 class placeholder 삭제 -->
+								<span class="selectBtn"></span>
+							</a>
+							<select name="" title="선택해주세요">
+								<option value=""></option>
+							</select>
+						</div>
+						<div class="inputBoth01 div8_2">
+							<div class="inputList inputB01">
+								<input type="text" title="관련대출명" value="[신한]든든신용대출" placeholder="" readonly="readonly">
+								<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+							</div>
+							<div class="inputB02">
+								<button type="button" class="contBtn01" onclick="slidePopConfirm();return false;">삭제</button>
+							</div>
+						</div>
+						<div class="inputBoth01 div8_2">
+							<div class="inputList inputB01">
+								<input type="text" title="관련대출명" value="[NH농협]직장인대출" placeholder="" readonly="readonly">
+								<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+							</div>
+							<div class="inputB02">
+								<button type="button" class="contBtn01">삭제</button>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<p class="desc">- error : .inputList class="error"</p>
+			<div class="formWrap">
+				<ul>
+					<li>
+						<strong class="formTit">에러의 경우</strong>
+						<div class="inputList error on">
+							<input type="tel" title="보유량" value="750,000,000" placeholder="보유량을 입력해주세요">
+							<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+						</div>
+						<p class="errorTxt">errorTxt</p>
+					</li>
+				</ul>
+			</div>
+
+			<hr class="divLine">
+
+			<p class="title">box형 input[type="text"]</p>
+			<p class="desc">- 기본 / error</p>
+			<div class="formWrapBox">
+				<ul>
+					<li>
+						<div class="inputList">
+							<input type="tel" id="" title="카테고리 별 이번달 예산" class="ar" value="10,000" placeholder="이번 달 예산 입력">
+							<span class="unit">원</span>
+							<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+						</div>
+						<p class="priceTxt">설정가능 예산 <span class="pointColor05">100</span>만원</p>
+					</li>
+				</ul>
+			</div>
+
+			<p class="desc">- error : input에 class="error"</p>
+			<div class="formWrapBox">
+				<ul>
+					<li>
+						<div class="inputList">
+							<input type="tel" id="" title="카테고리 별 이번달 예산" class="ar error" value="10,000" placeholder="이번 달 예산 입력"> <!-- error의 경우 클래스 추가 -->
+							<span class="unit">원</span>
+							<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<hr class="divLine">
+
+			<p class="title">multi형</p>
+			<div class="formWrap mt5">
+				<ul>
+					<li>
+						<ul class="selectDivision_5_5">
+							<li>
+								<div class="stList">
+									<a href="javascript:;" title="소비날짜 선택" aria-haspopup="true">
+										<span class="selectValue">2020년 08년 30일</span>
+										<span class="selectBtn"></span>
+									</a>
+									<select name="" title="선택해주세요">
+										<option value=""></option>
+									</select>
+								</div>
+							</li>
+							<li>
+								<div class="stList">
+									<a href="javascript:;" title="소비시간 선택" aria-haspopup="true">
+										<span class="selectValue">오전 10시 50분</span>
+										<span class="selectBtn"></span>
+									</a>
+									<select name="" title="선택해주세요">
+										<option value=""></option>
+									</select>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<div class="inputBoth01 div4_6">
+							<span class="chkRadio inputB01">
+								<input type="radio" id="sample41" name="sample41" class="desgChk">
+								<label for="sample41">반복 종료일</label>
+							</span>
+							<div class="cal inputB02">
+								<div class="inputList">
+									<input type="text" value="" title="반복 종료일" placeholder="종료일 선택" readonly="readonly">
+									<a href="javascript:;" class="btnCalendar" title="종료일 날짜선택" role="button"><span class="blind">날짜선택</span></a>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+
+
+
+
+
+
+
+
+
+
+			<hr class="divLine">
+
+			<h2 class="guide">2020년</h2>
+
+			<div class="boxRadio rowType">
+				<div class="boxRadioInn">
+					<span>
+						<input name="rdo02" id="rdo03" type="radio" checked="checked">
+						<label for="rdo03">30평 (전용 84.99㎡)</label>
+					</span>
+				</div>
+				<div class="boxRadioInn">
+					<span>
+						<input name="rdo02" id="rdo04" type="radio">
+						<label for="rdo04">40평 (전용 112.56㎡)</label>
+					</span>
+				</div>
+				<div class="boxRadioInn">
+					<span>
+						<input name="rdo02" id="rdo05" type="radio">
+						<label for="rdo05">47평 (전용 134.68㎡)</label>
+					</span>
+				</div>
+			</div>
+
+			<hr class="divLine">
+
+			
+			<div class="formWrap">
+				<ul>
+					<!-- <li>
+						<strong class="formTit">금단위</strong>
+						<div class="boxRadio">
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo03" id="rdo06" type="radio" checked="checked">
+									<label for="rdo06">그램(g)</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo03" id="rdo07" type="radio">
+									<label for="rdo07">돈</label>
+								</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<strong class="formTit">보유량</strong>
+						<div class="inputList">                    
+							<input type="tel" title="보유량" value="750,000,000" placeholder="보유량을 입력해주세요">
+							<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+						</div>
+						<div class="infoTxtMulti">
+							<ul>
+								<li>
+									<strong class="tit">1그램 = 1,320.33원</strong>
+									<span class="txt">2020.06.03 11:43:06 기준</span>
+								</li>
+								<li>
+									<strong class="tit">팔때 기준</strong>
+									<span class="value">
+										<strong class="dataValue">2,098,694</strong><em class="won">원</em>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<strong class="formTit">매수금</strong>
+						<div class="inputList">                    
+							<input type="tel" title="매수금" value="750,000,000" placeholder="금액을 입력해주세요">
+							<span class="unit">원</span>
+							<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+						</div>
+					</li>
+					<li>
+						<div class="inputList">                    
+							<input type="text" title="계좌용도" placeholder="계좌의 용도를 5자내로 입력해주세요.">
+							<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+						</div>
+					</li>
+					<li>
+						<strong class="formTit">조회기간</strong>
+						<div class="calendarForm">
+							<div class="cal">
+								<div class="inputList">
+									<input type="text" value="2020.09.03" title="조회 시작일" placeholder="시작일선택" readonly="readonly">
+									<a href="javascript:;" class="btnCalendar" title="날짜선택" role="button"><span class="blind">날짜선택</span></a>
+								</div>
+							</div>
+							<span class="symbol">-</span>
+							<div class="cal">
+								<div class="inputList">
+									<input type="text" value="" title="조회 종료일" placeholder="종료일선택" readonly="readonly">
+									<a href="javascript:;" class="btnCalendar" title="날짜선택" role="button"><span class="blind">날짜선택</span></a>
+								</div>
+							</div>
+						</div>
+					</li>-->
+				</ul>
+			</div>
+
+
+			<div class="roundChkWrap mt15">
+				<ul class="length3">
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample11" id="sample001">
+							<label for="sample001">외식</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample11" id="sample002">
+							<label for="sample002">카페/간식</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample11" id="sample003">
+							<label for="sample003">술/유흥</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample11" id="sample004">
+							<label for="sample004">쇼핑</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample11" id="sample005">
+							<label for="sample005">온라인쇼핑</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample11" id="sample006">
+							<label for="sample006">생활</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample11" id="sample007">
+							<label for="sample007">주거/공과금</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample11" id="sample008">
+							<label for="sample008">의료/건강</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample11" id="sample009">
+							<label for="sample009">교육/학습</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample11" id="sample010">
+							<label for="sample010">자녀/육아</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample11" id="sample011">
+							<label for="sample011">뷰티/미용</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample11" id="sample012">
+							<label for="sample012">자동차</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample11" id="sample013">
+							<label for="sample013">교통</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample11" id="sample014">
+							<label for="sample014">문화/여가</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample11" id="sample015">
+							<label for="sample015">여행/숙박</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample11" id="sample016">
+							<label for="sample016">금융</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample11" id="sample017">
+							<label for="sample017">경조사 선물</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample11" id="sample018">
+							<label for="sample018">반려동물</label>
+						</span>
+					</li>
+					<li>
+						<span class="roundChk">
+							<input type="radio" name="sample11" id="sample019">
+							<label for="sample019">기타</label>
+						</span>
+					</li>
+				</ul>
+			</div>
+
+			
+		</div>
+		<!-- //container -->
+
+	</div>
+
+</body>
+</html>

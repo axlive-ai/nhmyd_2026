@@ -1,0 +1,282 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산현황</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(function(){
+		fullLayerPop();
+	})
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">부동산 관리</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+		</div>
+		<!-- //container -->
+		
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>부동산 관리</h1>
+				<div class="popCont">
+					<div class="infoBox">
+						<p class="tit">두산위브호수마을2단지</p>
+						<!-- <div class="divingTxt"><span>경기 의왕시 포일동 638</span></div>
+						<div class="divingTxt"><span>아파트</span><span>143.68㎡</span></div> -->
+						<ul class="detailList">
+							<li>
+								<span class="tit">소유구분</span>
+								<span class="value"><strong class="pointColor">월세</strong></span>
+							</li>
+							<li>
+								<span class="tit">등록일</span>
+								<span class="value">2020.07.31</span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="formWrap mt30 estWrap"><!--10.24 estWrap 추가-->
+						<ul>		
+							<li>
+								<strong class="formTit">월세 보증금(선택)
+									<em class="inputVal">(7억 5천만원)</em> <!-- [2021-12-14] 개선. 윤지현:마크업추가 -->
+								</strong>
+								<div class="inputList unitMan"> <!-- [2021] .unitMan 추가 -->
+									<input type="tel" title="전세금" value="7억5천" placeholder="금액을 입력해주세요."> <!-- 2020-10-29 플레이스홀더 마침표 추가 -->
+									<span class="unit">만원</span>
+									<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+								</div>
+								<!-- [2021-08-06] 한은정 : 금액입력버튼 수정, 에러 텍스트 추가// -->
+								<div class="roundBtnWrap">
+									<a href="javascript:;" role="button" title="100만원 추가">+100만</a>
+									<a href="javascript:;" role="button" title="1,000만원 추가">+1,000만</a>
+									<a href="javascript:;" role="button" title="1억 추가">+1억</a>
+									<a href="javascript:;" role="button" title="10억 추가">+10억</a>
+								</div>
+								<p class="errorTxt">1부터 9,999,999만원까지 입력 가능합니다.</p>
+								<!-- //[2021-08-06] 한은정 : 금액입력버튼 수정, 에러 텍스트 추가 -->
+							</li>
+							<li>
+								<strong class="formTit">월세
+									<em class="inputVal">(5백만원)</em> <!-- [2021-12-14] 개선. 윤지현:마크업추가 -->
+								</strong>
+								<div class="inputList unitMan"> <!-- [2021] .unitMan 추가 -->
+									<input type="tel" title="전세금" value="7억5천" placeholder="금액을 입력해주세요."> <!-- 2020-10-29 플레이스홀더 마침표 추가 -->
+									<span class="unit">만원</span>
+									<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+								</div>
+								<!-- [2021-08-06] 한은정 : 금액입력버튼 수정, 에러 텍스트 추가// -->
+								<div class="roundBtnWrap">
+									<a href="javascript:;" role="button" title="100만원 추가">+100만</a>
+									<a href="javascript:;" role="button" title="1,000만원 추가">+1,000만</a>
+									<a href="javascript:;" role="button" title="1억 추가">+1억</a>
+									<a href="javascript:;" role="button" title="10억 추가">+10억</a>
+								</div>
+								<p class="errorTxt">1부터 9,999,999만원까지 입력 가능합니다.</p>
+								<!-- //[2021-08-06] 한은정 : 금액입력버튼 수정, 에러 텍스트 추가 -->
+							</li>
+							<li>
+								<strong class="formTit">월세 납입일(선택)</strong>
+								<div class="iptDayWrap"><!--12.05 말일 버튼 추가 -->
+									<div class="inputList unitMan2 standUse">
+										<span class="stand">매월</span>
+										<input type="tel" title="" value="" placeholder="납입일">
+										<span class="unit">일</span>
+										<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+									</div>
+									<button type="button" class="btnDay">말일</button> <!--12.08 버튼 활성화 active추가 -->
+								</div>
+								<div class="mt10">
+									<input type="checkbox" id="listAll" class="chekTypeOther" name=""><label for="listAll">금융플래너에서 월세 납입일을 알려드려요.</label>
+								</div>
+							</li>
+							<li>
+								<strong class="formTit">월세 출금계좌(선택)<button type="button" class="contBtn01">초기화</button></strong>
+								<div class="stList">
+									<a href="javascript:;" title="계좌 선택" aria-haspopup="true">
+										<span class="selectValue placeholder">계좌를 선택해주세요.</span>
+										<span class="selectBtn"></span>
+									</a>
+									<select name="" title="선택해주세요">
+										<option value=""></option>
+									</select>
+								</div>
+							</li>
+							<li>
+								<strong class="formTit">계약기간(선택)<button type="button" class="contBtn01">초기화</button></strong>
+								<div class="calendarForm">
+									<div class="cal">
+										<div class="inputList">
+											<input type="text" value="2020.09.03" title="조회 시작일" placeholder="시작일선택" readonly="readonly">
+											<a href="javascript:;" class="btnCalendar" title="시작일 날짜선택" role="button"><span class="blind">날짜선택</span></a>
+										</div>
+									</div>
+									<span class="symbol">-</span>
+									<div class="cal">
+										<div class="inputList">
+											<input type="text" value="" title="조회 종료일" placeholder="종료일선택" readonly="readonly">
+											<a href="javascript:;" class="btnCalendar" title="종료일 날짜선택" role="button"><span class="blind">날짜선택</span></a>
+										</div>
+									</div>
+								</div>
+								<!-- <p class="errorTxt">시작일을 선택시 종료일을 선택해주세요.</p> -->
+							</li>
+							<li>
+								<strong class="formTit">관련대출(선택)<button type="button" class="contBtn01 green" title="관련대출 추가"  onclick="slidePopOption();">추가</button></strong>
+								<!-- <div class="stList">
+									<a href="javascript:;" title="관련대출 선택" aria-haspopup="true" onclick="slidePopOption();return false;">
+										<span class="selectValue placeholder">대출자산을 선택하세요.</span> 
+										value 값이 들어오면 class placeholder 삭제
+										<span class="selectBtn"></span>
+									</a>
+									<select name="" title="선택해주세요">
+										<option value=""></option>
+									</select>
+								</div> -->
+								<div class="inputBoth01 div8_2">
+									<div class="inputList inputB01">
+										<input type="text" title="관련대출명" value="[신한]든든신용대출" placeholder="" readonly="readonly">
+										<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+									</div>
+									<div class="inputB02">
+										<button type="button" class="contBtn01" onclick="slidePopConfirm();return false;">삭제</button>
+									</div>
+								</div>
+								<div class="inputBoth01 div8_2">
+									<div class="inputList inputB01">
+										<input type="text" title="관련대출명" value="[NH농협]직장인대출" placeholder="" readonly="readonly">
+										<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+									</div>
+									<div class="inputB02">
+										<button type="button" class="contBtn01">삭제</button>
+									</div>
+								</div>
+							</li>
+							<li>
+								<strong class="formTit mt15">메모(선택)</strong><!--12.28 mt15 추가-->
+								<textarea placeholder="메모를 입력해주세요. (최대30자)"></textarea>
+								<!-- <div class="grayBgLine mt20">
+									KB부동산 매매시세금액을 자산현황에서<br>확인하실 수 있습니다.
+								</div> -->
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="popBtnWrap">
+					<div class="popBtn"><!--12.05 버튼 수정-->
+						<a href="javascript:;" class="" role="button">삭제</a>
+						<a href="javascript:;" class="confirmBtn" role="button">확인</a>
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+
+		<!-- 삭제 컨펌 팝업 -->
+		<div class="nhasset popWrap slidePopConfirm">
+			<div class="dim"></div>
+			<div class="popInner">
+				<h1><img src="../../images/popTitle.png" alt="NH 스마트뱅킹"></h1>
+				<div class="popCont">
+					<div class="confirmMsg type03">
+						<p>선택하신 항목을<br>삭제하시겠습니까?</p>
+					</div>
+				</div>
+
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<a href="javascript:;" class="" onclick="popClose(this);return false;" role="button">취소</a>
+						<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">확인</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // 삭제 컨펌 팝업 -->
+
+		<!-- 관련대출 slidepop -->
+		<div class="nhasset popWrap slidePopOption">
+			<div class="dim"></div>
+			<div class="popInner">
+				<h1>관련대출</h1>
+				<div class="popCont">                    
+					<ul class="selectList">
+						<li class="active">
+							<a href="javascript:;">
+								<strong class="fwN">[신한]마이너스 대출</strong>
+								<div class="divingTxt fcGray"><span>잔액 1,100,000,000원</span><span>신규일자 2020.07.31</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<strong class="fwN">[NH농협]마이너스 대출</strong>
+								<div class="divingTxt fcGray"><span>잔액 1,100,000,000원</span><span>신규일자 2020.07.31</span></div>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<strong class="fwN">[KB국민]마이너스 대출</strong>
+								<div class="divingTxt fcGray"><span>잔액 1,100,000,000원</span><span>신규일자 2020.07.31</span></div>
+							</a>
+						</li>
+					</ul>
+
+					<!-- 거래내역이 없을 경우 -->
+					<div class="listNone">
+						<p>보유하고 계신 대출계좌가 없습니다.</p>
+					</div>
+					<!-- // 거래내역이 없을 경우 -->
+
+				</div>
+
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<a href="javascript:;" class="confirmBtn" role="button">저장</a>
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다."><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- //관련대출 slidepop -->
+
+	</div>
+	<script>
+		$('.btnDay').on('click', function(){
+			var $inp =$('input[type="tel"]')
+			$(this).toggleClass('active');
+			if($(this).hasClass('active')){
+				$(this).prev(".inputList").addClass("disabled");
+				$(this).prev(".inputList").find($inp).attr('readonly', true)
+			}else{
+				$(this).prev(".inputList").removeClass("disabled");
+				$(this).prev(".inputList").find($inp).attr('readonly', false)
+			}
+		})
+	</script>
+</body>
+</html>

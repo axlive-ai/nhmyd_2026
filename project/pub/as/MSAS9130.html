@@ -1,0 +1,118 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산현황</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(function(){
+		fullLayerPop();
+	})
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">외화 등록</a></h1> 
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container bgWhite">
+			<div class="formWrap realAsset"> <!--10.25 realAsset 추가-->
+				<ul>
+					<li>
+						<strong class="formTit">명칭</strong>
+						<div class="inputList">
+							<input type="text" title="명칭" value="" placeholder="명칭을 입력해주세요.">
+							<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+						</div>
+						<div class="roundChkWrap mt10">
+							<ul>
+								<li>
+									<span class="roundChk">
+										<input type="radio" name="sample00" id="sample01">
+										<label for="sample01">여행</label>
+									</span>
+								</li>
+								<li>
+									<span class="roundChk">
+										<input type="radio" name="sample00" id="sample02">
+										<label for="sample02">재테크</label>
+									</span>
+								</li>
+								<li>
+									<span class="roundChk">
+										<input type="radio" name="sample00" id="sample03">
+										<label for="sample03">출장</label>
+									</span>
+								</li>
+								<li>
+									<span class="roundChk">
+										<input type="radio" name="sample00" id="sample04">
+										<label for="sample04">유학</label>
+									</span>
+								</li>
+							</ul>
+						</div>
+						<p class="errorTxt">특수문자[!@#$*()-=|;:,./]만 입력 가능합니다.</p>
+					</li> 
+					<li>
+						<strong class="formTit">외화종류선택</strong>
+						<div class="stList">
+							<a href="javascript:;" title="외화종류선택" aria-haspopup="true">
+								<span class="selectValue placeholder">USD(미국달러)</span> <!-- value 값이 들어오면 class placeholder 삭제 -->
+								<span class="selectBtn"></span>
+							</a>
+							<select name="" title="선택해주세요">
+								<option value=""></option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<strong class="formTit">보유금액</strong>
+						<div class="inputList unitMan"> <!-- [2021] .unitMan 추가-->
+							<input type="tel" title="보유금액" value="" placeholder="금액을 입력해주세요.">
+							<span class="unit">USD</span>
+							<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="grayBgLine mt30">
+				<ul class="detailList">
+					<li>
+						<span class="tit">원화환산금액은 자산현황에서 확인하실 수 있습니다.</span>
+					</li>
+				</ul>
+			</div>
+
+			<div class="areaBtnDefault">
+				<a href="javascript:;" class="btnPressPoint" role="button">등록하기</a>
+			</div>
+
+		</div>
+		<!-- //container -->
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>[P] 다른 사람 선택</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(function () {
+		slidePopOption();
+	})
+</script>
+</head>
+<body>
+<div class="wrapper nhasset"><!-- 바닥페이지 --></div>
+
+<!-- ###################################### -->
+<!-- ### [팝업] 다른 사람 선택 ### -->
+<!-- ###################################### -->
+<div class="nhasset popWrap slidePopOption">
+	<div class="dim"></div>
+	<div class="popInner">
+		<h1>다른 사람 선택</h1>
+		<div class="popCont">
+			<div class="formWrap formListBox03">
+				<div class="formBoxTit">
+					나의 금융자산과 비교하고 싶은 그룹의 <br>
+					<span class="pointColor">소득, 나이, 지역</span>을 선택해주세요. 
+				</div>
+				<ul>
+					<li>
+						<strong class="formTit">월 소득</strong>
+						<div class="boxRadio">
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo13" id="rdo30" type="radio" checked="checked" aria-label="월 소득(150만원 미만)"> <!-- [접근성_2024] aria-label 추가 -->
+									<label for="rdo30" aria-hidden="true">150만원 미만</label> <!-- [접근성_2024] aria-hidden="true" 추가 -->
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo13" id="rdo31" type="radio" aria-label="월 소득(150~300만원)"> <!-- [접근성_2024] aria-label 추가 -->
+									<label for="rdo31" aria-hidden="true">150~300만원 </label> <!-- [접근성_2024] aria-hidden="true" 추가 -->
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo13" id="rdo32" type="radio" aria-label="월 소득(300~500만원)"> <!-- [접근성_2024] aria-label 추가 -->
+									<label for="rdo32" aria-hidden="true">300~500만원</label> <!-- [접근성_2024] aria-hidden="true" 추가 -->
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo13" id="rdo33" type="radio" aria-label="월 소득(300~500만원)"> <!-- [접근성_2024] aria-label 추가 -->
+									<label for="rdo33" aria-hidden="true">500~800만원 </label> <!-- [접근성_2024] aria-hidden="true" 추가 -->
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo13" id="rdo34" type="radio" aria-label="월 소득(800~1,000만원)"> <!-- [접근성_2024] aria-label 추가 -->
+									<label for="rdo34" aria-hidden="true">800~1,000만원</label> <!-- [접근성_2024] aria-hidden="true" 추가 -->
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo13" id="rdo35" type="radio" aria-label="월 소득(300~500만원)"> <!-- [접근성_2024] aria-label 추가 -->
+									<label for="rdo35" aria-hidden="true">1000만원 이상 </label> <!-- [접근성_2024] aria-hidden="true" 추가 -->
+								</span>
+							</div>
+						</div>
+					</li>
+					
+					<li>
+						<strong class="formTit">나이</strong>
+						<div class="boxRadio">
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo14" id="rdo40" type="radio" checked="checked" aria-label="나이(20대)"> <!-- [접근성_2024] aria-label 추가 -->
+									<label for="rdo40" aria-hidden="true">20대</label><!-- [접근성_2024] aria-hidden="true" 추가 -->
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo14" id="rdo41" type="radio" aria-label="나이(30대)"> <!-- [접근성_2024] aria-label 추가 -->
+									<label for="rdo41" aria-hidden="true">30대</label><!-- [접근성_2024] aria-hidden="true" 추가 -->
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo14" id="rdo42" type="radio" aria-label="나이(40대)"> <!-- [접근성_2024] aria-label 추가 -->
+									<label for="rdo42" aria-hidden="true">40대</label><!-- [접근성_2024] aria-hidden="true" 추가 -->
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo14" id="rdo43" type="radio" aria-label="나이(50대)"> <!-- [접근성_2024] aria-label 추가 -->
+									<label for="rdo43" aria-hidden="true">50대</label><!-- [접근성_2024] aria-hidden="true" 추가 -->
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo14" id="rdo44" type="radio" aria-label="나이(60대 이상)"> <!-- [접근성_2024] aria-label 추가 -->
+									<label for="rdo44" aria-hidden="true">60대 이상</label><!-- [접근성_2024] aria-hidden="true" 추가 -->
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo14" id="rdo45" type="radio" aria-label="나이(전연령)"> <!-- [접근성_2024] aria-label 추가 -->
+									<label for="rdo45" aria-hidden="true">전연령</label><!-- [접근성_2024] aria-hidden="true" 추가 -->
+								</span>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<strong class="formTit">지역</strong>
+						<div class="boxRadio">
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo15" id="rdo50" type="radio" checked="checked" aria-label="지역(서울시)"> <!-- [접근성_2024] aria-label 추가 -->
+									<label for="rdo50" aria-hidden="true">서울시</label><!-- [접근성_2024] aria-hidden="true" 추가 -->
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo15" id="rdo51" type="radio" aria-label="지역(경기도)"> <!-- [접근성_2024] aria-label 추가 -->
+									<label for="rdo51" aria-hidden="true">경기도</label><!-- [접근성_2024] aria-hidden="true" 추가 -->
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo15" id="rdo52" type="radio" aria-label="지역(광역시)"> <!-- [접근성_2024] aria-label 추가 -->
+									<label for="rdo52" aria-hidden="true">광역시</label><!-- [접근성_2024] aria-hidden="true" 추가 -->
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo15" id="rdo53" type="radio" aria-label="지역(기타지역)"> <!-- [접근성_2024] aria-label 추가 -->
+									<label for="rdo53" aria-hidden="true">기타지역</label><!-- [접근성_2024] aria-hidden="true" 추가 -->
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo15" id="rdo54" type="radio" aria-label="지역(전 지역)"> <!-- [접근성_2024] aria-label 추가 -->
+									<label for="rdo54" aria-hidden="true">전 지역</label><!-- [접근성_2024] aria-hidden="true" 추가 -->
+								</span>
+							</div>
+						</div>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+
+		<div class="popBtnWrap">
+			<div class="popBtn">
+				<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">확인</a>
+			</div>
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다."><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+		</div>
+		
+	</div>
+</div>
+<!-- ###################################### -->
+</body>
+</html>

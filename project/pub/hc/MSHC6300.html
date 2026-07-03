@@ -1,0 +1,128 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>헬스케어</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		fullLayerPop();
+	})
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<h1><a href="javascript:;" role="text">병원상세</a></h1>
+			<a href="javascript:;" class="btnEtc">나가기</a>
+		</div>
+		<!-- //header -->
+	
+		<!-- //container -->
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>병원상세</h1>
+				<div class="popCont grayPop">
+                    <div class="boxTypeWrap">
+                        <div class="tagWrap"><span class="tag blue">1등급</span></div>
+                        <div class="adrDtBox">
+                            <strong class="storeTit">농협 요양병원</strong>
+                            <div class="btnBox">
+                                <a href="tel:031-426-8468" class="contBtn01 green">전화연결</a>
+                            </div>
+                        </div>
+                        <hr class="divLine3">
+                        <div class="adrDtBox">
+                            <div>
+                                <p class="adrTxt">서울시 강서구 화곡동 999-33 곰달래로 51</p>
+                                <p class="numTxt">02-0000-0000</p>
+                            </div>
+                            <div class="btnBox">
+                                <a href="javascript:;" class="contBtn01">주소복사</a>
+                            </div>
+                        </div>
+                        <div class="tagWrap mt20">
+                            <span class="tag gray1">#요양병원</span>
+                            <span class="tag gray2">#가정의학과</span>
+                            <span class="tag gray1">#한방내과</span>
+                            <span class="tag gray3">#내과</span>
+                            <span class="tag gray2">#이비인후과</span>
+                            <span class="tag gray3">#1등급</span>
+                        </div>
+                    </div>
+					<div class="boxTypeWrap pt0">
+                        <div class="tabWrap type01">
+                            <ul role="tablist">
+                                <li role="presentation"><a href="javascript:;" role="tab" class="on" aria-selected="true" title="">진료정보</a></li>
+                                <li role="presentation"><a href="javascript:;" role="tab" aria-selected="false" title="">위치정보</a></li>
+                            </ul>
+                        </div>
+                        <div class="tabContWrap type01">
+                            <div class="tabCont01" aria-label="진료정보 탭">
+                                <div class="wrapTblDefault mt20">
+                                    <table cellpadding="0" cellspacing="0" class="thCenter">
+                                        <caption>진료정보 표</caption>
+                                        <colgroup>
+                                            <col style="width:25%">
+                                            <col style="width:auto">
+                                        </colgroup>
+                                        <thead></thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="rowgroup">진료과목</th>
+                                                <td>
+                                                    <ul class="listDot">
+                                                        <li>가정의학과</li>
+                                                        <li>한방내과</li>
+                                                        <li>내과</li>
+                                                        <li>이비인후과</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tabCont02" aria-label="위치정보 탭" style="display:none">
+                                <div class="mapWrap">
+                                    <div class="mapArea">
+                                        <!-- 지도 영역 들어가는곳 -->
+                                        <div id="map" style="width:100%;height:200px;background-color:#eee" alt="지도"> </div>
+                                        <!-- 지도 영역 들어가는곳 -->
+                                    </div>
+                                    <dl class="adrTxt">
+                                        <dt><strong>서울시 강서구 화곡동 999-33</strong></dt>
+                                        <dd>강서 초등학교 기점 팔도강산사거리</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				<div class="popBtnWrap">
+                    <div class="popBtn">
+                        <a href="javascript:;" class="confirmBtn" role="button">확인</a>
+                    </div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

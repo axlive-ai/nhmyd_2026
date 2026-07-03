@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 소비내역</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		fullLayerPop();
+	})
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">여행경비 계산해보기</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+
+		</div>
+		<!-- //container -->
+
+		<!-- 팝업시작 -->
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>유학비용 계산해보기</h1>
+				<div class="popCont grayPop">
+					<div class="boxTypeWrap addchallType"><!--s:boxTypeWrap-->
+						<div class="obTitleWrap">
+							<div><strong>더 넓게 더 깊게<br>유학 비용 계산해볼까요?</strong></div>
+							<div><span><img src="../../images/category/ob/ico_cate_ob01_04.png" alt="교육 아이콘"></span></div> <!-- [2022-12-16] 아이콘 변경 -->
+						</div>
+						<hr class="divLine" aria-hidden="true">
+						<div class="formWrap overseaType mt20"><!--s:formWrap-->
+							<ul>
+								<li class="pt0">
+                                    <strong class="formTit">어느 권으로 가시나요?</strong><!--10.06 수정-->
+									<div class="boxRadio">
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo13" id="rdo16" type="radio" checked="checked">
+												<label for="rdo16">미국</label> <!-- [2021-11-03] 한은정 : 문구수정 -->
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo13" id="rdo17" type="radio">
+												<label for="rdo17">영국</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo13" id="rdo18" type="radio">
+												<label for="rdo18">캐나다</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo13" id="rdo19" type="radio">
+												<label for="rdo19">호주/뉴질랜드</label>
+											</span>
+                                        </div>
+                                        <div class="boxRadioInn">
+											<span>
+												<input name="rdo13" id="rdo20" type="radio">
+												<label for="rdo20">필리핀</label>
+											</span>
+                                        </div>
+                                        <div class="boxRadioInn">
+											<span>
+												<input name="rdo13" id="rdo21" type="radio">
+												<label for="rdo21">아시아권</label>
+											</span>
+										</div>
+									</div>	
+                                </li>
+                                <li>
+                                    <strong class="formTit">얼마나 있으실건가요?</strong>
+									<div class="boxRadio">
+										<div class="boxRadioInn"><!--10.11 기획 요청으로 id값 수정-->
+											<span>
+												<input name="rdo14" id="rdo30" type="radio" checked="checked">
+												<label for="rdo30">6개월</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo14" id="rdo31" type="radio">
+												<label for="rdo31">1년</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo14" id="rdo32" type="radio">
+												<label for="rdo32">3년</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo14" id="rdo33" type="radio">
+												<label for="rdo33">5년</label>
+											</span>
+                                        </div>
+									</div>	
+								</li>
+								<li>
+									<div class="briefgreenBox">
+										<h2>필요 유학자금</h2>
+										<div class="moneySum">0만원</div>
+										<div>
+											<ul class="listDash">
+												<li>
+													필요 유학자금은 선택한 조건에 따른 평균 생활비를 토대로 계산한 비용입니다
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="tourGuide bgNone">
+										<div class="toggleWrap">
+											<button type="button" class="toggleBtn " aria-expanded="true">어떤 기준으로 계산된 건가요?</button>
+											<div class="toggleCont">
+												<div class="wrapTblDefault mt20">
+													<table class="thCenter">
+														<caption>여행지별 경비 표</caption>
+														<colgroup>
+															<col width="*">
+															<col width="*">
+															<col width="*">
+															<col width="*">
+														</colgroup>
+														<thead>
+															<tr>
+																<th scope=""></th>
+																<th scope="col">미국</th>
+																<th scope="col">영국</th>
+																<th scope="col">캐나다</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<th scope="row" class="bgNone">6개월</td>
+																<td scope="row">2,280만원</td>
+																<td scope="row">2,600만원</td>
+																<td scope="row">1,200만원</td>
+                                                            </tr>
+                                                            <tr>
+																<th scope="row" class="bgNone">1년</td>
+																<td scope="row">5,000만원</td>
+																<td scope="row">5,200만원</td>
+																<td scope="row">4,500만원</td>
+                                                            </tr>
+                                                            <tr>
+																<th scope="row" class="bgNone">3년</td>
+																<td scope="row">1,450만원</td>
+																<td scope="row">15,600만원</td>
+																<td scope="row">13,200만원</td>
+                                                            </tr>
+                                                            <tr>
+																<th scope="row" class="bgNone">5년</td>
+																<td scope="row">24,450만원</td>
+																<td scope="row">26,000만원</td>
+																<td scope="row">22,150만원</td>
+															</tr>
+														</tbody>
+													</table>
+                                                </div>
+                                                <div class="wrapTblDefault mt20">
+													<table class="thCenter">
+														<caption>여행지별 경비 표</caption>
+														<colgroup>
+															<col width="*">
+															<col width="*">
+															<col width="*">
+															<col width="*">
+														</colgroup>
+														<thead>
+															<tr>
+																<th scope=""></th>
+																<th scope="col">호주/<br />뉴질랜드</th>
+																<th scope="col">필리핀</th>
+																<th scope="col">아시아권</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<th scope="row" class="bgNone">6개월</td>
+																<td scope="row">2,280만원</td>
+																<td scope="row">2,600만원</td>
+																<td scope="row">1,200만원</td>
+                                                            </tr>
+                                                            <tr>
+																<th scope="row" class="bgNone">1년</td>
+																<td scope="row">5,000만원</td>
+																<td scope="row">5,200만원</td>
+																<td scope="row">4,500만원</td>
+                                                            </tr>
+                                                            <tr>
+																<th scope="row" class="bgNone">3년</td>
+																<td scope="row">1,450만원</td>
+																<td scope="row">15,600만원</td>
+																<td scope="row">13,200만원</td>
+                                                            </tr>
+                                                            <tr>
+																<th scope="row" class="bgNone">5년</td>
+																<td scope="row">24,450만원</td>
+																<td scope="row">26,000만원</td>
+																<td scope="row">22,150만원</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!--e:formWrap-->
+					</div>
+					<!--e:boxTypeWrap-->
+				</div>
+				<!--e:boxTypeWrap-->
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<a href="javascript:;" class="" role="button">취소</a>
+						<a href="javascript:;" class="confirmBtn" role="button">목표금액으로 등록</a>
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- 팝업끝 -->
+
+	</div>
+
+</body>
+</html>

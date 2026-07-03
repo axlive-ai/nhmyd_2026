@@ -1,0 +1,189 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>[P] 기간 선택</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function(){
+		slidePopOption();
+	})  
+</script>
+</head>
+<body>
+<div class="wrapper nhasset"><!-- 바닥페이지 --></div>
+
+<!-- ###################################### -->
+<!-- ### [팝업] 기간 선택 ### -->
+<!-- ###################################### -->
+<div class="nhasset popWrap slidePopOption">
+	<div class="dim"></div>
+	<div class="popInner">
+		<h1>기간 선택</h1>
+		<div class="popCont">
+			<div class="formWrap formListBox02 mtst">
+				<ul>
+					<li>
+						<strong class="formTit mt0">기간</strong>
+						<div class="calendarForm">
+							<div class="cal">
+								<div class="inputList">
+									<input type="text" value="2020-10-22" title="조회 시작일" placeholder="시작일선택" readonly="readonly">
+									<a href="javascript:;" class="btnCalendar" title="시작일 날짜선택" role="button"><span class="blind">날짜선택</span></a>
+								</div>
+							</div>
+							<span class="symbol">-</span>
+							<div class="cal">
+								<div class="inputList">
+									<input type="text" value="2020-10-28" title="조회 종료일" placeholder="종료일선택" readonly="readonly">
+									<a href="javascript:;" class="btnCalendar" title="종료일 날짜선택" role="button"><span class="blind">날짜선택</span></a>
+								</div>
+							</div>
+						</div>
+						<div class="roundBtnWrap mt10">
+							<a href="javascript:;" role="button" title="1주일 추가">1주일</a><!-- 활성화일 경우 class="active" 추가-->
+							<a href="javascript:;" role="button" title="1개월 추가">1개월</a>
+							<a href="javascript:;" role="button" title="3개월 추가">3개월</a>
+							<a href="javascript:;" role="button" title="6개월 추가">6개월</a>
+							<a href="javascript:;" role="button" title="6개월 추가">1년</a>
+						</div>
+					</li>
+					<li>
+						<strong class="formTit mt8">대상</strong>
+						<!-- 샘플 : 금융플래너 서비스 선택 시
+						<div class="boxRadio rdo3">
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo13" id="rdo30" type="radio" checked="checked">
+									<label for="rdo30">전체</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo13" id="rdo31" type="radio">
+									<label for="rdo31">만기예정</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo13" id="rdo32" type="radio">
+									<label for="rdo32">납부예정</label>
+								</span>
+							</div><div class="boxRadioInn">
+								<span>
+									<input name="rdo13" id="rdo33" type="radio">
+									<label for="rdo33">출금예정</label>
+								</span>
+							</div><div class="boxRadioInn">
+								<span>
+									<input name="rdo13" id="rdo34" type="radio">
+									<label for="rdo34">공모주</label>
+								</span>
+							</div><div class="boxRadioInn">
+								<span>
+									<input name="rdo13" id="rdo35" type="radio">
+									<label for="rdo35">주택청약</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo13" id="rdo36" type="radio">
+									<label for="rdo36">직접등록</label>
+								</span>
+							</div>
+						</div>
+						-->
+
+						<!-- [2023 NH마이데이터 서비스 고도화] 샘플 : 컨설팅 서비스 선택 시 -->
+						<div class="boxRadio rdo3">
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo13" id="rdo30" type="radio" checked="checked">
+									<label for="rdo30">전체</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo13" id="rdo31" type="radio">
+									<label for="rdo31">월간보고서</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo13" id="rdo32" type="radio">
+									<label for="rdo32">세금계산서</label>
+								</span>
+							</div><div class="boxRadioInn">
+								<span>
+									<input name="rdo13" id="rdo33" type="radio">
+									<label for="rdo33">자산진단</label>
+								</span>
+							</div><div class="boxRadioInn">
+								<span>
+									<input name="rdo13" id="rdo34" type="radio">
+									<label for="rdo34">연금진단</label>
+								</span>
+							</div><div class="boxRadioInn">
+								<span>
+									<input name="rdo13" id="rdo35" type="radio">
+									<label for="rdo35">조기은퇴진단</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo13" id="rdo36" type="radio">
+									<label for="rdo36">신용관리</label>
+								</span>
+							</div>
+						</div>
+						<!-- // [2023 NH마이데이터 서비스 고도화] -->
+					</li>
+					
+					<li>
+						<strong class="formTit mt8">정렬</strong>
+						<div class="boxRadio">
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo14" id="rdo40" type="radio" checked="checked">
+									<label for="rdo40">최신순</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo14" id="rdo41" type="radio">
+									<label for="rdo41">과거순</label>
+								</span>
+							</div>
+				
+						</div>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+
+		<div class="popBtnWrap">
+			<div class="popBtn">
+				<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">확인</a>
+			</div>
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다."><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+		</div>
+	</div>
+</div>
+<!-- ###################################### -->
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>이벤트</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function() {
+		fullLayerPop();
+	});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">이벤트</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container"></div>
+		<!-- //container -->
+
+		<!-- 팝업시작 -->
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>당첨자 약관동의</h1> 
+				<div class="popCont grayPop">
+					<h2 class="defTit icoEvent02">
+						<strong>마이데이터 신규가입 이벤트<br>당첨을 축하드립니다</strong>
+					</h2>
+					<p class="subTxt">정보제공을 동의하고 당첨경품을 받으세요!</p>
+					<div class="formWrap boxTypeWrap pt0">
+						<div class="titListBox mt20">
+							<ul>
+								<li>
+									<div class="formTitN"><strong>이벤트</strong></div>
+									<div class="disTxtBox">
+										<p>주택청약종합 고객 이벤트 하(夏)하 호(好)호 FESTIVAL</p>
+									</div>
+								</li>
+								<li>
+									<div class="formTitN"><strong>성명</strong></div>
+									<div class="inputList disabled">
+										<input type="text" title="성명(실명)을 입력" value="김농협" placeholder="성명(실명)을 입력하세요" readonly> <!-- [2022-11-18] readonly로 수정 -->
+									</div>
+								</li>
+								<li>
+									<div class="formTitN"><strong>휴대폰번호</strong></div>
+									<div class="inputList">
+										<input type="text" id="" name="" title="휴대폰번호" placeholder="‘-’없이 숫자만 입력하세요.">
+									</div>
+								</li>
+								<li>
+									<div class="formTitN"><strong>주소</strong></div>
+									<div class="boxRadio">
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo1" id="rdo11" type="radio" checked="checked">
+												<label for="rdo11">자택</label>
+											</span>
+										</div>
+										<div class="boxRadioInn">
+											<span>
+												<input name="rdo1" id="rdo12" type="radio">
+												<label for="rdo12">직장</label>
+											</span>
+										</div>
+									</div>
+									<!-- [2022-11-18] 주소입력 수정// -->
+									<div class="inputBoth01 addWrap"> <!-- [2022-12-13] addWrap 클래스 추가 -->
+										<div class="inputB01 inputList">
+											<input type="text" title="우편번호" value="" placeholder="" readonly> 
+											<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a> 
+										</div>
+										<div class="areaInpBtn">
+											<button class="btnInpLine">주소검색</button>
+										</div>
+									</div>
+									<div class="inputList">
+										<input type="text" id="" name="" title="주소" placeholder="" readonly>
+									</div>
+									<div class="inputList">
+										<input type="text" id="" name="" title="상세 주소" placeholder="상세 주소 입력">
+									</div>							
+									<!-- //[2022-11-18] 주소입력 수정 -->
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="formWrap boxTypeWrap pt0">
+						<!-- [2022-12-01] 수정 -->
+						<div class="titListBox termBox">
+							<ul>
+								<li>
+									<div class="formWrap selectAll">
+										<div class="total">
+											<div class="formHolder check">
+												<input type="checkbox" id="type_chk01" checked="" class="chekTypeOther">
+												<label class="check" for="type_chk01">[필수] 개인정보 이용 동의</label>
+											</div>
+										</div>
+									</div>
+									<div class="frameBox"> <!-- [2022-12-14] 수정 -->
+										<iframe src="../../terms/3063_ms_agreement.html" width="100%" height="300px" frameborder="0"></iframe> <!-- [2023-01-06] 경로 수정 -->
+									</div>
+								</li>
+								<li>
+									<div class="formWrap selectAll">
+										<div class="total">
+											<div class="formHolder check">
+												<input type="checkbox" id="type_chk02" checked="" class="chekTypeOther">
+												<label class="check" for="type_chk02">[필수] 제세공과금 신고 대행 동의</label>
+											</div>
+										</div>
+									</div>
+									<div class="frameBox"> <!-- [2022-12-14] 수정 -->
+										<iframe src="../../terms/3064_ms_agreement.html" width="100%" height="100%" frameborder="0"></iframe> <!-- [2023-01-06] 경로 수정 -->
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- //[2022-12-01] 수정 -->
+					</div>
+				</div>
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<a href="javascript:;" class="" role="button">동의안함</a>
+						<a href="javascript:;" class="confirmBtn" role="button">확인</a>
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- // 팝업 끝 -->
+	</div>
+
+</body>
+</html>

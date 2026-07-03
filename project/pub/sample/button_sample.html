@@ -1,0 +1,105 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>button</title>
+<script src="../pub-assets/js/head.js"></script>
+<style>
+	h2.guide{margin:20px 0;padding:5px 0;font-size:20px;font-weight:900;background:rgb(255, 248, 157);text-align:center}
+	.title{margin:20px 0 10px;font-size:15px;font-weight:bold;color:blue}
+	.desc{margin:30px 0 20px;font-size:13px;font-weight:bold;color:#65aee2}
+	.title + .desc{margin-top:10px;}
+</style>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">자산등록</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<h2 class="guide">2021년</h2>
+			
+			<p class="title">button</p>
+			<p class="desc">- full 버튼</p>
+			<a href="javascript:;" class="fullInbodyBtn mt20">카드연결</a>
+
+			<p class="desc">- 더보기 버튼</p>
+			<div class="listMoreBtn mt10">
+				<a href="javascript:;">이전 청구서 더보기</a>
+			</div>
+
+			<p class="desc">- line 버튼</p>
+			<div class="areaBodyBtnFull">
+				<a href="javascript:;" class="btnBodyLine" role="button">기본</a>
+				<a href="javascript:;" class="btnBodyLine disabled" role="button">비활성</a>
+				<a href="javascript:;" class="btnBodyLine green" role="button">그린</a> <!-- 비활성일때 클래스 disabled 추가 -->
+			</div>
+
+			<p class="desc">- 텍스트 링크(13px) : a.linkTxt</p>
+			<a href="javascript:;" class="linkTxt">부동산 정보 더보기</a> <!-- [2021-08-25] 한은정 : 문구 수정 -->
+
+			<p class="desc">- 그린텍스트 링크(14px) : a.link.arrGreen</p>
+			<a href="javascript:;" class="link arrGreen">카드 연결</a>
+
+			<p class="desc">- touch 이벤트 있는 금액 add버튼 : .roundBtnWrap > a</p>
+			<div class="roundBtnWrap">
+				<a href="javascript:;" role="button" title="10만원 추가">+10만</a>
+				<a href="javascript:;" role="button" title="50만원 추가">+50만</a>
+				<a href="javascript:;" role="button" title="100만원 추가">+100만</a>
+				<a href="javascript:;" role="button" title="300만원 추가">+300만</a>
+			</div>
+
+
+			<hr class="divLine">
+
+			<p class="title">toggle 버튼</p>
+			<p class="desc">- .tgBtnWrap > .tgTxt + .tgBtn</p>
+			<div class="tgBtnWrap">
+				<span class="tgTxt">등록기관만 보기</span>
+				<span class="tgBtn">
+					<input type="checkbox" id="toggle1" checked="checked">
+					<label for="toggle1">선택</label>
+				</span>
+			</div>
+			
+			<p class="desc">- .tgBtnWrap > tgTxt + .tgBtn1</p>
+			<div class="tgBtnWrap">
+				<span class="tgTxt">이용카드만</span>
+				<span class="tgBtn2">
+					<input type="checkbox" id="toggle1" checked="checked" title="등록기관만 보기">
+					<label for="toggle1">선택</label>
+				</span>
+			</div>
+
+			<hr class="divLine">
+			<p class="title">기타 버튼</p>
+			<p class="desc">- .nhasset .btnBodyLine.btnAdd</p>
+			<a href="javascript:;" class="btnBodyLine btnAdd" role="button">신규기관연결</a>
+		</div>
+		<!-- //container -->
+
+	</div>
+
+</body>
+</html>

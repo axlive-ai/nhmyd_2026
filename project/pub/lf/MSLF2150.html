@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>정부혜택_가족정보 등록_자동/직접 선택</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script type="text/javascript">
+$(function(){
+    popCenter();
+});
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>맞춤정보 등록</h1>
+		<a href="javascript:;" class="btnEtc">나가기</a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<div class="boxTypeWrap">
+			<div class="lf_bgWrap">
+				<h2 class="defTit mt0">가족 정보를<br /><strong>어떻게 등록</strong>할까요?
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">등록 툴팁 열기</span></button>
+						<div class="tooltipCont w100p">
+							<p>등록 후에도 수정이 가능합니다.</p>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+				</h2>
+			</div>
+			<div class="peoplePick mg0 mt20">
+					<ul class="pickList">
+						<li>	
+							<input type="radio" name="pick001" id="rdo01" checked="checked">	
+							<label for="rdo01" class="rdoCheck">
+								<span class="lf_bg pickCate"><img src="../../images/ico_lf01.gif" alt=""></span>
+								<span class="txt">
+									<em class="tit">자동 등록</em>
+									<em class="sub">주민등록등본 정보를 통해<br />자동으로 입력합니다.</em>
+								</span>
+							</label>
+						</li>
+						<li>
+							<input type="radio" name="pick001" id="rdo02" class="desgChk">
+							<label for="rdo02" class="rdoCheck">
+								<span class="lf_bg pickCate"><img src="../../images/ico_lf02.gif" alt=""></span>
+								<span class="txt">
+									<em class="tit">직접 등록</em>
+									<em class="sub">직접 가족정보를 입력합니다.</em>
+								</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+		</div>
+		
+		
+	</div>
+</div>
+</body>
+</html>

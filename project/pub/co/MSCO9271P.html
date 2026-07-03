@@ -1,0 +1,268 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>나만의 메뉴 설정</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function() {
+		fullLayerPop();
+	});
+</script>
+</head>
+<body>
+<div class="wrapper nhasset"><!-- 바닥페이지 --></div>
+
+<!-- ###################################### -->
+<!-- ### [팝업] 나만의 메뉴 설정 ### -->
+<!-- ###################################### -->
+<div class="nhasset popWrap fullLayerPop">
+	<div class="popInner">
+		<h1>나만의 메뉴 설정</h1>
+		<div class="popCont grayPop">
+			<p class="defTit"><strong>자주 쓰는 나만의 메뉴를 <br>설정해보세요(4개)</strong></p>
+			<ul>
+				<li>- 메인에 최대 4개의 서비스 노출이 가능합니다.</li>
+				<li>- 노출 서비스는 초록색 배너로 표시됩니다.</li>
+				<li>- 순서 버튼 선택시 서비스 순서를 변경 할 수 있습니다. </li>
+			</ul>
+			<div class="sortableWrap">
+				<div class="sortableBtnsWrap">
+					<div class="sortableBtns">
+						<button type="button" class="drag active" aria-selected="true" title="드래그로 메뉴 순서 변경"><span class="blind">드래그</span></button>
+						<button type="button" class="button"><span class="blind" title="클릭으로 메뉴 순서 변경">버튼</span></button>
+					</div>
+				</div>
+				<ul class="sortable">
+					<!-- [2023 NH마이데이터 서비스 고도화] 메뉴명 변경 -->
+					<li>
+						<span class="title">신용관리</span>
+						<span class="dragBtn"><span class="blind">드래그</span></span>
+						<span class="btnClick">
+							<button type="button" class="btnUp2"><span class="blind">순서 한 단계 위로</span></button>
+							<button type="button" class="btnDown2"><span class="blind">순서 한 단계 아래로</span></button>
+						</span>
+					</li>
+					<li>
+						<span class="title">카드리포트</span>
+						<span class="dragBtn"><span class="blind">드래그</span></span>
+						<span class="btnClick">
+							<button type="button" class="btnUp2"><span class="blind">순서 한 단계 위로</span></button>
+							<button type="button" class="btnDown2"><span class="blind">순서 한 단계 아래로</span></button>
+						</span>
+					</li>
+					<!-- // [2023 NH마이데이터 서비스 고도화] -->
+
+					<li>
+						<span class="title">보고서</span>
+						<span class="dragBtn"><span class="blind">드래그</span></span><!-- 2022-12-16 추가 -->
+						<span class="btnClick">
+							<button type="button" class="btnUp2"><span class="blind">순서 한 단계 위로</span></button>
+							<button type="button" class="btnDown2"><span class="blind">순서 한 단계 아래로</span></button>
+						</span>
+					</li>
+					<li>
+						<span class="title">연금진단</span>
+						<span class="dragBtn"><span class="blind">드래그</span></span><!-- 2022-12-16 추가 -->
+						<span class="btnClick">
+							<button type="button" class="btnUp2"><span class="blind">순서 한 단계 위로</span></button>
+							<button type="button" class="btnDown2"><span class="blind">순서 한 단계 아래로</span></button>
+						</span>
+					</li>
+					<li>
+						<span class="title">카드혜택비교</span>
+						<span class="dragBtn"><span class="blind">드래그</span></span><!-- 2022-12-16 추가 -->
+						<span class="btnClick">
+							<button type="button" class="btnUp2"><span class="blind">순서 한 단계 위로</span></button>
+							<button type="button" class="btnDown2"><span class="blind">순서 한 단계 아래로</span></button>
+						</span>
+					</li>
+					<li>
+						<span class="title">정기지출관리</span>
+						<span class="dragBtn"><span class="blind">드래그</span></span><!-- 2022-12-16 추가 -->
+						<span class="btnClick">
+							<button type="button" class="btnUp2"><span class="blind">순서 한 단계 위로</span></button>
+							<button type="button" class="btnDown2"><span class="blind">순서 한 단계 아래로</span></button>
+						</span>
+					</li>
+					<li>
+						<span class="title">자산진단</span>
+						<span class="dragBtn"><span class="blind">드래그</span></span><!-- 2022-12-16 추가 -->
+						<span class="btnClick">
+							<button type="button" class="btnUp2"><span class="blind">순서 한 단계 위로</span></button>
+							<button type="button" class="btnDown2"><span class="blind">순서 한 단계 아래로</span></button>
+						</span>
+					</li>
+					<li>
+						<span class="title">주택청약플래너</span>
+						<span class="dragBtn"><span class="blind">드래그</span></span><!-- 2022-12-16 추가 -->
+						<span class="btnClick">
+							<button type="button" class="btnUp2"><span class="blind">순서 한 단계 위로</span></button>
+							<button type="button" class="btnDown2"><span class="blind">순서 한 단계 아래로</span></button>
+						</span>
+					</li>
+					<li>
+						<span class="title">DSR 계산기</span>
+						<span class="dragBtn"><span class="blind">드래그</span></span><!-- 2022-12-16 추가 -->
+						<span class="btnClick">
+							<button type="button" class="btnUp2"><span class="blind">순서 한 단계 위로</span></button>
+							<button type="button" class="btnDown2"><span class="blind">순서 한 단계 아래로</span></button>
+						</span>
+					</li>
+					<li>
+						<span class="title">그때 그랬다면</span>
+						<span class="dragBtn"><span class="blind">드래그</span></span><!-- 2022-12-16 추가 -->
+						<span class="btnClick">
+							<button type="button" class="btnUp2"><span class="blind">순서 한 단계 위로</span></button>
+							<button type="button" class="btnDown2"><span class="blind">순서 한 단계 아래로</span></button>
+						</span>
+					</li>
+					<li>
+						<span class="title">내차관리</span>
+						<span class="dragBtn"><span class="blind">드래그</span></span><!-- 2022-12-16 추가 -->
+						<span class="btnClick">
+							<button type="button" class="btnUp2"><span class="blind">순서 한 단계 위로</span></button>
+							<button type="button" class="btnDown2"><span class="blind">순서 한 단계 아래로</span></button>
+						</span>
+					</li>
+					<li>
+						<span class="title">맞춤정부혜택</span>
+						<span class="dragBtn"><span class="blind">드래그</span></span><!-- 2022-12-16 추가 -->
+						<span class="btnClick">
+							<button type="button" class="btnUp2"><span class="blind">순서 한 단계 위로</span></button>
+							<button type="button" class="btnDown2"><span class="blind">순서 한 단계 아래로</span></button>
+						</span>
+					</li>
+					<li>
+						<span class="title">헬스케어</span>
+						<span class="dragBtn"><span class="blind">드래그</span></span><!-- 2022-12-16 추가 -->
+						<span class="btnClick">
+							<button type="button" class="btnUp2"><span class="blind">순서 한 단계 위로</span></button>
+							<button type="button" class="btnDown2"><span class="blind">순서 한 단계 아래로</span></button>
+						</span>
+					</li>
+					<li>
+						<span class="title">절세팁</span>
+						<span class="dragBtn"><span class="blind">드래그</span></span><!-- 2022-12-16 추가 -->
+						<span class="btnClick">
+							<button type="button" class="btnUp2"><span class="blind">순서 한 단계 위로</span></button>
+							<button type="button" class="btnDown2"><span class="blind">순서 한 단계 아래로</span></button>
+						</span>
+					</li>
+					<li>
+						<span class="title">연말정산</span>
+						<span class="dragBtn"><span class="blind">드래그</span></span><!-- 2022-12-16 추가 -->
+						<span class="btnClick">
+							<button type="button" class="btnUp2"><span class="blind">순서 한 단계 위로</span></button>
+							<button type="button" class="btnDown2"><span class="blind">순서 한 단계 아래로</span></button>
+						</span>
+					</li>
+					<li>
+						<span class="title">혜택플러스</span>
+						<span class="dragBtn"><span class="blind">드래그</span></span><!-- 2022-12-16 추가 -->
+						<span class="btnClick">
+							<button type="button" class="btnUp2"><span class="blind">순서 한 단계 위로</span></button>
+							<button type="button" class="btnDown2"><span class="blind">순서 한 단계 아래로</span></button>
+						</span>
+					</li>
+				</ul>
+			</div>					
+		</div>
+
+		<div class="popBtnWrap">
+			<div class="popBtn">
+				<a href="javascript:;" class="confirmBtn" role="button">확인</a>
+			</div>
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+		</div>
+	</div>
+</div>
+
+<!-- ###################################### -->
+<!-- ### [샘플] 스크립트 ### -->
+<!-- ###################################### -->
+<script>
+	//$("#sortable").sortable({axis : 'y'});
+	$('.sortableBtns button').click(function(){
+		var $this = $(this);
+		if ($this.hasClass('drag')) {
+			if (!$this.hasClass('active')) {
+				$this.closest('.sortableBtns').find('button').removeClass('active').attr('aria-selected','false');
+				$this.addClass('active').attr('aria-selected','true');
+				$this.closest('.sortableWrap').find('.sortable').removeClass('clickType');
+				sortOn()
+			}
+		} else if ($this.hasClass('button')) {
+			if (!$this.hasClass('active')) {
+				$this.closest('.sortableBtns').find('button').removeClass('active').attr('aria-selected','false');
+				$this.addClass('active').attr('aria-selected','true');
+				$this.closest('.sortableWrap').find('.sortable').addClass('clickType');
+				sortOff()
+			}
+
+		}
+		
+	});
+	var sortOn =  function(){$(".sortable").sortable({axis : 'y',disabled:false,handle:$('.dragBtn')});}//2022-12-16  옵션 추가
+	var sortOff =  function(){$(".sortable").sortable('option','disabled',true);}
+	sortOn()
+	$('.btnClick button').click(function(){
+		var $target = $(this).closest('li');
+		$target.addClass('ui-sortable-helper');
+		setTimeout(function(){
+			$target.removeClass('ui-sortable-helper');
+		},800)
+	});
+	
+</script>
+<!-- ###################################### -->
+<!-- <script>
+	//$("#sortable").sortable({axis : 'y'});
+	$('.sortableBtns button').click(function(){
+		var $this = $(this);
+		if ($this.hasClass('drag')) {
+			if (!$this.hasClass('active')) {
+				$this.closest('.sortableBtns').find('button').removeClass('active').attr('aria-selected','false');
+				$this.addClass('active').attr('aria-selected','true');
+				$this.closest('.sortableWrap').find('.sortable').removeClass('clickType');
+				sortOn()
+			}
+		} else if ($this.hasClass('button')) {
+			if (!$this.hasClass('active')) {
+				$this.closest('.sortableBtns').find('button').removeClass('active').attr('aria-selected','false');
+				$this.addClass('active').attr('aria-selected','true');
+				$this.closest('.sortableWrap').find('.sortable').addClass('clickType');
+				sortOff()
+			}
+
+		}
+		
+	});
+	var sortOn =  function(){$(".sortable").sortable({axis : 'y',disabled:false});}
+	var sortOff =  function(){$(".sortable").sortable('option','disabled',true);}
+	sortOn()
+	$('.btnClick button').click(function(){
+		var $target = $(this).closest('li');
+		$target.addClass('ui-sortable-helper');
+		setTimeout(function(){
+			$target.removeClass('ui-sortable-helper');
+		},800)
+	});
+	
+</script> -->
+</body>
+</html>

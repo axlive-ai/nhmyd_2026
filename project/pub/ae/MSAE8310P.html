@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>컨설팅 > 세금계산기</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		fullLayerPop();
+		categorySwipe()
+	})
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack" role="button"><span class="blind">이전화면으로</span></a> <!-- [2020-11-16] role="button" 추가 -->
+			<h1><a href="javascript:;" role="text">주소검색</a></h1>
+			<a href="javascript:;" class="btnEtc">나가기</a>
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+		</div>
+		<!-- //container -->
+
+		<!-- 팝업시작 -->
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>주소검색</h1>
+				<div class="popCont grayPop">
+                    <div class="formWrap">
+                        <div class="boxTypeWrap mt0">
+                            <div class="titListBox">
+                                <ul>
+                                    <li class="addrSrch"><!-- 2022-12-07 클래스 추가 -->
+                                        <div class="formTitN"><strong>주소를 검색해주세요.</strong></div>
+                                        <div class="inputList">
+                                            <input type="text" title="지역명+단지명 또는 지번주소 입력" value="" placeholder="지역명+단지명 또는 지번주소 입력"><!-- 2022-12-07 title 수정 -->
+                                            <!-- 2022-12-07 버튼 위치변경 -->
+                                            <a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+                                            <button class="btnSearch"><span class="blind">찾기</span></button>
+                                            <!-- //2022-12-07 버튼 위치변경 -->
+                                        </div>
+                                        <div class="infoGrayBox">
+                                            오피스텔은 주택분 재산세 과세대상으로 가정하여 재산세 및 종합부동산세가 계산됩니다.
+                                        </div>
+                                        <hr class="divLine3" aria-hidden="true">
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="btnAddress" role="button">의왕시 포일동 인덕원푸르지오엘센트로</a>
+                                        <a href="javascript:;" class="btnAddress" role="button">의왕시 포일동 인덕원푸르지오엘센트로</a>
+                                    </li>
+                                    <!-- 검색결과 주소 버튼 선택 시 노출 -->
+                                    <li>
+                                        <div class="formTitN"><strong>세부주소 선택</strong></div>
+                                        <div class="grayBox mb0">
+                                            <ul>
+                                                <li>
+                                                    <div class="formTitN"><strong>단지</strong></div>
+                                                    <div class="inputList">
+                                                        <a href="javascript:;" title="단지" aria-haspopup="true" onclick="slidePopOption();return false;">
+                                                            <span class="selectValue">선택</span>
+                                                            <span class="selectBtn"></span>
+                                                        </a>
+                                                        <select name="" title="선택해주세요">
+                                                            <option value=""></option>
+                                                        </select>
+                                                    </div>
+                                                </li>
+                                                <li class="mt20">
+                                                    <div class="formTitN"><strong>동</strong></div>
+                                                    <div class="inputList">
+                                                        <a href="javascript:;" title="동" aria-haspopup="true" onclick="slidePopOption();return false;">
+                                                            <span class="selectValue">선택</span>
+                                                            <span class="selectBtn"></span>
+                                                        </a>
+                                                        <select name="" title="선택해주세요">
+                                                            <option value=""></option>
+                                                        </select>
+                                                    </div>
+                                                </li>
+                                                <li class="mt20">
+                                                    <div class="formTitN"><strong>호</strong></div>
+                                                    <div class="inputList">
+                                                        <a href="javascript:;" title="호" aria-haspopup="true" onclick="slidePopOption();return false;">
+                                                            <span class="selectValue">선택</span>
+                                                            <span class="selectBtn"></span>
+                                                        </a>
+                                                        <select name="" title="선택해주세요">
+                                                            <option value=""></option>
+                                                        </select>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <!-- // 검색결과 주소 버튼 선택 시 노출 -->
+                                    <li>
+                                        <div class="formTitN"><strong>조회결과</strong></div>
+                                        <div class="grayBox">
+                                            <ul class="detailList">
+                                                <li>
+                                                    <strong class="tit">면적</strong>
+                                                    <strong class="value">59.98㎡</strong>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">2021년 공시가격</strong>
+                                                    <strong class="value">192,000,000원</strong>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">2023년 공시가격</strong>
+                                                    <strong class="value">281,000,000원</strong>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<!-- <a href="javascript:;" onclick="popClose(this);return false;" role="button">취소</a> -->
+						<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">확인</a>
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- 팝업끝 -->
+
+	</div>
+
+</body>
+</html>

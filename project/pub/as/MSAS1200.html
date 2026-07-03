@@ -1,0 +1,316 @@
+
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산현황</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">계좌 상세</a></h1>
+				<!-- <a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>  -->
+			<a href="javascript:;" class="btnAcAdmin"><span class="blind">관리</span></a>
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<!-- <div class="layerMsgWrap">
+				<p>순자산 금액에 포함 안된 자산이에요.</p>
+				<button type="button" class="layerMsgClose"><span class="blind">닫기</span></button>
+			</div> -->
+
+			<div class="boxWrapShadow"><!--09.02 boxWrapShadow 추가 s:boxWrapShadow-->
+				<div class="boxTypeWrap delShadow"><!--09.02 delShadow 추가 s:delShadow-->
+					<!-- 상단 계좌정보 영역 -->
+					<div class="accTopInfo mt0">
+						<h2 class="accName">하나멤버스 주거래통장 <!-- [2022-11-24] 사보현 : 기관코드 삭제 -->
+							<span class="acBookmark"><span class="blind">즐겨찾기</span></span>
+							<img src="../../images/logos/AAES0000.png" alt="KEB하나은행 로고" class="imgLogo">
+						</h2>
+						<dl class="totalBalance">
+							<dt>총 잔액</dt>
+							<dd><strong>2,098,694</strong>원<button type="button" class="contBtn03 ml12">이체</button></dd><!--11.28 이체 버튼 추가-->
+						</dl> 
+						<!-- 변동없을 경우 케이스 추가 - arrowNone 클래스 사용, amount 옆의 in, out 관련 색상 클래스 빠짐  -->
+						<div class="etcInfo">
+							예금금리 <strong class="dataValue">3.53</strong><em class="won">%</em>
+						</div>
+						<div class="etcInfo">
+							대출금리 <strong class="dataValue">3.53</strong><em class="won">%</em>
+						</div>
+					</div>
+					<!-- // 상단 계좌정보 영역 -->
+					<hr class="divLine">
+
+					<!-- 계좌정보 상세 -->
+					<div class="accInfoDetail">
+						<ul class="detailList">
+							<li>
+								<span class="tit">유형</span>
+								<span class="value">입출금</span>
+							</li>
+							<li>
+								<span class="tit">상품명</span>
+								<!-- <span class="value"><a href="javascript:;" class="underline">미입력</a></span> -->
+								<span class="value">NH1934우대통장</span>
+							</li>
+						</ul>
+
+						
+					</div>
+					<!-- // 계좌정보 상세 -->
+				</div>
+				<!--e:boxWrapShadow-->
+				
+				<div class="moreInfoArea"><!--09.02 div moreInfoArea 추가-->
+					<!-- 추가정보 열/닫 -->
+					<div class="moreInfoWrap toggleWrap">
+							
+						<div class="moreInfo toggleCont" style="display:none">
+							<hr class="divLine2" aria-hidden="true">
+							<ul class="detailList">
+								<li>
+									<span class="tit">계좌번호</span>
+									<span class="value">03580204123456  <button type="button" class="contBtn01" title="계좌번호 복사">복사</button></span>
+								</li>
+								<li>
+									<span class="tit">계좌신규일</span>
+									<span class="value">2020.07.21</span>
+								</li>
+								<li>
+									<span class="tit">대출약정일</span>
+									<span class="value">2020.05.01</span>
+								</li>
+								<!--2022.12.05 항목추가 변경 [2023 NH마이데이터 서비스 고도화] : 변경범위-->
+								<li>
+									<span class="tit">거치기간 시작연월</span>
+									<span class="value">2020.2</span>
+								</li>
+								<li>
+									<span class="tit">거치기간 종료연월</span>
+									<span class="value">2020.10</span>
+								</li>
+								<!--//2022.12.05 항목추가 변경 [2023 NH마이데이터 서비스 고도화] : 변경범위-->
+								<li>
+									<span class="tit">대출만기일</span>
+									<span class="value">2050.08.13</span>
+								</li>
+								<!-- [한은정 : 2021-05-24] 항목 추가 -->
+								<li>
+									<span class="tit">이자납입기관</span>
+									<span class="value">농협은행</span>
+								</li>
+								<li>
+									<span class="tit">이자납입계좌</span>
+									<span class="value">3021417655471</span>
+								</li>
+								<!-- //[한은정 : 2021-05-24] 항목 추가 -->
+								<li>
+									<span class="tit">출금가능금액</span>
+									<span class="value"><strong class="dataValue">901,000</strong><em class="won">원</em></span>
+								</li>
+								<li>
+									<span class="tit">대출금리</span>
+									<span class="value"><strong class="dataValue">2.96</strong><em class="won">%</em></span>
+								</li>
+								<li>
+									<span class="tit">예금금리</span>
+									<span class="value"><strong class="dataValue">2.96</strong><em class="won">%</em></span>
+								</li>
+							</ul>
+						</div>
+						<button type="button" class="moreOpenBtn toggleBtn"><span class="toggleTxt07">상세정보 보기</span></button> <!--09.21 toggleTxt07 수정-->
+					</div>
+					<!-- // 추가정보 열/닫 -->
+				</div>
+			</div>
+			<!--e:boxWrapShadow-->
+
+			<!-- <div class="noDataBox">
+				<div class="tooltipWrap">
+					<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">총 잔액 툴팁 열기</span></button>
+					<div class="tooltipCont">
+						<p>인증토큰 만료, 전송 중단 등의 경우에는 적용되지 않습니다.</p>
+						<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+					</div>
+				</div>
+				<p class="pointColorwh">적요 제공에 동의하지 않았어요. </p>
+				<a href="javascript:;" class="link">지금 동의하고 더 자세한 거래내역 보기</a>
+			</div> -->
+
+			<div class="boxTypeWrap pt0">
+				<div class="filterSearchWrap">
+					<!-- 날짜 선택 및 정렬 -->
+					<div class="filterWrap">
+						<button type="button" class="btnSearch2"><span class="blind">적요검색 열기</span></button>
+						<span class="sortValue">2020.09.01 ~ 2020.09.30</span>
+						<span class="sortValue">전체</span>
+						<button type="button" class="sortBtn"><span class="blind">조회조건 선택 설정하기</span></button>
+					</div>
+					<!-- // 날짜 선택 및 정렬 -->
+
+					<div class="filterSearch" aria-label="적요검색" style="display:none">
+						<div class="inputList ty01">
+							<input type="text" title="적요 검색 (2자 이상)" value="" placeholder="적요 검색 (2자 이상)"><!-- 2022-12-07 title placeholder 수정 -->
+							<button class="btnSearch"><span class="blind">검색</span></button>
+							<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+						</div>
+						<button class="btnSearDel"><span class="blind">적요검색 닫기</span></button><!--09.02 추가-->
+						<div class="filterSearchRes" style="display:none">‘길동’ 검색결과 총 1건</div>
+					</div>
+				</div>
+
+				<hr class="divLine mt0 mb0" aria-hidden="true"> <!-- [2022-12-28] 수정 -->
+				
+				<script type="text/javascript">
+					$('.filterSearchWrap .btnSearch2').click(function(){
+						var $this = $(this);
+						var $parent = $this.closest('.filterSearchWrap');
+						if (!$this.hasClass('searchAfter')){
+							$parent.find('.filterSearch').show().find('.inputList').show().find('input:text').focus();
+							$parent.find('.filterSearchRes').hide();
+							$parent.find('.filterSearch').find('.btnSearDel').show().removeClass('mt0');
+							//$this.addClass('searchAfter').find('.blind').text('적요검색 닫기');
+						}else{
+								$parent.find('.filterSearch').hide();
+								$this.removeClass('searchAfter').find('.blind').text('적요검색 열기');
+							}
+					});
+					$('.filterSearchWrap .btnSearch').click(function(){
+						var $this = $(this);
+						$this.closest('.filterSearch').find('.filterSearchRes').show();
+						$this.closest('.inputList').hide();
+						$this.closest('.inputList').siblings('.btnSearDel').addClass('mt0');
+						//$this.closest('.filterSearchWrap').find('.btnSearch2').removeClass('searchAfter').find('.blind').text('적요검색 열기');
+					});
+
+					$('.btnSearDel').click(function(){
+						var $this = $(this);
+						$this.closest('.filterSearch').hide();
+					});
+				</script>
+
+				<div class="inoutListWrap longTit">
+					<div class="inoutListInn">
+						<p class="date">2020년 7월 31일</p>
+						<ul class="inoutList">
+							<li>
+								<!-- <label class="inoutChkWrap" for="chk01"> --> <!-- [2021] 한은정 : 선택등록 삭제 -->
+									<p class="inoutTit">홍길동</p>
+									<div class="inoutCont">
+										<div class="timeWrap">
+											<span class="time">18:35</span>
+										</div>
+										<span class="amount inColor"><strong class="dataValue">+100,000,000,000</strong><em class="won">원</em></span>
+									</div>
+									<div class="totalAmount"><span class="txt">잔액</span> <strong class="dataValue">100,000,000,000</strong><em class="won">원</em></div>
+								<!-- </label> -->
+								<!--<span class="inoutChk"><input type="checkbox" name="" id="chk01" disabled></span> -->  <!-- [2021] 한은정 : 선택등록 삭제 -->
+							</li>
+							<li>
+								<!-- <label class="inoutChkWrap" for="chk02"> -->  <!-- [2021] 한은정 : 선택등록 삭제 -->
+									<p class="inoutTit">홍길동</p>
+									<div class="inoutCont">
+										<div class="timeWrap mt7"><!--10.27 mt7추가-->
+											<span class="time">18:35</span>
+											<em class="tag blue">정기지출</em><!--10.27 태그 추가-->
+										</div>
+										<span class="amount outColor"><strong class="dataValue">-3,000</strong><em class="won">원</em></span>
+									</div>
+									<div class="totalAmount"><span class="txt">잔액</span> <strong class="dataValue">2,101,194</strong><em class="won">원</em></div>
+								<!-- </label> -->
+								<!-- <span class="inoutChk"><input type="checkbox" name="" id="chk02"></span> -->  <!-- [2021] 한은정 : 선택등록 삭제 -->
+							</li>
+						</ul>
+					</div>
+					
+					<div class="inoutListInn">
+						<p class="date">2020년 7월 31일</p>
+						<ul class="inoutList">
+							<li>
+								<!-- <label class="inoutChkWrap" for="chk03"> -->  <!-- [2021] 한은정 : label 삭제-->
+									<p class="inoutTit">모어커피</p>
+									<div class="inoutCont">
+										<div class="timeWrap">
+											<span class="time">18:35</span>
+										</div>
+										<span class="amount outColor"><strong class="dataValue">-3,000</strong><em class="won">원</em></span>
+									</div>
+									<div class="totalAmount"><span class="txt">잔액</span> <strong class="dataValue">2,101,194</strong><em class="won">원</em></div>
+								<!-- </label> -->
+								<!-- <span class="inoutChk"><input type="checkbox" name="" id="chk03" checked></span> --> <!-- [2021] 한은정 : 선택 삭제-->
+							</li>
+							<li>
+								<!-- <label class="inoutChkWrap" for="chk04"> -->  <!-- [2021] 한은정 : label 삭제-->
+									<p class="inoutTit">모어커피</p>
+									<div class="inoutCont">
+										<div class="timeWrap">
+											<span class="time">18:35</span>
+										</div>
+										<span class="amount inColor"><strong class="dataValue">3,000</strong><em class="won">원</em></span>
+									</div>
+									<div class="totalAmount"><span class="txt">잔액</span> <strong class="dataValue">2,101,194</strong><em class="won">원</em></div>
+								<!-- </label> -->
+								<!-- <span class="inoutChk"><input type="checkbox" name="" id="chk03" checked></span> --> <!-- [2021] 한은정 : 선택 삭제-->
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="listMoreBtn">
+					<a href="javascript:;" title="항목 더보기">더보기</a>
+				</div>
+
+				<!-- 리스트 없을 경우 -->
+				<div class="noResultWrap"> <!-- [2023-01-28] 클래스 수정 -->
+					<p>거래내역이 없습니다.</p> <!-- [한은정 : 2021-05-07] 문구수정 -->
+				</div>
+				<!-- // 리스트 없을 경우 -->
+			</div>
+
+		</div>
+		<!-- //container -->
+
+	</div>
+<script type="text/javascript">
+	// $('.layerMsgClose').click(function(){
+	// 	$(this).closest('.layerMsgWrap').hide();
+	// });
+
+	var $toggleBtn = $(".toggleBtn"),
+		$toggleWrap = $(".toggleWrap"),
+		$toggleCont = $(".toggleCont"),
+		$toggleTxt = $(".toggleTxt03");
+
+		$toggleBtn.click(function(){
+		 if ($(this).closest($toggleWrap).find( $toggleCont).css("display") == "block"){
+			$(this).parents().closest($toggleWrap).find($toggleTxt).text("상세정보 보기");
+		 }else{
+			$(this).parents().closest($toggleWrap).find($toggleTxt).text("접기");
+		 }
+	})
+	
+</script>
+<style>
+</style>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="NH마이데이터">
+<meta name="robots" content="no-index,follow">
+<title>[P] 자산진단 맞춤정보</title>
+
+<!-- CSS : 공통 라이브러리 -->
+<link type="text/css" rel="stylesheet" href="../../css/swiper.min.css">
+<link type="text/css" rel="stylesheet" href="../../css/nh_base.css">
+<link rel="stylesheet" type="text/css" href="../../css/nh_layout.css">
+<link rel="stylesheet" type="text/css" href="../../css/nh_comm.css">
+<link rel="stylesheet" type="text/css" href="../../css/nhasset_logos.css">
+<link rel="stylesheet" type="text/css" href="../../css/nhasset_com.css" id="changeCom">
+<link rel="stylesheet" type="text/css" href="../../css/nhasset_cont.css" id="changeCont">
+<link rel="stylesheet" type="text/css" href="../../css/nhasset_myd.css">
+<link type="text/css" rel="stylesheet" href="../../css/ms_allone.css">
+<!-- JS : 공통 라이브러리 -->
+<script src="../../js/jquery-1.9.1.min.js"></script>
+<script src="../../js/jquery-ui.min.js"></script>
+<script src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script src="../../js/swiper.7.4.1.min.js"></script>
+<script src="../../js/common_ui.js"></script>
+<script src="../../js/nhasset-ui.js"></script>
+<script src="../../js/nhasset-ui-myd.js"></script>
+<!-- 퍼블 가이드 전용 (배포 시 제거) -->
+<link type="text/css" rel="stylesheet" href="../pub-assets/css/guide.css">
+<script src="../pub-assets/js/guide.js"></script>
+
+<script>
+  $(document).ready(function () {
+    fullLayerPop();
+  })
+</script>
+</head>
+<body>
+<div class="wrapper nhasset"></div><!-- // wrapper -->
+<!-- ###################################### -->
+<!-- ### [팝업] 자산진단 맞춤정보 ### -->
+<!-- ###################################### -->
+<div class="nhasset popWrap fullLayerPop">
+	<div class="popInner">
+		<h1>자산진단 맞춤정보</h1>
+		<div class="popCont grayPop">
+			<h2 class="defTit">
+				나의 자산진단을 위해<br>
+				<strong>맞춤정보를 입력</strong>해주세요.
+			</h2>
+			<div class="boxTypeWrap addchallType">
+				<div class="formWrap formListBox overseaType">
+					<ul>
+						<li>
+							<strong class="formTit"><strong>월 소득</strong>이 어떻게 되나요?</strong>
+							<p class="fs13 pointColor9"> 소득 정보를 입력하시면 정확한 자산진단이 가능합니다.</p>
+							<div class="boxRadio mt20">
+								<div class="boxRadioInn">
+									<span>
+										<input name="rdo13" id="rdo30" type="radio" checked="checked" aria-label="월 소득(150만원 미만)"> <!-- [접근성_2024] aria-label 추가 -->
+										<label for="rdo30" aria-hidden="true">150만원 미만</label> <!-- [접근성_2024] aria-hidden="true" 추가 -->
+									</span>
+								</div>
+								<div class="boxRadioInn">
+									<span>
+										<input name="rdo13" id="rdo31" type="radio" aria-label="월 소득(150~300만원)"><!-- [접근성_2024] aria-label 추가 -->
+										<label for="rdo31" aria-hidden="true">150~300만원 </label><!-- [접근성_2024] aria-hidden="true" 추가 -->
+									</span>
+								</div>
+								<div class="boxRadioInn">
+									<span>
+										<input name="rdo13" id="rdo32" type="radio" aria-label="월 소득(300~500만원)"><!-- [접근성_2024] aria-label 추가 -->
+										<label for="rdo32" aria-hidden="true">300~500만원</label><!-- [접근성_2024] aria-hidden="true" 추가 -->
+									</span>
+								</div>
+								<div class="boxRadioInn">
+									<span>
+										<input name="rdo13" id="rdo33" type="radio" aria-label="월 소득(500~800만원)"><!-- [접근성_2024] aria-label 추가 -->
+										<label for="rdo33" aria-hidden="true">500~800만원 </label><!-- [접근성_2024] aria-hidden="true" 추가 -->
+									</span>
+								</div>
+								<div class="boxRadioInn">
+									<span>
+										<input name="rdo13" id="rdo34" type="radio" aria-label="월 소득(500~800만원)"><!-- [접근성_2024] aria-label 추가 -->
+										<label for="rdo34" aria-hidden="true">500~800만원</label><!-- [접근성_2024] aria-hidden="true" 추가 -->
+									</span>
+								</div>
+								<div class="boxRadioInn">
+									<span>
+										<input name="rdo13" id="rdo35" type="radio" aria-label="월 소득(1000만원 이상)"><!-- [접근성_2024] aria-label 추가 -->
+										<label for="rdo35" aria-hidden="true">1000만원 이상 </label><!-- [접근성_2024] aria-hidden="true" 추가 -->
+									</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<strong class="formTit"><strong>매월 얼마나</strong> 소비하고 있나요?
+								<div class="tooltipWrap">
+									<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">매월 생활비 안내툴팁</span></button>
+									<div class="tooltipCont">
+										<p>지난달 소비금액</p>
+										<p>지난달 카드이용내역, 현금영수증 발행내역 및 
+											계좌이체나 현금으로 소비 등록한 내역에 대한 합계 금액이에요. </p>
+										<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+									</div>
+								</div>
+							</strong>
+							<p class="fs13 pointColor9">지난달 소비금액은 <strong class="pointColor">320만원</strong>입니다.</p>
+							<div class="inputList unitMan mt20">
+								<input type="tel" title="월 소비 금액 입력" value="" placeholder="최소 1만원 이상"> <!-- [접근성_2024] title 수정 -->
+								<span class="unit">만원</span>
+								<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+							</div>
+							<div class="roundBtnWrap">
+								<a href="javascript:;" role="button" title="10만원 추가">+10만</a><!-- 활성화일 경우 class="active" 추가-->
+								<a href="javascript:;" role="button" title="50만원 추가">+50만</a>
+								<a href="javascript:;" role="button" title="100만원 추가">+100만</a>
+								<a href="javascript:;" role="button" title="300만원 추가">+300만</a>
+							</div>
+							<!-- <p class="errorTxt">에러메시 출력</p> -->
+						</li>
+						<li>
+							<strong class="formTit"><strong>라이프사이클</strong>을 선택하세요. 
+								<button type="button" class="toolTipBtn" onclick="popCenter()"><span class="blind">라이프사이클 안내툴팁</span></button>
+							</strong>
+							<!-- <div class="addrSelectWrap">
+								<ul class="no2">
+									<li class="active"><a href="javascript:;" role="button">사회초년기</a></li>
+									<li><a href="javascript:;" role="button">가족형성기</a></li>
+									<li><a href="javascript:;" role="button">자녀성장기</a></li>
+									<li><a href="javascript:;" role="button">가정성숙기</a></li>
+									<li><a href="javascript:;" role="button">은퇴기 </a></li>
+								</ul>
+							</div> -->
+							<div class="boxRadio mt20">
+								<div class="boxRadioInn">
+									<span>
+										<input name="rdo20" id="rdo40" type="radio" checked="checked" aria-label="라이프사이클(사회초년기)"><!-- [접근성_2024] aria-label 추가 -->
+										<label for="rdo40" aria-hidden="true">사회초년기</label><!-- [접근성_2024] aria-hidden="true" 추가 -->
+									</span>
+								</div>
+								<div class="boxRadioInn">
+									<span>
+										<input name="rdo20" id="rdo41" type="radio" aria-label="라이프사이클(가족형성기)"><!-- [접근성_2024] aria-label 추가 -->
+										<label for="rdo41" aria-hidden="true">가족형성기 </label><!-- [접근성_2024] aria-hidden="true" 추가 -->
+									</span>
+								</div>
+								<div class="boxRadioInn">
+									<span>
+										<input name="rdo20" id="rdo42" type="radio" aria-label="라이프사이클(자녀성장기)"><!-- [접근성_2024] aria-label 추가 -->
+										<label for="rdo42" aria-hidden="true">자녀성장기</label><!-- [접근성_2024] aria-hidden="true" 추가 -->
+									</span>
+								</div>
+								<div class="boxRadioInn">
+									<span>
+										<input name="rdo20" id="rdo43" type="radio" aria-label="라이프사이클(가정성숙기)"><!-- [접근성_2024] aria-label 추가 -->
+										<label for="rdo43" aria-hidden="true">가정성숙기 </label><!-- [접근성_2024] aria-hidden="true" 추가 -->
+									</span>
+								</div>
+								<div class="boxRadioInn">
+									<span>
+										<input name="rdo20" id="rdo44" type="radio" aria-label="라이프사이클(은퇴기)"><!-- [접근성_2024] aria-label 추가 -->
+										<label for="rdo44" aria-hidden="true">은퇴기</label><!-- [접근성_2024] aria-hidden="true" 추가 -->
+									</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="popBtnWrap">
+			<div class="popBtn">
+				<a href="javascript:;" class="confirmBtn" role="button">확인</a>
+			</div>
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+		</div>
+	</div>
+</div>
+
+<!-- ###################################### -->
+<!-- ### [팝업] 라이프사이클 ### -->
+<!-- ###################################### -->
+<div class="nhasset popWrap centerLayer">
+	<div class="dim"></div>
+	<div class="dimCloseArea" onclick="popClose(this);return false;">터치 시 해당 창을 닫습니다.</div>
+	<div class="popInner">
+		<h1>라이프사이클 주기</h1>
+		<div class="popCont">
+			<div class="sampleImg pop"><img src="../../images/sample_cycle.png" alt="라이프사이클 주기 안내 샘플이미지"></div>
+		</div>
+
+		<div class="popBtnWrap">
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button">
+				<img src="../../images/common/btn_popClose.png" alt="닫기">
+			</a>
+		</div>
+	</div>
+</div>
+<!-- ###################################### -->
+</body>
+</html>

@@ -1,0 +1,75 @@
+
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>금융플래너 - 마케팅수신변경</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(function() {
+		slidePopConfirm();
+	});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">금융플래너</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container"> 
+		</div>
+		<!-- //container -->
+	</div>
+
+	
+</div>
+
+	<!-- 컨펌 팝업 -->
+	<div class="nhasset popWrap slidePopConfirm">
+		<div class="dim"></div>
+		<div class="popInner">
+			<h1>PUSH설정 확인 안내</h1>
+			<div class="popCont">
+				<div class="transfer">
+					<p class="defSubTit2"><strong>NH스마트뱅킹(올원뱅크) PUSH알림수신을 동의하셔야 금융일정 알림을 받을 수 있어요!</strong></p>
+					<div class="bgGrayBox mt5">
+						NH스마트뱅킹(올원뱅크)과(와) 금융플래너의 알림설정을 모두 확인해주세요.
+					</div>
+				</div>
+				
+			</div>
+	
+			<div class="popBtnWrap">
+				<div class="popBtn btnHalf">
+					<a href="javascript:;" class="" onclick="popClose(this);return false;" role="button">일주일간 보지 않기</a>
+					<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">알림 설정 하기</a>
+				</div>
+				<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+			</div>
+		</div>
+	</div>
+	<!-- //컨펌 팝업 -->
+
+</body>
+</html>

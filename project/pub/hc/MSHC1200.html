@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>비교상품상세</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">비만</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="boxTypeWrap healthBox"> <!-- [2023-02-23] healthBox 클래스 추가 -->
+				<h2 class="defSubTit2"><strong class="bold">비만이란?</strong></h2>
+				<p class="subTxt">비만은 음식으로 섭취하는 에너지보다 소비하는 에너지가 적어서 지방조직이 과다하게 축적된 상태</p>
+				<hr class="divLine3">
+				<h2 class="defSubTit2 containTooltip"><strong class="bold">내 검진결과 비교</strong>
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">그래프 구간안내 설명 툴팁</span></button>
+						<div class="tooltipCont">
+							<p>최근 검사일 기준 직전년도 결과 비교 제공</p>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+				</h2>
+				<div class="tabWrap type06">
+					<div class="scAreaWrap">
+						<ul role="tablist">
+							<li><a href="javascript:;" type="button" class="active">신장</a></li>
+							<li><a href="javascript:;" type="button">체중</a></li>
+							<li><a href="javascript:;" type="button">허리둘레</a></li>
+							<li><a href="javascript:;" type="button">체질량지수</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="tabContWrap type06">
+					<div class="tabCont01" aria-label="신장 탭">
+						<div class="graphWrap" style="height:160px;background:#f6f6f6;" tabindex="0" role="img" aria-label="신장 그래프 2013년 177cm, 2016년 177cm, 2021년 175cm">
+							<p style="text-align:center;">신장 그래프 영역</p>
+						</div>
+					</div>
+					<div class="tabCont02" aria-label="체중 탭" style="display:none">
+						<div class="graphWrap" style="height:160px;background:#f6f6f6;" tabindex="0" role="img" aria-label="체중 그래프 2013년 71kg, 2016년 73kg, 2021년 70.8kg">
+							<p style="text-align:center;">체중 그래프 영역</p>
+						</div>
+					</div>
+					<div class="tabCont03" aria-label="허리둘레 탭" style="display:none;">
+						<div class="graphWrap" style="height:160px;background:#f6f6f6;" tabindex="0" role="img" aria-label="허리둘레 그래프 2013년 78cm, 2016년 85cm, 2021년 86cm">
+							<p style="text-align:center;">허리둘레 그래프 영역</p>
+						</div>
+					</div>
+					<div class="tabCont04" aria-label="체질량지수 탭" style="display:none;">
+						<div class="graphWrap" style="height:160px;background:#f6f6f6;" tabindex="0" role="img" aria-label="체질량지수 그래프 2013년 22.7kg/㎡, 2016년 22.3kg/㎡, 2021년 22.9kg/㎡">
+							<p style="text-align:center;">체질량지수 그래프 영역</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="formWrap healthBox"> <!-- [2023-02-23] healthBox 클래스 추가 -->
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn">
+							<strong class="tit">허리둘레 측정 기준</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="detailList">
+							<li>
+								<strong class="tit">정상(A)</strong>
+								<strong class="value">남 90 미만/여 85 미만</strong> <!-- [2023-03-07] 텍스트 수정 -->
+							</li>
+							<li>
+								<strong class="tit">질환의심</strong> <!-- [2023-03-07] 텍스트 수정 -->
+								<strong class="value">남 90 이상/여 85 이상</strong> <!-- [2023-03-07] 텍스트 수정 -->
+							</li>
+							<!-- <li> [2023-03-07] 삭제
+								<strong class="tit">질환의심</strong>
+								<strong class="value">30이상</strong>
+							</li> -->
+						</ul>
+					</div>
+				</div>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn">
+							<strong class="tit">체질량지수 측정 기준</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="detailList">
+							<li>
+								<strong class="tit">저체중</strong>
+								<strong class="value">BMI 18.5 미만</strong>
+							</li>
+							<li>
+								<strong class="tit">정상</strong>
+								<strong class="value">BMI 18.5 ~ 24.9</strong>
+							</li>
+							<li>
+								<strong class="tit">과체중</strong>
+								<strong class="value">BMI 25~29.9</strong>
+							</li>
+							<li>
+								<strong class="tit">비만</strong>
+								<strong class="value">BMI 30 이상</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn">
+							<strong class="tit">비만을 판정할 수 없는 경우</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="listDot">
+							<li>운동선수나 보디빌더처럼 상대적으로 많은 근육량을 가지고 있어 체질량지수가 높게 나오나, 체지방은 정상인 경우</li>
+							<li>성장기 어린이는 연령에 따른 기준치를 사용해야함</li>
+							<li>산부, 수유중인 여성, 노인에서는 체질량지수가 정확하지 않을 수 있음</li>
+							<li>척추질환(예:척추측만증이나 후만증 등으로 정확한 신장을 측정할 수 없는 경우</li>
+						</ul>
+					</div>
+				</div>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn">
+							<strong class="tit">비만 관련 질병</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="listDot">
+							<li>고혈압, 당뇨병, 고지혈증, 동맥경화, 협심증, 심근경색증, 뇌졸중, 암 등</li>
+						</ul>
+					</div>
+				</div>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn">
+							<strong class="tit">식사요법</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="listDot">
+							<li>식사는 절대 거르지 말고 규칙적으로 적게 먹을 것</li>
+							<li>칼로리가 많은 음식보다 단백질이 풍부한 음식을 먹을 것</li>
+							<li>지방이 많은 음식 대신 섬유질이 많은 음식을 먹을 것</li>
+						</ul>
+					</div>
+				</div>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn">
+							<strong class="tit">운동요법</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="listDot">
+							<li>유산소 운동 : 일상생활의 신체활동 증가, 걷기, 자전거타기, 수중운동 등</li>
+							<li>근력운동 : 가벼운 중량을 이용한 근력운동</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- <div class="areaBtnDefault">
+				<a href="javascript:;" class="btnPressPoint" role="button">확인</a>
+			</div> -->
+		</div>
+		<!-- //container -->
+	</div>
+<script type="text/javascript">
+	$('.scAreaWrap a.active').each(function(){
+		var $this = $(this);
+		var $thisPos = $this.offset().left;
+		var $wrap = $this.closest('.scAreaWrap').scrollLeft();
+		$this.closest('.scAreaWrap').stop().animate({scrollLeft:$wrap + $thisPos - 36 },300); // [2023-01-12] 수정 
+	});
+	$('.scAreaWrap a').on('click focus',function(e){
+		var $this = $(this);
+		var $thisPos = $this.offset().left;
+		var $wrap = $this.closest('.scAreaWrap').scrollLeft();
+		$this.closest('.scAreaWrap').stop().animate({scrollLeft:$wrap + $thisPos - 36 },300); // [2023-01-12] 수정
+	});
+
+	$('.maybeWishList > li > a').click(function(){
+		$(this).closest('.maybeWishList').find('a').removeClass('active');
+		$(this).addClass('active');
+	});
+</script>
+</body>
+</html>

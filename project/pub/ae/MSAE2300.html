@@ -1,0 +1,595 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>진단결과 | 연금진단 | 컨설팅</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">연금진단</a></h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 진단결과 ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<!-- -------------------------------------- -->
+		<!-- [업데이트바] -->
+		<!-- -------------------------------------- -->
+		<div class="pageRefreshWrap">
+			<div class="pageRefresInner">
+				<span>
+					<span class="date">08.05 10:45</span>
+					<button type="button" class="btnUpdate"><span class="blind">업데이트</span></button>
+				</span>
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [상단영역] 개인화정보 -->
+		<!-- -------------------------------------- -->
+		<div class="totalBalance boxTypeWrap pensionMainBg">
+			<!-- ### 기본정보 ### -->
+			<h2 class="defTit mt0"><strong>김농협</strong>님의 연금진단</h2>
+			<strong class=toolTit>내가 모은 연금</strong>
+			<div class="tooltipWrap">
+				<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">내가 모은 연금 안내 툴팁 열기</span></button>
+				<div class="tooltipCont">
+					<ul class="popBul">
+						<li>내가 모은 연금 총액은 연금분석과 시뮬레이션을
+							위한 금액으로 자산 > 순자산 그리고 자산진단
+							서비스의 연금 총액과 다를 수 있어요.</li>
+						<li>공적연금, 간편계산/수기입력 한 퇴직연금 및
+							연금(저축)보험은 내가 모은 연금에 포함되지만
+							자산>순자산에는 포함되지 않아요.</li>
+					</ul>
+					<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+				</div>
+			</div>
+			<div class="pstotalBalance">
+				<div class="asset"><strong>136,584,000</strong>원</div>
+			</div>
+			<div class="balanceDiff">
+				<span class="balanceDiffDate">지난달 대비</span>
+
+				<!-- [CASE1] 증가 -->
+				<span class="arrowUp" role="img" aria-label="증가"></span>
+				<span class="amount"><strong>56,897</strong>원 </span>
+
+				<!-- [CASE2] 감소 -->
+				<span class="arrowDown" role="img" aria-label="감소"></span>
+				<span class="amount"><strong>56,897</strong>원 </span>
+				<!-- // -->
+			</div>
+			<hr class="divLine" aria-hidden="true">
+
+			<!-- ### 상세정보 ### -->
+			<div class="subMain assetTotalList">
+				<ul class="totalAccList">
+					<li>
+						<div class="swiper-container listSwiperInv">
+							<!-- [탭버튼] -->
+							<div class="totalSort"></div>
+
+							<!-- [탭컨텐츠] -->
+							<div class="swiper-wrapper">
+								<!-- 탭컨텐츠_종류별 -->
+								<div class="swiper-slide">
+									<div class="psBox">
+										<strong class="pointColor">개인연금</strong>이 전체 비중의 <strong class="pointColor">40%</strong> 에요.<br><!--12.07 텍스트 띄어쓰기 수정-->
+										보다 안정적인 노후생활을 원한다면 연금소득 외에
+										금융소득, 부동산소득, 근로소득 등도 다양하게
+										준비해 보세요!
+									</div>
+
+									<div class="msPsGraph">
+										<!-- <div class="msaeGraphBlur">
+											<p class="txt">연결된 연금자산이 없습니다</p>
+										</div>   -->
+										<!--그래프 blur 처리시 추가-->
+
+										<div class="graphWrap mt30" style="height:97px;background:#f6f6f6;">
+											<!-- 23.01.25그래프 팁추가 -->
+											<div class=" graphTip">
+												<p class="graphTipBox purple">
+													<span>개인연금</span><span> 40%</span> <!-- [2023-01-31] 띄어쓰기 적용 -->
+													<span class="value">103,747,460<em>원</em></span>
+												</p>
+											</div>
+											<!-- //23.01.25그래프 팁추가 -->
+											<p style="text-align:center;padding-top:50px;">그래프 영역
+											</p>
+										</div>
+										<!-- 23.01.25 기존 그래프이미지 삭제 -->
+										<!-- <div class="graphWrap mt30" role="img" aria-hidden="true">
+											<div class="graphToolArea">
+												<img src="../../images/temp/assets_graph_dumy41.png">
+											</div>
+											<div class="graphAddEx mt20">
+												<ul class="ty03">
+													<li class="bl01">개인연금</li>
+													<li class="bl02">퇴직연금</li>
+													<li class="bl03">공적연금</li>
+												</ul>
+											</div>
+										</div> -->
+										<!-- //23.01.25 기존 그래프이미지 삭제 -->
+									</div>
+
+								</div>
+
+								<!-- 탭컨텐츠_계좌별 -->
+								<div class="swiper-slide">
+									<!-- <div class="swiper-slide"> [접근성_2024] 불필요한 태그 삭제 -->
+										<div class="psBox">
+											<strong class="pointColor">개인연금</strong>이 전체 비중의 <strong class="pointColor">40%</strong> 에요. <br><!--12.07 텍스트 띄어쓰기 수정-->
+											보다 안정적인 노후생활을 원한다면 연금소득 외에
+											금융소득, 부동산소득, 근로소득 등도 다양하게
+											준비해 보세요!
+										</div>
+										<div class="msPsGraph">
+											<div class="msaeGraphBlur">
+												<p class="txt">연결된 연금자산이 없습니다</p>
+											</div><!--그래프 blur 처리시 추가-->
+											<div class="graphWrap mt30" role="img" aria-label="">
+												<div class="graphToolArea"> <!--12.02 수정-->
+													<img src="../../images/temp/assets_graph_dumy42.png">
+												</div>
+												<div class="graphAddEx mt20"> <!--11.22 그래프 범례 추가-->
+													<ul class="ty03 w33">
+														<li class="bl01">연금저축펀드</li>
+														<li class="bl02">연금저축신탁</li>
+														<li class="bl03">연금(저축)보험</li>
+														<li class="bl04">개인IRP</li>
+														<li class="bl05">퇴직연금(DB/DC)</li>
+														<li class="bl06">공적연금</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+									<!-- </div> [접근성_2024] 불필요한 태그 삭제 -->
+								</div>
+								<!-- // -->
+							</div>
+							<!-- [//] -->
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- ### // ### -->
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [정보영역] 개인연금 -->
+		<!-- -------------------------------------- -->
+		<!-- [CASE] 연결전 -->
+		<div class="subMain assetTotalList toggleWrap boxTypeWrap">
+			<!-- // -->
+			<div class="totalTitWrap">
+				<button href="javascript:;"  class="linkType1 pointColor msassetBtn">연결하기</button>
+				<a href="javascript:;" class="toggleBtn less">
+					<h2 class="totalTit">개인연금 </h2>
+					<span class="blind">개인연금을 확인해보세요 열기</span>
+				</a>
+			</div>
+			<!-- // -->
+			<div class="toggleCont">
+				<div class="psMainBoxLine">
+					<hr class="divLine2" aria-hidden="true">
+					<ul class="totalAccList msTotalList">
+						<li>
+							<ul class="accList">
+								<li>
+									<span class="left">
+										<span class="accTit">연금(저축)보험</span>
+										<button type="button" class="contBtn01">수정</button>
+									</span>
+									<span class="dataValue">0<em class="won"></em>원</span>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- // -->
+		</div>
+		<!-- [CASE] 연결후 -->
+		<div class="subMain assetTotalList toggleWrap boxTypeWrap">
+			<!-- // -->
+			<div class="totalTitWrap">
+				<span class="psValue">285,757,455<em class="won">원</em></span>
+				<a href="javascript:;" class="toggleBtn active less"> <!--닫힘 상태가 default 일경우 active 제거-->
+					<h2 class="totalTit">개인연금 </h2>
+					<span class="blind">개인연금을 확인해보세요 열기</span>
+				</a>
+			</div>
+			<!-- // -->
+			<div class="toggleCont" style="display: block;">
+				<div class="psMainBoxLine">
+					<hr class="divLine2" aria-hidden="true">
+					<ul class="totalAccList msTotalList">
+						<li>
+							<ul class="accList">
+								<li>
+									<span class="left">
+										<span class="accTit">연금저축펀드</span>
+									</span>
+									<span class="dataValue">47,757,455<em class="won"></em>원</span>
+								</li>
+								<li>
+									<span class="left">
+										<span class="accTit">연금저축신탁</span>
+									</span>
+									<span class="dataValue">47,757,455<em class="won"></em>원</span>
+								</li>
+								<li>
+									<span class="left">
+										<span class="accTit">연금(저축)보험</span>
+										<button type="button" class="contBtn01">수정</button>
+									</span>
+									<span class="dataValue">0<em class="won"></em>원</span>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- // -->
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [정보영역] 퇴직연금 -->
+		<!-- -------------------------------------- -->
+		<!-- [CASE] 연결전 -->
+		<div class="subMain assetTotalList toggleWrap boxTypeWrap">
+			<!-- // -->
+			<div class="totalTitWrap">
+				<button href="javascript:;" class="linkType1 pointColor msassetBtn">연결하기</button>
+				<a href="javascript:;" class="toggleBtn active less">
+					<h2 class="totalTit">퇴직연금 </h2>
+					<span class="blind">퇴직연금을 확인해보세요 열기</span>
+				</a>
+			</div>
+			<!-- // -->
+			<div class="toggleCont" style="display:block">
+				<div class="psMainBoxLine">
+					<hr class="divLine2" aria-hidden="true">
+					<ul class="totalAccList msTotalList">
+						<li>
+							<ul class="accList">
+								<li>
+									<span class="left">
+										<span class="accTit">DB/DC</span>
+										<button type="button" class="contBtn01">간편계산기</button>
+									</span>
+									<span class="dataValue">간편계산기<em class="won"></em>원</span>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- [CASE] 연결후 -->
+		<div class="subMain assetTotalList toggleWrap boxTypeWrap">
+			<!-- // -->
+			<div class="totalTitWrap">
+				<span class="psValue">285,757,455<em class="won">원</em></span>
+				<a href="javascript:;" class="toggleBtn active less">
+					<h2 class="totalTit">퇴직연금 </h2>
+					<span class="blind">퇴직연금을 확인해보세요 열기</span>
+				</a>
+			</div>
+			<!-- // -->
+			<div class="toggleCont" style="display:block">
+				<div class="psMainBoxLine">
+					<hr class="divLine2" aria-hidden="true">
+					<ul class="totalAccList msTotalList">
+						<li>
+							<ul class="accList">
+								<li>
+									<span class="left">
+										<span class="accTit">개인형 IRP</span>
+									</span>
+									<span class="dataValue">공무원 연금<em class="won"></em>원</span>
+								</li>
+								<li>
+									<span class="left">
+										<span class="accTit">DB/DC</span>
+										<button type="button" class="contBtn01">간편계산기</button>
+									</span>
+									<span class="dataValue">0<em class="won"></em>원</span>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [정보영역] 공적연금 -->
+		<!-- -------------------------------------- -->
+		<!-- [CASE] 연결전 -->
+		<div class="boxTypeWrap addchallType">
+			<div class="formWrap formListBox overseaType">
+				<div class="formTit"><strong>공적연금</strong></div>
+				<p class="addTxt">공적연금이 있습니까?</p>
+				<div class="boxRadio mt10">
+					<div class="boxRadioInn">
+						<span role="button" tabindex="0" title="선택시 공적연금 페이지로 이동"> <!-- [접근성_2024] role="button" / tabindex / title 추가 -->
+							<input name="rdo80" id="rdo81" type="radio">
+							<label for="rdo81">예</label>
+						</span>
+					</div>
+					<div class="boxRadioInn">
+						<span>
+							<input name="rdo80" id="rdo82" type="radio" checked>
+							<label for="rdo82">아니요</label>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- [CASE] 연결후 : 공무원연금 정보 있는 경우 -->
+		<div class="subMain assetTotalList toggleWrap boxTypeWrap">
+			<div class="totalTitWrap ty01">
+				<div class="peTit">
+					<div class="left">
+						<h2 class="totalTit">공적연금<button type="button" class="contBtn01">수정</button> </h2>
+						<span class="psValue">285,757,455<em class="won">원</em></span>
+					</div>
+				</div>
+				<a href="javascript:;" class="toggleBtn active less">
+					<span class="blind">공적연금을 확인해보세요 열기</span><!-- [접근성_2024] blind 수정 -->
+				</a>
+			</div>
+			<!-- // -->
+			<div class="toggleCont" style="display:block">
+				<div class="psMainBoxLine">
+					<hr class="divLine2" aria-hidden="true">
+					<ul class="totalAccList msTotalList">
+						<li>
+							<ul class="accList">
+								<li>
+									<span class="left">
+										<span class="accTit">공무원연금<!-- <span class="tag bgSky">수령중</span> [2023 NH마이데이터 서비스 고도화] 삭제 --></span>
+									</span>
+									<span class="dataValue">47,757,455<em class="won"></em>원</span>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- [CASE] 연결후 : 수령중인 공무원연금이 있는 경우 -->
+		<div class="subMain assetTotalList toggleWrap boxTypeWrap">
+			<div class="totalTitWrap ty01">
+				<div class="peTit">
+					<div class="left">
+						<h2 class="totalTit">공적연금<button type="button" class="contBtn01">수정</button> </h2>
+						<!-- <span class="psValue">285,757,455<em class="won">원</em></span> [2023 NH마이데이터 서비스 고도화] 삭제 -->
+					</div>
+				</div>
+				<a href="javascript:;" class="toggleBtn active less">
+					<span class="blind">공적연금을 확인해보세요 열기</span>
+				</a>
+			</div>
+			<!-- // -->
+			<div class="toggleCont" style="display:block">
+				<div class="psMainBoxLine">
+					<hr class="divLine2" aria-hidden="true">
+					<ul class="totalAccList msTotalList">
+						<li>
+							<ul class="accList">
+								<li>
+									<span class="left">
+										<span class="accTit">공무원연금<span class="tag bgSky">수령중</span></span>
+									</span>
+									<span class="dataValue">월 47,757,455<em class="won"></em>원</span> <!-- [2023 NH마이데이터 서비스 고도화] 월 추가 -->
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [플로팅버튼] 자산연결 -->
+		<!-- -------------------------------------- -->
+		<div class="registBtn">
+			<a href="javascript:;" role="button">자산연결</a>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [바로가기] -->
+		<!-- -------------------------------------- -->
+		<!-- [CASE] 연결전 -->
+		<div class="penstionMainBox empty">
+			<div class="itemBox bgTy01">
+				<h2>내 연금 현황</h2>
+				<a href="javascript:;" class="linkTxt" title="내 연금 현황 자세히 보기 페이지로 이동">자세히 보기</a>
+			</div>
+			<div class="itemBox bgTy02">
+				<h2>내 연금 진단</h2>
+				<a href="javascript:;" class="linkTxt" title="내 연금 진단 자세히 보기 페이지로 이동">자세히 보기</a>
+			</div>
+			<div class="itemBox bgTy03">
+				<h2>진단 솔루션</h2>
+				<a href="javascript:;" class="linkTxt" title="진단 솔루션 자세히 보기 페이지로 이동">자세히 보기</a>
+			</div>
+			<div class="itemBox bgTy04">
+				<h2>은퇴준비 <br>추천상품</h2>
+				<a href="javascript:;" class="linkTxt" title="은퇴준비 추천상품 자세히 보기 페이지로 이동">자세히 보기</a>
+			</div>
+		</div>
+
+		<!-- [CASE] 연결후 -->
+		<div class="areaInfo1 t1"><p><span>진단일 : </span><strong>0000.00.00</strong></p></div> <!-- [2023 NH마이데이터 서비스 고도화] 진단일 추가 -->
+		<div class="penstionMainBox">
+			<div class="itemBox bgTy01">
+				<h2>내 연금 현황</h2>
+				<p>
+					내 연금자산은<br>
+					희망생활비 대비 <strong>39,1%</strong><br>
+					순자산 대비 <strong>51.1%</strong><br>
+				</p>
+				<a href="javascript:;" class="linkTxt mt20" title="내 연금 현황 자세히 보기 페이지로 이동">자세히 보기</a>
+			</div>
+			<div class="itemBox bgTy02">
+				<h2>내 연금 진단</h2>
+				<p>
+					<strong class="pointColor03">55세</strong>부터 <strong>80만원</strong><br>
+					<strong class="pointColor03">65세</strong>부터 <strong>180만원</strong>을<br>
+					받을 수 있어요.<br>
+				</p>
+				<a href="javascript:;" class="linkTxt" title="내 연금 진단 자세히 보기 페이지로 이동">자세히 보기</a>
+			</div>
+			<div class="itemBox bgTy03">
+				<h2>진단 솔루션</h2>
+				<p>
+					지금부터 <strong class="pointColor03">매월30만원</strong>을<br>
+					저축하면 65세이후<br>
+					<strong>매월 120만원</strong> 수령가능
+				</p>
+				<a href="javascript:;" class="linkTxt" title="진단 솔루션 자세히 보기 페이지로 이동">자세히 보기</a>
+			</div>
+			<div class="itemBox bgTy04">
+				<h2>은퇴준비 <br>추천상품</h2>
+				<p>노후대비 상품은?</p>
+				<a href="javascript:;" class="linkTxt" title="은퇴준비 추천상품 자세히 보기 페이지로 이동">자세히 보기</a>
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [배너영역] -->
+		<!-- -------------------------------------- -->	
+		<!-- [2023 NH마이데이터 서비스 고도화] 조기은퇴진단 배너영역 추가 -->
+		<div class="areaBanner2 t4">
+			<!-- ### [CASE1] 한번도 서비스 이용을 하지 않은 경우 ### -->
+			<a href="javascript:;" class="img14">
+				<span>조기은퇴진단</span>
+				<span>나도 파이어족이 될 수 있을까?<br>조기은퇴가 가능한지 확인해보세요.</span>
+			</a>
+
+			<!-- ### [CASE2] : 진단결과 값이 있는 경우 ### -->
+			<!-- [CASE1_1] 희망나이 50세 이하 / 달성률 30미만 -->
+			<a href="javascript:;" class="img14">
+				<span>조기은퇴진단</span>
+				<span>준비자금 달성률 <strong>5%</strong><br>은퇴를 얘기하긴 일러요.</span>
+			</a>
+
+			<!-- [CASE1_2] 희망나이 50세 초과 / 달성률 30미만 -->
+			<a href="javascript:;" class="img14">
+				<span>조기은퇴진단</span>
+				<span>준비자금 달성률 <strong>28%</strong><br>자유를 찾아서 열심히 항해 중~</span>
+			</a>
+
+			<!-- [CASE2_1] 희망나이 50세 이하 / 달성률 30~59 -->
+			<a href="javascript:;" class="img14">
+				<span>조기은퇴진단</span>
+				<span>준비자금 달성률 <strong>40%</strong><br>조금 더 일하는게 좋겠어요.</span>
+			</a>
+
+			<!-- [CASE2_2] 희망나이 50세 초과 / 달성률 30~59 -->
+			<a href="javascript:;" class="img14">
+				<span>조기은퇴진단</span>
+				<span>준비자금 달성률 <strong>59%</strong><br>은퇴는 바라보는 시각이 중요해요.<br>숨지(은)않기, 물러서지(퇴)않기!</span>
+			</a>
+
+			<!-- [CASE3_1] 희망나이 50세 이하 / 달성률 60~89 -->
+			<a href="javascript:;" class="img14">
+				<span>조기은퇴진단</span>
+				<span>준비자금 달성률 <strong>70%</strong><br>아직은 열심히 일할 때!</span>
+			</a>
+
+			<!-- [CASE3_2] 희망나이 50세 초과 / 달성률 60~89 -->
+			<a href="javascript:;" class="img14">
+				<span>조기은퇴진단</span>
+				<span>준비자금 달성률 <strong>89%</strong><br>은퇴는 없는 거죠. 난 열심히 살아갈 뿐!!</span>
+			</a>
+
+			<!-- [CASE4_1] 희망나이 50세 이하 / 달성률 90~99 -->
+			<a href="javascript:;" class="img14">
+				<span>조기은퇴진단</span>
+				<span>준비자금 달성률 <strong>95%</strong><br>조기은퇴가 코 앞! 조금 더 힘내볼까요.</span>
+			</a>
+
+			<!-- [CASE4_2] 희망나이 50세 초과 / 달성률 90~99 -->
+			<a href="javascript:;" class="img14">
+				<span>조기은퇴진단</span>
+				<span>준비자금 달성률 <strong>99%</strong><br>은퇴 실현이 코 앞! 조금 더 힘내볼까요.</span>
+			</a>
+
+			<!-- [CASE5_1] 희망나이 50세 이하 / 달성률 100~119 -->
+			<a href="javascript:;" class="img14">
+				<span>조기은퇴진단</span>
+				<span>준비자금 달성률 <strong>100%</strong><br>나는야 파이어족~<br>계획데로 조기은퇴 할 수 있어요.</span>
+			</a>
+
+			<!-- [CASE5_2] 희망나이 50세 초과 / 달성률 100~119 -->
+			<a href="javascript:;" class="img14">
+				<span>조기은퇴진단</span>
+				<span>준비자금 달성률 <strong>119%</strong><br>계획대로 은퇴할 수 있어요.</span>
+			</a>
+
+			<!-- [CASE6] 달성률 120+ -->
+			<a href="javascript:;" class="img14">
+				<span>조기은퇴진단</span>
+				<span>준비자금 달성률 <strong>120%</strong><br>노동은 취미일 뿐~<br>지금 바로 은퇴해도 되겠는데요.</span>
+			</a>
+			<!-- ### // ### -->
+		</div>
+		<!-- // [2023 NH마이데이터 서비스 고도화] 조기은퇴진단 배너영역 추가 -->
+
+		<a href="javascript:;" role="button" class="msaeBannerWrap02">
+			<p class="tit">IRP 고수 따라 잡기</p>
+			<p class="addTxt">수익률 상위 20% IRP고수는?</p>
+		</a>
+
+		<!-- -------------------------------------- -->
+		<!-- [바로가기] -->
+		<!-- -------------------------------------- -->
+		<div class="yatexbtnWrap">
+			<a href="javascript:;" class="setBtn" title="모의계산 설정하기" aria-haspopup="true">설정하기</a>
+		</div>
+		<!-- -------------------------------------- -->
+	</div>
+	<!-- ###################################### -->
+</div>
+
+<!-- ###################################### -->
+<!-- ### [샘플] 스크립트 ### -->
+<!-- ###################################### -->
+<script>
+$(function(){
+	listSwiperPenstion();
+});
+</script>
+<!-- ###################################### -->
+</body>
+</html>

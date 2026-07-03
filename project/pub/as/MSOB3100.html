@@ -1,0 +1,147 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 목표</title>
+<script src="../pub-assets/js/head.js"></script>
+
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack" role="button"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">목표등록</a></h1>
+			<a href="javascript:;" class="btnEtc">나가기</a>
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+			<div class="boxTypeWrap addchallType">
+				<div class="obTitleWrap">
+					<div><h2>카테고리명</h2></div>
+					<div><span><img src="../../images/category/ob/ico_cate_ob02_06.png" alt="내가만든목표 아이콘"></span></div> <!-- [2022-12-19] 아이콘 변경 -->
+				</div>
+				<hr class="divLine" aria-hidden="true">
+				<div class="formWrap">
+					<ul>
+						<li class="pt0">
+							<strong class="formTit">목표명</strong>
+							<div class="inputList error"> <!-- error일때 클래스 error 추가 -->
+								<input type="text" title="목표명" value="" placeholder="목표명을 입력해 주세요.">
+								<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+							</div>
+							<p class="errorTxt">특수문자는 !@#$*()-=|;:,./ 만 입력 가능합니다.</p>
+							<!-- <p class="errorTxt">15자(30byte) 이내로 입력해주세요.</p> -->
+							<!-- <a href="javascript:;" class="link arrGreen">해외여행경비 계산</a>--> <!-- [2021-11-03] 한은정 : 위치 변경 -->
+						</li>
+						<li>
+							<div class="formdsf">
+								<strong class="formTit">목표 금액</strong>
+								<!-- <a href="javascript:;" class="link arrGreen" title="해외여행 경비 계산 페이지로 이동">해외여행 경비 계산</a> -->
+									
+							</div>
+							<div class="inputList unitMan">
+								<input type="tel" title="목표 금액" value="" placeholder="1만원 이상 입력해 주세요.">
+								<span class="unit">만원</span>
+								<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+							</div>
+							<div class="roundBtnWrap">
+								<a href="javascript:;" role="button" title="1만원 추가">+1만</a>
+								<a href="javascript:;" role="button" title="10만원 추가">+10만</a>
+								<a href="javascript:;" role="button" title="100만원 추가">+100만</a>
+								<a href="javascript:;" role="button" title="1000만원 추가">+1,000만</a>
+								<a href="javascript:;" role="button" title="1억원 추가">+1억</a>
+							</div>
+							<p class="errorTxt">1부터 9,999,999만원까지 입력 가능합니다.</p> <!-- [2021-09-14] 한은정 : 문구수정 -->
+						</li>
+						<li>
+							<strong class="formTit">목표 기간
+								<div class="tooltipWrap">
+									<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">목표 기간 안내툴팁</span></button>
+									<div class="tooltipCont">
+										<p>목표 설정 기간은 1개월~10년입니다.</p>
+										<p>추천목표의 기간은 6개월 이며, 수정 가능합니다. (1개월~10년)</p> <!-- 추천 목표일 경우 case -->
+										<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+									</div>
+								</div>
+							</strong>
+							<!-- [2023-01-04] 케이스 추가 -->
+							<div class="inputList unitMan readonly readonlyWhite"> <!-- [2023-01-18] .readonlyWhite 추가 강제 흰색 -->
+								<input type="tel" title="목표 기간" value="6" placeholder="목표기간을 입력해주세요" readonly>
+								<span class="unit">개월</span>
+								<!-- <a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a> -->
+							</div>
+							<!-- //[2023-01-04] 케이스 추가 -->
+
+							<!-- [2023-01-04] 케이스 추가 -->
+							<div class="inputList unitMan">
+								<input type="tel" title="목표 기간" value="" placeholder="목표기간을 입력해주세요">
+								<span class="unit">개월</span>
+								<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+							</div>
+							<!-- //[2023-01-04] 케이스 추가 -->
+
+							<div class="inputList unitMan inputSm2  readonly readonlyWhite"><!--10.27 수정--> <!-- [2023-01-18] .readonlyWhite 추가 강제 흰색 -->
+								<input type="tel" title="목표 기간" value="1" placeholder="개월" readonly>
+								<span class="unit">개월</span>
+								<input type="tel" title="목표 기간" value="30" placeholder="일" readonly>
+								<span class="unit">일</span>
+								<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+							</div>
+							<div class="roundBtnWrap">
+								<a href="javascript:;" role="button" title="1개월 추가">+1개월</a>
+								<a href="javascript:;" role="button" title="3개월 추가">+3개월</a>
+								<a href="javascript:;" role="button" title="6개월 추가">+6개월</a>
+								<a href="javascript:;" role="button" title="1년 추가">+1년</a>
+								<a href="javascript:;" role="button" title="3년 추가">+3년</a>
+							</div>
+							<!-- <p class="infoTxt pointColor11">입력 가능한 기간은 최대 <span>120</span> 개월 입니다.</p> -->
+							<div class="obChk mt20 fr">
+								<input type="checkbox" id="listAll" class="chekTypeOther" name=""><label for="listAll">목표달성일 지정하기</label>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="postIt">
+					<span class="date">2022.07.07까지</span>
+					<div class="tooltipWrap w92">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">평가금액 툴팁 열기</span></button>
+						<div class="tooltipCont lf36">
+							<p>목표 시작 시점에 따라 목표 종료 시 저축 금액은 달라질 수 있습니다.</p>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+					<span class="value"><em>월 834,000원</em> 저축이 필요합니다.</span>
+				</div>
+
+			</div>
+
+			<div class="areaBtnDefault">
+				<a href="javascript:;" class="btnPressDefault" role="button">이전</a>
+				<a href="javascript:;" class="btnPressPoint" role="button">확인</a>
+			</div>
+		</div>
+		<!-- //container -->
+
+	</div>
+
+</body>
+</html>

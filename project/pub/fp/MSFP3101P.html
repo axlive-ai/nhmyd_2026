@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>금융플래너 - 금융일정등록</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		fullLayerPop();
+	})
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">금융일정등록</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+
+		</div>
+		<!-- //container -->
+
+		<!-- 팝업시작 -->
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>출금계좌 연결</h1>
+				<div class="popCont grayPop">
+                    <h2 class="defTit"><strong>출금되는 계좌를 선택하고<br>출금예정 안내를 받아보세요.</strong></h2>
+                    <ul class="accountItemWrap">
+                        <li>
+                            <button type="button" class="accountItem">
+                                <div class="boxTypeWrap">
+                                    <div class="fpInfoWrap">
+                                        <div class="fpTitWrap">
+                                            <span class="accTit">[NH농협은행] X 카카오페이 통장(비대면실명확인)</span>
+                                            <span class="accContNum">302-1316-3485-21</span>
+                                        </div>
+                                        <div class="totalAccount">
+                                            <span class="title">잔액</span>
+                                            <span class="accValue"><strong class="dataValue">823,200</strong><em class="won">원</em></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="accountItem">
+                                <div class="boxTypeWrap">
+                                    <div class="fpInfoWrap">
+                                        <div class="fpTitWrap">
+                                            <span class="accTit">[NH농협은행] X 카카오페이 통장(비대면실명확인)</span>
+                                            <span class="accContNum">302-1316-3485-21</span>
+                                        </div>
+                                        <div class="totalAccount">
+                                            <span class="title">잔액</span>
+                                            <span class="accValue"><strong class="dataValue">5,200</strong><em class="won">원</em></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="accountItem">
+                                <div class="boxTypeWrap">
+                                    <div class="fpInfoWrap">
+                                        <div class="fpTitWrap">
+                                            <span class="accTit">[NH농협은행] X 카카오페이 통장(비대면실명확인)</span>
+                                            <span class="accContNum">302-1316-3485-21</span>
+                                        </div>
+                                        <div class="totalAccount">
+                                            <span class="title">잔액</span>
+                                            <span class="accValue"><strong class="dataValue">5,200</strong><em class="won">원</em></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </button>
+                        </li>
+                    </ul>                  
+                </div>
+                            
+				<div class="popBtnWrap"> <!--12.09 버튼 수정-->
+					<!-- <div class="popBtn">
+                        <a href="javascript:;" onclick="popClose(this);return false;" role="button">취소</a>
+						<a href="javascript:;" class="confirmBtn" role="button">확인</a>
+					</div> -->
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- 팝업끝 -->
+	</div>
+    <script type="text/javascript">
+        $('.accountItemWrap .accountItem').click(function(){
+            var $this = $(this);
+            $this.children('.boxTypeWrap').addClass('active');
+    
+        });
+    </script>
+</body>
+</html>

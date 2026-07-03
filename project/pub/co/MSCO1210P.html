@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>년,월,일 선택</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script type="text/javascript">
+$(function(){
+    slidePopConfirm();
+    calendarAlign()
+});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">년,월,일 선택</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container"> 
+			
+		</div>
+		<!-- // container -->
+
+		<!-- 컨펌 팝업 -->
+		<div class="nhasset popWrap slidePopConfirm">
+			<div class="dim"></div>
+			<div class="popInner">
+				<h1>날짜 선택</h1>
+				<!-- 팝업컨텐츠 -->
+				<div class="popCont">
+					<div class="yearSet dayPicSet timePicSet">
+						<ol class="yearsetLft">
+							<li><a href="javascript:;"><span>2021</span></a></li>
+							<li><a href="javascript:;" class="active"><span>2022</span></a></li>
+						</ol>
+						
+						<ol class="yearsetRht">
+							<li><a href="javascript:;"><span>01</span></a></li>
+							<li><a href="javascript:;"><span>02</span></a></li>
+							<li><a href="javascript:;" class="active"><span>03</span></a></li>
+							<li><a href="javascript:;"><span>04</span></a></li>
+							<li><a href="javascript:;"><span>05</span></a></li>
+							<li><a href="javascript:;"><span>06</span></a></li>
+							<li><a href="javascript:;"><span>07</span></a></li>
+							<li><a href="javascript:;"><span>08</span></a></li>
+							<li><a href="javascript:;"><span>09</span></a></li>
+							<li><a href="javascript:;"><span>10</span></a></li>
+							<li><a href="javascript:;"><span>11</span></a></li>
+							<li><a href="javascript:;"><span>12</span></a></li>
+						</ol>
+
+						<ol class="yearsetDay">
+							<li><a href="javascript:;"><span>1</span></a></li>
+							<li><a href="javascript:;"><span>2</span></a></li>
+							<li><a href="javascript:;"><span>3</span></a></li>
+							<li><a href="javascript:;"><span>4</span></a></li>
+							<li><a href="javascript:;"><span>5</span></a></li>
+							<li><a href="javascript:;"><span>6</span></a></li>
+							<li><a href="javascript:;"><span>7</span></a></li>
+							<li><a href="javascript:;"><span>8</span></a></li>
+							<li><a href="javascript:;"><span>9</span></a></li>
+							<li><a href="javascript:;"><span>10</span></a></li>
+							<li><a href="javascript:;"><span>11</span></a></li>
+							<li><a href="javascript:;"><span>12</span></a></li>
+							<li><a href="javascript:;"><span>13</span></a></li>
+							<li><a href="javascript:;"><span>14</span></a></li>
+							<li><a href="javascript:;" class="active"><span>15</span></a></li>
+							<li><a href="javascript:;"><span>16</span></a></li>
+							<li><a href="javascript:;"><span>17</span></a></li>
+							<li><a href="javascript:;"><span>18</span></a></li>
+							<li><a href="javascript:;"><span>19</span></a></li>
+							<li><a href="javascript:;"><span>20</span></a></li>
+							<li><a href="javascript:;"><span>21</span></a></li>
+							<li><a href="javascript:;"><span>22</span></a></li>
+							<li><a href="javascript:;"><span>23</span></a></li>
+							<li><a href="javascript:;"><span>24</span></a></li>
+							<li><a href="javascript:;"><span>25</span></a></li>
+							<li><a href="javascript:;"><span>26</span></a></li>
+							<li><a href="javascript:;"><span>27</span></a></li>
+							<li><a href="javascript:;"><span>28</span></a></li>
+							<li><a href="javascript:;"><span>29</span></a></li>
+							<li><a href="javascript:;"><span>30</span></a></li>
+						</ol>
+					</div>
+				</div>
+				<!-- 팝업컨텐츠 -->
+
+				<!-- 팝업 버튼영역  -->
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<a href="javascript:;" class="confirmBtn">확인</a>
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+				<!-- // 팝업 버튼영역 -->
+			</div>
+		</div>
+		<!-- //컨펌 팝업 -->
+	</div>
+<script type="text/javascript">
+
+
+function calendarAlign(){
+	$('.yearSet').each(function(){
+		if ($(this).hasClass('noneAction')) {
+			$(this).attr('aria-hidden','true');
+		}else{
+			$(this).attr('aria-hidden','false');
+		}
+	});
+	$('.yearSet ol').each(function(){
+		var $this = $(this);
+		var $chiild = $this.find('>li:visible'); //2023-02-20 추가
+		var $selectBtn = $this.find('a.active,button.active').attr('title','선택됨').parent('li'); //2023-02-20 추가
+		// var $listIndex = $this.find('a.active,button.active').attr('title','선택됨').parent('li').index() + 1; //2023-02-20 삭제
+		var $listIndex = $chiild.index($selectBtn); //2023-02-20 추가
+		var $listPos = ($listIndex * 40) /* - 40 */; //2023-02-20 수정
+		$this.scrollTop($listPos);
+	});
+	$('.yearSet ol a,.yearSet ol button').click(function(){
+		if (!$('.yearSet').hasClass('noneAction')) {
+			var $this = $(this);
+			var $parentWrap = $this.parents('ol'); //2023-02-20 추가
+			var hiddenLength = $parentWrap.find('>li:hidden').length; //2023-02-20 추가
+			var $thisParent = $parentWrap.find('a,button'); //2023-02-20 수정
+			$thisParent.removeClass('active').attr('title','');
+			$this.addClass('active').attr('title','선택됨');
+			var $listIndex = $this.parents('ol').find('a.active,button.active').parent('li').index() - hiddenLength; //2023-02-20 수정
+			var $listPos = ($listIndex * 40) /* - 40 */; //2023-02-20 수정
+			$this.parents('ol').stop().animate({scrollTop:$listPos},300);
+		}
+	});
+
+	var scrollEndEvntTimerId;
+	function visibleEvnt(){
+		var el = this;
+		var items = $(el).find('li:visible'); //2023-02-20 수정
+		var idx = Math.round($(el).scrollTop() / 40);
+		items.eq(idx).addClass('on').children().addClass('active').parent().siblings().removeClass('on').children().removeClass('active');
+
+		//scroll end event capture
+		clearTimeout(scrollEndEvntTimerId);
+		scrollEndEvntTimerId = setTimeout(function(){
+			$('.yearSet > ol').off('scroll',visibleEvnt);
+			$(el).stop().animate({scrollTop:idx *40},{
+				duration:40,
+				step:function(now, fx){
+					if(fx.pos == 1){
+						$(this).scrollTop((idx *40) - 40);
+						setTimeout(function(){
+							$('.yearSet > ol').on('scroll',visibleEvnt);
+						},100)
+					}
+				}
+			});
+		},100);
+	};
+
+	setTimeout(function(){
+		$('.yearSet > ol').on('scroll',visibleEvnt)
+	},500);
+}
+</script>
+</body>
+</body>
+</html>

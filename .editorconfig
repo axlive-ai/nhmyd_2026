@@ -1,0 +1,17 @@
+root = true
+
+# 기본: 레거시 895개 HTML/CSS/JS가 전부 Windows(CRLF)로 작성돼 있어 컨벤션을 맞춘다.
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+end_of_line = crlf
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# 빌드 툴링 파일은 node 생태계 관행(LF)을 따른다.
+[{package.json,package-lock.json,gulpfile.js,*.yml,*.yaml,.nvmrc}]
+end_of_line = lf
+
+[*.md]
+trim_trailing_whitespace = false

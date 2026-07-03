@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>정부혜택_가족정보 설정</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>정보 설정</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<div class="lf_bgWrap2">
+			<h2 class="defTit mt20"><strong>맞춤정부혜택에<br>사용할</strong>가족정보를 관리합니다</h2>
+		</div>
+		<div class="boxTypeWrap pt0">
+			<h2 class="lf moreListTit">본인정보</h2>
+			<div class="formWrap familyBox type01">
+				<ul>
+					<li>
+						<strong class="formTit">주소</strong>
+						<div class="inputList">
+							<a href="javascript:;" title="시/도 선택" aria-haspopup="true">
+								<span class="selectValue placeholder">시/도선택</span>
+								<span class="selectBtn"></span>
+							</a>
+							<select name="" title="선택해주세요">
+								<option value=""></option>
+							</select>
+						</div>
+						<div class="inputList">
+							<a href="javascript:;" title="시/군/구" aria-haspopup="true">
+								<span class="selectValue placeholder">시/군/구</span>
+								<span class="selectBtn"></span>
+							</a>
+							<select name="" title="선택해주세요">
+								<option value=""></option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<strong class="formTit">직업</strong>
+						<div class="inputList">
+							<a href="javascript:;" title="직업 선택" aria-haspopup="true">
+								<span class="selectValue placeholder">직장인/사업가</span>
+								<span class="selectBtn"></span>
+							</a>
+							<select name="" title="선택해주세요">
+								<option value=""></option>
+							</select>
+						</div>
+					</li>
+					<!-- 2022-10-04 수정  -->
+					<li>
+						<!-- 2022-11-16 수정 -->
+						<div class="d-flex">
+							<strong class="formTit">가족 연소득</strong>
+							<p class="subTxt2">(1억 5000만원)</p>
+						</div>
+						<!-- //2022-11-16 수정 -->
+						<div class="inputList"> <!--error인 경우 추가-->
+							<input type="tel" title="가족 연소득" name="" id="" value="" placeholder="">
+							<span class="unit">만원</span>
+							<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+						</div>
+					</li>
+					<!-- 2022-10-04 수정  -->
+					
+				</ul>
+			</div><!-- //formWrap -->
+		</div>
+		<div class="boxTypeWrap pt0">
+			<h2 class="lf moreListTit">가족정보</h2>
+			<div class="formWrap familyBox">
+				<!-- [2023-01-03] 삭제 버튼 스타일 현행화 -->
+				<ul>
+					<li>
+						<div class="fam_select_del_wrap">
+							<strong class="formTit mt0">부</strong>
+							<div> <a href="javascript:;" class="contBtn01">삭제</a></div>
+						</div>
+						<div class="fieldGroup">
+							<div class="inputList">
+								<a href="javascript:;" title="부 생년월일 선택" aria-haspopup="true" onclick="slidePopOption();return false;"> <!-- [접근성_2024] title 수정 -->
+									<span class="selectValue placeholder">생년월일</span>
+									<!-- value 값이 들어오면 class placeholder 삭제 -->
+									<span class="selectBtn"></span>
+								</a>
+								<select name="" title="선택해주세요">
+									<option value=""></option>
+								</select>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="fam_select_del_wrap">
+							<strong class="formTit mt0">모</strong>
+							<div> <a href="javascript:;" class="contBtn01">삭제</a></div>
+						</div>
+						<div class="fieldGroup">
+							<div class="inputList">
+								<a href="javascript:;" title="모 생년월일 선택" aria-haspopup="true" onclick="slidePopOption();return false;" >  <!-- [접근성_2024] title 수정 -->
+									<span class="selectValue placeholder">생년월일</span>
+									<!-- value 값이 들어오면 class placeholder 삭제 -->
+									<span class="selectBtn"></span>
+								</a>
+								<select name="" title="선택해주세요">
+									<option value=""></option>
+								</select>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="fam_select_del_wrap">
+							<strong class="formTit mt0">배우자</strong>
+							<div> <a href="javascript:;" class="contBtn01">삭제</a></div>
+						</div>
+						<div class="fieldGroup">
+							<div class="inputList">
+								<a href="javascript:;" title="배우자 생년월일 선택" aria-haspopup="true" onclick="slidePopOption();return false;">  <!-- [접근성_2024] title 수정 -->
+									<span class="selectValue placeholder">생년월일</span>
+									<!-- value 값이 들어오면 class placeholder 삭제 -->
+									<span class="selectBtn"></span>
+								</a>
+								<select name="" title="선택해주세요">
+									<option value=""></option>
+								</select>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="fam_select_del_wrap">
+							<strong class="formTit mt0">자녀</strong>
+							<div> <a href="javascript:;" class="contBtn01">삭제</a></div>
+						</div>
+						<div class="fieldGroup">
+							<div class="stList">
+								<div class="fieldGroup d-flex">
+									<div class="formArray">
+										<span class="chkRadio">
+											<input type="radio" id="sample003" name="sample01" checked="checked">
+											<label for="sample003">남</label>
+										</span>
+										<span class="chkRadio">
+											<input type="radio" id="sample004" name="sample01">
+											<label for="sample004">여</label>
+										</span>
+									</div>
+									<div class="cs inputList">
+										<a class="bdbNone" href="javascript:;" title="자녀 생년월일 선택" aria-haspopup="true" onclick="slidePopOption();return false;">  <!-- [접근성_2024] title 수정 -->
+											<span class="selectValue placeholder">생년월일</span>
+											<!-- value 값이 들어오면 class placeholder 삭제 -->
+											<span class="selectBtn"></span>
+										</a>
+										<select name="" title="선택해주세요">
+											<option value=""></option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="fieldGroup mt10">
+							<div class="fam_select_del_wrap">
+								<strong class="formTit mt0">출산예정</strong>
+								<div> <a href="javascript:;" class="contBtn01">삭제</a></div>
+							</div>
+							<div class="d-flex">
+								<div class="personTitWrap">
+									<strong class="tit">자녀수</strong>
+								</div>
+								<div class="itemWrap formHolder">
+									<div class="deductBtnWrap">
+										<button type="button" class="minusBtn"><span class="blind">자녀수 빼기</span></button>
+										<span class="deductNum"><em>0</em></span>
+										<button type="button" class="plusBtn"><span class="blind">자녀수 더하기</span></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<!-- //[2023-01-03] 삭제 버튼 스타일 현행화 -->
+				<div class="listBtnMore mt20">
+					<a href="javascript:;" class="btnBodyLine" role="button">+ 가족추가</a>
+				</div>
+			</div>
+		</div>
+		<div class="boxTypeWrap pt0">
+			<h2 class="lf moreListTit">선택정보</h2>
+			<div class="lf formWrap mt20">
+				<div class="chkBox">
+					<input type="checkbox" id="sample22" name="sample02" class="desgChk">
+					<label for="sample22">장애인</label>
+				</div>
+				<div class="chkBox mt10">
+					<input type="checkbox" id="sample23" name="sample02" class="desgChk">
+					<label for="sample23">한부모</label>
+				</div>
+				<div class="chkBox mt10">
+					<input type="checkbox" id="sample24" name="sample02" class="desgChk">
+					<label for="sample24">다문화/새터민</label>
+				</div>
+				<div class="chkBox mt10">
+					<input type="checkbox" id="sample25" name="sample02" class="desgChk">
+					<label for="sample25">저소득층</label>
+				</div>
+				<div class="chkBox mt10">
+					<input type="checkbox" id="sample25" name="sample02" class="desgChk">
+					<label for="sample25">보훈</label>
+				</div>
+			</div>
+		</div>
+		<div class="areaBtnDefault">
+			<a href="javascript:;" class="btnPressPoint" role="button">저장</a>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

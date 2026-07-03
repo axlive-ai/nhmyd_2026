@@ -1,0 +1,159 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 나의 관심사</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function() {
+		fullLayerPop();
+	});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		
+		<!-- container -->
+		<div class="container">
+			
+		</div>
+		<!-- //container -->
+
+		<!-- 팝업시작 -->
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>나의 관심사</h1>
+				<div class="popCont grayPop">
+                    <div class="boxTypeWrap">
+                        <div class="totalBalance obtit mt0">
+                            <h2 class="defTxt">이런 것에 관심이 있어요! <span class="f16">(<span class="pointColor">n</span>/6)</span></h2><!--11.29 수정-->
+                            <p>관심사 선택 시 개인맞춤<br />6개월 챌린지를 받아보실 수 있습니다.</p>
+                        </div>
+                        <div class="formWrap mt20">
+                            <style>
+                                .formWrap > ul > li{margin-top:0;}
+                            </style>
+                            <ul class="selectCerti"> <!--radio폼 checkbox로 변경-->
+                                <li>
+                                    <input type="checkbox" id="selCerti01" name="selCerti00">
+                                    <label for="selCerti01">
+                                        <div class="logoArea"><img src="../../images/category/ob/ico_cate_ob01_01.png" alt="건강 아이콘"></div> <!-- [2022-12-16] 아이콘 변경 -->
+                                        <div class="title">건강</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="selCerti02" name="selCerti00">
+                                    <label for="selCerti02">
+                                        <div class="logoArea"><img src="../../images/category/ob/ico_cate_ob01_02.png" alt="결혼 아이콘"></div> <!-- [2022-12-16] 아이콘 변경 -->
+                                        <div class="title">결혼</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="selCerti03" name="selCerti00">
+                                    <label for="selCerti03">
+                                        <div class="logoArea"><img src="../../images/category/ob/ico_cate_ob01_03.png" alt="공연 아이콘"></div> <!-- [2022-12-16] 아이콘 변경 -->
+                                        <div class="title">공연</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="selCerti04" name="selCerti00">
+                                    <label for="selCerti04">
+                                        <div class="logoArea"><img src="../../images/category/ob/ico_cate_ob01_04.png" alt="교육 아이콘"></div> <!-- [2022-12-16] 아이콘 변경 -->
+                                        <div class="title">교육</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="selCerti05" name="selCerti00">
+                                    <label for="selCerti05">
+                                        <div class="logoArea"><img src="../../images/category/ob/ico_cate_ob01_05.png" alt="맛집 아이콘"></div> <!-- [2022-12-16] 아이콘 변경 -->
+                                        <div class="title">맛집</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="selCerti06" name="selCerti00">
+                                    <label for="selCerti06">
+                                        <div class="logoArea"><img src="../../images/category/ob/ico_cate_ob01_06.png" alt="부동산 아이콘"></div> <!-- [2022-12-16] 아이콘 변경 -->
+                                        <div class="title">부동산</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="selCerti07" name="selCerti00">
+                                    <label for="selCerti07">
+                                        <div class="logoArea"><img src="../../images/category/ob/ico_cate_ob01_07.png" alt="쇼핑 아이콘"></div> <!-- [2022-12-16] 아이콘 변경 -->
+                                        <div class="title">쇼핑</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="selCerti08" name="selCerti00">
+                                    <label for="selCerti08">
+                                        <div class="logoArea"><img src="../../images/category/ob/ico_cate_ob01_08.png" alt="스포츠 아이콘"></div> <!-- [2022-12-16] 아이콘 변경 -->
+                                        <div class="title">스포츠</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="selCerti09" name="selCerti00">
+                                    <label for="selCerti09">
+                                        <div class="logoArea"><img src="../../images/category/ob/ico_cate_ob01_09.png" alt="여행 아이콘"></div> <!-- [2022-12-16] 아이콘 변경 -->
+                                        <div class="title">여행</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="selCerti10" name="selCerti00">
+                                    <label for="selCerti10">
+                                        <div class="logoArea"><img src="../../images/category/ob/ico_cate_ob01_10.png" alt="자격증 아이콘"></div> <!-- [2022-12-16] 아이콘 변경 -->
+                                        <div class="title">자격증</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="selCerti11" name="selCerti00">
+                                    <label for="selCerti11">
+                                        <div class="logoArea"><img src="../../images/category/ob/ico_cate_ob01_11.png" alt="자동차 아이콘"></div> <!-- [2022-12-16] 아이콘 변경 -->
+                                        <div class="title">자동차</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="selCerti12" name="selCerti00">
+                                    <label for="selCerti12">
+                                        <div class="logoArea"><img src="../../images/category/ob/ico_cate_ob01_12.png" alt="재테크 아이콘"></div> <!-- [2022-12-16] 아이콘 변경 -->
+                                        <div class="title">재테크</div>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="fullRefreshWrap fr pb0 pt0 mt10">
+                            <a href="javscript:;" title="설정 초기화">
+                                <p>
+                                    설정 초기화
+                                </p>
+                            </a>
+                            <button type="button" class="updateBtn2" title="설정 초기화"></button> <!-- 불러오는중 .on 추가--> <!-- [접근성_2024] title 수정 -->
+                        </div>
+                    </div>    
+				</div>
+
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<a href="javascript:;" class="confirmBtn" role="button">저장</a>
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- // 팝업 끝 -->
+	</div>
+</body>
+</html>

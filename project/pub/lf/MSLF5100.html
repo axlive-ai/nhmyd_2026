@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>내차관리 > 설정</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		//tostpop();//토스트 팝업 호출 
+	})
+
+	function tostpop(){
+		var $tostCont = '<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg">업데이트를 완료했습니다.</div></div>'
+		$('.container').after($tostCont);
+		setTimeout(function(){
+			$('.tostpopupWrap').remove();
+		},4000)
+	}
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>설정</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<div class="boxTypeWrap pb28">
+			<div class="mycarConnSet">
+				<h2 class="defTit mt0"><strong>내차관리에 사용할 정보를 위해서<br>기관 연결을 확인해주세요</strong></h2>	
+			</div>
+			<div class="areaBodyBtnFull mt25">
+				<a href="javascript:;" class="btnBodyLine" role="button">기관연결</a>
+			</div>
+		</div>
+
+		<div class="formWrap boxTypeWrap">
+			<div class="boxRefreshWrap">
+				<span>내차관리 정보 수집현황</span>
+				<button type="button" class="yearupdateBtn" title="데이터 업데이트"></button> 
+			</div>
+
+			<!-- 2022-12-12 추가 -->
+			<div class="item totalArea mt20"> <!--s:item-->
+				<p class="detailTotal mb20"><strong>AJ 셀카</strong></p>
+				<ul class="detailList">
+					<li>
+						<span class="tit">차량정보</span>
+						<span class="date">2022.07.31</span>
+					</li>
+					<li>
+						<span class="tit">차량정보</span>
+						<span class="date"><button type="button" class="ceb1100 ml10" title="실패">실패</button></span> 
+					</li>
+					<li>
+						<span class="tit">차량정보</span>
+						<span class="date"><a href="javascript:;" class="t_send_fail">미등록</a></span>
+					</li>
+				</ul>
+			</div>
+			<!-- //2022-12-12 추가 -->
+
+			<div class="item totalArea mt20"> <!--s:item-->
+				<p class="detailTotal mb20"><strong>경찰청교통민원24</strong></p>
+				<ul class="detailList">
+					<li>
+						<span class="tit">운전면허 정보</span>
+						<span class="date">2022.07.31</span>
+					</li>
+					<li>
+						<span class="tit">운전면허 정보</span>
+						<span class="date"><button type="button" class="ceb1100 ml10" title="실패">실패</button></span> 
+					</li>
+					<li>
+						<span class="tit">운전면허 정보</span>
+						<span class="date"><a href="javascript:;" class="t_send_fail">미등록</a></span>
+					</li>
+				</ul>
+			</div>
+
+			<!-- 2022-12-12 추가 -->
+			<div class="item totalArea mt20"> <!--s:item-->
+				<p class="detailTotal mb20"><strong>하이패스</strong></p>
+				<ul class="detailList">
+					<li>
+						<span class="tit">고속도로통행료</span>
+						<span class="date">2022.07.31</span>
+					</li>
+					<li>
+						<span class="tit">고속도로통행료</span>
+						<span class="date"><button type="button" class="ceb1100 ml10" title="실패">실패</button></span> 
+					</li>
+					<li>
+						<span class="tit">고속도로통행료</span>
+						<span class="date"><a href="javascript:;" class="t_send_fail">미등록</a></span>
+					</li>
+				</ul>
+			</div>
+			<!-- //2022-12-12 추가 -->
+		</div>		
+	</div>
+</div>
+
+</body>
+</html>

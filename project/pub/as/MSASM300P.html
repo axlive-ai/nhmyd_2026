@@ -1,0 +1,725 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 순자산 금액 설정</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function() {
+		fullLayerPop();
+	});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">순자산 금액 설정</a></h1>
+			<!-- <a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>  -->
+			<a href="javascript:;" class="btnAcAdmin"><span class="blind">관리</span></a>
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container"></div>
+		<!-- //container -->
+
+		<!-- 팝업시작 -->
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>순자산 금액 설정</h1>
+				<div class="popCont grayPop">
+
+                    <div class="boxTypeWrap mt20">
+                        <div class="mainTopInfo popAsset">
+                            <dl class="totalBalance">
+                                <dt><strong>김농협님의 순자산</strong>
+                                </dt>
+                                <dd class="totalBalanceNow">
+                                    <div class="asset"><strong>1,690,804,400</strong>원</div>
+                                </dd>
+                            </dl>
+                            <div class="popAssetTxt">
+                                순자산 금액에 포함할지 선택할 수 있어요.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="subMain assetTotalList boxTypeWrap">
+                        <!-- 계좌 토탈 -->
+                        <div class="totalTitWrap asTitWrap">
+                            <span class="chkWrap">
+                                <input type="checkbox" id="listAll01" class="chekTypeOther">
+                                <label class="check" for="listAll01"><span class="blind">계좌체크</span></label>
+                            </span>
+                            <h2 class="totalTit">
+                                
+                                계좌 <strong class="cnt pointColor">3개</strong>
+                            </h2>
+                            <span class="totalAmnt"><strong class="dataValue">1,000,000,000,000</strong><em class="won">원</em></span>
+                        </div>
+                        <!-- // 계좌 토탈 -->
+                        <div class="tSaddTxt mt20"><!--12.06 마크업 변경-->
+                            <span class="stockTit">입출금</span>
+                        </div>
+                        <!-- 계좌 상세 -->
+                        <ul class="totalAccList asListWrap">
+                            <li>
+                                <!-- <div class="totalAcc">
+                                    <span class="tit">입출금</span>
+                                </div> -->
+                                <ul class="accList">
+                                    <li>
+                                        <a href="javascript:;" role="button">
+                                            <span class="imgWrap"><img src="../../images/logos/AAPL0000.png" alt="농협은행 로고" class="imgLogo"></span> <!-- [2022-11-21] 한은정 : 공통 로고 수정 --> <!-- [접근성_2024] 기관명 추가 -->
+                                            <div class="AssInfoWrap">
+                                                <div class="AssTitWrap">
+                                                    <span class="accTit">[별칭]NH주거래우대통장NH주거래우대통장</span>
+                                                    <span class="accValue"><strong class="dataValue">10,000,000,000</strong><em class="won">원</em></span>
+                                                </div>
+                                                <div class="AssBtnWrap">
+                                                    <span class="tgBtnType2">
+                                                        <input type="checkbox" id="toggle10" checked="checked">
+                                                        <label for="toggle10"><span class="blind">>농협은행 계좌 설정</span></label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" role="button">
+                                            <span class="imgWrap"><img src="../../images/logos/AAPL0000.png" alt="농협은행 로고" class="imgLogo"></span> <!-- [2022-11-21] 한은정 : 공통 로고 수정 -->
+                                            <div class="AssInfoWrap">
+                                                <div class="AssTitWrap">
+                                                    <span class="accTit">[별칭]NH주거래우대통장NH주거래우대통장</span>
+                                                    <span class="accValue"><strong class="dataValue">10,000,000,000</strong><em class="won">원</em></span>
+                                                </div>
+                                                <div class="AssBtnWrap">
+                                                    <span class="tgBtnType2">
+                                                        <input type="checkbox" id="toggle11" checked="checked">
+                                                        <label for="toggle11"><span class="blind">>농협은행 계좌 설정</span></label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- <li> 12.06 마크업 변경
+                                <div class="totalAcc">
+                                    <span class="tit">예적금</span>
+                                </div>
+                                <ul class="accList">
+                                    <li>
+                                        <a href="javascript:;" role="button">
+                                            <span class="imgWrap"><img src="../../images/logos/AAPL0000.png" alt="농협은행 로고" class="imgLogo"></span> 
+                                            <div class="AssInfoWrap">
+                                                <div class="AssTitWrap">
+                                                    <span class="accTit">[별칭]NH주거래우대통장NH주거래우대통장</span>
+                                                    <span class="accValue"><strong class="dataValue">10,000,000,000</strong><em class="won">원</em></span>
+                                                </div>
+                                                <div class="AssBtnWrap">
+                                                    <span class="tgBtnType2">
+                                                        <input type="checkbox" id="toggle12">
+                                                        <label for="toggle12"><span class="blind">농협은행 계좌 설정</span></label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li> -->
+                        </ul>
+                        <div class="tSaddTxt mt20"><!--12.06 마크업 변경-->
+                            <span class="stockTit">예적금</span>
+                        </div>
+                        <ul class="totalAccList asListWrap">
+                            <li>
+                                <ul class="accList">
+                                    <li>
+                                        <a href="javascript:;" role="button">
+                                            <span class="imgWrap"><img src="../../images/logos/AAPL0000.png" alt="농협은행 로고" class="imgLogo"></span> <!-- [2022-11-21] 한은정 : 공통 로고 수정 -->
+                                            <div class="AssInfoWrap">
+                                                <div class="AssTitWrap">
+                                                    <span class="accTit">[별칭]NH주거래우대통장NH주거래우대통장</span>
+                                                    <span class="accValue"><strong class="dataValue">10,000,000,000</strong><em class="won">원</em></span>
+                                                </div>
+                                                <div class="AssBtnWrap">
+                                                    <span class="tgBtnType2">
+                                                        <input type="checkbox" id="toggle12">
+                                                        <label for="toggle12"><span class="blind">농협은행 계좌 설정</span></label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <!-- // 계좌 상세 -->
+                 
+                    </div>
+
+                    <div class="subMain assetTotalList ty02 boxTypeWrap"><!--12.07 ty02추가-->
+                        <!-- 투자 토탈 -->
+                        <div class="totalTitWrap asTitWrap">
+                            <span class="chkWrap">
+                                <input type="checkbox" id="listAll02" class="chekTypeOther">
+                                <label class="check" for="listAll02"><span class="blind">계좌체크</span></label>
+                            </span>
+                            <h2 class="totalTit">
+                                투자 <strong class="cnt pointColor">3개</strong>
+                            </h2>
+                            <span class="totalAmnt"><strong class="dataValue">2,000,000,000</strong><em class="won">원</em></span>
+                        </div>
+                        <!-- // 투자 토탈 -->
+                        <!-- 투자 상세 --><!--12.06 수정-->
+                        <div class="tSaddTxt mt20">
+                            <span class="stockTit">국내주식</span>
+                        </div>
+                        <ul class="totalAccList asListWrap">
+                            <li>
+                                <ul class="accList">
+                                    <li>
+                                        <a href="javascript:;" role="button">
+                                            <span class="imgWrap"><img src="../../images/logos/ACRB0000.png" alt="삼성전자 로고" class="imgLogo"></span> <!-- [2022-11-29] 윤규송 : 공통 로고 수정 -->
+                                            <div class="AssInfoWrap">
+                                                <div class="AssTitWrap">
+                                                    <span class="accTit">삼성전자</span>
+                                                    <span class="accValue"><strong class="dataValue">2,000,000</strong><em class="won">원</em></span>
+                                                </div>
+                                                <div class="AssBtnWrap">
+                                                    <span class="tgBtnType2">
+                                                        <input type="checkbox" id="toggle4" checked="checked">
+                                                        <label for="toggle4"><span class="blind">삼성전자 투자 설정</span></label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="tSaddTxt mt10">
+                            <span class="stockTit">해외주식</span>
+                        </div>
+                        <ul class="totalAccList asListWrap">
+                            <li>
+                                <ul class="accList">
+                                    <li>
+                                        <a href="javascript:;" role="button">
+                                            <span class="imgWrap"> <img src="../../images/logos/ACAA0000.png" alt="테슬라 로고" class="imgLogo"></span>
+                                            <div class="AssInfoWrap">
+                                                <div class="AssTitWrap">
+                                                    <span class="accTit">삼성전자</span>
+                                                    <span class="accValue"><strong class="dataValue">2,000,000</strong><em class="won">원</em></span>
+                                                </div>
+                                                <div class="AssBtnWrap">
+                                                    <span class="tgBtnType2">
+                                                        <input type="checkbox" id="toggle4" checked="checked">
+                                                        <label for="toggle4"><span class="blind">삼성전자 투자 설정</span></label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="tSaddTxt mt10">
+                            <span class="stockTit">펀드</span>
+                        </div>
+                        <ul class="totalAccList asListWrap">
+                            <li>
+                                <ul class="accList">
+                                    <li>
+                                        <a href="javascript:;" role="button">
+                                            <span class="imgWrap"><img src="../../images/logos/ADAA0000.png" alt="국내펀드 로고" class="imgLogo"></span>
+                                            <div class="AssInfoWrap">
+                                                <div class="AssTitWrap">
+                                                    <span class="accTit">삼성전자</span>
+                                                    <span class="accValue"><strong class="dataValue">2,000,000</strong><em class="won">원</em></span>
+                                                </div>
+                                                <div class="AssBtnWrap">
+                                                    <span class="tgBtnType2">
+                                                        <input type="checkbox" id="toggle4" checked="checked">
+                                                        <label for="toggle4"><span class="blind">삼성전자 투자 설정</span></label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="tSaddTxt mt10">
+                            <span class="stockTit">예수금</span>
+                        </div>
+                        <ul class="totalAccList asListWrap">
+                            <li>
+                                <ul class="accList">
+                                    <li>
+                                        <a href="javascript:;" role="button">
+                                            <span class="imgWrap"><img src="../../images/logos/AABG0000.png" alt="농협 로고" class="imgLogo"></span> 
+                                            <div class="AssInfoWrap">
+                                                <div class="AssTitWrap">
+                                                    <span class="accTit">삼성전자</span>
+                                                    <span class="accValue"><strong class="dataValue">2,000,000</strong><em class="won">원</em></span>
+                                                </div>
+                                                <div class="AssBtnWrap">
+                                                    <span class="tgBtnType2">
+                                                        <input type="checkbox" id="toggle4" checked="checked">
+                                                        <label for="toggle4"><span class="blind">삼성전자 투자 설정</span></label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="tSaddTxt mt10">
+                            <span class="stockTit">기타투자상품</span>
+                        </div>
+                        <ul class="totalAccList asListWrap">
+                            <li>
+                                <ul class="accList">
+                                    <li>
+                                        <a href="javascript:;" role="button">
+                                            <span class="imgWrap"><img src="../../images/logos/AACQ0000.png" alt="농협 로고" class="imgLogo"></span>
+                                            <div class="AssInfoWrap">
+                                                <div class="AssTitWrap">
+                                                    <span class="accTit">삼성전자</span>
+                                                    <span class="accValue"><strong class="dataValue">2,000,000</strong><em class="won">원</em></span>
+                                                </div>
+                                                <div class="AssBtnWrap">
+                                                    <span class="tgBtnType2">
+                                                        <input type="checkbox" id="toggle4" checked="checked">
+                                                        <label for="toggle4"><span class="blind">삼성전자 투자 설정</span></label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- // 투자 상세 -->
+                 
+                    </div>
+
+                    <div class="subMain assetTotalList boxTypeWrap">
+                        <!-- 부채 토탈 -->
+                        <div class="totalTitWrap asTitWrap">
+                            <span class="chkWrap">
+                                <input type="checkbox" id="listAll03" class="chekTypeOther">
+                                <label class="check" for="listAll03"><span class="blind">부채체크</span></label>
+                            </span>
+                            <h2 class="totalTit">
+                                부채 <strong class="cnt pointColor">1개</strong>
+                            </h2>
+                            <span class="totalAmnt"><strong class="dataValue">0</strong><em class="won">원</em></span>
+                        </div>
+                        <!-- // 부채 토탈 -->
+                        <!-- 부채 상세 -->
+                        <ul class="totalAccList asListWrap">
+                            <li>
+                                <ul class="accList">
+                                    <li>
+                                        <a href="javascript:;" role="button">
+                                            <span class="imgWrap"><img src="../../images/logos/AAPL0000.png" alt="농협은행 로고" class="imgLogo"></span> <!-- [2022-11-21] 한은정 : 공통 로고 수정 -->
+                                            <div class="AssInfoWrap">
+                                                <div class="AssTitWrap">
+                                                    <span class="accTit">농협은행</span>
+                                                    <span class="accValue"><strong class="dataValue">2,000,000</strong><em class="won">원</em></span>
+                                                </div>
+                                                <div class="AssBtnWrap">
+                                                    <span class="tgBtnType2">
+                                                        <input type="checkbox" id="toggle5" checked="checked">
+                                                        <label for="toggle5"><span class="blind">농협은행 부채 설정</span></label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- // 부채 상세 -->
+
+                 
+                    </div>
+
+                    <div class="subMain assetTotalList boxTypeWrap">
+                        <!-- 연금 토탈 -->
+                        <div class="totalTitWrap asTitWrap">
+                            <span class="chkWrap">
+                                <input type="checkbox" id="listAll04" class="chekTypeOther">
+                                <label class="check" for="listAll04"><span class="blind">연금 체크</span></label>
+                            </span>
+                            <h2 class="totalTit">
+                                연금 <strong class="cnt pointColor">1개</strong>
+                            </h2>
+                            <span class="totalAmnt"><strong class="dataValue">2,000,000</strong><em class="won">원</em></span>
+                        </div>
+                        <!-- // 연금 토탈 -->
+                        <!-- 연금 상세 -->
+                        <ul class="totalAccList asListWrap">
+                            <li>
+                                <ul class="accList">
+                                    <li>
+                                        <a href="javascript:;" role="button">
+                                            <span class="imgWrap"><img src="../../images/logos/AAPL0000.png" alt="농협은행 로고" class="imgLogo"></span> <!-- [2022-11-21] 한은정 : 공통 로고 수정 -->
+                                            <div class="AssInfoWrap">
+                                                <div class="AssTitWrap">
+                                                    <span class="accTit">개인형IRP</span>
+                                                    <span class="accValue"><strong class="dataValue">2,000,000</strong><em class="won">원</em></span>
+                                                </div>
+                                                <div class="AssBtnWrap">
+                                                    <span class="tgBtnType2">
+                                                        <input type="checkbox" id="toggle5" checked="checked">
+                                                        <label for="toggle5"><span class="blind">농협은행 연금 설정</span></label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- // 연금 상세 -->
+                    </div>
+
+                    <div class="subMain assetTotalList boxTypeWrap">
+                        <!-- 가상자산 토탈 -->
+                        <div class="totalTitWrap asTitWrap">
+                            <span class="chkWrap">
+                                <input type="checkbox" id="listAll05" class="chekTypeOther">
+                                <label class="check" for="listAll05"><span class="blind">가상자산 체크</span></label>
+                            </span>
+                            <h2 class="totalTit"> 
+                                가상자산 <strong class="cnt pointColor">5개</strong>
+                            </h2>
+                            <span class="totalAmnt"><strong class="dataValue">5,000,000</strong><em class="won">원</em></span>
+                        </div>
+                        <!-- // 가상자산 토탈 -->
+                        <!-- 가상자산 상세 -->
+                        <ul class="totalAccList asListWrap">
+                            <li>
+                                <ul class="accList">
+                                    <li>
+                                        <a href="javascript:;" role="button">
+                                            <span class="imgWrap"><img src="../../images/logos/ABRB0000.png" alt="이더리움 로고" class="imgLogo"></span> <!-- [2022-11-29] 윤규송 : 공통 로고 수정 -->
+                                            <div class="AssInfoWrap">
+                                                <div class="AssTitWrap">
+                                                    <span class="accTit">이더리움</span>
+                                                    <span class="accValue"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+                                                </div>
+                                                <div class="AssBtnWrap">
+                                                    <span class="tgBtnType2">
+                                                        <input type="checkbox" id="toggle7" checked="checked">
+                                                        <label for="toggle7"><span class="blind">이더리움 가상자산 설정</span></label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" role="button">
+                                            <span class="imgWrap"><img src="../../images/logos/ABRA0000.png" alt="비트코인 로고" class="imgLogo"></span> <!-- [2022-11-29] 윤규송 : 공통 로고 수정 -->
+                                            <div class="AssInfoWrap">
+                                                <div class="AssTitWrap">
+                                                    <span class="accTit">비트코인</span>
+                                                    <span class="accValue"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+                                                </div>
+                                                <div class="AssBtnWrap">
+                                                    <span class="tgBtnType2">
+                                                        <input type="checkbox" id="toggle8" checked="checked">
+                                                        <label for="toggle8"><span class="blind">비트코인 가상자산 설정</span></label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" role="button">
+                                            <span class="imgWrap"><img src="../../images/logos/ABRC0000.png" alt="이더리움 클래식 로고" class="imgLogo"></span> <!-- [2022-11-29] 윤규송 : 공통 로고 수정 -->
+                                            <div class="AssInfoWrap">
+                                                <div class="AssTitWrap">
+                                                    <span class="accTit">이더리움 클래식</span>
+                                                    <span class="accValue"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+                                                </div>
+                                                <div class="AssBtnWrap">
+                                                    <span class="tgBtnType2">
+                                                        <input type="checkbox" id="toggle9" checked="checked">
+                                                        <label for="toggle9"><span class="blind">이더리움 클래식 가상자산 설정</span></label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" role="button">
+                                            <span class="imgWrap"><img src="../../images/logos/ABRD0000.png" alt="리플 로고" class="imgLogo"></span> <!-- [2022-11-29] 윤규송 : 공통 로고 수정 -->
+                                            <div class="AssInfoWrap">
+                                                <div class="AssTitWrap">
+                                                    <span class="accTit">리플</span>
+                                                    <span class="accValue"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+                                                </div>
+                                                <div class="AssBtnWrap">
+                                                    <span class="tgBtnType2">
+                                                        <input type="checkbox" id="toggle10" checked="checked">
+                                                        <label for="toggle10"><span class="blind">리플 가상자산 설정</span></label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" role="button">
+                                            <span class="imgWrap"><img src="../../images/logos/ABRE0000.png" alt="테조스 로고" class="imgLogo"></span> <!-- [2022-11-29] 윤규송 : 공통 로고 수정 -->
+                                            <div class="AssInfoWrap">
+                                                <div class="AssTitWrap">
+                                                    <span class="accTit">테조스</span>
+                                                    <span class="accValue"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+                                                </div>
+                                                <div class="AssBtnWrap">
+                                                    <span class="tgBtnType2">
+                                                        <input type="checkbox" id="toggle11" checked="checked">
+                                                        <label for="toggle11"><span class="blind">테조스 가상자산 설정</span></label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- // 가상자산 상세 -->
+                    </div>
+
+                    <div class="subMain assetTotalList boxTypeWrap">
+                        <!-- 선불페이 토탈 -->
+                        <div class="totalTitWrap asTitWrap">
+                            <span class="chkWrap">
+                                <input type="checkbox" id="listAll06" class="chekTypeOther">
+                                <label class="check" for="listAll06"><span class="blind">선불페이 체크</span></label>
+                            </span>
+                            <h2 class="totalTit">
+                                선불페이 <strong class="cnt pointColor">1개</strong>
+                            </h2>
+                            <span class="totalAmnt"><strong class="dataValue">5,000,000</strong><em class="won">원</em></span>
+                        </div>
+                        <!-- // 선불페이 토탈 -->
+                        <!-- 선불페이 상세 -->
+                        <ul class="totalAccList asListWrap">
+                            <li>
+                                <ul class="accList">
+                                    <li>
+                                        <a href="javascript:;" role="button">
+                                            <span class="imgWrap"><img src="../../images/logos/ACRA0000.png" alt="네이버페이 로고" class="imgLogo"></span> <!-- [2022-11-29] 윤규송 : 공통 로고 수정 -->
+                                            <div class="AssInfoWrap">
+                                                <div class="AssTitWrap">
+                                                    <span class="accTit">네이버페이</span>
+                                                    <span class="accValue">
+                                                        <strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+                                                </div>
+                                                <div class="AssBtnWrap">
+                                                    <span class="tgBtnType2">
+                                                        <input type="checkbox" id="toggle20" checked="checked">
+                                                        <label for="toggle20"><span class="blind">선불페이 설정</span></label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- // 가상자산 상세 -->
+                    </div>
+
+                    <div class="subMain assetTotalList boxTypeWrap">
+                        <!-- 부동산 토탈 -->
+                        <div class="totalTitWrap asTitWrap">
+                            <span class="chkWrap">
+                                <input type="checkbox" id="listAll07" class="chekTypeOther">
+                                <label class="check" for="listAll07"><span class="blind">부동산 체크</span></label>
+                            </span>
+                            <h2 class="totalTit">
+                                부동산 <strong class="cnt pointColor">5개</strong>
+                            </h2>
+                            <span class="totalAmnt"><strong class="dataValue">18</strong><em class="won">억원</em></span>
+                        </div>
+                        <!-- // 부동산 토탈 -->
+                        <!-- 부동산 상세 -->
+                        <ul class="totalAccList asListWrap">
+                            <li>
+                                <ul class="accList">
+                                    <li>
+                                        <a href="javascript:;" role="button">
+                                            <span class="imgWrap"><img src="../../images/category/icoCate96.png" alt="아파트 아이콘" class="imgLogo"></span> <!-- [2022-11-29] 윤규송 : 공통 로고 수정 -->
+                                            <div class="AssInfoWrap">
+                                                <div class="AssTitWrap">
+                                                    <span class="accTit">강남 푸르지오</span>
+                                                    <span class="accValue">
+                                                        <em class="tag blue">전세</em>
+                                                        <strong class="dataValue">10</strong><em class="won">억원</em></span>
+                                                </div>
+                                                <div class="AssBtnWrap">
+                                                    <span class="tgBtnType2">
+                                                        <input type="checkbox" id="toggle30" checked="checked">
+                                                        <label for="toggle30"><span class="blind">이더리움 가상자산 설정</span></label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" role="button">
+                                            <span class="imgWrap"><img src="../../images/category/icoCate96.png" alt="아파트 아이콘" class="imgLogo"></span> <!-- [2022-11-29] 윤규송 : 공통 로고 수정 -->
+                                            <div class="AssInfoWrap">
+                                                <div class="AssTitWrap">
+                                                    <span class="accTit">강남 푸르지오</span>
+                                                    <span class="accValue">
+                                                        <em class="tag blue">전세</em>
+                                                        <strong class="dataValue">8</strong><em class="won">억원</em></span>
+                                                </div>
+                                                <div class="AssBtnWrap">
+                                                    <span class="tgBtnType2">
+                                                        <input type="checkbox" id="toggle31" checked="checked">
+                                                        <label for="toggle31"><span class="blind">이더리움 가상자산 설정</span></label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- // 가상자산 상세 -->
+                    </div>
+
+                    <div class="subMain assetTotalList boxTypeWrap">
+                        <!-- 실물 토탈 -->
+                        <div class="totalTitWrap asTitWrap">
+                            <span class="chkWrap">
+                                <input type="checkbox" id="listAll08" class="chekTypeOther">
+                                <label class="check" for="listAll08"><span class="blind">계좌체크</span></label>
+                            </span>
+                            <h2 class="totalTit">
+                                실물 <strong class="cnt pointColor">5개</strong>
+                            </h2>
+                            <span class="totalAmnt"><strong class="dataValue">13,593,000</strong><em class="won">원</em></span>
+                        </div>
+                        <!-- // 실물 토탈 -->
+                        <!-- 실물 상세 -->
+                        <ul class="totalAccList asListWrap">
+                            <li>
+                                <ul class="accList">
+                                    <li>
+                                        <a href="javascript:;" role="button">
+                                            <span class="imgWrap"><img src="../../images/category/icoCate95.png" alt="G4 렉스턴 아이콘" class="imgLogo"></span> <!-- [2022-11-29] 윤규송 : 공통 로고 수정 -->
+                                            <div class="AssInfoWrap">
+                                                <div class="AssTitWrap">
+                                                    <span class="accTit">G4 렉스턴</span>
+                                                    <span class="accValue"><strong class="dataValue">120,000,000</strong><em class="won">원</em></span>
+                                                </div>
+                                                <div class="AssBtnWrap">
+                                                    <span class="tgBtnType2">
+                                                        <input type="checkbox" id="toggle50" checked="checked">
+                                                        <label for="toggle50"><span class="blind">G4 렉스턴 실물 설정</span></label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" role="button">
+                                            <span class="imgWrap"><img src="../../images/category/icoCate95.png" alt="여행 후 남은 달러 아이콘" class="imgLogo"></span> <!-- [2022-11-29] 윤규송 : 공통 로고 수정 -->
+                                            <div class="AssInfoWrap">
+                                                <div class="AssTitWrap">
+                                                    <span class="accTit">여행 후 남은 달러</span>
+                                                    <span class="accValue"><strong class="dataValue">1,234,567</strong><em class="won">원</em></span>
+                                                </div>
+                                                <div class="AssBtnWrap">
+                                                    <span class="tgBtnType2">
+                                                        <input type="checkbox" id="toggle51" checked="checked">
+                                                        <label for="toggle51"><span class="blind">여행 후 남은 달러 설정</span></label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" role="button">
+                                            <span class="imgWrap"><img src="../../images/category/icoCate95.png" alt="결혼예물 아이콘" class="imgLogo"></span> <!-- [2022-11-29] 윤규송 : 공통 로고 수정 -->
+                                            <div class="AssInfoWrap">
+                                                <div class="AssTitWrap">
+                                                    <span class="accTit">결혼예물</span>
+                                                    <span class="accValue"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+                                                </div>
+                                                <div class="AssBtnWrap">
+                                                    <span class="tgBtnType2">
+                                                        <input type="checkbox" id="toggle52" checked="checked">
+                                                        <label for="toggle52"><span class="blind">결혼예물 실물 설정</span></label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" role="button">
+                                            <span class="imgWrap"><img src="../../images/category/icoCate95.png" alt="비상금 아이콘" class="imgLogo"></span> <!-- [2022-11-29] 윤규송 : 공통 로고 수정 -->
+                                            <div class="AssInfoWrap">
+                                                <div class="AssTitWrap">
+                                                    <span class="accTit">비상금</span>
+                                                    <span class="accValue"><strong class="dataValue">5,000,000</strong><em class="won">원</em></span>
+                                                </div>
+                                                <div class="AssBtnWrap">
+                                                    <span class="tgBtnType2">
+                                                        <input type="checkbox" id="toggle53" checked="checked">
+                                                        <label for="toggle53"><span class="blind">비상금 실물 설정</span></label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- // 투자 상세 -->
+                 
+                    </div>
+
+				</div><!-- //.popCont -->
+
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<a href="javascript:;" class="confirmBtn" role="button">저장</a>
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- // 팝업 끝 -->
+	</div>
+</body>
+</html>

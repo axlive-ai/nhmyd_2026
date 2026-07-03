@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>컨설팅 > 연금진단</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		//tostpop();//토스트 팝업 호출 
+	})
+
+	function tostpop(){
+		var $tostCont = '<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg">업데이트를 완료했습니다.</div></div>'
+		$('.container').after($tostCont);
+		setTimeout(function(){
+			$('.tostpopupWrap').remove();
+		},4000)
+	}
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+    <a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+    <!-- [MD2401_002] 연금진단 설정화면 개선 관련 퍼블리싱 작업 검토 건 -->
+		<h1>연금진단 설정</h1>
+    <!-- //[MD2401_002] 연금진단 설정화면 개선 관련 퍼블리싱 작업 검토 건 -->
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<div class="boxTypeWrap pb28">
+      <!-- [MD2401_002] 연금진단 설정화면 개선 관련 퍼블리싱 작업 검토 건  -->
+			<div class="mycarConnSet">
+				<h2 class="defTit mt0"><strong>정확한 연금진단을 위해서<br>추가기관 연결이 필요해요 </strong></h2>	
+			</div>
+      <div class="grayBox ac mb25">
+        <p>공적연금 정보수집을 위해<br>
+          <strong class="pointColor dataValue">맞춤정보 화면</strong>으로 이동합니다.
+        </p>
+      </div>
+      <div class="psLinkBtn">
+        <a href="javascript:;" class="link arrGreen">정보수집 하러가기</a>
+      </div>
+      <!-- //[MD2401_002] 연금진단 설정화면 개선 관련 퍼블리싱 작업 검토 건  -->
+    </div>
+    			
+	</div>
+</div>
+
+</body>
+</html>

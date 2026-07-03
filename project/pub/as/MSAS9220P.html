@@ -1,0 +1,128 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산현황</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(function(){
+		fullLayerPop();
+	})
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">수정</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+		</div>
+		<!-- //container -->
+		
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>외화 관리</h1>
+				<div class="popCont">
+					<div class="formWrap realAsset"> <!--10.25 realAsset 추가-->
+						<ul>
+							<li>
+								<strong class="formTit">명칭</strong>
+								<div class="inputList">
+									<input type="text" title="명칭" value="여행 후 남은 달러" placeholder="명칭을 입력해주세요.">
+									<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+								</div>
+								<div class="roundChkWrap mt10">
+									<ul>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="sample00" id="sample01">
+												<label for="sample01">여행</label>
+											</span>
+										</li>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="sample00" id="sample02">
+												<label for="sample02">재테크</label>
+											</span>
+										</li>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="sample00" id="sample03">
+												<label for="sample03">출장</label>
+											</span>
+										</li>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="sample00" id="sample04">
+												<label for="sample04">유학</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+								<p class="errorTxt">특수문자[!@#$*()-=|;:,./]만 입력 가능합니다.</p>
+							</li> 
+							<li>
+								<strong class="formTit">보유금액<em class="inputVal">환산금액 : 1,000,000원</em></strong>
+								<div class="inputList unitMan"> <!-- [2021] .unitMan 추가-->
+									<input type="tel" title="보유금액" value="2,000" placeholder="금액을 입력해주세요.">
+									<span class="unit">USD</span>
+									<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="grayBgLine mt30">
+						<ul class="detailList">
+							<li>
+								<span class="tit">매매기준율</span>
+								<span class="value">1USD=1,215.12원<br>(YYYY.MM.DD)</span>
+							</li>
+							<li>
+								<span class="tit">정보제공</span>
+								<span class="value">서울외국환중개소</span>
+							</li>
+							<li>
+								<span class="tit">등록일</span>
+								<span class="value">2020.07.31</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<a href="javascript:;" class="" role="button">삭제</a>
+						<a href="javascript:;" class="confirmBtn" role="button">확인</a>
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+
+		
+
+	</div>
+
+</body>
+</html>

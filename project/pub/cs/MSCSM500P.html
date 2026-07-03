@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>현금영수증 미등록 시</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script type="text/javascript">
+$(function(){
+    slidePopConfirm();
+});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">현금영수증 미등록 시</a></h1>
+			<!-- <a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>  -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container"> 
+			<button type="button" onclick="slidePopConfirm()">팝업</button>
+		</div>
+		<!-- // container -->
+
+		<!-- 컨펌 팝업 -->
+		<div class="nhasset popWrap slidePopConfirm">
+			<div class="dim"></div>
+			<!-- [2022-10-06] 한은정 팝업수정// -->
+			<div class="popInner titMini">
+				<h1><span class="blind">현금영수증 연결 팝업</span></h1>
+				<div class="popCont">
+					<div class="popEventTxtBox">
+						<span class="defTit"><strong>국세청 현금영수증을 연결해보세요!</strong></span>
+						<p class="txtb1">더 꼼꼼한 소비 관리를 위해 연결이 필요해요</p>
+					</div>
+					<div class="cardBenefitNone type06">
+					</div>					
+				</div>		
+			<!-- //[2022-10-06] 한은정 팝업수정 -->
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<a href="javascript:;" class="" onclick="popClose(this);return false;" role="button">취소</a>
+						<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">현금영수증 연결하기</a> <!-- [2022-10-18] 문구수정 -->
+					</div>
+					<!-- <a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a> -->
+				</div>
+			</div>
+		</div>
+		<!-- //컨펌 팝업 -->
+	</div>
+
+</body>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Septem UI/UX accessibility</title>
+	<link rel="stylesheet" href="../css/a11y_com.css">
+	<link rel="stylesheet" href="../css/prism.css">
+	<script src="../js/prism.js"></script>
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/a11y_com.js"></script>
+</head>
+<body>
+	<!-- skip -->
+<div id="skipNav">
+	<a href="#">본문 바로가기</a>
+	<a href="#">메뉴 바로가기</a>
+</div>
+<!-- //skip -->
+<div id="wrap">
+	<!-- header -->
+	<header>
+	</header>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<nav>
+		</nav>
+		<!-- content -->
+		<main>
+			<h1>5. 주요 사용법</h1>
+			<h2>5.1 센스리더 오류대응</h2>
+			<h3>5.1.1 label, input(checkbox,radio) 마크업 : 레이블 불인식</h3>
+			<blockquote><p>(마크업 오류 방지) id, for 제공없이 label > input 형태의 마크업 시 레이블 불인식됨. 어떤 형태이든 <span style="text-decoration:underline">id, for 맞춰서 제공</span></p></blockquote>
+			<pre>
+				<code class="language-markup">
+					<script type="prism-html-markup">
+						<label for="sample01">
+							<input type="checkbox" id="sample01"> checkbox 또는 radio
+						</label>
+						<input type="checkbox" id="sample01"> 
+						<label for="sample01">checkbox 또는 radio</label>
+					</script>
+				</code>
+			</pre>
+
+			<h3>5.1.2 버튼 누르기 동작 시 enter 키 사용불가</h3>
+			<blockquote>
+				<p>(누르기 동작 지원) 센스리더 동작 중 space키와 enter키 동시 사용 가능해야 함.<br>
+					<span style="text-decoration:underline">onclick, keyup 이벤트만 사용</span>. keydown, keypress 이벤트 안됨. 
+				</p>
+			</blockquote>
+			<pre>
+				<code class="language-markup">
+					<script type="prism-html-markup">
+						<a href="javascript:;" onclick="sample(); return false;">버튼</a>
+					</script>
+				</code>
+			</pre>
+		</main>
+		<!-- //content -->
+	</div>
+	<!-- //container -->
+	<!-- footer -->
+	<footer>푸터 영역</footer>
+	<!-- //footer -->
+	
+</body>
+</html>

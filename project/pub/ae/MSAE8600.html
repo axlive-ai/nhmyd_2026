@@ -1,0 +1,1180 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>기본정보</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>세금계산기</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+
+		<h2 class="defTit icoCal">
+			상속세 확인을 위해<br>
+			<strong>정보를 입력해주세요</strong>
+		</h2>
+
+        <div class="resetArea mt20">
+			<h3 class="defSubTit2">상속세 입력</h3>
+			<div class="cs btnSetReset">
+				<button type="button">입력 초기화</button>
+			</div>
+        </div>
+
+		<div class="yasimulForm mt15">
+			<div class="formWrap boxTypeWrap pt0">
+				<ul>
+					<li class="yatoggleArea">
+						<div class="assetTotalList toggleWrap">
+							<div class="totalTitWrap">
+								<a href="javascript:;" class="toggleBtn active less"> 
+									<p class="defSubTit2"><strong>상속세 정보 입력</strong></p>
+								</a>
+							</div>
+							<div class="totalAccList toggleCont" style="display:block">
+								<div class="titListBox">
+									<ul>
+										<li>
+											<div class="formTitN"><strong>피상속인의 거주자여부</strong></div>
+											<div class="boxRadio">
+												<div class="boxRadioInn">
+													<span>
+														<input name="rdo01" id="rdo011" type="radio" checked="checked">
+														<label for="rdo011">거주자</label>
+													</span>
+												</div>
+												<div class="boxRadioInn">
+													<span>
+														<input name="rdo01" id="rdo012" type="radio">
+														<label for="rdo012">비거주자</label>
+													</span>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="formTitN"><strong>피상속인의 배우자여부</strong></div>
+											<div class="boxRadio">
+												<div class="boxRadioInn">
+													<span>
+														<input name="rdo02" id="rdo021" type="radio" checked="checked">
+														<label for="rdo021">네</label>
+													</span>
+												</div>
+												<div class="boxRadioInn">
+													<span>
+														<input name="rdo02" id="rdo022" type="radio">
+														<label for="rdo022">아니오</label>
+													</span>
+												</div>
+											</div>
+										</li>
+										<li>
+											<hr class="divLine3 mt0" aria-hidden="true">
+											<div class="formTitN"><strong>배우자를 제외한<span class="pointColor06">(생존 중인)</span> 상속인</strong></div>
+											<div class="flexRBox">
+												<div class="deductBtnWrap">
+													<button type="button" class="minusBtn"><span class="blind">배우자를 제외한(생존 중인) 상속인 빼기</span></button>
+													<span class="deductNum"><em>0</em></span>
+													<button type="button" class="plusBtn"><span class="blind">배우자를 제외한(생존 중인) 상속인 더하기</span></button>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="formTitN"><strong>피상속인보다 먼저 사망한 상속인<br><span class="supExp">(대습상속인 경우)</span></strong></div>
+											<div class="flexRBox">
+												<div class="deductBtnWrap">
+													<button type="button" class="minusBtn"><span class="blind">피상속인보다 먼저 사망한 상속인 (대습상속인 경우) 빼기</span></button>
+													<span class="deductNum"><em>0</em></span>
+													<button type="button" class="plusBtn"><span class="blind">피상속인보다 먼저 사망한 상속인 (대습상속인 경우) 더하기</span></button>
+												</div>
+											</div>
+										</li>
+										<li>
+											<hr class="divLine3 mt0" aria-hidden="true">
+											<div class="formTitN"><strong>선순위 상속권자의 상속포기로<br>후순위 상속권자의 상속 여부</strong></div>
+											<div class="boxRadio">
+												<div class="boxRadioInn">
+													<span>
+														<input name="rdo03" id="rdo031" type="radio">
+														<label for="rdo031">네</label>
+													</span>
+												</div>
+												<div class="boxRadioInn">
+													<span>
+														<input name="rdo03" id="rdo032" type="radio" checked="checked">
+														<label for="rdo032">아니오</label>
+													</span>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="formTitN"><strong>유증으로 상속받는 손자/손녀 여부</strong></div>
+											<div class="boxRadio">
+												<div class="boxRadioInn">
+													<span>
+														<input name="rdo04" id="rdo041" type="radio">
+														<label for="rdo041">네</label>
+													</span>
+												</div>
+												<div class="boxRadioInn">
+													<span>
+														<input name="rdo04" id="rdo042" type="radio" checked="checked">
+														<label for="rdo042">아니오</label>
+													</span>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="formTitN"><strong>유증으로 상속받는 기타가족 여부</strong></div>
+											<div class="boxRadio">
+												<div class="boxRadioInn">
+													<span>
+														<input name="rdo05" id="rdo051" type="radio">
+														<label for="rdo051">네</label>
+													</span>
+												</div>
+												<div class="boxRadioInn">
+													<span>
+														<input name="rdo05" id="rdo052" type="radio" checked="checked">
+														<label for="rdo052">아니오</label>
+													</span>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="formTitN"><strong>공익/종교단체에 유증<br>기부한 상속 재산 여부</strong></div>
+											<div class="boxRadio">
+												<div class="boxRadioInn">
+													<span>
+														<input name="rdo06" id="rdo061" type="radio">
+														<label for="rdo061">네</label>
+													</span>
+												</div>
+												<div class="boxRadioInn">
+													<span>
+														<input name="rdo06" id="rdo062" type="radio" checked="checked">
+														<label for="rdo062">아니오</label>
+													</span>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="yatoggleArea">
+						<div class="assetTotalList toggleWrap">
+							<div class="totalTitWrap">
+								<a href="javascript:;" class="toggleBtn"> 
+									<p class="defSubTit2"><strong>증여재산 정보입력</strong></p>
+								</a>
+							</div>
+							<div class="totalAccList toggleCont">
+								<div class="titListBox">
+									<p class="topInfoTxt">
+										부담부증여일 경우 채무인수액을 차감한 금액을 입력합니다. 가업승계에 대한 증여특례는 자녀인 상속인 한 명에게 증여할 때만 가능합니다. 수증자가 여러명이 될 수 없습니다.
+									</p>
+									<ul>
+										<li>
+											<div class="formTitN"><strong>상속인에게 10년 이내에 증여 여부</strong></div>
+											<div class="boxRadio">
+												<div class="boxRadioInn">
+													<span>
+														<input name="rdo07" id="rdo071" type="radio">
+														<label for="rdo071">네</label>
+													</span>
+												</div>
+												<div class="boxRadioInn">
+													<span>
+														<input name="rdo07" id="rdo072" type="radio"  checked="checked" >
+														<label for="rdo072">아니오 </label>
+													</span>
+												</div>
+											</div>
+										</li>
+										<!-- 상속인에게 10년 이내에 증여 여부 네 선택시// -->
+										<li class="liWrap">
+											<ul>
+												<li>
+													<div class="formTitN"><strong>배우자 증여여부</strong></div>
+													<div class="boxRadio">
+														<div class="boxRadioInn">
+															<span>
+																<input name="rdo08" id="rdo081" type="radio" checked="checked">
+																<label for="rdo081">네</label>
+															</span>
+														</div>
+														<div class="boxRadioInn">
+															<span>
+																<input name="rdo08" id="rdo082" type="radio">
+																<label for="rdo082">아니오 </label>
+															</span>
+														</div>
+													</div>
+												</li>
+												<!-- 배우자 증여여부 네 선택시// -->
+												<li class="liWrap">
+													<ul>
+														<li>
+															<div class="tagWrap mb10">
+																<span class="tag red">수증자1-배우자</span>
+															</div>
+															<div class="formTitN"><strong>거주자여부</strong></div>
+															<div class="boxRadio">
+																<div class="boxRadioInn">
+																	<span>
+																		<input name="rdo09" id="rdo091" type="radio" checked="checked">
+																		<label for="rdo091">거주자</label>
+																	</span>
+																</div>
+																<div class="boxRadioInn">
+																	<span>
+																		<input name="rdo09" id="rdo092" type="radio">
+																		<label for="rdo092">비거주자</label>
+																	</span>
+																</div>
+															</div>
+														</li>
+														<!-- 거주자여부 거주자 선택시// -->
+														<li class="liWrap">
+															<div class="formTitN"><strong>증여재산 평가금액</strong><span class="supExp">(수증자기준 합산액)</span></div>
+															<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+																<input type="tel" title="대출이율" name="" id="" value="" placeholder="숫자만 입력">
+																<span class="unit">원</span>
+																<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+															</div>
+														</li>
+														<!-- //거주자여부 거주자 선택시 -->
+														<li>
+															<div class="formTitN">
+																<strong>
+																	증여공제
+																	<div class="tooltipWrap">
+																		<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">증여공제 안내툴팁</span><!-- [접근성_2024] .blind 수정 --></button>
+																		<div class="tooltipCont">
+																			<p>2013년12월31일 이전 : 성년(3천만원), 미성년(1.5천만원) 2014년1월1일 이후 : 성년(5천만원), 미성년(2천만원)</p>
+																			<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+																		</div>
+																	</div>
+																</strong>
+															</div>
+															<div class="inputList">
+																<a href="javascript:;" title="증여공제 선택" aria-haspopup="true" onclick="slidePopOption();return false;">
+																	<span class="selectValue">공제없음</span>
+																	<span class="selectBtn"></span>
+																</a>
+																<select name="" title="선택해주세요">
+																	<option value=""></option>
+																</select>
+															</div>
+														</li>
+													</ul>
+												</li>
+												<!-- //배우자 증여여부 네 선택시 -->
+												<li>
+													<div class="formTitN"><strong>증여한 직계존속/비속</strong><span class="supExp">(부모/자녀)</span></div>
+													<div class="flexRBox">
+														<div class="deductBtnWrap">
+															<button type="button" class="minusBtn"><span class="blind">증여한 직계존속/비속 빼기</span></button>
+															<span class="deductNum"><em>0</em></span>
+															<button type="button" class="plusBtn"><span class="blind">증여한 직계존속/비속 더하기</span></button>
+														</div>
+													</div>
+												</li>
+												<!-- 증여한 직계존속/비속이 있을시// -->
+												<li class="liWrap">
+													<ul>
+														<li>
+															<div class="tagWrap mb10">
+																<span class="tag red">수증자1–직계존속/비속</span>
+															</div>
+															<div class="formTitN"><strong>거주자여부</strong></div>
+															<div class="boxRadio">
+																<div class="boxRadioInn">
+																	<span>
+																		<input name="rdo10" id="rdo101" type="radio" checked="checked">
+																		<label for="rdo101">거주자</label>
+																	</span>
+																</div>
+																<div class="boxRadioInn">
+																	<span>
+																		<input name="rdo10" id="rdo102" type="radio">
+																		<label for="rdo102">비거주자</label>
+																	</span>
+																</div>
+															</div>
+														</li>
+														<!-- 거주자여부 거주자 선택시// -->
+														<li class="liWrap">
+															<div class="formTitN"><strong>증여재산 평가금액</strong><span class="supExp">(수증자기준 합산액)</span></div>
+															<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+																<input type="tel" title="대출이율" name="" id="" value="" placeholder="숫자만 입력">
+																<span class="unit">원</span>
+																<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+															</div>
+														</li>
+														<!-- //거주자여부 거주자 선택시 -->
+														<li>
+															<div class="formTitN">
+																<strong>
+																	증여공제
+																	<div class="tooltipWrap">
+																		<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">증여공제 안내툴팁</span><!-- [접근성_2024] .blind 수정 --></button>
+																		<div class="tooltipCont">
+																			<p>2013년12월31일 이전 : 성년(3천만원), 미성년(1.5천만원) 2014년1월1일 이후 : 성년(5천만원), 미성년(2천만원)</p>
+																			<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+																		</div>
+																	</div>
+																</strong>
+															</div>
+															<div class="inputList">
+																<a href="javascript:;" title="증여공제 선택" aria-haspopup="true" onclick="slidePopOption();return false;">
+																	<span class="selectValue">공제없음</span>
+																	<span class="selectBtn"></span>
+																</a>
+																<select name="" title="선택해주세요">
+																	<option value=""></option>
+																</select>
+															</div>
+														</li>
+														<li>
+															<div class="formTitN"><strong>중소기업 가업상속공제 여부</strong></div>
+															<div class="boxRadio">
+																<div class="boxRadioInn">
+																	<span>
+																		<input name="rdo11" id="rdo111" type="radio" checked="checked">
+																		<label for="rdo111">가능</label>
+																	</span>
+																</div>
+																<div class="boxRadioInn">
+																	<span>
+																		<input name="rdo11" id="rdo112" type="radio">
+																		<label for="rdo112">불가능</label>
+																	</span>
+																</div>
+															</div>
+														</li>
+													</ul>
+												</li>
+												<!-- //증여한 직계존속/비속이 있을시 -->
+												<li>
+													<div class="formTitN"><strong>증여한 대습상속인</strong></div>
+													<div class="flexRBox">
+														<div class="deductBtnWrap">
+															<button type="button" class="minusBtn"><span class="blind">증여한 대습상속인 빼기</span></button>
+															<span class="deductNum"><em>0</em></span>
+															<button type="button" class="plusBtn"><span class="blind">증여한 대습상속인 더하기</span></button>
+														</div>
+													</div>
+												</li>
+												<!-- 증여한 대습상속인이 있을시// -->
+												<li class="liWrap">
+													<ul>
+														<li>
+															<div class="tagWrap mb10">
+																<span class="tag red">수증자1–대습상속인</span>
+															</div>
+															<div class="formTitN"><strong>거주자여부</strong></div>
+															<div class="boxRadio">
+																<div class="boxRadioInn">
+																	<span>
+																		<input name="rdo12" id="rdo121" type="radio" checked="checked">
+																		<label for="rdo121">거주자</label>
+																	</span>
+																</div>
+																<div class="boxRadioInn">
+																	<span>
+																		<input name="rdo12" id="rdo122" type="radio">
+																		<label for="rdo122">비거주자</label>
+																	</span>
+																</div>
+															</div>
+														</li>
+														<!-- 거주자여부 거주자 선택시// -->
+														<li class="liWrap">
+															<div class="formTitN"><strong>증여재산 평가금액</strong><span class="supExp">(수증자기준 합산액)</span></div>
+															<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+																<input type="tel" title="대출이율" name="" id="" value="" placeholder="숫자만 입력">
+																<span class="unit">원</span>
+																<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+															</div>
+														</li>
+														<!-- //거주자여부 거주자 선택시 -->
+														<li>
+															<div class="formTitN">
+																<strong>
+																	증여공제
+																	<div class="tooltipWrap">
+																		<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">증여공제 안내툴팁</span><!-- [접근성_2024] .blind 수정 --></button>
+																		<div class="tooltipCont">
+																			<p>2013년12월31일 이전 : 성년(3천만원), 미성년(1.5천만원) 2014년1월1일 이후 : 성년(5천만원), 미성년(2천만원)</p>
+																			<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+																		</div>
+																	</div>
+																</strong>
+															</div>
+															<div class="inputList">
+																<a href="javascript:;" title="증여공제 선택" aria-haspopup="true" onclick="slidePopOption();return false;">
+																	<span class="selectValue">공제없음</span>
+																	<span class="selectBtn"></span>
+																</a>
+																<select name="" title="선택해주세요">
+																	<option value=""></option>
+																</select>
+															</div>
+														</li>
+														<li>
+															<div class="formTitN"><strong>중소기업 가업상속공제 여부</strong></div>
+															<div class="flexRBox">
+																<div class="deductBtnWrap">
+																	<button type="button" class="minusBtn"><span class="blind">중소기업 가업상속공제 여부 빼기</span></button>
+																	<span class="deductNum"><em>0</em></span>
+																	<button type="button" class="plusBtn"><span class="blind">중소기업 가업상속공제 여부 더하기</span></button>
+																</div>
+															</div>
+														</li>
+													</ul>
+												</li>
+												<!-- //증여한 대습상속인이 있을시 -->
+												<li>
+													<div class="formTitN"><strong>증여한 대승상속인 가업승계 증여특례여부</strong></div>
+													<div class="boxRadio">
+														<div class="boxRadioInn">
+															<span>
+																<input name="rdo13" id="rdo131" type="radio" checked="checked">
+																<label for="rdo131">네</label>
+															</span>
+														</div>
+														<div class="boxRadioInn">
+															<span>
+																<input name="rdo13" id="rdo132" type="radio">
+																<label for="rdo132">아니오 </label>
+															</span>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<!-- //상속인에게 10년 이내에 증여 여부 네 선택시 -->
+										<li>
+											<div class="formTitN"><strong>증여한 기타친족/무관계인</strong></div>
+											<div class="flexRBox">
+												<div class="deductBtnWrap">
+													<button type="button" class="minusBtn"><span class="blind">증여한 기타친족/무관계인 빼기</span></button>
+													<span class="deductNum"><em>0</em></span>
+													<button type="button" class="plusBtn"><span class="blind">증여한 기타친족/무관계인 더하기</span></button>
+												</div>
+											</div>
+										</li>
+										<li>
+											<hr class="divLine3 mt0" aria-hidden="true">
+											<div class="formTitN"><strong>상속인외의 자에게 5년 이내에 증여 여부</strong></div>
+											<div class="boxRadio">
+												<div class="boxRadioInn">
+													<span>
+														<input name="rdo14" id="rdo141" type="radio" checked="checked">
+														<label for="rdo141">네</label>
+													</span>
+												</div>
+												<div class="boxRadioInn">
+													<span>
+														<input name="rdo14" id="rdo142" type="radio">
+														<label for="rdo142">아니오</label>
+													</span>
+												</div>
+											</div>
+										</li>
+										<!-- 상속인외의 자에게 5년 이내에 증여 여부 네 선택시// -->
+										<li class="liWrap">
+											<ul>
+												<li>
+													<div class="formTitN"><strong>증여한 직계비속</strong><span class="supExp">(손자/손녀)</span></div>
+													<div class="flexRBox">
+														<div class="deductBtnWrap">
+															<button type="button" class="minusBtn"><span class="blind">증여한 직계비속 빼기</span></button>
+															<span class="deductNum"><em>0</em></span>
+															<button type="button" class="plusBtn"><span class="blind">증여한 직계비속 더하기</span></button>
+														</div>
+													</div>
+												</li>
+												<!-- 증여한 직계비속이 있을시// -->
+												<li class="liWrap">
+													<ul>
+														<li>
+															<div class="tagWrap mb10">
+																<span class="tag red">수증자1–직계비속</span>
+															</div>
+															<div class="formTitN"><strong>거주자여부</strong></div>
+															<div class="boxRadio">
+																<div class="boxRadioInn">
+																	<span>
+																		<input name="rdo15" id="rdo151" type="radio" checked="checked">
+																		<label for="rdo151">거주자</label>
+																	</span>
+																</div>
+																<div class="boxRadioInn">
+																	<span>
+																		<input name="rdo15" id="rdo152" type="radio">
+																		<label for="rdo152">비거주자</label>
+																	</span>
+																</div>
+															</div>
+														</li>
+														<!-- 거주자여부 거주자 선택시// -->
+														<li class="liWrap">
+															<div class="formTitN"><strong>증여재산 평가금액</strong><span class="supExp">(수증자기준 합산액)</span></div>
+															<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+																<input type="tel" title="대출이율" name="" id="" value="" placeholder="숫자만 입력">
+																<span class="unit">원</span>
+																<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+															</div>
+														</li>
+														<!-- //거주자여부 거주자 선택시 -->
+														<li>
+															<div class="formTitN">
+																<strong>
+																	증여공제
+																	<div class="tooltipWrap">
+																		<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">증여공제 안내툴팁</span><!-- [접근성_2024] .blind 수정 --></button>
+																		<div class="tooltipCont">
+																			<p>2013년12월31일 이전 : 성년(3천만원), 미성년(1.5천만원) 2014년1월1일 이후 : 성년(5천만원), 미성년(2천만원)</p>
+																			<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+																		</div>
+																	</div>
+																</strong>
+															</div>
+															<div class="inputList">
+																<a href="javascript:;" title="증여공제 선택" aria-haspopup="true" onclick="slidePopOption();return false;">
+																	<span class="selectValue">공제없음</span>
+																	<span class="selectBtn"></span>
+																</a>
+																<select name="" title="선택해주세요">
+																	<option value=""></option>
+																</select>
+															</div>
+														</li>
+														<!-- 증여한 직계비속이 있을시// -->
+														<li class="liWrap">
+															<div class="formTitN"><strong>증여한 직계존속</strong><span class="supExp">(부모)</span></div>
+															<div class="flexRBox">
+																<div class="deductBtnWrap">
+																	<button type="button" class="minusBtn"><span class="blind">증여한 직계존속 빼기</span></button>
+																	<span class="deductNum"><em>0</em></span>
+																	<button type="button" class="plusBtn"><span class="blind">증여한 직계존속 더하기</span></button>
+																</div>
+															</div>
+														</li>
+														<!-- //증여한 직계존속이 있을시 -->
+														<li>
+															<div class="tagWrap mb10">
+																<span class="tag red">수증자1–직계존속</span>
+															</div>
+															<div class="formTitN"><strong>거주자여부</strong></div>
+															<div class="boxRadio">
+																<div class="boxRadioInn">
+																	<span>
+																		<input name="rdo16" id="rdo161" type="radio" checked="checked">
+																		<label for="rdo161">거주자</label>
+																	</span>
+																</div>
+																<div class="boxRadioInn">
+																	<span>
+																		<input name="rdo16" id="rdo162" type="radio">
+																		<label for="rdo162">비거주자</label>
+																	</span>
+																</div>
+															</div>
+														</li>
+														<!-- 거주자여부 거주자 선택시// -->
+														<li class="liWrap">
+															<div class="formTitN"><strong>증여재산 평가금액</strong><span class="supExp">(수증자기준 합산액)</span></div>
+															<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+																<input type="tel" title="대출이율" name="" id="" value="" placeholder="숫자만 입력">
+																<span class="unit">원</span>
+																<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+															</div>
+														</li>
+														<!-- //거주자여부 거주자 선택시 -->
+														<li>
+															<div class="formTitN">
+																<strong>
+																	증여공제
+																	<div class="tooltipWrap">
+																		<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">증여공제 안내툴팁</span><!-- [접근성_2024] .blind 수정 --></button>
+																		<div class="tooltipCont">
+																			<p>2013년12월31일 이전 : 성년(3천만원), 미성년(1.5천만원) 2014년1월1일 이후 : 성년(5천만원), 미성년(2천만원)</p>
+																			<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+																		</div>
+																	</div>
+																</strong>
+															</div>
+															<div class="inputList">
+																<a href="javascript:;" title="증여공제 선택" aria-haspopup="true" onclick="slidePopOption();return false;">
+																	<span class="selectValue">공제없음</span>
+																	<span class="selectBtn"></span>
+																</a>
+																<select name="" title="선택해주세요">
+																	<option value=""></option>
+																</select>
+															</div>
+														</li>
+													</ul>
+												</li>
+												<!-- //증여한 직계존속이 있을시 -->
+												<li>
+													<div class="formTitN"><strong>증여한 기타친족/무관계인</strong></div>
+													<div class="flexRBox">
+														<div class="deductBtnWrap">
+															<button type="button" class="minusBtn"><span class="blind">증여한 기타친족/무관계인 빼기</span></button>
+															<span class="deductNum"><em>0</em></span>
+															<button type="button" class="plusBtn"><span class="blind">증여한 기타친족/무관계인 더하기</span></button>
+														</div>
+													</div>
+												</li>
+												<!-- 증여한 기타친족/무관계인이 있을시// -->
+												<li class="liWrap">
+													<ul>
+														<li>
+															<div class="tagWrap mb10">
+																<span class="tag red">수증자1–기타친족</span>
+															</div>
+															<div class="formTitN"><strong>거주자여부</strong></div>
+															<div class="boxRadio">
+																<div class="boxRadioInn">
+																	<span>
+																		<input name="rdo17" id="rdo171" type="radio" checked="checked">
+																		<label for="rdo171">거주자</label>
+																	</span>
+																</div>
+																<div class="boxRadioInn">
+																	<span>
+																		<input name="rdo17" id="rdo172" type="radio">
+																		<label for="rdo172">비거주자</label>
+																	</span>
+																</div>
+															</div>
+														</li>
+														<!-- 거주자여부 거주자 선택시// -->
+														<li class="liWrap">
+															<div class="formTitN"><strong>증여재산 평가금액</strong><span class="supExp">(수증자기준 합산액)</span></div>
+															<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+																<input type="tel" title="대출이율" name="" id="" value="" placeholder="숫자만 입력">
+																<span class="unit">원</span>
+																<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+															</div>
+														</li>
+														<!-- //거주자여부 거주자 선택시 -->
+														<li>
+															<div class="formTitN">
+																<strong>
+																	증여공제
+																	<div class="tooltipWrap">
+																		<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">증여공제 안내툴팁</span><!-- [접근성_2024] .blind 수정 --></button>
+																		<div class="tooltipCont">
+																			<p>2013년12월31일 이전 : 성년(3천만원), 미성년(1.5천만원) 2014년1월1일 이후 : 성년(5천만원), 미성년(2천만원)</p>
+																			<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+																		</div>
+																	</div>
+																</strong>
+															</div>
+															<div class="inputList">
+																<a href="javascript:;" title="증여공제 선택" aria-haspopup="true" onclick="slidePopOption();return false;">
+																	<span class="selectValue">공제없음</span>
+																	<span class="selectBtn"></span>
+																</a>
+																<select name="" title="선택해주세요">
+																	<option value=""></option>
+																</select>
+															</div>
+														</li>
+													</ul>
+												</li>
+												<!-- //증여한 기타친족/무관계인이 있을시 -->
+											</ul>
+										</li>
+										<!-- //상속인외의 자에게 5년 이내에 증여 여부 네 선택시 -->
+										
+										
+									</li>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li class="yatoggleArea">
+						<div class="assetTotalList toggleWrap">
+							<div class="totalTitWrap">
+								<a href="javascript:;" class="toggleBtn"> 
+									<p class="defSubTit2"><strong>상속재산가액 입력</strong></p>
+								</a>
+							</div>
+							<div class="totalAccList toggleCont">
+								<div class="titListBox">
+									<p class="topInfoTxt">
+										동일한 상속재산에 대해서 영농·영어상속공제와 가업상속공제는 동시에 적용할 수 없습니다.
+									</p>
+									<!-- [2022-11-05] li구조 수정 -->
+									<ul>
+										<li class="liWrap">
+											<ul>
+												<li>
+													<div class="formTitN">
+														<div class="tagWrap"><span class="tag red">상속재산1</span></div>
+														<button type="button" class="contBtn01">삭제</button>
+													</div>
+												</li>
+												<li class="mt10">
+													<div class="formTitN"><strong>상속재산의 종류</strong></div>
+													<div class="inputList">
+														<a href="javascript:;" title="상속재산의 종류 선택" aria-haspopup="true" onclick="slidePopOption();return false;">
+															<span class="selectValue">아파트/빌라/단독주택</span>
+															<span class="selectBtn"></span>
+														</a>
+														<select name="" title="선택해주세요">
+															<option value=""></option>
+														</select>
+													</div>
+												</li>
+												<li>
+													<div class="formTitN">
+														<strong>
+															배정내역(분할)
+															<div class="tooltipWrap">
+																<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">배정내역(분할) 안내툴팁</span><!-- [접근성_2024] .blind 수정 --></button>
+																<div class="tooltipCont">
+																	<p>상속재산을 누구에게 배정했는지를 표시합니다. 법정상속지분과 다르게 지분으로 상속재산을 분할할 경우 상속인지 각자 평가금액을 입력하십시오.</p>
+																	<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+																</div>
+															</div>
+														</strong>
+													</div>
+													<div class="inputList">
+														<a href="javascript:;" title="배정내역(분할) 선택" aria-haspopup="true" onclick="slidePopOption();return false;">
+															<span class="selectValue">법정지분 상속</span>
+															<span class="selectBtn"></span>
+														</a>
+														<select name="" title="선택해주세요">
+															<option value=""></option>
+														</select>
+													</div>
+												</li>
+												<li>
+													<div class="formTitN"><strong>상속재산 평가금액</strong></div>
+													<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+														<input type="tel" title="상속재산 평가금액" name="" id="" value="" placeholder="숫자만 입력">
+														<span class="unit">원</span>
+														<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+													</div>
+												</li>
+												<li>
+													<div class="formTitN"><strong>동거가족 상속공제</strong></div>
+													<div class="boxRadio">
+														<div class="boxRadioInn">
+															<span>
+																<input name="rdo22" id="rdo221" type="radio" checked="checked">
+																<label for="rdo221">가능</label>
+															</span>
+														</div>
+														<div class="boxRadioInn">
+															<span>
+																<input name="rdo22" id="rdo222" type="radio">
+																<label for="rdo222">불가능</label>
+															</span>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="formTitN"><strong>영농·영어 상속공제</strong></div>
+													<div class="boxRadio">
+														<div class="boxRadioInn">
+															<span>
+																<input name="rdo18" id="rdo181" type="radio" checked="checked">
+																<label for="rdo181">가능</label>
+															</span>
+														</div>
+														<div class="boxRadioInn">
+															<span>
+																<input name="rdo18" id="rdo182" type="radio">
+																<label for="rdo182">불가능</label>
+															</span>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="formTitN"><strong>중소기업 가업상속공제 여부</strong></div>
+													<div class="boxRadio">
+														<div class="boxRadioInn">
+															<span>
+																<input name="rdo19" id="rdo191" type="radio" checked="checked">
+																<label for="rdo191">가능</label>
+															</span>
+														</div>
+														<div class="boxRadioInn">
+															<span>
+																<input name="rdo19" id="rdo192" type="radio">
+																<label for="rdo192">불가능</label>
+															</span>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<div class="areaBodyBtnFull mt10">
+												<a href="javascript:;" class="btnBodyLine" role="button">상속재산 추가</a>
+											</div>
+										</li>
+										<li class="liWrap">
+											<ul>
+												<li>
+													<div class="formTitN">
+														<div class="tagWrap"><span class="tag red">상속재산2</span></div>
+														<button type="button" class="contBtn01">삭제</button>
+													</div>
+												</li>
+												<li class="mt10">
+													<div class="formTitN"><strong>상속재산의 종류</strong></div>
+													<div class="inputList">
+														<a href="javascript:;" title="상속재산의 종류 선택" aria-haspopup="true" onclick="slidePopOption();return false;">
+															<span class="selectValue">아파트/빌라/단독주택</span>
+															<span class="selectBtn"></span>
+														</a>
+														<select name="" title="선택해주세요">
+															<option value=""></option>
+														</select>
+													</div>
+												</li>
+												<li>
+													<div class="formTitN">
+														<strong>
+															배정내역(분할)
+															<div class="tooltipWrap">
+																<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">배정내역(분할) 안내툴팁</span><!-- [접근성_2024] .blind 수정 --></button>
+																<div class="tooltipCont">
+																	<p>상속재산을 누구에게 배정했는지를 표시합니다. 법정상속지분과 다르게 지분으로 상속재산을 분할할 경우 상속인지 각자 평가금액을 입력하십시오.</p>
+																	<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+																</div>
+															</div>
+														</strong>
+													</div>
+													<div class="inputList">
+														<a href="javascript:;" title="배정내역(분할) 선택" aria-haspopup="true" onclick="slidePopOption();return false;">
+															<span class="selectValue">법정지분 상속</span>
+															<span class="selectBtn"></span>
+														</a>
+														<select name="" title="선택해주세요">
+															<option value=""></option>
+														</select>
+													</div>
+												</li>
+												<li>
+													<div class="formTitN"><strong>상속재산 평가금액</strong></div>
+													<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+														<input type="tel" title="상속재산 평가금액" name="" id="" value="" placeholder="숫자만 입력">
+														<span class="unit">원</span>
+														<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+													</div>
+												</li>
+												<li>
+													<div class="formTitN"><strong>동거가족 상속공제</strong></div>
+													<div class="boxRadio">
+														<div class="boxRadioInn">
+															<span>
+																<input name="rdo22" id="rdo221" type="radio" checked="checked">
+																<label for="rdo221">가능</label>
+															</span>
+														</div>
+														<div class="boxRadioInn">
+															<span>
+																<input name="rdo22" id="rdo222" type="radio">
+																<label for="rdo222">불가능</label>
+															</span>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="formTitN"><strong>영농·영어 상속공제</strong></div>
+													<div class="boxRadio">
+														<div class="boxRadioInn">
+															<span>
+																<input name="rdo18" id="rdo181" type="radio" checked="checked">
+																<label for="rdo181">가능</label>
+															</span>
+														</div>
+														<div class="boxRadioInn">
+															<span>
+																<input name="rdo18" id="rdo182" type="radio">
+																<label for="rdo182">불가능</label>
+															</span>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="formTitN"><strong>중소기업 가업상속공제 여부</strong></div>
+													<div class="boxRadio">
+														<div class="boxRadioInn">
+															<span>
+																<input name="rdo19" id="rdo191" type="radio" checked="checked">
+																<label for="rdo191">가능</label>
+															</span>
+														</div>
+														<div class="boxRadioInn">
+															<span>
+																<input name="rdo19" id="rdo192" type="radio">
+																<label for="rdo192">불가능</label>
+															</span>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li class="liWrap">
+											<ul>
+												<li>
+													<div class="formTitN">
+														<div class="tagWrap"><span class="tag red">상속재산3</span></div>
+														<button type="button" class="contBtn01">삭제</button>
+													</div>
+												</li>
+												<li class="mt10">
+													<div class="formTitN"><strong>상속재산의 종류</strong></div>
+													<div class="inputList">
+														<a href="javascript:;" title="상속재산의 종류 선택" aria-haspopup="true" onclick="slidePopOption();return false;">
+															<span class="selectValue">아파트/빌라/단독주택</span>
+															<span class="selectBtn"></span>
+														</a>
+														<select name="" title="선택해주세요">
+															<option value=""></option>
+														</select>
+													</div>
+												</li>
+												<li>
+													<div class="formTitN">
+														<strong>
+															배정내역(분할)
+															<div class="tooltipWrap">
+																<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">배정내역(분할) 안내툴팁</span><!-- [접근성_2024] .blind 수정 --></button>
+																<div class="tooltipCont">
+																	<p>상속재산을 누구에게 배정했는지를 표시합니다. 법정상속지분과 다르게 지분으로 상속재산을 분할할 경우 상속인지 각자 평가금액을 입력하십시오.</p>
+																	<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+																</div>
+															</div>
+														</strong>
+													</div>
+													<div class="inputList">
+														<a href="javascript:;" title="배정내역(분할) 선택" aria-haspopup="true" onclick="slidePopOption();return false;">
+															<span class="selectValue">법정지분 상속</span>
+															<span class="selectBtn"></span>
+														</a>
+														<select name="" title="선택해주세요">
+															<option value=""></option>
+														</select>
+													</div>
+												</li>
+												<li>
+													<div class="formTitN"><strong>상속재산 평가금액</strong></div>
+													<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+														<input type="tel" title="상속재산 평가금액" name="" id="" value="" placeholder="숫자만 입력">
+														<span class="unit">원</span>
+														<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+													</div>
+												</li>
+												<li>
+													<div class="formTitN"><strong>동거가족 상속공제</strong></div>
+													<div class="boxRadio">
+														<div class="boxRadioInn">
+															<span>
+																<input name="rdo22" id="rdo221" type="radio" checked="checked">
+																<label for="rdo221">가능</label>
+															</span>
+														</div>
+														<div class="boxRadioInn">
+															<span>
+																<input name="rdo22" id="rdo222" type="radio">
+																<label for="rdo222">불가능</label>
+															</span>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="formTitN"><strong>영농·영어 상속공제</strong></div>
+													<div class="boxRadio">
+														<div class="boxRadioInn">
+															<span>
+																<input name="rdo18" id="rdo181" type="radio" checked="checked">
+																<label for="rdo181">가능</label>
+															</span>
+														</div>
+														<div class="boxRadioInn">
+															<span>
+																<input name="rdo18" id="rdo182" type="radio">
+																<label for="rdo182">불가능</label>
+															</span>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="formTitN"><strong>중소기업 가업상속공제 여부</strong></div>
+													<div class="boxRadio">
+														<div class="boxRadioInn">
+															<span>
+																<input name="rdo19" id="rdo191" type="radio" checked="checked">
+																<label for="rdo191">가능</label>
+															</span>
+														</div>
+														<div class="boxRadioInn">
+															<span>
+																<input name="rdo19" id="rdo192" type="radio">
+																<label for="rdo192">불가능</label>
+															</span>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<div class="formTitN"><strong>피상속인 경영기간</strong></div>
+											<div class="inputList">
+												<a href="javascript:;" title="피상속인 경영기간 선택" aria-haspopup="true" onclick="slidePopOption();return false;">
+													<span class="selectValue">10년 미만</span>
+													<span class="selectBtn"></span>
+												</a>
+												<select name="" title="선택해주세요">
+													<option value=""></option>
+												</select>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="yatoggleArea">
+						<div class="assetTotalList toggleWrap">
+							<div class="totalTitWrap">
+								<a href="javascript:;" class="toggleBtn"> 
+									<p class="defSubTit2"><strong>공제내역 입력</strong></p>
+								</a>
+							</div>
+							<div class="totalAccList toggleCont">
+								<div class="titListBox">
+									<p class="topInfoTxt">
+										채무, 공과금 등은 법정상속지분으로 상속인에게 승계하는 것으로 가정합니다.
+									</p>
+									
+									<ul>
+										<li class="mt10">
+											<div class="formTitN"><strong>피상속인의 금융채무액</strong></div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="대출이율" name="" id="" value="" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<li>
+											<div class="formTitN"><strong>피상속인의 일반채무액<br><span class="supExp">(일반채무, 임차인의 보증금)</span></strong></div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="대출이율" name="" id="" value="" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<li>
+											<div class="formTitN"><strong>피상속인의 납부예정 공과금</strong><span class="supExp">(세금포함)</span></div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="대출이율" name="" id="" value="" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<li>
+											<div class="formTitN"><strong>봉인시설 자연장지에 지출한 금액</strong></div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="대출이율" name="" id="" value="" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<li>
+											<div class="formTitN"><strong>그 외 증빙가능한 장례비 지출액</strong></div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="대출이율" name="" id="" value="" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="yatoggleArea">
+						<div class="assetTotalList toggleWrap">
+							<div class="totalTitWrap">
+								<a href="javascript:;" class="toggleBtn"> 
+									<p class="defSubTit2"><strong>감정평가비용 입력</strong></p>
+								</a>
+							</div>
+							<div class="totalAccList toggleCont" style="display:none">
+								<div class="titListBox">
+									<ul>
+										<li>
+											<div class="formTitN"><strong>부동산</strong></div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="대출이율" name="" id="" value="" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<li>
+											<div class="formTitN"><strong>비상장주식</strong></div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="대출이율" name="" id="" value="" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+										<li>
+											<div class="formTitN"><strong>서화, 골동품 등 유형재산</strong></div>
+											<div class="inputList unitMan"> <!-- 에러인 경우 .error 추가-->
+												<input type="tel" title="대출이율" name="" id="" value="" placeholder="숫자만 입력">
+												<span class="unit">원</span>
+												<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<ul class="listBul disc mt30">
+				<li>세금계산기 서비스는 NH농협은행의 제휴사인 (주)아티웰스가 제공합니다.</li>
+			</ul>
+		</div>
+
+		<div class="areaBtnDefault">
+			<!-- <a href="javascript:;" class="btnPressDefault" role="button">취소</a> -->
+			<a href="javascript:;" class="btnPressPoint" role="button">계산하기</a> <!--활성화 class btnPressPoint --->
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>상세내역</title>
+<script src="../pub-assets/js/head.js"></script>
+<style>
+    /* .nhasset .moreInfoWrap .moreInfo .detailList li .tooltipWrap .tooltipCont{width:100% !important;left:0;} */
+</style>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">상세내역</a></h1><!-- 20022-09-16 메뉴명 수정 -->
+			<a href="javascript:;" class="hide">숨기기</a>
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+            <div class="boxWrapShadow">
+				<div class="boxTypeWrap delShadow">
+                    <!-- 상단 계좌정보 영역 -->
+                    <div class="accTopInfo mt0">
+                        <h2 class="accName totalBalance mt0">
+                            본죽
+                            <div class="imgWrap icoCate">
+                                <span class="img">
+                                    <img src="../../images/category/cs/ico_cate_cs01.png" alt="외식"><!--12.09 카테고리 아이콘 수정-->
+                                </span>
+                            </div>
+                        </h2>
+                        <dl class="totalBalance">
+                            <dt class="mb10">2022.07.19 20:00:28</dt><!--10.21 수정-->
+                            <dd><strong>-14,000</strong>원<button type="button" class="cs_money_retail"><span class="blind">금액수정</span></button></dd>
+                        </dl>
+                        <p class="subTxt mt10 pointColor21">원래 금액으로 되돌리기<button type="button" class="cs_upDate"><span class="blind">되돌리기</span></button></p><!--10.21 수정-->
+                    </div>
+                    <!-- // 상단 계좌정보 영역 -->
+                    <hr class="divLine" aria-hidden="true">
+
+                    <!-- 계좌정보 상세 -->
+                    <div class="accInfoDetail">
+                        <ul class="detailList">
+                            <li>
+                                <span class="cs tit">카테고리</span>
+                                <span class="value">소비>외식>한식<button type="button" class="cs_money_retail ml5"><span class="blind">금액수정</span></button></span>
+                            </li>
+                            <li>
+                                <span class="cs tit">거래수단</span>
+                                <!-- <span class="value"><a href="javascript:;" class="underline">미입력</a></span> -->
+                                <span class="value">현금</span>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <!-- // 계좌정보 상세 -->
+                </div>
+                <div class="moreInfoArea">
+					<!-- 추가정보 열/닫 -->
+					<div class="moreInfoWrap toggleWrap">
+						<div class="moreInfo toggleCont" style="display:none">
+							<!-- 계좌정보 상세 -->
+                            <div class="csMoreDetailWrap">
+                                <ul class="detailList">
+                                    <li>
+                                        <span class="tit">결제금액
+                                            <div class="tooltipWrap">
+                                                <button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">연결오류 툴팁 열기</span></button>
+                                                <div class="tooltipCont">
+                                                    <p>금액 수정 시, 실제 결제금액은 변경되지 않습니다.</p>
+                                                    <button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+                                                </div>
+                                            </div>
+                                        </span>
+                                        <span class="value">-14,000원</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">승인번호</span>
+                                        <span class="value">07076458</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">소득공제여부</span>
+                                        <span class="value">공제</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- // 계좌정보 상세 -->
+						</div>
+						<button type="button" class="moreOpenBtn toggleBtn" aria-expanded="false" role="button"><span class="toggleTxt07">상세보기</span></button>
+					</div>
+					<!-- // 추가정보 열/닫 -->
+				</div>
+            </div>
+
+
+
+            <div class="boxTypeWrap pt0">
+                <div class="d-flex cs moreListTit mb0">
+                    <div>
+                        <h3 class="f16">최근 3개월 총 <span class="pointColor">2건</span></h3>
+                    </div>
+                    <div>
+                        <span class="topVal"><em class="dataValue">-321,500</em><em class="won">원</em></span>
+                    </div>
+                </div>
+                
+                <div class="topAreaT">
+                    <div class="csinoutListWrap bdtNone">
+                        <div class="date">7월 19일 화요일</div>
+                    </div>
+                    <div class="cardSpendList mt0">
+                        <div class="inoutListWrap">
+                            <div class="inoutListInn">
+                                <ul class="inoutList">
+                                    <li>
+                                        <a href="javascript:;" class="link">
+                                            <div class="isCategory">
+                                                <div class="imgWrap icoCate">
+                                                    <span class="img">
+                                                        <img src="../../images/category/cs/ico_cate_cs01.png" alt="외식"><!--12.09 카테고리 아이콘 수정-->
+                                                    </span>
+                                                </div>
+                                                <div class="textWrap">
+                                                    <div class="inoutTit">
+                                                        <span class="use">본죽</span>
+                                                        <span class="amount"><strong class="dataValue">-14,000</strong><em class="won">원</em></span>
+                                                    </div>
+                                                    <div class="inoutCont">
+                                                        <div class="timeWrap">
+                                                            <span class="time">10:30<span class="tit">현금</span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="topAreaT">
+                    <div class="csinoutListWrap">
+                        <div class="date">7월 17일 일요일</div>
+                    </div>
+                    <div class="cardSpendList mt0">
+                        <div class="inoutListWrap">
+                            <div class="inoutListInn">
+                                <ul class="inoutList">
+                                    <li>
+                                        <a href="javascript:;" class="link">
+                                            <div class="isCategory">
+                                                <div class="imgWrap icoCate">
+                                                    <span class="img">
+                                                        <img src="../../images/category/cs/ico_cate_cs01.png" alt="외식"><!--12.09 카테고리 아이콘 수정-->
+                                                    </span>
+                                                </div>
+                                                <div class="textWrap">
+                                                    <div class="inoutTit">
+                                                        <span class="use">본죽</span>
+                                                        <span class="amount cancel"><strong class="dataValue">-14,000</strong><em class="won">원</em></span>
+                                                    </div>
+                                                    <div class="inoutCont">
+                                                        <div class="timeWrap">
+                                                            <span class="time">20:00<span class="tit">KB국민ONE-통장-보통예금</span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>

@@ -1,0 +1,585 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>PUSH 관리 | 설정관리</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">PUSH 관리</a></h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] PUSH 관리 ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<!-- -------------------------------------- -->
+		<!-- [상단영역] PUSH알림 설정 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap pt0">
+			<div class="pushSet">
+				<div class="totalTitWrap pushTitWrap">
+					<h2>PUSH알림 설정</h2> 
+					</div>
+				<ul>
+					<li>
+						<div class="flex">
+							<span class="tit">알림수신 APP</span>
+							<span class="value">$상위채널명$</span> <!-- case: 알림수신 APP ≠ 접근 APP 일때 display:none -->
+						</div>
+						<!-- case: 알림수신 앱 변경 가능 (알림수신 APP ≠ 접근 APP) 노출  -->
+						<!-- <div class="formArray">
+							<span class="chkRadio">
+								<input type="radio" id="sample01" name="radio01" class="desgChk" checked="checked">
+								<label for="sample01">NH스마트뱅킹</label>
+							</span>
+							<span class="chkRadio">
+								<input type="radio" id="sample02" name="radio01" class="desgChk">
+								<label for="sample02">올원뱅크</label>
+							</span>
+						</div> -->
+						<!-- //case: 알림수신 앱 변경 가능 (알림수신 APP ≠ 접근 APP) 노출 -->
+						<div class="flex">
+							<span class="tit">$상위채널명$ 알림수신</span> <!-- [2023-01-06] 문구수정 -->
+							<span class="value pointColor">동의</span> <!-- case: 알림수신 APP ≠ 접근 APP 일때 display:none -->
+						</div>
+						<div class="flex">
+							<span class="tit">NH마이데이터 수신 알림</span> <!-- [2023-01-06] 문구수정 -->
+							<span class="chkBox"> <!-- [2023-01-13] 클래스 변경 -->
+								<span class="tgBtnType2 small24">
+									<input type="checkbox" id="toggle0" checked="checked" title="NH마이데이터 수신 알림"> <!-- [2023-01-13] title 추가 -->
+									<label for="toggle0"></label> <!-- [2023-01-13] blind 삭제 -->
+								</span>
+							</span> <!-- case: 알림수신 APP ≠ 접근 APP 일때 display:none -->
+						</div>
+					</li>	
+				</ul>
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [개별설정] 자산 알림 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap">
+			<ul class="pushSelList">
+				<li>
+					<span class="title">자산<a href="javascript:;" class="linkTxt3" role="button">지난알림보기</a></span> <!-- [2023-01-06] 수정 -->
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle10" title="자산"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle10"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">자산현황 알림
+					</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle11" title="자산현황 알림"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle11"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">목표 알림</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle12" title="목표 알림"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle12"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+				
+			</ul>
+
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [개별설정] 소비 알림 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap">
+			<ul class="pushSelList">
+				<li>
+					<span class="title">소비<a href="javascript:;" class="linkTxt3" role="button">지난알림보기</a></span> <!-- [2023-01-06] 수정 -->
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle10" title="소비"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle10"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">소비현황 알림</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle11" title="소비현황 알림"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle11"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">카드 혜택 비교 알림</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle12" title="카드 혜택 비교 알림"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle12"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">예산관리 알림</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle12" title="예산관리 알림"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle12"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+				<!-- [2023 NH마이데이터 서비스 고도화] -->
+				<li>
+					<span class="title">카드리포트 생성 알림</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle131" title="카드리포트 생성 알림">
+							<label for="toggle131"></label>
+						</span>
+					</span>
+				</li>
+				<!-- // [2023 NH마이데이터 서비스 고도화] -->
+			</ul>
+
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [개별설정] 금융플래너 알림 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap">
+			<ul class="pushSelList">
+				<li>
+					<span class="title">금융플래너<a href="javascript:;" class="linkTxt3" role="button">지난알림보기</a></span> <!-- [2023-01-06] 수정 -->
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle10" title="금융플래너"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle10"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">만기예정</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle11" title="만기예정"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle11"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">납부예정</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle12" title="납부예정"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle12"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">출금예정</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle13"  title="출금예정"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle13"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">공모주</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle14" title="공모주"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle14"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">주택청약</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle15" title="주택청약"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle15"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">직접등록 일정</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle16" title="직접등록 일정"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle16"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+			</ul>
+
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [개별설정] 내차관리 알림 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap">
+			<ul class="pushSelList">
+				<li>
+					<span class="title">내차관리<a href="javascript:;" class="linkTxt3" role="button">지난알림보기</a></span> <!-- [2023-01-06] 수정 -->
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle21" title="내차관리"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle21"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">자동차보험 만기</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle22" title="자동차보험 만기"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle22"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">운전자보험만기일</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle23" title="운전자보험만기일"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle23"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">신규 리콜 알림</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle24" title="신규 리콜 알림"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle24"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">고속도로 통행료 미납 알림</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle25" title="고속도로 통행료 미납 알림"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle25"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">자동차 검사일 알림</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle26" title="자동차 검사일 알림"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle26"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">운전면허 갱신일 알림</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle27" title="운전면허 갱신일 알림"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle27"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">범칙금(과태료) 고지 알림</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle28" title="범칙금(과태료) 고지 알림"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle28"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">자동차세 고지 알림</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle29" title="자동차세 고지 알림"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle29"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+			</ul>
+
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [개별설정] 금융자산분석 알림 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap">
+			<ul class="pushSelList">
+				<li>
+					<span class="title">금융자산분석<a href="javascript:;" class="linkTxt3" role="button">지난알림보기</a></span> <!-- [2023-01-06] 수정 [2023 NH마이데이터 서비스 고도화] 메뉴명수정 -->
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle31" title="금융자산분석"> <!-- [2023-01-13] title 추가 [2023 NH마이데이터 서비스 고도화] 메뉴명수정 -->
+							<label for="toggle31"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">월간 보고서 발행 알림</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle32" title="월간 보고서 발행 알림"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle32"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">세금계산서 알림</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle33" title="세금계산서 알림"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle33"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+				
+				<!-- [2023 NH마이데이터 서비스 고도화] -->
+				<li>
+					<span class="title">자산진단 변경 알림</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle34" title="자산진단 변경 알림">
+							<label for="toggle34"></label>
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">연금진단 변경 알림</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle35" title="연금진단 변경 알림">
+							<label for="toggle35"></label>
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">조기은퇴진단 변경 알림</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle36" title="조기은퇴진단 변경 알림">
+							<label for="toggle36"></label>
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">신용관리 알림</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle37" title="신용관리 알림">
+							<label for="toggle37"></label>
+						</span>
+					</span>
+				</li>
+				<!-- // [2023 NH마이데이터 서비스 고도화] -->
+			</ul>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [개별설정] 헬스케어 알림 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap">
+			<ul class="pushSelList">
+				<li>
+					<span class="title">헬스케어<a href="javascript:;" class="linkTxt3" role="button">지난알림보기</a></span> <!-- [2023-01-06] 수정 -->
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle31" title="헬스케어"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle31"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">실손 보험 청구 안내</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle32" title="실손 보험 청구 안내"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle32"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">주말약국 찾기</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle33" title="주말약국 찾기"> <!-- [2023-01-13] title 추가 -->
+							<label for="toggle33"></label> <!-- [2023-01-13] blind 삭제 -->
+						</span>
+					</span>
+				</li>
+			</ul>
+
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [개별설정] NH트렌드+ -->
+		<!-- [2023 NH마이데이터 서비스 고도화] -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap">
+			<ul class="pushSelList">
+				<li>
+					<span class="title">NH트렌드+<a href="javascript:;" class="linkTxt3" role="button">지난알림보기</a></span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle41" title="NH트렌드+">
+							<label for="toggle41"></label>
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">신규 콘텐츠 알림</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle42" title="신규 콘텐츠 알림">
+							<label for="toggle42"></label>
+						</span>
+					</span>
+				</li>
+			</ul>
+		</div>
+
+		<!--스뱅에서 접근, 알림수신 미동의일 경우 11.25삭제
+			<div class="boxTypeWrap">
+			<ul class="pushSelList">
+				<li>
+					<span class="title">금융플래너
+						<p class="mt5"><a href="javascript:;" class="linkTxt3" role="button">지난알림보기</a></p>
+					</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle10">
+							<label for="toggle10"><span class="blind">금융플래너 PUSH 알림 켜기</span></label>
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">만기예정</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle11">
+							<label for="toggle11"><span class="blind">만기예정 PUSH 알림 켜기</span></label>
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">납부예정
+					</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle12">
+							<label for="toggle12"><span class="blind">납부예정 PUSH 알림 켜기</span></label>
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">출금예정
+					</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle13" >
+							<label for="toggle13"><span class="blind">출금예정 PUSH 알림 켜기</span></label>
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">공모주</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle14">
+							<label for="toggle14"><span class="blind">공모주 PUSH 알림 켜기</span></label>
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">주택청약</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle15">
+							<label for="toggle15"><span class="blind">주택청약 PUSH 알림 켜기</span></label>
+						</span>
+					</span>
+				</li>
+				<li>
+					<span class="title">직접등록 일정</span>
+					<span class="chkBox">
+						<span class="tgBtnType2 small24">
+							<input type="checkbox" id="toggle16">
+							<label for="toggle16"><span class="blind">직접등록 일정 PUSH 알림 켜기</span></label>
+						</span>
+					</span>
+				</li>
+			</ul>
+			<div class="disAgree psSt"> 
+				<div class="inner">
+					<p class="txt">
+						자산연결 주기가 수시로 설정되어 있어서 상세 
+						알림을 설정할 수 없습니다. <br>
+						알림설정을 위해 수집주기를 정기로 변경해 주세요.
+					</p>
+				</div>
+			</div>
+			<div class="areaBodyBtnFull mt20">
+				<a href="javascript:;" class="btnBodyLine" role="button">수집주기 변경하기</a>
+			</div>
+
+			<div class="listNoneImgWrap pushBg">
+				<div class="title">알람메시지 수신을 위한 <br>“정기” 수집 변경 방법 안내</div>
+				<p class="subTxt">자산연결 변경화면에서 수신할 기관을 선택한 후<br>동의 버튼을 선택합니다.</p>
+			</div> 
+
+		</div>
+
+		스뱅에서 접근, 알림수신 미동의일 경우-->
+
+		<!-- -------------------------------------- -->
+		<!-- [바로가기] -->
+		<!-- -------------------------------------- -->
+		<div class="areaBodyBtnFull mt20">
+			<a href="javascript:;" class="btnBodyLine h54" role="button">지난 알림 전체보기</a>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- -------------------------------------- -->
+		<div class="areaBtnDefault half">
+			<a href="javascript:;" class="btnPressPoint" role="button">확인</a>
+		</div>
+		<!-- -------------------------------------- -->
+	</div>
+	<!-- ###################################### -->
+</div>
+</body>
+</html>

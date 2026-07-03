@@ -1,0 +1,192 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 목표</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack" role="button"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">목표등록</a></h1>
+			<a href="javascript:;" class="btnEtc">나가기</a>
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+
+			<div class="boxTypeWrap addchallType"><!--s:boxTypeWrap-->
+				<div class="obTitleWrap">
+					<div><strong>대출줄이기</strong></div>
+					<div><span><img src="../../images/category/ob/ico_cate_ob02_03.png" alt="대출줄이기 아이콘"></span></div> <!-- [2022-12-19] 아이콘 변경 -->
+				</div>
+				<hr class="divLine" aria-hidden="true">
+
+				<div class="formWrap">
+					<ul>
+						<li class="pt0">
+							<strong class="formTit">목표명</strong>
+							<div class="inputList error"> <!-- error일때 클래스 error 추가 -->
+								<input type="text" title="목표명" value="" placeholder="목표명을 입력해 주세요.">
+								<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+							</div>
+							<p class="errorTxt">특수문자는 !@#$*()-=|;:,./ 만 입력 가능합니다.</p>
+							<!-- <p class="errorTxt">15자(30byte) 이내로 입력해주세요.</p> -->
+						</li>
+						<li>
+							<strong class="formTit">상환할 대출상품</strong>
+							<!-- case1: 계좌 미보유 -->
+							<p class="infoTxt">최소 1개 이상의 대출상품을 연결해주세요.</p>
+							<!-- case1: 계좌 미보유 -->
+
+							<!-- case2: 계좌 보유 -->
+							<div class="grayBgLine ty01 mt20"><!--10.24 ty01추가 -->
+								<div class="boxDelWrap"> <!--10.24 boxDelWrap 추가-->
+									<ul class="detailList">
+										<li>
+											<span class="tit">대출계좌</span>
+											<span class="value">힘찬직장인대출</span>
+										</li>
+										<li>
+											<span class="tit">계좌번호</span>
+											<span class="value">신한은행123456789000</span>
+										</li>
+										<li>
+											<span class="tit">만기일자</span>
+											<span class="value">2030.04.22</span>
+										</li>
+										<li>
+											<span class="tit">대출잔액</span>
+											<span class="value">110,000,000원</span>
+										</li>
+									</ul>
+									<a href="javascript:" class="contBtn01" role="button">삭제</a>
+								</div>
+								<!--10.24 추가-->
+								<div class="datePluswrap"></div>
+								<div class="boxDelWrap"><!--10.24 boxDelWrap 추가-->
+									<ul class="detailList">
+										<li>
+											<span class="tit">대출상품</span>
+											<span class="value">올원 비상금대출</span>
+										</li>
+										<li>
+											<span class="tit">계좌번호</span>
+											<span class="value">농협 11212000000</span>
+										</li>
+										<li>
+											<span class="tit">만기일자</span>
+											<span class="value">2023.01.01</span>
+										</li>
+										<li>
+											<span class="tit">대출잔액</span>
+											<span class="value"><strong class="dataValue">110,000,000</strong><em class="won">원</em></span>
+										</li>
+									</ul>
+									<a href="javascript:" class="contBtn01" role="button">삭제</a>
+								</div>
+								<div class="allLoanBox">
+									<span>총 대출잔액</span>
+									<span class="dataValue pointColor">1,000,000,000<em class="won">원</em></span>
+								</div>
+								<!--//10.24 추가-->
+							</div>
+							<div class="mosbMore">
+								<a href="javascript:;" title="항목 더보기">전체보기</a> <!--10.24 버튼명 수정-->
+							</div>
+							<!-- case2: 계좌 보유 -->
+							<div class="areaBodyBtnFull mt20">
+								<a href="javascript:;" class="btnBodyLine" role="button"><span class="mr8">+</span>대출상품 연결하기</a>
+							</div>
+						</li>
+						
+						<li>
+							<strong class="formTit">
+								목표상환금액
+								<em class="inputVal">(100억)</em> <!-- [2021-09-02] 한은정 : 추가 -->
+							</strong>
+							<div class="inputList error"> <!-- 에러의 경우 클래스 error -->
+								<input type="tel" title="목표상환금액" value="" placeholder="1만원 이상 입력해 주세요.">
+								<span class="unit">원</span>
+								<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+							</div>
+							<!-- <p class="subTxt2 ar error">상환 후 잔액 <strong>10,000,000</strong>원</p>--> <!-- 에러의 경우 클래스 error 추가 -->
+							<!-- [2021-11-03] 한은정 : 추가// -->
+							<div class="roundBtnWrap">
+								<a href="javascript:;" role="button" title="100만원 추가">+100만</a>
+								<a href="javascript:;" role="button" title="1,000만원 추가">+1,000만</a>
+								<a href="javascript:;" role="button" title="1억 추가">+1억</a>
+								<a href="javascript:;" role="button" title="전액">전액</a>
+							</div>
+							<!-- <p class="infoTxt">상환 후 잔액 <span>60,000,000</span>원</p> -->
+							<!-- //[2021-11-03] 한은정 : 추가 -->
+						</li>
+						<li>
+							<strong class="formTit">목표 기간
+								<div class="tooltipWrap">
+									<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">목표 기간 안내툴팁</span></button>
+									<div class="tooltipCont">
+										<p>목표 설정 기간은 1개월~10년입니다.</p>
+										<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+									</div>
+								</div>
+							</strong>
+							<div class="inputList unitMan">
+								<input type="tel" title="목표 기간" value="" placeholder="목표기간을 입력해 주세요.">
+								<span class="unit">개월</span>
+								<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+							</div>
+							<div class="roundBtnWrap">
+								<a href="javascript:;" role="button" title="1개월 추가">+1개월</a>
+								<a href="javascript:;" role="button" title="3개월 추가">+3개월</a>
+								<a href="javascript:;" role="button" title="6개월 추가">+6개월</a>
+								<a href="javascript:;" role="button" title="1년 추가">+1년</a>
+								<a href="javascript:;" role="button" title="3년 추가">+3년</a>
+							</div>
+							<!-- <p class="infoTxt">입력 가능한 기간은 최대 <span>120</span> 개월 입니다.</p> -->
+							<div class="obChk mt20 fr">
+								<input type="checkbox" id="listAll" class="chekTypeOther" name=""><label for="listAll">목표달성일 지정하기</label>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="postIt">
+					<span class="date">2022.07.07까지</span>
+					<span class="value"><em>월 834,000원</em> 상환이 필요합니다.</span>
+				</div>
+
+			</div>
+			<!--e:boxTypeWrap-->
+		
+			<div class="areaBtnDefault">
+				<a href="javascript:;" class="btnPressDefault" role="button">이전</a>
+				<a href="javascript:;" class="btnPressPoint" role="button">확인</a>
+			</div>
+		</div>
+		<!-- //container -->
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>기본정보</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>연말정산</h1><!--08.19 화면명 수정-->
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+
+		<!-- 2022-09-27 위치 이동 및 문구 변경 -->
+		<!-- 2022-10-25 업데이트바 공통수정 -->
+		<div class="pageRefreshWrap">
+			<div class="pageRefresInner">
+				<span>
+					<span class="date">08.05 10:45</span>
+					<button type="button" class="btnUpdate"><span class="blind">업데이트</span></button>
+				</span>
+				<button type="button" class="btnAlrt new" aria-expanded="false"><span class="blind">알림</span></button>
+			</div>
+			<div class="pageAlertWrap">
+				<ul>
+					<li class="alertNotice">
+						<a href="javascript:;" role="button">
+							<dl>
+								<dt>연결중인 자산 확인이 필요해요</dt>
+								<dd>OOO에서 전송 중단 또는 거절이 있었습니다.<br/>연결관리 화면에서 확인해주세요. </dd>
+							</dl>
+						</a>
+					</li>
+					<li class="alertError">
+						<a href="javascript:;" role="button">
+							<dl>
+								<dt>정보 확인이 필요해요</dt>
+								<dd><span>$연말정산$</span> 정보수집 중 오류가 있었습니다.<br/><span>$연말정산$</span> 설정 화면에서 확인해주세요. </dd>
+							</dl>
+						</a>
+					</li>
+					<li class="alertError">
+						<a href="javascript:;" role="button">
+							<dl>
+								<dt>업데이트한지 <span>N</span>일이 지났어요</dt>
+								<dd><span>$연말정산$</span> 정보 업데이트가 필요합니다.<br/>인증관리 화면에서 확인해주세요.</dd>
+							</dl>
+						</a>
+					</li>
+					<li class="alertError">
+						<a href="javascript:;" role="button">
+							<dl>
+								<dt>정보수집이 필요해요</dt>
+								<dd><span>$연말정산$</span> 서비스 이용을 위해 정보수집이 필요합니다. 인증관리 화면에서 확인해주세요.</dd>
+							</dl>
+						</a>
+					</li>
+
+				</ul>
+				<div class="pageAlertNoData">
+					<p>업데이트 알림 내역이 없습니다.</p>
+				</div>
+				<button type="button" aria-expanded="true" class="pageAlertClose"><span>닫기</span></button>
+			</div>
+		</div>
+		<!-- //2022-10-25 업데이트바 공통수정 -->
+
+		<div class="yaTopBanner Ty01 bgTy01">
+			<a href="javascript:;" class="link yalinkBtn" role="button"> <!-- 09.30 접근성 role="button"추가-->
+				<span>연결만료된 N개 기관이 있어요</span>
+				<p>재연결하고 환급금액 확인하기</p>
+			</a>
+			<button type="button" class="btnClose"><span class="blind">닫기</span></button><!-- 2022-10-21 닫기 버튼 추가 -->
+		</div>
+
+		<div class="yaTopBanner Ty01 bgTy02">
+			<a href="javascript:;" class="link yalinkBtn" role="button"> <!-- 09.30 접근성 role="button"추가-->
+				<span>만료예정인 N개 기관이 있어요</span>
+				<p>재연결하고 환급금액 확인하기</p>
+			</a>
+			<button type="button" class="btnClose"><span class="blind">닫기</span></button><!-- 2022-10-21 닫기 버튼 추가 -->
+		</div>
+
+		<div class="yaTopBanner Ty01 bgTy03">
+			<a href="javascript:;" class="link yalinkBtn" role="button"> <!-- 09.30 접근성 role="button"추가-->
+				<span>환급금액을 위해 자산연결이 필요해요!</span>
+				<p>지금바로 자산연결하기</p>
+			</a>
+			<button type="button" class="btnClose"><span class="blind">닫기</span></button><!-- 2022-10-21 닫기 버튼 추가 -->
+		</div>
+
+		<div class="noDataBox yaType">
+			<a href="javascript:;" class="link yalinkBtn">
+			<p>기본정보 </p>
+			<span>연 <span class="dataValue">7000</span>만원, 무주택, 인적공제 없음</span></a>
+		</div>
+
+		<!-- [2023-01-06] 수정 -->
+		<div class="yabannerArea mt30">
+			<div class="yabanner ty10">
+				<a href="javascript:;" class="link"  role="button">
+					모의계산하기
+				</a>
+				<p>13월의 월급을 계산해보세요</p>
+			</div>
+		</div>
+
+		<!-- 2022-09-27 클래스(mt30) 추가 -->
+		<h2 class="defTit ty01 mt30"><strong>2022년</strong> <span>13월의 월급은 <span><br>
+			<strong><span class="dataValue">11,970,000원</span></strong>  환급이 예상돼요!
+		</h2>
+		<div>
+			<a href="javascript:;" class="btnBodyLine rad8" role="button">자세히 보기</a><!--09.29 띄어쓰기 수정-->
+		</div>
+
+		<div class="yabannerArea">
+			<h3 class="tit">소득공제</h3>
+			<div class="yabanner tyCase03 h200"><!--09.13 클래스 ty03에서 tyCase03로 변경-->
+				<p>공제율이 높은 체크카드도</br>
+					사용해 보세요!</p>
+			</div>
+			<!-- 09.14 케이스 별 문구 추가
+			<div class="yabanner tyCase01">
+				<p>주택청약을 000만원</br>
+					더 납입해보세요</p>
+			</div>--주택관련--
+
+			<div class="yabanner tyCase01">
+				<p>소비 항목은 최대로 채웠어요</br>
+					주택청약 항목도 채워보세요</p>
+			</div>--주택관련--
+		
+			<div class="yabanner tyCase02">
+				<p>주택청약은 최대로 채웠어요</br>
+					소비항목도 채워보세요</p>
+			</div>--소비관련--
+
+			<div class="yabanner tyCase02">
+				<p>$000$만원을 더 소비하면 </br>
+					공제가 시작돼요!</p>
+			</div>--소비관련--
+
+			<div class="yabanner tyCase03">
+				<p>공제율이 높은 체크카드도</br>
+					사용해 보세요!</p>
+			</div>--카드--
+
+			<div class="yabanner tyCase03">
+				<p>혜택이 가득한 신용카드도</br>
+					사용해보세요~</p>
+			</div>--카드--
+
+			<div class="yabanner tyCase03">
+				<p>공제율이 높은 체크카드를 </br>
+					사용해 보세요!</p>
+			</div>--카드--
+
+			<div class="yabanner tyCase04">
+				<p>절세를 위한 좋은 소비습관을</br>
+					가지고 계시네요~</p>
+			</div>--축하--
+
+			<div class="yabanner tyCase04">
+				<p>소비,청약 항목을</br>
+					최대로 채웠어요!</p>
+			</div>--축하--
+
+			<div class="yabanner tyCase04">
+				<p>소비 항목을 최대로 채웠어요!</br>
+					어떠세요?</p>
+			</div>--축하--
+
+			<div class="yabanner tyCase05">
+				<p>국민연금은 납부하는 만큼</br>
+					공제받을 수 있어요</p>
+			</div>--공제--
+
+			<div class="yabanner tyCase05">
+				<p>주택청약은 최대로 채웠어요</br>
+					다른 항목도 채워보세요</p>
+			</div>!--공제--
+
+			<div class="yabanner tyCase06">
+				<p>공제액을 분석해드리고</br>
+					싶지만 정보가 부족해요</p>
+			</div>--정보부족 --
+				--09.14 케이스 별 문구 추가 -->
+		</div>
+
+		<div class="formWrap addShoow"><!--s:formWrap-->
+			<div class="yanowWrap bdR10">
+				<div class="titWrap">
+					<strong class="tit">소비</strong>
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">소비 툴팁 열기</span></button>
+						<div class="tooltipCont">
+							<p>신용카드,체크카드,현금영수증의 사용금액이 총 급여의 25% 넘는 금액부터 공제가 시작됩니다. <br>
+							공제율 : 신용15%, 체크30%, 현금30%
+								</p>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+					<!-- <a href="javascript:;" class="linkTxt yalinkBtn">자세히보기</a> -->
+				</div>
+				<div clsss="cont">
+					<div class="yagraphArea">
+						<span>소득공제</span>
+						<div class="yatexgraphBox">
+							<div class="baseGraph"><span class="lineGraph" data-value="0"></span></div>
+						</div>
+					</div>
+					<ul class="yalistBox">
+						<li>
+							<span class="list_title">공제금액</span>
+							<span class="list_item"><span class="dataValue"></span>원</span>
+						</li> 
+						<li>
+							<span class="list_title">현재 총 사용금액</span>
+							<span class="list_item"><span class="dataValue"></span>원</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--e:formWrap-->
+
+		<div class="yabannerArea mt30">
+			<h3 class="tit">세액공제</h3>
+			<div class="yabanner tyCase10 h200"><!--09.13 클래스 ty10에서 tyCase10로 변경-->
+				<p>700만원까지 공제 가능한 <br>
+					IRP를 추가 납입 해보세요</p>
+			</div>
+			<!-- 09.14 케이스 추가
+			<div class="yabanner tyCase07">
+				<p>IRP 가입하고 300만원 <br>
+				추가 공제를 받아보세요</p>
+			</div>--가입관련--
+
+			<div class="yabanner tyCase07">
+				<p>IRP 가입하고 400만원  <br>
+				추가 공제를 받아보세요</p>
+			</div>--가입관련--
+
+			<div class="yabanner tyCase07">
+				<p>절세와 미래를 위해  <br>
+					IRP/연금저축을 가입해보세요</p>
+			</div>--가입관련--
+
+			<div class="yabanner tyCase07">
+				<p>700만원까지 공제 가능한 <br>
+				IRP를 가입해보세요 </p>
+			</div>--가입관련--
+
+			<div class="yabanner tyCase07">
+				<p>900만원까지 공제 가능한 <br>
+					IRP를 가입해보세요</p>
+			</div>--가입관련--
+
+			<div class="yabanner tyCase08">
+				<p>IRP / 연금저축 외에도 보장성 <br>
+				보험으로 추가 공제 받으세요</p>
+			</div>--보험관련--
+
+			<div class="yabanner tyCase08">
+				<p>IRP 외에도 보장성보험으로 <br>
+				추가 공제를 받으세요</p>
+			</div>--보험관련--
+
+			<div class="yabanner tyCase09">
+				<p>보장성 보험 공제 한도가 <br>
+				남아 있어요!</p>
+			</div>--알림--
+
+			<div class="yabanner tyCase10">
+				<p>700만원까지 공제 가능한 <br>
+				IRP를 추가 납입 해보세요</p>
+			</div>--납입--
+
+			<div class="yabanner tyCase10">
+				<p>900만원까지 공제 가능한  <br>
+					IRP를 추가 납입 해보세요</p>
+			</div>--납입--
+
+			<div class="yabanner tyCase10">
+				<p>IRP 납입하고 300만원 <br>
+					추가 공제를 받아보세요</p>
+			</div>--납입--
+
+			<div class="yabanner tyCase10">
+				<p>IRP 납입하고 400만원 <br>
+					추가 공제를 받아보세요</p>
+			</div>--납입--
+
+			<div class="yabanner tyCase10">
+				<p>IRP/연금저축에 <br>
+					추가 납입해보세요</p>
+			 </div>--납입--
+
+			<div class="yabanner tyCase11">
+				<p>절세를 위한 좋은 습관이 <br>
+				있으시네요!</p>
+			</div>--축하,박수--
+			-- 09.14 케이스 추가 -->
+		</div>
+
+		<div class="formWrap addShoow"><!--s:formWrap-->
+			<div class="yanowWrap bdR10">
+				<div class="titWrap">
+					<strong class="tit">IRP/연금저축</strong>
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">IRP/연금저축 툴팁 열기</span></button>
+						<div class="tooltipCont">
+							<p>두개 모두 보유시에는 연금저축은 400만원 + 퇴직연금(IRP)로 300만원까지 납입 최대 금액으로 공제가 가능하며, <br>두개중 한개만 보유시에는 퇴직연금(IRP):최대 700만원 까지, 연금저축 : 최대 400만원까지 한도 인정<br>
+							*만50세 이상은 최대 900만원 까지 한도 인정
+							</p>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+				<!-- 	<a href="javascript:;" class="linkTxt yalinkBtn">자세히보기</a> -->
+				</div>
+				<div clsss="cont">
+					<div class="yagraphArea">
+						<span>소득공제</span>
+						<div class="yatexgraphBox">
+							<div class="baseGraph"><span class="lineGraph" data-value="0"></span></div>
+						</div>
+					</div>
+					<ul class="yalistBox">
+						<li>
+							<span class="list_title">공제금액</span>
+							<span class="list_item"><span class="dataValue"></span>원</span>
+						</li> 
+						<li>
+							<span class="list_title">현재 총 사용금액</span>
+							<span class="list_item"><span class="dataValue"></span>원</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--e:formWrap-->
+
+
+		<!-- [2023-01-06] 수정 -->
+		<!-- 
+		<div class="yabannerArea baHalf">
+			<div class="yabanner ty11">
+				<a href="javascript:;" class="link">
+					정산결과<br> 리뷰
+				</a>
+			</div>
+
+			<div class="yabanner ty12">
+				<a href="javascript:;" class="link">
+					자산n절세 <br>인사이트
+				</a>
+			</div>
+		</div> -->
+		<div class="yabannerArea mt30">
+			<div class="yabanner ty06">
+				<a href="javascript:;" class="link"  role="button"><!-- 09.30 접근성 role="button"추가-->
+					자산n절세 인사이트
+				</a>
+				<p>전문가의 꿀팁을 한번에 확인해보세요</p>
+			</div>
+		</div>
+
+		<div class="yatexbtnWrap mt25">
+			<a href="javascript:;" class="setBtn" title="모의계산 설정하기" aria-haspopup="true">설정하기</a>
+			<a href="javascript:;" class="sinmBtn" title=" 모의계산 자산연결" aria-haspopup="true">자산연결</a>
+		</div>
+
+	</div>
+</div>
+
+<script type="text/javascript">
+   $(".yatexgraphBox").each(function(i) {
+		graphValue = $(this).find(".lineGraph").attr("data-value");
+		$(this).find(".lineGraph").animate({width:graphValue + "%"}, 500);
+	});
+
+</script>
+</body>
+</html>

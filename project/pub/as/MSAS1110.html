@@ -1,0 +1,171 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>[P] 자동이체상세 | 계좌상세 | 현황 | 자산</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function() {
+		fullLayerPop();
+	});
+</script>
+</head>
+<body>
+<div class="wrapper nhasset"><!-- 바닥페이지 --></div>
+
+<!-- ###################################### -->
+<!-- ### [팝업] 자동이체상세 ### -->
+<!-- ###################################### -->
+<div class="nhasset popWrap fullLayerPop">
+	<div class="popInner">
+		<h1>자동이체 상세</h1>
+		<div class="popCont grayPop">
+			<!-- -------------------------------------- -->
+			<!-- [목록영역] 자동이체내역 -->
+			<!-- -------------------------------------- -->
+			<div class="infoData3" data-swiper-type="list1" data-swiper-space="20"> <!-- [D] 동적 컨텐츠일 경우 마지막에 uiSetSwiper() 함수 호출 -->
+				<ul>
+					<!-- [반복] -->
+					<li>
+						<!-- [은행로고] -->
+						<dl class="dataInfo1">
+							<dt>자동이체 출금계좌 은행</dt>
+							<dd>
+								<span class="imgWrap"><img src="../../images/logos/AAER0000.png" alt="" class="imgLogo"></span>
+								<strong>신한은행</strong>
+							</dd>
+							<dt>자동이체 입금계좌 은행</dt>
+							<dd>
+								<span class="imgWrap"><img src="../../images/logos/AAEM0000.png" alt="" class="imgLogo"></span>
+								<strong>우리은행</strong>
+							</dd>
+						</dl>
+
+						<!-- [배너영역] 출금계좌가 당행계좌가 아닌 경우 노출  -->
+						<div class="areaBanner6">
+							<a href="javascript:;" class="img1"><span>출금계좌를 농협은행으로 변경해보세요.</span></a>
+						</div>
+
+						<!-- [정보영역] -->
+						<ul class="detailList">
+							<li>
+								<span class="tit">출금 금융기관</span>
+								<span class="value">신한</span>
+							</li>
+							<li>
+								<span class="tit">출금 계좌번호</span>
+								<span class="value">84184151562</span>
+							</li>
+							<li>
+								<span class="tit">입금 금융기관</span>
+								<span class="value">우리</span>
+							</li>
+							<li>
+								<span class="tit">입금 계좌번호</span>
+								<span class="value">1564564156</span>
+							</li>
+							<li>
+								<span class="tit">이체금액</span>
+								<span class="value"><strong class="dataValue">5,000</strong><em class="won">원</em></span>
+							</li>
+							<li>
+								<span class="tit">이체일</span>
+								<span class="value">29일</span>
+							</li>
+							<li>
+								<span class="tit">이체주기</span>
+								<span class="value">11개월마다</span>
+							</li>
+							<li>
+								<span class="tit">메모</span>
+								<span class="value">적요란에입력된메모표시함한글기준30자까지표시할수있습니다.</span>
+							</li>
+						</ul>
+					</li>
+					<!-- [반복] -->
+					<li>
+						<dl class="dataInfo1">
+							<dt>자동이체 출금계좌 은행</dt>
+							<dd>
+								<span class="imgWrap"><img src="../../images/logos/AABG0000.png" alt="" class="imgLogo"></span>
+								<strong>농협은행</strong>
+							</dd>
+							<dt>자동이체 입금계좌 은행</dt>
+							<dd>
+								<span class="imgWrap"><img src="../../images/logos/AAAK0000.png" alt="" class="imgLogo"></span>
+								<strong>한국스탠다드차타드은행</strong>
+							</dd>
+						</dl>
+						<ul class="detailList">
+							<li>
+								<span class="tit">출금 금융기관</span>
+								<span class="value">농협</span>
+							</li>
+							<li>
+								<span class="tit">출금 계좌번호</span>
+								<span class="value">84184151562</span>
+							</li>
+							<li>
+								<span class="tit">입금 금융기관</span>
+								<span class="value">한국스탠다드차타드</span>
+							</li>
+							<li>
+								<span class="tit">입금 계좌번호</span>
+								<span class="value">1564564156</span>
+							</li>
+							<li>
+								<span class="tit">이체금액</span>
+								<span class="value"><strong class="dataValue">5,000</strong><em class="won">원</em></span>
+							</li>
+							<li>
+								<span class="tit">이체일</span>
+								<span class="value">29일</span>
+							</li>
+							<li>
+								<span class="tit">이체주기</span>
+								<span class="value">11개월마다</span>
+							</li>
+							<li>
+								<span class="tit">메모</span>
+								<span class="value">적요란에입력된메모표시함한글기준30자까지표시할수있습니다.</span>
+							</li>
+						</ul>
+					</li>
+					<!-- [반복] -->
+				</ul>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [알아두세요] -->
+			<!-- -------------------------------------- -->
+			<div class="info_area">
+				<strong class="info_area_title">알아두세요</strong>
+				<ul class="listBul disc">
+					<li>본인 계좌에 대한 자동이체 정보만 제공합니다.</li>
+				</ul>
+			</div>
+			<!-- -------------------------------------- -->
+		</div>
+
+		<div class="popBtnWrap">
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+		</div>
+	</div>
+</div>
+<!-- ###################################### -->
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>[P]조기은퇴 맞춤정보 | 조기은퇴진단 | 컨설팅</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+$(document).ready(function () {
+	fullLayerPop();
+})
+</script>
+</head>
+<body>
+<div class="wrapper nhasset"><!-- 바닥페이지 --></div>
+
+<!-- ###################################### -->
+<!-- ### [팝업] 준비한 금액 수정 ### -->
+<!-- ###################################### -->
+<div class="nhasset popWrap fullLayerPop">
+	<div class="popInner">
+		<h1>준비한 금액 수정</h1>
+		<div class="popCont grayPop">
+			<!-- // -->
+			<div class="boxTypeWrap t1">
+				<div class="subTxt3 img1">
+					<p>준비한 금액은 은퇴시점의 합계액으로 계산하여 보여집니다. (단위 : 만원)</p>
+				</div>
+				<ul class="detailList type03">
+					<li>
+						<span class="tit">금융자산</span>
+						<span class="value"><strong class="dataValue">72,504,320</strong><em class="won">원</em></span>
+					</li>
+					<li>
+						<span class="tit">공적연금 적립금</span>
+						<span class="value"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+					</li>
+					<!-- 토글 OFF시 -->
+					<li>
+						<span class="tit">실물자산
+							<span class="tgBtnType2 small">
+								<input type="checkbox" id="MSAEa620P1" aria-label="실물자산(포함)">
+								<label for="MSAEa620P1" aria-hidden="true"><span class="blind">포함</span></label>
+							</span>
+						</span>
+						<span class="value"><span class="subTxt8">금융자산으로만 준비할래요</span></span>
+					</li>
+					<!-- 토글 ON시 -->
+					<li>
+						<span class="tit">실물자산
+							<span class="tgBtnType2 small">
+								<input type="checkbox" id="MSAEa620P2" checked aria-label="실물자산(포함)">
+								<label for="MSAEa620P2" aria-hidden="true"><span class="blind">포함</span></label>
+							</span>
+						</span>
+						<span class="value"><strong class="dataValue">1,000,000</strong><em class="won">원</em></span>
+					</li>
+					<!-- // -->
+				</ul>
+				<div class="formWrap t1">
+					<div class="titListBox">
+						<ul>
+							<li>
+								<div class="formTitN">
+									<strong>연금(저축)보험</strong>
+									<div class="tooltipWrap">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">연금(저축)보험 툴팁 열기</span></button>
+										<div class="tooltipCont">
+											<p>연금 또는 저축을 목적으로 가입한 보험이 있다면 해지환급금 또는 납입한 합계보험료를 입력해 주세요.</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="formTxt">입력하신 연금보험은 ‘연금진단’에도 반영됩니다.</div>
+								<div class="inputVal mt10" aria-live="assertive">(약 1억 346만원)</div>
+								<div class="inputList unitMan">
+									<input type="tel" title="연금(저축)보험 금액" placeholder="금액을 입력하세요" value="103,456,789">
+									<span class="unit">원</span>
+									<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+								</div>
+								<!-- 샘플 : 연금(저축)보험 금액_오류유형 클래스(.error) 추가 / 오류 메세지 노출 -->
+								<div class="inputList error">
+									<input type="tel" title="연금(저축)보험 금액" placeholder="금액을 입력하세요" value="999,999,999">
+									<span class="unit">원</span>
+									<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+								</div>
+								<p class="errorTxt" aria-live="assertive">입력 가능한 금액을 초과하였습니다.</p>
+								<!-- // -->
+							</li>
+							<li>
+								<div class="formTitN"><strong>월 저축금액</strong></div>
+								<div class="inputVal mt10" aria-live="assertive">(약 00억 0,000만원)</div>
+								<div class="inputList unitMan">
+									<input type="tel" title="월 저축금액" placeholder="금액을 입력하세요" value="103,456,789">
+									<span class="unit">원</span>
+									<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+								</div>
+								<p class="errorTxt none" aria-live="assertive">입력 가능한 금액을 초과하였습니다.</p> <!-- [D] 노출 시 클래스(none) 삭제 -->
+							</li>
+							<!-- // -->
+							<li>
+								<div class="formTitN">
+									<strong>퇴직금</strong>
+									<div class="tooltipWrap">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">퇴직금 툴팁 열기</span></button>
+										<div class="tooltipCont">
+											<p>퇴직 시 일시금으로 받았거나 또는 현재 적립되어 있는 퇴직적립액이 있다면 입력해 주세요. (퇴직연금 DC 또는 개인형 IRP 제외)</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="inputVal mt10 none" aria-live="assertive">(약 00억 0,000만원)</div> <!-- [D] 노출 시 클래스(none) 삭제 -->
+								<div class="inputList unitMan">
+									<input type="tel" title="퇴직금" placeholder="금액을 입력하세요">
+									<span class="unit">원</span>
+									<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+								</div>
+								<p class="errorTxt none" aria-live="assertive">입력 가능한 금액을 초과하였습니다.</p> <!-- [D] 노출 시 클래스(none) 삭제 -->
+							</li>
+							<li>
+								<div class="formTitN">
+									<strong>현금성 및 기타자산</strong>
+									<div class="tooltipWrap">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">현금성 및 기타자산 툴팁 열기</span></button>
+										<div class="tooltipCont">
+											<p>비상자금 또는 개인금고 등에 모아둔 자금이 있다면 입력해 주세요.</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="inputVal mt10 none" aria-live="assertive">(약 00억 0,000만원)</div> <!-- [D] 노출 시 클래스(none) 삭제 -->
+								<div class="inputList unitMan">
+									<input type="tel" title="현금성 및 기타자산" placeholder="금액을 입력하세요">
+									<span class="unit">원</span>
+									<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+								</div>
+								<p class="errorTxt none" aria-live="assertive">입력 가능한 금액을 초과하였습니다.</p> <!-- [D] 노출 시 클래스(none) 삭제 -->
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- // -->
+		</div>
+		
+		<div class="popBtnWrap">
+			<div class="popBtn">
+				<a href="javascript:;" class="confirmBtn" role="button">저장</a>
+			</div>
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+		</div>
+	</div>
+</div>
+<!-- ###################################### -->
+</body>
+</html>

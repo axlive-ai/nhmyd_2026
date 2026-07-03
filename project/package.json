@@ -1,0 +1,19 @@
+{
+  "name": "nhmyd-2026",
+  "version": "1.0.0",
+  "description": "NH마이데이터 2026 고도화 UI 퍼블리싱 빌드 (2023년 소스 기반)",
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "build:check": "gulp clean:dry"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "del": "^6.1.1",
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.3.0"
+  }
+}

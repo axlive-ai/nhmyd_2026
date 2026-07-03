@@ -1,0 +1,164 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 가상자산 상세</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">가상자산 상세</a></h1>
+			<!-- <a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>  -->
+			<a href="javascript:;" class="btnAcAdmin"><span class="blind">관리</span></a>
+
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="layerMsgWrap">
+				<p>내 가상자산을 확인해보세요!</p>
+				<button type="button" class="layerMsgClose"><span class="blind">닫기</span></button>
+			</div>
+
+			<div class="boxWrapShadow">
+				<div class="boxTypeWrap delShadow">
+					<!-- 상단 계좌정보 영역 -->
+					<div class="accTopInfo">
+						<h2 class="accName">가상자산<!--<span class="acBookmark"><span class="blind">즐겨찾기</span></span>-->
+							<img src="../../images/logos/ABAA0000.png" alt="빗썸 로고" class="imgLogo"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+						</h2>
+						<dl class="totalBalance">
+							<dt>평가금액
+								<!-- 툴팁 --> <!-- [2022-0-03] 툴팁삭제 -->
+								<!-- <div class="tooltipWrap">
+									<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">연결오류 툴팁 열기</span></button>
+									<div class="tooltipCont">
+										<p>투자내역이 없는 경우, 평가금액이 0원으로 표시됩니다.</p>
+										<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+									</div>
+								</div> -->
+								<!-- // 툴팁 -->
+							</dt>  
+							<dd><strong>6,399,000</strong>원</dd>
+						</dl>
+						
+						<div class="etcInfo compare">
+							평가손익 
+							<div class="tooltipWrap">
+								<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">평가손익 툴팁 열기</span></button>
+								<div class="tooltipCont">
+									<p>평가손익과 수익률은 예상 수익으로 실제와 상이할 수 있습니다.</p>
+									<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+								</div>
+							</div>
+
+							<span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span>
+							<!-- <span class="arrowDown"><em class="blind">감소</em></span> -->
+							<span class="amount inColor"><strong>56,897</strong>원 (+<strong class="dataValue">1.53</strong><em class="won">%</em>)</span>
+
+							<!-- 변동 없을 경우 - arrowNone 클래스 사용, amount 옆의 in, out 관련 색상 클래스 빠짐 // -->
+							<!-- <span class="arrowNone"><em class="blind">없음</em></span>
+							<span class="amount"><strong>0</strong>원</span> -->
+							<!-- //변동 없을 경우 -->
+						</div>
+						<!-- <div class="wrapTag">
+							<span class="type01 radius4">#세제혜택</span>
+						</div> -->
+					</div>
+					<!-- // 상단 계좌정보 영역 -->
+					
+					<hr class="divLine">
+
+					<!-- 계좌정보 상세 -->
+					<div class="accInfoDetail">
+						<ul class="detailList">
+							<li>
+								<span class="tit">유형</span>
+								<span class="value">가상자산 </span>
+							</li>
+							<li>
+								<span class="tit">가상자산명</span>
+								<span class="value">$가산자산명$</span>
+                            </li>
+                            <li>
+								<span class="tit">메모</span>
+								<span class="value"><a href="javascript:;" class="underline">미입력</a></span>
+							</li>
+							<li>
+								<span class="tit">최종등록일</span>
+								<span class="value">2022.06.14</span>
+							</li>
+						</ul>
+					</div>
+					<!-- // 계좌정보 상세 -->
+				</div>
+				<!--e:delShadow-->
+
+				<div class="moreInfoArea"><!--09.02 div moreInfoArea 추가  및 이동 s:moreInfoArea-->
+					<!-- 추가정보 열/닫 -->
+					<div class="moreInfoWrap toggleWrap">
+							
+						<div class="moreInfo toggleCont" style="display:none;">
+							<hr class="divLine2" aria-hidden="true">
+							<ul class="detailList">
+								<li>
+									<span class="tit">시세기준일(빗썸제공)</span>
+									<span class="value">2022.05.13 <em>13:00:00</em></span>
+								</li>
+								<li>
+									<span class="tit">1ETH</span>
+									<span class="value"><strong class="dataValue">2,000</strong><em class="won">원</em></span>
+								</li>
+								<li>
+									<span class="tit">보유수량</span>
+									<span class="value">55 ETH</span>
+								</li>
+								<li>
+									<span class="tit">총 매입금액 </span> 
+									<span class="value"><strong class="dataValue">5,500,000</strong><em class="won">원</em></span>
+								</li>
+								<li>
+									<span class="tit">1코인당 평균 매입금액</span>
+									<span class="value"><strong class="dataValue">100,000</strong><em class="won">원</em></span>
+								</li>							
+							</ul>
+						</div>
+						<button type="button" class="moreOpenBtn toggleBtn"><span class="toggleTxt07">상세정보 보기</span></button> <!--09.21 toggleTxt07 수정-->
+					</div>
+					<!-- // 추가정보 열/닫 -->
+				</div>
+				<!--e:moreInfoArea-->
+			</div>
+			<!--e:boxWrapShadow-->
+			<div class="info_area">
+                <strong class="info_area_title">빗썸 거래소 기준으로 시세정보를 제공합니다.</strong>
+            </div>
+    
+		</div>
+		<!-- //container -->
+
+	</div>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

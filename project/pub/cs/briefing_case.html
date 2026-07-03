@@ -1,0 +1,349 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 소비패턴</title>
+<script src="../pub-assets/js/head.js"></script>
+<style>
+    .nhasset .totalBalance .searchBox:before{top:0 !important}
+    .nhasset .totalBalance .searchBox{padding-top:5px;}
+    .nhasset .boxTypeWrap.addType{min-height: 440px;}
+</style>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">소비패턴</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+            <!-- <div class="totalBalance"> ////10.18  삭제
+                <div class="searchBox box01">
+                    <strong>이번 달 생활 소비 브리핑</strong>
+                </div>
+            </div> -->
+
+            <div class="briefflexWrap swiper-container"> <!-- 2023-01-25 swiper-container 클래스추가 -->
+                <ul class="swiper-wrapper"> <!-- 2023-01-25 swiper-wrapper 클래스추가 -->
+                    <li class="swiper-slide"> <!-- 2023-01-25 swiper-slide 클래스추가 -->
+                        <div class="boxTypeWrap addType"> <!--s:boxTypeWrap-->
+                            <div class="briefingWrap">
+                                <!-- 인터넷쇼핑 -->
+                                <div class="briefItem type01">
+                                    <div class="titNum">생활 소비 브리핑 <em>#1</em></div>  <!--10.18  타이틀 추가-->
+                                    <h3 class="briefTit">
+                                        <div class="imgWrap icoCate">
+                                            <span class="img"><img src="../../images/category/cs/ico_cate_cs05.png" alt="온라인쇼핑 아이콘"></span>
+                                        </div>
+                                        월급은 스칠 뿐, 텅장 조심!
+                                    </h3>
+                                    <div class="briefTxt">
+                                        <p>이번 달 <a href="javascript:;" class="underLine">인터넷쇼핑</a> 34회 소비했고<br>지난 달 같은 기간보다 12회 더 적게 소비했어요.</p>
+                                    </div>
+                                    <div class="briefGraph">
+                                        <div class="graphWrap" style="height:240px;background:#fff;" tabindex="0" role="img" aria-label="월 예산 00원 중에서 00원을 지출하셨고, 00원 남았습니다.">
+                                            <p style="text-align:center;padding-top:50px;">그래프 영역</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //인터넷쇼핑 -->
+                            </div>
+                        </div>
+                        <!--e:boxTypeWrap-->
+                    </li>
+                    <li class="swiper-slide"> <!-- 2023-01-25 swiper-slide 클래스추가 -->
+                        <div class="boxTypeWrap addType"> <!--s:boxTypeWrap-->
+                            <div class="briefingWrap">
+                                <!-- 편의점 -->
+                                <div class="briefItem type01">
+                                    <div class="titNum">생활 소비 브리핑 <em>#2</em></div>  <!--10.18  타이틀 추가-->
+                                    <h3 class="briefTit">
+                                        <div class="imgWrap icoCate">
+                                            <span class="img"><img src="../../images/category/cs/ico_cate_cs06.png" alt="생활/마트 아이콘"></span>
+                                        </div>
+                                        1+1 행사는 그냥 지나칠 수 없죠~
+                                    </h3>
+                                    <div class="briefTxt">
+                                        <p>이번 달 <a href="javascript:;" class="underLine">편의점</a>에 15회 갔고<br>지난달 같은 기간보다 4회 많이 갔어요.</p> <!-- [2021-11-03] 한은정:문구수정 -->
+                                    </div>
+                                    <div class="briefGraph">
+                                        <div class="graphWrap" style="height:240px;background:#fff;" tabindex="0" role="img" aria-label="월 예산 00원 중에서 00원을 지출하셨고, 00원 남았습니다.">
+                                            <p style="text-align:center;padding-top:50px;">그래프 영역</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //편의점 -->
+                            </div>
+                        </div>
+                        <!--e:boxTypeWrap-->
+                    </li>
+                    <li class="swiper-slide"> <!-- 2023-01-25 swiper-slide 클래스추가 -->
+                        <div class="boxTypeWrap addType"> <!--s:boxTypeWrap-->
+                            <div class="briefingWrap">
+                                <!-- 생활마트 -->
+                                <div class="briefItem type02">
+                                    <div class="titNum">생활 소비 브리핑 <em>#1</em></div>
+                                    <h3 class="briefTit">
+                                        <div class="imgWrap icoCate">
+                                            <span class="img"><img src="../../images/category/cs/ico_cate_cs06.png" alt="생활/마트 아이콘"></span>
+                                        </div>
+                                        나는야 요리왕! 집밥이 좋아요
+                                    </h3>
+                                    <div class="briefTxt">
+                                        <p>이번 달 <a href="javascript:;" class="underLine">생활/마트</a>에서 1,800,000원 소비했고<br>그 중 <a href="javascript:;" class="underLine">식재료</a>에 740,000원 소비했어요.</p> <!-- [2021-11-03] 한은정:문구수정 -->
+                                    </div>
+                                    <div class="briefGraph">
+                                        <div class="graphWrap" style="height:118px;background:#fff;" tabindex="0" role="img" aria-label="월 예산 00원 중에서 00원을 지출하셨고, 00원 남았습니다.">
+                                            <p style="text-align:center;padding-top:50px;">그래프 영역</p>
+                                        </div>
+                                        <!--<p class="briefGraphTit">[이번 달 생활/마트 소비현황]</p> -->
+                                    </div>
+                                    <ul class="legendList mt0">
+                                        <li class="mt0">
+                                            <span class="legendTit type30"><strong class="f12">식재료</strong></span>
+                                            <span class="legendAmnt"><em class="value f12">40,000,000원</em><span class="num ml10 pointColor21 f10">99회</span></span>
+                                        </li>
+                                        <li class="mt0">
+                                            <span class="legendTit type36"><strong class="f12">대형마트</strong></span>
+                                            <span class="legendAmnt"><em class="value f12">4,000,000</em>원<span class="num ml10 pointColor21 f10">80회</span></span>
+                                        </li>
+                                        <li class="mt0">
+                                            <span class="legendTit type31"><strong class="f12">편의점</strong></span>
+                                            <span class="legendAmnt"><em class="value f12">100,000</em>원<span class="num ml10 pointColor21 f10">72회</span></span>
+                                        </li>
+                                        <li class="mt0">
+                                            <span class="legendTit type37"><strong class="f12">생활용품</strong></span>
+                                            <span class="legendAmnt"><em class="value f12">90,000</em>원<span class="num ml10 pointColor21 f10">22회</span></span>
+                                        </li>
+                                        <li class="mt0">
+                                            <span class="legendTit type38"><strong class="f12">그 외</strong></span>
+                                            <span class="legendAmnt"><em class="value f12">80,000</em>원<span class="num ml10 pointColor21 f10">11회</span></span>
+                                        </li>
+                                    </ul>
+                                </div>	
+                            </div>
+                        </div>
+                        <!--e:boxTypeWrap-->
+                    </li>
+                    <li class="swiper-slide"> <!-- 2023-01-25 swiper-slide 클래스추가 -->
+                        <div class="boxTypeWrap addType"> <!--s:boxTypeWrap-->
+                            <div class="briefingWrap">
+                                <!-- 버스/지하철 -->
+                                <div class="briefItem type03">
+                                    <div class="titNum">생활 소비 브리핑 <em>#1</em></div>  <!--10.18  타이틀 추가-->
+                                    <h3 class="briefTit">
+                                        <div class="imgWrap icoCate">
+                                            <span class="img"><img src="../../images/category/cs/ico_cate_cs11.png" alt="자동차/주유 아이콘"></span>
+                                        </div>
+                                        대중교통 이용 할 때 마스크는<br />필수예요.
+                                    </h3>
+                                    <div class="briefTxt">
+                                        <p>이번 달 <a href="javascript:;" class="underLine">버스/지하철</a>을 54회 이용했고<br>직전 3개월 한 달 평균 70회 이용했어요.</p ><!-- [2021-11-03] 한은정:문구수정 -->
+                                    </div>
+                                    <div class="briefGraph">
+                                        <div class="graphWrap" style="height:240px;background:#fff;" tabindex="0" role="img" aria-label="월 예산 00원 중에서 00원을 지출하셨고, 00원 남았습니다.">
+                                            <p style="text-align:center;padding-top:50px;">그래프 영역</p><!--10.21 높이 수정-->
+                                        </div>
+                                    </div>
+                                    <!--<div class="cardBox2">
+                                        <a href="javascript:;">
+                                            <img src="../../images/img_card_ver.png" alt="">
+                                            <img src="../../images/img_card_hor.png" alt="">
+                                            <p class="tit">버스·지하철·택시·철도 7% 청구할인</p>
+                                            <p class="txt">준법감시인 심의필 2021-3411(2021.12.01~2022.11.30)</p>
+                                        </a>
+                                    </div>-->
+                                </div>
+                            </div>
+                        </div>
+                        <!--e:boxTypeWrap-->
+                    </li>
+                    <li class="swiper-slide"> <!-- 2023-01-25 swiper-slide 클래스추가 -->
+                        <div class="boxTypeWrap addType"> <!--s:boxTypeWrap-->
+                            <div class="briefingWrap">
+                                <!-- 대형마트 -->
+                                <div class="briefItem type01">
+                                    <div class="titNum">생활 소비 브리핑 <em>#1</em></div>  <!--10.18  타이틀 추가-->
+                                    <h3 class="briefTit">
+                                        <div class="imgWrap icoCate">
+                                            <span class="img"><img src="../../images/category/cs/ico_cate_cs06.png" alt="생활/마트 아이콘"></span>
+                                        </div>
+                                        과소비 없는 현명한 마트쇼핑이 필요해요
+                                    </h3>
+                                    <div class="briefTxt">
+                                        <p>이번 달 <a href="javascript:;" class="underLine">대형마트</a>에 440,000원 소비했고<br>직전 3개월 한 달 평균 400,000원 소비했어요.</p> <!-- [2021-11-03] 한은정:문구수정 -->
+                                    </div>
+                                    <div class="briefGraph">
+                                        <div class="graphWrap" style="height:240px;background:#fff;" tabindex="0" role="img" aria-label="월 예산 00원 중에서 00원을 지출하셨고, 00원 남았습니다.">
+                                            <p style="text-align:center;padding-top:50px;">그래프 영역</p><!--10.21 높이 수정-->
+                                        </div>
+                                    </div>
+                                    <!--<div class="cardBox2">
+                                        <a href="javascript:;">
+                                            <img src="../../images/img_card_ver.png" alt="">
+                                            <img src="../../images/img_card_hor.png" alt="">
+                                            <p class="tit">하나로클럽·마트/이마트/홈플러스/롯데마트 7~20% 청구할인</p>
+                                            <p class="txt">준법감시인 심의필 2021-3411(2021.12.01~2022.11.30)</p>
+                                        </a>
+                                    </div>-->
+                                </div>
+                            </div>
+                        </div>
+                        <!--e:boxTypeWrap-->
+                    </li>
+                    <li class="swiper-slide"> <!-- 2023-01-25 swiper-slide 클래스추가 -->
+                        <div class="boxTypeWrap addType"> <!--s:boxTypeWrap-->
+                            <div class="briefingWrap">
+                                <!-- 대형마트 -->
+                                <div class="briefItem type02">
+                                    <div class="titNum">생활 소비 브리핑 <em>#1</em></div>  <!--10.18  타이틀 추가-->
+                                    <h3 class="briefTit">
+                                        <div class="imgWrap icoCate">
+                                            <span class="img"><img src="../../images/category/cs/ico_cate_cs02.png" alt="카페/간식 아이콘"></span>
+                                        </div>
+                                        커피저축은 어때요?<br />커피·음료 값 조금만 아껴봐요</h3>
+                                    <div class="briefTxt">
+                                        <p>이번 달 <a href="javascript:;" class="underLine">커피/음료</a>를 20회 마셨고<br>지난달보다 10회 더 많이 마시고 있어요.</p> <!-- [2021-11-03] 한은정:문구수정 -->
+                                    </div>
+                                    <ul class="compareSpend pt10 pb10 mt10"> <!-- [2021-11-03] 한은정:수정 -->
+                                        <li class="mt0 pt0">
+                                            이번 달 커피 총 소비
+                                            <span class="value">
+                                                <strong class="dataValue">904,500</strong><em class="won">원</em>
+                                                <!-- <em class="subValue">(4,500원/1회)</em> -->
+                                            </span>
+                                        </li>
+                                        <li class="bdNone mt0" style="padding-top:5px">지난 달 커피 총 소비
+                                            <span class="value">
+                                                <strong class="dataValue">4,500</strong><em class="won">원</em>
+                                                <!-- <em class="subValue">(4,500원/1회)</em> -->
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <div class="briefGraph"> 
+                                        <h3 class="brTit">최근 3개월 가장 많이 방문한 곳</h3><!--10.21 타이틀 추가-->
+                                        <div class="graphWrap" style="height:120px;background:#fff;" tabindex="0" role="img" aria-label="월 예산 00원 중에서 00원을 지출하셨고, 00원 남았습니다.">
+                                            <p style="text-align:center;padding-top:50px;">그래프 영역</p><!--10.21 높이 수정-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--e:boxTypeWrap-->
+                    </li>
+                    <li class="swiper-slide"> <!-- 2023-01-25 swiper-slide 클래스추가 -->
+                        <div class="boxTypeWrap addType"> <!--s:boxTypeWrap-->
+                            <div class="briefingWrap">
+                                <!-- 대형마트 -->
+                                <div class="briefItem type02">
+                                    <div class="titNum">생활 소비 브리핑 <em>#1</em></div>  <!--10.18  타이틀 추가-->
+                                    <h3 class="briefTit">
+                                        <div class="imgWrap icoCate">
+                                            <span class="img"><img src="../../images/category/cs/ico_cate_cs02.png" alt="카페/간식 아이콘"></span>
+                                        </div>
+                                        커피저축은 어때요?<br />커피·음료 값 조금만 아껴봐요</h3>
+                                    <div class="briefTxt">
+                                        <p>이번 달 <a href="javascript:;" class="underLine">커피/음료</a>를 20회 마셨고<br>지난달보다 10회 더 많이 마시고 있어요.</p> <!-- [2021-11-03] 한은정:문구수정 -->
+                                    </div>
+                                    <ul class="compareSpend pt10 pb10 mt10"> <!-- [2021-11-03] 한은정:수정 -->
+                                        <li class="mt0 pt0">
+                                            이번 달 커피 총 소비
+                                            <span class="value">
+                                                <strong class="dataValue">904,500</strong><em class="won">원</em>
+                                                <!-- <em class="subValue">(4,500원/1회)</em> -->
+                                            </span>
+                                        </li>
+                                        <li class="bdNone mt0" style="padding-top:5px">지난 달 커피 총 소비
+                                            <span class="value">
+                                                <strong class="dataValue">4,500</strong><em class="won">원</em>
+                                                <!-- <em class="subValue">(4,500원/1회)</em> -->
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <div class="briefGraph"> 
+                                        <h3 class="brTit">최근 3개월 가장 많이 방문한 곳</h3><!--10.21 타이틀 추가-->
+                                        <div class="graphWrap" style="height:120px;background:#fff;" tabindex="0" role="img" aria-label="월 예산 00원 중에서 00원을 지출하셨고, 00원 남았습니다.">
+                                            <p style="text-align:center;padding-top:50px;">그래프 영역</p><!--10.21 높이 수정-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--e:boxTypeWrap-->
+                    </li>
+                    <li class="swiper-slide"> <!-- 2023-01-25 swiper-slide 클래스추가 -->
+                        <div class="boxTypeWrap addType"> <!--s:boxTypeWrap-->
+                            <div class="briefingWrap">
+                                <!-- 쇼핑잡화 -->
+                                <div class="briefItem type01">
+                                    <div class="titNum">생활 소비 브리핑 <em>#1</em></div>  <!--10.18  타이틀 추가-->
+                                    <h3 class="briefTit">
+                                        <div class="imgWrap icoCate">
+                                            <span class="img"><img src="../../images/category/cs/ico_cate_cs02.png" alt="카페/간식 아이콘"></span>
+                                        </div>
+                                        설탕은 조금만,<br>당신은 충분히 달콤하니까요
+                                    </h3>
+                                    <div class="briefTxt">
+                                        <p>이번 달 <a href="javascript:;" class="underLine">카페/간식</a>에 총 10,000원 소비했고<br>그 중 
+                                            <a href="javascript:;" class="underLine">빵/디저트</a>에 5,000원 사용했어요.</p> <!-- [2021-10-20] 윤지현:띄어쓰기수정 -->
+                                    </div>
+                                    <div class="briefGraph">
+                                        <div class="graphWrap" style="height:110px;background:#fff;" tabindex="0" role="img" aria-label="월 예산 00원 중에서 00원을 지출하셨고, 00원 남았습니다.">
+                                            <p style="text-align:center;padding-top:50px;">그래프 영역</p><!--10.21 높이 수정-->
+                                        </div>
+                                    </div>
+                                    <div class="briefgreenBox">
+                                        <p class="subTxt3">카페, 어디에 가장 많이 썼을까?</p>
+                                        <div class="d-flex">
+                                            <div>
+                                                <em class="tag bgGreen">1위</em>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:;" class="linkTxt2" style="display: block;">파리바게트</a>
+                                                <p class="inoutTit"><strong>99,000,000원</strong><em>10회</em></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                            </div>
+                        </div>
+                        <!--e:boxTypeWrap-->
+                    </li>
+
+                </ul>
+                <div class="swiper-button-prev blind"></div>
+                <div class="swiper-button-next blind"></div>
+            </div>
+		</div>
+        <!-- //container -->
+        <script> //2022-01-25 김범석:함수추가
+			$(function () {
+				briefflexWrapSwiper();
+			})
+		</script>
+
+	</div>
+
+</body>
+</html>

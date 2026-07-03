@@ -1,0 +1,207 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>정기지출관리</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">정기지출관리</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+            <div class="boxTypeWrap pt0 pb0">
+                <div class="sampleImg">
+                    <div class="totalBalance mt20 ac">
+                        <div class="defTit mb30">
+                            <strong>혹시 보이지 않는<br />정기지출이 있나요?</strong>
+                        </div>
+                        <img src="../../images/sample_spend050101.png" alt="">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="yatexbtnWrap mt20">
+				<a href="javascript:;" title="숨긴 내역 보기" aria-haspopup="true" class="cardHide01">숨긴 내역 보기</a>
+				<a href="javascript:;" title="정기지출 불러오기" aria-haspopup="true" class="cardHide02">정기지출 불러오기</a>
+            </div>
+
+            <div class="boxTypeWrap">
+				<div class="cs cardComparedTitle mt0">
+                    <div class="inner"><button type="button" title="선택"><span>30대 여성</span></button> 에게</div>
+                    <div class="inner2"><strong>가장 인기 있는 구독서비스는?</strong></div>
+                </div>
+				<div class="cs csTopsellWrap mortion mt0">
+					<div class="label">1위</div>
+					<div class="ico mor"><img src="../../images/logo_youtube.png" /></div>
+					<div class="ico_bg"><img src="../../images/bg_csmortion.png" /></div>
+					<div class="price undertext">유튜브 프리미엄</span></div>
+				</div>
+				<div class="csSubsellWrap">
+					<div>
+						
+						<div class="csSubsellImgWrap">
+							<div>
+								<span class="imgWrap icoCate">
+									<span class="img bdNone">
+										<img src="../../images/ico_melon.png" alt="멜론뮤직">
+									</span>
+								</span>
+							</div>
+							<div>
+                                <div class="cs label">2위</div>
+								<span class="datatit">멜론뮤직</span>
+							</div>
+						</div>
+					</div>
+					<div>
+						
+						<div class="csSubsellImgWrap">
+							<div>
+								<span class="imgWrap icoCate">
+									<span class="img bdNone">
+										<img src="../../images/ico_netflex.png" alt="넷플릭스">
+									</span>
+								</span>
+							</div>
+							<div>
+                                <div class="cs label">3위</div>
+								<span class="datatit">넷플릭스</span>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+
+            <div class="boxTypeWrap">
+                <div class="totalBalance bigSize bgNCard  mt0"><!--10. 28 bgNCard08 삭제 -->
+                    <p class="subTxt"><strong>구독서비스 혜택 받는 카드가 궁금하다면?</strong></p>
+                </div>
+                <hr class="divLine3" style="margin:10px 0">
+				<div class="bannerWarpPrd swCardCompWrap">
+					<div class="swiper-container bannerSwiperPrd">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="swCardComp">
+									<div class="cardInfoWrap">
+										<div class="cs cardInfoArea"><strong>기본할인, 더블할인에 생활할인까지!구독서비스 5%청구 할인</strong></div>
+										<span class="cs cardImgArea" aria-hidden="true"><img src="../../images/img_cs_card04.png" alt=""></span> <!-- [2023-01-05] 카드이미이 수정, alt 추가 -->
+									</div>
+									<div class="cardHashtag"><span>#별다줄 카드</span><span>#별별 혜택을 다주는</span></div>
+									<div class="cardReview">준법감시인심의필 2022-2835(2022.06.15~2023.12.31.)</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="swCardComp">
+									<div class="cardInfoWrap">
+										<div class="cs cardInfoArea"><strong>조건 없는 기본 적립에 유튜브, 넷플릭스, 티빙 추가 적립!</strong></div>
+										<span class="cs cardImgArea" aria-hidden="true"><img src="../../images/img_cs_card01.png" alt=""></span> <!-- [2023-01-05] 카드이미이 수정, alt 추가 -->
+									</div>
+									<div class="cardHashtag"><span>#NH1961카드</span><span>#무제한 적립</span></div>
+									<div class="cardReview">준법감시인심의필 2022-2835(2022.06.15~2023.12.31.)</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="swCardComp">
+									<div class="cardInfoWrap">
+										<div class="cs cardInfoArea"><strong>유튜브,넷플릭스,멜론 20% 할인과 모든 일상에서 FLEX 청구할인!</strong></div>
+										<span class="cs cardImgArea" aria-hidden="true"><img src="../../images/img_cs_card03.png" alt=""></span> <!-- [2023-01-05] 카드이미이 수정, alt 추가 -->
+									</div>
+									<div class="cardHashtag"><span>#올바른FLEX카드</span><span>#혜택을 FLEX</span></div>
+									<div class="cardReview">준법감시인심의필 2022-2835(2022.06.15~2023.12.31.)</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="swCardComp">
+									<div class="cardInfoWrap">
+										<div class="cs cardInfoArea"><strong>전 가맹점 0.7% 무제한 적립에 통신요금, 구독서비스 등 추가 적립!</strong></div>
+										<span class="cs cardImgArea" aria-hidden="true"><img src="../../images/img_cs_card02.png" alt=""></span> <!-- [2023-01-05] 카드이미이 수정, alt 추가 -->
+									</div>
+									<div class="cardHashtag"><span>#올바른 NEW HAVE 카드</span><span>#스마트한 혜택</span></div>
+									<div class="cardReview">준법감시인심의필 2022-2835(2022.06.15~2023.12.31.)</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-control">
+							<div class="swiper-pagination"></div>
+							<div class="swiper-autoBtn playing">
+								<a href="javascript:;" class="stopBtn" title="자동재생중 두번 터치시 멈춤"></a>
+								<a href="javascript:;" class="playBtn" title="자동재생 멈춤 두번 터치시 자동재생시작"></a>
+							</div>
+						</div>
+						<div class="swiper-button-prev blind"></div>
+						<div class="swiper-button-next blind"></div>
+					</div>
+					<script>
+						$(function () {
+							var swiper = new Swiper('.bannerSwiperPrd', {
+								slidesPerView: 1,
+								spaceBetween: 10,
+								loop: true,
+								observer:true,
+								observeParents : true,
+								autoplay: {
+									delay: 2500,
+									disableOnInteraction: true,
+									pauseOnMouseEnter: true,
+								},
+
+								pagination: {
+									el: '.swiper-pagination',
+									type: 'bullets',
+									clickable: true,
+								},
+								on: {
+									transitionEnd: function () {
+										$('.swiper-slide').attr('aria-hidden', 'true')
+										$('.swiper-slide-active').attr('aria-hidden', 'false')
+									}
+								}
+							});
+							$('.bannerSwiperPrd').find('.stopBtn').on('click', function () {
+								$('.swiper-autoBtn').removeClass('playing');
+								swiper.autoplay.stop();
+								console.log('자동재생 멈춤');
+							})
+							$('.bannerSwiperPrd').find('.playBtn').on('click', function () {
+								$('.swiper-autoBtn').addClass('playing');
+
+								swiper.autoplay.start();
+								console.log('자동재생 시작');
+							})
+						})
+					</script>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+	<style>
+		.nhasset .cs.cardComparedTitle .inner button{font-size:clamp(20px, 2rem, 30px);color: #000;}
+		.nhasset .cs.cardComparedTitle .inner button{background:url('../../images/arr_down02.png')no-repeat right 12px;padding-right: 17px;background-size: 10px auto;}
+	</style>
+</body>
+</html>

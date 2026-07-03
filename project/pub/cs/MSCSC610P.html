@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>현금 등록or수정</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		fullLayerPop();
+		categorySwipe()
+	})
+</script>
+</head>
+<body>
+<div class="wrapper nhasset"><!-- 바닥페이지 --></div>
+
+<!-- ###################################### -->
+<!-- ### [팝업] 현금 거래 등록or수정 ### -->
+<!-- ###################################### -->
+<div class="nhasset popWrap fullLayerPop">
+	<div class="popInner">
+		<h1>현금 거래 등록or수정</h1>
+		<div class="popCont grayPop">
+			<div class="formWrap formListBox mt30">
+				<ul>
+					<li>
+						<strong class="cs formTit mt0">현금 거래구분</strong>
+						<div class="boxRadio wrapType mt20">
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo1" id="rdo1" type="radio" checked="checked">
+									<label for="rdo1">소비</label>
+								</span>
+							</div>
+							<div class="boxRadioInn">
+								<span>
+									<input name="rdo1" id="rdo2" type="radio">
+									<label for="rdo2">수입</label>
+								</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div>
+							<strong class="cs formTit">언제 썼나요?</strong>
+							<div class="formWrap mt5">
+								<ul>
+									<li>
+										<ul class="selectDivision_5_5">
+											<li class="pr5">
+												<div class="stList boxType">
+													<a href="javascript:;" title="소비날짜 선택" aria-haspopup="true">
+														<span class="selectValue">2020.08.01</span>
+														<span class="selectBtn"></span>
+													</a>
+													<select name="" title="선택해주세요">
+														<option value=""></option>
+													</select>
+												</div>
+											</li>
+											<li class="pl5">
+												<div class="stList boxType">
+													<a href="javascript:;" title="소비시간 선택" aria-haspopup="true">
+														<span class="selectValue">오전 10:50</span>
+														<span class="selectBtn"></span>
+													</a>
+													<select name="" title="선택해주세요">
+														<option value=""></option>
+													</select>
+												</div>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<hr class="divLine3">
+						<div>
+							<strong class="cs formTit mt0">얼마 썼나요?</strong>
+							<div class="pRelaBox">
+								<div class="inputList error on">
+									<input type="tel" title="소비금액" value="750,000,000" placeholder="소비금액을 입력해주세요">
+									<span class="unit">원</span>
+									<a href="javascript:" class="btnReset" role="button" style="display: inline;">입력내용삭제</a>
+								</div>
+								<!-- [2022-12-29] 금액증가버튼 a로 수정 -->
+								<!-- <div class="mt10">
+									<div class="cs roundChkWrap">
+										<ul>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="s1" id="s1">
+													<label for="s1">+1천</label>
+												</span>
+											</li>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="s1" id="s2">
+													<label for="s2">+1만</label>
+												</span>
+											</li>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="s1" id="s3">
+													<label for="s3">+5만</label>
+												</span>
+											</li>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="s1" id="s4">
+													<label for="s4">+10만</label>
+												</span>
+											</li>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="s1" id="s5">
+													<label for="s5">+100만</label>
+												</span>
+											</li>
+										</ul>
+									</div>
+								</div> -->
+								<div class="roundBtnWrap">
+									<a href="javascript:;" role="button" title="1천원 추가">+1천</a>
+									<a href="javascript:;" role="button" title="1만원 추가">+1만</a>
+									<a href="javascript:;" role="button" title="5만원 추가">+5만</a>
+									<a href="javascript:;" role="button" title="10만원 추가">+10만</a>
+									<a href="javascript:;" role="button" title="100만원 추가">+100만</a>
+								</div>
+								<p class="errorTxt">1부터 99,999,999까지 입력 가능합니다.</p>
+							</div>
+						</div>
+						<hr class="divLine3">
+						<div>
+							<strong class="cs formTit mt0">어디서 썼나요?</strong>
+							<div class="inputList">
+								<input type="text" title="사용처" value="" placeholder="거래내용을 입력하세요.">
+								<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+							</div>
+							<div class="cateSubList clfix">
+								<div class="roundChkWrap flexType">
+									<ul>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="sample22" id="sample21">
+												<label for="sample21">모임회비</label>
+											</span>
+										</li>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="sample22" id="sample22">
+												<label for="sample22">통신비</label>
+											</span>
+										</li>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="sample22" id="sample23">
+												<label for="sample23">학원비</label>
+											</span>
+										</li>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="sample22" id="sample24">
+												<label for="sample24">용돈</label>
+											</span>
+										</li>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="sample22" id="sample25">
+												<label for="sample25">공과금</label>
+											</span>
+										</li>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="sample22" id="sample26">
+												<label for="sample26">재래시장</label>
+											</span>
+										</li>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="sample22" id="sample27">
+												<label for="sample27">간식</label>
+											</span>
+										</li>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="sample22" id="sample28">
+												<label for="sample28">중고거래</label>
+											</span>
+										</li>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="sample22" id="sample29">
+												<label for="sample29">축의금</label>
+											</span>
+										</li>
+										<li>
+											<span class="roundChk">
+												<input type="radio" name="sample22" id="sample30">
+												<label for="sample30">조의금</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<hr class="divLine3">
+						<div>
+							<div>
+								<strong class="cs formTit mt0">소비의 카테고리는?</strong>
+								<div class="cateListHori mt10">
+									<div class="categoryWrap">
+										<ul>
+											<li>
+												<div class="item">
+													<input type="radio" name="catetory" id="cate011"  checked="checked">
+													<label for="cate011">
+														<img src="../../images/category/cs/ico_cate_cs01.png" alt="외식"><!--12.09 카테고리 아이콘 수정-->
+														외식
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="item">
+													<input type="radio" name="catetory" id="cate022">
+													<label for="cate022">
+														<img src="../../images/category/cs/ico_cate_cs02.png" alt="카페·간식"><!--12.09 카테고리 아이콘 수정-->
+														카페/간식
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="item">
+													<input type="radio" name="catetory" id="cate033">
+													<label for="cate033">
+														<img src="../../images/category/cs/ico_cate_cs03.png" alt="술·유흥"><!--12.09 카테고리 아이콘 수정-->
+														술/유흥
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="item">
+													<input type="radio" name="catetory" id="cate044">
+													<label for="cate044">
+														<img src="../../images/category/cs/ico_cate_cs04.png" alt=" 쇼핑"><!--12.09 카테고리 아이콘 수정-->
+														쇼핑
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="item">
+													<input type="radio" name="catetory" id="cate055">
+													<label for="cate055">
+														<img src="../../images/category/cs/ico_cate_cs05.png" alt="온라인쇼핑"><!--12.09 카테고리 아이콘 수정-->
+														온라인쇼핑
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="item">
+													<input type="radio" name="catetory" id="cate066">
+													<label for="cate066">
+														<img src="../../images/category/cs/ico_cate_cs06.png" alt="생활·마트"><!--12.09 카테고리 아이콘 수정-->
+														생활/마트
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="item">
+													<input type="radio" name="catetory" id="cate077">
+													<label for="cate077">
+														<img src="../../images/category/cs/ico_cate_cs07.png" alt="주거·통신"><!--12.09 카테고리 아이콘 수정-->
+														주거/통신
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="item">
+													<input type="radio" name="catetory" id="cate088">
+													<label for="cate088">
+														<img src="../../images/category/cs/ico_cate_cs08.png" alt="의료·건강"><!--12.09 카테고리 아이콘 수정-->
+														의료/건강
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="item">
+													<input type="radio" name="catetory" id="cate099">
+													<label for="cate099">
+														<img src="../../images/category/cs/ico_cate_cs09.png" alt=" 교육·자녀"><!--12.09 카테고리 아이콘 수정-->
+														교육/자녀
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="item">
+													<input type="radio" name="catetory" id="cate111">
+													<label for="cate111">
+														<img src="../../images/category/cs/ico_cate_cs10.png" alt="뷰티·미용"><!--12.09 카테고리 아이콘 수정-->
+														뷰티/미용
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="item">
+													<input type="radio" name="catetory" id="cate122">
+													<label for="cate122">
+														<img src="../../images/category/cs/ico_cate_cs11.png" alt="자동차·주유"><!--12.09 카테고리 아이콘 수정-->
+														자동차/주유
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="item">
+													<input type="radio" name="catetory" id="cate133">
+													<label for="cate133">
+														<img src="../../images/category/cs/ico_cate_cs12.png" alt="교통"><!--12.09 카테고리 아이콘 수정-->
+														교통
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="item">
+													<input type="radio" name="catetory" id="cate144">
+													<label for="cate144">
+														<img src="../../images/category/cs/ico_cate_cs13.png" alt=" 문화·여가"><!--12.09 카테고리 아이콘 수정-->
+														문화/여가
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="item">
+													<input type="radio" name="catetory" id="cate155">
+													<label for="cate155">
+														<img src="../../images/category/cs/ico_cate_cs14.png" alt=" 여행·숙박"><!--12.09 카테고리 아이콘 수정-->
+														여행/숙박
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="item">
+													<input type="radio" name="catetory" id="cate166">
+													<label for="cate166">
+														<img src="../../images/category/cs/ico_cate_cs15.png" alt="금융"><!--12.09 카테고리 아이콘 수정-->
+														금융
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="item">
+													<input type="radio" name="catetory" id="cate177">
+													<label for="cate177">
+														<img src="../../images/category/cs/ico_cate_cs16.png" alt="경조사 선물"><!--12.09 카테고리 아이콘 수정-->
+														경조사/선물
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="item">
+													<input type="radio" name="catetory" id="cate188">
+													<label for="cate188">
+														<img src="../../images/category/cs/ico_cate_cs17.png" alt=" 반려동물"><!--12.09 카테고리 아이콘 수정-->
+														반려동물
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="item">
+													<input type="radio" name="catetory" id="cate199">
+													<label for="cate199">
+														<img src="../../images/category/cs/ico_cate_cs18.png" alt="소비기타"><!--12.09 카테고리 아이콘 수정-->
+														소비 기타
+													</label>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								
+								<div class="cateSubList_all clfix mt20">
+									<div class="roundChkWrap flexType">
+										<ul>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="e1" id="e1">
+													<label for="e1">한식</label>
+												</span>
+											</li>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="e1" id="e12">
+													<label for="e12">중식</label>
+												</span>
+											</li>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="e1" id="e13">
+													<label for="e13">일식</label>
+												</span>
+											</li>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="e1" id="e14">
+													<label for="e14">양식/뷔페</label>
+												</span>
+											</li>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="e1" id="e15">
+													<label for="e15">뷔페</label>
+												</span>
+											</li>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="e1" id="e16">
+													<label for="e16">패스트푸드</label>
+												</span>
+											</li>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="e1" id="e17">
+													<label for="e17">일식</label>
+												</span>
+											</li>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="e1" id="e18">
+													<label for="e18">양식/뷔페</label>
+												</span>
+											</li>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="e1" id="e19">
+													<label for="e19">뷔페</label>
+												</span>
+											</li>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="e1" id="e20">
+													<label for="e20">패스트푸드</label>
+												</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr class="divLine4">
+						<div>
+							<strong class="cs formTit mt0">정기적인 소비라면 <span class="pointColor">반복 등록</span> 하세요.</strong>
+							<p class="subTxt3 fcDark">동일한 금액, 동일한 사용처로 자동 등록 됩니다.</p>
+							<div class="boxRadio wrapType chkWrap mt20">
+								<div class="boxRadioInn">
+									<span>
+										<input name="rdo13" id="rdo16" type="radio" checked="checked">
+										<label for="rdo16">반복없음</label>
+									</span>
+								</div>
+								<div class="boxRadioInn chkbtn">
+									<span>
+										<input name="rdo13" id="rdo17" type="radio">
+										<label for="rdo17">매월</label>
+									</span>
+								</div>
+								<div class="boxRadioInn chkbtn">
+									<span>
+										<input name="rdo13" id="rdo18" type="radio">
+										<label for="rdo18">매주</label>
+									</span>
+								</div>
+								<div class="boxRadioInn chkbtn">
+									<span>
+										<input name="rdo13" id="rdo19" type="radio">
+										<label for="rdo19">매일</label>
+									</span>
+								</div>
+								<!-- 
+								<div class="boxRadioInn chkbtn">
+									<span>
+										<input name="rdo13" id="rdo20" type="radio">
+										<label for="rdo20">매월 말</label>
+									</span>
+								</div>
+								-->
+							</div>
+						</div>
+						<div class="chkfrom">
+							<hr class="divLine3"> 
+							<strong class="formTit mt0">언제까지 자동 반복 등록 할까요?</strong>
+							<div class="autoRepeat">
+								<div class="chkRadio mt15">
+									<input type="radio" id="sample51" name="sample02" class="desgChk"> <!-- 비활성화 시 클래스 disabled="disabled" -->
+									<label for="sample51" class="pointColor21">계속 반복</label>
+								</div>
+
+								<!-- [D] 운영 소스 반영 -->
+								<div class="formWrap mt10">
+									<div class="inputBoth01 div4_6">
+										<div class="cal w100p">
+											<input type="radio" id="reptPeriod2" title="반복종료일 선택" name="sample02" class="desgChk" > 
+											<label>
+												<div class="cal inputB02">
+													<div class="inputList">
+														<input type="text" id="popCal1" value="" title="반복 종료일" placeholder="종료일 선택" readonly="readonly">
+														<a href="javascript:;" id="popCal2" class="btnCalendar" title="날짜선택 새창열림" role="button">
+															<span class="blind">날짜선택</span>
+														</a>
+													</div>
+												</div>까지 반복
+											</label>
+										</div>
+									</div>
+								</div>
+								<!-- // [D] 운영 소스 반영 -->
+
+								<!-- 
+								<div class="formWrap mt10">
+									<div class="inputBoth01 div4_6">
+										<div class="cal w100p">
+											<div class="inputList unitMan">
+												<div class="chkRadio pt10" style="padding-left:13px;padding-bottom:13px">
+													<input type="checkbox" id="sample001" checked="checked">
+													<label for="sample001" style="width:100px;margin-left:0px">2023.08.01</label>
+												</div>
+												<div>
+													<span class="unit" style="position: absolute;right:20px">까지 반복</span>
+													<a href="javascript:;" class="btnCalendar" title="종료일 날짜선택" role="button" style="right:70px;">
+														<span class="blind">날짜선택</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								-->
+							</div>
+						</div>
+
+					</li>
+				</ul>
+			</div>
+			<p class="subTxt2 t1">반복등록하신 내역은 정기지출에 자동등록됩니다</p> <!-- [2023 NH마이데이터 서비스 고도화] 문구추가 -->
+		</div>
+		<div class="popBtnWrap">
+			<div class="popBtn">
+				<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">저장</a>
+			</div>
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+		</div>
+	</div>
+</div>
+
+<!-- ###################################### -->
+<!-- ### [샘플] 스크립트 ### -->
+<!-- ###################################### -->
+<script>
+    $(document).ready(function(){
+        $('.chkfrom').hide();
+        $('.chkWrap > .boxRadioInn').click(function(){
+            $('.chkfrom').stop().hide();
+        })
+        $('.chkbtn').click(function(){
+            $('.chkfrom').stop().slideDown();
+            $('.popCont').animate({scrollTop : $('.formWrap').height()}, 500)
+        })
+    })
+</script>
+<!-- ###################################### -->
+</body>
+</html>

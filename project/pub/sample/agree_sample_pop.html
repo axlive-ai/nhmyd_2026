@@ -1,0 +1,756 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산등록</title>
+<script src="../pub-assets/js/head.js"></script>
+<style>
+	h2.guide{margin:20px 0;padding:5px 0;font-size:20px;font-weight:900;background:rgb(255, 248, 157);text-align:center}
+	.title{margin:20px 0 10px;font-size:15px;font-weight:bold;color:blue}
+	.desc{margin:30px 0 20px;font-size:13px;font-weight:bold;color:#65aee2}
+	.title + .desc{margin-top:10px;}
+</style>
+
+<style>
+	.swiper {width: 100%; height: 100%; }
+	.swiper-slide {background: #fff; }
+	.swiper-slide img {display: block; width: 100%; height: 100%; object-fit: cover; }
+	.swiper {width: 100%; height: 300px; margin-left: auto; margin-right: auto; }
+	.swiper-slide {background-size: cover; background-position: center; }
+	.mySwiper2 {height: 80%; width: 100%; }
+	.mySwiper {height: 20%; box-sizing: border-box; padding: 10px 0; }
+	.mySwiper .swiper-slide {width: 100%; height: 50px; opacity: 0.4; }
+	.mySwiper .swiper-slide-thumb-active {opacity: 1; }
+	.swiper-button-next, .swiper-button-prev{top: auto;bottom: 00px}
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		fullLayerPop()
+	});
+</script>
+
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<h1><a href="javascript:;" role="text">은행자산 직접등록</a></h1>
+			<a href="javascript:;" class="btnEtc">나가기</a>
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<!-- <div class="stepArea">
+                <p class="stepTit">약관동의</p>
+                <div class="stepInfo" role="img" aria-label="총 3단계중 1단계 입니다.">
+                    <ul class="stepList">
+                        <li class="active"><span>1</span></li>
+                        <li><span>2</span></li>
+                        <li><span>3</span></li>
+                    </ul>
+                </div>
+			</div>
+
+			<div class="agreementWrap">
+				<div class="chkAll">
+					<input type="checkbox" name="" id="chk01" onclick="fullLayerPop();"><label for="chk01">필수약관 전체동의</label>
+				</div>
+				<ul>
+					<li>
+						<label onclick="fullLayerPop();"><input type="checkbox" id="chk11" name="" class="subChk"></label>
+						<a href="javascript:;" role="button" onclick="fullLayerPop();"><span class="pointColor">(필수)</span> 농협 자산관리 이용약관 동의</a>
+					</li>
+					<li>
+						<label onclick="fullLayerPop();"><input type="checkbox" id="chk12" name="" class="subChk"></label>
+						<a href="javascript:;" role="button" onclick="fullLayerPop();"><span class="pointColor">(필수)</span> 금융정보조회 및 출금이체 약관 동의</a>
+					</li>
+					<li>
+						<label onclick="fullLayerPop();"><input type="checkbox" id="chk13" name="" class="subChk"></label>
+						<a href="javascript:;" role="button" onclick="fullLayerPop();"><span class="pointColor">(필수)</span> 계좌통합관리서비스 이용약관</a>
+					</li>
+					<li>
+						<label onclick="fullLayerPop();"><input type="checkbox" id="chk14" name="" class="subChk"></label>
+						<a href="javascript:;" role="button" onclick="fullLayerPop();"><span class="pointColor">(필수)</span> 금융거래정보제공 동의</a>
+					</li>
+					<li>
+						<label onclick="fullLayerPop();"><input type="checkbox" id="chk15" name="" class="subChk"></label>
+						<a href="javascript:;" role="button" onclick="fullLayerPop();"><span class="pointColor">(필수)</span> 개인(신용)정보 수집·이용 동의</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="agreementWrap">
+				<div class="chkAll">
+					<input type="checkbox" name="" id="chk02" onclick="fullLayerPop();"><label for="chk02">선택약관 전체동의</label>
+				</div>
+				<ul>
+					<li>
+						<label onclick="fullLayerPop();"><input type="checkbox" id="chk21" name="" class="subChk"></label>
+						<a href="javascript:;" role="button" onclick="fullLayerPop();"><span class="pointColor">(선택)</span> 개인(신용)정보 수집, 이용, 제공 동의 <br>(상품서비스 안내 등)</a>
+					</li>
+					<li>
+						<label onclick="fullLayerPop();"><input type="checkbox" id="chk21" name="" class="subChk"></label>
+						<a href="javascript:;" role="button" onclick="fullLayerPop();"><span class="pointColor">(선택)</span> 개인(신용)정보 수집·이용 동의 <br>(오픈뱅킹용)</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="areaBtnDefault">
+				<a href="javascript:;" class="btnPressPoint disabled" onclick="slidePopConfirm();" role="button">다음</a> 
+			</div> -->
+		</div>
+		<!-- //container -->
+	</div>
+
+	<!-- 팝업시작 -->
+	<div class="nhasset popWrap fullLayerPop">
+		<div class="popInner">
+			<h1>
+				<div thumbsSlider="" class="swiper mySwiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							약관 1
+						</div>
+						<div class="swiper-slide">
+							NH마이데이터 서비스 이용 약관
+						</div>
+						<div class="swiper-slide">
+							개인(신용)정보 수집·이용 동의서 (필수)
+						</div> 
+					</div>
+				</div>
+			</h1>
+			<div class="popCont">
+				<div class="termsWrap swiper-container prevNext swiper mySwiper2">
+				<!-- <div class="termsWrap swiper mySwiper2"> -->
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="term_cont">
+								<h2 class="popTemrsTit">제1조(목적)</h2>
+								<p class="popTermsTxt">본 약관은 농협은행주식회사(이하 "농협"이라 한다)가 이용자에게 제공하는 송금 및 기타 서비스(이하 "서비스"라 한다)의 이용과 관련하여 농협과 이용자 간의 권리 및 의무, 책임사항, 서비스 이용조건, 절차 등 기본적인 사항을 규정함을 목적으로 한다.</p>
+								<h2 class="popTemrsTit">제2조(용어의 정의)</h2>
+								<ol class="popTermsOlList">
+									<li>① 본 약관에서 사용하는 용어의 정의는 다음과 같다.
+										<ol class="popTermsSubList">
+											<li>1. “서비스”란 농협 모바일 애플리케이션 및 인터넷뱅킹을 통하여 제공되는 조회, 이체 등 “이용자”에게 제공되는 전자금융거래 서비스를 총칭한다.</li>
+											<li>2. “이용자”란 본 약관에 의하여 농협과 체결한 계약에 따라 농협이 제공하는 “서비스”를 이용하는 자를 말한다.</li>
+											<li>3. “지급인”이란 “출금계좌”의 명의인을 말한다.</li>
+											<li>4. “수취인”이란 “입금계좌”의 명의인을 말한다.</li>
+											<li>5. “출금계좌”란 “서비스” 이용을 위해 연결하는 계좌로서 자금 출금이 가능한 예금계좌를 말한다.</li>
+											<li>6. “입금계좌”란 “서비스”를 이용하여 자금이 입금되는 예금계좌를 말한다.</li>
+											<li>7. “계좌이체”라 함은 전자적 장치를 통한 “지급인”의 지급지시에 따라 농협이 “지급인”의 “출금계좌”에서 자금을 출금하여 농협 또는 다른 은행의 계좌에 자금을 입금하는 것을 말한다.</li>
+											<li>8. “추심이체”라 함은 “수취인”의 전자적 장치를 통한 추심지시에 따라 농협이 “지급인”의 “출금계좌”에서 자금을 출금하여 농협 또는 다른 은행의 계좌에 입금하는 것을 말한다.</li>
+											<li>9. “운영기관”이란 “오픈뱅킹공동업무”를 운영·제공하는 사단법인 금융결제원을 말한다.</li>
+											<li>10. “오픈뱅킹공동업무”란 농협이 다른 은행과 별도 제휴 없이 “운영기관”을 통하여 API형태로 운영·제공하는 다음 각 호의 업무를 말한다.
+												<ol class="popTermsSubList">
+													<li>가. “출금이체업무”란 농협에 출금 동의한 “이용자”의 “다른 은행 출금계좌”에서 자금을 출금하여 농협의 수납계정 또는 계좌로 실시간 입금하는 업무를 말한다.</li>
+													<li>나. “입금이체업무”란 농협의 지급계정 또는 계좌에서 자금을 출금하여 “수취인”의 계좌로 실시간 입금하는 업무를 말한다.</li>
+													<li>다. “잔액조회업무”란 “이용자”가 농협이 제공하는 “서비스”를 통해 본인계좌의 잔액을 실시간 조회하는 업무를 말한다.</li>
+													<li>라. “거래내역조회업무”란 “이용자”가 농협이 제공하는 “서비스”를 통해 본인계좌의 거래내역을 실시간으로 조회하는 업무를 말한다.</li>
+													<li>마. “계좌실명조회업무”란 농협이 “수취인” 또는 출금이체 신청을 한 “이용자” 계좌의 정상여부 및 실명을 실시간으로 조회하는 업무를 말한다.</li>
+												</ol>
+											</li>
+											<li>11. “모바일기기”란 이동통신망을 이용할 수 있는 휴대폰, 스마트폰, 태블릿 PC 등의 기기를 통칭한다.</li>
+											<li>12. “모바일 애플리케이션”이란 “서비스” 이용을 위해 “모바일기기”에 설치된 애플리케이션을 말한다.</li>
+											<li>13. “접근매체”라 함은 전자금융거래에 있어서 거래지시를 하거나 이용자 및 거래내용의 진정성을 확보하기 위하여 사용되는 다음 각목의 어느 하나에 해당하는 수단 또는 정보를 말한다.
+												<ol class="popTermsSubList">
+													<li>가. 농협이 제공한 전자식 카드 및 이에 준하는 전자적 정보</li>
+													<li>나.『전자서명법』에 따른 전자서명생성정보 또는 인증서</li>
+													<li>다. 농협에 등록된 이용자 번호</li>
+													<li>라. 등록되어 있는 이용자의 생체정보</li>
+													<li>마. 가목 또는 나목의 수단이나 정보를 사용하는 데 필요한 비밀번호</li>
+												</ol>
+											</li>
+											<li>14. “수수료”란 농협의 “서비스”를 이용하는 과정에서 농협이 정하는 기준에 따라 “이용자”에게 부과하는 비용을 말한다.</li>
+										</ol>
+									</li>
+									<li>② 본 약관에서 별도로 정의하지 아니한 용어는『전자금융거래법』 등 관계 법령에서 정하는 바에 따르며, 그 외는 일반 상관례에 따른다.</li>
+								</ol>
+						
+								<h2 class="popTemrsTit">제3조 (약관의 명시 및 효력변경)</h2>
+								<ol class="popTermsOlList">
+									<li>① 농협은 본 약관의 내용을 “이용자”가 쉽게 알 수 있도록 “서비스” 화면 내 또는 별도의 연결화면에 게시하거나 팝업화면 등으로 제공한다.</li>
+									<li>② 농협은 관계 법령을 위배하지 않는 범위에서 본 약관을 개정할 수 있으며, 약관의 변경과 관련된 사항은 『전자금융거래기본약관』의 내용을 준용한다.</li>
+								</ol>
+						
+								<h2 class="popTemrsTit">제4조 (약관적용의 우선순위)</h2>
+								<ol class="popTermsOlList">
+									<li>① 농협은 개별 “서비스”에 적용될 사항의 규정을 위해 개별약관을 사용하거나 이용정책을 구분하여 “서비스”를 운영할 수 있으며, 해당 내용이 본 약관과 상충되는 경우 개별 “서비스”에 대한 개별약관 및 이용정책이 우선한다.</li>
+									<li>② 본 약관에서 정하지 아니한 사항에 대해서는 『전자금융거래법』등 관련 법령과 『전자금융거래기본약관』이 우선적으로 적용된다.</li>
+								</ol>
+						
+								<h2 class="popTemrsTit">제5조 (추심이체의 동의 및 철회)</h2>
+								<ol class="popTermsOlList">
+									<li>① “이용자”는 관련 법령에 따라 농협이 제공하는 방식과 요건에 의한 전자서명으로 추심이체의 출금 동의를 제공하여야 한다.</li>
+									<li>② “이용자”는 농협의 거래지시에 따라 “이용자”의 계좌 원장에 출금기록이 기입되기 전까지는 농협에 대하여 전항의 규정에 따른 동의의 철회를 요청할 수 있다. 다만, 농협에 대한 철회의 의사표시 이전에 발생한 출금에 대해서는 이의를 제기할 수 없다.</li>
+									<li>③ “이용자”는 “서비스”에 연결된 타행 계좌를 삭제하는 방법으로 전 ②항의 출금이체 동의를 철회할 수 있다.</li>
+								</ol>
+							
+								<h2 class="popTemrsTit">제6조 (이용계약의 체결)</h2>
+								<ol class="popTermsOlList">
+									<li>① 농협과 “이용자” 사이의 서비스 이용계약(이하 "이용계약"이라 함)은 “이용자”가 되고자 하는 자(이하 “가입신청자”라 함)가 “서비스”을 통해 농협이 정한 양식에 따라 가입신청을 하고 농협이 이에 대해 승낙함으로써 체결된다.</li>
+									<li>② “가입신청자”가 모바일 애플리케이션 및 인터넷뱅킹을 이용하여 동의 의사를 농협에 전자적 방식으로 전송하게 되면 본 약관에 동의하고 농협에 “서비스” 이용을 신청한 것으로 본다.</li>
+									<li>③ 농협은 “가입신청자”의 가입신청이 제7조 제3항 각 호의 어느 하나에 해당하는 경우 이를 승낙하지 않을 수 있다.</li>
+									<li>④ 농협은 농협의 정책에 따라 “이용자”를 구분하여 서비스 이용에 차등을 둘 수 있다.</li>
+								</ol>
+						
+								<h2 class="popTemrsTit">제7조(이용계약의 해지)</h2>
+								<ol class="popTermsOlList">
+									<li>① “이용자”는 언제든지 이용계약 해지 신청을 할 수 있으며, 농협은 관련 법령 등이 정하는 바에 따라 이를 즉시 처리하여야 한다.</li>
+									<li>② 이용계약 해지로 인해 발생한 불이익에 대한 책임은 “이용자” 본인이 부담한다.</li>
+									<li>③ 농협은 “이용자”에게 다음 각 호의 어느 하나에 해당하는 사유가 발생하거나 확인된 경우 이용계약을 해지할 수 있다.</li>
+										<ol class="popTermsSubList">
+											<li>1. 이용자가 과거에 본 약관을 위반하여 서비스 이용계약을 해지당한 경우</li>
+											<li>2. 이용자가 서비스 이용정지 기간 중에 이용계약을 임의로 해지하고 재이용신청 하는 경우</li>
+											<li>3. 타인의 정보를 이용한 가입신청을 하는 경우</li>
+											<li>4. 허위의 정보를 기재하거나, 농협이 제시하는 내용을 기재하지 않은 경우</li>
+											<li>5. 가입신청자의 귀책사유로 인하여 승인이 불가능하거나 기타 규정한 제반 사항을 위반하며 신청하는 경우</li>
+											<li>6. 이용자가 서비스의 원활한 제공을 방해하거나 시도하는 경우</li>
+											<li>7. 만 14세 미만의 자가 이용 신청하는 경우</li>
+											<li>8. 회사가 정한 서비스 제공환경이 아니거나 기술상 서비스 제공이 불가능한 경우</li>
+											<li>9. 이미 가입된 회원이 중복하여 가입신청 하는 경우</li>
+											<li>10. 다른 이용자의 권리나 명예, 신용, 기타 정당한 이익을 침해하거나 대한민국 법령 또는 선량한 풍속 기타 사회질서에 위배되는 행위를 한 경우</li>
+											<li>11. 기타 본 약관에 위배되거나 위법 또는 부당한 이용신청임이 확인된 경우</li>
+										</ol>
+									</li>
+									<li>④ 농협은 이용계약을 해지하는 경우 “이용자”에게 해지 사유를 밝혀 해지의사를 통지하며, “이용자”는 상당한 기간 내에 이의를 신청할 수 있다. 다만, 본 약관 및 운영정책에서 정하는 사유가 있을 경우에는 별도의 이의 신청 기간을 부여하지 않을 수 있다.</li>
+								</ol>
+								
+								<h2 class="popTemrsTit">제8조(이용자에 대한 통지)</h2>
+								<ol class="popTermsOlList">
+									<li>① 농협이 “이용자”에 대한 통지를 하는 경우 본 약관에 별도 규정이 없는 한 “이용자”의 전자우편 등의 방법으로 통지한다.</li>
+									<li>② 농협은 “이용자”에 대하여 통지하는 경우 이를 모바일 애플리케이션 또는 인터넷뱅킹에 게시함으로써 제1항의 통지에 갈음할 수 있다.</li>
+								</ol>
+						
+								<h2 class="popTemrsTit">제9조(이용자 정보의 제공 및 변경)</h2>
+								<ol class="popTermsOlList">
+									<li>① 농협은 이용계약 체결 이후 필요한 경우 “이용자”의 동의를 받아 “이용자”의 정보를 추가적으로 수집할 수 있다. </li>
+									<li>② “이용자”는 농협에 제공한 회원정보에 변경사항이 있을 경우 이를 농협에 알려야 하며, 이를 알리지 않아 발생한 불이익에 대해서는 “이용자”에게 그 책임이 있다.</li>
+								</ol>
+						
+								<h2 class="popTemrsTit">제10조 (서비스의 종류)</h2>
+								<div class="popTermsOlList">
+									<p class="popTermsTxt">농협이 제공하는 서비스는 다른 은행 계좌잔액조회, 거래내역조회, 계좌이체 등이며 구체적인 서비스 내용은 해당 모바일 애플리케이션 및 인터넷뱅킹을 통하여 안내한다.</p>
+								</div>
+						
+								<h2 class="popTemrsTit">제11조 (서비스의 제공)</h2>
+								<ol class="popTermsOlList">
+									<li>① 제6조에 따라 농협이 “가입신청자”의 이용신청을 승낙함과 동시에 “가입신청자”는 농협이 제공하는 “서비스”의 “이용자”가 되며, 이때부터 농협은 “이용자”에게 본 약관이 정하는 “서비스”를 제공한다.</li>
+									<li>② 농협은 본 약관이 정한 “서비스” 외에 추가적인 “서비스”를 제공하기 위하여 “이용자”에게 별도의 추가적인 약관 동의, 정보 수집 및 이용 동의 등 절차의 이행을 요청할 수 있으며, 이러한 절차가 완료되지 않는 경우 “이용자”는 추가적인 “서비스”의 전부 또는 일부를 이용할 수 없다.</li>
+								</ol>
+						
+								<h2 class="popTemrsTit">제12조 (이체대상 및 출금한도)</h2>
+								<ol class="popTermsOlList">
+									<li>① “출금이체업무” 및 “입금이체업무”의 이체대상은 현금으로 한다.</li>
+									<li>② “이용자”의 전 은행에 개설된 계좌를 통합한 “출금이체업무”의 일일 이용한도는 “운영기관”에서 정하는 한도로 한다.</li>
+									<li>③ 전 항의 한도는 각 “서비스”별 이용 약관에서 정하는 한도 내에서 이용이 가능하다.</li>
+								</ol>
+						
+								<h2 class="popTemrsTit">제13조 (인증)</h2>
+								<ol class="popTermsOlList">
+									<li>① “이용자”는 본 약관의 적용대상인 전자금융거래를 이용하는 경우 반드시 은행이 전자금융거래의 종류, 성격, 위험수준 등을 고려하여 정한 인증 수단을 사용하여야 한다.</li>
+									<li>② “서비스” 이용을 위한 인증수단은 다음 각 호에 따라 간편비밀번호, 생체인증 등(이하 “본인확인 인증수단”이라 한다) 은행이 정한 방법에 의한다.
+										<ol class="popTermsSubList">
+											<li>1. “이용자”는 “본인확인 인증수단”을 철저히 관리하고, 타인에게 누설하여서는 안 된다.</li>
+											<li>2. 은행은 “본인확인 인증수단” 외에 부정사용을 탐지하기 위한 별도의 
+													이상 금융거래탐지시스템(FDS, Fraud Detection System)을 운영
+													하고 있으며, 이상금융거래로 의심되는 거래가 탐지된 경우에는 해 
+													당 “이용자”의 “서비스” 이용을 즉시 중단시키고 은행이 정한 추가적인 
+													보안 조치를 거치도록 할 수 있다.</li>
+										</ol>
+									</li>
+								</ol>
+						
+								<h2 class="popTemrsTit">제14조 (서비스의 중단)</h2>
+								<ol class="popTermsOlList">
+									<li>① “이용자”는 본 약관의 적용대상인 전자금융거래를 이용하는 경우 반드시 은행이 전자금융거래의 종류, 성격, 위험수준 등을 고려하여 정한 인증 수단을 사용하여야 한다.</li>
+									<li>① “서비스”의 이용은 농협의 업무상 또는 기술상의 특별한 지장이 없는 한 연중무휴, 1일 24시간 제공을 원칙으로 하되, 다음 각 호의 어느 하나의 경우에는 “서비스”의 전부 또는 일부가 제한될 수 있다.
+										<ol class="popTermsSubList">
+											<li>1. “운영기관”의 시스템 점검시간</li>
+											<li>2. “서비스” 운영상의 필요</li>
+											<li>3. 정보통신설비의 보수점검, 증설, 교체, 이전 등 시스템 관리 업무</li>
+											<li>4. 정전, 제반 설비의 장애 또는 이용량의 폭주 등으로 정상적인 서비스 이용에 지장이 있는 경우</li>
+											<li>5. 기타 천재지변, 전쟁, 폭동, 테러, 해킹, DDOS, 국가비상사태 등 불가항력적 사유가 있는 경우</li>
+										</ol>
+									</li>
+									<li>② 제1항에 따라 “서비스”의 제공을 일시적으로 중단하는 경우 농협은 사전에 서비스 중단을 공지한다. 다만, 불가피하게 사전 공지를 할 수 없는 경우 농협은 이를 사후에 공지할 수 있다.</li>
+									<li>③ “서비스”는 관련 법령, 정책 변화에 따라 달라질 수 있다.</li>
+									</ol>
+						
+								<h2 class="popTemrsTit">제15조 (수수료)</h2>
+								<ol class="popTermsOlList">
+									<li>① 농협은 이용자의 서비스 이용에 따른 수수료를 부과할 수 있다.</li>
+									<li>② 농협은 수수료에 관한 사항을 모바일 애플리케이션 또는 인터넷뱅킹에 게시한다.</li>
+								</ol>
+						
+								<h2 class="popTemrsTit">제16조 (준수사항)</h2>
+								<ol class="popTermsOlList">
+									<li>① “이용자”는 “서비스”의 이용과 관련하여 관계 법령, 약관, 서비스 이용안내 및 농협이 통지한 공지사항 등을 준수하여야 하며, 안전한 “서비스” 이용을 위하여 “이용자”가 다음 각 호의 행위를 하는 것은 금지된다.
+										<ol class="popTermsSubList">
+											<li>1. 농협이 제공하는 “서비스” 이용방법에 의하지 아니하고 비정상적인</li>
+											<li>2. 타인의 명의, 휴대폰 정보, 계좌 정보 등을 도용하여 농협이 제공하는 “서비스”를 이용하는 행위</li>
+											<li>3. 농협이 게시한 정보의 무단 변경 또는 농협이 정한 정보 이외의 정보(컴퓨터 프로그램 등) 등을 송신 또는 게시하는 행위
+											<li>4. 농협 및 기타 제3자의 저작권 등 지적재산권에 대한 침해행위</li>
+											<li>5. 농협 및 기타 제3자의 명예를 손상시키거나 업무를 방해하는 행위</li>
+											<li>6. 농협이 제공하는 “서비스”를 이용하여 얻은 농협의 정보를 농협의 사전 동의 없이 복제 또는 유통시키거나 상업적으로 이용하는 행위</li>
+											<li>7. 외설 또는 폭력적인 메시지, 화상, 음성, 기타 공서양속에 반하는 정보를 “서비스”에 공개 또는 게시하는 행위</li>
+											<li>8. “서비스”와 관련된 설비의 오동작이나 정보 등의 파괴 및 혼란을 유발시키는 컴퓨터 바이러스 감염 자료를 등록 또는 유포하는 행위</li>
+											<li>9. 농협의 “서비스”를 해킹하거나 해킹에 이용하는 일체의 행위</li>
+											<li>10. “접근매체”의 대여나 양도·양수 등 관련 법령에서 금지하는 행위</li>
+											<li>11. 기타 불법적이거나 부당한 행위</li>
+										</ol>
+									</li>
+									<li>② “이용자”는 다음 각 호의 어느 하나에 해당하는 경우 즉시 그 사실을 농협에 통보해야 한다.
+										<ol class="popTermsSubList">
+											<li>1. 자신의 명의가 도용되거나 제3자에게 부정하게 사용된 것을 인지한 경우 </li>
+											<li>2. “모바일 애플리케이션” 서비스를 이용 중인 “모바일기기” 및 USIM 칩 등의 분실, 도난</li>
+											<li>3. 각종 비밀번호 등의 누설</li>
+											<li>4. 접근매체의 훼손, 도난, 분실, 위조 또는 변조의 사실을 알았거나 기타 거래절차상 비밀을 요하는 사항이 누설되었음을 알게 된 경우</li>
+										</ol>
+									</li>
+									<li>③ 농협은 제1항 각 호의 어느 하나에 해당하는 사유가 발생하는 경우 “이용자”의 “서비스” 전부 또는 일부 이용을 정지하거나 이용계약을 해지할 수 있으며, “이용자”가 고의 또는 중과실로 본 약관을 위반하는 행위를 하였음을 증명하는 경우 “이용자”에게 손해가 생기더라도 책임의 전부 또는 일부를 지지 아니한다. </li>
+								</ol>
+						
+								<h2 class="popTemrsTit">제17조 (분쟁처리 및 분쟁조정)</h2>
+								<div class="popTermsOlList">
+									<p class="popTermsTxt">“이용자” 서비스에 대하여 이의가 있을 때에는 농협의 분쟁처리 기구에 그 해결을 요구하거나 금융감독원 금융분쟁조정위원회, 한국소비자원 소비자분쟁조정위원회 등을 통하여 분쟁조정을 신청할 수 있다.</p>
+								</div>
+						
+								<h2 class="popTemrsTit">제18조 (준거법 및 재판관할)</h2>
+								<ol class="popTermsOlList">
+									<li>① 본 약관과 관련된 사항에 대하여는 대한민국 법률을 준거법으로 한다.</li>
+									<li>② 본 약관과 관련하여 발생한 분쟁에 대해서는 민사소송법 등에서 정하는 바에 따르기로 한다.</li>
+								</ol>
+								
+								<h2 class="popTemrsSubTit">부  칙</h2>
+								<p class="popTermsSubTxt">이 약관은 2019. 10. 30.부터 시행한다.</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="term_cont">
+								<h1 class="popTemrsBigTit">NH마이데이터 서비스 이용 약관</h1>
+								<h2 class="popTemrsTit">제1조 (목적)</h2>
+								<div class="popTermsOlList">
+									<p class="popTermsTxt">이 약관은 NH농협은행(이하 "은행")과 고객(이하 "이용자")사이의 "NH마이데이터 서비스"(이하 "서비스") 제공 및 이용에 관한 제반사항을 정함을 목적으로 합니다.</p>
+								</div>
+
+								<h2 class="popTemrsTit">제2조 (용어의 정의)</h2>
+								<ol class="popTermsOlList">
+									<li>① 이약관에서 사용하는 용어의 의미는 다음 각 호와 같습니다.</li>
+									<li>
+										<ol class="popTermsSubList">
+											<li>1. "NH마이데이터 서비스"라 함은 은행이 은행의 모바일 어플리케이션을 통해 이용자에게 제공하는 제4조의 서비스를 말합니다.</li>
+											<li>2. "이용자"라 함은 모바일 어플리케이션에 접속하여 이 약관에 따라 은행과 이용계약을 체결하고 서비스를 이용하는 고객을 말합니다.</li>
+											<li>3. "모바일 어플리케이션"이라 함은 스마트폰, 테블릿PC 등 모바일 장치에서 실행되는 응용소프트웨어로서 은행의 모바일 어플리케이션은 NH스마트뱅킹, 올원뱅크 등이 있습니다.</li>
+											<li>4. "연결기관"이라 합은 서비스에서 API 또는 스크레이핑 방식을 이용하여 자산정보를 조회할 수 있도록 이용자가 등록한 금융회사 및 비금융회사(공공기관 포함)을 말합니다.</li>
+											<li>5."자산정보"라 합은 이용자와 금융회사 및 비금융회사(공공기관 포함)간 이용 계약 등을 통해 발생한 금융정보 또는 비금융정보 등을 말합니다. </li>
+											<li>6. "API(Application Programming Interface)"라 함은 은행과 연결기관간 자산정보를 송수신하기 위해 전송규격 및 절차를 효준화한 기술을 말하며, 금융API, 공공 API, 오픈뱅킹API 등을 포함합니다.</li>
+											<li>7. "스크레이핑"이라 함은 이용자가 연결기관의 온라인 접근매체 정보를 은행에 직접 등록하면 은행이 연결기관의 웹 또는 모바일 화면의 이용자 정보를 수집하는 기술을 말합니다. </li>
+											<li>8. "온라인 접근매체 정보"란 이용자가 연결기관의 거래정보를 온라인 상에서 조회하기 위해 입력하는 인증서, 아이디/패스워드 등의 정보를 말하며 각 연결기관별로 요구되는 온라인 접근매체 정보는 해당 연결기관의 정책에 따라 상이할 수 있습니다. </li>
+										</ol>
+									</li>
+								</ol>
+
+								<h2 class="popTemrsTit">제3조 (서비스의 가입) </h2>
+								<ol class="popTermsOlList">
+									<li>① 서비스 가입대상은 은행의 모바일 어플리케이션의 회원으로 한정합니다.</li>
+									<li>② 이용자가 서비스를 통해 약관 및 개인(신용)정보를 수집·이용 동의서에 동의하고 은행이 이를 승인하면 서비스 가입이 완료됩니다. </li>
+								</ol>
+
+								<h2 class="popTemrsTit">제4조 (서비스의 종류) </h2>
+								<ol class="popTermsOlList">
+									<li>① 은행이 제공하는 시비스는 NH자산*(MH자산플러스), 연말정산컨설팅, 금융플래너, 내차관리, 맞춤정부혜택 등이며 다음 각 호에 따라 주요 서비스 내용을 구분하고 구체적인 서비스 종류는 모바일 어플리케이션을 통하여 안내합니다.
+										<ol class="popTermsSubList">
+											<li>1. "NH자산*(MH자산플러스)"는 은행, 증권, 카드, 보험, 실물자산 등 이용자의 자산과 소비내용을 통합하여 조회 및 관리하고 상품추천을 해주는 서비스입니다. </li>
+											<li>2. "연말정산컨설팅"은 이용자의 자산정보를 통합하여 연말정산에 예상세액을 산출하고 공제한도에 따른 절세 조언을 제공하는 서비스 입니다. </li>
+											<li>3. "금융플래너"는 이용자의 금융일정을 통합하여 제공하는 서비스입니다. </li>
+											<li>4. "내차관리"는 이용자가 보유한 차량정보 및 이용자의 운정정보를 통합하여 제공하는 서비스입니다. </li>
+											<li>5. "맞춤정부혜택"은 이용자가 받을 수 있는 정부 또는 지방자치단체의 혜택을 통합하여 제공하는 서비스입니다.</li>
+											<li>6. 기타은행이 정하는 서비스 </li>
+										</ol>
+									</li>
+								</ol>
+
+								<h2 class="popTemrsTit">제5조 (자산연결) </h2>
+								<ol class="popTermsOlList">
+									<li>① 연결 가능한 자산정보는 서비스 화면에 나열된 연결기관의 보유 자산 중 이용자가 직접 신청한 것에 한하며, 다음 각 호에 따라 자산정보를 연결합니다.
+										<ol class="popTermsSubList">
+											<li>1. 타 은행, 카드사, 보험사, 증권사, 전자금융업자 등이 보유한 자산정보는 API 방식으로 연결합니다.</li>
+											<li>2. 현금영수증, 차량정보, 운정정보 등과 같이 API 방식으로 연결할 수 없는 자산정보는 스크레이핑 방식으로 연결합니다. 다만, API 방식으로 연결 가능한 때에 API 방식으로 연결합니다. </li>
+											<li>3. 공과금정보는 은행과 연결기관이 서로 정하는 방식에 따라 연결합니다. </li>
+										</ol>
+									</li>
+									<li>② 연결가능한 실물자산 정보는 부동산, 현금, 외화, 자동차, 기타자산 등 이며, 이용자가 서비스 화면에서 직접 입력합니다. </li>
+								</ol>
+
+								<h2 class="popTemrsTit">제6조 (자산정보의 최신화) </h2>
+								<ol class="popTermsOlList">
+									<li>① 이용자는 자산정보의 정확성 및 최신성이 유지될 수 있도록 정기적으로 자산정보의 연결을 요청할 수 있으며, 은행은 제5조에서 정한 방식에 따라 연결기과이 보유한 최신의 자산정보를 연결하여 이용자에게 제공합니다. </li>
+									<li>② 제1항에 따른 정기적인 자산정보의 연결은 이용ㅇ자가 일일 최초 모바일 어플리케이션에 접속하였을 대 또는 은행이 정한 시각에 매일 1회에 한하여 자동으로 수행할 수 있습니다. </li>
+								</ol>
+
+								<h2 class="popTemrsTit">제조 () </h2>
+								<div class="popTermsOlList">
+									<p class="popTermsTxt">서비스 이용 수수료는 무료이며, 약관의 변경에 따라 수수료가 변경될 경우 제15조의 변경절차를 준용합니다.</p>
+								</div>
+
+								<h2 class="popTemrsTit">제8조 (서비스의 이용제한) </h2>
+								<ol class="popTermsOlList">
+									<li>① 서비스의 이용은 은행의 업무상 또는 기술상의 특별한 지장이 없는 한 연중무휴, 1일 24시간 제공을 원칙으로 합니다. 다만, 다음 각 호의 어느 하나의 경우에는 서비스의 전부 또는 일부가 제한될 수 있습니다.
+										<ol class="popTermsSubList">
+											<li>1. 서비스의 장비의 장애 및 유지보수 등 부득이한 사유가 발생한 경우 </li>
+											<li>2. 연결기관의 인터넷서비스 이용시간 제한, 전산장애, 서비스 제한 등의 경우 </li>
+											<li>3. 정전, 제반설비의 장애 또는 이용량의 폭주 등으로 정상적인 서비스 이용에 지장이 있는 경우 </li>
+											<li>4. 기타 천재지변, 전쟁, 폭동, 테러, 해킹, 국가비상사태 등 불가항력적 사유가 있는 경우 </li>
+											<li>5. 은행이 정한 서비스 제공 환경이 아니거나 기술상 서비스 제공이 불가능한 경우 </li>
+										</ol>
+									</li>
+									<li>② 제1항에 따라 서비스의 전부 또는 일부가 제한되는 경우 은행은 사전에 그 사유와 내용을 서비스에 게시하여 이용자에게 통지합니다. 다만, 불가피하게 사전 공지를 할 수 없는 경우 은행은 이를 사후에 통지할 수 있습니다. </li>
+								</ol>
+
+								<h2 class="popTemrsTit">제9조 (서비스의 해지) </h2>
+								<ol class="popTermsOlList">
+									<li>① 이용자가 서비스의 이용 해지를 원하는 경우 모바일 어플리케이션에서 서비스 해지 메뉴를 통하여 해지할 수 있습니다. </li>
+									<li>② 은행은 다음 각 호의 경우 이용자와의 이용 계약을 해지할 수 있습니다. 
+										<ol class="popTermsSubList">
+											<li>1. 범죄행위에 관련된 경우 </li>
+											<li>2. 타인의 명의를 도용한 경우 </li>
+											<li>3. 이용자 정보를 허위로 등록한 경우 </li>
+											<li>4. 서비스의 이용을 고의로 방해한 경우 </li>
+											<li>5. 은행이나 제3자의 권익 또는 법인ㄱ을 침해하는 경우 </li>
+											<li>6. 은행의 서비스를 이요하여 얻은 정보를 은행의 사전승낙 없이 복제 또는 유통시키거나 상업적을 이용하는 경우 </li>
+											<li>7. 기타 이 약관이나 관련 법력에 위배된다고 판단되는 경우 </li>
+										</ol>
+									</li>
+									<li>③ 제2항에 따라 은행이 이용자와의 이용 계약을 해지할 경우 은해은 서비스의 해지 예정일 1일 전까지 서비스가 해지된다는 사실과 해지 사유를 이메일, 문자메시지, 우편 등을 토하여 이용자에게 통지하며, 이용자가 서비스의 해지 예정일까지 은행에 별도의 회신을 하지 않는 경우 은행은 서비스를 해지할 수 있습니다. </li>
+								</ol>
+
+								<h2 class="popTemrsTit">제10조 (은행의 의무) </h2>
+								<ol class="popTermsOlList">
+									<li>① 은행은 제8조 및 제9조에서 정한 경우를 제외하고 이 약관에서 정한 바예 따라 서비스를 지속적, 안정적으로 제공하여야 합니다. </li>
+									<li>② 은행은 서비스의 장애 시 이를 신속히 복구하여야 합니다. </li>
+									<li>③ 은행은 이용자가 제공한 개인정보를 서비스 제공목적 이외의 용도로 사용하지 아니하며, 고객정보를 성실히 보호 하여야 합니다. 다만, 관계법령에 의해 허용되거나 이용자가 동의한 경우는 그러하지 아니합니다. </li>
+								</ol>
+
+								<h2 class="popTemrsTit">제11조 (이용자의 의무) </h2>
+								<div class="popTermsOlList">
+									<p class="popTermsTxt">이용자는 다음 각 호의 행위를 하여서는 안 됩니다.</p>
+								</div>
+								<ol class="popTermsSubList">
+									<li>1. 서비스 신청 또는 정보 변경 시 허위내용을 등록하는 행위 </li>
+									<li>2. 은행 및 기타 제3자의 인격권 또는 지식재산권을 침해하거나 업무를 방해하는 행위 </li>
+									<li>3. 관계법령에 의하여 그 전송 또는 게시가 금지되어 있는 정보를 전송하는 행위 </li>
+									<li>4. 컴퓨터 소프트웨어, 하드웨어, 정기통신장비의 정상적인 가동을 방해, 파괴할 목적으로 고안된 소프트웨어 바이러스를 유포하는 행위 </li>
+									<li>5. 이 약관 및 관계법령을 위반하는 행위 </li>
+									<li>6. 기타 서비스를 이용한 법죄행위 등 현행법을 위반하는 행위 </li>
+								</ol>
+
+								<h2 class="popTemrsTit">제12조 (손해배상 의무) </h2>
+								<ol class="popTermsOlList">
+									<li>① 은행이 이 약관의 의무를 위한함으로 인하여 이용자에게 손해를 입힌 경우 또는 은행이 제공하는 서비스의 하자 등에 의하여 이용자에게 피해가 발생한 경우 은행은 이용자에 대햐여 손해를 배상하여야 합니다. </li>
+									<li>② 이용자가 이 이 약관의 의무를 위한함으로 인하여 은행에 손해를 입힌 경우 또는 이용자가 서비스 이용과 관련하여 은행에 손해를 입힌 경우 이용자는 은행에 대햐여 손해를 배상하여야 합니다. </li>
+								</ol>
+
+								<h2 class="popTemrsTit">제13조 (손해배상 책임의 한계) </h2>
+								<div class="popTermsOlList">
+									<p class="popTermsTxt">은행은 다음 각 호와 같은 경우 이용자에게 발생한 손해를 배상할 책임을 부담하지 않습니다. 다만, 다음 각 호의 경우에도 은행의 귀책 사유가 있는 부분에 한해서는 손해를 배상할 잭임이 있습니다.</p>
+								</div>
+								<ol class="popTermsSubList">
+									<li>1. 은행은 기간통신사업자가 전기통신서비스를 중지하거나 정상적으로 제공하지 아니하여 이용자에게 손해가 발생한 경우에는 책임을 부담하지 않습니다. </li>
+									<li>2. 은행은 이용자가 작성하는 동의 방법으로 서비스에 게재된 정보, 자료, 사실의 신뢰도 및 정확성 등의 내용에 관하여서는 책임을 부담하지 않습니다. </li>
+									<li>3. 은행은 이용자간 또는 이용자와 제3자 상호간에 서비스를 매개로 하여 거래 등을 한 경우에는 어떠한 책임도 부담하지 아니하며, 이용자가 기해하는 이익에 관하여 책임을 부담하지 않습니다. </li>
+									<li>4. 은행은 제3자로 부터 제공받은 정보, 자료, 사실의 신뢰도 및 정확성 등의 내용에 관하여는 책임을 부담하지 않으며, 서비스를 이용하여 이용자가 기대하는 손익이나 서비스를 통하여 얻은 자료로 인한 손해에 관하여 책임을 지지 않습니다. </li>
+								</ol>
+
+								<h2 class="popTemrsTit">제14조 (준거법 및 관할법원) </h2>
+								<div class="popTermsOlList">
+									<p class="popTermsTxt">이 약관과 관련한 소송은 대한민국법을 준거법으로 하며, 관할법원은 민사소송법에서 정하는 바에 따릅니다.</p>
+								</div>
+
+								<h2 class="popTemrsTit">제15조 (약관의 효력 및 변경) </h2>
+								<ol class="popTermsOlList">
+									<li>① 이 약관은 이용자가 은행에 서비스 가입을 신청하고 은행이 이를 승인함과 동시에 효력이 발생합니다. </li>
+									<li>② 이 약관에서 정하지 아니한 사항은 약관의 규제에 관한 법률, 전자금융거래법 관련 법령, 신용정보의 이용 및 보호에 관한 법률및 동법 시행령·시행규칙·감독규정, 은행의 『전자금융거래기본약관』, 『농협전자금융 서비스 이용약관』 등이 정하는 바에 따릅니다. </li>
+									<li>③ 연결기관의 거래내역조회, 자금이체 등 금융거래는 해당 금융회사의 약관을 따릅니다. </li>
+									<li>④ 은행이 이 약관을 변경하고자 하는 경우에는 변경 1개월 전에 그 내용을 모바일 어플리케이션의 서비스(모바일 어플리케이션에 게시하기 어려울 경우에는 이용자가 접근이 용이한 전자적 장치) 및 영업점에 게시하고 이용자에게 통지하여야 합니다. 다만 이용자가 이의를 제기할 경우 은행은 이용자에게 적절한 방법으로 약관 변경내용을 통지하였음을 확인해 주어야 합니다. </li>
+									<li>⑤ 제4항에도 불구하고 법령의 개정으로 인하여 긴급하게 약관을 변경한 때에는 변경된 약관을 모바일 어플리케이션에 최소 1개월 이상 게시하고 이용자에게 통지하여야 합니다. </li>
+									<li>⑥ 은행이 제4항 및 제5항에 따라 약관의 변경내용을 게시하거나 통지하는 경우에는 "이용자가 약관의 변경내용이 게시되거나 통지된 후부터 변경되는 약관의 시행일전의 영업일까지 계약을 해지할 수 있으며, 약관의 변경내용에 이의를 제기하지 아니하는 경우 약관의 변경내용에 승한한 것으로 볻다." 하는 취지의 내용을 통지 하여야 합니다. </li>
+									<li>⑦ 이용자는 약관의 변경냉용이 게시되거나 통지된 후부터 변경되는 약관의 시행일전의 영업일까지 서비스의 이용을 해지할 수 있으며, 약관의 변경내용에 대하여 이의를 제기하지 아니하는 경우에는 약관의 변경을 승한한 것으로 봅니다. </li>
+									<li>⑧ 은행은 영업점에서 이용자가 약관을 요구할 경우 이를 교부하여야 합니다. </li>
+								</ol>
+
+								<h2 class="popTemrsSubTit">부  칙</h2>
+								<h2 class="popTemrsTit">제1조 (시행일)  </h2>
+								<div class="popTermsOlList">
+									<p class="popTermsTxt">이 약관은 2021년 8월 4일 부터 시행합니다.</p>
+								</div>
+
+
+								<!-- NH
+								·
+								① ② ③ ④
+								『』
+								「」
+
+
+
+								<h1 class="popTemrsBigTit"></h1>
+								<h2 class="popTemrsTit"></h2>
+								<div class="popTermsOlList">
+									<p class="popTermsTxt"></p>
+								</div>
+
+								<h2 class="popTemrsTit">제조 () </h2>
+								<ol class="popTermsOlList">
+									<li>①  </li>
+									<li>②  </li>
+									<li>③  </li>
+								</ol>
+
+								<ol class="popTermsOlList">
+									<li></li>
+									<li>
+										<ol class="popTermsSubList">
+											<li>1.  </li>
+											<li>2.  </li>
+											<li>3.  </li>
+											<li>4.  </li>
+											<li>5.  </li>
+											<li>6.  </li>
+											<li>7.  </li>
+										</ol>
+									</li>
+								</ol> -->
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="term_cont">
+								<h2 class="popTemrsBigTit">개인(신용)정보 수집·이용 동의서 (필수)</h2>
+								<h3 class="popTemrsTit">농협은행 주식회사 귀중</h3>
+								<p class="popTermsTxt">* 귀 행과 비여신(금융)거래와 관련하여 귀 행이 본인의 개인(신용)정보를 수집·이용하고자 하는 경우에는 「신용정보의 이용 및 보호에 관한 법률」, 「개인정보보호법」등 관계 법령에 따라 본인의 동의가 필요합니다. </p>
+								<p class="popTemrsTit">본 동의서는 마이데이터 서비스 이용시 별도의 동의가 필요하지 않습니다. (단, 내차정보관리 서비스 제외) </p>
+								<div class="wrapTblDefault blue mt20">
+									<table>
+										<caption>수집이용 내용 표</caption>
+										<colgroup>
+											<col style="width:30%">
+											<col style="width:auto">
+										</colgroup>
+										<tbody>
+											<tr>
+												<th scope="row">수집·이용 목적</th>
+												<td>
+													<ul>
+														<li>￭ 마이데이터 서비스의 설정·유지·이행·관리</li>
+														<li>￭ 마이데이터 서비스 관련 금융사고 조사, 분쟁 해결, 민원처리</li>
+														<li>￭ 법령상 의무이행</li>
+													</ul>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row" rowspan="2">보유 및<br>이용기간</th>
+												<td>
+													<ul>
+														<li class="pointColor"><strong>￭ 위 개인(신용)정보는 본인이 전송요구시 명시한 정보보유기간까지 보유·이용됩니다. </strong></li>
+													</ul>
+												</td>
+											</tr>
+											<tr>
+												<td class="bgBlue">
+													위 보유 기간에서의 전송요구시 명시한 정보보유기간이란 "당행에 타(금융)기관의 정보를 전송하는 과정에서 지정하는 정보보유기간"을 말합니다. <br>
+													※ 전송요구시 명시한 정보보유기간 후에는 금융사고 조사, 분쟁 해결, 민원 처리,  법령상 의무이행을 위한 목적으로만 보유·이용됩니다.	
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">거부 권리 및  불이익</th>
+												<td>
+													귀하는 동의를 거부하실 수 있습니다. 위 개인(신용)정보 수집·이요에 관한 동의는 "금융(거래)계약의 체결 및 이행을 위한" 필수적 사항이므로, 위 사항에 동의하셔야만 (금융)거래관계의 설정 및 유지가 가능합니다.
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<h3 class="popTemrsTit">수집·이용 항목</h3>
+								<div class="wrapTblDefault blue mt20">
+									<table>
+										<caption>고유식별번호 표</caption>
+										<colgroup>
+											<col style="width:30%">
+											<col style="width:auto">
+										</colgroup>
+										<tbody>
+											<tr>
+												<th scope="row">고유식별번호</th>
+												<td>
+													<strong class="pointColor">주민등록번호, 외국인등록번호, 여권번호, 운전면허 번호 </strong>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="termAgreeWrap">
+									<p>위 <em> <strong>고유실별정보 </strong>수집·이용</em>에 동의하십니까?</p>
+									<div class="agreeChkWrap">
+										<span class="chkBox">동의하지 않음</span><span class="chkBox">동의함</span>
+									</div>
+								</div>
+								<div class="wrapTblDefault blue">
+									<table>
+										<caption>수집·이용 항목 표</caption>
+										<colgroup>
+											<col style="width:30%">
+											<col style="width:auto">
+										</colgroup>
+										<tbody>
+											<tr>
+												<th colspan="2"><span class="icoBrdPeople"></span>개인(신용)정보</th>
+											</tr>
+											<tr>
+												<th scope="row"><span class="icoBrdFolder"></span><br>일반개인정보</th>
+												<td>
+													<ul class="cont_list">
+														<li>성명, 연락처, 생년월일, 성별, 직업, 접속기록, 서비스 이용기록 등 서비스 이용관련한 행태 정보, 부가서비스 이용을 위해 이용자가 제공하는 정보(관심사, 가족관계, 가족생년 등)</li>
+													</ul>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row"><span class="icoBrdDeal"></span><br>신용거래정보</th>
+												<td>
+													<ul class="cont_list">
+														<li>타(금융)기관 거래정보 및 기타자산(상품종류, 거래조건(이자율, 만기 등), 거래일시, 금액 등 거래 관련 정보 및 상담 등을 통해 생성되는 정보)</li>
+													</ul>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="termAgreeWrap">
+									<p>위 개인(신용)정보 <em>수집·이용</em>에 동의하십니까?</p>
+									<div class="agreeChkWrap">
+										<span class="chkBox">동의하지 않음</span><span class="chkBox">동의함</span>
+									</div>
+								</div>
+								<p class="popTermsTxt">* 본 동의 이전에 발생한 개인(신용)정보도 수집·이용 대상에 포합됩니다. </p>
+								<p class="popTermsTxt">* 은행의 고의 또는 과실 등 귀책사유로 인한 개인정보 유출로 고객님에게 발생한 손해에 대해 관계 법령 등에 따라 보상 받으실 수 있습니다.</p>
+							</div>
+						</div>
+					</div>
+					<a class="swiper-button-next" href="javascript:;" tabindex="0" role="button" aria-label="다음" aria-disabled="false">다음</a>
+					<a class="swiper-button-prev" href="javascript:;" tabindex="0" role="button" aria-label="이전" aria-disabled="false">이전</a>
+				</div>
+			
+			</div>
+
+			<div class="popBtnWrap">
+				<div class="popBtn">
+					<a href="javascript:;" class="confirmBtn" role="button">전체 동의</a>
+				</div>
+				<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+			</div>
+		</div>
+	</div>
+	<!-- // 팝업 끝 -->
+
+
+<!-- <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2" >
+	<div class="swiper-wrapper">
+		<div class="swiper-slide">
+			<img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+		</div>
+		<div class="swiper-slide">
+			<img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+		</div>
+		<div class="swiper-slide">
+			<img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+		</div>
+	</div>
+	<div class="swiper-button-next"></div>
+	<div class="swiper-button-prev"></div>
+</div> -->
+<!-- <div thumbsSlider="" class="swiper mySwiper">
+	<div class="swiper-wrapper">
+		<div class="swiper-slide">
+			약관 1
+		</div>
+		<div class="swiper-slide">
+			약관 2
+		</div>
+		<div class="swiper-slide">
+			약관 3
+		</div>
+	</div>
+</div> -->
+
+<!-- <script>
+	$(function(){
+		var termsWrap = new Swiper('.swiper-container.prevNext' , {
+			initialSlide :2,
+			slidesPerView: 1,
+			spaceBetween: 20,
+			observer:true,
+			observeParents : true,
+			autoHeight : true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			on : {
+				init:function(){
+					$('.prevNext .swiper-slide').attr('aria-hidden','true');
+					$('.prevNext .swiper-slide-active').attr('aria-hidden','false');
+				},
+				slideChangeTransitionEnd: function(){
+					$(".prevNext .swiper-slide").attr('aria-hidden', true);
+					$(".prevNext .swiper-slide.swiper-slide-active").attr('aria-hidden', false);
+				}
+			}
+		});
+	});
+</script> -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+	var swiper = new Swiper(".mySwiper", {
+		spaceBetween: 10,
+		slidesPerView: 1,
+		observer: true,
+		observeParents: true,
+		effect: "fade",
+		touchRatio: 0,	//touch move 비활성
+		freeMode: true,
+		watchSlidesProgress: true,
+	});
+	var swiper2 = new Swiper(".mySwiper2", {
+		initialSlide :2,
+		spaceBetween: 10,
+		observer: true,
+		observeParents: true,
+		//autoHeight : true,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		thumbs: {
+			swiper: swiper,
+		},
+	});
+</script>
+
+</body>
+</html>

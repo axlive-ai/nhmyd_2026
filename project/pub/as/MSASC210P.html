@@ -1,0 +1,106 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 관리</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function() {
+		fullLayerPop();
+	});
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">계좌 상세</a></h1>
+			<!-- <a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>  -->
+			<a href="javascript:;" class="btnAcAdmin"><span class="blind">관리</span></a>
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container"></div>
+		<!-- //container -->
+
+		<!-- 팝업시작 -->
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>관리</h1>
+				<div class="popCont">
+					<h2 class="defTit">$내 자산 별명$</h2>
+					<p class="subTxt">농협은행 30112345678</p>
+					<hr class="divLineH3" aria-hidden="true"><!--09.23 divLineH3으로 수정-->
+
+					<div class="formWrap marginLess">
+						<ul>
+							<li>
+								<strong class="formTit">별명설정</strong>
+								<p class="subTxt5">자산 목록에서 별명으로 보여요.</p>
+								<div class="inputList mt10"> <!-- [2022-01-04] mt 추가 -->
+									<input type="text" title="자산 별명 입력" value="" placeholder="별명을 입력해주세요."> <!-- [2023-01-12] placeholder 수정 -->
+									<a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+								</div>
+								<p class="errorTxt">한글 15자, 영문 30byte 입력 제한</p> <!-- [2023-01-12] 에러메시지 추가 -->
+							</li>
+							<li>
+								<div class="flexBothArea mt30">
+									<div>
+										<strong class="formTit">즐겨찾는 자산</strong> <!-- [2023-01-12] mt0 클래스 삭제 -->
+										<p class="subTxt5">주로 쓰는 계좌로 설정해보세요.</p>
+									</div>
+									<div>
+										<span class="tgBtnType2">
+											<input type="checkbox" id="toggle1">
+											<label for="toggle1"><span class="blind">즐겨찾는 자산으로 설정</span></label>
+										</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="flexBothArea mt30">
+									<div>
+										<strong class="formTit mt0">순자산에 금액 포함</strong>
+										<p class="subTxt5">자산목록에는 보이지만 순자산금액에는 제외돼요.</p><!-- 문구수정// -->
+									</div>
+									<div>
+										<span class="tgBtnType2">
+											<input type="checkbox" id="toggle2" checked="checked">
+											<label for="toggle2"><span class="blind">순자산에 금액 포함 설정</span></label>
+										</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div><!-- //.popCont -->
+
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<a href="javascript:;" class="confirmBtn" role="button">저장</a>
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- // 팝업 끝 -->
+	</div>
+</body>
+</html>

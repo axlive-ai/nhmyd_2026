@@ -1,0 +1,95 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>검진일 선택</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(function(){
+		slidePopConfirm();
+	})
+</script>
+
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">검진일 선택</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+
+		</div>
+		<!-- //container -->
+
+		<!-- 검진일 선택 팝업 -->
+		<div class="nhasset popWrap slidePopConfirm">
+			<div class="dim"></div>
+			<div class="popInner">
+				<h1>검진일 선택
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">결제 예정 금액 툴팁</span></button>
+						<div class="tooltipCont mt0">
+							<p>국가건강검진 대상연도만 노출됩니다.</p>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+				</h1>
+				<div class="popCont">
+					<ul class="selectList selMonth">
+						<li class="cs active">
+							<a href="javascript:;" role="button">2021년 11월 13일</a>
+						</li>
+						<li>
+							<a href="javascript:;" role="button">2016년 12월 12일</a>
+						</li>
+						<li>
+							<a href="javascript:;" role="button">2013년 12월 21일</a>
+						</li>
+						<li>
+							<a href="javascript:;" role="button">2010년 11월 20일</a>
+						</li>
+						<li>
+							<a href="javascript:;" role="button">2007년 11월 01일</a>
+						</li>
+					</ul>
+				</div>
+                <!-- 팝업 버튼영역  -->
+                <div class="popBtnWrap">
+					<div class="popBtn">
+						<a href="javascript:;" class="confirmBtn" role="button">확인</a>
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+                <!-- // 팝업 버튼영역 -->
+				<div class="popBtnWrap">
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- //검진일 선택 팝업 -->
+
+	</div>
+</body>
+</html>

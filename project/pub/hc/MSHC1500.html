@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>비교상품상세</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">고혈압</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="boxTypeWrap healthBox"> <!-- [2023-02-23] healthBox 클래스 추가 -->
+				<h2 class="defSubTit2"><strong class="bold">고혈압이란?</strong></h2>
+				<p class="subTxt">비만, 스트레스, 운동 무기질(칼슘, 칼륨, 마그네슘)부족, 술·당분·지방·소금의 과다섭취 등으로 인해 혈액이 흐르면서 혈관에 가하는 압력인 혈압이 140/90mmHg 이상인 상태를 말하며, 심장질환, 신장질환, 뇌혈관 질환의 원인 중 하나</p>
+				<hr class="divLine3">
+				<h2 class="defSubTit2 containTooltip"><strong class="bold">내 검진결과 비교</strong>
+					<div class="tooltipWrap">
+						<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">그래프 구간안내 설명 툴팁</span></button>
+						<div class="tooltipCont">
+							<p>최근 검사일 기준 직전년도 결과 비교 제공</p>
+							<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+						</div>
+					</div>
+				</h2>
+				<h3 class="defSubTit3 mt20">수축기 혈압</h3>
+				<div class="graphWrap" style="height:160px;background:#f6f6f6;" tabindex="0" role="img" aria-label="수축기 혈압 그래프 2013년 110mmHg, 2016년 122mmHg, 2021년 117mmHg">
+					<p style="text-align:center;">그래프 영역</p>
+				</div>
+				<h3 class="defSubTit3 mt20">이완기 혈압</h3>
+				<div class="graphWrap" style="height:160px;background:#f6f6f6;" tabindex="0" role="img" aria-label="이완기 혈압 그래프 2013년 70mmHg, 2016년 61mmHg, 2021년 75mmHg">
+					<p style="text-align:center;">그래프 영역</p>
+				</div>
+			</div>
+
+			<div class="formWrap healthBox"> <!-- [2023-02-23] healthBox 클래스 추가 -->
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn">
+							<strong class="tit">기준수치(수축기/이완기)</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="detailList">
+							<li>
+								<strong class="tit">정상</strong>
+								<strong class="value">120mmHg 미만/80mmHg 이상</strong>
+							</li>
+							<li>
+								<strong class="tit">질환의심</strong>
+								<strong class="value">140mmHg 미만/90mmHg 이상</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn">
+							<strong class="tit">검진항목 설명</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="listDot">
+							<li>수축기 혈압이 120~139mmHg, 이완기 혈압이 80~89mmHg면 고혈압 전단계 이므로 운동, 금주, 금연, 체중관리, 저염식사, 스트레스 조절 등 꾸준한 관리가 필요</li>
+						</ul>
+					</div>
+				</div>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn">
+							<strong class="tit">비만 관련 질병</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="listDot">
+							<li>고혈압, 당뇨병, 고지혈증, 동맥경화, 협심증, 심근경색증, 뇌졸중, 암 등</li>
+						</ul>
+					</div>
+				</div>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn">
+							<strong class="tit">식사요법</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="listDot">
+							<li>칼슘, 칼륨, 마그네슘이 많은 과일, 채소, 저지방 유제품 충분히 먹기</li>
+							<li>짠 음식을 멀리하고 싱겁게 먹기</li>
+							<li>술 멀리하기</li>
+
+						</ul>
+					</div>
+				</div>
+				<div class="boxTypeToggle toggleWrap">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn">
+							<strong class="tit">운동요법</strong>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="listDot">
+							<li>3~6개월 이상 꾸준히 운동하면 혈압이 10mmHg까지 낮출 수 있음</li>
+							<li>매일 활기차게 30분 정도 걷는 것과 같은 신체적 활동만으로도 혈압이 낮아짐</li>
+							<li>스트레칭 및 가벼운 유산소성 운동이 좋음</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- <div class="areaBtnDefault">
+				<a href="javascript:;" class="btnPressPoint" role="button">확인</a>
+			</div> -->
+		</div>
+		<!-- //container -->
+	</div>
+<script type="text/javascript">
+	$('.scAreaWrap a.active').each(function(){
+		var $this = $(this);
+		var $thisPos = $this.offset().left;
+		var $wrap = $this.closest('.scAreaWrap').scrollLeft();
+		$this.closest('.scAreaWrap').stop().animate({scrollLeft:$wrap + $thisPos - 16 },300);
+	});
+	$('.scAreaWrap a').on('click focus',function(e){
+		var $this = $(this);
+		var $thisPos = $this.offset().left;
+		var $wrap = $this.closest('.scAreaWrap').scrollLeft();
+		$this.closest('.scAreaWrap').stop().animate({scrollLeft:$wrap + $thisPos - 16 },300);	
+	});
+
+	$('.maybeWishList > li > a').click(function(){
+		$(this).closest('.maybeWishList').find('a').removeClass('active');
+		$(this).addClass('active');
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>STEP4) 기대수익률 | 조기은퇴진단 | 컨설팅</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">조기은퇴진단</a></h1>
+		<a href="javascript:;" class="btnEtc">나가기</a>
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 조기은퇴진단 ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<!-- -------------------------------------- -->
+		<!-- [상단영역] 스텝 영역 -->
+		<!-- -------------------------------------- -->
+		<div class="infoStep1">
+			<ol>
+				<li>
+					<i aria-hidden="true">1</i>
+					<span>기본정보</span>
+				</li>
+				<li>
+					<i aria-hidden="true">2</i>
+					<span>은퇴준비자금</span>
+				</li>
+				<li>
+					<i aria-hidden="true">3</i>
+					<span>은퇴목표</span>
+				</li>
+				<li aria-current="step"><!-- [D] 현재 스텝 li : aria-current="step" 노출 -->
+					<i aria-hidden="true">4</i>
+					<span>기대수익률</span>
+				</li>
+			</ol>
+		</div>
+		
+		<!-- -------------------------------------- -->
+		<!-- [SECTION] 진단정보 입력 STEP4 영역 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap t1">
+			<div class="titHeadline1 img3">
+				<h2>기대하는 연간수익률은<br>얼마인가요?</h2>
+				<div class="tooltipWrap">
+					<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">기대 연간수익률 툴팁 열기</span></button>
+					<div class="tooltipCont">
+						<div class="msaeTool">
+							<ul class="popBul">
+								<li>선택하신 기대수익률은 현재나이부터 은퇴전까지 적용됩니다.</li>
+								<li>은퇴 이후에는 물가상승률과 동일한 수익률이 반영됩니다.</li>
+								<li>물가상승률은 최근 3개년도 평균 값인 <span>2.7</span>%를 반영합니다.
+									<ul class="listDash">
+										<li><span>2022</span>년 물가상승률 <span>5.1</span>%</li>
+										<li><span>2021</span>년 물가상승률 <span>2.5</span>%</li>
+										<li><span>2020</span>년 물가상승률 <span>0.5</span>%<br>(자료 : 통계청 소비자물가 동향)</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">기대 연간수익률 툴팁 닫기</span></button>
+					</div>
+				</div>
+				<p>모아둔 은퇴자금을 주식, 펀드 등에 투자하여 얻을 수 있을 것으로 기대하는 수익률 입니다. 기대수익률 TIP을 참고하여 적정수익률을 선택해 보세요.</p>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [기대수익률 슬라이더] -->
+			<!-- -------------------------------------- -->
+			<div class="formWrap line">
+				<div class="formTitN">
+					<strong>연간 기대수익률</strong>
+					<div class="inputVal t1" data-range-id="uiRangeInput2"></div>
+				</div>
+				<div class="inputRange1" id="uiRangeInput2" data-form-mode="range" data-output="1" data-datalist="1%,15%">  <!-- [D] data-datalist="min%, max%" : 범례값  -->
+					<div class="area">
+						<input type="range" title="연간 기대수익률" min="0" max="15" step="0.5" value="3">
+					</div>
+				</div>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [기대수익률 TIP] -->
+			<!-- -------------------------------------- -->
+			<!-- [CASE1] 투자성향진단 정보가 있는 경우 -->
+			<div class="infoCont4">
+				<dl>
+					<dt>기대수익률 TIP</dt>
+					<dd><span>김농협</span>님의 투자성향 <strong>안전추구형</strong>의 기대수익률은 <strong>2.5~3.5%</strong>입니다.</dd>
+				</dl>
+				<div class="btns"><button type="button" class="linkTxt3" aria-label="기대수익률과 투자위험 자세히보기" aria-haspopup="true">자세히보기</button></div>
+			</div>
+			<!-- [CASE2] 투자성향진단 정보가 없는 경우 -->
+			<div class="infoCont4">
+				<dl>
+					<dt>기대수익률 TIP</dt>
+					<dd>투자위험도 함께 고려해 보세요.</dd>
+					<dd>높은 수익률을 기대할수룩 위험 부담도 커질 수 있어요.</dd>
+				</dl>
+				<div class="btns"><button type="button" class="linkTxt3" aria-label="기대수익률과 투자위험 자세히보기" aria-haspopup="true">자세히보기</button></div>
+			</div>
+			<!-- // -->
+		</div>
+		
+		<!-- -------------------------------------- -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- -------------------------------------- -->
+		<div class="areaBtnDefault">
+			<a href="javascript:;" class="btnPressPoint" role="button">진단결과 보기</a>
+		</div>
+		<!-- -------------------------------------- -->
+	</div>
+	<!-- ###################################### -->
+</div>
+</body>
+</html>

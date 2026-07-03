@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>기본정보</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		//tostpop();//토스트 팝업 호출
+	})
+
+	function tostpop(){
+		var $tostCont = '<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg">업데이트를 완료했습니다.</div></div>'
+		$('.container').after($tostCont);
+		setTimeout(function(){
+			$('.tostpopupWrap').remove();
+		},4000)
+	}
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>기본정보</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<div class="formWrap boxTypeWrap addBotBtn">
+
+			<div class="yatexinfoWrap">
+				<h2 class="defTit">연말정산을 시작하려면<br><strong>기본정보가 필요해요</strong></h2><!--09.19 수정-->
+				<div class="yearimgBg">
+					<span class="blind">연말정산 기본정보 이미지</span>
+				</div>
+			</div>
+
+			<div class="yeartexForm  mt0"><!--08.22 mt40울 mt0으로 수정-->
+				<strong class="formTit disInline">올해의 연봉은 얼마인가요?</strong>
+				<div class="tooltipWrap w96">
+					<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">올해의 연봉 툴팁 열기</span></button>
+					<div class="tooltipCont">
+						<p>총급여는 국세청에서 수집된 건강보험료(직장)조회 기준으로 3개월 평균 보수 월액을 기준으로 추정된 금액입니다.
+							</p>
+						<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+					</div>
+				</div>
+				<button type="button" class="contBtn02">불러오기</button>
+				<p class="addtxt">(약 7,000만원)</p>
+				<div class="inputList"> <!--error인 경우 추가-->
+					<input type="tel" title="올해의 연봉" name="" id="" value="69,999,999" placeholder=" ">
+					<span class="unit">원</span>
+					<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+				</div>
+				<!-- <p class="errorTxt">1만원 이상 입력해주세요</p> -->
+			</div>
+
+			<div class="yeartexForm addbdTop">
+				<strong class="formTit disInline mt30">소유하신 주택이 있나요?</strong>
+				<div class="tooltipWrap w96">
+					<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">소유하신 주택 툴팁 열기</span></button>
+					<div class="tooltipCont">
+						<p>주택보유 유형은 주택청약 등 환급 받을 수 있는 금액에 활용되어 더 정확한 금액을 제공 할 수 있습니다.<!--08.19 텍스트 수정-->
+							</p>
+						<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+					</div>
+				</div>
+				<div class="boxRadio">
+					<div class="boxRadioInn">
+						<span>
+							<input name="rdo01" id="rdo01" type="radio" checked="checked">
+							<label for="rdo01">무주택</label>
+						</span>
+					</div>
+					<div class="boxRadioInn">
+						<span>
+							<input name="rdo01" id="rdo02" type="radio">
+							<label for="rdo02">1주택</label>
+						</span>
+					</div>
+					<div class="boxRadioInn">
+						<span>
+							<input name="rdo01" id="rdo03" type="radio">
+							<label for="rdo03">2주택 이상</label>
+						</span>
+					</div>
+				</div>
+
+				<div class="yeartexForm02 addbdTop"> <!--s:가족구성원 추가 시작-->
+					<h2 class="tit fo16">가구 구성을 선택해주세요</h2> <!--08.19  fo16추가-->
+					<ul class="personAllow">
+						<li>
+							<div class="personTitWrap mt20">
+								<strong class="tit">소득공제 대상의 배우자가 있나요?</strong>
+								<div class="tooltipWrap w96">
+									<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">소득공제 대상 배우자 툴팁 열기</span><!-- [접근성_2024] blind 수정 --></button>
+									<div class="tooltipCont">
+										<p>배우자의 급여기준 사업자는 100만원, 근로소득 년간 총 급여 500만원 이하 대상입니다.
+										</p> <!--08.23 텍스트 수정-->
+										<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+									</div>
+								</div>
+							</div>
+
+							<div class="boxRadio">
+								<div class="boxRadioInn">
+									<span>
+										<input name="rdo02" id="rdo04" type="radio">
+										<label for="rdo04">네</label>
+									</span>
+								</div>
+								<div class="boxRadioInn">
+									<span>
+										<input name="rdo02" id="rdo05" type="radio"  checked="checked"> <!--08.22 수정-->
+										<label for="rdo05">아니요</label>
+									</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="flexBox mt27">
+								<div class="personTitWrap">
+									<strong class="tit">부모님 공제는 몇 분인가요? </strong>
+									<div class="tooltipWrap w96">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">부모님 공제 툴팁 열기</span></button>
+										<div class="tooltipCont">
+											<p>만 60세 이상 연간소득금액 100만원 이하인 부모 또는 조부모(외가포함)를 말합니다. 배우자의 직계존속도 포함됩니다. 
+												</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="itemWrap formHolder">
+									<div class="deductBtnWrap">
+										<button type="button" class="minusBtn"><span class="blind">부모님 공제 빼기</span></button>
+										<span class="deductNum"><em>0</em></span>
+										<button type="button" class="plusBtn"><span class="blind">부모님 공제 더하기</span></button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="flexBox bdBt">
+								<div class="personTitWrap">
+									<strong class="tit">자녀가 몇 명인가요?</strong>
+									<div class="tooltipWrap w96">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">자녀 공제 툴팁 열기</span></button>
+										<div class="tooltipCont">
+											<p>만 20세 이하 연간소득금액 100만원 이하인 자녀, 손자녀, 배우자의 자녀, 입양자녀를 말합니다.
+												</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="itemWrap formHolder">
+									<div class="deductBtnWrap">
+										<button type="button" class="minusBtn"><span class="blind">자녀 공제 빼기</span></button>
+										<span class="deductNum"><em>0</em></span>
+										<button type="button" class="plusBtn"><span class="blind">자녀 공제 더하기</span></button>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+					<!--<div class="yalistMoreBtn">
+						<a href="javascript:;" title="항목 더보기">추가 인적공제 더하기</a>
+					</div>-->
+
+					<!-- 추가 인적공제 더하기 -->
+					<ul class="personAllow bdAdd">	
+						<li>
+							<div class="flexBox">
+								<div class="personTitWrap">
+									<strong class="tit">형제/자매가 몇 명인가요?</strong>
+								</div>
+								<div class="itemWrap formHolder">
+									<div class="deductBtnWrap">
+										<button type="button" class="minusBtn"><span class="blind">형제/자매 공제 빼기</span></button>
+										<span class="deductNum"><em>0</em></span>
+										<button type="button" class="plusBtn"><span class="blind">형제/자매 공제 더하기</span></button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="flexBox">
+								<div class="personTitWrap">
+									<strong class="tit">기초수급자 공제</strong>
+								</div>
+								<div class="itemWrap formHolder">
+									<div class="deductBtnWrap">
+										<button type="button" class="minusBtn"><span class="blind">기초수급자 공제 빼기</span></button>
+										<span class="deductNum"><em>0</em></span>
+										<button type="button" class="plusBtn"><span class="blind">기초수급자 공제 더하기</span></button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="flexBox">
+								<div class="personTitWrap">
+									<strong class="tit">위탁아동 공제</strong>
+								</div>
+								<div class="itemWrap formHolder">
+									<div class="deductBtnWrap">
+										<button type="button" class="minusBtn"><span class="blind">위탁아동 공제 빼기</span></button>
+										<span class="deductNum"><em>0</em></span>
+										<button type="button" class="plusBtn"><span class="blind">위탁아동 공제 더하기</span></button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<!-- //추가 인적공제 더하기 -->
+					</ul>
+
+					<!-- s :자녀 세액공제-->
+					<ul class="personAllow">
+						<li>
+							<div class="flexBox ty01">
+								<div class="personTitWrap">
+									<strong class="tit fo16">자녀 세액공제</strong><!--08.22 폰트 크기 수정-->
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="flexBox bdNone">
+								<div class="personTitWrap">
+									<strong class="tit">자녀 공제 </strong>
+									<div class="tooltipWrap w96">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">자녀 공제 툴팁 열기</span></button>
+										<div class="tooltipCont">
+											<p>기본공제대상 자녀 중 7세 이상 20세 이하 자녀가 해당됩니다. <br> **2023년 개정안 7세 →8세
+												</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="itemWrap formHolder">
+									<div class="deductBtnWrap">
+										<button type="button" class="minusBtn"><span class="blind">빼기</span></button>
+										<span class="deductNum"><em>0</em></span>
+										<button type="button" class="plusBtn"><span class="blind">더하기</span></button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="flexBox">
+								<div class="personTitWrap">
+									<strong class="tit">출산 · 입양</strong>
+									<div class="tooltipWrap w96">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">출산 · 입양 공제 툴팁 열기</span></button>
+										<div class="tooltipCont">
+											<p>해당 과세연도에 출산하거나 입양신고 한경우를 말합니다.
+												</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="itemWrap formHolder">
+									<div class="deductBtnWrap">
+										<button type="button" class="minusBtn"><span class="blind">빼기</span></button>
+										<span class="deductNum"><em>0</em></span>
+										<button type="button" class="plusBtn"><span class="blind">더하기</span></button>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<!-- //e :자녀 세액공제-->
+
+					<!-- s :추가공제-->
+					<ul class="personAllow">
+						<li>
+							<div class="flexBox ty01">
+								<div class="personTitWrap">
+									<strong class="tit fo16">추가공제</strong>
+									<!--08.22 폰트 크기 수정-->
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="flexBox bdNone">
+								<div class="personTitWrap">
+									<strong class="tit">경로우대 </strong>
+									<div class="tooltipWrap w96">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">경로우대 툴팁 열기</span></button>
+										<div class="tooltipCont">
+											<p> 만 70세 이상 연간소득금액 100만원 이하인 부모 또는 조부모(외가포함)를 말합니다. 배우자의 직계존속도 포함됩니다. </p><!--08.23 : 삭제-->
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="itemWrap formHolder">
+									<div class="deductBtnWrap">
+										<button type="button" class="minusBtn"><span class="blind">경로우대 빼기</span></button>
+										<span class="deductNum"><em>0</em></span>
+										<button type="button" class="plusBtn"><span class="blind">경로우대 더하기</span></button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="flexBox">
+								<div class="personTitWrap">
+									<strong class="tit">장애인 </strong>
+								</div>
+								<div class="itemWrap formHolder">
+									<div class="deductBtnWrap">
+										<button type="button" class="minusBtn"><span class="blind">장애인 빼기</span></button>
+										<span class="deductNum"><em>0</em></span>
+										<button type="button" class="plusBtn"><span class="blind">장애인 더하기</span></button>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<!-- //e :추가공제-->
+
+
+					<!-- s :부녀자 한부모-->
+					<ul class="personAllow">
+						<li>
+							<div class="flexBoxTy01">
+								<div class="personTitWrap">
+									<strong class="tit">부녀자</strong>
+									<div class="tooltipWrap w96">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">부녀자 툴팁 열기</span></button>
+										<div class="tooltipCont">
+											<p>부녀자 공제는 본인이 근로소득 3천만원 이하인 여성의 경우만 해당되며, 한부모공제와 중복적용 되지 않습니다.</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="boxRadio"> <!--boxRadio-->
+									<div class="boxRadioInn">
+										<span>
+											<input name="rdo03" id="rdo07" type="radio">
+											<label for="rdo07">네</label>
+										</span>
+									</div>
+									<div class="boxRadioInn">
+										<span>
+											<input name="rdo03" id="rdo08" type="radio"  checked="checked">
+											<label for="rdo08">아니요</label>
+										</span>
+									</div>
+								</div>
+								<!--//boxRadio-->
+							</div>
+						</li>
+						<li>
+							<div class="flexBoxTy01">
+								<div class="personTitWrap">
+									<strong class="tit">한부모</strong>
+									<div class="tooltipWrap w96">
+										<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">한부모 툴팁 열기</span></button>
+										<div class="tooltipCont">
+											<p>한부모 공제는 배우자가 없는 자로서 기본공제대상자인 직계비속 또는 입양자가 있는 경우 해당되며, 부녀자공제와 중복적용 되지 않습니다.</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="boxRadio"> <!--boxRadio-->
+									<div class="boxRadioInn">
+										<span>
+											<input name="rdo04" id="rdo09" type="radio">
+											<label for="rdo09">네</label>
+										</span>
+									</div>
+									<div class="boxRadioInn">
+										<span>
+											<input name="rdo04" id="rdo10" type="radio"  checked="checked">
+											<label for="rdo10">아니요</label>
+										</span>
+									</div>
+								</div>
+								<!--//boxRadio-->
+							</div>
+						</li>
+					</ul>
+					<!-- //e :부녀자 한부모-->
+
+				</div>
+ 				<!--//e:가족구성원 추가 시작-->
+			</div>
+
+		</div>
+		<div class="yatexMore simuBtnMore"> <!--08.18 버튼 추가-->
+			<a href="javascript:;" title="항목 더보기">추가 인적공제 더하기</a>
+		</div>
+	
+		<div class="areaBtnDefault">
+			<a href="javascript:;" class="btnPressPoint" role="button">저장하기</a><!--08.18 버튼명 수정-->
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

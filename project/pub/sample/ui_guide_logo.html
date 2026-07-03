@@ -1,0 +1,100 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>UI Guide(2022) 기관로고</title>
+<script src="../pub-assets/js/head.js"></script>
+<style type="text/css">
+	.file_list{user-select: all}
+	.re_rec{width: 32px;height: 32px;border:solid 1px silver;position: fixed;top: -64px;left: 50%;margin-left: -16px;z-index: 2000;background: url('../../images/btn_update.png')no-repeat center;border-radius: 50% ;background-color: cyan;background-size: 24px auto;}
+</style>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">기관로고</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="boxWrapShadow">
+				<div class="boxTypeWrap">
+				<!-- 상단 계좌정보 영역 -->
+					<div class="accTopInfo">
+
+						<h2 class="accName">WISE통장-저축예금<span class="acBookmark"><span class="blind">즐겨찾기</span></span>
+							<img src="../../images/logos/AAEO0000.png" alt="국민은행 로고" class="imgLogo"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+						</h2>
+						<dl class="totalBalance">
+							<dt>총 잔액</dt>
+							<dd><strong>2,098,694</strong>원</dd>
+						</dl>
+
+					</div>
+				</div>
+			</div>
+			<div class="boxTypeWrap pt0">
+				<div class="inoutListWrap invList">
+					<div class="inoutListInn">
+						<p class="date bdtNone">2020년 7월 31일</p>
+						<ul class="inoutList">
+							<li>
+								<div class="istLogItem">
+
+									<span class="imgWrap"> <!-- [2022-11-21] 한은정 : 로고 공통 이미지로 변경 -->
+										<img src="../../images/logos/ACRB0000.png" alt="삼성전자 로고" class="imgLogo">
+									</span>
+
+									<div class="itemTxt">
+										<p class="inoutTit">
+											<span class="listTit">매수 <em class="listSub">(거래수량 5)</em></span>
+											<span class="dataTit">거래금액</span>
+										</p>
+										<div class="inoutCont alc"><!--10.25  마크업 수정-->
+											<div class="timeWrap">
+												<span class="time">16:34</span>
+											</div>
+											<span class="amount outColor"><strong class="dataValue">USD 12,345</strong></span>
+										</div>
+										<div class="accContArea">
+											<span class="acctNum">계좌번호 노출</span>
+											<div class="accContNum">
+												<div class="totalAmount">거래단가(USD)<strong class="dataValue">2,000</strong></div>
+												<div class="totalAmount"><span class="txt">정산금액(USD) </span> <strong class="dataValue">10,000</strong></div>
+											</div>
+										</div>
+										<!--//10.25  마크업 수정-->
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+
+	</div>
+
+
+</body>
+</html>

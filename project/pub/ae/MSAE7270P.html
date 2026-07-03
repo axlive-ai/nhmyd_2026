@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>컨설팅 > NH주택청약플래너</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function() {
+		fullLayerPop();
+	});
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>NH주택청약플래너</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		
+	</div>
+
+	<div class="nhasset popWrap fullLayerPop">
+		<div class="popInner">
+			<h1>청약 가점 계산기</h1>
+			<div class="popCont">
+				<div class="formWrap">
+					<ul>
+						<li>
+							<strong class="formTit">Q1. 무주택기간 선택 <span class="subTxt2">(최대 32점)</span></strong>
+							<div class="inputList">
+								<a href="javascript:;" title="무주택기간 선택" aria-haspopup="true">
+									<span class="selectValue">선택</span>
+									<span class="selectBtn"></span>
+								</a>
+								<select name="" title="선택해주세요">
+									<option value=""></option>
+								</select>
+							</div>
+						</li>
+						<li>
+							<strong class="formTit mt25">Q2. 부양가족 선택 <span class="subTxt2">(최대 35점)</span>
+								<!-- tootip -->
+								<div class="tooltipWrap">
+									<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">부양가족 안내 툴팁 열기</span><!-- [접근성_2024] .blind 수정 --></button>
+									<div class="tooltipCont">
+										<p>- 부양가족 인정 대상자</p> 
+										<p class="mt5">
+											1. 청약자의 배우자<br> 
+											2. 청약자 또는 배우자의 무주택 직계존속,<br>
+											3. 청약자 또는 배우자의 미혼자녀(부모가 모두 사망한 경우 미혼 손자녀 포함)
+										</p><br>
+										<p>- 청약자 본인은 부양가족에서 제외</p> 
+										<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+									</div>
+								</div>
+								<!-- //tootip -->
+							</strong>
+							<div class="inputList">
+								<a href="javascript:;" title="부양가족 선택" aria-haspopup="true">
+									<span class="selectValue">선택</span>
+									<span class="selectBtn"></span>
+								</a>
+								<select name="" title="선택해주세요">
+									<option value=""></option>
+								</select>
+							</div>
+						</li>
+						<li>
+							<strong class="formTit mt25">Q3. 청약통장 가입일 <span class="subTxt2">(최대 17점)</span></span>
+								<!-- tootip -->
+								<div class="tooltipWrap">
+									<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">청약통장 가입기간 안내 툴팁 열기</span><!-- [접근성_2024] .blind 수정 --></button>
+									<div class="tooltipCont">
+										<p>청약통장 가입기간에 따른 가점은 만 6개월까지 (1점), 만 6개월이상~1년 미만 (2점), 만 1년이상 ~ 2년미만 (3점),
+											이후 1년 증가시마다 1점씩 늘어나며, 만 15년 이상인 경우
+											최대 점수인 17점으로 계산되며, 청약통장 가입기간 중 미성년자 기간, 상속이나 양도 등 고객님의 상황을 반영하여 계산됩니다.</p> 
+										<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+									</div>
+								</div>
+								<!-- //tootip -->
+							</strong>
+							<div class="inputList">
+								<a href="javascript:;" title="청약통장 가입일 선택" aria-haspopup="true">
+									<span class="selectValue">2022.08.24</span>
+									<span class="selectBtn"></span>
+								</a>
+								<select name="" title="선택해주세요">
+									<option value=""></option>
+								</select>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="info_area">
+					<strong class="info_area_title">주의사항</strong>
+					<!-- 2022-08-25 문구수정 -->
+					<ul class="listBul disc">
+						<li>청약가점제에 의해 청약 신청을 할 때는 청약자 본인이 직접 주택 소유 여부, 무주택기간 및 부양가족 수를 산정해야 하므로 신청 전에 청약 신청 시 유의사항 및 가점제도 내용을 충분히 이해해야만 착오에 따른 불이익을 피할 수 있습니다.</li>
+						<li>본 계산기는 고객의 편의를 돕기 위한 서비스로, 실제 청약 신청 시 적용되는 가점과  상이할 수 있습니다. 적용기준을 숙지 후 가점 항목을 선택하여 주세요.</li>
+						<li>적용기준 미숙지 등 착오 신청에 따른 책임은 청약자 본인에게 있으며 농협은행에서는 이에 책임을 지지 않습니다.</li>
+					</ul>
+					<!-- //2022-08-25 문구수정 -->
+				</div>
+			</div>
+
+			<div class="popBtnWrap">
+				<div class="popBtn">
+					<a href="javascript:;" class="confirmBtn" role="button">계산하기</a>
+				</div>
+				<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

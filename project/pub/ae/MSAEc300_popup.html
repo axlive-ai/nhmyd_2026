@@ -1,0 +1,80 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>[P] STEP3. 로딩 화면 | 신용점수 올리기 | 신용관리 | 컨설팅</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		
+	});
+</script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<button type="button" onclick="popup()">팝업호출</button>
+</div>
+
+<!-- ###################################### -->
+<!-- ### [샘플] 스크립트 ### -->
+<!-- ###################################### -->
+<script type="text/javascript">
+	function popup(){
+		var _html; 
+		_html = '<div class="nhasset popWrap fullLayerPop">',
+		_html += '<div class="popInner">',
+		_html += '<div class="popCont">',
+		_html += '<div class="assetLoadingWrap type03">',
+		_html += '	<div class="title">NICE에 정보 제출하고<br>신용점수 올리는 중</div>',
+		_html += '	<p class="subTxt2 mt10">앱을 종료하지 말고 기다려 주세요.</p>',
+		_html += '	<div class="assetLoadingValue">',
+		_html += '		<span><strong>100.00</strong>% 완료</span>',
+		_html += '	</div>',
+		_html += '</div>',
+		_html += '</div>',
+		_html += '</div>',
+		_html += '</div>'
+
+		$('body').append(_html);
+		fullLayerPop();
+		uiSetLottie(); //동적 컨테츠일 경우 함수 호출
+		myCarCost();
+	}
+	function myCarCost() {
+		var $thisCost = $('.assetLoadingValue strong');
+		var memberCountContText = $thisCost.text()//.replace(/,/g,'');
+		$({ val : 0}).animate({ val : memberCountContText}, {
+			duration: 1500,//애니메이션 시간
+			step: function(){
+				var num = numberWithCommas(Math.floor(this.val));
+				//var num = numberWithCommas(this.val.toFixed(2));
+				$thisCost.text(num);
+			},
+			complete: function(){
+				var num = numberWithCommas(Math.floor(this.val));
+				//var num = numberWithCommas(this.val.toFixed(2));
+				$thisCost.text(num);
+			}
+		});
+		function numberWithCommas(x){
+			return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		}
+	}
+</script>
+<!-- ###################################### -->
+</body>
+</html>

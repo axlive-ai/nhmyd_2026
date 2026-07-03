@@ -1,0 +1,245 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>연금상세 | 금투업권 | 자산</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">연금 상세</a></h1>
+		<a href="javascript:;" class="btnAcAdmin"><span class="blind">관리</span></a>
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 연금상세 ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<!-- -------------------------------------- -->
+		<!-- [레이어팝업] 메세지 -->
+		<!-- -------------------------------------- -->
+		<div class="layerMsgWrap">
+			<p>순자산 금액에 포함 안된 자산이에요.</p>
+			<button type="button" class="layerMsgClose"><span class="blind">닫기</span></button>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [상단영역] 연금정보 -->
+		<!-- -------------------------------------- -->
+		<div class="boxWrapShadow">
+			<!-- ### [계좌정보] 기본내용 ### -->
+			<div class="boxTypeWrap delShadow">
+				<!-- // -->
+				<div class="accTopInfo">
+					<h2 class="accName">연금저축펀드계좌
+						<img src="../../images/logos/AABU0000.png" alt="기업은행 로고" class="imgLogo">
+					</h2>
+					<dl class="totalBalance">
+						<dt>평가금액
+							<!-- 툴팁 -->
+							<div class="tooltipWrap">
+								<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">평가금액 안내 툴팁 열기</span></button>
+								<div class="tooltipCont">
+									<p>투자내역이 없는 경우, 평가금액이 0원으로 표시됩니다.</p>
+									<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+								</div>
+							</div>
+							<!-- // 툴팁 -->
+						</dt>
+						<dd><strong>6,490,000</strong>원</dd>
+					</dl>
+					<div class="etcInfo compare">
+						평가손익
+						<div class="tooltipWrap">
+							<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">평가손익 툴팁 열기</span></button>
+							<div class="tooltipCont">
+								<p>평가손익과 수익률은 예상 수익으로 실제와 상이할 수 있습니다.</p>
+								<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+							</div>
+						</div>
+
+						<!-- [CASE1] 증가 -->
+						<span class="arrowUp" role="img" aria-label="증가"><em class="blind">증가</em></span>
+						<span class="amount inColor"><strong>56,897</strong>원 (+<strong class="dataValue">1.53</strong><em class="won">%</em>)</span>
+
+						<!-- [CASE2] 감소 -->
+						<span class="arrowDown"><em class="blind">감소</em></span>
+						<span class="amount inColor"><strong>56,897</strong>원 (+<strong class="dataValue">1.53</strong><em class="won">%</em>)</span>
+
+						<!-- [CASE3] 변동 없을 경우 : arrowNone 클래스 사용, amount 옆의 in, out 관련 색상 클래스 빠짐 -->
+						<span class="arrowNone"><em class="blind">없음</em></span>
+						<span class="amount"><strong>0</strong>원</span>
+						<!-- // -->
+					</div>
+					<div class="wrapTag">
+						<span class="type01 radius4">#세제혜택</span>
+					</div>
+				</div>
+				<!-- // -->
+				<hr class="divLine">
+				<!-- // -->
+				<div class="accInfoDetail">
+					<ul class="detailList">
+						<li>
+							<span class="tit">유형</span>
+							<span class="value">개인연금&gt;연금저축펀드</span>
+						</li>
+						<li>
+							<span class="tit">상품명</span>
+							<span class="value">연금저축펀드계좌</span>
+						</li>
+						<li>
+							<span class="tit">운용상품 현황</span>
+							<span class="value">N개
+								<button type="button" class="contBtnArrow" title="회차정보 더보기">더보기</button>
+							</span>
+						</li>
+						<!-- [2023 NH마이데이터 서비스 고도화] 항목추가 -->
+						<li>
+							<span class="tit">자동이체</span>
+							<span class="value">N건
+								<button type="button" class="contBtnArrow">자동이체 상세보기</button>
+							</span>
+						</li>
+						<!-- // [2023 NH마이데이터 서비스 고도화]  -->
+					</ul>
+				</div>
+				<!-- // -->
+			</div>
+
+			<!-- ### [토글영역] 상세정보 ### -->
+			<div class="moreInfoArea">
+				<!-- // -->
+				<div class="moreInfoWrap toggleWrap">
+					<div class="moreInfo toggleCont" style="display:none;">
+						<hr class="divLine2" aria-hidden="true">
+						<ul class="detailList">
+							<li>
+								<span class="tit">계좌번호</span>
+								<span class="value">03580204123456 <button type="button" class="contBtn01" title="계좌번호 복사">복사</button></span>
+							</li>
+							<!-- [2023 NH마이데이터 서비스 고도화] -->
+							<li>
+								<span class="tit">연금개시일</span>
+								<span class="value">2022.11.13</span>
+							</li>
+							<!-- // -->
+							<li>
+								<span class="tit">가입일자</span>
+								<span class="value">2017.01.01</span>
+							</li>
+							<li>
+								<span class="tit">최종납입일</span>
+								<span class="value">2021.04.12</span>
+							</li>
+							<li>
+								<span class="tit">납입금액</span>
+								<span class="value"><strong class="dataValue">6,000,000</strong><em class="won">원</em></span>
+							</li>
+							<!-- [2023 NH마이데이터 서비스 고도화] -->
+							<li>
+								<span class="tit">금년납입금</span>
+								<span class="value"><strong class="dataValue">200,000</strong><em class="won">원</em></span>
+							</li>
+							<!-- // -->
+							<li>
+								<span class="tit">기 출금액</span>
+								<span class="value"><strong class="dataValue">6,000,000</strong><em class="won">원</em></span>
+							</li>
+							<li>
+								<span class="tit">연금 기 수령액</span>
+								<span class="value"><strong class="dataValue">6,490,000</strong><em class="won">원</em></span>
+							</li>
+						</ul>
+					</div>
+					<button type="button" class="moreOpenBtn toggleBtn"><span class="toggleTxt07">상세정보 보기</span></button>
+				</div>
+				<!-- // -->
+			</div>
+			<!-- ### // ### -->
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [목록영역] 거래내역 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap pt0">
+			<div class="inoutListWrap invList">
+				<!-- [항목하나] -->
+				<div class="inoutListInn">
+					<p class="date bdtNone">2020년 7월 31일</p>
+					<ul class="inoutList">
+						<li>
+							<label class="inoutChkWrap" for="chk01">
+								<p class="inoutTit">
+									<span class="listTit">매수 <em class="listSub">(거래수량 5)</em></span>
+									<span class="dataTit">거래금액</span>
+								</p>
+								<div class="inoutCont">
+									<div class="timeWrap">
+										<span class="time">18:35</span>
+									</div>
+									<span class="amount outColor"><strong class="dataValue">2,000,000</strong><em class="won">원</em></span> <!-- outColor만 -->
+								</div>
+								<div class="totalAmount">거래단가  <strong class="dataValue">20,000</strong><em class="won">원</em></div>
+								<div class="totalAmount"><span class="txt">정산금액</span> <strong class="dataValue">2,000,000</strong><em class="won">원</em></div>
+							</label>
+						</li>
+						<li>
+							<label class="inoutChkWrap" for="chk01">
+								<p class="inoutTit">
+									<span class="listTit">매수 <em class="listSub">(거래수량 5)</em></span>
+									<span class="dataTit">거래금액</span>
+								</p>
+								<div class="inoutCont">
+									<div class="timeWrap">
+										<span class="time">18:35</span>
+									</div>
+									<span class="amount outColor"><strong class="dataValue">2,000,000</strong><em class="won">원</em></span> <!-- outColor만 -->
+								</div>
+								<div class="totalAmount">거래단가  <strong class="dataValue">20,000</strong><em class="won">원</em></div>
+								<div class="totalAmount"><span class="txt">정산금액</span> <strong class="dataValue">2,000,000</strong><em class="won">원</em></div>
+							</label>
+						</li>
+						<!-- //[2021-10-05] 한은정 : 수정 -->
+					</ul>
+				</div>
+				<!-- [//] -->
+			</div>
+			<!-- // -->
+			<div class="listMoreBtn"><a href="javascript:;" title="항목 더보기">더보기</a></div>
+			<!-- // -->
+		</div>
+		<!-- -------------------------------------- -->
+	</div>
+	<!-- ###################################### -->
+</div>
+
+<!-- ###################################### -->
+<!-- ### [샘플] 스크립트 ### -->
+<!-- ###################################### -->
+<script type="text/javascript">
+	$('.layerMsgClose').click(function(){
+		$(this).closest('.layerMsgWrap').hide();
+	});
+</script>
+<!-- ###################################### -->
+</body>
+</html>

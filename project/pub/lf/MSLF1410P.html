@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>내차팔기</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script type="text/javascript">
+$(function(){
+    fullLayerPop();
+	//popCenter();
+});
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>내차팔기</h1>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<div class="content">
+			<div class="btnWrap page">
+				<a href="javascript:;" onclick="fullLayerPop();return false;" aria-haspopup="true" role="button" class="btn">fullLayerPop</a>
+			</div>
+		</div>
+	</div>
+</div>
+ 
+
+<div class="nhasset popWrap fullLayerPop" role="dialog">
+	<div class="popInner">
+		<h1>내차팔기</h1>
+		<div class="popCont grayPop">
+			<div class="mycarSaleTitle">
+				<h2 class="defTit"><strong>NH 마이데이터에서 꼼꼼하게 따져본<br>간편하고 편리한 내차 팔기</strong></h2>
+			</div>
+			<div class="boxTypeWrap mt30">
+				<div class="mycarSaleStep">
+					<h3>
+						<div>흥정없이 최고가 판매, 귀찮은 처리</div>
+						<div class="withLogo">모두<span class="ajLogo"><span class="blind">AJ셀카</span></span>에서 해드려요!</div>
+					</h3>
+					<ol>
+						<li><span class="step">Step 1</span>차량번호 입력</li>
+						<li><span class="step">Step 2</span>차량평가 (평가사 방문)</li>
+						<li><span class="step">Step 3</span>견적확인</li>
+						<li><span class="step">Step 4</span>판매결정</li>
+					</ol>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="popBtnWrap">
+			<div class="popBtn">
+				<a href="javascript:;" class="confirmBtn" role="button">내 차 팔기</a>
+			</div>
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

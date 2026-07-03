@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>서비스 가입</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		//tostpop();//토스트 팝업 호출
+	})
+
+	function tostpop(){
+		//var $tostCont = '<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg">서비스 가입이 완료 되었습니다.</div></div>'
+
+		//부정형 일때 추가(2022-08-12)
+		var $tostCont = '<div class="tostpopupWrap" aria-live="assertive"><div class="tostMsg error">잠시후 다시 시도해주세요.</div></div>'
+		$('.container').after($tostCont);
+		setTimeout(function(){
+			$('.tostpopupWrap').remove();
+		},4000)
+	}
+</script>
+</head>
+<body class="nhd_allone">
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>정보 수집ㆍ이용 동의</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<h2 class="defTit">NH마이데이터 서비스 이용을 위해<br><strong>개인(신용)정보 수집ㆍ이용 동의서를<br>확인</strong>해주세요</h2>
+
+		<div class="formWrap selectAll">
+			<div class="total">
+				<div class="formHolder check">
+					<input type="checkbox" id="type_all01" class="chekTypeOther"  checked="">
+					<label class="check" for="type_all01"> 전체동의</label>
+				</div>
+			</div>
+			<div class="cont">
+				<div class="formHolder check">
+					<input type="checkbox" id="type01" checked="">
+					<label class="check" for="type01"><em>[필수]</em> (비 여신)개인(신용)정보 수집ㆍ이용 동의서(NH마이데이터)</label>
+					<a href="javascript:;" class="btnView"><span class="blind">[필수] (비 여신)개인(신용)정보 수집ㆍ이용 동의서(NH마이데이터) 보기</span></a>
+				</div>
+				<div class="formHolder check">
+					<input type="checkbox" id="type02" checked="">
+					<label class="check" for="type02"><em>[선택]</em> 개인(신용)정보 수집ㆍ이용 동의서(상품서비스 안내 등)(NH마이데이터)</label>
+					<a href="javascript:;" class="btnView"><span class="blind">[필수] 개인(신용)정보 수집ㆍ이용 동의서(상품서비스 안내 등)(NH마이데이터) 보기</span></a>
+                </div>
+                <div class="formHolder check">
+					<input type="checkbox" id="type02" checked="">
+					<label class="check" for="type02"><em>[선택]</em> 개인(신용)정보 수집ㆍ이용 동의서(NH마이데이터 서비스&lt;맞춤정부혜택&gt;)</label>
+					<a href="javascript:;" class="btnView"><span class="blind">[필수] 개인(신용)정보 수집ㆍ이용 동의서(NH마이데이터 서비스&lt;맞춤정부혜택&gt;) 보기</span></a>
+                </div>
+                <div class="formHolder check">
+					<input type="checkbox" id="type02" checked="">
+					<label class="check" for="type02"><em>[선택]</em> 개인(신용)정보 수집ㆍ이용 동의서(필수)(NH마이데이터 서비스(내차관리))</label>
+					<a href="javascript:;" class="btnView"><span class="blind">[필수] 개인(신용)정보 수집ㆍ이용 동의서(필수)(NH마이데이터 서비스(내차관리)) 보기</span></a>
+				</div>
+			</div>
+        </div>
+        
+		<div class="areaBtnDefault">
+			<a href="javascript:;" class="btnPressPoint disabled" role="button" aria-disabled="true">확인</a><!-- 비활성 클래스 (disabled) --> <!-- [2023-01-16] 접근성 수정 -->
+			<a href="javascript:;" class="btnPressPoint " role="button" style="display: none;margin:0 !important">확인</a>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

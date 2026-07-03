@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>정부혜택_가족정보 등록_직업선택</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>요양병원 찾기</h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<div class="boxTypeWrap">
+			<h2 class="defTit icoHos">
+				지역별 1등급<br>요양병원을 찾아보세요
+			</h2>
+			<div class="locaWrap">
+				<div>
+					<button class="dep1">시/도 선택</button><button class="dep2" disabled>시/구/군 선택</button>
+				</div>
+			</div>
+			<ul class="locaList">
+				<li>
+					<a href="javscript:;" role="radio" class="active" aria-checked="true">서울특별시</a>
+				</li>
+				<li>
+					<a href="javscript:;" role="radio" aria-cheecked="false">부산광역시</a>
+				</li>
+				<li>
+					<a href="javscript:;" role="radio" aria-cheecked="false">인천광역시</a>
+				</li>
+				<li>
+					<a href="javscript:;" role="radio" aria-cheecked="false">대구광역시</a>
+				</li>
+				<li>
+					<a href="javscript:;" role="radio" aria-cheecked="false">광주광역시</a>
+				</li>
+				<li>
+					<a href="javscript:;" role="radio" aria-cheecked="false">대전광역시</a>
+				</li>
+				<li>
+					<a href="javscript:;" role="radio" aria-cheecked="false">울산광역시</a>
+				</li>
+				<li>
+					<a href="javscript:;" role="radio" aria-cheecked="false">경기도</a>
+				</li>
+				<li>
+					<a href="javscript:;" role="radio" aria-cheecked="false">강원도</a>
+				</li>
+				<li>
+					<a href="javscript:;" role="radio" aria-cheecked="false">충청북도</a>
+				</li>
+				<li>
+					<a href="javscript:;" role="radio" aria-cheecked="false">충청남도</a>
+				</li>
+				<li>
+					<a href="javscript:;" role="radio" aria-cheecked="false">전라북도</a>
+				</li>
+				<li>
+					<a href="javscript:;" role="radio" aria-cheecked="false">전라남도</a>
+				</li>
+				<li>
+					<a href="javscript:;" role="radio" aria-cheecked="false">경상북도</a>
+				</li>
+				<li>
+					<a href="javscript:;" role="radio" aria-cheecked="false">경상남도</a>
+				</li>
+				<li>
+					<a href="javscript:;" role="radio" aria-cheecked="false">제주특별자치도</a>
+				</li>
+				<li>
+					<a href="javscript:;" role="radio" aria-cheecked="false">세종특별자치시</a>
+				</li>
+			</ul>
+			<div class="areaBtnDefault">
+				<a href="javascript:;" class="btnPressPoint" role="button">선택 완료</a> <!-- 비활성시 disabled -->
+			</div>
+		</div>
+	</div>
+	<script>
+		$('.locaList a').on('click',function(){
+			$(this).parents('.locaList').find('a').removeClass('active').attr('aria-checked','false');
+			$(this).addClass('active').attr('aria-checked','true');
+		})
+	</script>
+</div>
+
+
+</body>
+</html>

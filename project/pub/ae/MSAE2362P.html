@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>컨설팅 - 연금진단</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function(){
+		slidePopOption();
+	})  
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text"></a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+
+		</div>
+		<!-- //container -->
+
+		<!-- 팝업시작 -->
+		<div class="nhasset popWrap slidePopOption">
+            <div class="dim"></div>
+			<div class="popInner">
+				<h1>저축 금액 선택</h1>
+                <div class="popCont">
+                    <div class="formWrap msaeType">
+                        <p class="msaeTxtType">여유자금이란 비상상황 발생시 바로 현금화 할 수 있는
+                            유동성자산을 의미합니다. 여유자금에 포함할 자산을 선택하세요.
+                        </p>
+                        <div class="boxRadio rowType msaeType">
+                            <ul class="icohc pickList psHopeRdo ">
+                                <li>	
+                                    <input type="radio" name="rdo01" id="rdo011" checked="checked" aria-label="매월 30만원">	
+                                    <label for="rdo011" class="rdoCheck" aria-hidden="true">매월 30만원</label>
+                                </li>
+                                <li>	
+                                    <input type="radio" name="rdo01" id="rdo012" aria-label="매월50만원">	
+                                    <label for="rdo012" class="rdoCheck" aria-hidden="true"> 매월50만원 </label>
+                                </li>
+                                <li>	
+                                    <input type="radio" name="rdo01" id="rdo013"  aria-label="매월100만원">	
+                                    <label for="rdo013" class="rdoCheck" aria-hidden="true"> 매월100만원 </label>
+                                </li>
+                                <li class="inptType">
+                                    <div class="inputList"> 
+                                        <input type="tel" title="예상 저축금액" name="" id="" value="" placeholder="직접입력">
+                                        <a href="javascript:" class="btnReset" role="button" style="display: none;">입력내용삭제</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>	
+                
+                <div class="popBtnWrap">
+                    <div class="popBtn">
+                        <a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">확인</a>
+                    </div>
+                    <a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+                </div>
+            </div>
+        </div>
+        <!-- 팝업끝 -->
+    </div>
+
+    <script>
+        var iptActive = function(){
+        var $inpT = "input[type='tel']";
+        $(document)
+            .on('blur, focusout', function(e) {
+                // $(li > input[type='radio']).addClass('a');		
+            })
+            .on('focus, focusin',  function(e){
+                $("li > input[type='radio']").prop("checked" , false);
+            })
+    } 
+    
+    iptActive()
+    
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 대출상품 연결하기</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(function(){
+		slidePopOption();
+	})
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">대출상품 연결하기</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+		</div>
+		<!-- //container -->
+		
+		<!-- 관련대출 slidepop -->
+		<div class="nhasset popWrap slidePopOption">
+			<div class="dim"></div>
+			<div class="popInner">
+				<h1>대출상품 연결하기</h1>
+				<div class="popCont">                    
+					<ul class="selectList">
+						<li class="active">
+							<!-- <span class="imgWrap D1AABG0000"><em class="blind">농협카드</em></span> -->
+							<span class="imgWrap"> <!-- [2022-11-21] 사보현 : 로고 공통 이미지로 변경 -->
+								<img src="../../images/logos/AABG0000.png" alt="농협카드 로고" class="imgLogo">
+							</span>
+							<a href="javascript:;">
+								<strong class="fwN">[신한은행]마이너스 대출</strong>
+								<div class="ob divingTxt fcGray"><!--<span>대출잔액 1,100,000원</span>--><span>만기일 2020.07.31</span></div><!--12.02 대출잔액 삭제-->
+								<div class="accInfo"><!--12.02 추가-->
+									<span class="accValue"><strong class="dataValue">1,000,000,000</strong><em class="won">원</em></span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<!-- <span class="imgWrap D1AABG0000"><em class="blind">농협카드</em></span> -->
+							<span class="imgWrap"> <!-- [2022-11-21] 사보현 : 로고 공통 이미지로 변경 -->
+								<img src="../../images/logos/AABG0000.png" alt="농협카드 로고" class="imgLogo">
+							</span>
+							<a href="javascript:;">
+								<strong class="fwN">[농협카드]마이너스 대출</strong>
+								<div class="ob divingTxt fcGray"><!--<span>대출잔액 1,100,000,000원</span>--><span>만기일 2020.07.31</span></div><!--12.02 대출잔액 삭제-->
+								<div class="accInfo"><!--12.02 추가-->
+									<span class="accValue"><strong class="dataValue">1,000,000,000</strong><em class="won">원</em></span>
+								</div>
+							</a>
+						</li>
+						<li class="select">
+							<!-- <span class="imgWrap D1AABG0000"><em class="blind">농협카드</em></span> -->
+							<span class="imgWrap"> <!-- [2022-11-21] 사보현 : 로고 공통 이미지로 변경 -->
+								<img src="../../images/logos/AABG0000.png" alt="농협카드 로고" class="imgLogo">
+							</span>
+							<a href="javascript:;">
+								<strong class="fwN">[국민은행]마이너스 대출</strong>
+								<div class="ob divingTxt fcGray"><!--<span>대출잔액 1,100,000,000원</span>--><span>만기일 2020.07.31</span></div><!--12.02 대출잔액 삭제-->
+								<div class="accInfo"><!--12.02 추가-->
+									<div class="wrapTag"><span class="type02">연결중</span></div>
+									<span class="accValue"><strong class="dataValue">1,000,000,000</strong><em class="won">원</em></span>
+								</div>
+							</a>
+						</li>
+						<!-- [2021-11-09] 한은정 : 케이스 추가 -->
+						<li>
+							<p class="selInfoTxt">아래 계좌는 연결할 수 없어요.</p>
+						</li>
+						<li class="disabled">
+							<!-- <span class="imgWrap D1AABG0000"><em class="blind">농협카드</em></span> -->
+							<span class="imgWrap"> <!-- [2022-11-21] 사보현 : 로고 공통 이미지로 변경 -->
+								<img src="../../images/logos/AABG0000.png" alt="농협카드 로고" class="imgLogo">
+							</span>
+							<a href="javascript:;" aria-disabled="true">
+								<strong class="fwN">[하나은행]마이너스 대출</strong>
+								<div class="ob divingTxt fcGray"><span>대출잔액 1,100,000,000원</span><!--<span>만기일 2020.07.31</span>--></div><!--12.02 대출잔액 삭제-->
+								<div class="accInfo"><!--12.02 추가-->
+									<div class="wrapTag"><span class="type05">1만원 미만</span><span class="type05">1개월 미만</span></div>
+									<span class="accValue"><strong class="dataValue">1,000,000,000</strong><em class="won">원</em></span>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<a href="javascript:;" class="confirmBtn" role="button">연결하기</a> <!-- 비활성화 시 disabled 추가 -->
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다."><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- //관련대출 slidepop -->
+
+	</div>
+
+</body>
+</html>

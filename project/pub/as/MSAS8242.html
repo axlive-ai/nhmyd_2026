@@ -1,0 +1,158 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 자산등록</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a> <!-- [2021 2차 한은정 : 05-14] 이전버튼 추가 -->
+			<h1><a href="javascript:;" role="text">부동산 등록</a></h1>
+			<a href="javascript:;" class="btnEtc">나가기</a>
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="boxTypeWrap pt0 pb0">
+				<div class="infoBox bgNone">
+					<p class="tit">강남 파라곤</p>
+					<div class="divingTxt pointColor9 mt0"><span>서울특별시 강남구 논현동 241-7</span></div>
+					<div class="divingTxt pointColor9 mt10"><span>아파트</span><span>143.68㎡</span></div>
+					<hr class="divLine">
+					<ul class="detailList">
+						<li>
+							<span class="tit">소유구분</span>
+							<span class="value"><strong class="pointColor">전세</strong></span>
+						</li>
+						<li>
+							<span class="tit">매매가 시세</span>
+							<span class="value"><strong class="pointColor">13억 5천만원</strong></span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="boxTypeWrap pt0 ">
+				<div class="formWrap estWrap"><!--10.24 estWrap 추가-->
+					<ul>
+						<li>
+							<strong class="formTit">전세 보증금
+								<em class="inputVal">(7억 5천만원)</em> <!-- [2021-12-14] 개선. 윤지현:마크업추가 -->
+							</strong>
+							<div class="inputList unitMan"> <!-- [2021-07-22] 윤지현:클래스 unitMan추가 -->
+								<input type="tel" title="매수금 금액" name="" id="" value="" placeholder="금액을 입력해주세요.">
+								<span class="unit">만원</span>
+								<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+							</div>
+							<!-- [2021-08-06] 한은정 : 금액입력버튼 수정, 에러 텍스트 추가// -->
+							<div class="roundBtnWrap">
+								<a href="javascript:;" role="button" title="100만원 추가">+100만</a>
+								<a href="javascript:;" role="button" title="1,000만원 추가">+1,000만</a>
+								<a href="javascript:;" role="button" title="1억 추가">+1억</a>
+								<a href="javascript:;" role="button" title="10억 추가">+10억</a>
+							</div>
+							<!-- <p class="errorTxt">1부터 9,999,999만원까지 입력 가능합니다.</p> -->
+						</li>
+						<li>
+							<strong class="formTit">계약기간(선택)<button type="button" class="contBtn01">초기화</button></strong>
+							<div class="calendarForm">
+								<div class="cal">
+									<div class="inputList">
+										<input type="text" value="2020.09.03" title="조회 시작일" placeholder="시작일선택" readonly="readonly">
+										<a href="javascript:;" class="btnCalendar" title="시작일 날짜선택" role="button"><span class="blind">날짜선택</span></a>
+									</div>
+								</div>
+								<span class="symbol">-</span>
+								<div class="cal">
+									<div class="inputList">
+										<input type="text" value="" title="조회 종료일" placeholder="종료일선택" readonly="readonly">
+										<a href="javascript:;" class="btnCalendar" title="종료일 날짜선택" role="button"><span class="blind">날짜선택</span></a>
+									</div>
+								</div>
+							</div>
+							<!-- <p class="errorTxt">시작일을 선택시 종료일을 선택해주세요.</p> -->
+						</li>
+						<li>
+							<strong class="formTit">관련대출(선택)<button type="button" class="contBtn01 green" title="관련대출 추가">추가</button></strong>
+						<div class="stList">
+								<a href="javascript:;" title="관련대출 선택" aria-haspopup="true">
+									<span class="selectValue placeholder">선택해주세요</span>
+									<span class="selectBtn"></span>
+								</a>
+								<select name="" title="선택해주세요">
+									<option value=""></option>
+								</select>
+							</div>
+							<div class="inputBoth01 div8_2">
+								<div class="inputList inputB01">
+									<input type="text" title="대출자산" value="[신한]마이너스대출" name="" id="" placeholder="">
+									<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+								</div>
+								<div class="inputB02">
+									<button type="button" class="contBtn01" title="관련대출 추가">삭제</button>
+								</div>
+							</div>
+							<div class="inputBoth01 div8_2">
+								<div class="inputList inputB01">
+									<input type="text" title="대출자산" value="[NH농협]마이너스대출" name="" id="" placeholder="">
+									<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+								</div>
+								<div class="inputB02">
+									<button type="button" class="contBtn01" title="관련대출 추가">삭제</button>
+								</div>
+							</div> 
+							<!-- <div class="itemList">
+								<div class="item">
+									<span class="titName">[신한]마이너스대출</span>
+									<span class="inputB02">
+										<button type="button" class="contBtn01" title="관련대출 추가">삭제</button>
+									</span>
+								</div>
+								<div class="item">
+									<span class="titName">[NH농협]마이너스대출</span>
+									<span class="inputB02">
+										<button type="button" class="contBtn01" title="관련대출 추가">삭제</button>
+									</span>
+								</div>
+							</div> -->
+						</li>
+						
+						<li>
+							<strong class="formTit mt15">메모(선택)</strong><!--12.28 mt15 추가-->
+							<textarea placeholder="메모를 입력해주세요. (최대30자)"></textarea>
+							<!-- <div class="grayBgLine addType mt20">
+								KB부동산 매매시세금액을 자산현황에서<br />확인하실 수 있습니다.
+							</div> -->
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- [2023-02-02] 버튼추가 -->
+			<div class="areaBtnDefault">
+				<a href="javascript:;" class="btnPressPoint" role="button">등록하기</a>
+			</div>
+			
+		</div>
+		<!-- //container -->
+	</div>
+	
+</body>
+</html>

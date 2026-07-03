@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>비교상품상세</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">비교상품상세</a></h1>
+			<!-- <a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>  -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="tabWrap type06">
+				<div class="scAreaWrap">
+					<ul role="tablist">
+						<li><a href="javascript:;" type="button">예·적금</a></li>
+						<li><a href="javascript:;" type="button" class="active">외화</a></li>
+						<li><a href="javascript:;" type="button">펀드</a></li>
+						<li><a href="javascript:;" type="button">주식</a></li>
+						<li><a href="javascript:;" type="button">실물자산</a></li><!-- 2022-10-17  메뉴명 수정 -->
+						<li><a href="javascript:;" type="button">가상자산</a></li>
+					</ul>
+				</div>
+				<!-- 2022-09-27 문구 수정 -->
+				<p class="subTxt2 mt10">선택한 보유자산 대신 가입했을 경우의 예상 수익 비교 금액입니다.</p>
+				<!-- //2022-09-27 문구 수정 -->
+			</div>
+			<div class="tabContWrap type06 maybeTabWrap">
+				<div class="tabCont01" aria-label="예·적금 탭" style="display:none">
+					<div class="mayBeImgArea" aria-hidden="true"><img src="../../images/img_maybe_01.png" alt=""></div>
+					<div class=" ar">총 <span class="dataValue">10</span>개</div>
+					<ul class="maybeWishList mt10">
+						<li>
+							<a href="javascript:;" role="button" class="active">
+								<span class="tit">$상품명$ or $계좌별칭$</span>
+								<span class="value up"><span class="dataValue">+1,000,000</span><span class="won">원</span></span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" role="button">
+								<span class="tit">$상품명$ or $계좌별칭$</span>
+								<span class="value down"><span class="dataValue">+1,000,000</span><span class="won">원</span></span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" role="button">
+								<span class="tit">$상품명$ or $계좌별칭$</span>
+								<span class="value up"><span class="dataValue">+1,000,000</span><span class="won">원</span></span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" role="button">
+								<span class="tit">$상품명$ or $계좌별칭$</span>
+								<span class="value up"><span class="dataValue">+1,000,000</span><span class="won">원</span></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="tabCont02" aria-label="외화 탭">
+					<div class="mayBeImgArea" aria-hidden="true"><img src="../../images/img_maybe_02.png" alt=""></div>
+					<div class=" ar">총 <span class="dataValue">10</span>개</div>
+					<!-- 2022-10-05 수정 --><!-- 2022-10-14 수정 -->
+					<ul class="maybeWishList outSeaInfoWrap mt10">
+						<li>
+							<div class="outSeaInfo">
+								<span class="tit"><span class="unitKor mr0 fwN">미국달러</span><span class="unit">(USD)</span></span><!-- 2022-10-31 클래스(mr0 fwN) 추가 -->
+								<span class="value down">
+									<div><span class="dataValue">-500,000</span><span class="won">원</span></div>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="outSeaInfo">
+								<span class="tit"><span class="unitKor mr0 fwN">일본엔화</span><span class="unit">(JPY)</span></span><!-- 2022-10-31 클래스(mr0 fwN) 추가 -->
+								<span class="value up">
+									<div><span class="dataValue">+500,000</span><span class="won">원</span></div>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="outSeaInfo">
+								<span class="tit"><span class="unitKor mr0 fwN">유로</span><span class="unit">(EUR)</span></span><!-- 2022-10-31 클래스(mr0 fwN) 추가 -->
+								<span class="value down">
+									<div><span class="dataValue">-500,000</span><span class="won">원</span></div>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="outSeaInfo">
+								<span class="tit"><span class="unitKor mr0 fwN">영국파운드</span><span class="unit">(GBP)</span></span><!-- 2022-10-31 클래스(mr0 fwN) 추가 -->
+								<span class="value down">
+									<div><span class="dataValue">-500,000</span><span class="won">원</span></div>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="outSeaInfo">
+								<span class="tit"><span class="unitKor mr0 fwN">캐나다달러</span><span class="unit">(CAD)</span></span><!-- 2022-10-31 클래스(mr0 fwN) 추가 -->
+								<span class="value down">
+									<div><span class="dataValue">-500,000</span><span class="won">원</span></div>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="outSeaInfo">
+								<span class="tit"><span class="unitKor mr0 fwN">호주달러</span><span class="unit">(AUD)</span></span><!-- 2022-10-31 클래스(mr0 fwN) 추가 -->
+								<span class="value down">
+									<div><span class="dataValue">-500,000</span><span class="won">원</span></div>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="outSeaInfo">
+								<span class="tit"><span class="unitKor mr0 fwN">뉴질랜드달러</span><span class="unit">(NZD)</span></span><!-- 2022-10-31 클래스(mr0 fwN) 추가 -->
+								<span class="value down">
+									<div><span class="dataValue">-500,000</span><span class="won">원</span></div>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="outSeaInfo">
+								<span class="tit"><span class="unitKor mr0 fwN">스위스프랑</span><span class="unit">(CHF)</span></span><!-- 2022-10-31 클래스(mr0 fwN) 추가 -->
+								<span class="value down">
+									<div><span class="dataValue">-500,000</span><span class="won">원</span></div>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="outSeaInfo">
+								<span class="tit"><span class="unitKor mr0 fwN">홍콩달러</span><span class="unit">(HKD)</span></span><!-- 2022-10-31 클래스(mr0 fwN) 추가 -->
+								<span class="value down">
+									<div><span class="dataValue">-500,000</span><span class="won">원</span></div>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="outSeaInfo">
+								<span class="tit"><span class="unitKor mr0 fwN">싱가포르달러</span><span class="unit">(SGD)</span></span><!-- 2022-10-31 클래스(mr0 fwN) 추가 -->
+								<span class="value down">
+									<div><span class="dataValue">-500,000</span><span class="won">원</span></div>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="outSeaInfo">
+								<span class="tit"><span class="unitKor mr0 fwN">중국위안화</span><span class="unit">(CNY)</span></span><!-- 2022-10-31 클래스(mr0 fwN) 추가 -->
+								<span class="value down">
+									<div><span class="dataValue">-500,000</span><span class="won">원</span></div>
+								</span>
+							</div>
+						</li>
+					</ul>
+					<!-- //2022-10-05 수정 --><!-- //2022-10-14 수정 -->
+
+					<!-- 2022-09-20 베너 추가 -->
+					<div class="foreignBannerWrap">
+						<a href="javascript:;" role="button">
+							<div>외화를 효율적으로</div>
+							<strong>관리하기를 원한다면?</strong>
+						</a>
+					</div>
+					<!-- //2022-09-20 베너 추가 -->
+				</div>
+				<div class="tabCont03" aria-label="펀드 탭" style="display:none;">
+					<div class="mayBeImgArea" aria-hidden="true"><img src="../../images/img_maybe_03.png" alt=""></div>
+					<div class=" ar">총 <span class="dataValue">10</span>개</div>
+					<ul class="maybeWishList typeTitEllipsis mt10">
+						<li>
+							<a href="javascript:;" role="button">
+								<span class="tit">$상품명$ or $계좌별칭$ $상품명$ or $계좌별칭$ $상품명$ or $계좌별칭$</span>
+								<span class="value up"><span class="dataValue">+1,000,000</span><span class="won">원</span></span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" role="button">
+								<span class="tit">$상품명$ or $계좌별칭$</span>
+								<span class="value up"><span class="dataValue">+1,000,000</span><span class="won">원</span></span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" role="button">
+								<span class="tit">$상품명$ or $계좌별칭$</span>
+								<span class="value down"><span class="dataValue">-1,000,000</span><span class="won">원</span></span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" role="button">
+								<span class="tit">$상품명$ or $계좌별칭$</span>
+								<span class="value up"><span class="dataValue">+1,000,000</span><span class="won">원</span></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="tabCont04" aria-label="주식 탭" style="display:none;">
+					<div class="mayBeImgArea" aria-hidden="true"><img src="../../images/img_maybe_04.png" alt=""></div>
+					<div class=" ar">총 <span class="dataValue">10</span>개</div>
+					<ul class="maybeWishList typeTitEllipsis mt10">
+						<li>
+							<a href="javascript:;" role="button">
+								<span class="tit">삼성전자</span>
+								<span class="value up"><span class="dataValue">+1,000,000</span><span class="won">원</span></span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" role="button">
+								<span class="tit">카카오페이</span>
+								<span class="value up"><span class="dataValue">+1,000,000</span><span class="won">원</span></span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" role="button">
+								<span class="tit">SK하이닉스</span>
+								<span class="value down"><span class="dataValue">-1,000,000</span><span class="won">원</span></span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" role="button">
+								<span class="tit">삼성전자</span>
+								<span class="value up"><span class="dataValue">+1,000,000</span><span class="won">원</span></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="tabCont05" aria-label="실물자산 탭" style="display:none;"><!-- 2022-10-17 메뉴명 수정 -->
+					<div class="mayBeImgArea" aria-hidden="true"><img src="../../images/img_maybe_05.png" alt=""></div>
+					<div class=" ar">총 <span class="dataValue">10</span>개</div>
+					<ul class="maybeWishList typeTitEllipsis mt10">
+						<li>
+							<a href="javascript:;" role="button">
+								<span class="tit">금(골드바)</span>
+								<span class="value up"><span class="dataValue">+1,000,000</span><span class="won">원</span></span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" role="button">
+								<span class="tit">은(실버바)</span>
+								<span class="value up"><span class="dataValue">+1,000,000</span><span class="won">원</span></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="tabCont06" aria-label="가상자산 탭" style="display:none;">
+					<div class="mayBeImgArea" aria-hidden="true"><img src="../../images/img_maybe_06.png" alt=""></div>
+					<div class=" ar">총 <span class="dataValue">10</span>개</div>
+					<ul class="maybeWishList typeTitEllipsis mt10">
+						<li>
+							<a href="javascript:;" role="button">
+								<span class="tit">$상품명$</span>
+								<span class="value up"><span class="dataValue unit">0.25</span><span class="unit">ETH</span><span class="dataValue">+1,000,000</span><span class="won">원</span></span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" role="button">
+								<span class="tit">$상품명$</span>
+								<span class="value down"><span class="dataValue unit">0.25</span><span class="unit">ETH</span><span class="dataValue">+1,000,000</span><span class="won">원</span></span>
+							</a>
+						</li>
+					</ul>
+					<!-- 2022-10-06 문구 추가 -->
+					<p class="subTxt2 mt10">가상자산 시세정보는 ㈜빗썸코리아에서 제공합니다.</p>
+					<!-- //2022-10-06 문구 추가 -->
+				</div>
+			</div>
+
+			<div class="areaBtnDefault">
+				<a href="javascript:;" class="btnPressPoint" role="button">확인</a>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+<script type="text/javascript">
+	$('.scAreaWrap a.active').each(function(){
+		var $this = $(this);
+		var $thisPos = $this.offset().left;
+		var $wrap = $this.closest('.scAreaWrap').scrollLeft();
+		$this.closest('.scAreaWrap').stop().animate({scrollLeft:$wrap + $thisPos - 16 },300);
+	});
+	$('.scAreaWrap a').on('click focus',function(e){
+		var $this = $(this);
+		var $thisPos = $this.offset().left;
+		var $wrap = $this.closest('.scAreaWrap').scrollLeft();
+		$this.closest('.scAreaWrap').stop().animate({scrollLeft:$wrap + $thisPos - 16 },300);	
+	});
+
+	$('.maybeWishList > li > a').click(function(){
+		$(this).closest('.maybeWishList').find('a').removeClass('active');
+		$(this).addClass('active');
+	});
+</script>
+</body>
+</html>

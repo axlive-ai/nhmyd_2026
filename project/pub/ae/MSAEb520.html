@@ -1,0 +1,277 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>대출(탭) | 신용평가정보 | 신용관리 | 컨설팅</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">신용평가정보</a></h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a>
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 신용평가정보_대출(탭) ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<!-- -------------------------------------- -->
+		<!-- [탭 메뉴]  -->
+		<!-- -------------------------------------- -->
+		<div class="tabNavi">
+			<ul>
+				<li><a href="javascript:;">카드</a></li>
+				<li><a href="javascript:;" aria-current="page">대출</a></li> <!-- [D] 활성화 : aria-current="page" -->
+				<li><a href="javascript:;">연체</a></li>
+				<li><a href="javascript:;">보증</a></li>
+			</ul>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [상단영역] 총 대출 잔액, 개설 정보 -->
+		<!-- -------------------------------------- -->
+		<section class="infoSummary1 t2 img2">
+			<div class="tit">
+				<h2>현재 나의 대출잔액은</h2>
+				<p class="value"><strong class="dataValue">15,000,000</strong><span class="won">원</span></p>
+			</div>
+
+			<!-- [대출배너영역] 색상 추가 클래스 정의 [em 태그에 클래스명 추가]
+				 1) 3개월 이내 개설일(대출)이 있는 경우 : .c1
+				 2) 상품코드 120(수신관련 대출)을 보유한 경우 : 추가 클래스 없음
+			-->
+			<div class="info3" data-swiper-type="list1" data-swiper-autoplay="true"  data-swiper-space="24"> <!-- [D] 동적 컨텐츠일 경우 마지막에 uiSetSwiper() 함수 호출 -->
+				<ul>
+					<!-- [CASE1] 3개월 이내 개설일(대출)이 있는 경우 -->
+					<li>
+						<dl>
+							<dt>최근 대출을 <strong>신규 개설</strong>하셨어요</dt>
+							<dd class="data1"><span>$기관명$ 대출 개설일</span><strong>2019.12.31</strong></dd>
+							<dd class="txt">대출을 받은 후 성실하게 상환한다면 그만큼 신용평가에도 긍정적인 영향을 주니 참고해주세요</dd>
+						</dl>
+					</li>
+					<!-- [CASE2] 상품코드 120(수신관련 대출)을 보유한 경우 -->
+					<li>
+						<dl>
+							<dt><em class="c3">마이너스 대출</em>을 보유하고 있어요</dt>
+							<dd class="data1"><span>대출(수신관련)</span><strong>2,000,000원</strong></dd>
+							<dd class="txt">
+								<div>사용하지 않는 마이너스 통장은 정리해주세요</div>
+								<div>마이너스통장은 평균 잔액이 제공되며, 실제 잔액과 다를 수 있습니다</div>
+							</dd>
+						</dl>
+					</li>
+					<!-- [CASE3] 대출 잔액이 있는 경우(디폴트) -->
+					<li>
+						<dl>
+							<dt>나의 대출 현황을 수시로 체크해 주세요</dt>
+							<dd class="txt">
+								<div>과도한 채무는 연체가능성이 높은 것으로 판단하여 개인신용평가에 부정적 영향을 미치게 됩니다</div>
+								<div>나의 대출 현황을 수시로 체크해서 채무 수준을 관리해주세요</div>
+							</dd>
+						</dl>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+		</section>
+
+		<!-- -------------------------------------- -->
+		<!-- [SECTION] 대출 목록 -->
+		<!-- -------------------------------------- -->
+		<div class="areaSection4">
+			<h3 class="defSubTit2 t1">
+				<strong>대출 목록</strong>
+				<span class="sub">총 <span class="pointColor">3개</span></span>
+			</h3>
+
+			<div>
+				<!-- ### 반복 ### -->
+				<div class="toggleWrap boxTypeToggle t1">
+					<!-- 총합계 -->
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn">
+							<span class="tit">
+								<span class="imgWrap"><img src="../../images/logos/AABG0000.png" alt="" class="imgLogo"></span>
+								<strong>농협은행</strong>
+							</span>
+							<span class="sub"><strong class="dataValue">1,000,000</strong><span class="won">원</span></span>
+						</a> 
+					</div>
+
+					<!-- 상세정보 -->
+					<div class="toggleCont" style="display:none">
+						<!-- // -->
+						<ul class="detailList">
+							<li>
+								<span class="tit">대출잔액</span>
+								<span class="value"><strong class="dataValue">5,000,000</strong><span class="won">원</span></span>
+							</li>
+							<li>
+								<span class="tit">약정금액</span>
+								<span class="value"><strong class="dataValue">5,000,000</strong><span class="won">원</span></span>
+							</li>
+							<li>
+								<span class="tit">연체금액</span>
+								<span class="value"><strong class="dataValue">0</strong><span class="won">원</span></span>
+							</li>
+						</ul>
+						<!-- // -->
+						<dl class="info1">
+							<dt>대출 만기까지</dt>
+							<dd>
+								<span class="data1"><strong class="dataValue">300</strong><span>일</span></span>
+								<div class="areaChart2 t2">
+									<div class="chart"><span style="width:90%;"></span></div>
+									<ul class="item1">
+										<li>만기일 <span>YYYY.MM.DD</span></li>
+										<li>개설일 <span>YYYY.MM.DD</span></li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+						<div class="grayBgLine">
+							<ul class="detailList">
+								<li>
+									<span class="tit">상품유형</span>
+									<span class="value">대출(일반)</span>
+								</li>
+								<li>
+									<span class="tit">개설일</span>
+									<span class="value">YYYY.MM.DD</span>
+								</li>
+								<li>
+									<span class="tit">만기일</span>
+									<span class="value">YYYY.MM.DD</span>
+								</li>
+							</ul>
+						</div>
+						<!-- // -->
+					</div>
+				</div>
+				<!-- ### 반복 ### -->
+				<div class="toggleWrap boxTypeToggle t1">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn">
+							<span class="tit">
+								<span class="imgWrap"><img src="../../images/logos/AAHJ0000.png" alt="" class="imgLogo"></span>
+								<strong>카카오뱅크</strong>
+							</span>
+							<span class="sub"><strong class="dataValue">1,000,000</strong><span class="won">원</span></span>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="detailList">
+							<li>
+								<span class="tit">대출잔액</span>
+								<span class="value"><strong class="dataValue">5,000,000</strong><span class="won">원</span></span>
+							</li>
+							<li>
+								<span class="tit">약정금액</span>
+								<span class="value"><strong class="dataValue">5,000,000</strong><span class="won">원</span></span>
+							</li>
+							<li>
+								<span class="tit">연체금액</span>
+								<span class="value"><strong class="dataValue">0</strong><span class="won">원</span></span>
+							</li>
+						</ul>
+						<div class="grayBgLine">
+							<ul class="detailList">
+								<li>
+									<span class="tit">상품유형</span>
+									<span class="value">대출(일반)</span>
+								</li>
+								<li>
+									<span class="tit">개설일</span>
+									<span class="value">YYYY.MM.DD</span>
+								</li>
+								<li>
+									<span class="tit">만기일</span>
+									<span class="value">YYYY.MM.DD</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- ### 반복 ### -->
+				<div class="toggleWrap boxTypeToggle t1">
+					<div class="boxTitWrap">
+						<a href="javascript:;" class="toggleBtn">
+							<span class="tit">
+								<span class="imgWrap"><img src="../../images/logos/AAQB0000.png" alt="" class="imgLogo"></span>
+								<strong>한국장학재단</strong>
+							</span>
+							<span class="sub"><strong class="dataValue">1,000,000</strong><span class="won">원</span></span>
+						</a> 
+					</div>
+					<div class="toggleCont" style="display:none">
+						<ul class="detailList">
+							<li>
+								<span class="tit">대출잔액</span>
+								<span class="value"><strong class="dataValue">5,000,000</strong><span class="won">원</span></span>
+							</li>
+							<li>
+								<span class="tit">약정금액</span>
+								<span class="value"><strong class="dataValue">5,000,000</strong><span class="won">원</span></span>
+							</li>
+							<li>
+								<span class="tit">연체금액</span>
+								<span class="value"><strong class="dataValue">0</strong><span class="won">원</span></span>
+							</li>
+							<li>
+								<span class="tit">상품유형</span>
+								<span class="value"><strong>학자금대출</strong></span>
+							</li>
+							<li>
+								<span class="tit">개설일</span>
+								<span class="value"><strong>YYYY.MM.DD</strong></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- ### // ### -->
+			</div>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [하단영역] 알아두세요 -->
+		<!-- -------------------------------------- -->
+		<div class="info_area">
+			<strong class="info_area_title">알아두세요</strong>
+			<ul class="listBul disc">
+				<li>대출정보는 NICE평가정보㈜에 등록된 정보입니다.</li>
+				<li>마이너스통장은 평균 잔액이 제공되며, 실제 잔액과 다를 수 있습니다.</li>
+				<li>개인회생절차의 변제계획인가결정 받은 경우, 변제계획에 따른 변제를 완료하여 면책 시 개별 금융기관에서 해당 신용정보주체의 개인대출정보, 카드대출정보 및 개인채무보증정보를 해제합니다.</li>
+				<li>신용회복지원 협약에 따라 신용회복지원 확정 받은 경우, 확정된 채무의 변제를 완료하여 신용회복 완료 시 개별 금융기관에서 해당 신용정보주체의 개인대출정보를 해제합니다.</li>
+				<li>법원의 파산면책결정이 있는 경우, 신정원에서 해당 신용정보주체에 대해 등록된 개인대출/카드대출/개인채무보증/연체정보 등을 해제합니다.</li>
+				<li>신용평가정보 서비스의 모든 내용은 NICE평가정보의 데이터로 제공합니다.</li>
+				<li>자세한 문의는 NICE지키미 사이트 또는 NICE지키미 고객센터(1588-2486)으로 문의해주세요.</li>
+			</ul>
+			<a href="tel:1588-2486" class="linkType5">NICE지키미 고객센터</a>
+		</div>
+		<!-- -------------------------------------- -->
+	</div>
+	<!-- ###################################### -->
+</div>
+</body>
+</html>

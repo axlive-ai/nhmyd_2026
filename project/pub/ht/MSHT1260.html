@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>혜택플러스</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">배지</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="boxTypeWrap yatexinfoWrap">
+				<p class="defTit">김농협님의<br><strong>배지미션 현황</strong></p>
+				<div class="bedgeSwiper swiper-container">
+					<ol class="swiper-wrapper">
+						<!-- 
+							.now 현재미션 중앙정렬되는 클래스
+							.gift 선물이 있는 경우
+							.empty 선물을 이미 받은 경우
+							.complete 완료된 미션 - 스트립트로 자동 추가됨
+						-->
+						<li class="swiper-slide"></li>
+						<li class="swiper-slide empty"></li>
+						<li class="swiper-slide"></li>
+						<li class="swiper-slide gift"></li>
+						<li class="swiper-slide"></li>
+						<li class="swiper-slide now gift"></li>
+						<li class="swiper-slide"></li>
+						<li class="swiper-slide gift"></li>
+						<li class="swiper-slide"></li>
+						<li class="swiper-slide"></li>
+					</ol>
+				</div>
+				<div class="areaBodyBtnFull">
+					<a href="javascript:;" class="btnBodyLine green" role="button">보상받기(2)</a>
+				</div>
+			</div>
+			<div class="boxTypeWrap pb0">
+				<strong class="defSubTit2">배지미션</strong>
+				<ul class="badgeList">
+					<li>
+						<img src="../../images/contents/ico_badge01.png" alt="계좌 연결하기 배지">
+						<div class="flexBox">
+							<div class="txtWrap">
+								<strong class="tit">계좌 연결하기</strong>
+								<p class="txt">은행별 계좌 5개 연결 하기</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<img src="../../images/contents/ico_badge01.png" alt="투자왕 배지">
+						<div class="flexBox">
+							<div class="txtWrap">
+								<strong class="tit">계좌 연결하기</strong>
+								<p class="txt">은행별 계좌 5개 연결 하기</p>
+							</div>
+							<span class="tag orange">대표배지</span>
+						</div>
+					</li>
+					<li>
+						<img src="../../images/contents/ico_badge01.png" alt="투자왕 배지">
+						<div class="flexBox">
+							<div class="txtWrap">
+								<strong class="tit">계좌 연결하기</strong>
+								<p class="txt">메인 > 자산 > 자산 추가하기 : 카드 연결 시</p>
+							</div>
+						</div>
+					</li>
+					<!-- [2022-12-12] 배지 미획득 케이스 추가 -->
+					<li>
+						<img src="../../images/contents/ico_badge_empty.png" alt="미획득 배지" class="emptyBadge">
+						<div class="flexBox">
+							<div class="txtWrap">
+								<strong class="tit">소비의 시작</strong>
+								<p class="txt">메인 > 자산 > 자산 추가하기 : 카드 연결 시</p>
+							</div>
+						</div>
+					</li>
+					<!-- //[2022-12-12] 배지 미획득 케이스 추가 -->
+				</ul>
+			</div>
+		</div>
+		<!-- //container -->
+
+		<!-- // 팝업 끝 -->
+	</div>
+
+	<script>
+		var fBedgeSwiper = function(){
+			var $bedgeIndex = $('.bedgeSwiper').find('.now').index();
+			$('.bedgeSwiper').find('.now').prevAll().addClass('complete');
+			var swiper1 = new Swiper(".bedgeSwiper", {
+				slidesPerView: "auto",
+				centeredSlides: true,
+				initialSlide: $bedgeIndex, //현재 슬라이드 번호
+				pagination: {
+					el: ".swiper-pagination",
+					clickable:true,
+				},
+
+				pagination:false,
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+			});
+			$('.bedgeSwiper').find('.swiper-slide').each(function (index) {
+				$(this).text(index+1);
+				var $aria = index+1+'단계 ';
+				if($(this).hasClass('now')){
+					$aria += '현재단계';
+				}
+				if($(this).hasClass('complete')){
+					$aria += '완료된단계';
+				}
+				if($(this).hasClass('gift')){
+					$aria += '보상있음';
+				}
+				if($(this).hasClass('empty')){
+					$aria += '보상받음';
+				}
+				$(this).attr('aria-label',$aria);
+			});
+		}
+		fBedgeSwiper();
+		graphActive();  // 퍼센트의 라인그래프가 들어가는 경우 사용
+	</script>
+</body>
+</html>

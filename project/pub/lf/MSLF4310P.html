@@ -1,0 +1,104 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>리콜정보</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script type="text/javascript">
+$(function(){
+    fullLayerPop();
+	//popCenter();
+});
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>리콜정보</h1>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<div class="content">
+			<div class="btnWrap page">
+				<a href="javascript:;" onclick="fullLayerPop();return false;" aria-haspopup="true" role="button" class="btn">fullLayerPop</a>
+			</div>
+		</div>
+	</div>
+</div>
+ 
+
+<div class="nhasset popWrap fullLayerPop" role="dialog">
+	<div class="popInner">
+		<h1>리콜정보</h1>
+		<div class="popCont grayPop">
+			<div class="boxTypeWrap">
+				<div class="carRecallTitle">
+					<span class="carRecallNum carBookMark">대표차량(123가4567)</span><!-- 대표차량 carBookMark 클래스 사용  -->
+					<span class="carRecallInfo">전체 <em>4</em>건 / 미완료 <em class="pointColor">3</em>건</span>
+				</div>
+				<ul class="carRecallList">
+					<li>
+						<a href="javascript:;" role="button">
+							<span class="carRecallSubject">
+								<span class="title">[비엠더블유] BMW 1 Series Sport 등 57차종- 배기가스재순환창치 관련 리콜 </span>
+								<span class="date">2021.11.29~</span>
+							</span>
+							<span><em class="tag red">미완료</em></span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;" role="button">
+							<span class="carRecallSubject">
+								<span class="title">[비엠더블유] BMW 1 Series Sport 등 57차종- 배기가스재순환창치 관련 리콜 </span>
+								<span class="date">2021.11.29~</span>
+							</span>
+							<em class="tag red">미완료</em>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;" role="button">
+							<span class="carRecallSubject">
+								<span class="title">[비엠더블유] BMW 1 Series Sport 등 57차종- 배기가스재순환창치 관련 리콜 </span>
+								<span class="date">2021.11.29~</span>
+							</span>
+							<em class="tag red">미완료</em>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;" role="button">
+							<span class="carRecallSubject">
+								<span class="title">[비엠더블유] BMW 1 Series Sport 등 57차종- 배기가스재순환창치 관련 리콜 </span>
+								<span class="date">2021.11.29~</span>
+							</span>
+							<em class="tag gray">완료</em>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="carRecallBtn"><a href="javascript:;" class="linkTxt3" role="button">제공:자동차리콜센터</a></div> <!-- [2023-02-09] 링크버튼으로 변경 -->
+		</div>
+
+
+		<div class="popBtnWrap">
+			<div class="popBtn">
+				<a href="javascript:;" class="confirmBtn" role="button">확인</a>
+			</div>
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

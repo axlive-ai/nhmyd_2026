@@ -1,0 +1,108 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>STEP1) 기본정보 | 조기은퇴진단 | 컨설팅</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<h1><a href="javascript:;" role="text">조기은퇴진단</a></h1>
+		<a href="javascript:;" class="btnEtc">나가기</a>
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 조기은퇴진단 ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<!-- -------------------------------------- -->
+		<!-- [상단영역] 스텝 영역 -->
+		<!-- -------------------------------------- -->
+		<div class="infoStep1">
+			<ol>
+				<li aria-current="step"> <!-- [D] 현재 스텝 li : aria-current="step" 노출 -->
+					<i aria-hidden="true">1</i>
+					<span>기본정보</span>
+				</li>
+				<li>
+					<i aria-hidden="true">2</i>
+					<span>은퇴준비자금</span>
+				</li>
+				<li>
+					<i aria-hidden="true">3</i>
+					<span>은퇴목표</span>
+				</li>
+				<li>
+					<i aria-hidden="true">4</i>
+					<span>기대수익률</span>
+				</li>
+			</ol>
+		</div>
+		
+		<!-- -------------------------------------- -->
+		<!-- [SECTION] 진단정보 입력 STEP1 영역 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap t1">
+			<div class="titHeadline1 img1">
+				<h2>언제 은퇴하고 싶나요?</h2>
+				<p>은퇴희망나이와 기대수명을 입력해주세요.<br>통계청 기준 평균기대수명은<br>남자 85세, 여자는 87세 입니다.</p>
+			</div>
+
+			<!-- ### [입력영역] 정상 ### -->
+			<div class="formArea2">
+				<dl class="form">
+					<dt>은퇴희망 나이</dt>
+					<dd><input type="tel" class="inputText1 t1" id="exEl1" value="45" title="은퇴희망 나이" maxlength="2" placeholder="45"></dd>
+				</dl>
+				<dl class="form">
+					<dt>기대수명</dt>
+					<dd><input type="tel" class="inputText1 t1" id="exEl2" value="85" title="기대수명" maxlength="3" placeholder="85"></dd> <!-- [D] 비할성화 시 : disabled 추가  -->
+				</dl>
+				<!-- <p class="errorTxt" aria-live="assertive">$00$세부터 95세까지 입력 가능합니다.</p> -->
+			</div>
+
+			<!-- ### [입력영역] 오류 ### -->
+			<div class="formArea2">
+				<dl class="form error"> <!-- [D] 오류일 경우 클래스명(error) 추가 -->
+					<dt>은퇴희망 나이</dt>
+					<dd><input type="tel" class="inputText1 t1" value="99" title="은퇴희망 나이" maxlength="2" placeholder="45"></dd>
+				</dl>
+				<dl class="form">
+					<dt>기대수명</dt>
+					<dd><input type="tel" class="inputText1 t1" value="" title="기대수명" maxlength="3" placeholder="85" disabled></dd>
+				</dl>
+				<p class="errorTxt" aria-live="assertive">$00$세부터 95세까지 입력 가능합니다.</p>
+			</div>
+			<!-- ### // ### -->
+		</div>
+		
+		<!-- -------------------------------------- -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- -------------------------------------- -->
+		<div class="areaBtnDefault">
+			<a href="javascript:;" class="btnPressPoint disabled" role="button" aria-disabled="true">다음</a>
+			<!-- <a href="javascript:;" class="btnPressPoint" role="button">다음</a> [D] 활성화 -->
+		</div>
+		<!-- -------------------------------------- -->
+	</div>
+	<!-- ###################################### -->
+</div>
+</body>
+</html>

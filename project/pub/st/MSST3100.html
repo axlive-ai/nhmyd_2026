@@ -1,0 +1,169 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 설정</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">MY정보</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<!-- [2021 2차 한은정 : 05-14] 수정 -->
+			<div class="topInfoWrap">
+				<p>가족정보와 관심사를 등록하시면 <strong class="pointColor">정부지원금</strong>과 <strong class="pointColor">다양한 정보</strong>를<br>
+					확인 할 수 있어요.</p>
+			</div>
+			<!-- <h2 class="defSubTit2 mt25">나는 누구일까?</h2>
+			<ul class="detailList smSpace2">
+				<li>
+					<span class="tit">이름</span>
+					<span class="value">김농협</span>
+				</li>
+				<li>
+					<span class="tit">태어난 해</span>
+					<span class="value">1988</span>
+				</li>
+			</ul>
+
+			<hr class="divLine">
+
+			<h2 class="defSubTit2">나는 누구랑 살까?</h2>
+			<ul class="detailList smSpace2">
+				<li>
+					<span class="tit">배우자</span>
+				</li>
+				<li>
+					<span class="tit">태어난 해</span>
+					<span class="value">1988</span>
+				</li>
+			</ul>
+			<ul class="detailList smSpace2">
+				<li>
+					<span class="tit">자녀</span>
+				</li>
+				<li>
+					<span class="tit">태어난 해</span>
+					<span class="value">2017</span>
+				</li>
+			</ul> -->
+
+			<!-- 등록된 정보 없을 경우 노출 -->
+			<!-- <div class="listNone">
+				<p>등록된 정보가 없습니다.</p>
+			</div> -->
+			<!-- // 등록된 정보 없을 경우 노출 -->
+			<div class="boxTypeWrap">
+				<h2 class="defSubTit2">가족정보</h2>
+				<div class="wrapTblDefault mt10">
+					<table class="tdCenter thCenter">
+						<caption>고객구분 별 기준점수등급표</caption>
+						<colgroup>
+							<col width="40%">
+							<col width="*">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">구분</th>
+								<th scope="col">출생년도</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>부</td>
+								<td>1955년</td>
+							</tr>
+							<tr>
+								<td>모</td>
+								<td>1955년</td>
+							</tr>
+							<tr>
+								<td>배우자</td>
+								<td>1980년</td>
+							</tr>
+							<tr>
+								<td>자녀</td>
+								<td>2009년</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="areaBodyBtnFull">
+					<a href="javascript:;" class="btnBodyLine green" role="button">가족정보 변경하기</a>
+				</div>
+
+				<hr class="divLine">
+
+				<!-- [2021-10-05] 한은정 : 디자인 수정// -->
+				<div class="interestWrap mt20">
+					<h3 class="defSubTit2">나의 관심사</h3>  
+					<!-- 관심사가 있을 경우 노출 -->
+					<div class="hashWrap">
+						<a href="javascript:;"> 
+							<span>#종잣돈마련</span>
+							<span>#내집마련</span>
+							<span>#결혼</span>
+							<span>#대출줄이기</span>
+							<span>#여행가기</span>
+							<span>#건강/뷰티</span>
+						</a>
+					</div>
+					<!-- // 관심사가 있을 경우 노출 -->
+					<!-- 등록된 관심사 없을 경우 노출 -->
+					<div class="listNone">
+						<p>등록된 관심사가 없습니다.</p>
+					</div>
+					<!-- // 등록된 관심사 없을 경우 노출 -->
+				</div>
+				<!-- //[2021-10-05] 한은정 : 디자인 수정 -->
+
+				<div class="areaBodyBtnFull">
+					<a href="javascript:;" class="btnBodyLine green" role="button">나의 관심사 설정</a>
+				</div>
+
+				<hr class="divLine">
+
+				<!-- 하나로 가족 고객 -->
+				<div class="hanaroBannerWrap">
+					<div class="hanaroBanner02">
+						<a href="javascript:;" title="하나로가족고객 메인화면으로 이동" aria-label="농협은행과 나의 애정 관계! 하나로 우수고객 점수는?">
+							<p class="defSubTit2">
+								<span class="subTxt">농협은행과 나의 애정 관계!</span><br>
+								<strong>하나로가족 우수고객</strong> 점수는?
+							</p>
+						</a>
+					</div>
+				</div>
+				<!-- // 하나로 가족 고객 -->
+			</div>
+		</div>
+		<!-- //container -->
+
+	</div>
+
+</body>
+</html>

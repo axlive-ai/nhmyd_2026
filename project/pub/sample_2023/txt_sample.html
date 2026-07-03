@@ -1,0 +1,932 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>UI Guide [타이틀/텍스트]</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="nhasset guide_wrapper">
+	<header class="guide_header">
+		<h1>UI GUIDE <span>타이틀/텍스트</span></h1>
+		<nav data-toggle="wrap">
+			<button type="button" class="guide_btn" data-toggle="btn" aria-expanded="false">전체메뉴</button>
+			<div data-toggle="cont">
+				<a href="txt_sample.html" aria-current="page">타이틀/텍스트</a>
+				<a href="mes_sample.html">메세지</a>
+				<a href="button_sample.html">버튼</a>
+				<a href="form_sample.html">폼</a>
+				<a href="list_sample.html">리스트</a>
+				<a href="info_sample.html">정보</a>
+				<a href="table_sample.html">테이블</a>
+				<a href="bbs_sample.html">게시판</a>
+				<a href="banner_sample.html">배너</a>
+				<a href="chart_sample.html">차트</a>
+				<a href="etc_sample.html">기타</a>
+			</div>
+		</nav>
+	</header>
+
+	<!-- ###################################### -->
+	<!-- ### UI Guide [타이틀/텍스트] ### -->
+	<!-- ###################################### -->
+	<div class="guide_container">
+		<nav class="guide_menu">
+			<a href="#GCONTENT1" class="active">포인트컬러</a>
+			<a href="#GCONTENT2">타이틀</a>
+			<a href="#GCONTENT3">텍스트</a>
+		</nav>
+
+		<div class="guide_box">
+			<h2>2022/2023 가이드 정의</h2>
+			<ul>
+				<li>공통적으로 사용한 클래스 네이밍에 한하여 정리되었으며, 일부 페이지에서만 사용할 수 있는 클래스 네이밍은 가이드에서 제외함.<br><strong>예시) .yeartexForm(연말정산)</strong></li>
+				<li>2023년 고도화 작업시 추가된 스타일 정의에 대해선 다음과 같이 표기함.<i class="guide_tag">2023고도화</i></li>
+			</ul>
+		</div>
+
+		<!-- ################################# -->
+		<!-- ### 포인트컬러 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT1">
+			<h2 class="guide_title">포인트컬러</h2>
+			<!-- -------------------------------------- -->
+			<!-- [클래스 정의] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">클래스 정의</h3>
+				<div class="guide_tbl">
+					<table>
+						<caption>포인트 색상 정의</caption>
+						<colgroup>
+							<col style="width:40%">
+							<col style="width:60%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">구분</th>
+								<th scope="col">내용</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>.pointColor</td>
+								<td><span class="pointColor">#19a647</span></td>
+							</tr>
+							<tr>
+								<td>.pointColor02<br>.error</td>
+								<td><span class="pointColor02">#eb1100</span></td>
+							</tr>
+							<tr>
+								<td>.pointColor03</td>
+								<td><span class="pointColor03">#666</span></td>
+							</tr>
+							<tr>
+								<td>.pointColor04</td>
+								<td><span class="pointColor04">#3d9bff</span></td>
+							</tr>
+							<tr>
+								<td>.pointColor05</td>
+								<td><span class="pointColor05">#3674bc</span></td>
+							</tr>
+							<tr>
+								<td>.pointColor06</td>
+								<td><span class="pointColor06">#888</span></td>
+							</tr>
+							<tr>
+								<td>.pointColor09</td>
+								<td><span class="pointColor09">#e75441</span></td>
+							</tr>
+							<tr>
+								<td>.pointColor10</td>
+								<td><span class="pointColor10">#f44743</span></td>
+							</tr>
+							<tr>
+								<td>.pointColor11</td>
+								<td><span class="pointColor11">#999</span></td>
+							</tr>
+							<tr>
+								<td>.pointColor12</td>
+								<td><span class="pointColor12">#d83320</span></td>
+							</tr>
+							<tr>
+								<td>.pointColor13</td>
+								<td><span class="pointColor13">#ed7000</span></td>
+							</tr>
+							<tr>
+								<td>.pointColor14</td>
+								<td><span class="pointColor14">#577fe0</span></td>
+							</tr>
+							<tr>
+								<td>.pointColor15</td>
+								<td><span class="pointColor15">#43a67f</span></td>
+							</tr>
+							<tr>
+								<td>.pointColor16</td>
+								<td><span class="pointColor16">#8f64ca</span></td>
+							</tr>
+							<tr>
+								<td>.pointColor17</td>
+								<td><span class="pointColor17">#277ceb</span></td>
+							</tr>
+							<tr>
+								<td>.pointColorwh</td>
+								<td><span class="pointColorwh" style="display:inline-block;padding:0.2rem 0.5rem;background:#000;">#fff</span></td>
+							</tr>
+							<tr>
+								<td>.green</td>
+								<td><span class="green">#19a647</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [변수 정의] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">변수 정의<i class="guide_tag">2023고도화</i></h3>
+<div class="guide_code" data-label="CSS">
+<pre>//사용방법
+.className {color:var(--color1);}
+</pre>
+</div>
+				<div class="guide_tbl">
+					<table>
+						<caption>포인트 색상 정의</caption>
+						<colgroup>
+							<col style="width:40%">
+							<col style="width:60%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">구분</th>
+								<th scope="col">내용</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>--color0</td>
+								<td><span style="color:var(--color0)">#000</span></td>
+							</tr>
+							<tr>
+								<td>--color1</td>
+								<td><span style="color:var(--color1)">#111</span></td>
+							</tr>
+							<tr>
+								<td>--color2</td>
+								<td><span style="color:var(--color2)">#222</span></td>
+							</tr>
+							<tr>
+								<td>--color3</td>
+								<td><span style="color:var(--color3)">#555</span></td>
+							</tr>
+							<tr>
+								<td>--color4</td>
+								<td><span style="color:var(--color4)">#666</span></td>
+							</tr>
+							<tr>
+								<td>--color5</td>
+								<td><span style="color:var(--color5)">#888</span></td>
+							</tr>
+							<tr>
+								<td>--color6</td>
+								<td><span style="color:var(--color6)">#999</span></td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<td>--point1</td>
+								<td><span style="color:var(--point1)">#19a647</span></td>
+							</tr>
+							<tr>
+								<td>--point2</td>
+								<td><span style="color:var(--point2)">#eb1100</span></td>
+							</tr>
+							<tr>
+								<td>--point3</td>
+								<td><span style="color:var(--point3)">#0c419a</span></td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<td>--grade0</td>
+								<td><span style="color:var(--grade0)">#8B959B</span></td>
+							</tr>
+							<tr>
+								<td>--grade1</td>
+								<td><span style="color:var(--grade1)">#577FE0</span></td>
+							</tr>
+							<tr>
+								<td>--grade2</td>
+								<td><span style="color:var(--grade2)">#50BB9E</span></td>
+							</tr>
+							<tr>
+								<td>--grade3</td>
+								<td><span style="color:var(--grade3)">#FFCF5B</span></td>
+							</tr>
+							<tr>
+								<td>--grade4</td>
+								<td><span style="color:var(--grade4)">#F58E65</span></td>
+							</tr>
+							<tr>
+								<td>--grade5</td>
+								<td><span style="color:var(--grade5)">#EE551C</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- -------------------------------------- -->
+		</section>
+
+		<!-- ################################# -->
+		<!-- ### 타이틀 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT2">
+			<h2 class="guide_title">타이틀</h2>
+			<!-- -------------------------------------- -->
+			<!-- [페이지 상단 타이틀] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">페이지 상단 타이틀 : .defTit <span class="sub">[F:20px]</span></h3>
+				<!-- // -->
+				<div class="guide_area">
+					<h4 class="guide_title3">기본</h4>
+					<h5 class="defTit">타이틀<br><strong>강조문구</strong></h5>
+					<hr class="guide_line">
+					<div class="defTit">
+						<h5>타이틀<br><strong>강조문구</strong></h5>
+						<div class="tooltipWrap">
+							<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">툴팁 열기</span></button>
+							<div class="tooltipCont">
+								<p>툴팁 내용 노출 영역</p>
+								<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+							</div>
+						</div>
+					</div>
+					<hr class="guide_line">
+					<h5 class="defTit">
+						<strong>김농협</strong>님의 맞춤정보
+						<a href="javascript:;" class="editBtn" aria-label="맞춤정보 다시입력"><span class="blind">다시입력</span></a>
+					</h5>
+					<hr class="guide_line">
+					<h5 class="defTit txtC"><strong>2022년</strong> 13월에<br><span class="dataValue">11,970,000원</span> 환급이 예상되요!</h5>
+					<hr class="guide_line">
+					<p class="defTit"><strong>보유하신 건물 종류</strong>를<br />선택해주세요.</p>
+					<hr class="guide_line">
+                    <div class="defTit">
+						<strong>한솥도시락<br /><span class="pointColor">N건</span>의 숨긴 내역이 있어요</strong>
+					</div>
+					<hr class="guide_line">
+					<h5 class="defTit">
+						<strong>관심있는 건강 카테고리를<br>
+						3개 이상 설정해 주세요!</strong> <span class="txtt2 fwN">(<em class="pointColor">n</em>/7)</span>
+					</h5>
+					<hr class="guide_line">
+					<p class="defTit t1"><strong>거래내역 저장을 위한<br>거래내역 조건을 선택해주세요.</strong></p>
+					<hr class="guide_line">
+					<p class="defTit t1">
+						<strong>추가할 내역을 선택해주세요</strong>
+						<span>동일 가맹점의 소비 금액이 합산되어 등록됩니다.</span>
+					</p>
+				</div>
+				<!-- // -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">아이콘 추가</h4>
+					<h5 class="guide_title4">.icoCal</h5>
+					<h6 class="defTit icoCal">타이틀<br><strong>종합소득세</strong></h6>
+					<hr class="guide_line">
+
+					<h5 class="guide_title4">.icoCalTax</h5>
+					<h6 class="defTit icoCalTax">타이틀<br><strong>재산세/종합부동산세</strong></h6>
+					<hr class="guide_line">
+
+					<h5 class="guide_title4">.icoCar</h5>
+					<h6 class="defTit icoCar">타이틀<br><strong>취득세</strong></h6>
+					<hr class="guide_line">
+
+					<h5 class="guide_title4">.icoMoney</h5>
+					<h6 class="defTit icoMoney">타이틀<br><strong>증여세</strong></h6>
+					<hr class="guide_line">
+
+					<h5 class="guide_title4">.icoHouse</h5>
+					<h6 class="defTit icoHouse">타이틀<br><strong>양도상속세</strong></h6>
+					<hr class="guide_line">
+
+					<h5 class="guide_title4">.icoOverseas</h5>
+					<h6 class="defTit icoOverseas">타이틀<br><strong>양도소득세(해외주식)</strong></h6>
+					<hr class="guide_line">
+
+					<h5 class="guide_title4">.icoHeir</h5>
+					<h6 class="defTit icoHeir">타이틀<br><strong>상속세</strong></h6>
+					<hr class="guide_line">
+
+					<h5 class="guide_title4">.icoHeart</h5>
+					<h6 class="defTit icoHeart">타이틀<br><strong>건강보험료</strong></h6>
+					<hr class="guide_line">
+
+					<h5 class="guide_title4">.icoSmart</h5>
+					<h6 class="defTit icoSmart">타이틀<br><strong>절세팁</strong></h6>
+					<hr class="guide_line">
+
+					<h5 class="guide_title4">.icoTax <span class="sub">이미지없음</span></h5>
+					<h6 class="defTit icoTax">타이틀<br><strong>세금</strong></h6>
+					<hr class="guide_line">
+
+					<h5 class="guide_title4">.icoChart</h5>
+					<h6 class="defTit icoChart">타이틀<br><strong>진료 내역</strong></h6>
+					<hr class="guide_line">
+
+					<h5 class="guide_title4">.icoHtNews</h5>
+					<h6 class="defTit icoHtNews">타이틀<br><strong>건강 뉴스</strong></h6>
+					<hr class="guide_line">
+
+					<h5 class="guide_title4">.icoHos</h5>
+					<h6 class="defTit icoHos">타이틀<br><strong>요양병원</strong></h6>
+					<hr class="guide_line">
+
+					<h5 class="guide_title4">.icoPhar</h5>
+					<h6 class="defTit icoPhar">타이틀<br><strong>약국</strong></h6>
+					<hr class="guide_line">
+
+					<h5 class="guide_title4">.icoHc1</h5>
+					<h6 class="defTit icoHc1">타이틀<br><strong>건강관리를 잘하고 계시네요!</strong></h6>
+					<hr class="guide_line">
+
+					<h5 class="guide_title4">.icoHc2</h5>
+					<h6 class="defTit icoHc2">타이틀<br><strong>건강을 위해 좀 더 노력하세요!</strong></h6>
+					<hr class="guide_line">
+
+					<h5 class="guide_title4">.icoHc3</h5>
+					<h6 class="defTit icoHc3">타이틀<br><strong>건강관리에 신경 써야 겠어요!</strong></h6>
+					<hr class="guide_line">
+
+					<h5 class="guide_title4">.icoTrd1 <i class="guide_tag">2023고도화</i></h5>
+					<h6 class="defTit icoTrd1">타이틀<br><strong>NH트렌드+</strong></h6>
+					<hr class="guide_line">
+
+					<h5 class="guide_title4">.icoRetire <i class="guide_tag">2023고도화</i></h5>
+					<h6 class="defTit icoRetire">타이틀<br><strong>조기은퇴진단</strong></h6>
+					<hr class="guide_line">
+
+					<h5 class="guide_title4">.bgHtInfo</h5>
+					<h6 class="defTit bgHtInfo">타이틀<br><strong>상품모아보기</strong></h6>
+					<hr class="guide_line">
+
+					<h5 class="guide_title4">.bgAssetConnAdmin</h5>
+					<h6 class="defTit bgAssetConnAdmin">연결중인 <strong>자산을</strong><br><strong>확인하고 관리</strong>합니다</h6> 
+				</div>
+				<!-- // -->
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [서브 타이틀] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">서브타이틀</h3>
+				<!-- // -->
+				<div class="guide_area">
+					<h4 class="guide_title3">유형1 : .defSubTit <span class="sub">[F:15px]</span></h4>
+					<h5 class="defSubTit">타이틀 <strong>강조문구</strong></h5>
+					<hr class="guide_line">
+					<div class="defSubTit">
+						<h5>타이틀 <strong>강조문구</strong></h5>
+						<div class="tooltipWrap">
+							<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">툴팁 열기</span></button>
+							<div class="tooltipCont">
+								<p>툴팁내용</p>
+								<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+							</div>
+						</div>
+					</div>
+					<hr class="guide_line">
+					<p class="defSubTit"><strong>서비스 이용동의</strong></p>
+				</div>
+				<!-- // -->
+				<div class="guide_area">
+					<h4 class="guide_title3">유형2 : .defSubTit1 <span class="sub">[F:16px]</span></h4>
+					<h5 class="defSubTit1">서브타이틀</h5>
+					<hr class="guide_line">
+					<div class="defSubTit1">
+						<h5>서브타이틀</h5>
+						<div class="tooltipWrap">
+							<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">툴팁 열기</span></button>
+							<div class="tooltipCont">
+								<p>툴팁내용</p>
+								<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+							</div>
+						</div>
+					</div>
+					<hr class="guide_line">
+					<p class="defSubTit1 ac"><em class="pointColor">김농협</em> 고객님의 <br>VIP 금융컨설팅 신청이 완료되었습니다</p>
+				</div>
+				<div class="boxTypeWrap">
+					<h5 class="defSubTit1">서브타이틀</h5>
+					<p class="subTxt">F16 / 900 일 경우 사용</p>
+					<p class="guide_empty mt10">컨텐츠노출영역</p>
+				</div>
+				<!-- // -->
+				<div class="guide_area mt40">
+					<h4 class="guide_title3">유형3 : .defSubTit2 <span class="sub">[F:16px]</span></h4>
+					<h5 class="defSubTit2">서브타이틀</h5>
+					<hr class="guide_line">
+					<h5 class="defSubTit2">서브타이틀 <strong class="bold">강조문구</strong></h5>
+					<hr class="guide_line">
+					<div class="defSubTit2 containTooltip">
+						<h5>서브타이틀</h5>
+						<div class="tooltipWrap">
+							<button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">툴팁 열기</span></button>
+							<div class="tooltipCont">
+								<p>툴팁내용</p>
+								<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+							</div>
+						</div>
+					</div>
+					<hr class="guide_line">
+					<h5 class="defSubTit2">나의 목표 등급<button type="button" class="gradeGuide"><span class="blind">등급 시뮬레이션 안내 열기</span></button></h5>
+					<hr class="guide_line">
+					<div class="defSubTit2 ar">총 <span class="dataValue">10</span>개</div>
+					<hr class="guide_line">
+					<h2 class="defSubTit2 t1">
+						<strong>구독서비스 <span class="pointColor">2</span>건</strong>
+						<span class="sub"><strong class="dataValue">000,000,000</strong><span class="won">원</span></span>
+					</h2>
+				</div>
+				<div class="boxTypeWrap">
+					<h5 class="defSubTit2">서브타이틀</h5>
+					<p class="subTxt">F16 / normal 일 경우 사용</p>
+					<p class="guide_empty mt10">컨텐츠노출영역</p>
+				</div>
+				<!-- // -->
+				<div class="guide_area mt40">
+					<h4 class="guide_title3">유형4 : .defSubTit3 <span class="sub">[F:14px]</span></h4>
+					<h5 class="defSubTit3">타이틀</h5>
+					<hr class="guide_line">
+					<p class="defSubTit3">총 <span class="pointColor">15</span>건</p>
+					<hr class="guide_line">
+					<h5 class="defSubTit3 t1">타이틀 .t1 / 900</h5>
+					<hr class="guide_line">
+					<h5 class="defSubTit3 t2">#타이틀 .t2 / #19a647</h5>
+				</div>
+				<div class="boxTypeWrap">
+					<h5 class="defSubTit3">서브타이틀</h5>
+					<p class="subTxt">F14 / bold 일 경우 사용</p>
+					<p class="guide_empty mt10">컨텐츠노출영역</p>
+				</div>
+				<!-- // -->
+				<div class="guide_area mt40">
+					<h4 class="guide_title3">유형5 : .defSubTit4 <span class="sub">[F:13px]</span></h4>
+					<h5 class="defSubTit4">타이틀</h5>
+				</div>
+				<!-- // -->
+			</div>
+			<!-- -------------------------------------- -->
+		</section>
+
+		<!-- ################################# -->
+		<!-- ### 텍스트 ### -->
+		<!-- ################################# -->
+		<section id="GCONTENT3">
+			<h2 class="guide_title">텍스트</h2>
+
+			<!-- -------------------------------------- -->
+			<!-- [태그유형] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">태그유형</h3>
+				<!-- ### 유형1 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">유형1 : .tag</h4>
+					<div  class="guide_tbl">
+						<table>
+							<caption>태그 색상 정의</caption>
+							<colgroup>
+								<col style="width:40%">
+								<col style="width:60%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>[+ .text]</td>
+									<td><span class="tag text">텍스트</span></td>
+								</tr>
+								<tr>
+									<td>[+ .text .error]</td>
+									<td><span class="tag text error"> 오류메세지</span></td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<td>[+ .Green]</td>
+									<td><span class="tag Green">텍스트 #19a647</span></td>
+								</tr>
+								<tr>
+									<td>[+ .GreenBgwh]</td>
+									<td style="background:#f7f7f7"><span class="tag GreenBgwh">텍스트 #19a647</span></td>
+								</tr>
+								<tr>
+									<td>[+ .blue]</td>
+									<td><span class="tag blue">텍스트 #3674bc</span></td>
+								</tr>
+								<tr>
+									<td>[+ .red]</td>
+									<td><span class="tag red">텍스트 #e75441</span></td>
+								</tr>
+								<tr>
+									<td>[+ .purple02]</td>
+									<td><span class="tag purple02">텍스트 #734cb8</span></td>
+								</tr>
+								<tr>
+									<td>[+ .mint]</td>
+									<td><span class="tag mint">텍스트 #43a67f</span></td>
+								</tr>
+								<tr>
+									<td>[+ .mint02]</td>
+									<td><span class="tag mint02">텍스트 #0393a4</span></td>
+								</tr>
+								<tr>
+									<td>[+ .gray]</td>
+									<td><span class="tag gray">텍스트 #666</span></td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<td>[+ .gray1]</td>
+									<td><span class="tag gray1">텍스트 #f8f8f8</span></td>
+								</tr>
+								<tr>
+									<td>[+ .gray2]</td>
+									<td><span class="tag gray2">텍스트 #f2f4f8</span></td>
+								</tr>
+								<tr>
+									<td>[+ .gray3]</td>
+									<td><span class="tag gray3">텍스트 #f3f0ee</span></td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<td>[+ .muOrange]</td>
+									<td><span class="tag muOrange">텍스트</span></td>
+								</tr>
+								<tr>
+									<td>[+ .muGreen]</td>
+									<td><span class="tag muGreen">텍스트</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- ### 유형2 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">유형2 : .iconTxt1 <i class="guide_tag">2023고도화</i></h4>
+					<div class="guide_tbl">
+						<table>
+							<caption>텍스트 유형1</caption>
+							<colgroup>
+								<col style="width:20%"/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">클래스명</th>
+									<th scope="col">내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>.t1</td>
+									<td><span class="iconTxt1 t1">텍스트</span></td>
+								</tr>
+								<tr>
+									<td>.t2</td>
+									<td><span class="iconTxt1 t2">텍스트</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- ### 유형3 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">유형3 : .iconTxt2 <i class="guide_tag">2023고도화</i></h4>
+					<div class="guide_tbl">
+						<table>
+							<caption>텍스트 유형1</caption>
+							<colgroup>
+								<col style="width:20%"/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">클래스명</th>
+									<th scope="col">내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>기본</td>
+									<td>-</td>
+									<td><span class="iconTxt2">텍스트</span></td>
+								</tr>
+								<tr>
+									<td rowspan="6">등급</td>
+									<td>.grade0</td>
+									<td><span class="iconTxt2 grade0">산출불가</span></td>
+								</tr>
+								<tr>
+									<td>.grade1</td>
+									<td><span class="iconTxt2 grade1">매우안정</span></td>
+								</tr>
+								<tr>
+									<td>.grade2</td>
+									<td><span class="iconTxt2 grade2">안정</span></td>
+								</tr>
+								<tr>
+									<td>.grade3</td>
+									<td><span class="iconTxt2 grade3">다소안정</span></td>
+								</tr>
+								<tr>
+									<td>.grade4</td>
+									<td><span class="iconTxt2 grade4">보통</span></td>
+								</tr>
+								<tr>
+									<td>.grade5</td>
+									<td><span class="iconTxt2 grade5">우려</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- ### 유형4 ### -->
+				<div class="guide_area2">
+					<h4 class="guide_title3">유형3 : .iconTxt3 <i class="guide_tag">2023고도화</i></h4>
+					<div class="guide_tbl">
+						<table>
+							<caption>텍스트 유형3</caption>
+							<colgroup>
+								<col style="width:20%"/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">클래스명</th>
+									<th scope="col">내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>증가</td>
+									<td>.up</td>
+									<td><span class="iconTxt3 up">증가</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- ### 그룹1 ### -->
+				<div class="guide_area">
+					<h4 class="guide_title3">그룹1 : .wrapTag</h4>
+					<div class="wrapTag">
+						<span class="type01">텍스트[span.type01]</span>
+						<em class="type01">텍스트[em.type01]</em>
+						<span class="type02">텍스트[span.type02]</span>
+						<em class="type02">텍스트[em.type02]</em>
+						<span class="type03">텍스트[span.type03]</span>
+						<em class="type03">텍스트[em.type03]</em>
+						<span class="type04">텍스트[span.type04]</span>
+						<em class="type04">텍스트[em.type04]</em>
+						<span class="type05">텍스트[span.type05]</span>
+						<em class="type05">텍스트[em.type05]</em>
+						<span class="type06">텍스트[span.type06]</span>
+						<em class="type06">텍스트[em.type06]</em>
+						<span class="type07">텍스트[span.type07]</span>
+						<em class="type07">텍스트[em.type07]</em>
+						<span class="type08">텍스트[span.type08]</span>
+						<em class="type08">텍스트[em.type08]</em>
+					</div>
+
+					<h5 class="guide_title4 t1">활용</h5>
+					<div class="wrapTag">
+						<span class="type01 radius4">#갱신형</span><span class="type02 radius4">#변액보험</span><span class="type03 radius4">#유니버셜</span>
+					</div>
+					<div class="wrapTag">
+						<span class="tag green">자가</span><span class="txt">전세임대 (지분율 50%)</span>
+					</div>
+					<div class="wrapTag hashTag">
+						<em class="tag bg01">#24시간 보장</em><em class="tag bg02">#운전중사고도대비</em>
+					</div>
+				</div>
+
+				<!-- ### 그룹2 ### -->
+				<div class="guide_area">
+					<h4 class="guide_title3">그룹2 : .tagWrap</h4>
+					<div class="tagWrap">
+						<span class="tag gray1">텍스트[.tag.gray1]</span>
+						<span class="tag gray2">텍스트[.tag.gray2]</span>
+					</div>
+					<div class="tagWrap">
+						<span class="tag gray">텍스트[.tag.gray]</span>
+						<span class="tag red">텍스트[.tag.red]</span>
+						<span class="tag blue">텍스트[.tag.blue]</span>
+					</div>
+					<div class="tagWrap">
+						<span class="tag text">텍스트[.tag.text]</span>
+						<span class="tag text">텍스트[.tag.text]</span>
+					</div>
+				</div>
+				<!-- ### // ### -->
+			</div>
+
+			<!-- -------------------------------------- -->
+			<!-- [문구유형] -->
+			<!-- -------------------------------------- -->
+			<div class="guide_cont">
+				<h3 class="guide_title2">문구유형</h3>
+				<!-- ### 유형1 ### -->
+				<div class="guide_area">
+					<h4 class="guide_title3">유형1</h4>
+					<div class="guide_tbl">
+						<table>
+							<caption>문구유형</caption>
+							<colgroup>
+								<col style="width:20%"/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">클래스명</th>
+									<th scope="col">내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>.subTxt</td>
+									<td><div class="subTxt">텍스트 : F14 / #666</div></td>
+								</tr>
+								<tr>
+									<td rowspan="2">.subTxt3</td>
+									<td><div class="subTxt3">텍스트 : F13 / #666</div></td>
+								</tr>
+								<tr>
+									<td>
+										<i class="guide_tag">2023고도화</i>
+										<div class="subTxt3 img1">텍스트 : F13 / #666 <br>아이콘노출 : .img1</div>
+									</td>
+								</tr>
+								<tr>
+									<td rowspan="2">.subTxt2</td>
+									<td><div class="subTxt2">텍스트 : F12 / #666</div></td>
+								</tr>
+								<tr>
+									<td>
+										<i class="guide_tag">2023고도화</i>
+										<div class="subTxt2 t1">텍스트 : F12 / #666 : 도트추가</div>
+									</td>
+								</tr>
+								<tr>
+									<td>.subTxt6</td>
+									<td>
+										<div class="subTxt6">텍스트 : F11 / #666</div>
+									</td>
+								</tr>
+								<tr>
+									<td>.subTxt5</td>
+									<td>
+										<div class="subTxt5">텍스트 : F14 / #888</div>
+									</td>
+								</tr>
+								<tr>
+									<td>.subTxt8</td>
+									<td>
+										<i class="guide_tag">2023고도화</i>
+										<div class="subTxt8">텍스트 : F13 / #888</div>
+									</td>
+								</tr>
+								<tr>
+									<td>.subTxt7</td>
+									<td>
+										<div class="subTxt7">텍스트 : F12 / #888</div>
+									</td>
+								</tr>
+								<tr>
+									<td>.subTxt4</td>
+									<td>
+										<div style="height:20px;"></div>
+										<div class="subTxt4">텍스트 : F11 / #888<br>margin-top:-15px;margin-bottom:15px</div>
+									</td>
+								</tr>
+								<tr>
+									<td>.subTxt9</td>
+									<td>
+										<i class="guide_tag">2023고도화</i>
+										<div class="subTxt9">텍스트 : F12 / #19a647</div>
+									</td>
+								</tr>
+								<tr>
+									<td>.txtDisabled</td>
+									<td>
+										<i class="guide_tag">2023고도화</i>
+										<div class="txtDisabled">비활성화 :  #ccc</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- ### 유형2 ### -->
+				<div class="guide_area">
+					<h4 class="guide_title3">유형2</h4>
+					<div class="guide_tbl">
+						<table>
+							<caption>문구유형</caption>
+							<colgroup>
+								<col style="width:20%"/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">클래스명</th>
+									<th scope="col">내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>.listDot</td>
+									<td>
+										<ul class="listDot">
+											<li>listDot 내용1</li>
+											<li>listDot 내용2</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>.listBul.disc</td>
+									<td>
+										<ul class="listBul disc">
+											<li>listBul 내용1</li>
+											<li>listBul 내용2</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- ### 유형3 ### -->
+				<div class="guide_area">
+					<h4 class="guide_title3">유형3 : .info_area</h4>
+					<div class="info_area">
+						<strong class="info_area_title">알아두세요</strong>
+						<ul class="listBul disc">
+							<li>알아두세요 내용1
+								<ul class="listDash">
+									<li>서브내용1</li>
+									<li>서브내용2</li>
+								</ul>
+							</li>
+							<li>알아두세요 내용2</li>
+						</ul>
+					</div>
+					<hr class="guide_line mt40 mb40">
+					<h5 class="guide_title4">라인추가 : + .t1 <i class="guide_tag">2023고도화</i></h5>
+					<div class="info_area t1">
+						<strong class="info_area_title">알아두세요</strong>
+						<ul class="listBul disc">
+							<li>투자위험은 수익률의 평균과 얼마나 차이가 나는지를 측정하기 위해 표준편차를 사용합니다. 보통 높은 표준편차는 더 큰 위험을 나타냅니다. </li>
+							<li>투자수익은 본인이 부담한 위험의 크기 만큼 늘어나게 되기 때문에 위험 부담이 클수록 그만큼 높은 수익을 기대할 수 있어요.</li>
+						</ul>
+					</div>
+				</div>
+				<!-- ### // ### -->
+			</div>
+			<!-- -------------------------------------- -->
+		</section>
+		<!-- ################################# -->
+	</div>
+	<!-- ###################################### -->
+</div>
+</body>
+</html>

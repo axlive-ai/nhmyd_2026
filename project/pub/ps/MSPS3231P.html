@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>popup</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+<script type="text/javascript">
+$(function(){
+		fullLayerPop()
+});
+
+</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1>신용거래정보 상세보기</h1>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<div class="btnWrap page">
+			<a href="javascript:;" onclick="fullLayerPop();return false;" aria-haspopup="true" role="button" class="btn">fullLayerPop</a>
+		</div>
+	</div>
+</div>
+
+<div class="nhasset popWrap fullLayerPop" role="dialog">
+	<div class="popInner">
+		<h1>신용거래정보 상세보기</h1>
+		<div class="popCont">
+			<h2 class="defSubTit2 mt20">수신계좌 정보</h2>
+			<div class="listwarp">
+				<ul class="disc">
+					<li>
+						<strong class="tit">계좌기본정보</strong>
+						<p>저축방법, 계좌개설일자, 만기일, 통화코드, 약정액, 월납입액</p>
+					</li>
+					<li>
+						<strong class="tit">계좌잔액정보</strong>
+						<p>통화코드, 현재잔액, 출금 가능액, 적용금리, 최종납입회차</p>
+					</li>
+					<li>
+						<strong class="tit">거래내역</strong>
+						<p>거래일시 또는 거래일자, 거래번호, 거래유형 (코드), 거래구분, 통화코드, 거래금액, 거래 후 잔액, 납입회차</p>
+					</li>
+				</ul>
+			</div>
+
+			<h2 class="defSubTit2">투자상품정보</h2>
+			<div class="listwarp">
+				<ul class="disc">
+					<li>
+						<strong class="tit">잔액정보</strong>
+						<p>통화코드, 잔액, 평가금액, 투자원금, 보유좌수</p>
+					</li>
+					<li>
+						<strong class="tit">거래내역</strong>
+						<p>거래일시 또는 거래일자, 거래번호, 거래유형, 통화코드, 기준가, 거래좌수, 거래금액, 거래 후 잔고평가금액</p>
+					</li>
+				</ul>
+			</div>
+
+			<h2 class="defSubTit2">대출상품정보</h2>
+			<div class="listwarp">
+				<ul class="disc">
+					<li>
+						<strong class="tit">잔액정보</strong>
+						<p>통화코드, 대출잔액, 대출원금, 다음이자 상환일</p>
+					</li>
+					<li>
+						<strong class="tit">거래내역</strong>
+						<p>거래일시 또는 거래일자, 거래번호, 거래유형, 통화코드, 거래금액, 거래 후 대출잔액, 거래금액 중 원금, 거래금액 중 이자, 환출이자, 이자종류 코드, 이자 적용시작일, 이자 적용종료일, 적용이율, 이자 금액</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="popBtnWrap">
+			<div class="popBtn">
+				<a href="javascript:;" class="confirmBtn" role="button">확인</a>
+			</div>
+			<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+/* My 둘러보기 */
+.nhasset .lookSwiper{margin:0 -16px}
+.nhasset .lookSwiper .swiper-container{padding-bottom:5px}
+.nhasset .lookSwiper .swiper-slide{width:90%;width:calc(100% - 44px);height:502px;margin-top:20px;box-shadow:0 2px 5px 0 rgba(41, 58, 88, 0.16);background-color:#fff;border-radius:10px}
+.nhasset .lookTit{margin-top:30px;font-weight:900;font-size:16px;text-align:center}
+.nhasset .lookTxt{margin-top:5px;color:#666;font-size:clamp(12px,1.2rem,18px);text-align:center}
+.nhasset .btnFirst{position:absolute;color:#888;font-size:clamp(14px,1.4rem,21px)}
+.nhasset .btnFirst.aL:before{content:'';display:inline-block;margin-right:4px;width:6px;height:10px;background:url('../images/arr_right01.png') 0 0 /cover;transform:rotate(-180deg)}
+.nhasset .btnFirst.aR:after{content:'';display:inline-block;margin-left:4px;width:6px;height:10px;background:url('../images/arr_right01.png') 0 0 /cover}
+.nhasset .btnFirst.aR{right:20px}
+.nhasset .btnFirst.aL{left:20px}
+.nhasset .infoImgWrap:after{content:'';display:block;position:absolute;bottom:60px;left:50%;margin-left:-119px;width:256px;height:145px;background:url('../images/contents/look_mydata.png') center bottom /cover no-repeat}
+.nhasset .infoIcoWrap{display:flex;justify-content:space-between;margin-top:25px;padding:0 10px;font-weight:bold;color:#666;text-align:center;}
+.nhasset .infoIcoWrap .infoIco{flex:1;position:relative;font-size:14px}
+.nhasset .infoIcoWrap .infoIco:before{content:'';display:block;margin:0 auto 16px;width:84px;height:84px;border-radius:50%}
+.nhasset .infoIcoWrap .money:before{background-color:#d1f1e9;border-radius:50%}
+.nhasset .infoIcoWrap .life:before{width:84px;height:84px;background-color:#d9e7ff;}
+.nhasset .infoIcoWrap .infoIco:after{content:'';position:absolute}
+.nhasset .infoIcoWrap .life:after{top:10px;left:calc(50% - 20px);width:83px;height:68px;background:url('../images/contents/look_life.png') center /cover no-repeat}
+.nhasset .infoIcoWrap .money:after{top:10px;left:calc(50% - 15px);width:83px;height:68px;background:url('../images/contents/look_money.png') center /cover no-repeat}
+.nhasset .lookSwiper .slidec{padding-bottom:60px}
+.nhasset .junbub{position:absolute;bottom:26px;width:100%;font-size:14px;letter-spacing:-0.08em;text-align:center;color:#888}
+.nhasset .lookSwiper .swiper-button-next, .lookSwiper .swiper-button-prev{top:240px;margin-top:0}
+.nhasset .lookSwiper .swiper-button-prev{background:url('../images/contents/look_arrl.png') center left 10px /13px 21px no-repeat}
+.nhasset .lookSwiper .swiper-button-next{background:url('../images/contents/look_arrr.png') center right 10px /13px 21px no-repeat}
+.nhasset .lookSwiper .swiper-control{height:20px}
+.nhasset .lookSwiper .swiper-pagination{width:100%;bottom:0;line-height:0}
+.nhasset .lookSwiper .swiper-pagination .swiper-pagination-bullet{width:6px;height:6px;border-radius:4px;background-color:#d0d0d0;opacity:1}
+.nhasset .lookSwiper .swiper-pagination .swiper-pagination-bullet-active{width:19px;background-color:#19a647}
+.nhasset .lookSwiper .swiper-autoBtn{display:inline-block;width:20px;height:20px}
+.nhasset .lookImgWrap{position:relative;margin:10px auto 0;width:208px;height:386px;padding:11px 14px 15px}
+.nhasset .lookImgWrap:after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:url('../images/look/look_mockup.png') center /cover no-repeat}
+.nhasset .lookSwiper .overlook{position:relative;border-radius:20px;overflow:hidden}
+.nhasset .lookSwiper .slideL1 .overlook{width:100%;min-height:100%;background:url('../images/look/look_l1_bg1.png') 0 0 /100% auto no-repeat;}
+.nhasset .lookSwiper .slideL1 .overlook.active{background-position-y:bottom;transition-duration:1s}
+.nhasset .lookSwiper .slideL1 [class*='lookZoomImg']{position:absolute;top:147px;left:50%;width:164px;height:70px;background:url('../images/look/look_l1_zoomimg1.png') center /cover no-repeat;transition-duration:.5s;transform:translate(-50%, -50%);opacity:0;z-index:2}
+.nhasset .lookSwiper .slideL1 .lookZoomImg2{top:244px;height:105px;background-image:url('../images/look/look_l1_zoomimg2.png')}
+.nhasset .lookSwiper .slideL1 .lookZoomImg3{top:205px;height:64px;background-image:url('../images/look/look_l1_zoomimg3.png')}
+.nhasset .lookSwiper .slideL1 .lookZoomImg4{top:287px;height:80px;background-image:url('../images/look/look_l1_zoomimg4.png')}
+.nhasset .lookSwiper .slideL1 [class*='lookZoomImg']:after{content:'';position:absolute;top:-35px;width:164px;height:30px;border-radius:5px;box-shadow:0px 2px 5px 0px rgba(41, 58, 88, 0.4);background:url('../images/look/look_l1_zoomtxt1.png') center /cover no-repeat;transition:.5s .5s;opacity:0}
+.nhasset .lookSwiper .slideL1 .lookZoomImg2:after{background-image:url('../images/look/look_l1_zoomtxt2.png')}
+.nhasset .lookSwiper .slideL1 .lookZoomImg3:after{background-image:url('../images/look/look_l1_zoomtxt3.png')}
+.nhasset .lookSwiper .slideL1 .lookZoomImg4:after{background-image:url('../images/look/look_l1_zoomtxt4.png')}
+.nhasset .lookSwiper .slideL1 .lookZoomImg.active,
+.nhasset .lookSwiper .slideL1 .lookZoomImg2.active,
+.nhasset .lookSwiper .slideL1 .lookZoomImg3.active,
+.nhasset .lookSwiper .slideL1 .lookZoomImg4.active{transform:translate(-50%, -50%) scale(1.5);border-radius:5px;box-shadow:0px 2px 5px 0px rgba(41, 58, 88, 0.4);opacity:1}
+.nhasset .lookSwiper .slideL1 .lookZoomImg.active:after,
+.nhasset .lookSwiper .slideL1 .lookZoomImg2.active:after,
+.nhasset .lookSwiper .slideL1 .lookZoomImg3.active:after,
+.nhasset .lookSwiper .slideL1 .lookZoomImg4.active:after{opacity:1}
+.nhasset .lookSwiper .slideL1 .lookViewImg4{position:absolute;bottom:44px;left:8px;width:164px;height:80px;background:url('../images/look/look_l1_img4.png') 0 0 /cover no-repeat;opacity:0;transition-duration:.5s;z-index:1}
+.nhasset .lookSwiper .slideL1 .lookViewImg4.num{opacity:1}
+.nhasset .lookSwiper .slideR1 .overlook{width:100%;min-height:100%;background:url('../images/look/look_r1_bg1.png') 0 0 /100% auto no-repeat;transition:1.5s 1s}
+.nhasset .lookSwiper .slideR1 .overlook.active{background-position-y:bottom;transition-duration:1s}
+.nhasset .lookSwiper .slideR1 .lookSlideImg{position:relative;top:122px;width:100%;height:95px;background:url('../images/look/look_r1_img1.png') left 0 /331px 100% no-repeat;transition:background linear .5s;opacity:0}
+.nhasset .lookSwiper .slideR1 .lookSlideImg.active{background-position-x:right;opacity:1}
+.nhasset .lookSwiper .slideR2 .overlook{width:100%;height:100%;}
+.nhasset .lookSwiper .slideR2 .lookSlideImg{position:absolute;top:226px;width:100%;height:78px;background:url('../images/look/look_r2_img1.png') left 0 /325px 78px no-repeat;transition-duration:.5s}
+.nhasset .lookSwiper .slideR2 .lookSlideImg.active{background-position-x:right}
+.nhasset .lookSwiper .slideR2 .lookBg{position:absolute;top:0;width:100%;height:934px;background:url('../images/look/look_r2_bg1.png') 0 0 /100% auto no-repeat #f2f4f8;transition-duration:1s}
+.nhasset .lookSwiper .slideR2 .lookBg.active{top:-255px}
+.nhasset .lookSwiper .slideR2 .lookBg2{position:absolute;top:338px;width:100%;height:100%;background:url('../images/look/look_r2_bg2.png') 0 0 /100% auto no-repeat;transition-duration:.5s;}
+.nhasset .lookSwiper .slideR2 .lookBg2.active{top:539px;opacity:1}
+.nhasset .lookSwiper .slideR2 .lookBg.active2{top:-576px}
+.nhasset .lookSwiper .slideR2 .overlook.active2{background-position-y:bottom;transition-duration:2s}
+.nhasset .lookSwiper .slideR2 .lookViewImg{position:absolute;top:217px;width:100%;height:80px;background:url('../images/look/look_r2_viewimg1.png') left 0 /cover no-repeat;transition-duration:.5s;opacity:0}
+.nhasset .lookSwiper .slideR2 .lookViewImg.active{opacity:1}
+.nhasset .lookSwiper .slideR3 .overlook{width:100%;min-height:100%;background:url('../images/look/look_r3_bg1.png') 0 0 /100% auto no-repeat;}
+.nhasset .lookSwiper .slideR3 .lookSlideImg{position:relative;top:178px;width:100%;height:170px;background:url('../images/look/look_r3_img1.png') left 0 /340px 100% no-repeat;transition:.5s .5s}
+.nhasset .lookSwiper .slideR3.active .lookSlideImg{background-position-x:right}
+.nhasset .lookSwiper .slideR3.active .overlook{background-position-y:-630px;transition:background 2s 2s}
+.nhasset .lookSwiper .slideR3 .overlook.active2{background-position-y:bottom;transition:background 2s .5s}
+.nhasset .lookSwiper .slideR3 .lookZoomImg{position:absolute;top:183px;left:50%;width:164px;height:176px;background:url('../images/look/look_r3_zoomimg1.png') center /cover no-repeat #fff;transition-duration:.5s;transform:translate(-50%, -50%);z-index:2;opacity:0}
+.nhasset .lookSwiper .slideR3 .lookZoomImg.active{transform:translate(-50%, -50%) scale(1.5);border-radius:5px;box-shadow:0px 2px 5px 0px rgba(41, 58, 88, 0.4);opacity:1}
+.nhasset .lookSwiper .slideR3 .lookViewImg{position:absolute;top:149px;width:100%;height:74px;background:url('../images/look/look_r3_viewimg1.png') left 0 /cover no-repeat;transition-duration:.5s;opacity:0}
+.nhasset .lookSwiper .slideR3 .lookViewImg.active{opacity:1}
+
+/*---*/
+
+.lookScroll section{height:500px}
+.lookScroll .secHc{}
+.lookScroll .secPlaner{background-color:#fcffe6}
+.lookScroll .secBenefit{}
+.lookScroll .secReport{background-color:#eefcd8}

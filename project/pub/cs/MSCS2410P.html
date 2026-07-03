@@ -1,0 +1,126 @@
+
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>머니 캘린더</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function(){
+		slidePopConfirm();
+	})  
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">머니 캘린더</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+			
+
+		</div>
+		<!-- //container -->
+		
+		<!-- 세부 카테고리 팝업 -->
+		<div class="nhasset popWrap slidePopConfirm">
+			<div class="dim"></div>
+			<div class="popInner">
+				<h1>검색기간 설정</h1>
+				<div class="popCont">
+					<div class="transfer">
+		                <div class="formWrap">
+		                    <ul class="searchFormWrap">
+		                        <li>
+		                            <!-- <strong class="formTit">검색기간</strong> -->
+		                            <div class="calendarForm">
+		                                <div class="cal">
+		                                    <div class="inputList">
+		                                        <input type="tel" value="2021-10-01" title="조회 시작일" placeholder="시작일선택" readonly="readonly">
+		                                        <a href="javascript:;" class="btnCalendar" title="시작일 날짜선택" role="button"><span class="blind">날짜선택</span></a>
+		                                    </div>
+		                                </div>
+		                                <span class="symbol">-</span>
+		                                <div class="cal">
+		                                    <div class="inputList">
+		                                        <input type="tel" value="2021-10-08" title="조회 종료일" placeholder="종료일선택" readonly="readonly">
+		                                        <a href="javascript:;" class="btnCalendar" title="종료일 날짜선택" role="button"><span class="blind">날짜선택</span></a>
+		                                    </div>
+		                                </div>
+		                            </div>
+									<div class="roundChkWrap mt15">
+										<ul>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="sample20" id="sample21" checked>
+													<label for="sample21">1주일</label>
+												</span>
+											</li>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="sample20" id="sample22">
+													<label for="sample22">1개월</label>
+												</span>
+											</li>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="sample20" id="sample23">
+													<label for="sample23">3개월</label>
+												</span>
+											</li>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="sample20" id="sample24">
+													<label for="sample24">6개월</label>
+												</span>
+											</li>
+											<li>
+												<span class="roundChk">
+													<input type="radio" name="sample20" id="sample25">
+													<label for="sample25">1년</label>
+												</span>
+											</li>
+										</ul>
+									</div>
+		                        </li>
+		                    </ul>
+		                </div>
+		                
+		            </div>  
+				</div>				
+
+				<div class="popBtnWrap">
+					<div class="popBtn">
+						<a href="javascript:;" class="confirmBtn" onclick="popClose(this);return false;" role="button">조회</a>
+					</div>
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+		<!-- // 세부 카테고리 팝업 -->
+	</div>
+
+</body>
+</html>

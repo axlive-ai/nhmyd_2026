@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>컨설팅 - 자산진단</title>
+<script src="../pub-assets/js/head.js"></script>
+<script>
+	$(document).ready(function () {
+		fullLayerPop();
+	})
+</script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text"></a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+
+		</div>
+		<!-- //container -->
+
+		<!-- 팝업시작 -->
+		<div class="nhasset popWrap fullLayerPop">
+			<div class="popInner">
+				<h1>여유자금</h1>
+				<div class="popCont grayPop">
+                    <div class="msaeAreaWrap">
+    
+                        <div class="productMenu">
+                            <a href="javascript:;" class="linkbtn le" role="button">투자수익률</a>
+                            <a href="javascript:;" class="linkbtn ri" role="button">금융부채비율</a>
+                        </div>
+                        
+                        <div class="msaeCont">
+                            <div class="boxTypeWrap msae">
+                                <div class="msaeAseetItem">
+                                    <h2 class="title"> <strong>여유자금</strong>은 <strong class="pointColor">2,790만원</strong>이에요<br>
+                                        최대권장보다 <strong class="pointColor">20.0%</strong> 많아요
+                                        <div class="tooltipWrap">
+                                            <button type="button" class="toolTipBtn" onclick="tooltipOpen($(this))"><span class="blind">여유자금 안내 툴팁 열기</span><!-- [접근성_2024] blind 수정 --></button>
+                                            <div class="tooltipCont">
+                                                <div class="msaeTool">
+                                                     <!-- [2022-02-20] 사보현 툴팁 수정 -->
+                                                     <ul class="popBul">
+                                                        <li>내 소비의 3배(최소 권장)와 6배(최대 권장)를 기준으로 한 여유자금 분석이에요.</li>
+                                                    </ul>
+                                                    <!-- //[2022-02-20] 사보현 툴팁 수정 -->
+                                                </div>
+                                                <button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+                                            </div>
+                                        </div>
+                                    </h2>
+                                    <div class="graphEmptyCase"> <!--11.30 empty case 추가-->
+                                        <div class="graphBlur">
+                                            <div class="msaeGraphBlurTxt">
+                                                <p>연결된 금융자산이 없어요.</p>
+                                                <a href="javascript:;" class="link arrGreen"><span>자산연결하기</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="msaeBtnArea">
+                                            <a href="javascript:;" class="link arrGreen"><span>나의 여유자금 선택</span></a>
+                                        </div>
+                                        <div class="graphWrap mt35" role="img" aria-label="">
+                                            <img src="../../images/temp/assets_graph_dumy35.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boxTypeWrap">
+                                <div class="msaeAseetItem">
+                                    <h2 class="title"> 
+                                        이번달 <strong>여유자금</strong>은 지난달 보다 <br/><strong class="pointColor">278만원</strong> 늘었어요
+                                    </h2>
+                                    <div class="graphEmptyCase"> <!--11.30 empty case 추가-->
+                                        <div class="graphBlur">
+                                            <div class="msaeGraphBlurTxt">
+                                                <p>지난달, 이번달 자산을<br>
+                                                    확인할 수 없어요.<br>
+                                                    자산을 연결하면 알려드릴께요. </p>
+                                                <a href="javascript:;" class="link arrGreen"><span>자산연결하기</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="msaeBtnArea">
+                                            <a href="javascript:;" class="link arrGreen"><span>나의 여유자금 선택</span></a>
+                                        </div>
+                                        <div class="graphWrap mt35" role="img" aria-label="">
+                                            <img src="../../images/temp/assets_graph_dumy36.png">
+                                            <div class="graphAddEx mt20"> <!--11.21 그래프 범례 추가-->
+                                                <ul class="ty01">
+                                                    <li class="bl03">지난달</li>
+                                                    <li class="bl02">이번달</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>	
+            
+            <div class="popBtnWrap">
+                <a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button"><img src="../../images/common/btn_popClose.png" alt="닫기"></a>
+            </div>
+        </div>
+    </div>
+    <!-- 팝업끝 -->
+</div>
+
+
+</body>
+</html>

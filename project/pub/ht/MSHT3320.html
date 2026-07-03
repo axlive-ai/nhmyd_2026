@@ -1,0 +1,456 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>자산관리 - 하나로가족보고서</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">등급 시뮬레이션</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="boxTypeWrap pt0">
+				<div class="gradePointWrap">
+					<strong>다음분기 예상등급</strong>
+					<h2 class="defTit mt20"><span class="gradeB3">그린</span></h2>
+					<p class="havePoint">보유점수 <strong>2,930점</strong>으로<br><strong>그린</strong> 등급이 예상됩니다.</p>
+				</div>
+
+				<h3 class="defSubTit2 mt25">
+					나의 목표 등급
+					<button type="button" class="gradeGuide" onclick="popCenter();"><span class="blind">등급 시뮬레이션 안내 열기</span></button>
+				</h3>
+
+				<div class="targetGrade">
+					<ul>
+						<li>
+							<label for="sel02"><strong class="gradeB2"><span>블루</span></strong></label>
+							<input type="radio" name="rdo" id="sel02">
+						</li>
+						<li>
+							<label for="sel03"><strong class="gradeB3"><span>그린</span></strong></label>
+							<input type="radio" name="rdo" id="sel03">
+						</li>
+						<li>
+							<label for="sel04"><strong class="gradeB4"><span>로얄</span></strong></label>
+							<input type="radio" name="rdo" id="sel04">
+						</li>
+						<li>
+							<label for="sel05"><strong class="gradeB5"><span>골드</span></strong></label>
+							<input type="radio" name="rdo" id="sel05">
+						</li>
+						<li>
+							<label for="sel06"><strong class="gradeB6"><span>탑클래스</span></strong></label>
+							<input type="radio" name="rdo" id="sel06">
+						</li>
+					</ul>
+					<p class="gradeGuideTxt"><strong class="gradeS4">로얄 등급</strong>까지 필요한 점수는 <strong>70점</strong> 입니다.</p>
+				</div>
+			</div>
+
+			<div class="boxTypeWrap pt0">
+				<div class="topTitWrap">
+					<h3 class="defSubTit2">고객님의 보유 자산에 더하기</h3>
+					<button type="button" class="updateBtn type01 bdNone">초기화</button>
+				</div>
+
+				<div class="formWrap">
+					<ul>
+						<li>
+							<strong class="formTit">월 적금 <span class="subTxt">(등급상승 필요금액 41,400만원)</span></strong> <!-- [2021] 윤지현:문구추가, class 추가 --> <!-- [2021-09-02] 한은정 : .fnw -> subTxt 클래스 변경 -->
+							<div class="inputList">
+								<input type="tel" title="월 적금액" value="" name="" id="" placeholder="10만원 당 2점 (3개월 평잔)">
+								<span class="unit">만원</span>
+								<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+							</div>
+						</li>
+						<li>
+							<strong class="formTit mt30">정기예금 <span class="subTxt">(등급상승 필요금액 41,400만원)</span></strong><!-- [2021] 윤지현:문구추가, class 추가 --> <!-- [2021-09-02] 한은정 : .fnw -> subTxt 클래스 변경 -->
+							<div class="inputList">
+								<input type="tel" title="정기예금액" value="" name="" id="" placeholder="10만원 당 2점 (3개월 평잔)">
+								<span class="unit">만원</span>
+								<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+							</div>
+						</li>
+						<li>
+							<strong class="formTit mt30">신용대출 <span class="subTxt">(등급상승 필요금액 41,400만원)</span></strong><!-- [2021] 윤지현:문구추가, class 추가 --> <!-- [2021-09-02] 한은정 : .fnw -> subTxt 클래스 변경 -->
+							<div class="inputList">
+								<input type="tel" title="신용대출금액" value="" name="" id="" placeholder="10만원 당 4점 (3개월 평잔)">
+								<span class="unit">만원</span>
+								<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+							</div>
+						</li>
+						<li>
+							<strong class="formTit mt30">담보대출 <span class="subTxt">(등급상승 필요금액 41,400만원)</span></strong><!-- [2021] 윤지현:문구추가, class 추가 --> <!-- [2021-09-02] 한은정 : .fnw -> subTxt 클래스 변경 -->
+							<div class="inputList">
+								<input type="tel" title="담보대출금액" value="" name="" id="" placeholder="10만원 당 3점 (3개월 평잔)">
+								<span class="unit">만원</span>
+								<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+							</div>
+						</li>
+						<li>
+							<strong class="formTit mt30">체크∙신용카드 <span class="subTxt">(등급상승 필요금액 41,400만원)</span></strong><!-- [2021] 윤지현:문구추가, class 추가 --> <!-- [2021-09-02] 한은정 : .fnw -> subTxt 클래스 변경 -->
+							<div class="inputList">
+								<input type="tel" title="체크∙신용카드 사용금액" value="" name="" id="" placeholder="10만원 당 10점 (분기 결제실적)">
+								<span class="unit">만원</span>
+								<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="areaBodyBtnFull mt40">
+					<a href="javascript:;" class="btnBodyLine green calcBtn" role="button">계산하기</a>
+				</div>
+
+				<div class="grayBox mt20 ac">
+					<p class="calcMsg">계산하기 버튼을 눌러서<br>결과를 확인해보세요.</p>
+				</div>
+			</div>
+			<!-- 2020-10-14 수정 : 계산 결과 요소들을 div.calcResult 로 묶음 -->
+			<div class="calcResult" style="display:none;">
+				<div class="boxTypeWrap pt0">
+					<div class="gradePointWrap">
+						<h2 class="defTit">시뮬레이션 등급 <span class="gradeB4"><em class="blind">로얄</em></span> 로 상승</h2>
+						<dl class="calcPoint">
+							<dt>점수</dt>
+							<dd><strong class="dataValue">15,930</strong><em class="won">점</em>(+80점)</dd>
+						</dl>
+					</div>
+
+					<div class="gradeViewWrap">
+
+						<div class="gradeView">
+							<!-- active 화살표 -->
+							<span class="gradeArrow"></span>
+							<!-- // active 화살표 -->
+							<ul>
+								<li class="">
+									<span class="gradeS1"></span>
+									<div class="gradeInfo">
+										<span class="gradeName">일반</span>
+									</div>
+								</li>
+								<li class="">
+									<span class="gradeS2"></span>
+									<div class="gradeInfo">
+										<span class="gradeName">블루</span>
+										<span class="gradePoint">900점<br>이상</span>
+									</div>
+								</li>
+								<li class="">  <!-- 현재 등급에 activeCur 클래스 사용 -->
+									<span class="gradeS3"></span>
+									<div class="gradeInfo">
+										<span class="gradeName">그린</span>
+										<span class="gradePoint">1200점<br>이상</span>
+									</spa>
+								</li>
+								<li class="activeNew">
+									<span class="gradeS4"></span>
+									<div class="gradeInfo">
+										<span class="gradeName">로얄</span>
+										<span class="gradePoint">3000점<br>이상</span>
+									</div>
+								</li>
+								<li class="">
+									<span class="gradeS5"></span>
+									<div class="gradeInfo">
+										<span class="gradeName">골드</span>
+										<span class="gradePoint">6000점<br>이상</span>
+									</div>
+								</li>
+			
+								<li class="activeCur">  <!-- 예상되는 등급에 activeNew 클래스 사용 (기존 등급 유지일 경우 둘다 사용)-->
+									<span class="gradeS6"></span>
+									<div class="gradeInfo">
+										<span class="gradeName">탑클래스</span>
+										<span class="gradePoint">15000점<br>이상</span>
+									</div>
+									<div class="topMsg">
+										<p>탑클래스를 유지하는<br> 최고의 고객님, 대단해요!</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- case1 : 일반등급 유지  -->
+					<h3 class="defSubTit3 mt30 mb15">조금만 더 노력하면 이런 혜택이!</h3>
+					<div class="wrapTblDefault">
+						<table cellpadding="0" cellspacing="0" class="thCenter tdCenter">
+							<caption>일반등급 유지 시 우대서비스(CD/ATM출금 수수료, 외환 환전·송금 환율우대) 테이블</caption>
+							<colgroup>
+								<col width="50%">
+								<col width="*">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">CD/ATM출금 수수료</th>
+									<td>면제 (최고 500원/건)</td>
+								</tr>
+								<tr>
+									<th scope="row">외환 환전·송금<br>환율우대</th>
+									<td>최대30%<br>(창구거래시 통화별우대율 차등적용)</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<!-- case1 : 등급 상향 시  -->
+					<h3 class="defSubTit3 mt30 mb15">등급 상향 시 추가 우대서비스</h3>
+					<div class="wrapTblDefault">
+						<table cellpadding="0" cellspacing="0" class="thCenter tdCenter">
+							<caption>등급상향 시 추가 우대서비스(텔레·인터넷·모바일뱅킹수수료, 외환 환전·송금 환율우대) 테이블</caption>
+							<colgroup>
+								<col width="50%">
+								<col width="*">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">텔레·인터넷·모바일뱅킹<br>수수료</th>
+									<td>면제 (타행 500원/건)</td>
+								</tr>
+								<tr>
+									<th scope="row">외환 환전·송금<br>환율우대</th>
+									<td>최대50%<br>(창구거래시 통화별우대율 차등적용)</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<!-- [2021-08-06] 한은정 : infoTxt 디자인 변경 -->
+					<p class="infoTxt">하나로가족고객 등급 산출은 분기 기준으로 본 시뮬레이션 이외 변동 상황에 따라 실제점수와 상이할 수 있습니다.</p>
+					<!-- <ul class="listDash mt10">
+						<li>하나로가족고객 등급 산출은 분기 기준으로 본 시뮬레이션 이외 변동 상황에 따라 실제점수와 상이할 수 있습니다.</li>
+					</ul> -->
+
+					<!-- [2021-09-02] 한은정 : 버튼 변경 -->
+					<div class="ar mt10">
+						<a href="javascript:;" class="greenLink">하나로가족고객 혜택보기</a>
+					</div>
+					<!-- <div class="areaBodyBtnFull">
+						<a href="javascript:;" class="btnBodyLine green" role="button">우대서비스 자세히 보기</a>
+					</div> -->
+
+					<!-- [2021] 윤지현:버튼추가 -->
+					<div class="areaBodyBtnFull mt20">
+						<a href="javascript:;" class="btnBodyLine green" role="button">다시 계산하기</a>
+					</div>
+					<!-- //[2021] 윤지현:버튼추가 -->
+
+					<!-- [2021-08-11] 한은정 : 상품 노출 변경// -->
+					<h3 class="visualSub type01 mt30">빅데이터로 찾은 우대금리 맞춤상품</h3> <!-- [2021-09-02] 한은정 : 문구 수정 -->
+					<h3 class="visualSub type01 mt30">빅데이터 분석을 통한 최적의 상품</h3> <!-- [2021-09-08] 한은정 : 타이틀 케이스 추가 -->
+					<h3 class="visualSub type02 mt30">NH자산<sup>+</sup>가 대표 상품을 추천 드려요</h3> 
+					<p class="subTxt4 pl30 mt0">(상품가입 시 실제 금리와 다를 수 있습니다.)</p> <!-- 2022-11-08 클래스(mt0)추가 -->
+					<ul class="prodListWrap borderTypeNew"> <!-- 2022-11-08 클래스(borderTypeNew)추가 -->
+						<li>
+							<a href="javascript:;" class="type01"> <!-- .type01 예금 / .type02 적금 -->
+								<div class="prodInfoWrap">
+									<div class="titArea">
+										<strong class="prodTit">NH왈츠회전예금II</strong>
+										<!--  [2021-12-14] 개선. 윤지현:마크업수정 -->
+										<div class="prodVal">기본 <strong class="dataValue">1.08</strong><em class="per">%</em>
+											<p class="f11">(연/세전, 12개월 가입 시)</p>
+										</div>  <!-- [2021-09-02] 한은정 : 문구 수정 -->
+										<!--  //[2021-12-14] 개선. 윤지현:마크업수정 -->
+									</div>
+									<div class="prodInfo">
+										<span class="prodValue">예상우대금리(1.8%p)</span>
+										<span class="hashWrap3">
+											<em class="hastag">월평균 2회 비대면이체,</em> <em class="hastag">급여이체,</em> <em class="hastag">마케팅동의</em> 등
+										</span>
+									</div>
+								</div>
+								<div class="prodRecomWrap">
+									<em class="prodRecommInfo">조건유지시<br>나의 예상금리</em><!-- [2021-09-13] 윤지현:문구수정 --> <!-- [2021-08-25] 한은정 : 위치 수정 -->
+									<div class="prodRecomVal">
+										<strong class="dataValue">2.85</strong><em class="per">%</em>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="type02"> <!-- .type01 예금 / .type02 적금 -->
+								<div class="prodInfoWrap">
+									<div class="titArea">
+										<strong class="prodTit">직장인월복리적금이름이긴경우</strong>
+										<!--  [2021-12-14] 개선. 윤지현:마크업수정 -->
+										<div class="prodVal">기본 <strong class="dataValue">1.08</strong><em class="per">%</em>
+											<p class="f11">(연/세전, 12개월 가입 시)</p>
+										</div>  <!-- [2021-09-02] 한은정 : 문구 수정 -->
+										<!--  //[2021-12-14] 개선. 윤지현:마크업수정 -->
+									</div>
+									<div class="prodInfo">
+										<span class="prodValue">예상우대금리(1.8%p)</span>
+										<span class="hashWrap3">
+											<em class="hastag">급여이체,</em> <em class="hastag">마케팅동의,</em> <em class="hastag">월평균 2회 비대면이체일 경우</em>
+										</span>
+									</div>
+								</div>
+								<div class="prodRecomWrap">
+									<em class="prodRecommInfo">조건유지시<br>나의 예상금리</em><!-- [2021-09-13] 윤지현:문구수정 --> <!-- [2021-08-25] 한은정 : 위치 수정 -->
+									<div class="prodRecomVal">
+										<strong class="dataValue">2.85</strong><em class="per">%</em>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li> 
+							<a href="javascript:;" class="type11">  <!-- .type11 예적금 / .type13 신용대출 / .type14 담보대출-->
+								<div class="prodInfoWrap">
+									<div class="titArea">
+										<strong class="prodTit">e금리우대예금</strong>
+										<p class="prodSub">온라인 전용 농협은행 대표 예금</p>
+									</div>
+									<div class="prodInfo">
+										<span class="hashWrap2">
+											<em class="hastag">#직장인</em>
+											<em class="hastag">#사회초년생</em> <em class="hastag">#주거래우대</em> 
+										</span>
+										<div class="prodVal">최고(연/세전)<br> <strong class="dataValue">1.08</strong><em class="per">%</em></div> <!-- [2021-08-25] 한은정 : 문구 수정 -->
+										<ul class="prodListWrap">
+									</div>
+								</div>
+							</a>
+						</li>
+						<li> 
+							<a href="javascript:;" class="type11">  <!-- .type11 예적금 / .type13 신용대출 / .type14 담보대출-->
+								<div class="prodInfoWrap">
+									<div class="titArea">
+										<strong class="prodTit">e금리우대예금</strong>
+										<p class="prodSub">온라인 전용 농협은행 대표 예금</p>
+									</div>
+									<div class="prodInfo">
+										<span class="hashWrap2">
+											<em class="hastag">#급여이체</em> <em class="hastag">#마케팅동의</em> <em class="hastag">#월평균 2회 비대면이체</em>
+										</span>
+										<div class="prodVal">최고(연/세전)<br> <strong class="dataValue">1.08</strong><em class="per">%</em></div>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<!--// 빅데이터가 없는 경우-->
+					
+					<!-- 선택약관(7번) 미동의한 고객의 경우 //-->
+					<h3 class="visualSub type01 mt30">빅데이터로 찾은 우대금리 맞춤상품</h3>
+					<ul class="prodListWrap">
+						<li>
+							<div class="disagree">
+								<p class="disagreeP">다른사람 빼고 나만 알고 싶은 <strong>추천상품</strong></p>
+							</div>
+						</li>
+					</ul>
+					<a href="javascript:;" class="linkTxt">살짝 보기</a>
+					<!--// 선택약관(7번) 미동의한 고객의 경우 -->
+
+					<!-- //[2021-08-11] 한은정 : 상품 노출 변경 -->
+				</div>
+			</div>
+
+			<script>
+				$(".calcBtn").on("click", function() {
+					$(".calcResult").show();
+					calcOffset = $(".calcResult").offset().top - 30;
+					$( 'html, body' ).animate({scrollTop:calcOffset}, 300);
+
+					hanaroArr();
+				});
+			</script>
+		</div>
+		<!-- // container -->
+
+		<!-- 등급 시뮬레이션 안내 팝업 -->
+		<div class="nhasset popWrap centerLayer">
+			<div class="dim"></div>
+			<div class="dimCloseArea" onclick="popClose(this);return false;">터치 시 해당 창을 닫습니다.</div>
+		
+			<div class="popInner">
+				
+				<h1>등급 시뮬레이션 안내</h1>
+				<div class="popCont">
+					<p>등급 시뮬레이션은 고객님의 예상 등급에서 현재 등급을 유지 또는 상승 하기위해 몇 점이 필요한지 계산해주는 기능입니다.</p>
+					<p>등급을 선택하면, 현재 점수에서 해당 등급까지 필요한 점수가 안내됩니다.</p>
+					<p>단, 등급선택 시 현재 등급보다 낮은 등급을 선택할 수 없습니다.</p>
+					
+					<!-- [2021-08-06] 한은정 : infoTxt 디자인 변경 -->
+					<p class="infoTxt">참고 : 하나로가족고객 등급</p>
+					<!-- <ul class="listDash mt10">
+						<li>참고 : 하나로가족고객 등급 </li>
+					</ul> -->
+					
+					<div class="wrapTblDefault mt5">
+						<table class="tdRight">
+							<caption>고객구분 별 기준점수등급표</cation>
+							<colgroup>
+								<col width="35%">
+								<col width="*">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col" class="ac">고객구분</th>
+									<th scope="col" class="ac">기준점수</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row"><span class="gradeS6"></span> 탑클래스</th>
+									<td>15,000점 이상</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="gradeS5"></span> 골드</th>
+									<td>6,000점 이상</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="gradeS4"></span> 로얄</th>
+									<td>3,000점 이상</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="gradeS3"></span> 블루</th>
+									<td>1,200점 이상</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="gradeS2"></span> 그린</th>
+									<td>900점 이상</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+		
+				<div class="popBtnWrap">
+					<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." role="button">
+						<img src="../../images/common/btn_popClose.png" alt="닫기">
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- // 등급 시뮬레이션 안내 팝업 -->
+	</div>
+
+</body>
+</html>

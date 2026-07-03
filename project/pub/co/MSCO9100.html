@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="#">
+<title>둘러보기</title>
+<script type="text/javascript" src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack" role="button"><span>Back</span></a>
+		<h1><span class=""><img src="../../images/logoMydata2.png" alt="NH마이데이터"></span></h1>
+		<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+		<a href="javascript:;" class="btnNav" role="button"><span>Menu</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div class="container">
+		<div class="lookSwiper">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+
+					<div class="swiper-slide slideC">
+						<h2 class="lookTit">새롭게 바뀐 NH마이데이터<br>서비스로 당신을 초대 합니다.</h2>
+						<div class="infoImgWrap">
+							<div class="infoIcoWrap">
+								<span class="infoIco life">라이프도<br>중요한 당신</span>
+								<span class="infoIco money">자산에 집중하고<br>싶은 당신</span>
+							</div>
+						</div>
+						<a href="javascript:;" role="button" class="swiper-button-prev" title="자산에 집중하고 싶은 당신 왼쪽 슬라이드로 이동"></a>
+						<a href="javascript:;" role="button" class="swiper-button-next" title="라이프도 중요한 당신 오른쪽 슬라이드로 이동"></a>
+					</div>
+
+					<div class="swiper-slide slideR1">
+						<h3 class="lookTit">데이터 시각화로 필요한 정보를<br>한눈에 전달 드려요!</h3>
+						<div class="lookImgWrap">
+							<div class="overlook">
+								<div class="lookSlideImg"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-slide slideR2">
+						<h3 class="lookTit">당신의 자산 AtoZ<br>현황부터 연금까지!</h3>
+						<div class="lookImgWrap">
+							<div class="overlook">
+								<div class="lookBg">
+									<div class="lookBg2"></div>
+								</div>
+								<div class="lookSlideImg"></div>
+								<div class="lookViewImg"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-slide slideR3">
+						<h3 class="lookTit">줄일 수 있는 건 줄여보자고요!<br>소비흐름을 한눈에</h3>
+						<div class="lookImgWrap">
+							<div class="overlook">
+								<span><img src="../../images/look/look_r3_bg1.png" alt=""></span> <!-- [2023-01-25] 추가 -->
+								<!-- <span><img src="/content/nhmyd/images/look/look_r3_bg1.png" alt=""></span> -->
+								<div class="lookSlideImg"></div>
+								<div class="lookViewImg"></div>
+							</div>
+							<!-- <div class="overlook2"></div> --> <!-- [2023-01-25] 삭제 -->
+							<div class="lookZoomImg"></div>
+						</div>
+						<p class="junbub">준법감시인 심의필 2022-2865(2022.06.16 ~ 2023.06.30)</p>	
+					</div>
+
+					<div class="swiper-slide slideL1">
+						<h3 class="lookTit">마이데이터에서<br>제공하는 별별서비스!</h3>
+						<div class="lookImgWrap">
+							<div class="overlook">
+								<div class="lookViewImg"></div>
+								<div class="lookViewImg4"></div>
+							</div>
+							<div class="lookZoomImg"></div>
+							<div class="lookZoomImg2"></div>
+							<div class="lookZoomImg3"></div>
+							<div class="lookZoomImg4"></div>
+						</div>
+					</div>
+
+				</div>
+				<div class="swiper-control">
+					<div class="swiper-pagination"></div>
+				</div>
+				<div class="swiper-button-prev blind"></div>
+				<div class="swiper-button-next blind"></div>
+			</div>
+			
+			<div class="lookLink">
+				<a href="javascript:;" class="linkTxt3">서비스 자세히 둘러보기</a>
+			</div>
+		</div>
+		
+
+        <div class="areaBtnDefault">
+            <a href="javascript:;" class="btnPressPoint" role="button">서비스 가입하기</a> <!-- [2023-01-17] 버튼명 수정 -->
+        </div>
+    </div>	
+	<script>
+		var swiper = new Swiper('.lookSwiper .swiper-container', {
+			slidesPerView: 'auto',
+			spaceBetween: 12,
+			centeredSlides: true,
+			observer:true,
+			observeParents : true,
+			loop: true,
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+				clickable: true,
+				bulletElement: 'a',
+			},
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+			on: {
+				init: function(){
+					$('.lookSwiper .swiper-slide').attr('aria-hidden','true');
+					$('.lookSwiper .swiper-slide-active').attr('aria-hidden','false');
+				},
+				slideChangeTransitionEnd : function(index){
+					var $shareBannerBtn = $(".lookSwiper .swiper-pagination");
+					$shareBannerBtn.find("a").attr('title','');
+					$shareBannerBtn.find("a").eq(this.activeIndex).attr('title','선택됨');
+					$('.lookSwiper .swiper-slide').attr('aria-hidden','true');
+					$('.lookSwiper .swiper-slide-active').attr('aria-hidden','false');
+
+					$('.swiper-slide').removeClass('active');
+					// $('.swiper-slide *').removeClass('active');
+					// $('.swiper-slide *').removeClass('active2');
+					if(!$('.swiper-slide').eq(this.activeIndex).hasClass('once')){
+						$('.swiper-slide').eq(this.activeIndex).addClass('active');
+					} else if($('.swiper-slide').hasClass('slideR3')){ //[2023-01-25] 추가
+						$('.swiper-slide').eq(this.activeIndex).addClass('once');
+					}
+
+					if($('.slideL1').hasClass('active')){
+						setTimeout(function(){
+							$('.slideL1 .lookZoomImg').addClass('active');
+						}, 500);
+						setTimeout(function(){
+							$('.slideL1 .lookZoomImg').removeClass('active');
+						}, 2500);
+						setTimeout(function(){
+							$('.slideL1 .lookZoomImg2').addClass('active');
+						}, 3000);
+						setTimeout(function(){
+							$('.slideL1 .lookZoomImg2').removeClass('active');
+						}, 5000);
+						setTimeout(function(){
+							$('.slideL1 .overlook').addClass('active');
+						}, 5500);
+						setTimeout(function(){
+							$('.slideL1 .lookZoomImg3').addClass('active');
+						}, 6500);
+						setTimeout(function(){
+							$('.slideL1 .lookZoomImg3').removeClass('active');
+						}, 8500);
+						setTimeout(function(){
+							$('.slideL1 .lookViewImg4').addClass('num');
+						}, 9000);
+						setTimeout(function(){
+							$('.slideL1 .lookZoomImg4').addClass('active');
+						}, 9500);
+						setTimeout(function(){
+							$('.slideL1 .lookZoomImg4').removeClass('active');
+						}, 11500);
+						$('.slideL1').addClass('once');
+					}
+
+					if($('.slideR1').hasClass('active')){
+						setTimeout(function(){
+							$('.slideR1 .overlook').addClass('active');;
+						}, 500);
+						setTimeout(function(){
+							$('.slideR1 .lookSlideImg').addClass('active');;
+						}, 3000);
+						$('.slideR1').addClass('once');
+					}
+
+					if($('.slideR2').hasClass('active')){
+						setTimeout(function(){
+							$('.slideR2 .lookSlideImg').addClass('active');;
+						}, 500);
+						setTimeout(function(){
+							$('.slideR2 .lookSlideImg').css('display','none');
+						}, 1500);
+						setTimeout(function(){
+							$('.slideR2 .lookBg').addClass('active');
+						}, 1500);
+						setTimeout(function(){
+							$('.slideR2 .lookBg2').addClass('active');
+						}, 3000);
+						setTimeout(function(){
+							$('.slideR2 .lookBg').addClass('active2');
+						}, 4500);
+						setTimeout(function(){
+							$('.slideR2 .lookViewImg').addClass('active');
+						}, 5500);
+						setTimeout(function(){
+							$('.slideR2 .lookViewImg').removeClass('active');
+						}, 7500);
+						$('.slideR2').addClass('once');
+					}
+
+					if($('.slideR3').hasClass('active')){
+						setTimeout(function(){
+							$('.slideR3 .lookSlideImg').css('display','none');
+						}, 1500);
+						setTimeout(function(){
+							$('.slideR3 .lookZoomImg').addClass('active')
+						}, 4000);
+						setTimeout(function(){
+							$('.slideR3 .lookZoomImg').removeClass('active')
+							// $('.slideR3 .overlook').addClass('active2') //[2023-01-25] 삭제
+						}, 5500);
+						setTimeout(function(){
+							$('.slideR3 .lookViewImg').addClass('active')
+						}, 8500);
+						setTimeout(function(){
+							$('.slideR3 .lookViewImg').removeClass('active')
+							$('.slideR3').addClass('end');  //[2023-01-25] 추가
+						}, 9500);
+						$('.slideR3').addClass('once');
+					}
+				}
+			}
+		});
+		// swiper.slideTo(1, 0, false);
+		// function goToFirstSlide(){
+		// 	swiper.slideTo(1, 1000, false)
+		// }
+	</script>
+</div>
+</body>
+</html>

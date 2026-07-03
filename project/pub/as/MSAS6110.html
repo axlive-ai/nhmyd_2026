@@ -1,0 +1,333 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>선불페이 상세 | 전금업권 | 자산</title>
+<script src="../pub-assets/js/head.js"></script>
+</head>
+<body>
+<div class="wrapper nhasset">
+	<!-- header -->
+	<div class="header">
+		<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+		<h1><a href="javascript:;" role="text">선불페이 상세</a></h1>
+		<a href="javascript:;" class="btnAcAdmin"><span class="blind">관리</span></a>
+	</div>
+	<!-- //header -->
+
+	<!-- ###################################### -->
+	<!-- ### [내용] 선불페이 상세 ### -->
+	<!-- ###################################### -->
+	<div class="container">
+		<!-- -------------------------------------- -->
+		<!-- [레이어팝업] 메세지 -->
+		<!-- -------------------------------------- -->
+		<div class="layerMsgWrap">
+			<p>순자산 금액에 포함 안된 자산이에요.</p>
+			<button type="button" class="layerMsgClose"><span class="blind">닫기</span></button>
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [상단영역] 선불페이정보 -->
+		<!-- -------------------------------------- -->
+		<div class="boxWrapShadow">
+			<!-- ### [계좌정보] 기본내용 ### -->
+			<div class="boxTypeWrap delShadow">
+				<!-- // -->
+				<div class="accTopInfo mt0">
+					<h2 class="accName">엔에이치엔페이코 주식회사
+						<img src="../../images/logos/AAIE0000.png" alt="엔에이치엔페이코 주식회사 로고" class="imgLogo">
+					</h2>
+					<dl class="totalBalance">
+						<dt>총 잔액</dt>
+						<dd><strong>4,200,000</strong>원</dd>
+					</dl>
+				</div>
+				<!-- // -->
+				<hr class="divLine">
+				<!-- // -->
+				<div class="accInfoDetail">
+					<ul class="detailList">
+						<li>
+							<span class="tit">유형</span>
+							<span class="value">선불페이</span>
+						</li>
+						<li>
+							<span class="tit">권면정보</span>
+							<span class="value">네이버 페이</span>
+						</li>
+						<li>
+							<span class="tit">연결계정</span>
+							<span class="value">jwl0906@naver.com</span>
+						</li>
+					</ul>
+				</div>
+				<!-- // -->
+				<div class="inputListArea">
+					<span class="tit">연결계정</span>
+					<div class="inputList">
+						<a href="javascript:;" title="연결계정 선택" aria-haspopup="true">
+							<span class="selectValue">jwl0****</span>
+							<span class="selectBtn"></span>
+						</a>
+						<select name="" title="선택해주세요">
+							<option value=""></option>
+						</select>
+					</div>
+				</div>
+				<!-- // -->
+				<div class="inputListArea">
+					<span class="tit">권면정보</span>
+					<div class="inputList">
+						<a href="javascript:;" title="권면정보선택" aria-haspopup="true">
+							<span class="selectValue">쿠팡캐시</span>
+							<span class="selectBtn"></span>
+						</a>
+						<select name="" title="선택해주세요">
+							<option value=""></option>
+						</select>
+					</div>
+				</div>
+				<!-- // -->
+			</div>
+
+			<!-- ### [토글영역] 상세정보 ### -->
+			<div class="moreInfoArea">
+				<div class="moreInfoWrap toggleWrap">
+					<div class="moreInfo toggleCont" style="display:none">
+						<hr class="divLine2" aria-hidden="true">
+						<ul class="detailList">
+							<li>
+								<span class="tit">충 잔액</span>
+								<span class="value"><strong class="dataValue">348,400</strong><em class="won">원</em></span>
+							</li>
+							<li>
+								<span class="tit">충전포인트</span>
+								<span class="value"><strong class="dataValue">333,400</strong><em class="won">원</em></span>
+							</li>
+							<li>
+								<span class="tit">적립포인트</span>
+								<span class="value"><strong class="dataValue">15,000</strong><em class="won">원</em></span>
+							</li>
+							<li>
+								<span class="tit">적립예정</span>
+								<span class="value"><strong class="dataValue">100,000</strong><em class="won">원</em></span>
+							</li>
+							<li>
+								<div class="tit">소멸예정
+									<div class="tooltipWrap">
+										<button type="button" onclick="tooltipOpen($(this))"><span class="blind">소멸예정 툴팁 열기</span></button>
+										<div class="tooltipCont">
+											<p>M+2개월 내 소멸예정인 포인트입니다.</p>
+											<button type="button" class="close" onclick="tooltipClose($(this))"><span class="blind">툴팁 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<span class="value"><strong class="dataValue">15,000</strong><em class="won">원</em></span>
+							</li>
+
+							<!-- [2023 NH마이데이터 서비스 고도화] -->
+							<li>
+								<span class="tit">출금가능액</span>
+								<span class="value"><strong class="dataValue">300,000</strong><em class="won">원</em></span>
+							</li>
+							<!-- // -->
+
+							<!-- [CASE] 가입 -->
+							<li>
+								<span class="tit">자동충전</span>
+								<span class="value">
+									가입 <button type="button" class="contBtn01" title="자동충전 더보기">더보기</button>
+									<!-- <span class="underline">미가입</span> 미가입일 경우 -->
+								</span>
+							</li>
+							<!-- [CASE] 미가입 -->
+							<li>
+								<span class="tit">자동충전</span>
+								<span class="value">
+									<span class="underline">미가입</span>
+								</span>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+					<button type="button" class="moreOpenBtn toggleBtn"><span class="toggleTxt07">상세정보 보기</span></button>
+				</div>
+			</div>
+			<!-- ### // ### -->
+		</div>
+
+		<!-- -------------------------------------- -->
+		<!-- [목록영역] 거래내역 -->
+		<!-- -------------------------------------- -->
+		<div class="boxTypeWrap pt0">
+			<!-- ### 필터 및 검색 ### -->
+			<div class="filterSearchWrap">
+				<!-- // -->
+				<div class="filterWrap">
+					<span class="sortValue">2020.09.01 ~ 2020.09.30</span>
+					<span class="sortValue">전체</span>
+					<button type="button" class="sortBtn"><span class="blind">조회조건 선택 설정하기</span></button>
+				</div>
+				<!-- // -->
+				<div class="filterSearch" aria-label="적요검색" style="display:none">
+					<div class="inputList">
+						<input type="text" title="적요 검색 (2자 이상)" value="" placeholder="적요 검색 (2자 이상)">
+						<button class="btnSearch"><span class="blind">검색</span></button>
+						<a href="javascript:" class="btnReset" role="button">입력내용삭제</a>
+					</div>
+					<div class="filterSearchRes" style="display:none">‘길동’ 검색결과 총 1건</div>
+				</div>
+				<!-- // -->
+			</div>
+
+			<!-- ### [샘플] 스크립트 ### -->
+			<script type="text/javascript">
+				$('.filterSearchWrap .btnSearch2').click(function(){
+					var $this = $(this);
+					var $parent = $this.closest('.filterSearchWrap');
+					if (!$this.hasClass('searchAfter')){
+						$parent.find('.filterSearch').show().find('.inputList').show().find('input:text').focus();
+						$parent.find('.filterSearchRes').hide();
+						$this.addClass('searchAfter').find('.blind').text('적요검색 닫기');
+					}else{
+							$parent.find('.filterSearch').hide();
+							$this.removeClass('searchAfter').find('.blind').text('적요검색 열기');;
+						}
+				});
+				$('.filterSearchWrap .btnSearch').click(function(){
+					var $this = $(this);
+					$this.closest('.filterSearch').find('.filterSearchRes').show();
+					$this.closest('.inputList').hide();
+					$this.closest('.filterSearchWrap').find('.btnSearch2').removeClass('searchAfter').find('.blind').text('적요검색 열기');
+				});
+			</script>
+
+			<!-- ### 목록 ### -->
+			<div class="inoutListWrap longTit">
+				<!-- [항목하나] -->
+				<div class="inoutListInn">
+					<p class="date">2020년 8월 01일</p>
+					<ul class="inoutList">
+						<li>
+							<p class="inoutTit noAgree">가맹점명 제공에 동의하지 않은 거래</p>
+							<div class="inoutCont">
+								<div class="timeWrap">
+									<span class="time">18:35</span>
+								</div>
+								<span class="amount outColor"><strong class="dataValue">-50,000</strong><em class="won">원</em></span>
+							</div>
+							<div class="amountWrap">
+								<div class="totalAcc">네이버페이 N포인트</div>
+								<span class="category">온라인 결제</span>
+							</div>
+						</li>
+						<li>
+							<p class="inoutTit noAgree">거래메모 제공에 동의하지 않은 거래</p>
+							<div class="inoutCont">
+								<div class="timeWrap">
+									<span class="time">18:35</span>
+								</div>
+								<span class="amount inColor"><strong class="dataValue">+100,000,000,000</strong><em class="won">원</em></span>
+							</div>
+							<div class="amountWrap">
+								<div class="totalAcc">NH농협은행(301**********)</div>
+								<span class="category">충전</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- [항목하나] -->
+				<div class="inoutListInn">
+					<p class="date">2020년 7월 31일</p>
+					<ul class="inoutList">
+						<li>
+							<p class="inoutTit">홍길동</p>
+							<div class="inoutCont">
+								<div class="timeWrap">
+									<span class="time">18:35</span>
+								</div>
+								<span class="amount inColor"><strong class="dataValue">+100,000,000,000</strong><em class="won">원</em></span>
+							</div>
+							<div class="amountWrap">
+								<div class="totalAcc">NH농협은행(301**********)</div>
+								<span class="category">충전</span>
+							</div>
+						</li>
+						<li>
+							<p class="inoutTit">홍길동</p>
+							<div class="inoutCont">
+								<div class="timeWrap">
+									<span class="time">18:35</span>
+								</div>
+								<span class="amount inColor"><strong class="dataValue">+100,000,000,000</strong><em class="won">원</em></span>
+							</div>
+							<div class="amountWrap">
+								<div class="totalAcc">NH농협은행(301**********)</div>
+								<span class="category">충전</span>
+							</div>
+						</li>
+						<li>
+							<p class="inoutTit">11번가 가맹점명이 길게 들어갈 수 있음</p>
+							<div class="inoutCont">
+								<div class="timeWrap">
+									<span class="time">18:35</span>
+								</div>
+								<span class="amount outColor"><strong class="dataValue">0</strong><em class="won">원</em></span>
+							</div>
+							<div class="amountWrap">
+								<div class="totalAcc">NH농협은행(301**********)</div>
+								<span class="category">최대8글자노출함</span>
+							</div>
+						</li>
+						<li>
+							<p class="inoutTit">11번가 가맹점명이 길게 들어갈 수 있음</p>
+							<div class="inoutCont">
+								<div class="timeWrap">
+									<span class="time">18:35</span>
+								</div>
+								<span class="amount outColor"><strong class="dataValue">-100,000,000,000</strong><em class="won">원</em></span>
+							</div>
+							<div class="amountWrap">
+								<div class="totalAcc">NH농협은행(301**********)</div>
+								<span class="category">송금취소계정송금</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- [//] -->
+			</div>
+			<!-- ### // ### -->
+			<div class="listMoreBtn"><a href="javascript:;" title="항목 더보기">더보기</a></div>
+			<!-- ### // ### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</div>
+	<!-- ###################################### -->
+</div>
+
+<!-- ###################################### -->
+<!-- ### [샘플] 스크립트 ### -->
+<!-- ###################################### -->
+<script type="text/javascript">
+	$('.layerMsgClose').click(function(){
+		$(this).closest('.layerMsgWrap').hide();
+	});
+</script>
+<!-- ###################################### -->
+</body>
+</html>

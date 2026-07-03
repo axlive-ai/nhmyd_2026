@@ -1,0 +1,124 @@
+<!DOCTYPE html >
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="농협자산관리" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<meta name="title" content="">
+<meta name="author" content="">
+<meta name="content" content="">
+<meta name="keywords" content="농협자산관리">
+<meta name="description" content="농협자산관리">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>UI TEST</title>
+<script src="../pub-assets/js/head.js"></script>
+<style type="text/css">
+	.file_list{user-select: all}
+	.re_rec{width: 32px;height: 32px;border:solid 1px silver;position: fixed;top: -64px;left: 50%;margin-left: -16px;z-index: 2000;background: url('../../images/btn_update.png')no-repeat center;border-radius: 50% ;background-color: cyan;background-size: 24px auto;}
+
+	.scWidth{width: 100%;height: 5px;background-color: yellow;position: fixed;top: 50px;}
+	.scWidth .after{content: '';position: absolute;height:5px;top: 0;left:0;background-color: orange;}
+	
+
+	/* 서브메인 배경 테스트 */
+	/*.subMain .nhasset .header{background-color: green;}
+	.subMain .header h1 a{color: #fff}
+	.subMain .nhasset .container .mainBg{width: 100%;height: 50px;position: absolute;left: 0;top: 50px;background-color: green;border-radius: 0 0 50px 0;}*/
+
+</style>
+</head>
+<body class="subMain">
+	<!-- <div class="scWidth"><span class="after"></span></div> -->
+	<!-- <script type="text/javascript">
+		function wscroll(){
+			var $scHeight = $(document).height() - $(window).height();
+			$(window).on('scroll',function(){
+				var $thisScHeight = $('html').scrollTop();
+				var $thisval = (($thisScHeight / $scHeight)*100).toFixed(0);
+				$('.scWidth .after').css('width',$thisval+'%')
+			});
+		}
+	</script> -->
+	<div class="wrapper nhasset">
+		<!-- header -->
+		<div class="header">
+			<a href="javascript:;" class="btnBack"><span class="blind">이전화면으로</span></a>
+			<h1><a href="javascript:;" role="text">UI Guide</a></h1>
+			<a href="javascript:;" class="btnGoHome" role="button"><span>Home</span></a>
+			<a href="javascript:;" class="btnNav"><span>전체메뉴</span></a> <!-- [2022-12-29] 접근성 .blind 삭제 -->
+		</div>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			
+			
+			<div class="boxTypeWrap">
+				<form class="mt20">
+					<div>
+						<input type="file" id="directory_upload" webkitdirectory>
+					</div>
+					<div class="file_list">
+						<p></p>
+					</div>
+				</form>
+				<script type="text/javascript">
+					$(document).ready(function(){
+						//const input = document.getElementById('directory_upload');
+						const input = document.querySelector('#directory_upload');
+						const preview = document.querySelector('.file_list');
+						input.addEventListener('change', showTextFile);
+						function showTextFile () {
+							const selectedFiles = input.files;
+							const list = document.createElement('ul');
+							preview.appendChild(list);
+							for(const file of selectedFiles){
+								const listItem = document.createElement('li');
+								const summary = document.createElement('span');
+								const size = document.createElement('em');
+								//summary.textContent = file.name + ',';
+								summary.textContent = file.webkitRelativePath ;
+								size.textContent = returnFilesSize(file.size);
+								listItem.appendChild(summary);
+								//listItem.appendChild(size);
+								list.appendChild(listItem);
+							}
+							function returnFilesSize(number){
+								return (number/1024).toFixed(2);
+							}
+						}
+					});
+				</script>
+			</div>
+
+		</div>
+		<!-- //container -->
+
+		<!-- footer 올원 -->
+		<div class="linked-bottom-menu">
+			<a href="javascript:void(0);" class="linked-finance">NH금융</a>
+			<a href="javascript:void(0);" class="linked-mall">상품몰</a>
+			<a href="javascript:void(0);" class="linked-mydata">마이데이터</a>
+			<a href="javascript:void(0);" class="linked-life">생활+</a>
+		</div>
+
+		<!-- footer 스뱅 -->
+		<div class="footer sb">
+			<ul class="footerNav"> 
+				<li><a href="javascript:;" class="home" onclick="testPopupOpen('#popID',this)">홈</a></li>
+				<li><a href="javascript:;" class="mydata" onclick="testPopupOpen('#popID2')">마이데이터</a></li>
+				<li><a href="javascript:;" class="mall">금융상품몰</a></li>
+				<li><a href="javascript:;" class="talk">상담톡</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+</body>
+</html>
