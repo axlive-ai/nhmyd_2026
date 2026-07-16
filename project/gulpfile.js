@@ -133,6 +133,21 @@ function toCRLF() {
   });
 }
 
+/**
+ * 커스텀 도메인(CNAME) 파일 복사.
+ *
+ * GitHub Pages를 "브랜치 배포" 방식이 아니라 이 프로젝트처럼 커스텀 Actions
+ * 워크플로우(upload-pages-artifact)로 배포하는 경우, 저장소 Settings > Pages에
+ * 커스텀 도메인을 등록해도 그것만으로는 부족하고 배포되는 산출물(pub/) 안에
+ * "CNAME" 파일이 직접 포함되어 있어야 매 배포마다 도메인 매핑이 유지된다.
+ * src/CNAME을 원본으로 두고 build 때마다 pub/에 복사해서, pub/ 전체가
+ * 재생성되는 상황에서도 안전하게 유지되도록 한다.
+ */
+function copyCname() {
+  return gulp.src('src/CNAME')
+    .pipe(gulp.dest(paths.dist));
+}
+
 /* ── HTML 빌드 : @@include 처리 ── */
 function html() {
   return gulp.src(paths.src.html, { base: 'src/pub' })
@@ -178,7 +193,8 @@ function watch() {
 exports.clean        = clean;
 exports['clean:dry'] = cleanDry;
 exports.html         = html;
+exports.copyCname    = copyCname;
 exports.serve        = serve;
 exports.watch        = watch;
-exports.build        = gulp.series(clean, html);
-exports.default      = gulp.series(html, serve, watch);
+exports.build        = gulp.series(clean, html, copyCname);
+exports.default      = gulp.series(html, copyCname, serve, watch);
