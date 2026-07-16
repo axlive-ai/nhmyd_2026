@@ -14,9 +14,20 @@ jobs:
         working-directory: project
       - run: npm run build
         working-directory: project
+      - name: Assemble Pages site (repo root + com/ + accessibility/ + project/pub/)
+        run: |
+          mkdir -p site/project
+          cp index.html site/
+          cp -r com site/com
+          cp -r accessibility site/accessibility
+          cp -r project/pub site/project/pub
+          # 커스텀 도메인(CNAME)은 배포 아티팩트의 루트에 있어야 GitHub Pages가 인식한다.
+          # project/pub/CNAME(gulp copyCname 태스크가 src/CNAME에서 복사한 파일)을
+          # site/(아티팩트 루트)로 옮겨 site/project/pub/CNAME 대신 site/CNAME이 되게 한다.
+          cp project/pub/CNAME site/CNAME
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: project/pub
+          path: site
   deploy:
     needs: build
     permissions:
